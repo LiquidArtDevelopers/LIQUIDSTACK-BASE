@@ -1,0 +1,86 @@
+@use './config' as c;
+@use './global';
+@use './resources/form';
+
+
+main{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: c.$color01;
+    @media only screen and (min-width:c.$tablet){
+        &{
+            justify-content: center;
+        }
+    }
+    video{
+        position: absolute;
+        z-index: 0;
+        width: 100vw;
+        object-fit: cover;
+        @media only screen and (min-width:c.$tablet){
+            &{
+                height: 100vh;
+            }
+        } 
+    }   
+    .contenedor_formulario{
+        position: relative;
+        z-index: 10;        
+        @media only screen and (min-width:c.$desktop){
+            &{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+            }
+        }       
+        >:nth-child(1){            
+            .cuadro{
+                @media only screen and (min-width:c.$tablet){
+                    &{
+                        padding: 3rem;
+                        row-gap: 2rem;
+                    }
+                }
+            }
+            >:nth-child(1){                                        
+                #formulario{
+                    width: 100%;
+                    max-width: 600px;
+                    min-height: initial;                    
+                    padding: 6rem c.$padMin;
+                    border: initial;                 
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    background-color: c.$color02bis2;
+                    @media only screen and (min-width:c.$desktop){
+                        &{
+                            padding: c.$padMax;
+                        }
+                    }                                
+                    input[type=submit]{
+                        margin-top: 0.5rem;
+                        @media only screen and (min-width:c.$desktop){
+                            &{
+                                margin-top: 1rem;
+                            }
+                        }
+                    }
+                    a{
+                        color: c.$color00;
+                        padding-top: 4rem;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+    }
+    #enviado{
+        background-image: none;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,126 @@
+{
+  "__artSlider01-bsv9zThu.js": {
+    "file": "assets/js/_artSlider01-bsv9zThu.js",
+    "name": "_artSlider01",
+    "imports": [
+      "__global-J20GMp7K.js"
+    ]
+  },
+  "__global-J20GMp7K.js": {
+    "file": "assets/js/_global-J20GMp7K.js",
+    "name": "_global"
+  },
+  "__sectTabs01-7B0ajh59.js": {
+    "file": "assets/js/_sectTabs01-7B0ajh59.js",
+    "name": "_sectTabs01",
+    "imports": [
+      "__global-J20GMp7K.js"
+    ]
+  },
+  "__showPassword-B7yJdy1C.js": {
+    "file": "assets/js/_showPassword-B7yJdy1C.js",
+    "name": "_showPassword"
+  },
+  "src/js/404.js": {
+    "file": "assets/js/404-B1-kxIcF.js",
+    "name": "404",
+    "src": "src/js/404.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js"
+    ],
+    "css": [
+      "assets/css/404-CYR5SAPF.css"
+    ]
+  },
+  "src/js/comunicados.js": {
+    "file": "assets/js/comunicados-B67SieS7.js",
+    "name": "comunicados",
+    "src": "src/js/comunicados.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js"
+    ],
+    "css": [
+      "assets/css/comunicados--mATSWZ6.css"
+    ]
+  },
+  "src/js/documentos.js": {
+    "file": "assets/js/documentos-CBAwZnam.js",
+    "name": "documentos",
+    "src": "src/js/documentos.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js",
+      "__sectTabs01-7B0ajh59.js"
+    ],
+    "css": [
+      "assets/css/documentos-Cm9R-2y-.css"
+    ]
+  },
+  "src/js/login.js": {
+    "file": "assets/js/login-Bid9ZnRA.js",
+    "name": "login",
+    "src": "src/js/login.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js",
+      "__showPassword-B7yJdy1C.js"
+    ],
+    "css": [
+      "assets/css/login-BzkDBnrx.css"
+    ]
+  },
+  "src/js/remember-password.js": {
+    "file": "assets/js/remember-password-QqbO9mhX.js",
+    "name": "remember-password",
+    "src": "src/js/remember-password.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js"
+    ],
+    "css": [
+      "assets/css/remember-password-DOfjcCf1.css"
+    ]
+  },
+  "src/js/reset-password.js": {
+    "file": "assets/js/reset-password-DoKQ3ewF.js",
+    "name": "reset-password",
+    "src": "src/js/reset-password.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js",
+      "__showPassword-B7yJdy1C.js"
+    ],
+    "css": [
+      "assets/css/reset-password-C6gx-vjF.css"
+    ]
+  },
+  "src/js/socio.js": {
+    "file": "assets/js/socio-ClcifOFg.js",
+    "name": "socio",
+    "src": "src/js/socio.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js",
+      "__artSlider01-bsv9zThu.js"
+    ],
+    "css": [
+      "assets/css/socio-D4l-lAog.css"
+    ]
+  },
+  "src/js/templates.js": {
+    "file": "assets/js/templates-B5fqAHVF.js",
+    "name": "templates",
+    "src": "src/js/templates.js",
+    "isEntry": true,
+    "imports": [
+      "__global-J20GMp7K.js",
+      "__artSlider01-bsv9zThu.js",
+      "__sectTabs01-7B0ajh59.js"
+    ],
+    "css": [
+      "assets/css/templates-CNW3xzU5.css"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "fallos": {
+    "captcha1": "Eragiketa ebatzi behar duzu",
+    "captcha2": "Eragiketa behar bezala ebatzi behar duzu",
+    "nombre1": "Izen bat idatzi behar duzu",
+    "nombre2": "Izenak ezin du zenbaki bat izan",
+    "nombre3": "Izenak 3 eta 40 karaktere artean izan behar ditu",
+    "tel1": "Telefono zenbaki bat idatzi behar duzu",
+    "tel2": "Telefonoak gehienez 14 digitu izan behar ditu",
+    "correo1": "Posta eremua ezin da hutsik utzi",
+    "correo2": "Postak ezin du zenbaki bat izan",
+    "correo3": "Postak gehienez 100 karaktere izan behar ditu",
+    "correo4": "Postaren sintaxia ez da zuzena",
+    "consulta1": "Zure kontsulta idatzi behar duzu",
+    "consulta2": "Kontsultak 10 eta 500 karaktere artean izan behar ditu"
+  },
+  "consulta_admin": {
+    "tipo": "Web kontsulta",
+    "asunto": "Web kontsulta berria honengandik",
+    "title": "Kontsulta berria duzu",
+    "saludo": "Kaixo",
+    "contexto": "Webgunearen bidez kontsulta bat jaso duzu",
+    "explicacion": "Jarraian erabiltzaileak eman dizkigun datu guztiak dituzu. Erabiltzaileak pribatutasunaren baldintzak onartu ditu.",
+    "datosEncabezado": "Kontsultaren datuak",
+    "headerNombre": "Izena:",
+    "headerTelefono": "Telefonoa:",
+    "headerCorreo": "Posta:",
+    "headerDate": "Kontsultaren data:",
+    "headerLang": "Web hizkuntza:",
+    "headerConsulta": "Kontsulta:",
+    "despedida": "Agur bero bat,",
+    "equipo": "Taldea"
+  },
+  "consulta_user": {
+    "tipo": "Web kontsulta",
+    "asunto": "Zure kontsulta jaso dugu,",
+    "title": "Zure kontsulta jaso dugu",
+    "saludo": "Kaixo",
+    "contexto": "Zure kontsulta webgunearen bidez jaso dugu",
+    "explicacion": "Jarraian eman dizkiguzun datu guztiak dituzu. Gogoratu formulario hau bidaltzeko gure pribatutasun eta datu‑tratamendu politika onartu behar izan duzula.",
+    "datosEncabezado": "Eman dizkiguzun datuak",
+    "headerNombre": "Izena:",
+    "headerTelefono": "Telefonoa:",
+    "headerCorreo": "Posta:",
+    "headerDate": "Kontsultaren data:",
+    "headerConsulta": "Zure kontsulta:",
+    "despedida": "Agur bero bat,",
+    "equipo": "Taldea"
+  }
+}

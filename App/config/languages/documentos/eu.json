@@ -1,0 +1,164 @@
+{
+
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""
+    },
+
+    "title": {
+        "text": "Donostiako Atletiko Klubeko Bazkideentzako gune pribatua"
+    },
+
+    "description": {
+        "content": "Orri honetara bakarrik dute sarbidea Donostiako Atletiko Klubeko bazkideek. Bertan, Batzar Orokor eta Zuzendaritza Batzordeei buruzko dokumentuak deskargatu ahal izango dituzu."
+    },
+
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "welcome": {
+        "text": "Ongi Etorri"
+    },
+
+    "h1": {
+        "text": "Bazkideentzako gune pribatua"
+    },
+
+    "header_num_socio": {
+        "text": "Bazkide Zenbakia:"
+    },
+
+    "h2": {
+        "text": "Batzar Orokor eta Zuzendaritza Batzordeari buruzko dokumentuak"
+    },
+
+    "p1": {
+        "text": "Jarraian, <b>Club Atlético San Sebastián</b> erakundearen jarduera instituzionalarekin lotutako <b>dokumentu ofizial</b> guztiak kontsultatu eta deskargatzeko aukera izango duzu. Horien artean daude <b>Zuzendaritza Batzordearen</b> akta eta erabakiak, Batzar Orokorretan sortutako dokumentazioa, eta Klubak bidalitako deialdi desberdinak. Helburua da <b>bazkide guztiek informazio garrantzitsua eskuratzeko eta gardentasuna bermatzeko</b> aukera izatea."
+    },
+
+    "icon": {
+        "alt": "Bazkideentzako eremu pribatu esklusiboa",
+        "title": "Bazkideentzako eremu pribatu esklusiboa"
+    },
+
+    "download": {
+        "title": "Deskargatu dokumentu hau"
+    },
+
+    "h2_02": {
+        "text": "Klubeko araudia"
+    },
+
+    "p2": {
+        "text": "Batzar Orokor eta Zuzendaritza Batzordeari buruzko dokumentuak"
+    },
+
+    "norma01": {
+        "text": "Klubeko Estatutuak, 2011ko martxoaren 31koak"
+    },
+
+    "but01": {
+        "text": "Deskargatu",
+        "title": "Klubeko Estatutuak deskargatu",
+        "href": "deskargatu?file=Estatutos del Club de 31 marzo 2011.pdf"
+    },
+
+    "norma02": {
+        "text": "Oraingo Zuzendaritza Batzordearen behin betiko proklamazioa, 2024ko azaroaren 15ekoa"
+    },
+
+    "but02": {
+        "text": "Deskargatu",
+        "title": "Zuzendaritza Batzordearen proklamazioa deskargatu",
+        "href": "deskargatu?file=Proclamacion definitiva Junta Directiva actual 15 noviembre 2024.pdf"
+    },
+
+    "norma03": {
+        "text": "Zuzendaritza Batzorde berria aurkeztea"
+    },
+
+    "but03": {
+        "text": "Deskargatu",
+        "title": "Zuzendaritza Batzorde berria aurkeztea deskargatu",
+        "href": "deskargatu?file=Presentacion nueva Junta Directiva.pdf"
+    },
+
+    "norma04": {
+        "text": "Club Atlético San Sebastiáneko Zuzendaritza Batzordearen 2024ko abenduaren 11ko erabakia, Batzorde Betearazlea sortzeko"
+    },
+
+    "but04": {
+        "text": "Deskargatu",
+        "title": "Batzorde Betearazlea sortzeko erabakia deskargatu",
+        "href": "deskargatu?file=Acuerdo de 11 de diciembre de 2024 de la Junta Directiva del Club Atletico San Sebastian, de creacion de su Comision ejecutiva_ EUS.pdf"
+    },
+
+    "norma05": {
+        "text": "Club Atlético San Sebastiáneko Zuzendaritza Batzordearen 2025eko maiatzaren 26ko erabakia, kirol antolakuntza-egitura zehazteko eta onartzeko"
+    },
+
+    "but05": {
+        "text": "Deskargatu",
+        "title": "Kirol antolakuntza-egitura erabakia deskargatu",
+        "href": "deskargatu?file=Acuerdo de 26 de mayo de 2025 de la Junta Directiva del Club Atletico San Sebastian, de determinacion y aprobacion de la estructura organizativa deportiva del Club_EUS.pdf"
+    },
+
+    "norma06": {
+        "text": "Club Atlético San Sebastiáneko gizarte-gunearen barne araudia, 2025eko ekainaren 2ko Batzar Nagusian onartua"
+    },
+
+    "but06": {
+        "text": "Deskargatu",
+        "title": "Barne araudia deskargatu",
+        "href": "deskargatu?file=Reglamento de regimen interno de la zona social del club Atletico San Sebastian aprobado por la Asamblea General el 2 de junio de 2025.pdf"
+    },
+
+    "norma07": {
+        "text": "Klubeko instalazioetarako erabilera eta sarbide arau berriak, 2022ko martxoaren 23koak"
+    },
+
+    "but07": {
+        "text": "Deskargatu",
+        "title": "Erabilera eta sarbide arau berriak deskargatu",
+        "href": "deskargatu?file=Nuevas Normas de uso y acceso a las instalaciones del Club de 23 de marzo de 2022.pdf"
+    },
+
+    "norma08": {
+        "text": "Kirol zerbitzu eta instalazioen araudia, 2009ko abenduaren 21ean onartua"
+    },
+
+    "but08": {
+        "text": "Deskargatu",
+        "title": "Kirol zerbitzu eta instalazioen araudia deskargatu",
+        "href": "deskargatu?file=Reglamento de servicios e instalaciones deportivas aprobado el 21-12-2009.pdf"
+    },
+
+    "nov01": {
+        "text": "Ezhoiko Batzar Orokarreran deialdia 2025eko azaroaren 27an",
+        "title": "Deskargatu",
+        "href": "deskargatu?file=Ezhoiko-Batazar-Naguaiaren-deialdia-27-11-25.pdf"
+    },
+
+    "nov02": {
+        "text": "2025ko Ekainaren 2ko Ohizko Batzar Orokorraren akta",
+        "title": "Deskargatu",
+        "href": "deskargatu?file=Ohiko-batzar-orokorraren-akta-2025eko-ekainak-2.pdf"
+    },
+
+    "nov03": {
+        "text": "Danborradaren Araudia Zuzendaritza Batzordeak onartua abuztuaren 28an",
+        "title": "Deskargatu",
+        "href": "deskargatu?file=Danborradaren-Araudia-Zuzendaritza-Batzordeak-onartua-abuztuaren-28an.pdf"
+    },
+
+    "nov04": {
+        "text": "Estatutuen Erreforma Zuzendaritza Batzordeak onartuta urriaren 14ean",
+        "title": "Deskargatu",
+        "href": "deskargatu?file=Estatutuen-Erreforma-Zuzendaritza-Batzordeak-onartuta-urriaren-14ean.pdf"
+    }
+}

@@ -1,0 +1,131 @@
+{
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""
+    },
+    "title": {
+        "text": "Zona privada para Socios del Club Atlético San Sebastián"
+    },
+    "description": {
+        "content": "A esta página sólo tiene acceso los socios vigentes en el Club Atlético San Sebastián. En ella podrás descargarte los documentos relativos a las Asambleas y Juntas Directivas."
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "welcome": {
+        "text": "Bienvenido/a"
+    },
+    "h1": {
+        "text": "a tu zona privada de Socio"
+    },
+    "header_num_socio": {
+        "text": "Número de Socio/a:"
+    },
+    "h2": {
+        "text": "Documentos relativos a las Asambleas y Junta Directiva"
+    },
+    "p1": {
+        "text": "A continuación encontrarás disponibles para su consulta y descarga todos los <b>documentos oficiales</b> relacionados con la actividad institucional del <b>Club Atlético San Sebastián</b>. Estos incluyen las actas y resoluciones de la <b>Junta Directiva</b>, la documentación generada en las Asambleas Generales, así como las distintas convocatorias emitidas por el Club. El objetivo es <b>garantizar la transparencia y el acceso a la información</b> relevante para todos los socios y socias vigentes."
+    },
+    "icon": {
+        "alt": "Zona privada exclusiva para Socios",
+        "title": "Zona privada exclusiva para Socios"
+    },
+    "download": {
+        "title": "Descargar este documento"
+    },
+    "h2_02": {
+        "text": "Normativa del Club"
+    },
+    "p2": {
+        "text": "Documentos relativos a las Asambleas y Junta Directiva"
+    },
+    "norma01": {
+        "text": "Estatutos del Club de 31 marzo 2011"
+    },
+    "but01": {
+        "text": "Descargar",
+        "title": "Descargar Estatutos del Club del 28 de agosto del 2025",
+        "href": "descargar?file=Estatutos del Club de 31 marzo 2011.pdf"
+    },
+    "norma02": {
+        "text": "Proclamación definitiva Junta Directiva actual 15 de noviembre 2024"
+    },
+    "but02": {
+        "text": "Descargar",
+        "title": "Descargar Proclamación definitiva Junta Directiva",
+        "href": "descargar?file=Proclamacion definitiva Junta Directiva actual 15 noviembre 2024.pdf"
+    },
+    "norma03": {
+        "text": "Presentación nueva Junta Directiva"
+    },
+    "but03": {
+        "text": "Descargar",
+        "title": "Descargar Presentación nueva Junta Directiva",
+        "href": "descargar?file=Presentacion nueva Junta Directiva.pdf"
+    },
+    "norma04": {
+        "text": "Acuerdo de 11 de diciembre de 2024 de la Junta Directiva del Club Atlético San Sebastián, de creación de su Comisión ejecutiva"
+    },
+    "but04": {
+        "text": "Descargar",
+        "title": "Descargar Acuerdo de creación de Comisión ejecutiva",
+        "href": "descargar?file=Acuerdo de 11 de diciembre de 2024 de la Junta Directiva del Club Atletico San Sebastian, de creacion de su Comision ejecutiva.pdf"
+    },
+    "norma05": {
+        "text": "Acuerdo de 26 de mayo de 2025 de la Junta Directiva del Club Atlético San Sebastián, de determinación y aprobación de la estructura organizativa deportiva del Club Atlético San Sebastián"
+    },
+    "but05": {
+        "text": "Descargar",
+        "title": "Descargar Acuerdo de estructura organizativa deportiva",
+        "href": "descargar?file=Acuerdo de 26 de mayo de 2025 de la Junta Directiva del Club Atletico San Sebastian, de determinacion y aprobacion de la estructura organizativa deportiva del Club.pdf"
+    },
+    "norma06": {
+        "text": "Reglamento de régimen interno de la zona social del Club Atlético San Sebastián aprobado por la Asamblea General el 2 de junio de 2025"
+    },
+    "but06": {
+        "text": "Descargar",
+        "title": "Descargar Reglamento de régimen interno",
+        "href": "descargar?file=Reglamento de regimen interno de la zona social del club Atletico San Sebastian aprobado por la Asamblea General el 2 de junio de 2025.pdf"
+    },
+    "norma07": {
+        "text": "Nuevas Normas de uso y acceso a las instalaciones del Club de 23 de marzo de 2022"
+    },
+    "but07": {
+        "text": "Descargar",
+        "title": "Descargar Nuevas Normas de uso y acceso",
+        "href": "descargar?file=Nuevas Normas de uso y acceso a las instalaciones del Club de 23 de marzo de 2022.pdf"
+    },
+    "norma08": {
+        "text": "Reglamento de servicios e instalaciones deportivas aprobado el 21-12-2009"
+    },
+    "but08": {
+        "text": "Descargar",
+        "title": "Descargar Reglamento de servicios e instalaciones deportivas",
+        "href": "descargar?file=Reglamento de servicios e instalaciones deportivas aprobado el 21-12-2009.pdf"
+    },
+    "nov01": {
+        "text": "Convocatoria Asamblea General Extraordinaria 27 de noviembre 2025",
+        "title": "Descargar",
+        "href": "descargar?file=Convocatoria-Asamblea-General-Extraordinaria-27-11-25.pdf"
+    },
+    "nov02": {
+        "text": "Acta Asamblea General Ordinaria del 2 de junio del 2025",
+        "title": "Descargar",
+        "href": "descargar?file=Acta-asamblea-general-ordinaria-del-2-junio-2025.pdf"
+    },
+    "nov03": {
+        "text": "Reglamento Tamborrada aprobado por la Junta Directiva de 28 agosto 2025",
+        "title": "Descargar",
+        "href": "descargar?file=Reglamento-Tamborrada-aprobado-por-la-Junta-Directiva-de-28-agosto-2025.pdf"
+    },
+    "nov04": {
+        "text": "Reforma Estatutos aprobado por la Junta Directiva el 14 de octubre",
+        "title": "Descargar",
+        "href": "descargar?file=Reforma-Estatutos-aprobado-por-la-Junta-Directiva-el-14-de-octubre.pdf"
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["chrome-devtools-mcp@latest"]
+    },
+    "postgres-ro": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "DATABASE_URL": "postgres://user:pass@host:5432/dbname?sslmode=require"
+      }
+    },
+  },
+}

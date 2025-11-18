@@ -1,0 +1,89 @@
+{
+    "example":{
+        "alt":"",
+        "title":"",
+        "text":"",
+        "placeholder":"",
+        "value":"",
+        "content":""        
+    },
+    "errors":{
+        "empty_password":"Pasahitz bat idatzi behar duzu",
+        "repeat_new_password_empty":"Pasahitza errepikatu behar duzu",
+        "passwords_not_match":"Pasahitzak ez datoz bat",
+        "incorrect_password":"Pasahitza ez da zuzena. Segurtasun-puntuak bete behar ditu",
+        "insecure_password":"Pasahitzak segurtasunagatik onartzen ez diren balioak ditu. Aldatu, mesedez.",
+        "invalid_access_token":"Sarbideko tokena baliogabea da",
+        "bad_request":"Ez da formularioko daturik jasotzen"
+    },
+   "token_invalid":{
+    "text":"Sarbide baliogabearen edo iraungiaren tokena"
+   },
+    "title":{
+        "text":"Berrezarri pasahitza"
+    },
+    "description": {
+        "content": "Orri honen bidez pasahitz berria ezarri ahal izango duzu zure gune pribatura sartzeko. Gogoratu pasahitza ez dela inorekin partekatu behar."
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "info_text1":{
+        "text":"Idatzi pasahitz berria eta, ondoren, errepikatu."
+    },
+    "info_text2":{
+        "text":"Aukeratzen duzun pasahitzak hemen zerrendatutako segurtasun-baldintza guztiak bete behar ditu. Horiek guztiak bete ondoren, aldaketa egin ahal izango duzu."
+    },
+    "eight_min_length":{
+        "text":"8 karaktere gutxienez"
+    },
+    "missing_upp_low":{
+        "text":"Letra larri eta xehe bat, gutxienez"
+    },
+    "missing_special_character":{
+        "text":"Gutxienez izaera berezi bat"
+    },
+    "missing_number":{
+        "text":"Gutxienez zenbaki bat"
+    },
+    "not_empty":{
+        "text":"Lekurik gabe"
+    },
+    "new_password_label":{
+        "text":"Pasahitz berria"
+    },
+    "new_password_input":{
+        "placeholder":"Idatzi pasahitz berri bat"
+    },
+    "repeat_new_password_label":{
+        "text":"Errepikatu pasahitz berria"
+    },
+    "repeat_new_password_input":{
+        "placeholder":"Errepikatu pasahitz berria"
+    },
+    "change_password_button":{
+        "value":"PASAHITZA ALDATU"
+    },
+    "success_title":{
+        "text":"Pasahitza behar bezala aldatu duzu"
+    },
+    "success_paragraph":{
+        "text":"Bazkideen arlora sartu nahi baduzu, sakatu botoi hau."
+    },
+    "go_to_login_page":{
+        "text":"Joan sarbide-orrira",
+        "title":"Joan sarbide-orrira"
+    },
+    "enviado":{
+        "alt":"Bidalitako posta",
+        "title": "Bidalitako posta"
+    },
+    "check":{
+        "alt":"Check",
+        "title":"Check"
+    },
+    "pass_view":{
+        "alt":"Pasahitza erakutsi / ezkutatu",
+        "title":"Pasahitza erakutsi / ezkutatu"
+    }
+}

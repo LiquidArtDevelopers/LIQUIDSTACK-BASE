@@ -1,0 +1,63 @@
+{   
+    "example":{
+        "alt":"",
+        "title":"",
+        "text":"",
+        "placeholder":"",
+        "value":"",
+        "content":""        
+    },    
+    "errors":{
+        "empty_email":"Mezu bat idatzi behar duzu",
+        "numeric_email":"Posta ezin da zenbaki bat izan",
+        "max_length":"Postak gehienez 100 karaktere izan behar ditu",
+        "email_invalid":"Postak ez du sintaxi zuzenik",
+        "insecure_email":"Segurtasunagatik onartzen ez diren balioak ditu balioak. Alda ezazu mesedez.",
+        "empty_password":"Pasahitz bat idatzi behar duzu",
+        "email_not_register":"Erregistratu gabeko posta Mesedez, berrikusi edo jarri harremanetan zerbitzu teknikoarekin.",
+        "register_error":"Errorea erregistroan. Mesedez, jarri harremanetan zerbitzu teknikoarekin.",
+        "username_error":"Errorea erabiltzailea eskuratzean. Jarri harremanetan zerbitzu teknikoarekin."
+    },
+    "success":"Begiratu zure posta elektronikoko sarrera-erretilua.",
+    "title": {
+        "text": "Pasahitza Gogoratu"
+    },
+    "description": {
+        "content": "Orri honen bidez Klubarekin lotutako zure helbide elektronikoa eman dezakezu, pasahitza aldatzeko aukera emango dizun sarbide-kode bat jasotzeko."
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },    
+    "info1":{
+        "text":"Idatzi Atletico San Sebastian-ko Klubean erregistratuta zauden helbide elektronikoa."
+    },
+    "info2":{
+        "text":"Ondoren egiaztapen posta bat bidaliko dizugu, eta bertan zure sarbide pasahitza aldatu ahal izango duzu."
+    },
+    "info3": {
+        "text": "\"Zabor-posta\" ontzia ere egiaztatu, mezua jasotzen ez baduzu."
+    },
+    "email_label":{
+        "text":"Posta elektronikoa"
+    },
+    "email_input":{
+        "placeholder":"* Posta elektronikoa"
+    },
+    "send_button":{
+        "value":"Bidali"
+    },
+    "email_success_message":{
+        "text":"Egiaztapen mezu bat bidali berri dugu. Mesedez, jarraitu bertan dauden instrukzioak pasahitza aldatzeko."
+    },
+    "email_success_paragraph":{
+        "text":"Hasierako orrira itzuli nahi baduzu, sakatu hurrengo botoia."
+    },
+    "go_to_homepage":{
+        "text":"Hasierako orrira joan",
+        "title":"Hasierako orrira joan"
+    },
+    "enviado":{
+        "alt":"Bidalitako posta",
+        "title": "Bidalitako posta"
+    }
+}

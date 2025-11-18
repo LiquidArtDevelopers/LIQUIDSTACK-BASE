@@ -1,0 +1,48 @@
+{
+
+    "example": {
+        "alt": "",
+        "title": "link",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": "",
+        "href": "",
+        "src": ""
+    },
+
+    "title": {
+        "text": "Error 404 página no encontrada"
+    },
+
+    "description": {
+        "content": "Lo sentimos, la página solicitada no existe."
+    },
+
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "moduleButtonType01_00_cta": {
+        "href": "",
+        "title": "Volver a la página de Inicio"
+    },
+    "moduleButtonType01_00_cta_span": {
+        "text": "Ir a Inicio"
+    },
+    "moduleButtonType01_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha avanzar",
+        "title": "Flecha avanzar"
+    },
+
+    "moduleH1Type01_00_h1_text": {
+        "text": "Error 404"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Ups... parece que te has perdido. La página que buscas no existe o ha cambiado de dirección. Puedes volver a la página principal o navegar por el menú para encontrar lo que necesitas."
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": "Si crees que es un error, escríbenos y lo revisaremos cuanto antes."
+    }
+}
