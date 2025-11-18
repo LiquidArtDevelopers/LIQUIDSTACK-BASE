@@ -1,111 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:3000/</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/" />
   </url>
   <url>
-    <loc>http://localhost:3000/eu</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/eu</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/" />
   </url>
   <url>
-    <loc>http://localhost:3000/es/area-socio</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/es/area-socio</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/area-socio" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/bazkide-gunea" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/area-socio" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/area-socio" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/bazkide-gunea" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/area-socio" />
   </url>
   <url>
-    <loc>http://localhost:3000/eu/bazkide-gunea</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/eu/bazkide-gunea</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/area-socio" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/bazkide-gunea" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/area-socio" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/area-socio" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/bazkide-gunea" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/area-socio" />
   </url>
   <url>
-    <loc>http://localhost:3000/es/area-socio/documentos-club</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/es/area-socio/documentos-club</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/area-socio/documentos-club" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/bazkide-gunea/klubeko-dokumentuak" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/area-socio/documentos-club" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/area-socio/documentos-club" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/bazkide-gunea/klubeko-dokumentuak" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/area-socio/documentos-club" />
   </url>
   <url>
-    <loc>http://localhost:3000/eu/bazkide-gunea/klubeko-dokumentuak</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/eu/bazkide-gunea/klubeko-dokumentuak</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/area-socio/documentos-club" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/bazkide-gunea/klubeko-dokumentuak" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/area-socio/documentos-club" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/area-socio/documentos-club" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/bazkide-gunea/klubeko-dokumentuak" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/area-socio/documentos-club" />
   </url>
   <url>
-    <loc>http://localhost:3000/es/area-socio/comunicados-socios</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/es/area-socio/comunicados-socios</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/area-socio/comunicados-socios" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/bazkide-gunea/oharrak-bazkideentzat" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/area-socio/comunicados-socios" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/area-socio/comunicados-socios" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/bazkide-gunea/oharrak-bazkideentzat" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/area-socio/comunicados-socios" />
   </url>
   <url>
-    <loc>http://localhost:3000/eu/bazkide-gunea/oharrak-bazkideentzat</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/eu/bazkide-gunea/oharrak-bazkideentzat</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/area-socio/comunicados-socios" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/bazkide-gunea/oharrak-bazkideentzat" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/area-socio/comunicados-socios" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/area-socio/comunicados-socios" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/bazkide-gunea/oharrak-bazkideentzat" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/area-socio/comunicados-socios" />
   </url>
   <url>
-    <loc>http://localhost:3000/es/recordar-contraseña</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/es/recordar-contraseña</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/recordar-contraseña" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/gogoratu-pasahitza" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/recordar-contraseña" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/recordar-contraseña" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/gogoratu-pasahitza" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/recordar-contraseña" />
   </url>
   <url>
-    <loc>http://localhost:3000/eu/gogoratu-pasahitza</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/eu/gogoratu-pasahitza</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/recordar-contraseña" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/gogoratu-pasahitza" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/recordar-contraseña" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/recordar-contraseña" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/gogoratu-pasahitza" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/recordar-contraseña" />
   </url>
   <url>
-    <loc>http://localhost:3000/es/restablecer-contraseña?t={token}</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/es/restablecer-contraseña?t={token}</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/restablecer-contraseña?t={token}" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/berrezarpen-pasahitza?t={token}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/restablecer-contraseña?t={token}" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/restablecer-contraseña?t={token}" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/berrezarpen-pasahitza?t={token}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/restablecer-contraseña?t={token}" />
   </url>
   <url>
-    <loc>http://localhost:3000/eu/berrezarpen-pasahitza?t={token}</loc>
-    <lastmod>2025-11-18T14:33:39+00:00</lastmod>
+    <loc>https://bazkide.atleticosansebastian.com/eu/berrezarpen-pasahitza?t={token}</loc>
+    <lastmod>2025-11-18T22:06:50+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="http://localhost:3000/es/restablecer-contraseña?t={token}" />
-    <xhtml:link rel="alternate" hreflang="eu" href="http://localhost:3000/eu/berrezarpen-pasahitza?t={token}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:3000/es/restablecer-contraseña?t={token}" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://bazkide.atleticosansebastian.com/es/restablecer-contraseña?t={token}" />
+    <xhtml:link rel="alternate" hreflang="eu" href="https://bazkide.atleticosansebastian.com/eu/berrezarpen-pasahitza?t={token}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bazkide.atleticosansebastian.com/es/restablecer-contraseña?t={token}" />
   </url>
 </urlset>
