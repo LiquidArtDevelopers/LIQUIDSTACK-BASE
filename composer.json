@@ -2,6 +2,11 @@
     "require": {
         "vlucas/phpdotenv": "^5.6",
         "phpmailer/phpmailer": "^6.9",
-        "liquidstack/core": "^0.1.0"
+        "liquidstack/core": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "liquidstack/core": true
+        }
     }
 }
