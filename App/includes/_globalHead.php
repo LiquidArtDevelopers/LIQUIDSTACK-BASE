@@ -25,101 +25,6 @@
     $devModeEnv = $_ENV['DEV_MODE'] ?? getenv('DEV_MODE') ?? false;
     $devMode    = $normalizeBool($devModeEnv);
 
-    $resolveAsset = static function (?string $resource, string $folder, string $extension) use ($rootUrl): ?string {
-        if ($resource === null || $resource === '') {
-            return null;
-        }
-
-        $publicPath = \App\Core\Support\Paths::publicPath();
-        $pattern    = $publicPath . "/assets/{$folder}/{$resource}*.{$extension}";
-        $matches    = glob($pattern);
-
-        if (!$matches) {
-            return null;
-        }
-
-        return $rootUrl . '/assets/' . $folder . '/' . basename($matches[0]);
-    };
-
-    $resolveViaManifest = static function (?string $resource): ?array {
-        static $manifest;
-
-        if ($resource === null || $resource === '') {
-            return null;
-        }
-
-        if ($manifest === null) {
-            $publicPath    = \App\Core\Support\Paths::publicPath();
-            $manifestFiles = [
-                $publicPath . '/manifest.json',
-                $publicPath . '/.vite/manifest.json',
-            ];
-
-            foreach ($manifestFiles as $manifestPath) {
-                if (!is_file($manifestPath)) {
-                    continue;
-                }
-
-                $contents = file_get_contents($manifestPath);
-                $decoded  = json_decode($contents, true);
-
-                if (is_array($decoded)) {
-                    $manifest = $decoded;
-                    break;
-                }
-            }
-
-            if ($manifest === null) {
-                $manifest = false;
-            }
-        }
-
-        if ($manifest === false) {
-            return null;
-        }
-
-        $candidates = [
-            $resource,
-            $resource . '.js',
-            'src/js/' . $resource . '.js',
-            './src/js/' . $resource . '.js',
-        ];
-
-        foreach ($candidates as $key) {
-            if (isset($manifest[$key]) && is_array($manifest[$key])) {
-                return $manifest[$key];
-            }
-        }
-
-        return null;
-    };
-
-    if (!$devMode) {
-        $manifestEntry = $resolveViaManifest($resources ?? null);
-
-        if (!isset($css) || $css === '') {
-            if ($manifestEntry !== null && !empty($manifestEntry['css'][0])) {
-                $css = $rootUrl . '/' . ltrim($manifestEntry['css'][0], '/');
-            } else {
-                $resolvedCss = $resolveAsset($resources ?? null, 'css', 'css');
-                if ($resolvedCss !== null) {
-                    $css = $resolvedCss;
-                }
-            }
-        }
-
-        if (!isset($js) || $js === '') {
-            if ($manifestEntry !== null && !empty($manifestEntry['file'])) {
-                $js = $rootUrl . '/' . ltrim($manifestEntry['file'], '/');
-            } else {
-                $resolvedJs = $resolveAsset($resources ?? null, 'js', 'js');
-                if ($resolvedJs !== null) {
-                    $js = $resolvedJs;
-                }
-            }
-        }
-    }
-
     $appConfig = [
         'devMode'           => $devMode,
         'lang'              => $lang ?? null,
@@ -178,12 +83,8 @@ window.__APP_CONFIG__ = <?= json_encode($appConfig, JSON_UNESCAPED_SLASHES | JSO
   <!-- Preload fonts to improve rendering (especially Safari) -->
   <link rel="preload" href="<?= $_ENV['RAIZ'] ?>/assets/fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="<?= $_ENV['RAIZ'] ?>/assets/fonts/Poppins-Medium.ttf" as="font" type="font/ttf" crossorigin>
-  <?php if (!empty($css ?? null)): ?>
-    <link rel="stylesheet" href="<?= $css ?>">
-  <?php endif; ?>
-  <?php if (!empty($js ?? null)): ?>
-    <script defer type="module" src="<?= $js ?>"></script>
-  <?php endif; ?>
+  <link rel="stylesheet" href="<?= $css ?>">
+  <script defer type="module" src="<?= $js ?>"></script>
 <?php endif; ?>
 
 <!-- V2 COOKIE LAD -->
