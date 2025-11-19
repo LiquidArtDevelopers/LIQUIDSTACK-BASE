@@ -73,7 +73,6 @@ window.__APP_CONFIG__ = <?= json_encode($appConfig, JSON_UNESCAPED_SLASHES | JSO
 
 
 
-
 <!-- Variant Resources -->
 
 <?php if ($devMode): ?>
@@ -83,8 +82,8 @@ window.__APP_CONFIG__ = <?= json_encode($appConfig, JSON_UNESCAPED_SLASHES | JSO
   <!-- Preload fonts to improve rendering (especially Safari) -->
   <link rel="preload" href="<?= $_ENV['RAIZ'] ?>/assets/fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="<?= $_ENV['RAIZ'] ?>/assets/fonts/Poppins-Medium.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="<?= $css ?>">
-  <script defer type="module" src="<?= $js ?>"></script>
+  <link rel="stylesheet" href="<?= $css?>">
+  <script defer type="module" src="<?= $js?>"></script>
 <?php endif; ?>
 
 <!-- V2 COOKIE LAD -->

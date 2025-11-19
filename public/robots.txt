@@ -1,5 +1,19 @@
 User-agent: *
 
+
+
+
+
+
+
+
 Allow: /
+
+
+
+
+
+
+
 
 Sitemap: https://bazkide.atleticosansebastian.com/sitemap.xml
