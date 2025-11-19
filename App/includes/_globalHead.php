@@ -25,38 +25,6 @@
     $devModeEnv = $_ENV['DEV_MODE'] ?? getenv('DEV_MODE') ?? false;
     $devMode    = $normalizeBool($devModeEnv);
 
-    $resolveAsset = static function (?string $resource, string $folder, string $extension) use ($rootUrl): ?string {
-        if ($resource === null || $resource === '') {
-            return null;
-        }
-
-        $publicPath = \App\Core\Support\Paths::publicPath();
-        $pattern    = $publicPath . "/assets/{$folder}/{$resource}*.{$extension}";
-        $matches    = glob($pattern);
-
-        if (!$matches) {
-            return null;
-        }
-
-        return $rootUrl . '/assets/' . $folder . '/' . basename($matches[0]);
-    };
-
-    if (!$devMode) {
-        if (!isset($css) || $css === '') {
-            $resolvedCss = $resolveAsset($resources ?? null, 'css', 'css');
-            if ($resolvedCss !== null) {
-                $css = $resolvedCss;
-            }
-        }
-
-        if (!isset($js) || $js === '') {
-            $resolvedJs = $resolveAsset($resources ?? null, 'js', 'js');
-            if ($resolvedJs !== null) {
-                $js = $resolvedJs;
-            }
-        }
-    }
-
     $appConfig = [
         'devMode'           => $devMode,
         'lang'              => $lang ?? null,
@@ -115,12 +83,8 @@ window.__APP_CONFIG__ = <?= json_encode($appConfig, JSON_UNESCAPED_SLASHES | JSO
   <!-- Preload fonts to improve rendering (especially Safari) -->
   <link rel="preload" href="<?= $_ENV['RAIZ'] ?>/assets/fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="<?= $_ENV['RAIZ'] ?>/assets/fonts/Poppins-Medium.ttf" as="font" type="font/ttf" crossorigin>
-  <?php if (!empty($css ?? null)): ?>
-    <link rel="stylesheet" href="<?= $css ?>">
-  <?php endif; ?>
-  <?php if (!empty($js ?? null)): ?>
-    <script defer type="module" src="<?= $js ?>"></script>
-  <?php endif; ?>
+  <link rel="stylesheet" href="<?= $css ?>">
+  <script defer type="module" src="<?= $js ?>"></script>
 <?php endif; ?>
 
 <!-- V2 COOKIE LAD -->
