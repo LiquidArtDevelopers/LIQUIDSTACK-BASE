@@ -6,14 +6,21 @@ A continuación describiremos algunas casuísticas y tips a tener en cuenta para
 
 ## Desarrollo local
 
-1. Copiar `.env.example` a `.env` y ajustar las variables necesarias. La variable `RAIZ` debe apuntar a `http://localhost:3000`.
-2. Instalar dependencias de Node: `npm install`.
-3. Para trabajar en desarrollo existe un comando que levanta todo el entorno:
-   - `npm run start` abre el servidor PHP en `http://localhost:3000` y ejecuta `npm run dev` para Vite en modo hot-reload.
+1. Completa tu `.env` (se puede generar copiando `.env.example`) con todas las credenciales y secretos del proyecto. Ese archivo nunca se versiona y actúa como fuente de verdad para el resto de variables.
+2. Personaliza `.env.production` y `.env.development` únicamente con las claves que deben variar entre perfiles (por defecto sólo redefinen `RAIZ`, `DEV_MODE` y `DISPLAY_ERROR`).
+3. Instala dependencias de Node: `npm install`.
+4. Para trabajar en desarrollo existe un comando que levanta todo el entorno:
+   - `npm run start` ejecuta `node scripts/swap-env.mjs development` antes de lanzar el servidor PHP en `http://localhost:3000` y `npm run dev` para Vite en modo hot-reload.
    - También puedes usar `npm run dev` si ya tienes un servidor PHP iniciado manualmente.
-4. Para preparar el proyecto para producción ejecutar `npm run build`, que genera el sitemap multilingüe con `hreflang` y compila los assets dentro de `public/assets`.
+5. Para preparar el proyecto para producción ejecutar `npm run build`, que sincroniza `.env.production` y luego genera el sitemap multilingüe con `hreflang` y compila los assets dentro de `public/assets`.
 
 Los recursos se sirven siempre desde `public/assets`, por lo que no se genera ninguna carpeta `dist` adicional.
+
+### Gestión de perfiles `.env`
+
+- El script `node scripts/swap-env.mjs <perfil>` **no** borra tu `.env`. En su lugar lee `.env.<perfil>` y sobreescribe únicamente las claves listadas (ej. `RAIZ`, `DEV_MODE`, `DISPLAY_ERROR`) dentro de tu `.env` existente. Si `.env` no existe, se crea a partir de `.env.example` para que tengas el resto de variables disponibles.
+- Para crear un nuevo perfil (por ejemplo `staging`) duplica `.env.production` como `.env.staging` e incluye únicamente los pares `CLAVE=valor` que deban imponerse sobre tu `.env` habitual. Después ejecuta `node scripts/swap-env.mjs staging && npm run <tarea>`.
+- Si necesitas sobreescribir temporalmente una variable, lanza primero `node scripts/swap-env.mjs <perfil>` y modifica la clave directamente en `.env`. El archivo `.env` conservará el resto de valores personalizados y sólo se tocarán las claves definidas en el perfil la próxima vez que corras el script.
 
 ## Herramientas de desarrollo
 
