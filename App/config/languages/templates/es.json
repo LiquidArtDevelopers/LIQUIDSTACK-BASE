@@ -31,10 +31,10 @@
         "src": "assets/img/dummy/AvT_YOU_Illumination-900.avif"
     },
     "hero02_video_webm": {
-        "src": "/assets/video/AvanTechYou_es_1080p.webm"
+        "src": "/assets/video/dummy.webm"
     },
     "hero02_video_mp4": {
-        "src": "/assets/video/AvanTechYou_es_1080p.mp4"
+        "src": "/assets/video/dummy.mp4"
     },
     "hero02_video_poster": {
         "src": "assets/img/dummy/jornadas-hettich-2560.avif"
@@ -160,24 +160,24 @@
     },
 
     "sect02_00_a_h3_text": {
-        "text": "Nuestro primer comunicado!"
+        "text": "Producción audiovisual para lanzamientos globales"
     },
     "sect02_00_a_p01_text": {
-        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Club Atlético San Sebastián. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
+        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
     },
     "sect02_00_a_p02_text": {
-        "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
+        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
     },
     "sect02_00_a_img": {
-        "src": "assets/img/vistas/zona-socios-atletico-san-sebastian-1000.avif",
-        "alt": "Primer comunicado",
-        "title": "Primer Comunicado del ATSS"
+        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "alt": "Equipo creativo coordinando rodaje inmersivo global",
+        "title": "Equipo creativo coordina rodaje inmersivo global"
     },
     "sect02_00_a_img_sizes": {
-        "text": "(max-width: 899px) 1000px, 1800px"
+        "text": "(max-width: 899px) 1000px, 1500px"
     },
-    "sect02_00_a_img_srcset01": "assets/img/vistas/zona-socios-atletico-san-sebastian-1000.avif 1000w",
-    "sect02_00_a_img_srcset02": "assets/img/vistas/zona-socios-atletico-san-sebastian-1800.avif 1800w",
+    "sect02_00_a_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
 
     
     "sect02_00_b_h3_text": {

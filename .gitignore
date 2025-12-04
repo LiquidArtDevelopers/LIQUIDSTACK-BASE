@@ -4,7 +4,6 @@ composer.lock
 package-lock.json
 .env
 .npmrc
-/public/assets/video/
 /public/assets/css/
 /public/assets/js/
 assets/**/*.min.js

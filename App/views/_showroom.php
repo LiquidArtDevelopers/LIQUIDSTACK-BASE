@@ -63,7 +63,7 @@
                     '{a-button-secondary}' => $boton01,
                     '{b-button-secondary}' => $boton02,
                     '{c-button-secondary}' => $boton03,
-                    'items'                => 4
+                    'items'                => 3
                 ]);
                 ?>                
 

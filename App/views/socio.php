@@ -25,7 +25,6 @@ if (!$usuario) {
     header("Location: ./logout");
     exit;
 }
-
 ?>
 
 <!DOCTYPE html>

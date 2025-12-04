@@ -22,6 +22,11 @@ return [
 
         // Páginas comerciales
         '/' => [
+            'resources' => 'home',
+            'content' => 'home',
+            'view' => '../App/views/home.php'
+        ],
+        '/es/login' => [
             'resources' => 'login',
             'content' => 'login',
             'view' => '../App/views/login.php'
