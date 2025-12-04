@@ -9,7 +9,8 @@ export default {
         '/es/showroom': 'showroom',
         '/es/descargar?file={file}': 'downloadFile',
 
-        '/' : 'login',
+        '/' : 'home',
+        '/es/acceso' : 'login',
         '/es/area-socio' : 'socio',
         '/es/area-socio/documentos-club' : 'documentos',
         '/es/area-socio/comunicados-socios' : 'comunicados',
@@ -21,7 +22,8 @@ export default {
         '/eu/showroom': 'showroom',
         '/eu/descargar?file={file}': 'downloadFile',
 
-        '/eu' : 'login',
+        '/eu' : 'home',
+        '/eu/sarrera' : 'login',
         '/eu/bazkide-gunea' : 'socio',
         '/eu/bazkide-gunea/klubeko-dokumentuak' : 'documentos',
         '/eu/bazkide-gunea/oharrak-bazkideentzat' : 'comunicados',

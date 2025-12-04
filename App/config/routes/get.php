@@ -26,7 +26,25 @@ return [
             'content' => 'home',
             'view' => '../App/views/home.php'
         ],
-        '/es/login' => [
+        '/es/servicios' => [
+            'resources' => 'servicios',
+            'content' => 'servicios',
+            'view' => '../App/views/servicios.php'
+        ],
+        '/es/servicios/servicio' => [
+            'resources' => 'servicio',
+            'content' => 'servicio',
+            'view' => '../App/views/servicio.php'
+        ],
+        '/es/contacto' => [
+            'resources' => 'contacto',
+            'content' => 'contacto',
+            'view' => '../App/views/contacto.php'
+        ],
+        
+
+        // Páginas con acceso privado
+        '/es/acceso' => [
             'resources' => 'login',
             'content' => 'login',
             'view' => '../App/views/login.php'
@@ -47,7 +65,6 @@ return [
             'view' => '../App/views/comunicados.php'
         ],
 
-        // Paginas Login
         "/es/logout" => [
             "view" => "../App/app/logout.php"
         ],
@@ -86,6 +103,28 @@ return [
 
         // Páginas comerciales
         '/eu' => [
+            'resources' => 'home',
+            'content' => 'home',
+            'view' => '../App/views/home.php'
+        ],
+        '/es/serbitzuak' => [
+            'resources' => 'servicios',
+            'content' => 'servicios',
+            'view' => '../App/views/servicios.php'
+        ],
+        '/es/serbitzuak/serbitzua' => [
+            'resources' => 'servicio',
+            'content' => 'servicio',
+            'view' => '../App/views/servicio.php'
+        ],
+        '/es/kontaktua' => [
+            'resources' => 'contacto',
+            'content' => 'contacto',
+            'view' => '../App/views/contacto.php'
+        ],
+
+        // Páginas con acceso privado
+        '/eu/sarrera' => [
             'resources' => 'login',
             'content' => 'login',
             'view' => '../App/views/login.php'
@@ -106,7 +145,6 @@ return [
             'view' => '../App/views/comunicados.php'
         ],
 
-        // Páginas Login
         "/eu/logout" => [
             "view" => "../App/app/logout.php"
         ],
