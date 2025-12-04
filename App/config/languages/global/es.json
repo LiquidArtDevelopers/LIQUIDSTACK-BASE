@@ -5,6 +5,41 @@
         "alt": ">",
         "title": ">"
     },
+    "navMegamenu01_00_home": {
+        "title": "Inicio",
+        "href": ""
+    },
+    "navMegamenu01_00_homeText": {
+        "text": "Inicio"
+    },
+    "navMegamenu01_00_services": {
+        "title": "Servicios",
+        "href": "servicios"
+    },
+    "navMegamenu01_00_servicesText": {
+        "text": "Servicios"
+    },
+    "navMegamenu01_00_servicesItem0": {
+        "title": "Servicio",
+        "href": "servicios/servicio"
+    },
+    "navMegamenu01_00_servicesItem0Text": {
+        "text": "Servicio"
+    },
+    "navMegamenu01_00_contactLink": {
+        "title": "Contacto",
+        "href": "contacto"
+    },
+    "navMegamenu01_00_contactText": {
+        "text": "Contacto"
+    },
+    "navMegamenu01_00_login": {
+        "title": "Acceder",
+        "href": "acceso"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Acceder"
+    },
     "navMegamenu01_00_link0not": {
         "title": "¿Eres socio? Accede aquí",
         "href": ""

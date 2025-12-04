@@ -5,6 +5,41 @@
         "alt": ">",
         "title": ">"
     },
+    "navMegamenu01_00_home": {
+        "title": "Hasiera",
+        "href": ""
+    },
+    "navMegamenu01_00_homeText": {
+        "text": "Hasiera"
+    },
+    "navMegamenu01_00_services": {
+        "title": "Zerbitzuak",
+        "href": "serbitzuak"
+    },
+    "navMegamenu01_00_servicesText": {
+        "text": "Zerbitzuak"
+    },
+    "navMegamenu01_00_servicesItem0": {
+        "title": "Zerbitzua",
+        "href": "serbitzuak/serbitzua"
+    },
+    "navMegamenu01_00_servicesItem0Text": {
+        "text": "Zerbitzua"
+    },
+    "navMegamenu01_00_contactLink": {
+        "title": "Kontaktua",
+        "href": "kontaktua"
+    },
+    "navMegamenu01_00_contactText": {
+        "text": "Kontaktua"
+    },
+    "navMegamenu01_00_login": {
+        "title": "Saioa hasi",
+        "href": "sarrera"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Saioa hasi"
+    },
     "navMegamenu01_00_link0not": {
         "title": "Bazkidea zara? Sartu hemen",
         "href": ""
