@@ -169,15 +169,15 @@
         "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
     },
     "sect02_00_a_img": {
-        "src": "assets/img/vistas/zona-socios-atletico-san-sebastian-1000.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Primer comunicado",
         "title": "Primer Comunicado del ATSS"
     },
     "sect02_00_a_img_sizes": {
-        "text": "(max-width: 899px) 1000px, 1800px"
+        "text": "(max-width: 899px) 900px, 1800px"
     },
-    "sect02_00_a_img_srcset01": "assets/img/vistas/zona-socios-atletico-san-sebastian-1000.avif 1000w",
-    "sect02_00_a_img_srcset02": "assets/img/vistas/zona-socios-atletico-san-sebastian-1800.avif 1800w",
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
 
     
     "sect02_00_b_h3_text": {
@@ -190,15 +190,15 @@
         "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
     },
     "sect02_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Equipo creativo coordinando rodaje inmersivo global",
         "title": "Equipo creativo coordina rodaje inmersivo global"
     },
     "sect02_00_b_img_sizes": {
-        "text": "(max-width: 899px) 1000px, 1500px"
+        "text": "(max-width: 899px) 900px, 1800px"
     },
-    "sect02_00_b_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_b_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",    
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
     "sect02_00_c_h3_text": {
         "text": "Analítica de visitas y monetización"
     },
@@ -209,15 +209,15 @@
         "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
     },
     "sect02_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Panel financiero comparando métricas de experiencias",
         "title": "Panel financiero compara métricas de experiencias"
     },
     "sect02_00_c_img_sizes": {
-        "text": "(max-width: 899px) 1000px, 1500px"
+        "text": "(max-width: 899px) 900px, 1800px"
     },
-    "sect02_00_c_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_c_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
     
     
 
