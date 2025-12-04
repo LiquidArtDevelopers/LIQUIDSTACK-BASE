@@ -95,7 +95,7 @@ window.__APP_CONFIG__ = <?= json_encode($appConfig, JSON_UNESCAPED_SLASHES | JSO
 <!-- schema estático con datos del cliente -->
 <?php
     $businessUrl  = $rootUrl !== '' ? $rootUrl : 'https://bazkide.atleticosansebastian.com';
-    $businessLogo = $businessUrl . '/assets/img/logos/club-atletico-san-sebastian-logo-500x202-color.png';
+    $businessLogo = $businessUrl . '/assets/img/logos/isotipo-192x192.png';
 
     $schemaLocalBusiness = [
         '@context' => 'https://schema.org',

@@ -8,7 +8,7 @@
             <span></span>
         </label>        
         <a class="no_select logoPrimary" data-lang="aImgNav" href="<?= homeUrl($GLOBALS['lang']) ?>" title="<?=$_ENV['VITE_BUSINESS_NAME']?>">
-            <img src="<?= $_ENV['RAIZ'] ?>/assets/img/logos/attss-logo-b-103.svg" alt="<?=$_ENV['VITE_BUSINESS_NAME']?>" title="<?=$_ENV['VITE_BUSINESS_NAME']?>">
+            <img src="<?= $_ENV['RAIZ'] ?>/assets/img/logos/logo-black.svg" alt="<?=$_ENV['VITE_BUSINESS_NAME']?>" title="<?=$_ENV['VITE_BUSINESS_NAME']?>">
         </a>
         <div class="idiomas">            
             <ul>                

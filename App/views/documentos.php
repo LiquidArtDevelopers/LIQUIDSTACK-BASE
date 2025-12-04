@@ -70,49 +70,49 @@ if (!function_exists('resolveDocumentHref')) {
                     <p data-lang="p2"><?= $p2->text ?></p>
                     <div class="modButtons">
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma01"><?= $norma01->text ?></span>
                         </p>
                         <a data-lang="but01" title="<?= $but01->title ?>" href="<?= resolveDocumentHref($but01->href ?? null, $lang) ?>" class="boton"><?= $but01->text ?></a>
 
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma02"><?= $norma02->text ?></span>
                         </p>
                         <a data-lang="but02" title="<?= $but02->title ?>" href="<?= resolveDocumentHref($but02->href ?? null, $lang) ?>" class="boton"><?= $but02->text ?></a>
 
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma03"><?= $norma03->text ?></span>
                         </p>
                         <a data-lang="but03" title="<?= $but03->title ?>" href="<?= resolveDocumentHref($but03->href ?? null, $lang) ?>" class="boton"><?= $but03->text ?></a>
 
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma04"><?= $norma04->text ?></span>
                         </p>
                         <a data-lang="but04" title="<?= $but04->title ?>" href="<?= resolveDocumentHref($but04->href ?? null, $lang) ?>" class="boton"><?= $but04->text ?></a>
 
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma05"><?= $norma05->text ?></span>
                         </p>
                         <a data-lang="but05" title="<?= $but05->title ?>" href="<?= resolveDocumentHref($but05->href ?? null, $lang) ?>" class="boton"><?= $but05->text ?></a>
 
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma06"><?= $norma06->text ?></span>
                         </p>
                         <a data-lang="but06" title="<?= $but06->title ?>" href="<?= resolveDocumentHref($but06->href ?? null, $lang) ?>" class="boton"><?= $but06->text ?></a>
 
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma07"><?= $norma07->text ?></span>
                         </p>
                         <a data-lang="but07" title="<?= $but07->title ?>" href="<?= resolveDocumentHref($but07->href ?? null, $lang) ?>" class="boton"><?= $but07->text ?></a>
 
                         <p>
-                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/attss-icono.svg" alt="ATSS" title="ATSS">
+                            <img src="<?= $_ENV["RAIZ"] ?>/assets/img/logos/logo-color.svg" alt="ATSS" title="ATSS">
                             <span data-lang="norma08"><?= $norma08->text ?></span>
                         </p>
                         <a data-lang="but08" title="<?= $but08->title ?>" href="<?= resolveDocumentHref($but08->href ?? null, $lang) ?>" class="boton"><?= $but08->text ?></a>
