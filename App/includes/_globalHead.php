@@ -11,7 +11,7 @@
 <?php
     $rootUrl      = rtrim($_ENV['RAIZ'] ?? '', '/');
     $metaUrl      = $rootUrl . $url;
-    $metaImageUrl = $rootUrl . '/assets/img/dummy/dummy_1200.avif';
+    $metaImageUrl = $rootUrl . '/assets/img/fotos/banner-rrss.jpg';
 
     $normalizeBool = static function ($value): bool {
         if (is_bool($value)) {
