@@ -32,7 +32,7 @@
         "src": "assets/video/dummy.mp4"
     },
     "hero02_video_poster": {
-        "src": "assets/img/dummy/dummy_2560.avif"
+        "src": "assets/img/vistas/zona-socios-atletico-san-sebastian-4000.avif"
     },
     "hero02_video_title": {
         "title": "Eragiketa adimendunen bideoa"
@@ -57,12 +57,12 @@
         "text": "Clippinga, buletinak eta galdera-saioak kudeatzen ditugu, estreinaldiaren ondoren nazioarteko elkarrizketa digitala luzatzeko."
     },
     "sect02_00_b_img": {
-        "src": "assets/img/dummy/dummy_1200.avif",
+        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
         "alt": "Ekoizpen talde sortzailea grabaketa murgiltzaile globala koordinatzen",
         "title": "Talde sortzailea grabaketa murgiltzaile globala koordinatzen"
     },
     "sect02_00_b_img_sizes": {
-        "text": "(max-width: 899px) 900px, 1800px"
+        "text": "(max-width: 899px) 1000px, 1500px"
     },
     "sect02_00_c_h3_text": {
         "text": "Bisitak neurtzea eta monetizazioa"
@@ -74,17 +74,17 @@
         "text": "CRM, fakturazioa eta inkestak integratzen ditugu, upselling aukerak identifikatzeko eta kanpainak denbora errealean doitzen jarraitzeko."
     },
     "sect02_00_c_img": {
-        "src": "assets/img/dummy/dummy_1200.avif",
+        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
         "alt": "Esperientzien metrikak alderatzen dituen panel ekonomikoa",
         "title": "Panel ekonomikoak esperientzien metrikak alderatzen ditu"
     },
     "sect02_00_c_img_sizes": {
-        "text": "(max-width: 899px) 900px, 1800px"
+        "text": "(max-width: 899px) 1000px, 1500px"
     },
-    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
-    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
-    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
-    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_b_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "sect02_00_c_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
     "sect02_00_a_h3_text": {
         "text": "Gure lehen komunikatua!"
     },
@@ -95,13 +95,13 @@
         "text": "Hemendik aurrera komunikatu garrantzitsuak, iragarpen ofizialak eta bazkideentzat soilik erreserbatutako jarduerak aurkituko dituzu. Kanal hau erabilgarria eta zuzenekoa izatea nahi dugu, komunitatearen egunerokoan eragiten duen guztira errazago iristeko. Gonbidatzen zaitugu maiz bisitatzera eta eguneratuta egotera."
     },
     "sect02_00_a_img": {
-        "src": "assets/img/dummy/dummy_1200.avif",
+        "src": "assets/img/vistas/zona-socios-atletico-san-sebastian-1000.avif",
         "alt": "Lehen komunikatua",
         "title": "ATSSen lehen komunikatua"
     },
     "sect02_00_a_img_sizes": {
-        "text": "(max-width: 899px) 900px, 1800px"
+        "text": "(max-width: 899px) 1000px, 1800px"
     },
-    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
-    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w"
+    "sect02_00_a_img_srcset01": "assets/img/vistas/zona-socios-atletico-san-sebastian-1000.avif 1000w",
+    "sect02_00_a_img_srcset02": "assets/img/vistas/zona-socios-atletico-san-sebastian-1800.avif 1800w"
 }

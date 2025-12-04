@@ -15,18 +15,18 @@ header {
   align-items: center;
   gap: 1rem;
 
-  background-image: url("/assets/img/dummy/dummy_900.avif");
+  background-image: url("/assets/img/vistas/zona-socios-atletico-san-sebastian-1000.avif");
   background-size: cover;
   background-position: center 0%;
   will-change: background-position;
   @media only screen and (min-width: c.$tablet) {
     & {
-      background-image: url("/assets/img/dummy/dummy_1800.avif");
+      background-image: url("/assets/img/vistas/zona-socios-atletico-san-sebastian-1800.avif");
     }
   }
   @media only screen and (min-width: c.$tablet) {
     & {
-      background-image: url("/assets/img/dummy/dummy_2560.avif");
+      background-image: url("/assets/img/vistas/zona-socios-atletico-san-sebastian-4000.avif");
     }
   }
   .content {
