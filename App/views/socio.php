@@ -55,7 +55,7 @@ if (!$usuario) {
                         </div>
                         <span data-lang="h1"><?= $h1->text ?></span>
                     </h1>
-                    <img data-lang="icon" src="<?= $_ENV['RAIZ'] ?>/assets/img/iconos/socios-icono.svg" alt="<?= $icon->alt ?>" title="<?= $icon->title ?>">
+                    <img data-lang="icon" src="<?= $_ENV['RAIZ'] ?>/assets/img/logos/logo-black.svg" alt="<?= $icon->alt ?>" title="<?= $icon->title ?>">
                     <?php if ($num_socio) : ?>
                         <p><span data-lang="header_num_socio"><?= $header_num_socio->text ?></span> <span><?= $num_socio ?></span></p>
                     <?php endif ?>
