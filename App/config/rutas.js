@@ -10,24 +10,32 @@ export default {
         '/es/descargar?file={file}': 'downloadFile',
 
         '/' : 'home',
+        '/es/servicios' : 'servicios',
+        '/es/servicios/servicio' : 'servicio',
+        '/es/contacto' : 'contacto',
         '/es/acceso' : 'login',
         '/es/area-socio' : 'socio',
         '/es/area-socio/documentos-club' : 'documentos',
         '/es/area-socio/comunicados-socios' : 'comunicados',
+        '/es/logout' : 'logout',
         '/es/recordar-contraseña' : 'remember-password',
-        '/es/restablecer-contraseña' : 'reset-password'
+        '/es/restablecer-contraseña?t={token}' : 'reset-password'
     },
     'eu':{
         '/eu/templates': 'templates',
         '/eu/showroom': 'showroom',
-        '/eu/descargar?file={file}': 'downloadFile',
+        '/eu/deskargatu?file={file}': 'downloadFile',
 
         '/eu' : 'home',
+        '/es/serbitzuak' : 'servicios',
+        '/es/serbitzuak/serbitzua' : 'servicio',
+        '/es/kontaktua' : 'contacto',
         '/eu/sarrera' : 'login',
         '/eu/bazkide-gunea' : 'socio',
         '/eu/bazkide-gunea/klubeko-dokumentuak' : 'documentos',
         '/eu/bazkide-gunea/oharrak-bazkideentzat' : 'comunicados',
+        '/eu/logout' : 'logout',
         '/eu/gogoratu-pasahitza' : 'remember-password',
-        '/eu/berrezarpen-pasahitza' : 'reset-password'
+        '/eu/berrezarpen-pasahitza?t={token}' : 'reset-password'
     },
 }
