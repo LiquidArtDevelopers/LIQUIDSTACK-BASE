@@ -16,116 +16,230 @@
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     },
-    "welcome": {
-        "text": "Bienvenido/a"
+    "sect02_00_b_h3_text": {
+        "text": "Producción audiovisual para lanzamientos globales"
     },
-    "h1": {
-        "text": "a tu zona privada de Socio"
+    "sect02_00_b_p01_text": {
+        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
     },
-    "header_num_socio": {
-        "text": "Número de Socio/a:"
+    "sect02_00_b_p02_text": {
+        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
     },
-    "h2": {
-        "text": "Documentos relativos a las Asambleas y Junta Directiva"
+    "sect02_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Equipo creativo coordinando rodaje inmersivo global",
+        "title": "Equipo creativo coordina rodaje inmersivo global"
     },
-    "p1": {
-        "text": "A continuación encontrarás disponibles para su consulta y descarga todos los <b>documentos oficiales</b> relacionados con la actividad institucional del <b>Club Atlético San Sebastián</b>. Estos incluyen las actas y resoluciones de la <b>Junta Directiva</b>, la documentación generada en las Asambleas Generales, así como las distintas convocatorias emitidas por el Club. El objetivo es <b>garantizar la transparencia y el acceso a la información</b> relevante para todos los socios y socias vigentes."
+    "sect02_00_b_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
     },
-    "icon": {
-        "alt": "Zona privada exclusiva para Socios",
-        "title": "Zona privada exclusiva para Socios"
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_h3_text": {
+        "text": "Analítica de visitas y monetización"
     },
-    "download": {
-        "title": "Descargar este documento"
+    "sect02_00_c_p01_text": {
+        "text": "Implementamos cuadros de mando, atribución asistida y modelos de conversión para medir el impacto económico de cada experiencia en vivo y digital de alto valor."
     },
-    "h2_02": {
-        "text": "Normativa del Club"
+    "sect02_00_c_p02_text": {
+        "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
     },
-    "p2": {
-        "text": "Documentos relativos a las Asambleas y Junta Directiva"
+    "sect02_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Panel financiero comparando métricas de experiencias",
+        "title": "Panel financiero compara métricas de experiencias"
     },
-    "norma01": {
-        "text": "Estatutos del Club de 31 marzo 2011"
+    "sect02_00_c_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
     },
-    "but01": {
-        "text": "Descargar",
-        "title": "Descargar Estatutos del Club del 28 de agosto del 2025",
-        "href": "descargar?file=Estatutos del Club de 31 marzo 2011.pdf"
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_h3_text": {
+        "text": "Producción audiovisual para lanzamientos globales"
     },
-    "norma02": {
-        "text": "Proclamación definitiva Junta Directiva actual 15 de noviembre 2024"
+    "sect02_00_a_p01_text": {
+        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
     },
-    "but02": {
-        "text": "Descargar",
-        "title": "Descargar Proclamación definitiva Junta Directiva",
-        "href": "descargar?file=Proclamacion definitiva Junta Directiva actual 15 noviembre 2024.pdf"
+    "sect02_00_a_p02_text": {
+        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
     },
-    "norma03": {
-        "text": "Presentación nueva Junta Directiva"
+    "sect02_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Equipo creativo coordinando rodaje inmersivo global",
+        "title": "Equipo creativo coordina rodaje inmersivo global"
     },
-    "but03": {
-        "text": "Descargar",
-        "title": "Descargar Presentación nueva Junta Directiva",
-        "href": "descargar?file=Presentacion nueva Junta Directiva.pdf"
+    "sect02_00_a_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
     },
-    "norma04": {
-        "text": "Acuerdo de 11 de diciembre de 2024 de la Junta Directiva del Club Atlético San Sebastián, de creación de su Comisión ejecutiva"
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "moduleH2Type01_02_h2_text": {
+        "text": "Sectores que transformamos con datos"
     },
-    "but04": {
-        "text": "Descargar",
-        "title": "Descargar Acuerdo de creación de Comisión ejecutiva",
-        "href": "descargar?file=Acuerdo de 11 de diciembre de 2024 de la Junta Directiva del Club Atletico San Sebastian, de creacion de su Comision ejecutiva.pdf"
+    "sectTabs01_00_intro": {
+        "text": "Accede a documentación técnica, protocolos de seguridad y plantillas contractuales listos para compartir con proveedores, delegaciones y clientes finales; actualizamos los archivos clave cada trimestre para mantener alineada tu red logística."
     },
-    "norma05": {
-        "text": "Acuerdo de 26 de mayo de 2025 de la Junta Directiva del Club Atlético San Sebastián, de determinación y aprobación de la estructura organizativa deportiva del Club Atlético San Sebastián"
+    "sectTabs01_00_b_id": {
+        "text": "documentos-comerciales"
     },
-    "but05": {
-        "text": "Descargar",
-        "title": "Descargar Acuerdo de estructura organizativa deportiva",
-        "href": "descargar?file=Acuerdo de 26 de mayo de 2025 de la Junta Directiva del Club Atletico San Sebastian, de determinacion y aprobacion de la estructura organizativa deportiva del Club.pdf"
+    "sectTabs01_00_b_nav": {
+        "text": "Docs comerciales"
     },
-    "norma06": {
-        "text": "Reglamento de régimen interno de la zona social del Club Atlético San Sebastián aprobado por la Asamblea General el 2 de junio de 2025"
+    "sectTabs01_00_b_h3": {
+        "text": "Documentación contractual para nuevos operadores logísticos regionales"
     },
-    "but06": {
-        "text": "Descargar",
-        "title": "Descargar Reglamento de régimen interno",
-        "href": "descargar?file=Reglamento de regimen interno de la zona social del club Atletico San Sebastian aprobado por la Asamblea General el 2 de junio de 2025.pdf"
+    "sectTabs01_00_b_b1_h4": {
+        "text": "Acuerdos marco de servicio nacional"
     },
-    "norma07": {
-        "text": "Nuevas Normas de uso y acceso a las instalaciones del Club de 23 de marzo de 2022"
+    "sectTabs01_00_b_b1_h5": {
+        "text": "Modelo contractual con cláusulas SLA, penalizaciones y anexos de cobertura geográfica anual."
     },
-    "but07": {
-        "text": "Descargar",
-        "title": "Descargar Nuevas Normas de uso y acceso",
-        "href": "descargar?file=Nuevas Normas de uso y acceso a las instalaciones del Club de 23 de marzo de 2022.pdf"
+    "sectTabs01_00_b_b1_l1": {
+        "text": "Descargar contrato",
+        "href": "acuerdo-marco.docx"
     },
-    "norma08": {
-        "text": "Reglamento de servicios e instalaciones deportivas aprobado el 21-12-2009"
+    "sectTabs01_00_b_b1_l2": {
+        "text": "Anexo de coberturas",
+        "href": "anexo-coberturas.pdf"
     },
-    "but08": {
-        "text": "Descargar",
-        "title": "Descargar Reglamento de servicios e instalaciones deportivas",
-        "href": "descargar?file=Reglamento de servicios e instalaciones deportivas aprobado el 21-12-2009.pdf"
+    "sectTabs01_00_b_b2_h4": {
+        "text": "Tarifarios escalables por volumen mensual"
     },
-    "nov01": {
-        "text": "Convocatoria Asamblea General Extraordinaria 27 de noviembre 2025",
-        "title": "Descargar",
-        "href": "descargar?file=Convocatoria-Asamblea-General-Extraordinaria-27-11-25.pdf"
+    "sectTabs01_00_b_b2_h5": {
+        "text": "Hoja de tarifas con tramos por peso, servicios urgentes y recargos aplicables por temporada."
     },
-    "nov02": {
-        "text": "Acta Asamblea General Ordinaria del 2 de junio del 2025",
-        "title": "Descargar",
-        "href": "descargar?file=Acta-asamblea-general-ordinaria-del-2-junio-2025.pdf"
+    "sectTabs01_00_b_b2_l1": {
+        "text": "Tabla vigente",
+        "href": "tarifario-actual.xlsx"
     },
-    "nov03": {
-        "text": "Reglamento Tamborrada aprobado por la Junta Directiva de 28 agosto 2025",
-        "title": "Descargar",
-        "href": "descargar?file=Reglamento-Tamborrada-aprobado-por-la-Junta-Directiva-de-28-agosto-2025.pdf"
+    "sectTabs01_00_b_b2_l2": {
+        "text": "Detalle de recargos",
+        "href": "tarifario-recargos.pdf"
     },
-    "nov04": {
-        "text": "Reforma Estatutos aprobado por la Junta Directiva el 14 de octubre",
-        "title": "Descargar",
-        "href": "descargar?file=Reforma-Estatutos-aprobado-por-la-Junta-Directiva-el-14-de-octubre.pdf"
+    "sectTabs01_00_b_b3_h4": {
+        "text": "Brief comercial para onboarding regional"
+    },
+    "sectTabs01_00_b_b3_h5": {
+        "text": "Resumen para nuevos partners con propuesta de valor, diferenciadores digitales y apoyo de preventa."
+    },
+    "sectTabs01_00_b_b3_l1": {
+        "text": "Presentación PDF",
+        "href": "brief-onboarding.pdf"
+    },
+    "sectTabs01_00_b_b3_l2": {
+        "text": "Script de llamadas",
+        "href": "script-llamadas.docx"
+    },
+    "sectTabs01_00_c_id": {
+        "text": "recursos-formacion"
+    },
+    "sectTabs01_00_c_nav": {
+        "text": "Recursos training"
+    },
+    "sectTabs01_00_c_h3": {
+        "text": "Formación continua para equipos de almacén y reparto"
+    },
+    "sectTabs01_00_c_b1_h4": {
+        "text": "Capacitaciones para operativa de almacén"
+    },
+    "sectTabs01_00_c_b1_h5": {
+        "text": "Agenda trimestral de workshops sobre WMS, preparación de pedidos y control de inventario sin papel."
+    },
+    "sectTabs01_00_c_b1_l1": {
+        "text": "Calendario talleres",
+        "href": "agenda-workshops.pdf"
+    },
+    "sectTabs01_00_c_b1_l2": {
+        "text": "Ficha de contenidos",
+        "href": "ficha-contenidos.pdf"
+    },
+    "sectTabs01_00_c_b2_h4": {
+        "text": "Manuales de ruta y experiencia cliente"
+    },
+    "sectTabs01_00_c_b2_h5": {
+        "text": "Material descargable con guiones de entrega, registro fotográfico y pautas de trato profesional."
+    },
+    "sectTabs01_00_c_b2_l1": {
+        "text": "Kit entregas",
+        "href": "kit-entregas.zip"
+    },
+    "sectTabs01_00_c_b2_l2": {
+        "text": "Guía de trato",
+        "href": "guia-trato.pdf"
+    },
+    "sectTabs01_00_c_b3_h4": {
+        "text": "Evaluaciones y certificaciones internas anuales"
+    },
+    "sectTabs01_00_c_b3_h5": {
+        "text": "Test online y rúbricas para medir adopción de procesos, manejo de incidencias y estándares de imagen."
+    },
+    "sectTabs01_00_c_b3_l1": {
+        "text": "Evaluación online",
+        "href": "evaluacion-online.html"
+    },
+    "sectTabs01_00_c_b3_l2": {
+        "text": "Plantilla de rúbrica",
+        "href": "rubrica-evaluacion.xlsx"
+    },
+    "sectTabs01_00_a_id": {
+        "text": "protocolos-operativos"
+    },
+    "sectTabs01_00_a_nav": {
+        "text": "Protocolos clave"
+    },
+    "sectTabs01_00_a_h3": {
+        "text": "Protocolos operativos para delegaciones críticas de transporte"
+    },
+    "sectTabs01_00_a_b1_h4": {
+        "text": "Protocolos de seguridad en muelles compartidos"
+    },
+    "sectTabs01_00_a_b1_h5": {
+        "text": "Checklist diario para prevenir incidencias y coordinar accesos entre turnos y transportistas externos."
+    },
+    "sectTabs01_00_a_b1_l1": {
+        "text": "Descargar checklist",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b1_l2": {
+        "text": "Guía de accesos",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b2_h4": {
+        "text": "Gestión logística de mercancía sensible"
+    },
+    "sectTabs01_00_a_b2_h5": {
+        "text": "Plantilla para declarar incidencias térmicas, roturas y lotes sujetos a trazabilidad reforzada."
+    },
+    "sectTabs01_00_a_b2_l1": {
+        "text": "Formulario incidencias",
+        "href": "mercancia-incidencias.pdf"
+    },
+    "sectTabs01_00_a_b2_l2": {
+        "text": "Protocolo cadena fría",
+        "href": "cadena-fria-protocolo.pdf"
+    },
+    "sectTabs01_00_a_b3_h4": {
+        "text": "Coordinación con partners estratégicos regionales"
+    },
+    "sectTabs01_00_a_b3_h5": {
+        "text": "Modelo de reunión semanal para compartir KPIs críticos, cuellos de botella y acciones preventivas conjuntas."
+    },
+    "sectTabs01_00_a_b3_l1": {
+        "text": "Agenda semanal",
+        "href": "agenda-reunion.xlsx"
+    },
+    "sectTabs01_00_a_b3_l2": {
+        "text": "Resumen KPI",
+        "href": "resumen-kpi.pdf"
+    },
+    "moduleH2Type01_01_h2_text": {
+        "text": "Sectores que transformamos con datos"
+    },
+    "moduleButtonType02_00_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Ver caso completo"
     }
 }

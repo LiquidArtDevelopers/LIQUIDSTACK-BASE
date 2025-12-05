@@ -27,16 +27,18 @@
             ?>
 
             <main>
-                <?php
-                echo controller('moduleH2Type01', 2);
+                <section>                
+                    <?php
+                    echo controller('moduleH2Type01', 2);
 
-                $secondaryCta = controller('moduleButtonType01', 1);
-                echo controller('moduleH1Type02', 0, ['{a-button-primary}' => $secondaryCta]);
+                    $secondaryCta = controller('moduleButtonType01', 1);
+                    echo controller('moduleH1Type02', 0, ['{a-button-primary}' => $secondaryCta]);
 
-                echo controller('art03', 0, ['items' => 4]);
-                echo controller('art10', 0, ['items' => 3]);
-                echo controller('art12', 0, ['items' => 3]);
-                ?>
+                    echo controller('art03', 0, ['items' => 4]);
+                    echo controller('art10', 0, ['items' => 3]);
+                    echo controller('art12', 0, ['items' => 3]);
+                    ?>
+                </section>
             </main>
 
             <?php include __DIR__.'/../includes/_footer.php' ?>

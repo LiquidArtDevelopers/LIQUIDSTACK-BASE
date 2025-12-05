@@ -40,16 +40,19 @@
                     '{c-button-secondary}' => $ctaC,
                     'items'                => 3,
                 ]);
-
-                echo controller('art04', 0, ['items' => 3]);
-
-                $primaryCta = controller('moduleButtonType01', 0);
-                echo controller('art16', 0, [
-                    '{button-primary}' => $primaryCta,
-                ]);
-
-                echo controller('art05', 0, ['items' => 4]);
                 ?>
+                <section>
+                    <?php
+                    echo controller('art04', 0, ['items' => 3]);
+
+                    $primaryCta = controller('moduleButtonType01', 0);
+                    echo controller('art16', 0, [
+                        '{button-primary}' => $primaryCta,
+                    ]);
+
+                    echo controller('art05', 0, ['items' => 4]);
+                    ?>
+                </section>
             </main>
 
             <?php include __DIR__.'/../includes/_footer.php' ?>
