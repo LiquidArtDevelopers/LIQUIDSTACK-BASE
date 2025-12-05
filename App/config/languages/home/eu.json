@@ -126,7 +126,7 @@
         "text": "Nuestro primer comunicado!"
     },
     "sect02_00_a_p01_text": {
-        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Club Atlético San Sebastián. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
+        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Liquid Stack. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
     },
     "sect02_00_a_p02_text": {
         "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
@@ -134,7 +134,7 @@
     "sect02_00_a_img": {
         "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Primer comunicado",
-        "title": "Primer Comunicado del ATSS"
+        "title": "Primer Comunicado del LS"
     },
     "sect02_00_a_img_sizes": {
         "text": "(max-width: 899px) 900px, 1800px"

@@ -19,10 +19,10 @@
         "bad_request": "No se están recibiendo datos del formulario"
     },
     "header_primary": {
-        "text": "Acceso privado para Socios del Club Atlético San Sebastián"
+        "text": "Acceso privado para Socios del Liquid Stack"
     },
     "description": {
-        "content": "A través de esta página podrás acceder sólo si perteneces al Club Atlético San Sebastián. Cualquier duda, ponte en contacto con nuestra oficina."
+        "content": "A través de esta página podrás acceder sólo si perteneces al Liquid Stack. Cualquier duda, ponte en contacto con nuestra oficina."
     },
     "robots": {
         "content": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
@@ -49,7 +49,7 @@
         "title": "Acceso permitido"
     },
     "video": {
-        "title": "Atlético San Sebastián"
+        "title": "Liquid Stack"
     },
     "pass_view": {
         "alt": "Mostrar / Ocultar contraseña",

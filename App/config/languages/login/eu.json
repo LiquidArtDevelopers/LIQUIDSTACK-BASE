@@ -19,10 +19,10 @@
         "bad_request": "Ez da formularioaren daturik jasotzen"
     },    
     "header_primary": {
-        "text": "Atlético San Sebastián Klubeko Bazkideentzako sarbide pribatua"
+        "text": "Liquid Stack Klubeko Bazkideentzako sarbide pribatua"
     },
     "description": {
-        "content": "Orrialde honetara sartzeko, Atlético San Sebastián Klubeko bazkidea izan behar duzu. Edozein zalantza izanez gero, jarri gure bulegoarekin harremanetan."
+        "content": "Orrialde honetara sartzeko, Liquid Stack Klubeko bazkidea izan behar duzu. Edozein zalantza izanez gero, jarri gure bulegoarekin harremanetan."
     },
     "robots": {
         "content": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
@@ -49,7 +49,7 @@
         "title": "Sarbidea onartua"
     },
     "video": {
-        "title": "Atlético San Sebastián"
+        "title": "Liquid Stack"
     },
     "pass_view": {
         "alt": "Pasahitza erakutsi / ezkutatu",

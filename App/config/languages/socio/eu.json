@@ -8,10 +8,10 @@
         "content": ""
     },
     "title": {
-        "text": "Atlético San Sebastián Klubeko Bazkideen Zona Pribatua"
+        "text": "Liquid Stack Klubeko Bazkideen Zona Pribatua"
     },
     "description": {
-        "content": "Orrialde honetara Atlético San Sebastián Klubeko bazkide aktiboek bakarrik dute sarbidea. Bertan Batzar Orokor eta Zuzendaritza Batzordeen dokumentuak deskargatu ahal izango dituzu."
+        "content": "Orrialde honetara Liquid Stack Klubeko bazkide aktiboek bakarrik dute sarbidea. Bertan Batzar Orokor eta Zuzendaritza Batzordeen dokumentuak deskargatu ahal izango dituzu."
     },
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
@@ -37,7 +37,7 @@
         "text": "Ezagutu bazkide gisa gertatzen den guztia\n"
     },
     "art01_00_intro_p": {
-        "text": "Hemendik Atlético San Sebastián Klubaren dokumentu ofizialak kontsultatu eta deskargatu ahal izango dituzu, bazkideentzat soilik eskuragarri daudenak. <br><br>Gainera, klubaren komunitatearentzat erreserbatutako barne komunikatuak eta jarduerak ere aurkituko dituzu."
+        "text": "Hemendik Liquid Stack Klubaren dokumentu ofizialak kontsultatu eta deskargatu ahal izango dituzu, bazkideentzat soilik eskuragarri daudenak. <br><br>Gainera, klubaren komunitatearentzat erreserbatutako barne komunikatuak eta jarduerak ere aurkituko dituzu."
     },
     "art01_00_hero_img": {
         "src": "assets/img/dummy/dummy_1800.avif",
@@ -50,7 +50,7 @@
         "title": "Bazkideen Gunea"
     },
     "art01_00_b_p": {
-        "text": "Atlético San Sebastián Klubeko dokumentu ofizialetarako sarbidea, bazkideentzat soilik. Estatutuak, araudiak, aktak eta klubaren barne-dokumentuak kontsultatu eta deskargatu ahal izango dituzu."
+        "text": "Liquid Stack Klubeko dokumentu ofizialetarako sarbidea, bazkideentzat soilik. Estatutuak, araudiak, aktak eta klubaren barne-dokumentuak kontsultatu eta deskargatu ahal izango dituzu."
     },
     "art01_00_a_img": {
         "src": "assets/img/system/people.svg",
@@ -61,7 +61,7 @@
         "text": "Bazkideentzako komunikatuak eta jarduerak"
     },
     "art01_00_a_p": {
-        "text": "Atal honetan Atlético San Sebastián Klubeko bazkideentzat soilik diren komunikatuak eta jarduerak aurkituko dituzu, informazio eguneratuarekin eta barne-komunitatearentzat gordetako edukiekin."
+        "text": "Atal honetan Liquid Stack Klubeko bazkideentzat soilik diren komunikatuak eta jarduerak aurkituko dituzu, informazio eguneratuarekin eta barne-komunitatearentzat gordetako edukiekin."
     },
     "art01_00_headerSecondary_b": {
         "text": "Klubeko dokumentu ofizialak"
@@ -76,17 +76,17 @@
 
     "artSlider01_00_cardb_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardb_meta": {
         "text": "08·06·2025"
     },
     "artSlider01_00_cardb_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardb_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardb_read": {
         "text": "Informazio gehiago",
@@ -95,17 +95,17 @@
 
     "artSlider01_00_cardc_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardc_meta": {
         "text": "01·06·2025"
     },
     "artSlider01_00_cardc_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardc_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardc_read": {
         "text": "Informazio gehiago",
@@ -114,17 +114,17 @@
 
     "artSlider01_00_cardd_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardd_meta": {
         "text": "27·05·2025"
     },
     "artSlider01_00_cardd_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardd_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardd_read": {
         "text": "Informazio gehiago",
@@ -133,17 +133,17 @@
 
     "artSlider01_00_carde_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_carde_meta": {
         "text": "20·05·2025"
     },
     "artSlider01_00_carde_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_carde_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_carde_read": {
         "text": "Informazio gehiago",
@@ -152,17 +152,17 @@
 
     "artSlider01_00_cardf_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardf_meta": {
         "text": "14·05·2025"
     },
     "artSlider01_00_cardf_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardf_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardf_read": {
         "text": "Informazio gehiago",
@@ -171,17 +171,17 @@
 
     "artSlider01_00_cardg_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardg_meta": {
         "text": "07·05·2025"
     },
     "artSlider01_00_cardg_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardg_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardg_read": {
         "text": "Informazio gehiago",
@@ -190,17 +190,17 @@
 
     "artSlider01_00_cardh_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardh_meta": {
         "text": "30·04·2025"
     },
     "artSlider01_00_cardh_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardh_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardh_read": {
         "text": "Informazio gehiago",
@@ -209,17 +209,17 @@
 
     "artSlider01_00_cardi_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardi_meta": {
         "text": "22·04·2025"
     },
     "artSlider01_00_cardi_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardi_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardi_read": {
         "text": "Informazio gehiago",
@@ -228,17 +228,17 @@
 
     "artSlider01_00_cardj_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_cardj_meta": {
         "text": "15·04·2025"
     },
     "artSlider01_00_cardj_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_cardj_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_cardj_read": {
         "text": "Informazio gehiago",
@@ -247,17 +247,17 @@
 
     "artSlider01_00_carda_img": {
         "src": "assets/img/logos/logo-color.svg",
-        "alt": "Club Atlético San Sebastián",
-        "title": "Club Atlético San Sebastián"
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
     },
     "artSlider01_00_carda_meta": {
         "text": "12·06·2025"
     },
     "artSlider01_00_carda_h4": {
-        "text": "Club Atlético San Sebastián"
+        "text": "Liquid Stack"
     },
     "artSlider01_00_carda_tags": {
-        "text": "Donostia-San Sebastián"
+        "text": "Dirección pendiente"
     },
     "artSlider01_00_carda_read": {
         "text": "Informazio gehiago",
@@ -271,8 +271,8 @@
         "text": ""
     },
     "icon": {
-        "alt": "atss",
-        "title": "atss"
+        "alt": "LS",
+        "title": "LS"
     },
     "header_num_socio": {
         "text": "Bazkide zenbakia:<br><br>"

@@ -8,10 +8,10 @@
         "content": ""
     },
     "title": {
-        "text": "Zona privada para Socios del Club Atlético San Sebastián"
+        "text": "Zona privada para Socios del Liquid Stack"
     },
     "description": {
-        "content": "A esta página sólo tiene acceso los socios vigentes en el Club Atlético San Sebastián. En ella podrás descargarte los documentos relativos a las Asambleas y Juntas Directivas."
+        "content": "A esta página sólo tiene acceso los socios vigentes en el Liquid Stack. En ella podrás descargarte los documentos relativos a las Asambleas y Juntas Directivas."
     },
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
@@ -96,11 +96,11 @@
     },
     "sectTabs01_00_b_b1_l1": {
         "text": "Descargar contrato",
-        "href": "acuerdo-marco.docx"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b1_l2": {
         "text": "Anexo de coberturas",
-        "href": "anexo-coberturas.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b2_h4": {
         "text": "Tarifarios escalables por volumen mensual"
@@ -110,11 +110,11 @@
     },
     "sectTabs01_00_b_b2_l1": {
         "text": "Tabla vigente",
-        "href": "tarifario-actual.xlsx"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b2_l2": {
         "text": "Detalle de recargos",
-        "href": "tarifario-recargos.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b3_h4": {
         "text": "Brief comercial para onboarding regional"
@@ -124,11 +124,11 @@
     },
     "sectTabs01_00_b_b3_l1": {
         "text": "Presentación PDF",
-        "href": "brief-onboarding.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b3_l2": {
         "text": "Script de llamadas",
-        "href": "script-llamadas.docx"
+        "href": "example.php"
     },
     "sectTabs01_00_c_id": {
         "text": "recursos-formacion"
@@ -147,11 +147,11 @@
     },
     "sectTabs01_00_c_b1_l1": {
         "text": "Calendario talleres",
-        "href": "agenda-workshops.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b1_l2": {
         "text": "Ficha de contenidos",
-        "href": "ficha-contenidos.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b2_h4": {
         "text": "Manuales de ruta y experiencia cliente"
@@ -161,11 +161,11 @@
     },
     "sectTabs01_00_c_b2_l1": {
         "text": "Kit entregas",
-        "href": "kit-entregas.zip"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b2_l2": {
         "text": "Guía de trato",
-        "href": "guia-trato.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b3_h4": {
         "text": "Evaluaciones y certificaciones internas anuales"
@@ -175,11 +175,11 @@
     },
     "sectTabs01_00_c_b3_l1": {
         "text": "Evaluación online",
-        "href": "evaluacion-online.html"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b3_l2": {
         "text": "Plantilla de rúbrica",
-        "href": "rubrica-evaluacion.xlsx"
+        "href": "example.php"
     },
     "sectTabs01_00_a_id": {
         "text": "protocolos-operativos"
@@ -198,11 +198,11 @@
     },
     "sectTabs01_00_a_b1_l1": {
         "text": "Descargar checklist",
-        "href": "example.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b1_l2": {
         "text": "Guía de accesos",
-        "href": "example.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b2_h4": {
         "text": "Gestión logística de mercancía sensible"
@@ -212,11 +212,11 @@
     },
     "sectTabs01_00_a_b2_l1": {
         "text": "Formulario incidencias",
-        "href": "mercancia-incidencias.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b2_l2": {
         "text": "Protocolo cadena fría",
-        "href": "cadena-fria-protocolo.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b3_h4": {
         "text": "Coordinación con partners estratégicos regionales"
@@ -226,11 +226,11 @@
     },
     "sectTabs01_00_a_b3_l1": {
         "text": "Agenda semanal",
-        "href": "agenda-reunion.xlsx"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b3_l2": {
         "text": "Resumen KPI",
-        "href": "resumen-kpi.pdf"
+        "href": "example.php"
     },
     "moduleH2Type01_01_h2_text": {
         "text": "Sectores que transformamos con datos"
