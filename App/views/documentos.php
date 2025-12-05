@@ -63,7 +63,16 @@ if (!function_exists('resolveDocumentHref')) {
 
 
     <div id="smooth-wrapper">
-        <div id="smooth-content">            
+        <div id="smooth-content">
+            <header>
+                <?php
+                $boton   = controller('moduleButtonType01', 0);
+                echo controller('moduleH1Type01', 0, [
+                    '{a-button-primary}' => $boton
+                ]);
+                ?>
+            </header>    
+        
             <main>
                 <?php
                 $h2       = controller('moduleH2Type01', 1);

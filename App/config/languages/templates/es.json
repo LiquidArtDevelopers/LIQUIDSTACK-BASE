@@ -241,11 +241,11 @@
     },
     "sectTabs01_00_a_b1_l1": {
         "text": "Descargar checklist",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b1_l2": {
         "text": "Guía de accesos",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b2_h4": {
         "text": "Gestión logística de mercancía sensible"
@@ -255,11 +255,11 @@
     },
     "sectTabs01_00_a_b2_l1": {
         "text": "Formulario incidencias",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b2_l2": {
         "text": "Protocolo cadena fría",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b3_h4": {
         "text": "Coordinación con partners estratégicos regionales"
@@ -269,11 +269,11 @@
     },
     "sectTabs01_00_a_b3_l1": {
         "text": "Agenda semanal",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b3_l2": {
         "text": "Resumen KPI",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_id": {
         "text": "documentos-comerciales"
@@ -292,11 +292,11 @@
     },
     "sectTabs01_00_b_b1_l1": {
         "text": "Descargar contrato",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b1_l2": {
         "text": "Anexo de coberturas",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b2_h4": {
         "text": "Tarifarios escalables por volumen mensual"
@@ -306,11 +306,11 @@
     },
     "sectTabs01_00_b_b2_l1": {
         "text": "Tabla vigente",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b2_l2": {
         "text": "Detalle de recargos",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b3_h4": {
         "text": "Brief comercial para onboarding regional"
@@ -320,11 +320,11 @@
     },
     "sectTabs01_00_b_b3_l1": {
         "text": "Presentación PDF",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b3_l2": {
         "text": "Script de llamadas",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_id": {
         "text": "recursos-formacion"
@@ -343,11 +343,11 @@
     },
     "sectTabs01_00_c_b1_l1": {
         "text": "Calendario talleres",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b1_l2": {
         "text": "Ficha de contenidos",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b2_h4": {
         "text": "Manuales de ruta y experiencia cliente"
@@ -357,11 +357,11 @@
     },
     "sectTabs01_00_c_b2_l1": {
         "text": "Kit entregas",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b2_l2": {
         "text": "Guía de trato",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b3_h4": {
         "text": "Evaluaciones y certificaciones internas anuales"
@@ -371,11 +371,11 @@
     },
     "sectTabs01_00_c_b3_l1": {
         "text": "Evaluación online",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b3_l2": {
         "text": "Plantilla de rúbrica",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "moduleH1Type01_00_h1_text": {
         "text": "Encabezado H1"

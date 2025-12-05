@@ -1276,11 +1276,11 @@
     },
     "sectTabs01_00_a_b1_l1": {
         "text": "Reglamento General de Circulación",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b1_l2": {
         "text": "Catálogo de señales",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b2_h4": {
         "text": "Permisos"
@@ -1290,15 +1290,15 @@
     },
     "sectTabs01_00_a_b2_l1": {
         "text": "Permiso de conducir B",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b2_l2": {
         "text": "Permiso de conducir C",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b2_l3": {
         "text": "Permiso de conducir D",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b3_h4": {
         "text": "Vehículos"
@@ -1308,11 +1308,11 @@
     },
     "sectTabs01_00_a_b3_l1": {
         "text": "Normativa de vehículos",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_a_b3_l2": {
         "text": "Modelos de vehículos",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_id": {
         "text": "tab2"
@@ -1331,11 +1331,11 @@
     },
     "sectTabs01_00_b_b1_l1": {
         "text": "Duplicado de permiso",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b1_l2": {
         "text": "Cambio de domicilio",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b2_h4": {
         "text": "Información"
@@ -1345,11 +1345,11 @@
     },
     "sectTabs01_00_b_b2_l1": {
         "text": "Normativa vigente",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b2_l2": {
         "text": "Modelos oficiales",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b3_h4": {
         "text": "Contacto"
@@ -1359,11 +1359,11 @@
     },
     "sectTabs01_00_b_b3_l1": {
         "text": "Formulario de contacto",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_b_b3_l2": {
         "text": "Teléfono de atención",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_id": {
         "text": "tab3"
@@ -1382,11 +1382,11 @@
     },
     "sectTabs01_00_c_b1_l1": {
         "text": "Duplicado de permiso",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b1_l2": {
         "text": "Cambio de domicilio",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b2_h4": {
         "text": "Información"
@@ -1396,11 +1396,11 @@
     },
     "sectTabs01_00_c_b2_l1": {
         "text": "Normativa vigente",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b2_l2": {
         "text": "Modelos oficiales",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b3_h4": {
         "text": "Contacto"
@@ -1410,11 +1410,11 @@
     },
     "sectTabs01_00_c_b3_l1": {
         "text": "Formulario de contacto",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_c_b3_l2": {
         "text": "Teléfono de atención",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     
     "sectTabs01_00_d_id": {
@@ -1434,11 +1434,11 @@
     },
     "sectTabs01_00_d_b1_l1": {
         "text": "Reglamento General de Circulación",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_d_b1_l2": {
         "text": "Catálogo de señales",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_d_b2_h4": {
         "text": "Permisos"
@@ -1448,11 +1448,11 @@
     },
     "sectTabs01_00_d_b2_l1": {
         "text": "Permiso de conducir B",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_d_b2_l2": {
         "text": "Permiso de conducir C",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_d_b3_h4": {
         "text": "Vehículos"
@@ -1462,11 +1462,11 @@
     },
     "sectTabs01_00_d_b3_l1": {
         "text": "Normativa de vehículos",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sectTabs01_00_d_b3_l2": {
         "text": "Modelos de vehículos",
-        "href": "example.php"
+        "href": "example.pdf"
     },
     "sect02_00_b_h3_text": {
         "text": "Título B"

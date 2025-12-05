@@ -29,7 +29,7 @@
             <main>
                 <?php
                 $contactHeader    = controller('moduleH2Type01', 0);
-                $primaryContactCta = controller('moduleButtonType01', 1);
+                $primaryContactCta = controller('moduleButtonType01', 0);
                 echo controller('moduleH1Type02', 0, ['{a-button-primary}' => $primaryContactCta]);
 
                 $secondaryButtonA = controller('moduleButtonType02', 0);
@@ -41,16 +41,32 @@
                     '{d-button-secondary}' => $secondaryButtonB,
                     'items'                => 4,
                 ]);
-
-                $primaryButtonA = controller('moduleButtonType01', 0);
-                $primaryButtonB = controller('moduleButtonType01', 1);
-
-                echo controller('art08', 0, [
-                    '{a-button-primary}' => $primaryButtonA,
-                    '{b-button-primary}' => $primaryButtonB,
-                    'items'              => 2,
-                ]);
                 ?>
+                <section>
+                    
+                    <?php
+                    echo controller('moduleH2Type01', 1);
+
+                    $primaryButtonA = controller('moduleButtonType01', 1);
+                    $primaryButtonB = controller('moduleButtonType01', 2);
+
+                    echo controller('art08', 0, [
+                        '{a-button-primary}' => $primaryButtonA,
+                        '{b-button-primary}' => $primaryButtonB,
+                        'items'              => 2,
+                    ]);
+                    ?>
+                </section>
+
+                <section>
+                    <?php
+                    echo controller('moduleH2Type01', 2);
+                    
+                    // artForm01 Refactorizado (instancia 00)
+                    echo controller('artForm01', 0);
+                    ?>
+                </section>
+                
             </main>
 
             <?php include __DIR__.'/../includes/_footer.php' ?>
