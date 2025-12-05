@@ -79,17 +79,17 @@
         "text": "Párrafo A2"
     },
     "sect01_00_a_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "title": "Imagen A2",
         "alt": "A2"
     },
     "sect01_00_a_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "A3",
         "title": "Imagen A3"
     },
     "sect01_00_a_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "A4",
         "title": "Imagen A4"
     },
@@ -108,17 +108,17 @@
         "text": "Párrafo B2"
     },
     "sect01_00_b_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "B2",
         "title": "Imagen B2"
     },
     "sect01_00_b_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "B3",
         "title": "Imagen B3"
     },
     "sect01_00_b_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "B4",
         "title": "Imagen B4"
     },
@@ -137,17 +137,17 @@
         "text": "Párrafo C2"
     },
     "sect01_00_c_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "C2",
         "title": "Imagen C2"
     },
     "sect01_00_c_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "C3",
         "title": "Imagen C3"
     },
     "sect01_00_c_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "C4",
         "title": "Imagen C4"
     },
@@ -166,31 +166,31 @@
         "text": "Párrafo D2"
     },
     "sect01_00_d_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "D2",
         "title": "Imagen D2"
     },
     "sect01_00_d_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "D3",
         "title": "Imagen D3"
     },
     "sect01_00_d_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "D4",
         "title": "Imagen D4"
     },
     "hero00_bg_mobile": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-900.avif"
+        "src": "assets/img/dummy/dummy_900.avif"
     },
     "hero00_bg_tablet": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-1500.avif"
+        "src": "assets/img/dummy/dummy_1800.avif"
     },
     "hero00_bg_desktop": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif"
+        "src": "assets/img/dummy/dummy_2560.avif"
     },
     "hero00_bg_fallback": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-900.avif"
+        "src": "assets/img/dummy/dummy_900.avif"
     },
     "hero02_video_webm": {
         "src": "/assets/video/dummy.webm"
@@ -199,7 +199,7 @@
         "src": "/assets/video/dummy.mp4"
     },
     "hero02_video_poster": {
-        "src": "assets/img/dummy/jornadas-hettich-2560.avif"
+        "src": "assets/img/dummy/dummy_2560.avif"
     },
     "hero02_video_title": {
         "title": "Reproductor de vídeo"
@@ -223,7 +223,7 @@
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa sapiente placeat? Voluptatibus optio maiores vel nemo, voluptatem repellat iure?"
     },
     "art01_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -234,7 +234,7 @@
         "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
     },
     "art01_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -245,7 +245,7 @@
         "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
     },
     "art01_00_hero_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -283,7 +283,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -294,7 +294,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -308,17 +308,17 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, explicabo…"
     },
     "art04_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
     "art04_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
     "art04_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -332,7 +332,7 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
     },
     "art06_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -343,7 +343,7 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
     },
     "art06_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -357,22 +357,22 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
     },
     "art06_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
-    "art06_00_a_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_a_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "art06_00_a_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_a_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "art06_00_b_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_b_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "art06_00_b_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_b_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "art06_00_c_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_c_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "art06_00_c_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_c_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_a_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_a_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_b_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_b_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_c_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_c_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art07_00_h3_1": {
         "text": "Encabezado h3 del art07"
     },
@@ -388,12 +388,12 @@
     "art07_00_cite": {
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
     },
-    "art07_00_bgHero_mobile": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgHero_tablet": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgHero_desktop": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgMatrix_mobile": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgMatrix_tablet": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgMatrix_desktop": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+    "art07_00_bgHero_mobile": "assets/img/dummy/dummy_900.avif",
+    "art07_00_bgHero_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art07_00_bgHero_desktop": "assets/img/dummy/dummy_2560.avif",
+    "art07_00_bgMatrix_mobile": "assets/img/dummy/dummy_900.avif",
+    "art07_00_bgMatrix_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art07_00_bgMatrix_desktop": "assets/img/dummy/dummy_2560.avif",
     "moduleButtonType01_06_cta": {
         "href": "#",
         "title": "Ir a la sección"
@@ -410,7 +410,7 @@
         "text": "Encabezado h3 artículo 08"
     },
     "art08_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -421,7 +421,7 @@
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus harum totam cupiditate, laudantium repellat itaque necessitatibus natus nobis reiciendis consequatur sed tempore delectus id quis ab tempora excepturi aspernatur repellendus?"
     },
     "art08_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -481,7 +481,7 @@
         "title": "Icono A"
     },
     "art12_00_a_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo A",
         "title": "Imagen de fondo A"
     },
@@ -497,7 +497,7 @@
         "title": "Icono B"
     },
     "art12_00_b_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo B",
         "title": "Imagen de fondo B"
     },
@@ -513,7 +513,7 @@
         "title": "Icono C"
     },
     "art12_00_c_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo C",
         "title": "Imagen de fondo C"
     },
@@ -558,12 +558,12 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, dolores?"
     },
     "art15_00_img1": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen principal",
         "title": "Imagen principal"
     },
     "art15_00_img2": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen secundaria",
         "title": "Imagen secundaria"
     },
@@ -575,7 +575,7 @@
         "href": "noticias"
     },
     "artSlider01_00_carda_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 1",
         "title": "Noticia 1"
     },
@@ -593,7 +593,7 @@
         "href": "noticias/noticia-1"
     },
     "artSlider01_00_cardb_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 2",
         "title": "Noticia 2"
     },
@@ -611,7 +611,7 @@
         "href": "noticias/noticia-2"
     },
     "artSlider01_00_cardc_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 3",
         "title": "Noticia 3"
     },
@@ -629,7 +629,7 @@
         "href": "noticias/noticia-3"
     },
     "artSlider01_00_cardd_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 4",
         "title": "Noticia 4"
     },
@@ -647,7 +647,7 @@
         "href": "noticias/noticia-4"
     },
     "artSlider01_00_carde_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 5",
         "title": "Noticia 5"
     },
@@ -665,7 +665,7 @@
         "href": "noticias/noticia-5"
     },
     "artSlider01_00_cardf_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 6",
         "title": "Noticia 6"
     },
@@ -683,7 +683,7 @@
         "href": "noticias/noticia-6"
     },
     "artSlider01_00_cardg_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 7",
         "title": "Noticia 7"
     },
@@ -701,7 +701,7 @@
         "href": "noticias/noticia-7"
     },
     "artSlider01_00_cardh_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 8",
         "title": "Noticia 8"
     },
@@ -719,7 +719,7 @@
         "href": "noticias/noticia-8"
     },
     "artSlider01_00_cardi_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 9",
         "title": "Noticia 9"
     },
@@ -737,7 +737,7 @@
         "href": "noticias/noticia-9"
     },
     "artSlider01_00_cardj_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Noticia 10",
         "title": "Noticia 10"
     },
@@ -764,7 +764,7 @@
         "text": "Siguiente"
     },
     "artSlider02_00_slidea_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Jornadas Hettich 1",
         "title": "Jornadas Hettich 1"
     },
@@ -772,7 +772,7 @@
         "text": "Jornada Hettich 1"
     },
     "artSlider02_00_slideb_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Jornadas Hettich 2",
         "title": "Jornadas Hettich 2"
     },
@@ -780,7 +780,7 @@
         "text": "Jornada Hettich 2"
     },
     "artSlider02_00_slidec_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Jornadas Hettich 3",
         "title": "Jornadas Hettich 3"
     },
@@ -788,7 +788,7 @@
         "text": "Jornada Hettich 3"
     },
     "artSlider02_00_slided_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Jornadas Hettich 4",
         "title": "Jornadas Hettich 4"
     },
@@ -978,7 +978,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_a_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -994,7 +994,7 @@
         "title": "Avatar B-1"
     },
     "art09_00_b_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar B-2",
         "title": "Avatar B-2"
     },
@@ -1010,7 +1010,7 @@
         "title": "Avatar C-1"
     },
     "art09_00_c_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar C-2",
         "title": "Avatar C-2"
     },
@@ -1026,7 +1026,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_d_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -1042,7 +1042,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_e_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -1058,7 +1058,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_f_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -1074,7 +1074,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_g_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -1090,7 +1090,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_h_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -1106,7 +1106,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_i_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -1122,7 +1122,7 @@
         "title": "Avatar A-1"
     },
     "art09_00_j_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Avatar A-2",
         "title": "Avatar A-2"
     },
@@ -1481,7 +1481,7 @@
         "text": "(max-width: 899px) 1000px, 1500px"
     },
     "sect02_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen B",
         "title": "Imagen B"
     },
@@ -1501,7 +1501,7 @@
         "text": "(max-width: 899px) 1000px, 1500px"
     },
     "sect02_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen C",
         "title": "Imagen C"
     },
@@ -1521,7 +1521,7 @@
         "text": "(max-width: 899px) 1000px, 1500px"
     },
     "sect02_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen A",
         "title": "Imagen A"
     },
@@ -1541,7 +1541,7 @@
         "text": "(max-width: 899px) 1000px, 1500px"
     },
     "sect02_00_d_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen A",
         "title": "Imagen A"
     },
@@ -1555,7 +1555,7 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, explicabo…"
     },
     "art03_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1567,7 +1567,7 @@
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
     },
     "art03_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1579,7 +1579,7 @@
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
     },
     "art03_00_d_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1594,7 +1594,7 @@
         "text": "Encabezado variable h4 art03"
     },
     "art03_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1618,7 +1618,7 @@
         "text": "Encabezado variable h4 art03"
     },
     "art03_00_e_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1633,7 +1633,7 @@
         "text": "Encabezado variable h4 art03"
     },
     "art03_00_f_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1648,7 +1648,7 @@
         "text": "Encabezado variable h4 art03"
     },
     "art03_00_g_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1663,7 +1663,7 @@
         "text": "Encabezado variable h4 art03"
     },
     "art03_00_h_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1690,96 +1690,96 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
     "art02_00_c_p": {
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
     },
-    "sect02_00_b_avif_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_b_avif_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "sect02_00_b_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_b_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "sect02_00_c_avif_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_c_avif_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "sect02_00_c_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_c_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "sect02_00_a_avif_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_a_avif_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "sect02_00_a_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_a_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "sect02_00_d_avif_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_d_avif_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "sect02_00_d_img_srcset01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "sect02_00_d_img_srcset02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "art03_00_b_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_b_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_b_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_b_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_c_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_c_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_c_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_c_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_d_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_d_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_d_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_d_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_a_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_a_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_a_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_a_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_e_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_e_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_e_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_e_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_f_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_f_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_f_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_f_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_g_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_g_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_g_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_g_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_h_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_h_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_h_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_h_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_b_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_b_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_b_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_b_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_c_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_c_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_c_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_c_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_a_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_a_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_a_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_a_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "artSlider02_00_slideb_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slideb_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "sect02_00_b_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_b_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_c_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_a_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_d_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_d_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_d_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_d_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_b_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_c_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_c_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_d_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_d_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_d_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_d_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_a_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_a_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_e_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_e_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_e_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_e_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_f_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_f_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_f_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_f_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_g_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_g_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_g_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_g_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_h_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_h_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_h_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_h_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_b_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "artSlider02_00_slideb_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slideb_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slideb_avif_sizes": "100vw",
-    "artSlider02_00_slideb_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slideb_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slideb_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slideb_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slideb_img_sizes": "(max-width: 768px) 100vw, 1500px",
-    "artSlider02_00_slidec_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidec_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidec_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidec_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidec_avif_sizes": "100vw",
-    "artSlider02_00_slidec_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidec_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidec_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidec_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidec_img_sizes": "(max-width: 768px) 100vw, 1500px",
-    "artSlider02_00_slided_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slided_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slided_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slided_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slided_avif_sizes": "100vw",
-    "artSlider02_00_slided_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slided_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slided_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slided_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slided_img_sizes": "(max-width: 768px) 100vw, 1500px",
-    "artSlider02_00_slidea_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidea_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidea_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidea_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidea_avif_sizes": "100vw",
-    "artSlider02_00_slidea_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidea_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidea_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidea_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidea_img_sizes": "(max-width: 768px) 100vw, 1500px",
     "art12_00_headerSecondary_d": {
         "text": "Título ficha A"
@@ -1790,7 +1790,7 @@
         "title": "Icono A"
     },
     "art12_00_d_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo A",
         "title": "Imagen de fondo A"
     },
@@ -1806,7 +1806,7 @@
         "title": "Icono A"
     },
     "art12_00_e_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo A",
         "title": "Imagen de fondo A"
     },
@@ -1822,7 +1822,7 @@
         "title": "Icono A"
     },
     "art12_00_f_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo A",
         "title": "Imagen de fondo A"
     },
@@ -1838,7 +1838,7 @@
         "title": "Icono A"
     },
     "art12_00_g_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo A",
         "title": "Imagen de fondo A"
     },
@@ -1854,7 +1854,7 @@
         "title": "Icono A"
     },
     "art12_00_h_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen de fondo A",
         "title": "Imagen de fondo A"
     },
@@ -1913,7 +1913,7 @@
         "text": "GOAL1"
     },
     "art01_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1924,7 +1924,7 @@
         "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
     },
     "art01_00_d_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1935,7 +1935,7 @@
         "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
     },
     "art08_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -1973,60 +1973,60 @@
     "art06_00_d_p": {
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
     },
-    "art06_00_d_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_d_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_d_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_d_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_d_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
-    "art06_00_d_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_d_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_d_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_d_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_headerSecondary_e": {
         "text": "Título bloque A"
     },
     "art06_00_e_p": {
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
     },
-    "art06_00_e_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_e_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_e_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_e_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_e_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
-    "art06_00_e_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_e_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_e_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_e_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_headerSecondary_f": {
         "text": "Título bloque A"
     },
     "art06_00_f_p": {
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
     },
-    "art06_00_f_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_f_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_f_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_f_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_f_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
-    "art06_00_f_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_f_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_f_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_f_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_headerSecondary_g": {
         "text": "Título bloque A"
     },
     "art06_00_g_p": {
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
     },
-    "art06_00_g_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_g_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_g_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_g_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_g_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
-    "art06_00_g_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_g_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_g_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_g_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art13_00_a_quote": {
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae arcu in nunc elementum placerat. Phasellus non purus vitae justo commodo commodo. Integer blandit, lectus at cursus feugiat, mi nunc venenatis nibh, eu molestie nunc lectus ac metus."
     },
@@ -2042,7 +2042,7 @@
         "text": "★★★★★"
     },
     "art13_00_a_side_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen lateral",
         "title": "Imagen lateral"
     },
@@ -2067,14 +2067,14 @@
     "art16_00_body_p": {
         "text": "Texto descriptivo para el recurso art16 con contenido de ejemplo."
     },
-    "art16_00_bg_mobile": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art16_00_bg_tablet": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art16_00_bg_desktop": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+    "art16_00_bg_mobile": "assets/img/dummy/dummy_900.avif",
+    "art16_00_bg_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art16_00_bg_desktop": "assets/img/dummy/dummy_2560.avif",
     "art02_00_headerSecondary_d": {
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_d_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -2085,7 +2085,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_e_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -2096,7 +2096,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_f_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -2107,7 +2107,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_g_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -2118,7 +2118,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_h_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },

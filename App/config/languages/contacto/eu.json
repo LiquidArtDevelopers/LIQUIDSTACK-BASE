@@ -19,16 +19,16 @@
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     },
     "hero00_bg_mobile": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-900.avif"
+        "src": "assets/img/dummy/dummy_900.avif"
     },
     "hero00_bg_tablet": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-1500.avif"
+        "src": "assets/img/dummy/dummy_1800.avif"
     },
     "hero00_bg_desktop": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif"
+        "src": "assets/img/dummy/dummy_2560.avif"
     },
     "hero00_bg_fallback": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-900.avif"
+        "src": "assets/img/dummy/dummy_900.avif"
     },
     "hero02_video_webm": {
         "src": "/assets/video/dummy.webm"
@@ -37,7 +37,7 @@
         "src": "/assets/video/dummy.mp4"
     },
     "hero02_video_poster": {
-        "src": "assets/img/dummy/jornadas-hettich-2560.avif"
+        "src": "assets/img/dummy/dummy_2560.avif"
     },
     "hero02_video_title": {
         "title": "Vídeo operaciones inteligentes"
@@ -57,17 +57,17 @@
         "text": "Aportamos métricas de seguimiento y soporte remoto continuo para nutrir oportunidades tras cada evento híbrido."
     },
     "sect01_00_a_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Equipo analizando panel de métricas",
         "title": "Equipo analiza panel de métricas"
     },
     "sect01_00_a_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Clientes revisando catálogo interactivo",
         "title": "Clientes revisan catálogo interactivo"
     },
     "sect01_00_a_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Showroom híbrido con asistentes conectados",
         "title": "Showroom híbrido para asistentes conectados"
     },
@@ -86,17 +86,17 @@
         "text": "Enlazamos CRM, mailing y chat proactivo para activar respuestas rápidas cuando surge un nuevo requisito."
     },
     "sect01_00_b_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Panel con hitos automatizados activos",
         "title": "Panel muestra hitos automatizados activos"
     },
     "sect01_00_b_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Equipo coordinando seguimiento multicanal integrado",
         "title": "Equipo coordina seguimiento multicanal integrado"
     },
     "sect01_00_b_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Representación de workflow comercial inteligente",
         "title": "Workflow comercial inteligente en ejecución"
     },
@@ -115,17 +115,17 @@
         "text": "Incluimos resúmenes descargables y agendas de talleres para mantener viva la conversación tras el tour."
     },
     "sect01_00_c_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Visitantes probando módulos interactivos conectados",
         "title": "Visitantes prueban módulos interactivos conectados"
     },
     "sect01_00_c_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Guía facilitando demostración phygital colaborativa",
         "title": "Guía facilita demostración phygital colaborativa"
     },
     "sect01_00_c_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Escenario inmersivo con señalética dinámica",
         "title": "Escenario inmersivo muestra señalética dinámica"
     },
@@ -144,17 +144,17 @@
         "text": "Ofrecemos foros privados y soporte experto para resolver dudas avanzadas y compartir mejores prácticas."
     },
     "sect01_00_d_img02": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Sesión formativa con instructores certificados",
         "title": "Sesión formativa para partners certificados"
     },
     "sect01_00_d_img03": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Participantes evaluando módulos técnicos especializados",
         "title": "Participantes evalúan módulos técnicos especializados"
     },
     "sect01_00_d_img04": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Plataforma académica con progreso gamificado",
         "title": "Plataforma académica muestra progreso gamificado"
     },
@@ -424,7 +424,7 @@
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa sapiente placeat? Voluptatibus optio maiores vel nemo, voluptatem repellat iure?"
     },
     "art01_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -435,7 +435,7 @@
         "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
     },
     "art01_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -446,7 +446,7 @@
         "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
     },
     "art01_00_hero_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -466,7 +466,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -477,7 +477,7 @@
         "text": "Encabezado variable h4 art02"
     },
     "art02_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Imagen dummy",
         "title": "Imagen dummy"
     },
@@ -494,7 +494,7 @@
         "text": "Análisis pericial para activos críticos"
     },
     "art03_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Equipo técnico auditando almacén de alto rendimiento",
         "title": "Supervisión pericial con tecnología avanzada"
     },
@@ -509,7 +509,7 @@
         "text": "Monitorización predictiva de siniestros"
     },
     "art03_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Panel de control analiza riesgos operativos críticos",
         "title": "Modelado predictivo para prevenir incidencias"
     },
@@ -524,7 +524,7 @@
         "text": "Cobertura logística y cadena global"
     },
     "art03_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Centro logístico coordina envíos internacionales sensibles",
         "title": "Cadena global alineada con normativas vigentes"
     },
@@ -539,7 +539,7 @@
         "text": "Planes de continuidad certificados ISO"
     },
     "art03_00_d_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Sala de crisis ejecuta planes de contingencia certificados",
         "title": "Continuidad operativa avalada por auditorías ISO"
     },
@@ -557,7 +557,7 @@
         "text": "Seleccionamos intervenciones recientes que ilustran nuestra capacidad para integrar seguridad, eficiencia energética y narrativa visual en entornos industriales con altos requisitos de cumplimiento."
     },
     "art04_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Operario ajusta luminarias inteligentes en planta",
         "title": "Calibración lumínica segura y certificada"
     },
@@ -566,7 +566,7 @@
         "title": "Ver caso iluminación"
     },
     "art04_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Ingeniera supervisa centro de control energético",
         "title": "Supervisión energética con métricas en vivo"
     },
@@ -575,7 +575,7 @@
         "title": "Abrir control energético"
     },
     "art04_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Fachada industrial renovada con señalética sostenible",
         "title": "Señalética sostenible guiando flujos seguros"
     },
@@ -592,30 +592,30 @@
     "art06_00_a_p": {
         "text": "Diseñamos campos solares escalables que se adaptan al consumo real de cada sede, priorizando inversores híbridos y cableado eficiente. El equipo coordina permisos y puesta en marcha sin detener los turnos críticos de producción."
     },
-    "art06_00_a_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_a_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_a_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Técnica revisando inversores solares en planta industrial",
         "title": "Supervisión profesional de inversores industriales en operación"
     },
-    "art06_00_a_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_a_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_a_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_headerSecondary_b": {
         "text": "Monitorización proactiva de rendimiento"
     },
     "art06_00_b_p": {
         "text": "Supervisamos la producción en tiempo real con alertas automáticas que detectan incidencias y envían partes al servicio técnico. Los clientes acceden a paneles con métricas históricas, comparativas climáticas y recomendaciones de ajuste."
     },
-    "art06_00_b_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_b_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_b_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Analista controlando métricas de autoconsumo empresarial",
         "title": "Plataforma con métricas solares en tiempo real"
     },
-    "art06_00_b_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_b_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_b_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_cite": {
         "text": "\"La auditoría energética y el soporte posventa de IT Lanak nos permitieron duplicar el ahorro previsto en menos de un año.\""
     },
@@ -625,21 +625,21 @@
     "art06_00_c_p": {
         "text": "Integramos fórmulas de renting energético, ayudas públicas y certificados de autoconsumo para reducir la inversión inicial. Nuestro equipo financiero asesora sobre amortizaciones y beneficios fiscales específicos del tejido empresarial local."
     },
-    "art06_00_c_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_c_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
+    "art06_00_c_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
     "art06_00_c_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Consultora presentando opciones de financiación verde",
         "title": "Reunión sobre incentivos fiscales para autoconsumo"
     },
-    "art06_00_c_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 900w",
-    "art06_00_c_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1500w",
-    "art07_00_bgHero_mobile": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgHero_tablet": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgHero_desktop": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgMatrix_mobile": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgMatrix_tablet": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art07_00_bgMatrix_desktop": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+    "art06_00_c_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art07_00_bgHero_mobile": "assets/img/dummy/dummy_900.avif",
+    "art07_00_bgHero_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art07_00_bgHero_desktop": "assets/img/dummy/dummy_2560.avif",
+    "art07_00_bgMatrix_mobile": "assets/img/dummy/dummy_900.avif",
+    "art07_00_bgMatrix_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art07_00_bgMatrix_desktop": "assets/img/dummy/dummy_2560.avif",
     "art07_00_h3_1": {
         "text": "Plan integral solar"
     },
@@ -659,7 +659,7 @@
         "text": "Estrategias solares para ampliar la competitividad industrial regional en Gipuzkoa"
     },
     "art08_00_a_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Render de placas solares sobre nave logística automatizada",
         "title": "Fotovoltaica industrial conectada a sistemas de control inteligente"
     },
@@ -670,7 +670,7 @@
         "text": "Analizamos consumos históricos, calculamos cargas estructurales y definimos configuraciones híbridas que permiten integrar almacenamiento, monitorización en tiempo real y contratos PPA adaptados al perfil de demanda de cada línea de producción."
     },
     "art08_00_b_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Equipo instalando inversores trifásicos en centro de control",
         "title": "Comisionado eléctrico con pruebas de seguridad industrial avanzada"
     },
@@ -703,7 +703,7 @@
         "title": "Simulación de flujo en tienda piloto"
     },
     "art09_00_a_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Render 3D de zona de experiencia",
         "title": "Vista cenital de la experiencia inmersiva"
     },
@@ -719,7 +719,7 @@
         "title": "Evaluación diaria de indicadores prioritarios"
     },
     "art09_00_b_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Equipo asesorando a personal de tienda",
         "title": "Sesión táctica con responsables de ventas"
     },
@@ -735,7 +735,7 @@
         "title": "Panel central con ratios de conversión"
     },
     "art09_00_c_img2": {
-        "src": "assets/img/dummy/evento-hettich-2-900.avif",
+        "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Escaparate digital con testimonios en directo",
         "title": "Pantalla mostrando reseñas verificadas"
     },
@@ -825,7 +825,7 @@
         "title": "Proceso de activación guiado"
     },
     "art12_00_a_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Equipo configurando paneles colaborativos digitales",
         "title": "Panel colaborativo listo para partners"
     },
@@ -841,7 +841,7 @@
         "title": "Asistencia continua para socios"
     },
     "art12_00_b_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Analistas revisando panel global colaborativo",
         "title": "Panel global activo en directo"
     },
@@ -857,7 +857,7 @@
         "title": "Control seguro de datos"
     },
     "art12_00_c_imgBack": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Dashboard con métricas protegidas críticas",
         "title": "Dashboard protegido para escalado global"
     },
@@ -884,7 +884,7 @@
         "text": "Valoración 5/5"
     },
     "art13_00_a_side_img": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Equipo celebrando lanzamiento colaborativo global",
         "title": "Celebración interna junto a partners"
     },
@@ -909,12 +909,12 @@
         "text": "Coordinamos financiación pública, formación personalizada y soporte postlanzamiento para que los equipos adopten la solución desde el primer sprint. Medimos satisfacción y resiliencia logística con dashboards compartidos que facilitan reportar a dirección y partners internacionales."
     },
     "art15_00_img1": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Panel con métricas logísticas en sala de control",
         "title": "Panel de métricas logísticas en sala de control"
     },
     "art15_00_img2": {
-        "src": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Equipo coordinando rutas multimodales con mapas digitales",
         "title": "Coordinación de rutas multimodales con mapas digitales"
     },
@@ -1041,7 +1041,7 @@
         "href": "noticias"
     },
     "artSlider01_00_carda_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Vehículo eléctrico repartiendo al amanecer",
         "title": "Vehículo eléctrico repartiendo al amanecer"
     },
@@ -1059,7 +1059,7 @@
         "href": "noticias/noticia-1"
     },
     "artSlider01_00_cardb_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Operarias revisando panel de envíos",
         "title": "Operarias revisando panel de envíos"
     },
@@ -1077,7 +1077,7 @@
         "href": "noticias/noticia-2"
     },
     "artSlider01_00_cardc_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Dron inspeccionando cubierta del hub logístico",
         "title": "Dron inspeccionando cubierta del hub logístico"
     },
@@ -1095,7 +1095,7 @@
         "href": "noticias/noticia-3"
     },
     "artSlider01_00_cardd_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Terminal ferroviaria con contenedores verdes",
         "title": "Terminal ferroviaria con contenedores verdes"
     },
@@ -1113,7 +1113,7 @@
         "href": "noticias/noticia-4"
     },
     "artSlider01_00_carde_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Equipo coordinando ventanas de carga digital",
         "title": "Equipo coordinando ventanas de carga digital"
     },
@@ -1131,7 +1131,7 @@
         "href": "noticias/noticia-5"
     },
     "artSlider01_00_cardf_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Camión autónomo en autopista supervisada",
         "title": "Camión autónomo en autopista supervisada"
     },
@@ -1149,7 +1149,7 @@
         "href": "noticias/noticia-6"
     },
     "artSlider01_00_cardg_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Operario empaquetando retornos reutilizables",
         "title": "Operario empaquetando retornos reutilizables"
     },
@@ -1167,7 +1167,7 @@
         "href": "noticias/noticia-7"
     },
     "artSlider01_00_cardh_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Panel KPI mostrando entregas en tiempo",
         "title": "Panel KPI mostrando entregas en tiempo"
     },
@@ -1185,7 +1185,7 @@
         "href": "noticias/noticia-8"
     },
     "artSlider01_00_cardi_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Camiones frigoríficos cargando en plataforma",
         "title": "Camiones frigoríficos cargando en plataforma"
     },
@@ -1203,7 +1203,7 @@
         "href": "noticias/noticia-9"
     },
     "artSlider01_00_cardj_img": {
-        "src": "assets/img/dummy/evento-hettich-3-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Operativa cross docking en nave automatizada",
         "title": "Operativa cross docking en nave automatizada"
     },
@@ -1230,7 +1230,7 @@
         "text": "Siguiente"
     },
     "artSlider02_00_slidea_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Equipo técnico testando sistemas automatizados",
         "title": "Equipo técnico testando sistemas automatizados"
     },
@@ -1238,7 +1238,7 @@
         "text": "Demo de robotización para líneas mixtas"
     },
     "artSlider02_00_slideb_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Clientes probando paneles de monitorización logística",
         "title": "Clientes probando paneles de monitorización logística"
     },
@@ -1246,7 +1246,7 @@
         "text": "Taller de analítica aplicada a operaciones"
     },
     "artSlider02_00_slidec_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Ponente explicando red de hubs multimodales",
         "title": "Ponente explicando red de hubs multimodales"
     },
@@ -1254,7 +1254,7 @@
         "text": "Ponencia sobre conectividad multimodal 2025"
     },
     "artSlider02_00_slided_img": {
-        "src": "assets/img/dummy/jornadas-hettich-900.avif",
+        "src": "assets/img/dummy/dummy_900.avif",
         "alt": "Visita guiada a almacén con picking asistido",
         "title": "Visita guiada a almacén con picking asistido"
     },
@@ -1369,57 +1369,57 @@
         "text": "Nora Salvat"
     },
 
-    "art03_00_b_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_b_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_b_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_b_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_c_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_c_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_c_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_c_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_d_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_d_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_d_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_d_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_a_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_a_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art03_00_a_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art03_00_a_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_b_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_b_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_b_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_b_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_c_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_c_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_c_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_c_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_a_avif_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_a_avif_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "art04_00_a_img_src01": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1000w",
-    "art04_00_a_img_src02": "assets/img/dummy/AvT_YOU_Illumination-full.avif 1300w",
-    "artSlider02_00_slideb_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slideb_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "art03_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_b_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_c_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_c_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_d_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_d_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_d_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_d_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_a_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_a_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_b_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "artSlider02_00_slideb_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slideb_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slideb_avif_sizes": "100vw",
-    "artSlider02_00_slideb_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slideb_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slideb_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slideb_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slideb_img_sizes": "(max-width: 768px) 100vw, 1500px",
-    "artSlider02_00_slidec_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidec_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidec_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidec_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidec_avif_sizes": "100vw",
-    "artSlider02_00_slidec_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidec_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidec_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidec_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidec_img_sizes": "(max-width: 768px) 100vw, 1500px",
-    "artSlider02_00_slided_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slided_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slided_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slided_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slided_avif_sizes": "100vw",
-    "artSlider02_00_slided_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slided_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slided_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slided_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slided_img_sizes": "(max-width: 768px) 100vw, 1500px",
-    "artSlider02_00_slidea_avif_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidea_avif_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidea_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidea_avif_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidea_avif_sizes": "100vw",
-    "artSlider02_00_slidea_img_src01": "assets/img/dummy/jornadas-hettich-900.avif",
-    "artSlider02_00_slidea_img_src02": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "artSlider02_00_slidea_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidea_img_src02": "assets/img/dummy/dummy_1800.avif",
     "artSlider02_00_slidea_img_sizes": "(max-width: 768px) 100vw, 1500px",
     "art16_00_h3_1": {
         "text": "Servicios logísticos avanzados"
@@ -1430,9 +1430,9 @@
     "art16_00_body_p": {
         "text": "Optimizamos rutas, almacenaje y entregas con analítica en tiempo real para reducir costes, emisiones y reclamaciones mientras ofrecemos trazabilidad completa a tus clientes en cada etapa de la cadena regional."
     },
-    "art16_00_bg_mobile": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art16_00_bg_tablet": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
-    "art16_00_bg_desktop": "assets/img/dummy/AvT_YOU_Illumination-full.avif",
+    "art16_00_bg_mobile": "assets/img/dummy/dummy_900.avif",
+    "art16_00_bg_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art16_00_bg_desktop": "assets/img/dummy/dummy_2560.avif",
     "moduleH1Type02_00_h1_text": {
         "text": "Logística inteligente para flotas multiorigen europeas"
     },
