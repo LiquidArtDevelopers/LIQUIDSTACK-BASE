@@ -6,7 +6,7 @@ require_once __DIR__ . "/_activeRecord.php";
 ActiveRecord::setConectionDB($con);
 class Admin extends ActiveRecord
 {
-    public static ?string $table = "saj674hsj_admins";
+    public static ?string $table = "ls_admins";
     public  string $id_name = "id_admin";
     public $id_admin;
     public $nombre;

@@ -7,7 +7,7 @@ ActiveRecord::setConectionDB($con);
 
 class Credencial extends ActiveRecord
 {
-    public static ?string $table = "saj674hsj_credenciales";
+    public static ?string $table = "ls_credenciales";
     public string $id_name = "id_credencial";
     public  $id_credencial;
     public  $id_admin;

@@ -6,7 +6,7 @@ require_once __DIR__ . "/_activeRecord.php";
 ActiveRecord::setConectionDB($con);
 class Usuario extends ActiveRecord
 {
-    public static ?string $table = "saj674hsj_usuarios";
+    public static ?string $table = "ls_usuarios";
     public  string $id_name = "id_usuario";
     public $id_usuario;
     public $num_socio;
