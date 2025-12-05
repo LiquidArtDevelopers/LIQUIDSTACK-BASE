@@ -163,7 +163,7 @@
         "text": "Nuestro primer comunicado!"
     },
     "sect02_00_a_p01_text": {
-        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Club Atlético San Sebastián. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
+        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Liquid Stack. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
     },
     "sect02_00_a_p02_text": {
         "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
@@ -171,7 +171,7 @@
     "sect02_00_a_img": {
         "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Primer comunicado",
-        "title": "Primer Comunicado del ATSS"
+        "title": "Primer Comunicado del LS"
     },
     "sect02_00_a_img_sizes": {
         "text": "(max-width: 899px) 900px, 1800px"
@@ -241,11 +241,11 @@
     },
     "sectTabs01_00_a_b1_l1": {
         "text": "Descargar checklist",
-        "href": "protocolos-checklist.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b1_l2": {
         "text": "Guía de accesos",
-        "href": "protocolos-accesos.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b2_h4": {
         "text": "Gestión logística de mercancía sensible"
@@ -255,11 +255,11 @@
     },
     "sectTabs01_00_a_b2_l1": {
         "text": "Formulario incidencias",
-        "href": "mercancia-incidencias.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b2_l2": {
         "text": "Protocolo cadena fría",
-        "href": "cadena-fria-protocolo.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b3_h4": {
         "text": "Coordinación con partners estratégicos regionales"
@@ -269,11 +269,11 @@
     },
     "sectTabs01_00_a_b3_l1": {
         "text": "Agenda semanal",
-        "href": "agenda-reunion.xlsx"
+        "href": "example.php"
     },
     "sectTabs01_00_a_b3_l2": {
         "text": "Resumen KPI",
-        "href": "resumen-kpi.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_b_id": {
         "text": "documentos-comerciales"
@@ -292,11 +292,11 @@
     },
     "sectTabs01_00_b_b1_l1": {
         "text": "Descargar contrato",
-        "href": "acuerdo-marco.docx"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b1_l2": {
         "text": "Anexo de coberturas",
-        "href": "anexo-coberturas.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b2_h4": {
         "text": "Tarifarios escalables por volumen mensual"
@@ -306,11 +306,11 @@
     },
     "sectTabs01_00_b_b2_l1": {
         "text": "Tabla vigente",
-        "href": "tarifario-actual.xlsx"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b2_l2": {
         "text": "Detalle de recargos",
-        "href": "tarifario-recargos.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b3_h4": {
         "text": "Brief comercial para onboarding regional"
@@ -320,11 +320,11 @@
     },
     "sectTabs01_00_b_b3_l1": {
         "text": "Presentación PDF",
-        "href": "brief-onboarding.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_b_b3_l2": {
         "text": "Script de llamadas",
-        "href": "script-llamadas.docx"
+        "href": "example.php"
     },
     "sectTabs01_00_c_id": {
         "text": "recursos-formacion"
@@ -343,11 +343,11 @@
     },
     "sectTabs01_00_c_b1_l1": {
         "text": "Calendario talleres",
-        "href": "agenda-workshops.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b1_l2": {
         "text": "Ficha de contenidos",
-        "href": "ficha-contenidos.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b2_h4": {
         "text": "Manuales de ruta y experiencia cliente"
@@ -357,11 +357,11 @@
     },
     "sectTabs01_00_c_b2_l1": {
         "text": "Kit entregas",
-        "href": "kit-entregas.zip"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b2_l2": {
         "text": "Guía de trato",
-        "href": "guia-trato.pdf"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b3_h4": {
         "text": "Evaluaciones y certificaciones internas anuales"
@@ -371,11 +371,11 @@
     },
     "sectTabs01_00_c_b3_l1": {
         "text": "Evaluación online",
-        "href": "evaluacion-online.html"
+        "href": "example.php"
     },
     "sectTabs01_00_c_b3_l2": {
         "text": "Plantilla de rúbrica",
-        "href": "rubrica-evaluacion.xlsx"
+        "href": "example.php"
     },
     "moduleH1Type01_00_h1_text": {
         "text": "Encabezado H1"
@@ -972,7 +972,7 @@
     "artForm01_00_side_p": {
         "text": "Si prefieres una atención inmediata, escríbenos o llámanos para coordinar recogidas urgentes, seguimiento de incidencias o asesoramiento sobre integraciones. Nuestro equipo operativo responde de lunes a viernes en horario ampliado para adaptarse a tus ventanas de carga y descarga."
     },
-    "artForm01_00_contact_tel_href": "tel:+34900000000",
+    "artForm01_00_contact_tel_href": "tel:+00000000000",
     "artForm01_00_contact_tel_title": "Llamar por teléfono",
     "artForm01_00_contact_tel_img": {
         "src": "assets/img/system/tel.svg",
@@ -980,7 +980,7 @@
         "title": "Teléfono"
     },
     "artForm01_00_contact_tel": {
-        "text": "Llámanos al +34 900 00 00 00"
+        "text": "Teléfono pendiente de actualización"
     },
     "artForm01_00_contact_mail_href": "mailto:info@ejemplo.com",
     "artForm01_00_contact_mail_title": "Enviar correo",
@@ -1000,7 +1000,7 @@
         "title": "Dirección"
     },
     "artForm01_00_contact_addr": {
-        "text": "C/ Ejemplo 23, Donostia-San Sebastián"
+        "text": "Dirección pendiente de actualización"
     },
     "artForm01_00_contact_web_href": "https://www.ejemplo.com",
     "artForm01_00_contact_web_title": "Visitar web",

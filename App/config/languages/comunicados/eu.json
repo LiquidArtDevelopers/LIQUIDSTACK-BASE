@@ -8,10 +8,10 @@
         "content": ""
     },
     "title": {
-        "text": "Atlético San Sebastián Klubeko Bazkideen Zona Pribatua"
+        "text": "Liquid Stack Klubeko Bazkideen Zona Pribatua"
     },
     "description": {
-        "content": "Orrialde honetara Atlético San Sebastián Klubeko bazkide aktiboek bakarrik dute sarbidea. Bertan Batzar Orokor eta Zuzendaritza Batzordeekin lotutako dokumentuak deskargatu ahal izango dituzu."
+        "content": "Orrialde honetara Liquid Stack Klubeko bazkide aktiboek bakarrik dute sarbidea. Bertan Batzar Orokor eta Zuzendaritza Batzordeekin lotutako dokumentuak deskargatu ahal izango dituzu."
     },
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
@@ -89,7 +89,7 @@
         "text": "Gure lehen komunikatua!"
     },
     "sect02_00_a_p01_text": {
-        "text": "Gune hau inauguratu dugu Atlético San Sebastián Klubeko parte zareten guztientzat bereziki pentsatua. Hemen barneko berrikuntza guztiak zentralizatuko ditugu, informazio argi eta hurbila eskainiz eta klubaren egunerokoa gertu jarraitzeko aukera emanez."
+        "text": "Gune hau inauguratu dugu Liquid Stack Klubeko parte zareten guztientzat bereziki pentsatua. Hemen barneko berrikuntza guztiak zentralizatuko ditugu, informazio argi eta hurbila eskainiz eta klubaren egunerokoa gertu jarraitzeko aukera emanez."
     },
     "sect02_00_a_p02_text": {
         "text": "Hemendik aurrera komunikatu garrantzitsuak, iragarpen ofizialak eta bazkideentzat soilik erreserbatutako jarduerak aurkituko dituzu. Kanal hau erabilgarria eta zuzenekoa izatea nahi dugu, komunitatearen egunerokoan eragiten duen guztira errazago iristeko. Gonbidatzen zaitugu maiz bisitatzera eta eguneratuta egotera."
@@ -97,7 +97,7 @@
     "sect02_00_a_img": {
         "src": "assets/img/dummy/dummy_1200.avif",
         "alt": "Lehen komunikatua",
-        "title": "ATSSen lehen komunikatua"
+        "title": "LSen lehen komunikatua"
     },
     "sect02_00_a_img_sizes": {
         "text": "(max-width: 899px) 900px, 1800px"
