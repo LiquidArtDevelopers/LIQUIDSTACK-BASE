@@ -107,17 +107,17 @@ return [
             'content' => 'home',
             'view' => '../App/views/home.php'
         ],
-        '/es/serbitzuak' => [
+        '/eu/serbitzuak' => [
             'resources' => 'servicios',
             'content' => 'servicios',
             'view' => '../App/views/servicios.php'
         ],
-        '/es/serbitzuak/serbitzua' => [
+        '/eu/serbitzuak/serbitzua' => [
             'resources' => 'servicio',
             'content' => 'servicio',
             'view' => '../App/views/servicio.php'
         ],
-        '/es/kontaktua' => [
+        '/eu/kontaktua' => [
             'resources' => 'contacto',
             'content' => 'contacto',
             'view' => '../App/views/contacto.php'
