@@ -60,7 +60,7 @@ if (!$usuario) {
                         <p><span data-lang="header_num_socio"><?= $header_num_socio->text ?></span> <span><?= $num_socio ?></span></p>
                     <?php endif ?>
                 </div>
-                <p data-speed="0.9">ATSS</p>
+                <p data-speed="0.9">LSD</p>
                 <div class="sombra"></div>
                 <div class="triangulo"></div>
             </header>        
