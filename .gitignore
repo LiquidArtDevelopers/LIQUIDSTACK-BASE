@@ -1,0 +1,14 @@
+vendor
+node_modules
+composer.lock
+package-lock.json
+.env
+.npmrc
+/public/assets/css/
+/public/assets/js/
+assets/**/*.min.js
+assets/**/*.min.css
+assets/**/*.min.js.map
+assets/**/*.min.css.map
+App/tools
+App/bootstrap.php

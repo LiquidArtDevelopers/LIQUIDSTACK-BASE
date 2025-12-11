@@ -1,0 +1,90 @@
+{
+    "example":{
+        "alt":"",
+        "title":"",
+        "text":"",
+        "placeholder":"",
+        "value":"",
+        "content":""        
+    },
+    "errors":{
+        "empty_password":"Debes escribir una contraseña",
+        "repeat_new_password_empty":"Debes repetir la contraseña",
+        "passwords_not_match":"Las contraseñas no coinciden",
+        "incorrect_password":"La contraseña no es correcta. Debe cumplir los puntos de seguridad",
+        "insecure_password":"La contraseña contiene valores que, por seguridad, no se admiten. Cámbiela por favor.",
+        "invalid_access_token":"El token de acceso es invalido",
+        "bad_request":"No se están recibiendo datos del formulario"
+    },
+    "token_invalid":{
+        "text":"Token de acceso invalido o expirado."
+    },
+    "title":{
+        "text":"Restablecer contraseña"
+    },
+    "description":{
+        "content":"A través de esta página podrás establecer una nueva contraseña para tu acceso a la zona privada. Recuerda no compartir con nadie la contraseña."
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "info_text1":{
+        "text":"Escriba una nueva contraseña y a continuación repítala."
+    },
+    "info_text2":{
+        "text":"La contraseña que elija debe cumplir con todos los requisitos de seguridad aquí listados. Una vez cumpla con todos ellos, podrá realizar el cambio."
+    },
+    "eight_min_length":{
+        "text":"8 caracteres mínimo"
+    },
+    "missing_upp_low":{
+        "text":"Al menos una letra mayúscula y minúscula"
+    },
+    "missing_special_character":{
+        "text":"Al menos un carácter especial"
+    },
+    "missing_number":{
+        "text":"Al menos un número"
+    },
+    "not_empty":{
+        "text":"Sin espacios"
+    },
+    "new_password_label":{
+        "text":"Nueva contraseña"
+    },
+    "new_password_input":{
+        "placeholder":"Escriba una nueva contraseña"
+    },
+    "repeat_new_password_label":{
+        "text":"Repita la nueva contraseña"
+    },
+    "repeat_new_password_input":{
+        "placeholder":"Repita la nueva contraseña"
+    },
+    "change_password_button":{
+        "value":"CAMBIAR CONTRASEÑA"
+    },
+    "success_title":{
+        "text":"Ha cambiado la contraseña satisfactoriamente",
+        "title":"Ha cambiado la contraseña satisfactoriamente"
+    },
+    "success_paragraph":{
+        "text":"Si desea acceder a la área de socios, pulse el siguiente botón."
+    },
+    "go_to_login_page":{
+        "text":"Ir a la página de acceso",
+        "title":"Ir a la página de acceso"
+    },
+    "enviado":{
+        "alt":"Correo enviado",
+        "title": "Correo enviado"
+    },
+    "check":{
+        "alt":"Check",
+        "title":"Check"
+    },
+    "pass_view":{
+        "alt":"Mostrar / Ocultar contraseña",
+        "title":"Mostrar / Ocultar contraseña"
+    }
+}

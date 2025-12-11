@@ -1,0 +1,62 @@
+{
+    "example":{
+        "alt":"",
+        "title":"",
+        "text":"",
+        "placeholder":"",
+        "value":"",
+        "content":""        
+    },
+    "errors":{
+        "empty_email":"Debes escribir un correo",
+        "numeric_email":"El correo no puede ser un número",
+        "max_length":"El correo debe tener 100 caracteres máximo",
+        "email_invalid":"El correo no tiene una sintaxis correcta",
+        "insecure_email":"El valor contiene valores que, por seguridad, no se admiten. Cámbiela por favor.",
+        "email_not_register":"Correo no registrado Por favor, revíselo o póngase en contacto con el servicio técnico.",
+        "register_error":"Error en el registro. Por favor, póngase en contacto con el servicio técnico.",
+        "username_error":"Error al obtener el usuario. Contacte con el servicio técnico."
+    },
+    "success":"Revise la bandeja de su entrada de correo eletrónico.",
+    "title":{
+        "text":"Recordar Contraseña"
+    },
+    "description":{
+        "content":"A través de esta página podrá facilitar su correo vinculado al Club para poder recibir un código de acceso que le permitirá cambiar su contraseña."
+    },
+    "robots":{
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "info1":{
+        "text":"Escriba la dirección de correo electrónico con el que está registrado en el Liquid Stack."
+    },
+    "info2":{
+        "text":"A continuación le enviaremos un correo de verificación con el que podrá cambiar la contraseña de acceso."
+    },
+    "info3":{
+        "text":"Recuerde revisar su bandeja de \"Correo no deseado\" en caso de no recibir el correo."
+    },
+    "email_label":{
+        "text":"Correo electrónico"
+    },
+    "email_input":{
+        "placeholder":"* Correo electrónico"
+    },
+    "send_button":{
+        "value":"Enviar"
+    },
+    "email_success_message":{
+        "text":"Acabamos de enviarle un correo de verificación. Por favor siga las instrucciones del mismo para cambiar la contraseña."
+    },
+    "email_success_paragraph":{
+        "text":"Si desea volver a la página de inicio, pulse el siguiente botón."
+    },
+    "go_to_homepage":{
+        "text":"Ir a la página de inicio",
+        "title":"Ir a la página de inicio"
+    },
+    "enviado":{
+        "alt":"Correo enviado",
+        "title": "Correo enviado"
+    }
+}

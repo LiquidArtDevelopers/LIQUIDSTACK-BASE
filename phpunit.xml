@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true" backupGlobals="false">
+    <testsuites>
+        <testsuite name="Liquid Stack Core">
+            <directory suffix="Test.php">stack-core/tests</directory>
+        </testsuite>
+        <testsuite name="Client">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DISPLAY_ERROR" value="1"/>
+        <env name="DEV_MODE" value="1"/>
+    </php>
+</phpunit>

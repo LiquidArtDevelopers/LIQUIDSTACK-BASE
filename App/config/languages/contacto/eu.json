@@ -1,0 +1,381 @@
+{
+
+    "example": {
+        "alt": "",
+        "title": "link",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": "",
+        "href": "",
+        "src": ""
+    },
+
+    "title": {
+        "text": "LAD Framework Templates"
+    },
+
+    "description": {
+        "content": ""
+    },
+
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "hero02_video_webm": {
+        "src": "/assets/video/dummy.webm"
+    },
+    "hero02_video_mp4": {
+        "src": "/assets/video/dummy.mp4"
+    },
+    "hero02_video_title": {
+        "title": "Vídeo operaciones inteligentes"
+    },
+
+    "sect01_00_a_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono seguimiento clientes",
+        "title": "Icono seguimiento de clientes"
+    },
+    "sect01_00_a_h3_text": {
+        "text": "Integración ágil de showroom digital"
+    },
+    "sect01_00_a_p01_text": {
+        "text": "Conectamos catálogos, visitas guiadas y paneles compartidos para que tu equipo comercial cierre acuerdos sin fricciones y mantenga la narrativa visual en cada demostración."
+    },
+    "sect01_00_a_p02_text": {
+        "text": "Aportamos métricas de seguimiento y soporte remoto continuo para nutrir oportunidades tras cada evento híbrido."
+    },
+    "sect01_00_a_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Equipo analizando panel de métricas",
+        "title": "Equipo analiza panel de métricas"
+    },
+    "sect01_00_a_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Clientes revisando catálogo interactivo",
+        "title": "Clientes revisan catálogo interactivo"
+    },
+    "sect01_00_a_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Showroom híbrido con asistentes conectados",
+        "title": "Showroom híbrido para asistentes conectados"
+    },
+    "sect01_00_b_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono agenda automatizada",
+        "title": "Icono de agenda automatizada"
+    },
+    "sect01_00_b_h3_text": {
+        "text": "Flujos automatizados de seguimiento comercial"
+    },
+    "sect01_00_b_p01_text": {
+        "text": "Orquestamos workflows que sincronizan visitas, firmas electrónicas, presupuestos y reporting financiero para sostener oportunidades complejas sin depender de tareas manuales repetitivas."
+    },
+    "sect01_00_b_p02_text": {
+        "text": "Enlazamos CRM, mailing y chat proactivo para activar respuestas rápidas cuando surge un nuevo requisito."
+    },
+    "sect01_00_b_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Panel con hitos automatizados activos",
+        "title": "Panel muestra hitos automatizados activos"
+    },
+    "sect01_00_b_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Equipo coordinando seguimiento multicanal integrado",
+        "title": "Equipo coordina seguimiento multicanal integrado"
+    },
+    "sect01_00_b_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Representación de workflow comercial inteligente",
+        "title": "Workflow comercial inteligente en ejecución"
+    },
+    "sect01_00_c_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono experiencia inmersiva",
+        "title": "Icono de experiencia inmersiva"
+    },
+    "sect01_00_c_h3_text": {
+        "text": "Experiencias phygital guiadas en directo"
+    },
+    "sect01_00_c_p01_text": {
+        "text": "Diseñamos recorridos combinando streaming, chat moderado y pruebas táctiles para que cada asistente experimente la solución como si estuviera en planta."
+    },
+    "sect01_00_c_p02_text": {
+        "text": "Incluimos resúmenes descargables y agendas de talleres para mantener viva la conversación tras el tour."
+    },
+    "sect01_00_c_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Visitantes probando módulos interactivos conectados",
+        "title": "Visitantes prueban módulos interactivos conectados"
+    },
+    "sect01_00_c_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Guía facilitando demostración phygital colaborativa",
+        "title": "Guía facilita demostración phygital colaborativa"
+    },
+    "sect01_00_c_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Escenario inmersivo con señalética dinámica",
+        "title": "Escenario inmersivo muestra señalética dinámica"
+    },
+    "sect01_00_d_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono formación continua",
+        "title": "Icono de formación continua"
+    },
+    "sect01_00_d_h3_text": {
+        "text": "Academia para partners certificados"
+    },
+    "sect01_00_d_p01_text": {
+        "text": "Creamos itinerarios modulares con sesiones técnicas, cápsulas de producto y evaluaciones para acreditar a distribuidores y reforzar la consistencia del mensaje comercial."
+    },
+    "sect01_00_d_p02_text": {
+        "text": "Ofrecemos foros privados y soporte experto para resolver dudas avanzadas y compartir mejores prácticas."
+    },
+    "sect01_00_d_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Sesión formativa con instructores certificados",
+        "title": "Sesión formativa para partners certificados"
+    },
+    "sect01_00_d_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Participantes evaluando módulos técnicos especializados",
+        "title": "Participantes evalúan módulos técnicos especializados"
+    },
+    "sect01_00_d_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Plataforma académica con progreso gamificado",
+        "title": "Plataforma académica muestra progreso gamificado"
+    },
+
+    "moduleH1Type01_00_h1_text": {
+        "text": "Encabezado H1"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    },
+
+    "moduleH2Type01_00_h2_text": {
+        "text": "Sectores que transformamos con datos"
+    },
+
+    "moduleH2Type01_01_h2_text": {
+        "text": "Soluciones modulares por vertical"
+    },
+
+    "moduleButtonType01_00_cta": {
+        "href": "#",
+        "title": "Solicitar diagnóstico logístico"
+    },
+    "moduleButtonType01_00_cta_span": {
+        "text": "Planifica demo"
+    },
+    "moduleButtonType01_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha avanzar",
+        "title": "Flecha avanzar"
+    },
+
+    "moduleButtonType02_00_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "art08_00_headerPrimary": {
+        "text": "Estrategias solares para ampliar la competitividad industrial regional en Gipuzkoa"
+    },
+    "art08_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Render de placas solares sobre nave logística automatizada",
+        "title": "Fotovoltaica industrial conectada a sistemas de control inteligente"
+    },
+    "art08_00_headerSecondary_a": {
+        "text": "Diagnóstico integral y dimensionamiento de tejados activos"
+    },
+    "art08_00_a_p": {
+        "text": "Analizamos consumos históricos, calculamos cargas estructurales y definimos configuraciones híbridas que permiten integrar almacenamiento, monitorización en tiempo real y contratos PPA adaptados al perfil de demanda de cada línea de producción."
+    },
+    "art08_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Equipo instalando inversores trifásicos en centro de control",
+        "title": "Comisionado eléctrico con pruebas de seguridad industrial avanzada"
+    },
+    "art08_00_headerSecondary_b": {
+        "text": "Integración financiera y retorno asegurado del proyecto"
+    },
+    "art08_00_b_p": {
+        "text": "Gestionamos subvenciones autonómicas, coordinamos créditos verdes y modelizamos escenarios de retorno para que cada inversión fotovoltaica mantenga flujos de caja positivos desde el primer ejercicio fiscal sin comprometer la liquidez operativa."
+    },
+
+    "moduleH1Type02_00_h1_text": {
+        "text": "Logística inteligente para flotas multiorigen europeas"
+    },
+    "moduleH1Type02_00_p01_text": {
+        "text": "Conectamos almacenes, última milla y partners europeos mediante integraciones EDI y seguimiento IoT para anticipar incidencias, redistribuir cargas y garantizar entregas just-in-time sin saturar tus recursos internos ni los equipos de atención posventa, manteniendo SLA críticos en campañas estacionales."
+    },
+    "moduleH1Type02_00_p02_text": {
+        "text": "Automatizamos previsiones de demanda, controlamos niveles de stock y activamos transportistas alternativos desde un único panel operativo, apoyándonos en analítica predictiva para reducir devoluciones, emisiones por ruta y tiempos de respuesta ante cualquier incidencia regional."
+    },
+
+    "moduleButtonType02_01_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_01_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "moduleButtonType01_01_cta": {
+        "href": "#",
+        "title": "Solicitar diagnóstico logístico"
+    },
+    "moduleButtonType01_01_cta_span": {
+        "text": "Planifica demo"
+    },
+    "moduleButtonType01_01_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha avanzar",
+        "title": "Flecha avanzar"
+    },
+
+    "moduleButtonType01_02_cta": {
+        "href": "#",
+        "title": "Solicitar diagnóstico logístico"
+    },
+    "moduleButtonType01_02_cta_span": {
+        "text": "Planifica demo"
+    },
+    "moduleButtonType01_02_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha avanzar",
+        "title": "Flecha avanzar"
+    },
+
+    "moduleH2Type01_02_h2_text": {
+        "text": "Sectores que transformamos con datos"
+    },
+
+    "artForm01_00_headerPrimary": {
+        "text": "Solicita información rápida"
+    },
+    "artForm01_00_headerSecondary": {
+        "text": "Completa el formulario"
+    },
+    "artForm01_00_intro_p": {
+        "text": "Comparte los datos clave de tu consulta y nuestro equipo de logística evaluará la mejor solución para tus envíos recurrentes. Responderemos con recomendaciones personalizadas sobre rutas, tarifas y herramientas digitales que impulsen tus operaciones diarias."
+    },
+    "artForm01_00_label_name": {
+        "text": "Nombre y apellidos"
+    },
+    "artForm01_00_ph_name": {
+        "placeholder": "Escribe tu nombre completo"
+    },
+    "artForm01_00_label_phone": {
+        "text": "Teléfono de contacto"
+    },
+    "artForm01_00_ph_phone": {
+        "placeholder": "Incluye tu teléfono"
+    },
+    "artForm01_00_label_mail": {
+        "text": "Correo electrónico"
+    },
+    "artForm01_00_ph_mail": {
+        "placeholder": "Introduce tu correo"
+    },
+    "artForm01_00_label_msg": {
+        "text": "Detalla tu consulta"
+    },
+    "artForm01_00_ph_msg": {
+        "placeholder": "Describe necesidades logísticas"
+    },
+    "artForm01_00_terms": {
+        "text": "Acepto recibir información comercial de la empresa conforme al aviso legal actualizado."
+    },
+    "artForm01_00_privacy": {
+        "text": "Política de privacidad"
+    },
+    "artForm01_00_label_captcha": {
+        "text": "Verificación"
+    },
+    "artForm01_00_ph_captcha": {
+        "placeholder": "Escribe el resultado"
+    },
+    "artForm01_00_submit": {
+        "value": "Enviar solicitud"
+    },
+    "artForm01_00_headerSecondary_side": {
+        "text": "También puedes contactar"
+    },
+    "artForm01_00_side_p": {
+        "text": "Si prefieres una atención inmediata, escríbenos o llámanos para coordinar recogidas urgentes, seguimiento de incidencias o asesoramiento sobre integraciones. Nuestro equipo operativo responde de lunes a viernes en horario ampliado para adaptarse a tus ventanas de carga y descarga."
+    },
+    "artForm01_00_contact_tel_img": {
+        "src": "assets/img/system/tel.svg",
+        "alt": "Teléfono",
+        "title": "Teléfono"
+    },
+    "artForm01_00_contact_tel": {
+        "text": "Teléfono pendiente de actualización"
+    },
+    "artForm01_00_contact_mail_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Mail",
+        "title": "Mail"
+    },
+    "artForm01_00_contact_mail": {
+        "text": "Escríbenos a info@ejemplo.com"
+    },
+    "artForm01_00_contact_addr_img": {
+        "src": "assets/img/system/wp.svg",
+        "alt": "Dirección",
+        "title": "Dirección"
+    },
+    "artForm01_00_contact_addr": {
+        "text": "Dirección pendiente de actualización"
+    },
+    "artForm01_00_contact_web_img": {
+        "src": "assets/img/system/web.svg",
+        "alt": "Web",
+        "title": "Web"
+    },
+    "artForm01_00_contact_web": {
+        "text": "Accede a www.ejemplo.com"
+    },
+    "artForm01_00_sent_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Enviado",
+        "title": "Mensaje enviado"
+    },
+    "artForm01_00_headerSecondary_sent": {
+        "text": "Hemos recibido tu consulta"
+    },
+    "artForm01_00_sent_p1": {
+        "text": "Te contactaremos en menos de un día laborable."
+    },
+    "artForm01_00_sent_p2": {
+        "text": "Gracias por confiar en nuestro equipo."
+    },
+    "artForm01_00_new_query": {
+        "text": "Enviar otra solicitud"
+    },
+    "artForm01_00_contact_tel_href": "tel:+00000000000",
+    "artForm01_00_contact_tel_title": "Llamar por teléfono",
+    "artForm01_00_contact_mail_href": "mailto:info@ejemplo.com",
+    "artForm01_00_contact_mail_title": "Enviar correo",
+    "artForm01_00_contact_addr_href": "https://maps.app.goo.gl/xxxxx",
+    "artForm01_00_contact_addr_title": "Cómo llegar",
+    "artForm01_00_contact_web_href": "https://www.ejemplo.com",
+    "artForm01_00_contact_web_title": "Visitar web",
+    "artForm01_00_map_src": "https://www.google.com/maps/embed?pb=...",
+    "artForm01_00_map_width": "600",
+    "artForm01_00_map_height": "300",
+    "artForm01_00_map_title": "Localización de la delegación principal"
+}

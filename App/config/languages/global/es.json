@@ -1,0 +1,313 @@
+{
+    "aImgNav": "",
+    "navMegamenu01_00_forward": {
+        "src": "assets/img/system/chevron-forward-outline.svg",
+        "alt": ">",
+        "title": ">"
+    },
+    "navMegamenu01_00_home": {
+        "title": "Inicio",
+        "href": ""
+    },
+    "navMegamenu01_00_homeText": {
+        "text": "Inicio"
+    },
+    "navMegamenu01_00_services": {
+        "title": "Servicios",
+        "href": "servicios"
+    },
+    "navMegamenu01_00_servicesText": {
+        "text": "Servicios"
+    },
+    "navMegamenu01_00_servicesItem0": {
+        "title": "Servicio",
+        "href": "servicios/servicio"
+    },
+    "navMegamenu01_00_servicesItem0Text": {
+        "text": "Servicio"
+    },
+    "navMegamenu01_00_contactLink": {
+        "title": "Contacto",
+        "href": "contacto"
+    },
+    "navMegamenu01_00_contactText": {
+        "text": "Contacto"
+    },
+    "navMegamenu01_00_login": {
+        "title": "Acceder",
+        "href": "acceso"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Acceder"
+    },
+    "navMegamenu01_00_link0not": {
+        "title": "¿Eres socio? Accede aquí",
+        "href": ""
+    },
+    "navMegamenu01_00_link0Textnot": {
+        "text": "¿Eres socio? Accede aquí"
+    },
+    "navMegamenu01_00_link0": {
+        "title": "Inicio Zona Socio",
+        "href": "area-socio"
+    },
+    "navMegamenu01_00_link0Text": {
+        "text": "Inicio Zona Socio/a"
+    },
+    "navMegamenu01_00_link4": {
+        "title": "Documentos del Club",
+        "href": "area-socio/documentos-club"
+    },
+    "navMegamenu01_00_link4Text": {
+        "text": "Documentos del Club"
+    },
+    "navMegamenu01_00_link1": {
+        "title": "Comunidados y actividades para Socios/as",
+        "href": "area-socio/comunicados-socios"
+    },
+    "navMegamenu01_00_link1Text": {
+        "text": "Comunidados y actividades para Socios/as"
+    },
+    "navMegamenu01_00_link2": {
+        "title": "Cerrar Sesión",
+        "href": "logout"
+    },
+    "navMegamenu01_00_link2Text": {
+        "text": "Cerrar Sesión"
+    },
+    "navMegamenu01_00_link3": {
+        "title": "Cambiar Contraseña",
+        "href": "recordar-contraseña"
+    },
+    "navMegamenu01_00_link3Text": {
+        "text": "Cambiar Contraseña"
+    },
+    "navMegamenu01_00_logo_business": {
+        "src": "assets/img/logos/logo-black.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "navMegamenu01_00_correo_link": {
+        "title": "Correo electrónico"
+    },
+    "navMegamenu01_00_correo_link_href": "comunicacion@atletico-ss.org",
+    "navMegamenu01_00_correo_text": {
+        "text": "comunicacion@atletico-ss.org"
+    },
+    "navMegamenu01_00_correo_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Correo electrónico",
+        "title": "Correo electrónico"
+    },
+    "navMegamenu01_00_tel_link": {
+        "title": "Teléfono de contacto"
+    },
+    "navMegamenu01_00_tel_img": {
+        "src": "assets/img/system/tel.svg",
+        "alt": "Teléfono",
+        "title": "Teléfono"
+    },
+    "navMegamenu01_00_mp_img": {
+        "src": "assets/img/system/mp.svg",
+        "alt": "Móvil",
+        "title": "Móvil"
+    },
+    "navMegamenu01_00_ubicacion_link": {
+        "title": "Ubicación"
+    },
+    "navMegamenu01_00_ubicacion_img": {
+        "src": "assets/img/system/wp.svg",
+        "alt": "Ubicación",
+        "title": "Ubicación"
+    },
+    "navMegamenu01_00_content_of_this_website": {
+        "text": "Contenido de esta web"
+    },
+    "navMegamenu01_00_link_of_interest": {
+        "text": "Enlaces de interés"
+    },
+    "navMegamenu01_00_follow_us_social_media": {
+        "text": ""
+    },
+    "navMegamenu01_00_contact": {
+        "text": "Contacto"
+    },
+    "footerInfo01_00_img1": {
+        "src": "",
+        "alt": "",
+        "title": "link"
+    },
+    "footerInfo0100_cookie-policy": {
+        "text": "Política de cookies"
+    },
+    "footerInfo0100_terms-privacy": {
+        "text": "Términos de privacidad"
+    },
+    "footerInfo0100_legal-notice": {
+        "text": "Aviso legal"
+    },
+    "footerInfo0100_rights-reserved": {
+        "text": "Todos los derechos reservados"
+    },
+    "footerInfo01_lad_info_href": "https://infoda.eus",
+    "footerInfo0100_lad-info-a": {
+        "title": "Liquid Art Developers"
+    },
+    "footerInfo0100_lad-info-p": {
+        "text": "Desarrollado por Liquid Art Developers"
+    },
+    "navMegamenu01_00_col02span2_01": {
+        "text": "Política de cookies"
+    },
+    "navMegamenu01_00_col02span2_02": {
+        "text": "Términos de privacidad"
+    },
+    "navMegamenu01_00_col02span2_03": {
+        "text": "Aviso legal"
+    },
+    "navMegamenu01_00_linkGroup0": {
+        "href": "",
+        "title": "link"
+    },
+    "navMegamenu01_00_linkGroup0Item0": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item1": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item2": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item3": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item4": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item5": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item6": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item7": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item8": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup1": {
+        "href": "",
+        "title": "link"
+    },
+    "navMegamenu01_00_linkGroup1Item0": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup1Item1": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup1Item2": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2": {
+        "href": "",
+        "title": "link"
+    },
+    "navMegamenu01_00_linkGroup2Item0": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item1": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item2": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item3": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item4": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item5": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item6": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item7": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item8": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item9": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item10": {
+        "href": ""
+    },
+    "navMegamenu01_00_col02link_01": {
+        "title": "link"
+    },
+    "navMegamenu01_00_col02span_01": {
+        "text": ""
+    },
+    "navMegamenu01_00_col02link_02": {
+        "title": "link"
+    },
+    "navMegamenu01_00_col02span_02": {
+        "text": ""
+    },
+    "navMegamenu01_00_rrss_yt": {
+        "title": "link"
+    },
+    "navMegamenu01_00_rrss_yt_img": {
+        "src": "",
+        "alt": "",
+        "title": "link"
+    },
+    "navMegamenu01_00_rrss_in": {
+        "title": "link"
+    },
+    "navMegamenu01_00_rrss_in_img": {
+        "src": "",
+        "alt": "",
+        "title": "link"
+    },
+    "navMegamenu01_00_rrss_fb": {
+        "title": "link"
+    },
+    "navMegamenu01_00_rrss_fb_img": {
+        "src": "",
+        "alt": "",
+        "title": "link"
+    },
+    "navMegamenu01_00_rrss_ig": {
+        "title": "link"
+    },
+    "navMegamenu01_00_rrss_ig_img": {
+        "src": "",
+        "alt": "",
+        "title": "link"
+    },
+    "navMegamenu01_00_col02link_01_href": "",
+    "navMegamenu01_00_col02link_02_href": "",
+    "navMegamenu01_00_become_member_button": {
+        "href": "",
+        "title": "link",
+        "text": ""
+    },
+    "navMegamenu01_00_rrss_yt_href": "",
+    "navMegamenu01_00_rrss_in_href": "",
+    "navMegamenu01_00_rrss_fb_href": "",
+    "navMegamenu01_00_rrss_ig_href": "",
+    "title": {
+        "text": "Acceso a zona privada"
+    },
+    "description": {
+        "content": ""
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    }
+}

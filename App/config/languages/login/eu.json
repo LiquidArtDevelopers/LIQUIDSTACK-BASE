@@ -1,0 +1,58 @@
+{
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""        
+    },
+    "redirect": "bazkide-gunea",
+    "errors": {
+        "empty_email": "Posta elektronikoa idatzi behar duzu",
+        "numeric_email": "Posta elektronikoa ezin da zenbaki bat izan",
+        "max_length": "Postak gehienez 100 karaktere izan behar ditu",
+        "email_invalid": "Postak ez du sintaxi egokia",
+        "insecure_email": "Balioak ez du segurtasun-baldintzak betetzen. Aldatu, mesedez.",
+        "empty_password": "Pasahitza idatzi behar duzu",
+        "login_error": "Erabiltzailea edo pasahitza ez dira zuzenak",
+        "bad_request": "Ez da formularioaren daturik jasotzen"
+    },    
+    "header_primary": {
+        "text": "Liquid Stack Klubeko Bazkideentzako sarbide pribatua"
+    },
+    "description": {
+        "content": "Orrialde honetara sartzeko, Liquid Stack Klubeko bazkidea izan behar duzu. Edozein zalantza izanez gero, jarri gure bulegoarekin harremanetan."
+    },
+    "robots": {
+        "content": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "user_label": {
+        "text": "Erabiltzailea"
+    },
+    "user_input": {
+        "placeholder": "* Erabiltzailea"
+    },
+    "password_input": {
+        "placeholder": "* Pasahitza"
+    },
+    "forgot_password_link": {
+        "text": "Lehenengo aldiz sartzen zara edo pasahitza ahaztu duzu? Sakatu hemen",
+        "href": "pasahitza-berrezarri",
+        "title": "Lehenengo aldiz sartzen zara edo pasahitza ahaztu duzu? Sakatu hemen"
+    },
+    "connect_input": {
+        "value": "Sartu"
+    },
+    "enviado": {
+        "alt": "Sarbidea onartua",
+        "title": "Sarbidea onartua"
+    },
+    "video": {
+        "title": "Liquid Stack"
+    },
+    "pass_view": {
+        "alt": "Pasahitza erakutsi / ezkutatu",
+        "title": "Pasahitza erakutsi / ezkutatu"
+    }
+}

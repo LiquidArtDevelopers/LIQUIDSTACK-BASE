@@ -1,0 +1,48 @@
+{
+
+    "example": {
+        "alt": "",
+        "title": "link",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": "",
+        "href": "",
+        "src": ""
+    },
+
+    "title": {
+        "text": "404 errorea: orria ez da aurkitu"
+    },
+
+    "description": {
+        "content": "Barkatu, eskatutako orria ez dago."
+    },
+
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "moduleButtonType01_00_cta": {
+        "href": "",
+        "title": "Itzuli hasierako orrira"
+    },
+    "moduleButtonType01_00_cta_span": {
+        "text": "Joan hasierara"
+    },
+    "moduleButtonType01_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Aurrera gezia",
+        "title": "Aurrera gezia"
+    },
+
+    "moduleH1Type01_00_h1_text": {
+        "text": "404 errorea"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Ene... badirudi galdu egin zarela. Bilatzen duzun orria ez dago edo helbidea aldatu da. Hasierako orrira itzul zaitezke edo menuan nabigatu behar duzuna aurkitzeko."
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": "Akatsa dela uste baduzu, idatziguzu eta ahalik eta azkarren berrikusiko dugu."
+    }
+}

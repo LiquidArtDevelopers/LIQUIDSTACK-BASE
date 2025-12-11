@@ -1,0 +1,257 @@
+{
+
+    "example": {
+        "alt": "",
+        "title": "link",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": "",
+        "href": "",
+        "src": ""
+    },
+
+    "title": {
+        "text": "LAD Framework Templates"
+    },
+
+    "description": {
+        "content": ""
+    },
+
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "sect02_00_a_h3_text": {
+        "text": "Nuestro primer comunicado!"
+    },
+    "sect02_00_a_p01_text": {
+        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Liquid Stack. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
+    },
+    "sect02_00_a_p02_text": {
+        "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
+    },
+    "sect02_00_a_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Primer comunicado",
+        "title": "Primer Comunicado del LS"
+    },
+    "sect02_00_a_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_b_h3_text": {
+        "text": "Producción audiovisual para lanzamientos globales"
+    },
+    "sect02_00_b_p01_text": {
+        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
+    },
+    "sect02_00_b_p02_text": {
+        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
+    },
+    "sect02_00_b_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Equipo creativo coordinando rodaje inmersivo global",
+        "title": "Equipo creativo coordina rodaje inmersivo global"
+    },
+    "sect02_00_b_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_h3_text": {
+        "text": "Analítica de visitas y monetización"
+    },
+    "sect02_00_c_p01_text": {
+        "text": "Implementamos cuadros de mando, atribución asistida y modelos de conversión para medir el impacto económico de cada experiencia en vivo y digital de alto valor."
+    },
+    "sect02_00_c_p02_text": {
+        "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
+    },
+    "sect02_00_c_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Panel financiero comparando métricas de experiencias",
+        "title": "Panel financiero compara métricas de experiencias"
+    },
+    "sect02_00_c_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+
+    "moduleH1Type01_00_h1_text": {
+        "text": "Encabezado H1"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    },
+
+    "moduleH2Type01_01_h2_text": {
+        "text": "Soluciones modulares por vertical"
+    },
+
+    "moduleButtonType01_00_cta": {
+        "href": "#",
+        "title": "Solicitar diagnóstico logístico"
+    },
+    "moduleButtonType01_00_cta_span": {
+        "text": "Planifica demo"
+    },
+    "moduleButtonType01_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha avanzar",
+        "title": "Flecha avanzar"
+    },
+
+    "moduleButtonType02_00_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "art04_00_headerPrimary": {
+        "text": "Galería de proyectos y casos destacados"
+    },
+    "art04_00_intro_p": {
+        "text": "Seleccionamos intervenciones recientes que ilustran nuestra capacidad para integrar seguridad, eficiencia energética y narrativa visual en entornos industriales con altos requisitos de cumplimiento."
+    },
+    "art04_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Operario ajusta luminarias inteligentes en planta",
+        "title": "Calibración lumínica segura y certificada"
+    },
+    "art04_00_a_link": {
+        "href": "#",
+        "title": "Ver caso iluminación"
+    },
+    "art04_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Ingeniera supervisa centro de control energético",
+        "title": "Supervisión energética con métricas en vivo"
+    },
+    "art04_00_b_link": {
+        "href": "#",
+        "title": "Abrir control energético"
+    },
+    "art04_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Fachada industrial renovada con señalética sostenible",
+        "title": "Señalética sostenible guiando flujos seguros"
+    },
+    "art04_00_c_link": {
+        "href": "#",
+        "title": "Explorar fachada sostenible"
+    },
+
+    "art05_00_headerPrimary": {
+        "text": "Historias reales de confianza local certificada"
+    },
+    "art05_00_intro_p": {
+        "text": "Nuestros clientes describen cómo la instalación solar optimiza sus costes energéticos y refuerza su compromiso con la sostenibilidad, destacando la cercanía del equipo técnico y la monitorización continua que ofrecemos en cada proyecto residencial."
+    },
+    "art05_00_headerSecondary_a": {
+        "text": "Consumo optimizado en vivienda unifamiliar"
+    },
+    "art05_00_a_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Técnica revisando inversores solares en planta industrial",
+        "title": "Supervisión profesional de inversores industriales en operación"
+    },
+    "art05_00_a_p": {
+        "text": "Diseñamos campos solares escalables que se adaptan al consumo real de cada sede, priorizando inversores híbridos y cableado eficiente. El equipo coordina permisos y puesta en marcha sin detener los turnos críticos de producción."
+    },
+    "art05_00_a_firma": {
+        "text": "Laura Pérez"
+    },
+    "art05_00_headerSecondary_b": {
+        "text": "Cadena hotelera con autoconsumo activo"
+    },
+    "art05_00_b_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Gestora analizando panel de monitorización solar",
+        "title": "Seguimiento digital del autoconsumo en hoteles"
+    },
+    "art05_00_b_p": {
+        "text": "Automatizamos cubiertas y salas técnicas con paneles ligeros que respetan la estética del complejo. Gestionamos con la distribuidora el vertido de excedentes y ajustamos la curva de consumo según ocupación y demanda estacional."
+    },
+    "art05_00_b_firma": {
+        "text": "Carlos Medina"
+    },
+    "art05_00_headerSecondary_c": {
+        "text": "Cooperativa agro instala bombeo eficiente"
+    },
+    "art05_00_c_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Técnica revisa cuadros solares en cooperativa rural",
+        "title": "Supervisión de bombeo fotovoltaico cooperativo"
+    },
+    "art05_00_c_p": {
+        "text": "Implementamos bombeo solar en comunidades de regantes con variadores de frecuencia y depósitos inteligentes. La plataforma predice necesidades hídricas y coordina mantenimientos para evitar paradas en temporada alta de cosecha."
+    },
+    "art05_00_c_firma": {
+        "text": "Uxue Garaia"
+    },
+    "art05_00_headerSecondary_d": {
+        "text": "Industria alimentaria optimiza autoconsumo frío"
+    },
+    "art05_00_d_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Operario ajusta paneles solares en cubierta logística",
+        "title": "Mantenimiento fotovoltaico en planta alimentaria"
+    },
+    "art05_00_d_p": {
+        "text": "Reforzamos cubiertas con estructuras antiviento y sensores térmicos para mantener cámaras frigoríficas eficientes. Con contratos PPA internos garantizamos precios estables y certificamos la energía verde en auditorías de exportación."
+    },
+    "art05_00_d_firma": {
+        "text": "Nora Salvat"
+    },
+
+    "art04_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_b_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+
+    "art16_00_h3_1": {
+        "text": "Servicios logísticos avanzados"
+    },
+    "art16_00_h3_2": {
+        "text": "para cadenas sostenibles"
+    },
+    "art16_00_body_p": {
+        "text": "Optimizamos rutas, almacenaje y entregas con analítica en tiempo real para reducir costes, emisiones y reclamaciones mientras ofrecemos trazabilidad completa a tus clientes en cada etapa de la cadena regional."
+    },
+    "art16_00_bg_mobile": "assets/img/dummy/dummy_900.avif",
+    "art16_00_bg_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art16_00_bg_desktop": "assets/img/dummy/dummy_2560.avif",
+
+    "moduleButtonType02_01_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_01_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "moduleButtonType02_02_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_02_cta_span": {
+        "text": "Ver caso completo"
+    }
+}

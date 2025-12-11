@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "clean": "node scripts/clean-manifest.js",
+    "sync-core": "composer liquidstack-core:sync-resources",
+    "prebuild": "npm run clean && npm run sync-core",
+    "build": "node scripts/swap-env.mjs production && concurrently \"php App/tools/build-sitemap.php\" \"vite build\"",
+    "start": "node scripts/swap-env.mjs development && concurrently \"php -S localhost:3000 -t public\" \"npm run dev\""
+  },
+  "dependencies": {
+    "gsap": "npm:@gsap/shockingly@3.12.5",
+    "leaflet": "1.9.4"
+  },
+  "devDependencies": {
+    "concurrently": "9.1.0",
+    "fast-glob": "3.3.2",
+    "sass": "1.70.0",
+    "vite": "^7.2.2",
+    "vite-plugin-full-reload": "1.2.0"
+  }
+}

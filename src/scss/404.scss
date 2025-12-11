@@ -1,0 +1,65 @@
+@use './config' as c;
+@use './global';
+
+@use './resources/hero01';
+
+
+// main{
+//     height: 100vh;
+//     width: 100vw;
+//     max-width: c.$anchoFull;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: center;    
+//     gap: 40px;
+//     background-image: linear-gradient(to top, c.$color01 0%, c.$color01bis 100%);
+//     padding: 20px;
+// }
+// .container{
+//     position: relative; 
+//     min-height: 130px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-items: flex-start;
+//     row-gap: 10px;
+//     img{
+//         position: absolute;
+//         opacity: .1;
+//         width: 80vw;
+//         height: 80vh;
+//         object-fit: contain;
+//         filter: invert(1);
+//         pointer-events: none;
+//     }
+//     h1{
+//         font-family: c.$fuente02;
+//         color: white;
+//         font-size: 3.5rem;
+//         padding-top: 20vh;
+//         padding-bottom: 5vh;
+//         text-align: center;
+//         @media only screen and (min-width: c.$tablet){
+//             &{
+//                 font-size: 4.3rem;
+//             }
+//         }    
+//     }
+//     p{
+//         font-family: c.$fuente02;
+//         font-size: 1.2rem;
+//         padding: 0 20px;
+//         text-align: center;
+//         color: white;
+//         padding-bottom: 5vh;
+//         @media only screen and (min-width: c.$tablet){
+//             &{
+//                 font-size: 1.6rem;
+//                 width: 85vw;
+//             }
+//         }  
+//     }
+// }
+
+

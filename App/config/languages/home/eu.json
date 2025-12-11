@@ -1,0 +1,144 @@
+{
+
+    "example": {
+        "alt": "",
+        "title": "link",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": "",
+        "href": "",
+        "src": ""
+    },
+
+    "title": {
+        "text": "LAD Framework Templates"
+    },
+
+    "description": {
+        "content": ""
+    },
+
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "moduleButtonType01_00_cta": {
+        "href": "#",
+        "title": "Solicitar diagnóstico logístico"
+    },
+    "moduleButtonType01_00_cta_span": {
+        "text": "Planifica demo"
+    },
+    "moduleButtonType01_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha avanzar",
+        "title": "Flecha avanzar"
+    },
+
+    "moduleH1Type01_00_h1_text": {
+        "text": "Encabezado H1"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    },
+
+    "hero02_video_webm": {
+        "src": "/assets/video/dummy.webm"
+    },
+    "hero02_video_mp4": {
+        "src": "/assets/video/dummy.mp4"
+    },
+    "hero02_video_title": {
+        "title": "Vídeo operaciones inteligentes"
+    },
+
+    "moduleH2Type01_00_h2_text": {
+        "text": "Sectores que transformamos con datos"
+    },
+
+    "moduleButtonType02_00_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "moduleButtonType02_01_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_01_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "moduleButtonType02_02_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_02_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "sect02_00_b_h3_text": {
+        "text": "Producción audiovisual para lanzamientos globales"
+    },
+    "sect02_00_b_p01_text": {
+        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
+    },
+    "sect02_00_b_p02_text": {
+        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
+    },
+    "sect02_00_b_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Equipo creativo coordinando rodaje inmersivo global",
+        "title": "Equipo creativo coordina rodaje inmersivo global"
+    },
+    "sect02_00_b_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_h3_text": {
+        "text": "Analítica de visitas y monetización"
+    },
+    "sect02_00_c_p01_text": {
+        "text": "Implementamos cuadros de mando, atribución asistida y modelos de conversión para medir el impacto económico de cada experiencia en vivo y digital de alto valor."
+    },
+    "sect02_00_c_p02_text": {
+        "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
+    },
+    "sect02_00_c_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Panel financiero comparando métricas de experiencias",
+        "title": "Panel financiero compara métricas de experiencias"
+    },
+    "sect02_00_c_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_h3_text": {
+        "text": "Nuestro primer comunicado!"
+    },
+    "sect02_00_a_p01_text": {
+        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Liquid Stack. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
+    },
+    "sect02_00_a_p02_text": {
+        "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
+    },
+    "sect02_00_a_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Primer comunicado",
+        "title": "Primer Comunicado del LS"
+    },
+    "sect02_00_a_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w"
+}

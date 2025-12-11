@@ -1,0 +1,277 @@
+{
+
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""
+    },
+
+    "title": {
+        "text": "Zona privada para Socios del Liquid Stack"
+    },
+
+    "description": {
+        "content": "A esta página sólo tiene acceso los socios vigentes en el Liquid Stack. En ella podrás descargarte los documentos relativos a las Asambleas y Juntas Directivas."
+    },
+
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "sect02_00_b_h3_text": {
+        "text": "Producción audiovisual para lanzamientos globales"
+    },
+    "sect02_00_b_p01_text": {
+        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
+    },
+    "sect02_00_b_p02_text": {
+        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
+    },
+    "sect02_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Equipo creativo coordinando rodaje inmersivo global",
+        "title": "Equipo creativo coordina rodaje inmersivo global"
+    },
+    "sect02_00_b_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_h3_text": {
+        "text": "Analítica de visitas y monetización"
+    },
+    "sect02_00_c_p01_text": {
+        "text": "Implementamos cuadros de mando, atribución asistida y modelos de conversión para medir el impacto económico de cada experiencia en vivo y digital de alto valor."
+    },
+    "sect02_00_c_p02_text": {
+        "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
+    },
+    "sect02_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Panel financiero comparando métricas de experiencias",
+        "title": "Panel financiero compara métricas de experiencias"
+    },
+    "sect02_00_c_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_h3_text": {
+        "text": "Producción audiovisual para lanzamientos globales"
+    },
+    "sect02_00_a_p01_text": {
+        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
+    },
+    "sect02_00_a_p02_text": {
+        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
+    },
+    "sect02_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Equipo creativo coordinando rodaje inmersivo global",
+        "title": "Equipo creativo coordina rodaje inmersivo global"
+    },
+    "sect02_00_a_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+
+    "moduleH2Type01_02_h2_text": {
+        "text": "Sectores que transformamos con datos"
+    },
+
+    "sectTabs01_00_intro": {
+        "text": "Accede a documentación técnica, protocolos de seguridad y plantillas contractuales listos para compartir con proveedores, delegaciones y clientes finales; actualizamos los archivos clave cada trimestre para mantener alineada tu red logística."
+    },
+    "sectTabs01_00_b_id": {
+        "text": "documentos-comerciales"
+    },
+    "sectTabs01_00_b_nav": {
+        "text": "Docs comerciales"
+    },
+    "sectTabs01_00_b_h3": {
+        "text": "Documentación contractual para nuevos operadores logísticos regionales"
+    },
+    "sectTabs01_00_b_b1_h4": {
+        "text": "Acuerdos marco de servicio nacional"
+    },
+    "sectTabs01_00_b_b1_h5": {
+        "text": "Modelo contractual con cláusulas SLA, penalizaciones y anexos de cobertura geográfica anual."
+    },
+    "sectTabs01_00_b_b1_l1": {
+        "text": "Descargar contrato",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b1_l2": {
+        "text": "Anexo de coberturas",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b2_h4": {
+        "text": "Tarifarios escalables por volumen mensual"
+    },
+    "sectTabs01_00_b_b2_h5": {
+        "text": "Hoja de tarifas con tramos por peso, servicios urgentes y recargos aplicables por temporada."
+    },
+    "sectTabs01_00_b_b2_l1": {
+        "text": "Tabla vigente",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b2_l2": {
+        "text": "Detalle de recargos",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b3_h4": {
+        "text": "Brief comercial para onboarding regional"
+    },
+    "sectTabs01_00_b_b3_h5": {
+        "text": "Resumen para nuevos partners con propuesta de valor, diferenciadores digitales y apoyo de preventa."
+    },
+    "sectTabs01_00_b_b3_l1": {
+        "text": "Presentación PDF",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b3_l2": {
+        "text": "Script de llamadas",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_id": {
+        "text": "recursos-formacion"
+    },
+    "sectTabs01_00_c_nav": {
+        "text": "Recursos training"
+    },
+    "sectTabs01_00_c_h3": {
+        "text": "Formación continua para equipos de almacén y reparto"
+    },
+    "sectTabs01_00_c_b1_h4": {
+        "text": "Capacitaciones para operativa de almacén"
+    },
+    "sectTabs01_00_c_b1_h5": {
+        "text": "Agenda trimestral de workshops sobre WMS, preparación de pedidos y control de inventario sin papel."
+    },
+    "sectTabs01_00_c_b1_l1": {
+        "text": "Calendario talleres",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b1_l2": {
+        "text": "Ficha de contenidos",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b2_h4": {
+        "text": "Manuales de ruta y experiencia cliente"
+    },
+    "sectTabs01_00_c_b2_h5": {
+        "text": "Material descargable con guiones de entrega, registro fotográfico y pautas de trato profesional."
+    },
+    "sectTabs01_00_c_b2_l1": {
+        "text": "Kit entregas",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b2_l2": {
+        "text": "Guía de trato",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b3_h4": {
+        "text": "Evaluaciones y certificaciones internas anuales"
+    },
+    "sectTabs01_00_c_b3_h5": {
+        "text": "Test online y rúbricas para medir adopción de procesos, manejo de incidencias y estándares de imagen."
+    },
+    "sectTabs01_00_c_b3_l1": {
+        "text": "Evaluación online",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b3_l2": {
+        "text": "Plantilla de rúbrica",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_id": {
+        "text": "protocolos-operativos"
+    },
+    "sectTabs01_00_a_nav": {
+        "text": "Protocolos clave"
+    },
+    "sectTabs01_00_a_h3": {
+        "text": "Protocolos operativos para delegaciones críticas de transporte"
+    },
+    "sectTabs01_00_a_b1_h4": {
+        "text": "Protocolos de seguridad en muelles compartidos"
+    },
+    "sectTabs01_00_a_b1_h5": {
+        "text": "Checklist diario para prevenir incidencias y coordinar accesos entre turnos y transportistas externos."
+    },
+    "sectTabs01_00_a_b1_l1": {
+        "text": "Descargar checklist",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b1_l2": {
+        "text": "Guía de accesos",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b2_h4": {
+        "text": "Gestión logística de mercancía sensible"
+    },
+    "sectTabs01_00_a_b2_h5": {
+        "text": "Plantilla para declarar incidencias térmicas, roturas y lotes sujetos a trazabilidad reforzada."
+    },
+    "sectTabs01_00_a_b2_l1": {
+        "text": "Formulario incidencias",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b2_l2": {
+        "text": "Protocolo cadena fría",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b3_h4": {
+        "text": "Coordinación con partners estratégicos regionales"
+    },
+    "sectTabs01_00_a_b3_h5": {
+        "text": "Modelo de reunión semanal para compartir KPIs críticos, cuellos de botella y acciones preventivas conjuntas."
+    },
+    "sectTabs01_00_a_b3_l1": {
+        "text": "Agenda semanal",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b3_l2": {
+        "text": "Resumen KPI",
+        "href": "example.pdf"
+    },
+
+    "moduleH2Type01_01_h2_text": {
+        "text": "Sectores que transformamos con datos"
+    },
+
+    "moduleButtonType02_00_cta_link": {
+        "href": "#",
+        "title": "Explorar caso de éxito"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Ver caso completo"
+    },
+
+    "moduleButtonType01_00_cta": {
+        "href": "#",
+        "title": "Solicitar diagnóstico logístico"
+    },
+    "moduleButtonType01_00_cta_span": {
+        "text": "Planifica demo"
+    },
+    "moduleButtonType01_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha avanzar",
+        "title": "Flecha avanzar"
+    },
+
+    "moduleH1Type01_00_h1_text": {
+        "text": "Encabezado H1"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    }
+}

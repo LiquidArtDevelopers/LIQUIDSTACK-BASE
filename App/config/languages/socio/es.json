@@ -1,0 +1,269 @@
+{
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""
+    },
+    "title": {
+        "text": "Zona privada para Socios del Liquid Stack"
+    },
+    "description": {
+        "content": "A esta página sólo tiene acceso los socios vigentes en el Liquid Stack. En ella podrás descargarte los documentos relativos a las Asambleas y Juntas Directivas."
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "moduleH2Type01_00_h2_text": {
+        "text": "Esta es tu zona privada"
+    },
+    "moduleButtonType02_00_cta_link": {
+        "href": "area-socio/comunicados-socios",
+        "title": "Ir a Comunicados"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Ir a Comunicados"
+    },
+    "moduleButtonType02_01_cta_link": {
+        "href": "area-socio/documentos-club",
+        "title": "Ir a Documentos"
+    },
+    "moduleButtonType02_01_cta_span": {
+        "text": "Ir a Documentos"
+    },
+    "art01_00_headerPrimary": {
+        "text": "Infórmate de todo lo que acontece en el club\n"
+    },
+    "art01_00_intro_p": {
+        "text": "Desde aquí podrás consultar y descargar los documentos oficiales del Liquid Stack, disponibles exclusivamente para socios y socias. <br><br>Además, encontrarás comunicados internos y actividades reservadas en exclusiva para la comunidad del club."
+    },
+    "art01_00_hero_img": {
+        "src": "assets/img/dummy/dummy_1800.avif",
+        "alt": "Imagen zona de reuniones",
+        "title": "Instalaciones para Socios y Junta Directiva"
+    },
+    "art01_00_b_img": {
+        "src": "assets/img/system/document-text.svg",
+        "alt": "Area Socio",
+        "title": "Area Socio"
+    },
+    "art01_00_b_p": {
+        "text": "Accede a los documentos oficiales del Liquid Stack, disponibles exclusivamente para socios y socias. Aquí podrás consultar y descargar estatutos, reglamentos, actas y otros archivos internos del club."
+    },
+    "art01_00_a_img": {
+        "src": "assets/img/system/people.svg",
+        "alt": "Area Socio",
+        "title": "Area Socio"
+    },
+    "art01_00_headerSecondary_a": {
+        "text": "Comunicados y actividades para socios"
+    },
+    "art01_00_a_p": {
+        "text": "En esta sección encontrarás comunicados y actividades exclusivas para socios y socias del Liquid Stack, con información actualizada y contenidos reservados para la comunidad interna del club"
+    },
+    "art01_00_headerSecondary_b": {
+        "text": "Documentos oficiales del Club"
+    },
+    "artSlider01_00_headerPrimary": {
+        "text": "Nuestros patrocinadores y colaboradores"
+    },
+    "artSlider01_00_viewmore": {
+        "text": "",
+        "href": ""
+    },
+    "artSlider01_00_cardb_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardb_meta": {
+        "text": "08·06·2025"
+    },
+    "artSlider01_00_cardb_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardb_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardb_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_cardc_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardc_meta": {
+        "text": "01·06·2025"
+    },
+    "artSlider01_00_cardc_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardc_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardc_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_cardd_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardd_meta": {
+        "text": "27·05·2025"
+    },
+    "artSlider01_00_cardd_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardd_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardd_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_carde_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_carde_meta": {
+        "text": "20·05·2025"
+    },
+    "artSlider01_00_carde_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_carde_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_carde_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_cardf_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardf_meta": {
+        "text": "14·05·2025"
+    },
+    "artSlider01_00_cardf_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardf_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardf_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_cardg_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardg_meta": {
+        "text": "07·05·2025"
+    },
+    "artSlider01_00_cardg_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardg_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardg_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_cardh_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardh_meta": {
+        "text": "30·04·2025"
+    },
+    "artSlider01_00_cardh_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardh_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardh_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_cardi_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardi_meta": {
+        "text": "22·04·2025"
+    },
+    "artSlider01_00_cardi_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardi_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardi_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_cardj_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardj_meta": {
+        "text": "15·04·2025"
+    },
+    "artSlider01_00_cardj_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardj_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardj_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "artSlider01_00_carda_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_carda_meta": {
+        "text": "12·06·2025"
+    },
+    "artSlider01_00_carda_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_carda_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_carda_read": {
+        "text": "Más info",
+        "href": ""
+    },
+    "welcome": {
+        "text": "Bienvenido"
+    },
+    "h1": {
+        "text": ""
+    },
+    "icon": {
+        "alt": "LS",
+        "title": "LS"
+    },
+    "header_num_socio": {
+        "text": "Número de socio:<br><br>"
+    }
+}

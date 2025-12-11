@@ -1,0 +1,14 @@
+@use "./config" as c;
+@use "./global";
+@use "./resources/sectTabs01";
+@use "./resources/sect02";
+
+header {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+

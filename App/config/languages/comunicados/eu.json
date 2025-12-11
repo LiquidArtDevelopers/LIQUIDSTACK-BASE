@@ -1,0 +1,107 @@
+{
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""
+    },
+    "title": {
+        "text": "Liquid Stack Klubeko Bazkideen Zona Pribatua"
+    },
+    "description": {
+        "content": "Orrialde honetara Liquid Stack Klubeko bazkide aktiboek bakarrik dute sarbidea. Bertan Batzar Orokor eta Zuzendaritza Batzordeekin lotutako dokumentuak deskargatu ahal izango dituzu."
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "moduleH1Type01_00_h1_text": {
+        "text": "Bazkideentzako jarduerak eta komunikatuak"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Atal honetan bazkideentzako esklusiboak diren komunikatuak eta jarduerak ikusiko dituzu. Ez ahaztu tarteka bisitatzea, ezer ez galtzeko."
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": " "
+    },
+    "hero02_video_webm": {
+        "src": "assets/video/dummy.webm"
+    },
+    "hero02_video_mp4": {
+        "src": "assets/video/dummy.mp4"
+    },
+    "hero02_video_poster": {
+        "src": "assets/img/dummy/dummy_2560.avif"
+    },
+    "hero02_video_title": {
+        "title": "Eragiketa adimendunen bideoa"
+    },
+    "moduleH2Type01_01_h2_text": {
+        "text": "Jarduerak eta komunikatuak"
+    },
+    "moduleButtonType02_00_cta_link": {
+        "href": " ",
+        "title": " "
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "  "
+    },
+    "sect02_00_b_h3_text": {
+        "text": "Ekoizpen ikus-entzunezkoa nazioarteko aurkezpenetarako"
+    },
+    "sect02_00_b_p01_text": {
+        "text": "Multikamera grabaketak, itzulpen simultaneoak eta espazio birtualak planifikatzen ditugu, aurkezpen bakoitzaren inpaktua handitzeko ohiko presentzia-logistikan oinarritu gabe eta komunitate profesionala sendotzeko."
+    },
+    "sect02_00_b_p02_text": {
+        "text": "Clippinga, buletinak eta galdera-saioak kudeatzen ditugu, estreinaldiaren ondoren nazioarteko elkarrizketa digitala luzatzeko."
+    },
+    "sect02_00_b_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Ekoizpen talde sortzailea grabaketa murgiltzaile globala koordinatzen",
+        "title": "Talde sortzailea grabaketa murgiltzaile globala koordinatzen"
+    },
+    "sect02_00_b_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_c_h3_text": {
+        "text": "Bisitak neurtzea eta monetizazioa"
+    },
+    "sect02_00_c_p01_text": {
+        "text": "Kontrol-panealak, lagundutako atribuzioa eta bihurketa-ereduak ezartzen ditugu balio handiko esperientzia digital eta zuzenen inpaktu ekonomikoa neurtzeko."
+    },
+    "sect02_00_c_p02_text": {
+        "text": "CRM, fakturazioa eta inkestak integratzen ditugu, upselling aukerak identifikatzeko eta kanpainak denbora errealean doitzen jarraitzeko."
+    },
+    "sect02_00_c_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Esperientzien metrikak alderatzen dituen panel ekonomikoa",
+        "title": "Panel ekonomikoak esperientzien metrikak alderatzen ditu"
+    },
+    "sect02_00_c_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_h3_text": {
+        "text": "Gure lehen komunikatua!"
+    },
+    "sect02_00_a_p01_text": {
+        "text": "Gune hau inauguratu dugu Liquid Stack Klubeko parte zareten guztientzat bereziki pentsatua. Hemen barneko berrikuntza guztiak zentralizatuko ditugu, informazio argi eta hurbila eskainiz eta klubaren egunerokoa gertu jarraitzeko aukera emanez."
+    },
+    "sect02_00_a_p02_text": {
+        "text": "Hemendik aurrera komunikatu garrantzitsuak, iragarpen ofizialak eta bazkideentzat soilik erreserbatutako jarduerak aurkituko dituzu. Kanal hau erabilgarria eta zuzenekoa izatea nahi dugu, komunitatearen egunerokoan eragiten duen guztira errazago iristeko. Gonbidatzen zaitugu maiz bisitatzera eta eguneratuta egotera."
+    },
+    "sect02_00_a_img": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Lehen komunikatua",
+        "title": "LSen lehen komunikatua"
+    },
+    "sect02_00_a_img_sizes": {
+        "text": "(max-width: 899px) 900px, 1800px"
+    },
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w"
+}

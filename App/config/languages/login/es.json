@@ -1,0 +1,58 @@
+{
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""
+    },
+    "redirect": "area-socio",
+    "errors": {
+        "empty_email": "Debes escribir un correo",
+        "numeric_email": "El correo no puede ser un número",
+        "max_length": "El correo debe tener 100 caracteres máximo",
+        "email_invalid": "El correo no tiene una sintaxis correcta",
+        "insecure_email": "El valor contiene valores que, por seguridad, no se admiten. Cámbiela por favor.",
+        "empty_password": "Debes escribir una contraseña",
+        "login_error": "El usuario o la contraseña no son válidos",
+        "bad_request": "No se están recibiendo datos del formulario"
+    },
+    "header_primary": {
+        "text": "Acceso privado para Socios del Liquid Stack"
+    },
+    "description": {
+        "content": "A través de esta página podrás acceder sólo si perteneces al Liquid Stack. Cualquier duda, ponte en contacto con nuestra oficina."
+    },
+    "robots": {
+        "content": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "user_label": {
+        "text": "Usuario"
+    },
+    "user_input": {
+        "placeholder": "* Usuario"
+    },
+    "password_input": {
+        "placeholder": "* Contraseña"
+    },
+    "forgot_password_link": {
+        "text": "¿Es la primera vez que entras o has olvidado tu contraseña? Pulsa aquí",
+        "href": "recordar-contraseña",
+        "title": "¿Es la primera vez que entras o has olvidado tu contraseña? Pulsa aquí"
+    },
+    "connect_input": {
+        "value": "Conectarse"
+    },
+    "enviado": {
+        "alt": "Acceso permitido",
+        "title": "Acceso permitido"
+    },
+    "video": {
+        "title": "Liquid Stack"
+    },
+    "pass_view": {
+        "alt": "Mostrar / Ocultar contraseña",
+        "title": "Mostrar / Ocultar contraseña"
+    }
+}

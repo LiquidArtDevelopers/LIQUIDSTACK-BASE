@@ -1,0 +1,132 @@
+{
+  "example": {
+    "alt": "",
+    "title": "link",
+    "text": "",
+    "placeholder": "",
+    "value": "",
+    "content": "",
+    "href": "",
+    "src": ""
+  },
+  "title": {
+    "text": "Desarrollo web nativo de alto rendimiento"
+  },
+  "description": {
+    "content": "Creamos productos digitales con programación nativa, optimizaciones front y back y auditorías de SEO técnico para que tu web cargue rápido, escale sin fricciones y consolide su visibilidad."
+  },
+  "robots": {
+    "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+  },
+  "moduleButtonType01_00_cta": {
+    "href": "#",
+    "title": "Solicitar diagnóstico técnico"
+  },
+  "moduleButtonType01_00_cta_span": {
+    "text": "Planifica auditoría"
+  },
+  "moduleButtonType01_00_cta_img": {
+    "src": "assets/img/system/arrow-forward-outline.svg",
+    "alt": "Flecha avanzar",
+    "title": "Flecha avanzar"
+  },
+  "moduleH1Type01_00_h1_text": {
+    "text": "Aplicaciones web nativas que rinden más"
+  },
+  "moduleH1Type01_00_p01_text": {
+    "text": "Diseñamos y desarrollamos con código nativo para aprovechar cada recurso del navegador y del servidor, eliminando dependencias innecesarias y reforzando la estabilidad."
+  },
+  "moduleH1Type01_00_p02_text": {
+    "text": "Nuestro enfoque combina rendimiento, accesibilidad y SEO técnico desde la arquitectura, para que tu plataforma escale con seguridad y obtenga tráfico orgánico sostenible."
+  },
+  "hero02_video_webm": {
+    "src": "/assets/video/dummy.webm"
+  },
+  "hero02_video_mp4": {
+    "src": "/assets/video/dummy.mp4"
+  },
+  "hero02_video_title": {
+    "title": "Vídeo operaciones inteligentes"
+  },
+  "moduleH2Type01_00_h2_text": {
+    "text": "Cómo impulsamos productos digitales nativos"
+  },
+  "moduleButtonType02_00_cta_link": {
+    "href": "#",
+    "title": "Explorar auditoría de rendimiento"
+  },
+  "moduleButtonType02_00_cta_span": {
+    "text": "Ver auditoría técnica"
+  },
+  "moduleButtonType02_01_cta_link": {
+    "href": "#",
+    "title": "Explorar migración nativa"
+  },
+  "moduleButtonType02_01_cta_span": {
+    "text": "Ver migración"
+  },
+  "moduleButtonType02_02_cta_link": {
+    "href": "#",
+    "title": "Explorar SEO técnico"
+  },
+  "moduleButtonType02_02_cta_span": {
+    "text": "Ver plan SEO"
+  },
+  "sect02_00_b_h3_text": {
+    "text": "Arquitecturas nativas listas para escalar"
+  },
+  "sect02_00_b_p01_text": {
+    "text": "Creamos bases de código ligeras, sin sobrecarga de frameworks, priorizando la ejecución nativa y el uso eficiente de cachés, colas y APIs para soportar picos de tráfico."
+  },
+  "sect02_00_b_p02_text": {
+    "text": "Cada despliegue se automatiza con observabilidad, hardening y pruebas de carga para que la infraestructura responda igual de rápido en cada nueva iteración."
+  },
+  "sect02_00_b_img": {
+    "src": "assets/img/dummy/dummy_1200.avif",
+    "alt": "Equipo de desarrollo revisando arquitectura nativa",
+    "title": "Equipo de desarrollo revisa arquitectura nativa"
+  },
+  "sect02_00_b_img_sizes": {
+    "text": "(max-width: 899px) 900px, 1800px"
+  },
+  "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+  "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+  "sect02_00_c_h3_text": {
+    "text": "Front-end accesible y ultrarrápido"
+  },
+  "sect02_00_c_p01_text": {
+    "text": "Optimizamos cada interacción con renderizado progresivo, lazy loading y bundles a medida, mejorando Core Web Vitals y la usabilidad en todos los dispositivos."
+  },
+  "sect02_00_c_p02_text": {
+    "text": "Incluimos analítica de comportamiento y accesibilidad para priorizar mejoras que impacten en conversiones y tiempo de respuesta real."
+  },
+  "sect02_00_c_img": {
+    "src": "assets/img/dummy/dummy_1200.avif",
+    "alt": "Panel de rendimiento con métricas de experiencia web",
+    "title": "Panel de rendimiento con métricas de experiencia web"
+  },
+  "sect02_00_c_img_sizes": {
+    "text": "(max-width: 899px) 900px, 1800px"
+  },
+  "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+  "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+  "sect02_00_a_h3_text": {
+    "text": "SEO técnico que protege tu visibilidad"
+  },
+  "sect02_00_a_p01_text": {
+    "text": "Auditamos logs, mapas de rastreo y estados de indexación para detectar bloqueos, optimizar sitemaps y reforzar la estructura interna sin sacrificar velocidad."
+  },
+  "sect02_00_a_p02_text": {
+    "text": "Aplicamos mejoras continuas en datos estructurados, canonicalización y seguridad para sostener el rendimiento orgánico a largo plazo."
+  },
+  "sect02_00_a_img": {
+    "src": "assets/img/dummy/dummy_1200.avif",
+    "alt": "Especialista revisando auditoría SEO técnica",
+    "title": "Especialista revisa auditoría SEO técnica"
+  },
+  "sect02_00_a_img_sizes": {
+    "text": "(max-width: 899px) 900px, 1800px"
+  },
+  "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+  "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w"
+}

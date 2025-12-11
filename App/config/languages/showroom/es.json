@@ -1,0 +1,2139 @@
+{
+    "example": {
+        "alt": "",
+        "title": "link",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": "",
+        "href": "",
+        "src": ""
+    },
+    "title": {
+        "text": "LAD Framework Templates"
+    },
+    "description": {
+        "content": ""
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "moduleButtonType01_00_cta": {
+        "href": "#",
+        "title": "Ir a la sección"
+    },
+    "moduleButtonType01_00_cta_span": {
+        "text": "CTA"
+    },
+    "moduleButtonType01_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha",
+        "title": "Flecha"
+    },
+    "moduleH1Type01_00_h1_text": {
+        "text": "Encabezado H1"
+    },
+    "moduleH1Type01_00_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_00_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    },
+    "moduleH2Type01_00_h2_text": {
+        "text": "Sect01"
+    },
+    "moduleButtonType01_01_cta": {
+        "href": "#",
+        "title": "Ir a la sección"
+    },
+    "moduleButtonType01_01_cta_span": {
+        "text": "CTA"
+    },
+    "moduleButtonType01_01_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha",
+        "title": "Flecha"
+    },
+    "moduleH2Type01_01_h2_text": {
+        "text": "Sect01"
+    },
+    "moduleButtonType02_00_cta_link": {
+        "href": "#",
+        "title": "Leer más"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Leer más"
+    },
+    "sect01_00_a_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "sect01_00_a_h3_text": {
+        "text": "Título A"
+    },
+    "sect01_00_a_p01_text": {
+        "text": "Párrafo A1"
+    },
+    "sect01_00_a_p02_text": {
+        "text": "Párrafo A2"
+    },
+    "sect01_00_a_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "title": "Imagen A2",
+        "alt": "A2"
+    },
+    "sect01_00_a_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "A3",
+        "title": "Imagen A3"
+    },
+    "sect01_00_a_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "A4",
+        "title": "Imagen A4"
+    },
+    "sect01_00_b_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono B",
+        "title": "Icono B"
+    },
+    "sect01_00_b_h3_text": {
+        "text": "Título B"
+    },
+    "sect01_00_b_p01_text": {
+        "text": "Párrafo B1"
+    },
+    "sect01_00_b_p02_text": {
+        "text": "Párrafo B2"
+    },
+    "sect01_00_b_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "B2",
+        "title": "Imagen B2"
+    },
+    "sect01_00_b_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "B3",
+        "title": "Imagen B3"
+    },
+    "sect01_00_b_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "B4",
+        "title": "Imagen B4"
+    },
+    "sect01_00_c_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono C",
+        "title": "Icono C"
+    },
+    "sect01_00_c_h3_text": {
+        "text": "Título C"
+    },
+    "sect01_00_c_p01_text": {
+        "text": "Párrafo C1"
+    },
+    "sect01_00_c_p02_text": {
+        "text": "Párrafo C2"
+    },
+    "sect01_00_c_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "C2",
+        "title": "Imagen C2"
+    },
+    "sect01_00_c_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "C3",
+        "title": "Imagen C3"
+    },
+    "sect01_00_c_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "C4",
+        "title": "Imagen C4"
+    },
+    "sect01_00_d_img01": {
+        "src": "assets/img/system/bookmark-outline.svg",
+        "alt": "Icono D",
+        "title": "Icono D"
+    },
+    "sect01_00_d_h3_text": {
+        "text": "Título D"
+    },
+    "sect01_00_d_p01_text": {
+        "text": "Párrafo D1"
+    },
+    "sect01_00_d_p02_text": {
+        "text": "Párrafo D2"
+    },
+    "sect01_00_d_img02": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "D2",
+        "title": "Imagen D2"
+    },
+    "sect01_00_d_img03": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "D3",
+        "title": "Imagen D3"
+    },
+    "sect01_00_d_img04": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "D4",
+        "title": "Imagen D4"
+    },
+    "hero00_bg_mobile": {
+        "src": "assets/img/dummy/dummy_900.avif"
+    },
+    "hero00_bg_tablet": {
+        "src": "assets/img/dummy/dummy_1800.avif"
+    },
+    "hero00_bg_desktop": {
+        "src": "assets/img/dummy/dummy_2560.avif"
+    },
+    "hero00_bg_fallback": {
+        "src": "assets/img/dummy/dummy_900.avif"
+    },
+    "hero02_video_webm": {
+        "src": "/assets/video/dummy.webm"
+    },
+    "hero02_video_mp4": {
+        "src": "/assets/video/dummy.mp4"
+    },
+    "hero02_video_poster": {
+        "src": "assets/img/dummy/dummy_2560.avif"
+    },
+    "hero02_video_title": {
+        "title": "Reproductor de vídeo"
+    },
+    "moduleButtonType01_03_cta": {
+        "href": "#",
+        "title": "Ir a la sección"
+    },
+    "moduleButtonType01_03_cta_span": {
+        "text": "CTA"
+    },
+    "moduleButtonType01_03_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha",
+        "title": "Flecha"
+    },
+    "art01_00_headerPrimary": {
+        "text": "Encabezado variable h3 art01"
+    },
+    "art01_00_intro_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa sapiente placeat? Voluptatibus optio maiores vel nemo, voluptatem repellat iure?"
+    },
+    "art01_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art01_00_headerSecondary_a": {
+        "text": "Encabezado variable h4 art01"
+    },
+    "art01_00_a_p": {
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
+    },
+    "art01_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art01_00_headerSecondary_b": {
+        "text": "Encabezado variable h4 art01"
+    },
+    "art01_00_b_p": {
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
+    },
+    "art01_00_hero_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "moduleButtonType01_02_cta": {
+        "href": "#",
+        "title": "Ir a la sección"
+    },
+    "moduleButtonType01_02_cta_span": {
+        "text": "CTA"
+    },
+    "moduleButtonType01_02_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha",
+        "title": "Flecha"
+    },
+    "moduleH2Type01_02_h2_text": {
+        "text": "Sect01"
+    },
+    "moduleH2Type01_03_h2_text": {
+        "text": "Sect01"
+    },
+    "art02_00_headerPrimary": {
+        "text": "Encabezado variable h3 art02"
+    },
+    "art02_00_intro_p": {
+        "text": "Lorem ipsum dolor sit."
+    },
+    "art02_00_p1": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita quam laudantium voluptatem consectetur nobis nemo."
+    },
+    "art02_00_p2": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae voluptatem tempore, tempora assumenda temporibus quasi at ducimus velit."
+    },
+    "art02_00_headerSecondary_a": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_a_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art02_00_headerSecondary_b": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_b_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art04_00_headerPrimary": {
+        "text": "Encabezado variable h3 art04"
+    },
+    "art04_00_intro_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, explicabo…"
+    },
+    "art04_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art04_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art04_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_headerPrimary": {
+        "text": "Encabezado H3 del art06"
+    },
+    "art06_00_headerSecondary_a": {
+        "text": "Título bloque A"
+    },
+    "art06_00_a_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
+    },
+    "art06_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_headerSecondary_b": {
+        "text": "Título bloque B"
+    },
+    "art06_00_b_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
+    },
+    "art06_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_cite": {
+        "text": "“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, perferendis.”"
+    },
+    "art06_00_headerSecondary_c": {
+        "text": "Título bloque C"
+    },
+    "art06_00_c_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
+    },
+    "art06_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_a_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_a_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_b_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_b_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_c_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_c_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art07_00_h3_1": {
+        "text": "Encabezado h3 del art07"
+    },
+    "art07_00_h3_2": {
+        "text": "y palabras en tipografía grande"
+    },
+    "art07_00_intro_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non id asperiores voluptate placeat quis similique quas itaque magni quos error corporis iusto, exercitationem ducimus libero esse animi omnis consectetur magnam."
+    },
+    "art07_00_h4": {
+        "text": "Encabezado h4"
+    },
+    "art07_00_cite": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art07_00_bgHero_mobile": "assets/img/dummy/dummy_900.avif",
+    "art07_00_bgHero_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art07_00_bgHero_desktop": "assets/img/dummy/dummy_2560.avif",
+    "art07_00_bgMatrix_mobile": "assets/img/dummy/dummy_900.avif",
+    "art07_00_bgMatrix_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art07_00_bgMatrix_desktop": "assets/img/dummy/dummy_2560.avif",
+    "moduleButtonType01_06_cta": {
+        "href": "#",
+        "title": "Ir a la sección"
+    },
+    "moduleButtonType01_06_cta_span": {
+        "text": "CTA"
+    },
+    "moduleButtonType01_06_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha",
+        "title": "Flecha"
+    },
+    "art08_00_headerPrimary": {
+        "text": "Encabezado h3 artículo 08"
+    },
+    "art08_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art08_00_headerSecondary_a": {
+        "text": "Título bloque A"
+    },
+    "art08_00_a_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus harum totam cupiditate, laudantium repellat itaque necessitatibus natus nobis reiciendis consequatur sed tempore delectus id quis ab tempora excepturi aspernatur repellendus?"
+    },
+    "art08_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art08_00_headerSecondary_b": {
+        "text": "Título bloque B"
+    },
+    "art08_00_b_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus harum totam cupiditate, laudantium repellat itaque necessitatibus natus nobis reiciendis consequatur sed tempore delectus id quis ab tempora excepturi aspernatur repellendus?"
+    },
+    "art10_00_headerPrimary": {
+        "text": "Encabezado h3 artículo 10"
+    },
+    "art10_00_headerSecondary_a": {
+        "text": "Título ficha A"
+    },
+    "art10_00_a_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art10_00_a_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art10_00_headerSecondary_b": {
+        "text": "Título ficha B"
+    },
+    "art10_00_b_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono B",
+        "title": "Icono B"
+    },
+    "art10_00_b_p": {
+        "text": "Descripción breve de la ficha B."
+    },
+    "art10_00_headerSecondary_c": {
+        "text": "Título ficha C"
+    },
+    "art10_00_c_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono C",
+        "title": "Icono C"
+    },
+    "art10_00_c_p": {
+        "text": "Descripción breve de la ficha C."
+    },
+    "art10_00_top_fill": "#ffffff",
+    "art10_00_bottom_fill": "#ffffff",
+    "art12_00_headerPrimary": {
+        "text": "Encabezado h3 artículo 12"
+    },
+    "art12_00_headerSecondary_a": {
+        "text": "Título ficha A"
+    },
+    "art12_00_a_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art12_00_a_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo A",
+        "title": "Imagen de fondo A"
+    },
+    "art12_00_a_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art12_00_headerSecondary_b": {
+        "text": "Título ficha B"
+    },
+    "art12_00_b_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono B",
+        "title": "Icono B"
+    },
+    "art12_00_b_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo B",
+        "title": "Imagen de fondo B"
+    },
+    "art12_00_b_p": {
+        "text": "Descripción breve de la ficha B."
+    },
+    "art12_00_headerSecondary_c": {
+        "text": "Título ficha C"
+    },
+    "art12_00_c_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono C",
+        "title": "Icono C"
+    },
+    "art12_00_c_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo C",
+        "title": "Imagen de fondo C"
+    },
+    "art12_00_c_p": {
+        "text": "Descripción breve de la ficha C."
+    },
+    "art12_00_top_fill": "#ffffff",
+    "art12_00_bottom_fill": "#ffffff",
+    "art13_00_headerPrimary": {
+        "text": "Lo que dicen nuestros clientes"
+    },
+    "moduleButtonType01_07_cta": {
+        "href": "#",
+        "title": "Ir a la sección"
+    },
+    "moduleButtonType01_07_cta_span": {
+        "text": "CTA"
+    },
+    "moduleButtonType01_07_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha",
+        "title": "Flecha"
+    },
+    "art14_00_headerPrimary": {
+        "text": "Encabezado h3 artículo 14"
+    },
+    "art14_00_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, enim quasi vero corrupti ratione officia error cumque illum labore necessitatibus!"
+    },
+    "art14_00_img": {
+        "src": "assets/img/logos/logo-business-b.svg",
+        "alt": "Jarama Autoescuela en Bizkaia",
+        "title": "Jarama Autoescuela en Bizkaia"
+    },
+    "art15_00_headerPrimary": {
+        "text": "Encabezado h3 artículo 15"
+    },
+    "art15_00_p1": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente cumque quibusdam commodi atque? Deleniti, omnis mayores."
+    },
+    "art15_00_p2": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, dolores?"
+    },
+    "art15_00_img1": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen principal",
+        "title": "Imagen principal"
+    },
+    "art15_00_img2": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen secundaria",
+        "title": "Imagen secundaria"
+    },
+    "artSlider01_00_headerPrimary": {
+        "text": "Últimas noticias"
+    },
+    "artSlider01_00_viewmore": {
+        "text": "Ver todas",
+        "href": "noticias"
+    },
+    "artSlider01_00_carda_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 1",
+        "title": "Noticia 1"
+    },
+    "artSlider01_00_carda_meta": {
+        "text": "12·06·2025"
+    },
+    "artSlider01_00_carda_h4": {
+        "text": "Noticia 1"
+    },
+    "artSlider01_00_carda_tags": {
+        "text": "#autoescuela"
+    },
+    "artSlider01_00_carda_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-1"
+    },
+    "artSlider01_00_cardb_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 2",
+        "title": "Noticia 2"
+    },
+    "artSlider01_00_cardb_meta": {
+        "text": "08·06·2025"
+    },
+    "artSlider01_00_cardb_h4": {
+        "text": "Noticia 2"
+    },
+    "artSlider01_00_cardb_tags": {
+        "text": "#examen"
+    },
+    "artSlider01_00_cardb_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-2"
+    },
+    "artSlider01_00_cardc_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 3",
+        "title": "Noticia 3"
+    },
+    "artSlider01_00_cardc_meta": {
+        "text": "01·06·2025"
+    },
+    "artSlider01_00_cardc_h4": {
+        "text": "Noticia 3"
+    },
+    "artSlider01_00_cardc_tags": {
+        "text": "#carnet"
+    },
+    "artSlider01_00_cardc_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-3"
+    },
+    "artSlider01_00_cardd_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 4",
+        "title": "Noticia 4"
+    },
+    "artSlider01_00_cardd_meta": {
+        "text": "27·05·2025"
+    },
+    "artSlider01_00_cardd_h4": {
+        "text": "Noticia 4"
+    },
+    "artSlider01_00_cardd_tags": {
+        "text": "#jarama"
+    },
+    "artSlider01_00_cardd_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-4"
+    },
+    "artSlider01_00_carde_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 5",
+        "title": "Noticia 5"
+    },
+    "artSlider01_00_carde_meta": {
+        "text": "20·05·2025"
+    },
+    "artSlider01_00_carde_h4": {
+        "text": "Noticia 5"
+    },
+    "artSlider01_00_carde_tags": {
+        "text": "#seguridad"
+    },
+    "artSlider01_00_carde_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-5"
+    },
+    "artSlider01_00_cardf_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 6",
+        "title": "Noticia 6"
+    },
+    "artSlider01_00_cardf_meta": {
+        "text": "14·05·2025"
+    },
+    "artSlider01_00_cardf_h4": {
+        "text": "Noticia 6"
+    },
+    "artSlider01_00_cardf_tags": {
+        "text": "#tráfico"
+    },
+    "artSlider01_00_cardf_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-6"
+    },
+    "artSlider01_00_cardg_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 7",
+        "title": "Noticia 7"
+    },
+    "artSlider01_00_cardg_meta": {
+        "text": "07·05·2025"
+    },
+    "artSlider01_00_cardg_h4": {
+        "text": "Noticia 7"
+    },
+    "artSlider01_00_cardg_tags": {
+        "text": "#tips"
+    },
+    "artSlider01_00_cardg_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-7"
+    },
+    "artSlider01_00_cardh_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 8",
+        "title": "Noticia 8"
+    },
+    "artSlider01_00_cardh_meta": {
+        "text": "30·04·2025"
+    },
+    "artSlider01_00_cardh_h4": {
+        "text": "Noticia 8"
+    },
+    "artSlider01_00_cardh_tags": {
+        "text": "#consejos"
+    },
+    "artSlider01_00_cardh_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-8"
+    },
+    "artSlider01_00_cardi_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 9",
+        "title": "Noticia 9"
+    },
+    "artSlider01_00_cardi_meta": {
+        "text": "22·04·2025"
+    },
+    "artSlider01_00_cardi_h4": {
+        "text": "Noticia 9"
+    },
+    "artSlider01_00_cardi_tags": {
+        "text": "#dgt"
+    },
+    "artSlider01_00_cardi_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-9"
+    },
+    "artSlider01_00_cardj_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Noticia 10",
+        "title": "Noticia 10"
+    },
+    "artSlider01_00_cardj_meta": {
+        "text": "15·04·2025"
+    },
+    "artSlider01_00_cardj_h4": {
+        "text": "Noticia 10"
+    },
+    "artSlider01_00_cardj_tags": {
+        "text": "#licencia"
+    },
+    "artSlider01_00_cardj_read": {
+        "text": "Leer más",
+        "href": "noticias/noticia-10"
+    },
+    "artSlider02_00_headerPrimary": {
+        "text": "Jornadas Hettich"
+    },
+    "artSlider02_00_prev": {
+        "text": "Anterior"
+    },
+    "artSlider02_00_next": {
+        "text": "Siguiente"
+    },
+    "artSlider02_00_slidea_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Jornadas Hettich 1",
+        "title": "Jornadas Hettich 1"
+    },
+    "artSlider02_00_slidea_h4": {
+        "text": "Jornada Hettich 1"
+    },
+    "artSlider02_00_slideb_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Jornadas Hettich 2",
+        "title": "Jornadas Hettich 2"
+    },
+    "artSlider02_00_slideb_h4": {
+        "text": "Jornada Hettich 2"
+    },
+    "artSlider02_00_slidec_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Jornadas Hettich 3",
+        "title": "Jornadas Hettich 3"
+    },
+    "artSlider02_00_slidec_h4": {
+        "text": "Jornada Hettich 3"
+    },
+    "artSlider02_00_slided_img": {
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "Jornadas Hettich 4",
+        "title": "Jornadas Hettich 4"
+    },
+    "artSlider02_00_slided_h4": {
+        "text": "Jornada Hettich 4"
+    },
+    "artForm01_00_headerPrimary": {
+        "text": "Contacta con nosotros"
+    },
+    "artForm01_00_headerSecondary": {
+        "text": "Rellena el formulario"
+    },
+    "artForm01_00_intro_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, iure ex distinctio laborum assumenda nesciunt illum consequatur necessitatibus dolor in! Maxime aut voluptatibus dolore doloribus cupiditate ipsum neque omnis qui."
+    },
+    "artForm01_00_label_name": {
+        "text": "Nombre"
+    },
+    "artForm01_00_ph_name": {
+        "placeholder": "* Nombre"
+    },
+    "artForm01_00_label_phone": {
+        "text": "Teléfono"
+    },
+    "artForm01_00_ph_phone": {
+        "placeholder": "* Teléfono"
+    },
+    "artForm01_00_label_mail": {
+        "text": "Correo electrónico"
+    },
+    "artForm01_00_ph_mail": {
+        "placeholder": "* Correo electrónico"
+    },
+    "artForm01_00_label_msg": {
+        "text": "Consulta"
+    },
+    "artForm01_00_ph_msg": {
+        "placeholder": "Escribe aquí tu consulta"
+    },
+    "artForm01_00_terms": {
+        "text": "Acepto que me contacte la empresa conforme a la siguiente "
+    },
+    "artForm01_00_privacy": {
+        "text": "Política de Privacidad"
+    },
+    "artForm01_00_label_captcha": {
+        "text": "Resuelva"
+    },
+    "artForm01_00_ph_captcha": {
+        "placeholder": "* Resuelva"
+    },
+    "artForm01_00_submit": {
+        "value": "Enviar consulta"
+    },
+    "artForm01_00_headerSecondary_side": {
+        "text": "Otra forma de contacto"
+    },
+    "artForm01_00_side_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolorum delectus debitis magni nisi. Quasi minima itaque, sequi optio laboriosam, provident, maxime reprehenderit laborum rerum iusto atque. Nesciunt dolore saepe, provident et asperiores nostrum laboriosam ut culpa dicta commodi harum."
+    },
+    "artForm01_00_contact_tel_img": {
+        "src": "assets/img/system/tel.svg",
+        "alt": "Teléfono",
+        "title": "Teléfono"
+    },
+    "artForm01_00_contact_tel": {
+        "text": "Teléfono pendiente de actualización"
+    },
+    "artForm01_00_contact_mail_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Mail",
+        "title": "Mail"
+    },
+    "artForm01_00_contact_mail": {
+        "text": "info@ejemplo.com"
+    },
+    "artForm01_00_contact_addr_img": {
+        "src": "assets/img/system/wp.svg",
+        "alt": "Dirección",
+        "title": "Dirección"
+    },
+    "artForm01_00_contact_addr": {
+        "text": "Dirección pendiente de actualización"
+    },
+    "artForm01_00_contact_web_img": {
+        "src": "assets/img/system/web.svg",
+        "alt": "Web",
+        "title": "Web"
+    },
+    "artForm01_00_contact_web": {
+        "text": "www.ejemplo.com"
+    },
+    "artForm01_00_sent_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Enviado",
+        "title": "Mensaje enviado"
+    },
+    "artForm01_00_headerSecondary_sent": {
+        "text": "Consulta enviada"
+    },
+    "artForm01_00_sent_p1": {
+        "text": "Nos pondremos en contacto pronto."
+    },
+    "artForm01_00_sent_p2": {
+        "text": "Gracias por escribirnos."
+    },
+    "artForm01_00_new_query": {
+        "text": "Enviar otra consulta"
+    },
+    "artForm01_00_contact_tel_href": "tel:+00000000000",
+    "artForm01_00_contact_tel_title": "Llamar por teléfono",
+    "artForm01_00_contact_mail_href": "mailto:info@ejemplo.com",
+    "artForm01_00_contact_mail_title": "Enviar correo",
+    "artForm01_00_contact_addr_href": "https://maps.app.goo.gl/xxxxx",
+    "artForm01_00_contact_addr_title": "Cómo llegar",
+    "artForm01_00_contact_web_href": "https://www.ejemplo.com",
+    "artForm01_00_contact_web_title": "Visitar web",
+    "artForm01_00_map_src": "https://www.google.com/maps/embed?pb=...",
+    "artForm01_00_map_width": "600",
+    "artForm01_00_map_height": "300",
+    "artForm01_00_map_title": "Ubicación de la empresa",
+    "artAccordion01_00_headerPrimary": {
+        "text": "Preguntas frecuentes"
+    },
+    "artAccordion01_00_itema_title": {
+        "text": "¿Qué documentación necesito?"
+    },
+    "artAccordion01_00_itema_content": {
+        "text": "Necesitarás DNI, una fotografía actual y el certificado psicotécnico."
+    },
+    "artAccordion01_00_itemb_title": {
+        "text": "¿Cuánto dura el curso teórico?"
+    },
+    "artAccordion01_00_itemb_content": {
+        "text": "El curso intensivo dura dos semanas, con clases diarias de dos horas."
+    },
+    "artAccordion01_00_itemc_title": {
+        "text": "¿Puedo pagar las prácticas a plazos?"
+    },
+    "artAccordion01_00_itemc_content": {
+        "text": "Sí, disponemos de financiación sin intereses en tres cómodos pagos."
+    },
+    "moduleTest_00_h2_text": {
+        "text": "Encabezado de prueba"
+    },
+    "moduleTest_00_p_text": {
+        "text": "Párrafo de prueba"
+    },
+    "artZipper_00_h3": {
+        "text": "Preguntas más habituales"
+    },
+    "artZipper_00_a_h4": {
+        "text": "¿Qué es el método Zipper?"
+    },
+    "artZipper_00_b_h4": {
+        "text": "Ventajas principales"
+    },
+    "artZipper_00_c_h4": {
+        "text": "Pasos para implementarlo"
+    },
+    "artZipper_00_d_h4": {
+        "text": "Errores frecuentes"
+    },
+    "artZipper_00_e_h4": {
+        "text": "Consejos finales"
+    },
+    "art09_00_headerPrimary": {
+        "text": "Encabezado h3 artículo 09"
+    },
+    "art09_00_p1": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_span": {
+        "text": "Más información en"
+    },
+    "art09_00_link": {
+        "href": "https://ejemplo.com",
+        "title": "Abrir sitio externo",
+        "text": "este enlace"
+    },
+    "art09_00_headerSecondary_a": {
+        "text": "Nombre ficha A"
+    },
+    "art09_00_a_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_a_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_a_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_b": {
+        "text": "Nombre ficha B"
+    },
+    "art09_00_b_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar B-1",
+        "title": "Avatar B-1"
+    },
+    "art09_00_b_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar B-2",
+        "title": "Avatar B-2"
+    },
+    "art09_00_b_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_c": {
+        "text": "Nombre ficha C"
+    },
+    "art09_00_c_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar C-1",
+        "title": "Avatar C-1"
+    },
+    "art09_00_c_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar C-2",
+        "title": "Avatar C-2"
+    },
+    "art09_00_c_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_d": {
+        "text": ""
+    },
+    "art09_00_d_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_d_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_d_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_e": {
+        "text": ""
+    },
+    "art09_00_e_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_e_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_e_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_f": {
+        "text": ""
+    },
+    "art09_00_f_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_f_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_f_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_g": {
+        "text": ""
+    },
+    "art09_00_g_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_g_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_g_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_h": {
+        "text": ""
+    },
+    "art09_00_h_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_h_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_h_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_i": {
+        "text": ""
+    },
+    "art09_00_i_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_i_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_i_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "art09_00_headerSecondary_j": {
+        "text": "Nombre ficha A"
+    },
+    "art09_00_j_img1": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Avatar A-1",
+        "title": "Avatar A-1"
+    },
+    "art09_00_j_img2": {
+        "src": "assets/img/dummy/dummy_1200.avif",
+        "alt": "Avatar A-2",
+        "title": "Avatar A-2"
+    },
+    "art09_00_j_desc": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, doloribus?"
+    },
+    "artZipper_00_f_h4": {
+        "text": "Seguimiento en tiempo real"
+    },
+    "artZipper_00_g_h4": {
+        "text": "Gestión de logística inversa"
+    },
+    "artZipper_00_h_h4": {
+        "text": "Canales de soporte dedicado"
+    },
+    "art05_00_headerPrimary": {
+        "text": "Artículo 5 encabezado h3"
+    },
+    "art05_00_intro_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus harum totam cupiditate, laudantium repellat itaque necessitatibus natus nobis reiciendis consequatur sed tempore delectus id quis ab tempora excepturi aspernatur repellendus?"
+    },
+    "art05_00_b_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_b_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_b_firma": {
+        "text": "Firma"
+    },
+    "art05_00_c_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_c_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_c_firma": {
+        "text": "Firma"
+    },
+    "art05_00_d_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_d_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_d_firma": {
+        "text": "Firma"
+    },
+    "art05_00_headerSecondary_a": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_a_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_a_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_a_firma": {
+        "text": "Firma"
+    },
+    "art05_00_headerSecondary_b": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_headerSecondary_c": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_headerSecondary_d": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_headerSecondary_e": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_e_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_e_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_e_firma": {
+        "text": "Firma"
+    },
+    "art05_00_headerSecondary_f": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_f_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_f_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_f_firma": {
+        "text": "Firma"
+    },
+    "art05_00_headerSecondary_g": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_g_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_g_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_g_firma": {
+        "text": "Firma"
+    },
+    "art05_00_headerSecondary_h": {
+        "text": "Encabezado h4 de item"
+    },
+    "art05_00_h_img": {
+        "src": "/assets/img/system/bookmark-outline.svg",
+        "alt": "Alt de la imagen",
+        "title": "Title de la imagen"
+    },
+    "art05_00_h_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet a perspiciatis dignissimos, voluptates doloremque esse unde in beatae vitae ad."
+    },
+    "art05_00_h_firma": {
+        "text": "Firma"
+    },
+    "sectTabs01_00_intro": {
+        "text": "Aquí encontrarás normativa y modelos oficiales para descargar."
+    },
+    "sectTabs01_00_a_id": {
+        "text": "tab1"
+    },
+    "sectTabs01_00_a_nav": {
+        "text": "Normativa"
+    },
+    "sectTabs01_00_a_h3": {
+        "text": "Normativa vigente"
+    },
+    "sectTabs01_00_a_b1_h4": {
+        "text": "Tráfico"
+    },
+    "sectTabs01_00_a_b1_h5": {
+        "text": "Reglamento General"
+    },
+    "sectTabs01_00_a_b1_l1": {
+        "text": "Reglamento General de Circulación",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b1_l2": {
+        "text": "Catálogo de señales",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b2_h4": {
+        "text": "Permisos"
+    },
+    "sectTabs01_00_a_b2_h5": {
+        "text": "Tipos de permisos"
+    },
+    "sectTabs01_00_a_b2_l1": {
+        "text": "Permiso de conducir B",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b2_l2": {
+        "text": "Permiso de conducir C",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b2_l3": {
+        "text": "Permiso de conducir D",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b3_h4": {
+        "text": "Vehículos"
+    },
+    "sectTabs01_00_a_b3_h5": {
+        "text": "Normativa de vehículos"
+    },
+    "sectTabs01_00_a_b3_l1": {
+        "text": "Normativa de vehículos",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_a_b3_l2": {
+        "text": "Modelos de vehículos",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_id": {
+        "text": "tab2"
+    },
+    "sectTabs01_00_b_nav": {
+        "text": "Modelos oficiales"
+    },
+    "sectTabs01_00_b_h3": {
+        "text": "Formularios DGT"
+    },
+    "sectTabs01_00_b_b1_h4": {
+        "text": "Solicitudes"
+    },
+    "sectTabs01_00_b_b1_h5": {
+        "text": "Trámites frecuentes"
+    },
+    "sectTabs01_00_b_b1_l1": {
+        "text": "Duplicado de permiso",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b1_l2": {
+        "text": "Cambio de domicilio",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b2_h4": {
+        "text": "Información"
+    },
+    "sectTabs01_00_b_b2_h5": {
+        "text": "Normativa y modelos"
+    },
+    "sectTabs01_00_b_b2_l1": {
+        "text": "Normativa vigente",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b2_l2": {
+        "text": "Modelos oficiales",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b3_h4": {
+        "text": "Contacto"
+    },
+    "sectTabs01_00_b_b3_h5": {
+        "text": "Atención al ciudadano"
+    },
+    "sectTabs01_00_b_b3_l1": {
+        "text": "Formulario de contacto",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_b_b3_l2": {
+        "text": "Teléfono de atención",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_id": {
+        "text": "tab3"
+    },
+    "sectTabs01_00_c_nav": {
+        "text": "Otras cuestiones"
+    },
+    "sectTabs01_00_c_h3": {
+        "text": "Formularios DGT"
+    },
+    "sectTabs01_00_c_b1_h4": {
+        "text": "Solicitudes"
+    },
+    "sectTabs01_00_c_b1_h5": {
+        "text": "Trámites frecuentes"
+    },
+    "sectTabs01_00_c_b1_l1": {
+        "text": "Duplicado de permiso",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b1_l2": {
+        "text": "Cambio de domicilio",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b2_h4": {
+        "text": "Información"
+    },
+    "sectTabs01_00_c_b2_h5": {
+        "text": "Normativa y modelos"
+    },
+    "sectTabs01_00_c_b2_l1": {
+        "text": "Normativa vigente",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b2_l2": {
+        "text": "Modelos oficiales",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b3_h4": {
+        "text": "Contacto"
+    },
+    "sectTabs01_00_c_b3_h5": {
+        "text": "Atención al ciudadano"
+    },
+    "sectTabs01_00_c_b3_l1": {
+        "text": "Formulario de contacto",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_c_b3_l2": {
+        "text": "Teléfono de atención",
+        "href": "example.pdf"
+    },
+    
+    "sectTabs01_00_d_id": {
+        "text": "tab1"
+    },
+    "sectTabs01_00_d_nav": {
+        "text": "Normativa"
+    },
+    "sectTabs01_00_d_h3": {
+        "text": "Normativa vigente"
+    },
+    "sectTabs01_00_d_b1_h4": {
+        "text": "Tráfico"
+    },
+    "sectTabs01_00_d_b1_h5": {
+        "text": "Reglamento General"
+    },
+    "sectTabs01_00_d_b1_l1": {
+        "text": "Reglamento General de Circulación",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_d_b1_l2": {
+        "text": "Catálogo de señales",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_d_b2_h4": {
+        "text": "Permisos"
+    },
+    "sectTabs01_00_d_b2_h5": {
+        "text": "Tipos de permisos"
+    },
+    "sectTabs01_00_d_b2_l1": {
+        "text": "Permiso de conducir B",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_d_b2_l2": {
+        "text": "Permiso de conducir C",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_d_b3_h4": {
+        "text": "Vehículos"
+    },
+    "sectTabs01_00_d_b3_h5": {
+        "text": "Normativa de vehículos"
+    },
+    "sectTabs01_00_d_b3_l1": {
+        "text": "Normativa de vehículos",
+        "href": "example.pdf"
+    },
+    "sectTabs01_00_d_b3_l2": {
+        "text": "Modelos de vehículos",
+        "href": "example.pdf"
+    },
+    "sect02_00_b_h3_text": {
+        "text": "Título B"
+    },
+    "sect02_00_b_p01_text": {
+        "text": "Párrafo B1"
+    },
+    "sect02_00_b_p02_text": {
+        "text": "Párrafo B2"
+    },
+    "sect02_00_b_avif_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen B",
+        "title": "Imagen B"
+    },
+    "sect02_00_b_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_c_h3_text": {
+        "text": "Título C"
+    },
+    "sect02_00_c_p01_text": {
+        "text": "Párrafo C1"
+    },
+    "sect02_00_c_p02_text": {
+        "text": "Párrafo C2"
+    },
+    "sect02_00_c_avif_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen C",
+        "title": "Imagen C"
+    },
+    "sect02_00_c_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_a_h3_text": {
+        "text": "Título A"
+    },
+    "sect02_00_a_p01_text": {
+        "text": "Párrafo A1"
+    },
+    "sect02_00_a_p02_text": {
+        "text": "Párrafo A2"
+    },
+    "sect02_00_a_avif_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen A",
+        "title": "Imagen A"
+    },
+    "sect02_00_a_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_d_h3_text": {
+        "text": "Título A"
+    },
+    "sect02_00_d_p01_text": {
+        "text": "Párrafo A1"
+    },
+    "sect02_00_d_p02_text": {
+        "text": "Párrafo A2"
+    },
+    "sect02_00_d_avif_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "sect02_00_d_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen A",
+        "title": "Imagen A"
+    },
+    "sect02_00_d_img_sizes": {
+        "text": "(max-width: 899px) 1000px, 1500px"
+    },
+    "art03_00_headerPrimary": {
+        "text": "ENCABEZADO DEL ART03"
+    },
+    "art03_00_intro_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, explicabo…"
+    },
+    "art03_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_b_link": {
+        "href": "#",
+        "title": "Enlace B"
+    },
+    "art03_00_b_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art03_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_c_link": {
+        "href": "#",
+        "title": "Enlace C"
+    },
+    "art03_00_c_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art03_00_d_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_d_link": {
+        "href": "#",
+        "title": "Enlace D"
+    },
+    "art03_00_d_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art03_00_headerSecondary_a": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_a_link": {
+        "href": "#",
+        "title": "Enlace A"
+    },
+    "art03_00_a_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art03_00_headerSecondary_b": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_headerSecondary_c": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_headerSecondary_d": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_headerSecondary_e": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_e_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_e_link": {
+        "href": "#",
+        "title": "Enlace A"
+    },
+    "art03_00_e_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art03_00_headerSecondary_f": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_f_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_f_link": {
+        "href": "#",
+        "title": "Enlace A"
+    },
+    "art03_00_f_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art03_00_headerSecondary_g": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_g_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_g_link": {
+        "href": "#",
+        "title": "Enlace A"
+    },
+    "art03_00_g_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art03_00_headerSecondary_h": {
+        "text": "Encabezado variable h4 art03"
+    },
+    "art03_00_h_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art03_00_h_link": {
+        "href": "#",
+        "title": "Enlace A"
+    },
+    "art03_00_h_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art04_00_a_link": {
+        "href": "#",
+        "title": "Enlace A"
+    },
+    "art04_00_b_link": {
+        "href": "#",
+        "title": "Enlace B"
+    },
+    "art04_00_c_link": {
+        "href": "#",
+        "title": "Enlace C"
+    },
+    "art02_00_headerSecondary_c": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_c_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "sect02_00_b_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_b_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_c_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_a_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_d_avif_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_d_avif_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "sect02_00_d_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "sect02_00_d_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_b_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_c_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_c_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_d_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_d_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_d_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_d_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_a_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_a_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_e_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_e_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_e_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_e_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_f_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_f_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_f_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_f_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_g_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_g_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_g_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_g_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_h_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_h_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art03_00_h_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art03_00_h_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_b_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_b_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_c_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_c_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art04_00_a_img_src01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art04_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "artSlider02_00_slideb_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slideb_avif_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slideb_avif_sizes": "100vw",
+    "artSlider02_00_slideb_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slideb_img_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slideb_img_sizes": "(max-width: 768px) 100vw, 1500px",
+    "artSlider02_00_slidec_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidec_avif_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slidec_avif_sizes": "100vw",
+    "artSlider02_00_slidec_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidec_img_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slidec_img_sizes": "(max-width: 768px) 100vw, 1500px",
+    "artSlider02_00_slided_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slided_avif_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slided_avif_sizes": "100vw",
+    "artSlider02_00_slided_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slided_img_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slided_img_sizes": "(max-width: 768px) 100vw, 1500px",
+    "artSlider02_00_slidea_avif_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidea_avif_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slidea_avif_sizes": "100vw",
+    "artSlider02_00_slidea_img_src01": "assets/img/dummy/dummy_900.avif",
+    "artSlider02_00_slidea_img_src02": "assets/img/dummy/dummy_1800.avif",
+    "artSlider02_00_slidea_img_sizes": "(max-width: 768px) 100vw, 1500px",
+    "art12_00_headerSecondary_d": {
+        "text": "Título ficha A"
+    },
+    "art12_00_d_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art12_00_d_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo A",
+        "title": "Imagen de fondo A"
+    },
+    "art12_00_d_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art12_00_headerSecondary_e": {
+        "text": "Título ficha A"
+    },
+    "art12_00_e_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art12_00_e_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo A",
+        "title": "Imagen de fondo A"
+    },
+    "art12_00_e_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art12_00_headerSecondary_f": {
+        "text": "Título ficha A"
+    },
+    "art12_00_f_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art12_00_f_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo A",
+        "title": "Imagen de fondo A"
+    },
+    "art12_00_f_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art12_00_headerSecondary_g": {
+        "text": "Título ficha A"
+    },
+    "art12_00_g_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art12_00_g_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo A",
+        "title": "Imagen de fondo A"
+    },
+    "art12_00_g_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art12_00_headerSecondary_h": {
+        "text": "Título ficha A"
+    },
+    "art12_00_h_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art12_00_h_imgBack": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen de fondo A",
+        "title": "Imagen de fondo A"
+    },
+    "art12_00_h_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art11_00_headerPrimary": {
+        "text": "Nuestra experiencia en cifras"
+    },
+    "art11_00_span_optional": {
+        "text": "El 100 % de nuestros alumnos termina aprobando, aunque el número de intentos pueda variar."
+    },
+    "art11_00_b_target": {
+        "value": "998"
+    },
+    "art11_00_b_suffix": {
+        "text": "k+"
+    },
+    "art11_00_b_label": {
+        "text": "GOAL2"
+    },
+    "art11_00_c_target": {
+        "value": "998"
+    },
+    "art11_00_c_suffix": {
+        "text": "k+"
+    },
+    "art11_00_c_label": {
+        "text": "GOAL3"
+    },
+    "art11_00_a_target": {
+        "value": "998"
+    },
+    "art11_00_a_suffix": {
+        "text": "k+"
+    },
+    "art11_00_a_label": {
+        "text": "GOAL1"
+    },
+    "art11_00_d_target": {
+        "value": "998"
+    },
+    "art11_00_d_suffix": {
+        "text": "k+"
+    },
+    "art11_00_d_label": {
+        "text": "GOAL1"
+    },
+    "art11_00_e_target": {
+        "value": "998"
+    },
+    "art11_00_e_suffix": {
+        "text": "k+"
+    },
+    "art11_00_e_label": {
+        "text": "GOAL1"
+    },
+    "art01_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art01_00_headerSecondary_c": {
+        "text": "Encabezado variable h4 art01"
+    },
+    "art01_00_c_p": {
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
+    },
+    "art01_00_d_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art01_00_headerSecondary_d": {
+        "text": "Encabezado variable h4 art01"
+    },
+    "art01_00_d_p": {
+        "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum officia, voluptatem aperiam nemo dicta quisquam ullam"
+    },
+    "art08_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art08_00_headerSecondary_c": {
+        "text": "Título bloque A"
+    },
+    "art08_00_c_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus harum totam cupiditate, laudantium repellat itaque necessitatibus natus nobis reiciendis consequatur sed tempore delectus id quis ab tempora excepturi aspernatur repellendus?"
+    },
+    "art10_00_headerSecondary_d": {
+        "text": "Título ficha A"
+    },
+    "art10_00_d_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art10_00_d_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art10_00_headerSecondary_e": {
+        "text": "Título ficha A"
+    },
+    "art10_00_e_img": {
+        "src": "assets/img/system/star-outline.svg",
+        "alt": "Icono A",
+        "title": "Icono A"
+    },
+    "art10_00_e_p": {
+        "text": "Descripción breve de la ficha A."
+    },
+    "art06_00_headerSecondary_d": {
+        "text": "Título bloque A"
+    },
+    "art06_00_d_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
+    },
+    "art06_00_d_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_d_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_d_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_d_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_d_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_headerSecondary_e": {
+        "text": "Título bloque A"
+    },
+    "art06_00_e_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
+    },
+    "art06_00_e_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_e_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_e_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_e_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_e_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_headerSecondary_f": {
+        "text": "Título bloque A"
+    },
+    "art06_00_f_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
+    },
+    "art06_00_f_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_f_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_f_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_f_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_f_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_headerSecondary_g": {
+        "text": "Título bloque A"
+    },
+    "art06_00_g_p": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ut minima nesciunt!"
+    },
+    "art06_00_g_avif_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_g_avif_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art06_00_g_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art06_00_g_img_src01": "assets/img/dummy/dummy_900.avif 900w",
+    "art06_00_g_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art13_00_a_quote": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae arcu in nunc elementum placerat. Phasellus non purus vitae justo commodo commodo. Integer blandit, lectus at cursus feugiat, mi nunc venenatis nibh, eu molestie nunc lectus ac metus."
+    },
+    "art13_00_a_author_img": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Foto del autor",
+        "title": "Foto del autor"
+    },
+    "art13_00_a_author_name": {
+        "text": "Lorem Ipsum"
+    },
+    "art13_00_a_author_stars": {
+        "text": "★★★★★"
+    },
+    "art13_00_a_side_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen lateral",
+        "title": "Imagen lateral"
+    },
+    "moduleButtonType01_08_cta": {
+        "href": "#",
+        "title": "Ir a la sección destacada"
+    },
+    "moduleButtonType01_08_cta_span": {
+        "text": "Explorar recurso"
+    },
+    "moduleButtonType01_08_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Flecha",
+        "title": "Flecha"
+    },
+    "art16_00_h3_1": {
+        "text": "Título principal art16"
+    },
+    "art16_00_h3_2": {
+        "text": "Subtítulo llamativo"
+    },
+    "art16_00_body_p": {
+        "text": "Texto descriptivo para el recurso art16 con contenido de ejemplo."
+    },
+    "art16_00_bg_mobile": "assets/img/dummy/dummy_900.avif",
+    "art16_00_bg_tablet": "assets/img/dummy/dummy_1800.avif",
+    "art16_00_bg_desktop": "assets/img/dummy/dummy_2560.avif",
+    "art02_00_headerSecondary_d": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_d_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_d_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art02_00_headerSecondary_e": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_e_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_e_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art02_00_headerSecondary_f": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_f_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_f_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art02_00_headerSecondary_g": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_g_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_g_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "art02_00_headerSecondary_h": {
+        "text": "Encabezado variable h4 art02"
+    },
+    "art02_00_h_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen dummy",
+        "title": "Imagen dummy"
+    },
+    "art02_00_h_p": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+    },
+    "moduleImgType01_00_img": {
+        "src": "assets/img/ilustraciones/te-ayudamos-juntos.avif",
+        "alt": "Alt dummy",
+        "title": "Title dummy"
+    },
+    "moduleImgType01_00_img_width": "900",
+    "moduleImgType01_00_img_height": "800",
+    "moduleImgType01_00_img_loading": "lazy",
+    "moduleImgType01_00_img_sizes": "",
+    "moduleImgType01_00_img_srcset01": "",
+    "moduleImgType01_00_img_srcset02": ""
+}

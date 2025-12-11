@@ -1,0 +1,313 @@
+{
+    "aImgNav": "",
+    "navMegamenu01_00_forward": {
+        "src": "assets/img/system/chevron-forward-outline.svg",
+        "alt": ">",
+        "title": ">"
+    },
+    "navMegamenu01_00_home": {
+        "title": "Hasiera",
+        "href": ""
+    },
+    "navMegamenu01_00_homeText": {
+        "text": "Hasiera"
+    },
+    "navMegamenu01_00_services": {
+        "title": "Zerbitzuak",
+        "href": "serbitzuak"
+    },
+    "navMegamenu01_00_servicesText": {
+        "text": "Zerbitzuak"
+    },
+    "navMegamenu01_00_servicesItem0": {
+        "title": "Zerbitzua",
+        "href": "serbitzuak/serbitzua"
+    },
+    "navMegamenu01_00_servicesItem0Text": {
+        "text": "Zerbitzua"
+    },
+    "navMegamenu01_00_contactLink": {
+        "title": "Kontaktua",
+        "href": "kontaktua"
+    },
+    "navMegamenu01_00_contactText": {
+        "text": "Kontaktua"
+    },
+    "navMegamenu01_00_login": {
+        "title": "Saioa hasi",
+        "href": "sarrera"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Saioa hasi"
+    },
+    "navMegamenu01_00_link0not": {
+        "title": "Bazkidea zara? Sartu hemen",
+        "href": ""
+    },
+    "navMegamenu01_00_link0Textnot": {
+        "text": "Bazkidea zara? Sartu hemen"
+    },
+    "navMegamenu01_00_link0": {
+        "title": "Bazkideen Gunearen Hasiera",
+        "href": "bazkide-gunea"
+    },
+    "navMegamenu01_00_link0Text": {
+        "text": "Bazkideen Gunea"
+    },
+    "navMegamenu01_00_link4": {
+        "title": "Klubeko dokumentuak",
+        "href": "bazkide-gunea/klubeko-dokumentuak"
+    },
+    "navMegamenu01_00_link4Text": {
+        "text": "Klubeko dokumentuak"
+    },
+    "navMegamenu01_00_link1": {
+        "title": "Bazkideentzako oharrak eta jarduerak",
+        "href": "bazkide-gunea/oharrak-bazkideentzat"
+    },
+    "navMegamenu01_00_link1Text": {
+        "text": "Bazkideentzako oharrak eta jarduerak"
+    },
+    "navMegamenu01_00_link2": {
+        "title": "Saioa itxi",
+        "href": "logout"
+    },
+    "navMegamenu01_00_link2Text": {
+        "text": "Saioa itxi"
+    },
+    "navMegamenu01_00_link3": {
+        "title": "Pasahitza aldatu",
+        "href": "pasahitza-berrezarri"
+    },
+    "navMegamenu01_00_link3Text": {
+        "text": "Pasahitza aldatu"
+    },
+    "navMegamenu01_00_logo_business": {
+        "src": "assets/img/logos/logo-black.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "navMegamenu01_00_correo_link": {
+        "title": "Posta elektronikoa"
+    },
+    "navMegamenu01_00_correo_link_href": "comunicacion@atletico-ss.org",
+    "navMegamenu01_00_correo_text": {
+        "text": "comunicacion@atletico-ss.org"
+    },
+    "navMegamenu01_00_correo_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Posta elektronikoa",
+        "title": "Posta elektronikoa"
+    },
+    "navMegamenu01_00_tel_link": {
+        "title": "Harremanetarako telefonoa"
+    },
+    "navMegamenu01_00_tel_img": {
+        "src": "assets/img/system/tel.svg",
+        "alt": "Telefonoa",
+        "title": "Telefonoa"
+    },
+    "navMegamenu01_00_mp_img": {
+        "src": "assets/img/system/mp.svg",
+        "alt": "Mugikorra",
+        "title": "Mugikorra"
+    },
+    "navMegamenu01_00_ubicacion_link": {
+        "title": "Kokapena"
+    },
+    "navMegamenu01_00_ubicacion_img": {
+        "src": "assets/img/system/wp.svg",
+        "alt": "Kokapena",
+        "title": "Kokapena"
+    },
+    "navMegamenu01_00_content_of_this_website": {
+        "text": "Webgune honetako edukia"
+    },
+    "navMegamenu01_00_link_of_interest": {
+        "text": "Esteka interesgarriak"
+    },
+    "navMegamenu01_00_follow_us_social_media": {
+        "text": ""
+    },
+    "navMegamenu01_00_contact": {
+        "text": "Kontaktua"
+    },
+    "footerInfo01_00_img1": {
+        "src": "",
+        "alt": "",
+        "title": "esteka"
+    },
+    "footerInfo0100_cookie-policy": {
+        "text": "Cookie-politika"
+    },
+    "footerInfo0100_terms-privacy": {
+        "text": "Pribatutasun-baldintzak"
+    },
+    "footerInfo0100_legal-notice": {
+        "text": "Lege oharra"
+    },
+    "footerInfo0100_rights-reserved": {
+        "text": "Eskubide guztiak erreserbatuta"
+    },
+    "footerInfo01_lad_info_href": "https://infoda.eus",
+    "footerInfo0100_lad-info-a": {
+        "title": "Liquid Art Developers"
+    },
+    "footerInfo0100_lad-info-p": {
+        "text": "Liquid Art Developers-ek garatua"
+    },
+    "navMegamenu01_00_col02span2_01": {
+        "text": "Cookie-politika"
+    },
+    "navMegamenu01_00_col02span2_02": {
+        "text": "Pribatutasun-baldintzak"
+    },
+    "navMegamenu01_00_col02span2_03": {
+        "text": "Lege oharra"
+    },
+    "navMegamenu01_00_linkGroup0": {
+        "href": "",
+        "title": "esteka"
+    },
+    "navMegamenu01_00_linkGroup0Item0": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item1": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item2": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item3": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item4": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item5": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item6": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item7": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup0Item8": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup1": {
+        "href": "",
+        "title": "esteka"
+    },
+    "navMegamenu01_00_linkGroup1Item0": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup1Item1": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup1Item2": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2": {
+        "href": "",
+        "title": "esteka"
+    },
+    "navMegamenu01_00_linkGroup2Item0": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item1": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item2": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item3": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item4": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item5": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item6": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item7": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item8": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item9": {
+        "href": ""
+    },
+    "navMegamenu01_00_linkGroup2Item10": {
+        "href": ""
+    },
+    "navMegamenu01_00_col02link_01": {
+        "title": "esteka"
+    },
+    "navMegamenu01_00_col02span_01": {
+        "text": ""
+    },
+    "navMegamenu01_00_col02link_02": {
+        "title": "esteka"
+    },
+    "navMegamenu01_00_col02span_02": {
+        "text": ""
+    },
+    "navMegamenu01_00_rrss_yt": {
+        "title": "esteka"
+    },
+    "navMegamenu01_00_rrss_yt_img": {
+        "src": "",
+        "alt": "",
+        "title": "esteka"
+    },
+    "navMegamenu01_00_rrss_in": {
+        "title": "esteka"
+    },
+    "navMegamenu01_00_rrss_in_img": {
+        "src": "",
+        "alt": "",
+        "title": "esteka"
+    },
+    "navMegamenu01_00_rrss_fb": {
+        "title": "esteka"
+    },
+    "navMegamenu01_00_rrss_fb_img": {
+        "src": "",
+        "alt": "",
+        "title": "esteka"
+    },
+    "navMegamenu01_00_rrss_ig": {
+        "title": "esteka"
+    },
+    "navMegamenu01_00_rrss_ig_img": {
+        "src": "",
+        "alt": "",
+        "title": "esteka"
+    },
+    "navMegamenu01_00_col02link_01_href": "",
+    "navMegamenu01_00_col02link_02_href": "",
+    "navMegamenu01_00_become_member_button": {
+        "href": "",
+        "title": "esteka",
+        "text": ""
+    },
+    "navMegamenu01_00_rrss_yt_href": "",
+    "navMegamenu01_00_rrss_in_href": "",
+    "navMegamenu01_00_rrss_fb_href": "",
+    "navMegamenu01_00_rrss_ig_href": "",
+    "title": {
+        "text": "Zona pribatura sarbidea"
+    },
+    "description": {
+        "content": ""
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    }
+}

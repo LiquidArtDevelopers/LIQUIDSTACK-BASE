@@ -1,0 +1,182 @@
+{
+  "__artSlider01-CavXycSB.js": {
+    "file": "assets/js/_artSlider01-CavXycSB.js",
+    "name": "_artSlider01",
+    "imports": [
+      "src/js/_global.js"
+    ]
+  },
+  "__globalForm-Dnpdzr23.js": {
+    "file": "assets/js/_globalForm-Dnpdzr23.js",
+    "name": "_globalForm"
+  },
+  "__sectTabs01-Czwu1H_H.js": {
+    "file": "assets/js/_sectTabs01-Czwu1H_H.js",
+    "name": "_sectTabs01",
+    "imports": [
+      "src/js/_global.js"
+    ]
+  },
+  "__showPassword-B7yJdy1C.js": {
+    "file": "assets/js/_showPassword-B7yJdy1C.js",
+    "name": "_showPassword"
+  },
+  "src/js/404.js": {
+    "file": "assets/js/404-RO0NMrWF.js",
+    "name": "404",
+    "src": "src/js/404.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js"
+    ],
+    "css": [
+      "assets/css/404-CYR5SAPF.css"
+    ]
+  },
+  "src/js/_global.js": {
+    "file": "assets/js/_global-C7Dx54Tb.js",
+    "name": "_global",
+    "src": "src/js/_global.js",
+    "isEntry": true
+  },
+  "src/js/comunicados.js": {
+    "file": "assets/js/comunicados-tiGnmJW_.js",
+    "name": "comunicados",
+    "src": "src/js/comunicados.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js"
+    ],
+    "css": [
+      "assets/css/comunicados--mATSWZ6.css"
+    ]
+  },
+  "src/js/contacto.js": {
+    "file": "assets/js/contacto-duJnJnJL.js",
+    "name": "contacto",
+    "src": "src/js/contacto.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js",
+      "__globalForm-Dnpdzr23.js"
+    ],
+    "css": [
+      "assets/css/contacto-BmL9I394.css"
+    ]
+  },
+  "src/js/documentos.js": {
+    "file": "assets/js/documentos-BjqTfMP8.js",
+    "name": "documentos",
+    "src": "src/js/documentos.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js",
+      "__sectTabs01-Czwu1H_H.js"
+    ],
+    "css": [
+      "assets/css/documentos-DuVyVbry.css"
+    ]
+  },
+  "src/js/home.js": {
+    "file": "assets/js/home-Vcbjl_PM.js",
+    "name": "home",
+    "src": "src/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js"
+    ],
+    "css": [
+      "assets/css/comunicados--mATSWZ6.css"
+    ]
+  },
+  "src/js/login.js": {
+    "file": "assets/js/login-DAhKShy-.js",
+    "name": "login",
+    "src": "src/js/login.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js",
+      "__showPassword-B7yJdy1C.js"
+    ],
+    "css": [
+      "assets/css/login-BzkDBnrx.css"
+    ]
+  },
+  "src/js/remember-password.js": {
+    "file": "assets/js/remember-password-n6QWMziU.js",
+    "name": "remember-password",
+    "src": "src/js/remember-password.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js"
+    ],
+    "css": [
+      "assets/css/remember-password-e7dKxZPA.css"
+    ]
+  },
+  "src/js/reset-password.js": {
+    "file": "assets/js/reset-password-CY3Qekdd.js",
+    "name": "reset-password",
+    "src": "src/js/reset-password.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js",
+      "__showPassword-B7yJdy1C.js"
+    ],
+    "css": [
+      "assets/css/reset-password-BXjsCTmw.css"
+    ]
+  },
+  "src/js/servicio.js": {
+    "file": "assets/js/servicio-CsdfFvxL.js",
+    "name": "servicio",
+    "src": "src/js/servicio.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js"
+    ],
+    "css": [
+      "assets/css/servicio-BXlEmYuj.css"
+    ]
+  },
+  "src/js/servicios.js": {
+    "file": "assets/js/servicios-CqRnO0V0.js",
+    "name": "servicios",
+    "src": "src/js/servicios.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js"
+    ],
+    "css": [
+      "assets/css/servicios-CWnbZGMn.css"
+    ]
+  },
+  "src/js/socio.js": {
+    "file": "assets/js/socio-NFQ67Pjd.js",
+    "name": "socio",
+    "src": "src/js/socio.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js",
+      "__artSlider01-CavXycSB.js"
+    ],
+    "css": [
+      "assets/css/socio-DAFFvFxi.css"
+    ]
+  },
+  "src/js/templates.js": {
+    "file": "assets/js/templates-DWwnO0tb.js",
+    "name": "templates",
+    "src": "src/js/templates.js",
+    "isEntry": true,
+    "imports": [
+      "src/js/_global.js",
+      "__artSlider01-CavXycSB.js",
+      "__sectTabs01-Czwu1H_H.js",
+      "__globalForm-Dnpdzr23.js"
+    ],
+    "css": [
+      "assets/css/templates-SNqX9S4J.css"
+    ]
+  }
+}

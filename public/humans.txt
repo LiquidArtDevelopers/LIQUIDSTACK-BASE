@@ -1,0 +1,24 @@
+/* TEAM */
+              Position: Liquid Art Developers
+              Name: Liquid Art Developers
+              From: C/ Portuetxe 23B
+              Site: company@LiquidArtDevelopers.dev
+              Twitter: @liquidartdev
+              Since: 2022-09-13
+              
+              
+              
+              
+/* SITE */
+              Last update: 2022/09/22 08:22
+              Language: Spanish
+              Doctype: HTML5 with CSS3 and ECMAScript 2024
+              Tools: PHP, SASS, Javascript, etc.
+              IDE: IDE used to develop your site
+              Components: GSAP, Leaflet, LiquidStack Little Framework
+			  
+
+							
+/* THANKS */
+
+              Name: https://infoda.eus/

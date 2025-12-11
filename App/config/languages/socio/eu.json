@@ -1,0 +1,280 @@
+{
+    "example": {
+        "alt": "",
+        "title": "",
+        "text": "",
+        "placeholder": "",
+        "value": "",
+        "content": ""
+    },
+    "title": {
+        "text": "Liquid Stack Klubeko Bazkideen Zona Pribatua"
+    },
+    "description": {
+        "content": "Orrialde honetara Liquid Stack Klubeko bazkide aktiboek bakarrik dute sarbidea. Bertan Batzar Orokor eta Zuzendaritza Batzordeen dokumentuak deskargatu ahal izango dituzu."
+    },
+    "robots": {
+        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    "moduleH2Type01_00_h2_text": {
+        "text": "Hau da zure zona pribatua"
+    },
+    "moduleButtonType02_00_cta_link": {
+        "href": "bazkide-gunea/oharrak-bazkideentzat",
+        "title": "Joan Oharretara"
+    },
+    "moduleButtonType02_00_cta_span": {
+        "text": "Joan Oharretara"
+    },
+    "moduleButtonType02_01_cta_link": {
+        "href": "bazkide-gunea/klubeko-dokumentuak",
+        "title": "Joan Dokumentuetara"
+    },
+    "moduleButtonType02_01_cta_span": {
+        "text": "Joan Dokumentuetara"
+    },
+    "art01_00_headerPrimary": {
+        "text": "Ezagutu bazkide gisa gertatzen den guztia\n"
+    },
+    "art01_00_intro_p": {
+        "text": "Hemendik Liquid Stack Klubaren dokumentu ofizialak kontsultatu eta deskargatu ahal izango dituzu, bazkideentzat soilik eskuragarri daudenak. <br><br>Gainera, klubaren komunitatearentzat erreserbatutako barne komunikatuak eta jarduerak ere aurkituko dituzu."
+    },
+    "art01_00_hero_img": {
+        "src": "assets/img/dummy/dummy_1800.avif",
+        "alt": "Bileretarako gunea",
+        "title": "Bazkide eta Zuzendaritza Batzordearen instalazioak"
+    },
+    "art01_00_b_img": {
+        "src": "assets/img/system/document-text.svg",
+        "alt": "Bazkideen Gunea",
+        "title": "Bazkideen Gunea"
+    },
+    "art01_00_b_p": {
+        "text": "Liquid Stack Klubeko dokumentu ofizialetarako sarbidea, bazkideentzat soilik. Estatutuak, araudiak, aktak eta klubaren barne-dokumentuak kontsultatu eta deskargatu ahal izango dituzu."
+    },
+    "art01_00_a_img": {
+        "src": "assets/img/system/people.svg",
+        "alt": "Bazkideen Gunea",
+        "title": "Bazkideen Gunea"
+    },
+    "art01_00_headerSecondary_a": {
+        "text": "Bazkideentzako komunikatuak eta jarduerak"
+    },
+    "art01_00_a_p": {
+        "text": "Atal honetan Liquid Stack Klubeko bazkideentzat soilik diren komunikatuak eta jarduerak aurkituko dituzu, informazio eguneratuarekin eta barne-komunitatearentzat gordetako edukiekin."
+    },
+    "art01_00_headerSecondary_b": {
+        "text": "Klubeko dokumentu ofizialak"
+    },
+    "artSlider01_00_headerPrimary": {
+        "text": "Gure babesle eta laguntzaileak"
+    },
+    "artSlider01_00_viewmore": {
+        "text": "",
+        "href": ""
+    },
+
+    "artSlider01_00_cardb_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardb_meta": {
+        "text": "08·06·2025"
+    },
+    "artSlider01_00_cardb_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardb_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardb_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_cardc_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardc_meta": {
+        "text": "01·06·2025"
+    },
+    "artSlider01_00_cardc_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardc_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardc_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_cardd_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardd_meta": {
+        "text": "27·05·2025"
+    },
+    "artSlider01_00_cardd_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardd_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardd_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_carde_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_carde_meta": {
+        "text": "20·05·2025"
+    },
+    "artSlider01_00_carde_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_carde_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_carde_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_cardf_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardf_meta": {
+        "text": "14·05·2025"
+    },
+    "artSlider01_00_cardf_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardf_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardf_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_cardg_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardg_meta": {
+        "text": "07·05·2025"
+    },
+    "artSlider01_00_cardg_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardg_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardg_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_cardh_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardh_meta": {
+        "text": "30·04·2025"
+    },
+    "artSlider01_00_cardh_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardh_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardh_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_cardi_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardi_meta": {
+        "text": "22·04·2025"
+    },
+    "artSlider01_00_cardi_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardi_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardi_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_cardj_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_cardj_meta": {
+        "text": "15·04·2025"
+    },
+    "artSlider01_00_cardj_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_cardj_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_cardj_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "artSlider01_00_carda_img": {
+        "src": "assets/img/logos/logo-color.svg",
+        "alt": "Liquid Stack",
+        "title": "Liquid Stack"
+    },
+    "artSlider01_00_carda_meta": {
+        "text": "12·06·2025"
+    },
+    "artSlider01_00_carda_h4": {
+        "text": "Liquid Stack"
+    },
+    "artSlider01_00_carda_tags": {
+        "text": "Dirección pendiente"
+    },
+    "artSlider01_00_carda_read": {
+        "text": "Informazio gehiago",
+        "href": ""
+    },
+
+    "welcome": {
+        "text": "Ongietorri "
+    },
+    "h1": {
+        "text": ""
+    },
+    "icon": {
+        "alt": "LS",
+        "title": "LS"
+    },
+    "header_num_socio": {
+        "text": "Bazkide zenbakia:<br><br>"
+    }
+}
