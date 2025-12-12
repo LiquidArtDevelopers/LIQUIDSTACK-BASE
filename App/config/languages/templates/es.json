@@ -398,6 +398,9 @@
     "moduleH2Type01_03_h2_text": {
         "text": "Historias reales de eficiencia logística"
     },
+    "moduleH2Type01_04_h2_text": {
+        "text": "Acompañamiento estratégico y operativo"
+    },
     "moduleButtonType01_00_cta": {
         "href": "#",
         "title": "Solicitar diagnóstico logístico"
@@ -1433,6 +1436,64 @@
     "art16_00_bg_mobile": "assets/img/dummy/dummy_900.avif",
     "art16_00_bg_tablet": "assets/img/dummy/dummy_1800.avif",
     "art16_00_bg_desktop": "assets/img/dummy/dummy_2560.avif",
+    "art17_00_headerPrimary": {
+        "text": "Por qué confiar y cómo trabajamos"
+    },
+    "art17_00_headerSecondary_a": {
+        "text": "Por qué nosotros"
+    },
+    "art17_00_a_icon": {
+        "src": "assets/img/system/shield-checkmark-outline.svg",
+        "alt": "Icono check ok",
+        "title": "Icono check ok"
+    },
+    "art17_00_a_list_a": {
+        "text": "Asesoramiento 100% independiente"
+    },
+    "art17_00_a_list_b": {
+        "text": "Sin productos propios ni convenios"
+    },
+    "art17_00_a_list_c": {
+        "text": "Estrategia personalizada y largo plazo"
+    },
+    "art17_00_a_list_d": {
+        "text": "Uso avanzado de IA"
+    },
+    "art17_00_a_list_e": {
+        "text": "Análisis macroeconómico y profundo"
+    },
+    "art17_00_a_list_f": {
+        "text": "Transparencia total de tarifas, procesos..."
+    },
+    "art17_00_a_list_g": {
+        "text": "Enfoque de lujo y sostenible (Índice SRI3)"
+    },
+    "art17_00_headerSecondary_b": {
+        "text": "Así trabajamos contigo"
+    },
+    "art17_00_b_icon": {
+        "src": "assets/img/system/shield-checkmark-outline.svg",
+        "alt": "Icono check ok",
+        "title": "Icono check ok"
+    },
+    "art17_00_b_list_a": {
+        "text": "Diagnóstico inicial personalizado"
+    },
+    "art17_00_b_list_b": {
+        "text": "Propuesta estratégica a corto y medio"
+    },
+    "art17_00_b_list_c": {
+        "text": "Seguimiento cercano por indicadores"
+    },
+    "art17_00_b_list_d": {
+        "text": "Tecnología intuitiva y fácil de usar"
+    },
+    "art17_00_b_list_e": {
+        "text": "Comunicación fluida y sin ruido"
+    },
+    "art17_00_b_list_f": {
+        "text": "Formación financiera constante"
+    },
     "moduleH1Type02_00_h1_text": {
         "text": "Logística inteligente para flotas multiorigen europeas"
     },

@@ -156,6 +156,21 @@
                     ?>
 
                     <?php
+                    $art17Header = controller('moduleH2Type01', 4);
+                    $art17Cta    = controller('moduleButtonType02', 0);
+
+                    echo controller('art17', 0, [
+                        '{header-primary}'   => $art17Header,
+                        '{a-button-primary}' => $art17Cta,
+                        'items'              => 2,
+                        'list_items'         => [
+                            'a' => 7,
+                            'b' => 6,
+                        ],
+                    ]);
+                    ?>
+
+                    <?php
                     // moduleButtonType01 Refactorizado (flecha animada · oscuro)
                     $moduleButton01 = controller('moduleButtonType01', 0);
                     ?>
