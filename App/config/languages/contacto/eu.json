@@ -24,10 +24,10 @@
     },
 
     "hero02_video_webm": {
-        "src": "/assets/video/dummy.webm"
+        "src": "/assets/video/dummy/dummy.webm"
     },
     "hero02_video_mp4": {
-        "src": "/assets/video/dummy.mp4"
+        "src": "/assets/video/dummy/dummy.mp4"
     },
     "hero02_video_title": {
         "title": "Vídeo operaciones inteligentes"

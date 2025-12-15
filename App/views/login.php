@@ -34,8 +34,8 @@ if (isset($_SESSION["id_rol"])) {
         <div id="smooth-content">
             <main>
                 <video data-lang="video" id="video" width="100%" height="100%" preload="auto" autoplay loop muted playsinline title="<?= $video->title ?>">
-                    <source src="<?= $_ENV["RAIZ"] ?>/assets/video/dummy.webm" type="video/webm">
-                    <source src="<?= $_ENV["RAIZ"] ?>/assets/video/dummy.mp4" type="video/mp4">
+                    <source src="<?= $_ENV["RAIZ"] ?>/assets/video/dummy/dummy.webm" type="video/webm">
+                    <source src="<?= $_ENV["RAIZ"] ?>/assets/video/dummy/dummy.mp4" type="video/mp4">
                 </video>
 
                 <div id="contenedor_formulario">

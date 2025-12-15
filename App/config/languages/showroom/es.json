@@ -193,10 +193,10 @@
         "src": "assets/img/dummy/dummy_900.avif"
     },
     "hero02_video_webm": {
-        "src": "/assets/video/dummy.webm"
+        "src": "/assets/video/dummy/dummy.webm"
     },
     "hero02_video_mp4": {
-        "src": "/assets/video/dummy.mp4"
+        "src": "/assets/video/dummy/dummy.mp4"
     },
     "hero02_video_poster": {
         "src": "assets/img/dummy/dummy_2560.avif"
