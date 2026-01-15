@@ -33,16 +33,8 @@
             <main>
 
                 <section>
-
                     <?php
-                    echo controller('art18', 0, [
-                        'items' => 3,
-                        'list_items' => [
-                            'a' => 3,
-                            'b' => 3,
-                            'c' => 4
-                        ],
-                    ]);
+                    echo controller('artScatter01', 0);
                     ?>
                 </section>
 
@@ -138,7 +130,7 @@
                     ]);
                     ?>
 
-                    
+                                        
                     <?php
                     echo controller('art03', 0, ['items' => 4]);
                     ?>
@@ -253,6 +245,17 @@
                     <?php
                     // art15 Refactorizado (instancia 00)
                     echo controller('art17', 0);
+                    ?>
+                    
+                    <?php
+                    echo controller('art18', 0, [
+                        'items' => 3,
+                        'list_items' => [
+                            'a' => 3,
+                            'b' => 3,
+                            'c' => 4
+                        ],
+                    ]);
                     ?>
 
                     
