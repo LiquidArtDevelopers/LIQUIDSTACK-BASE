@@ -203,7 +203,7 @@ h5{
     color:$color02;
 }
 // Los span que estén dentro de h1, h2, etc, no cogerán el estilo por defecto del span común. .spanHeader permitirá poner otro color a esa palabra del header en concreto
-a, p, span, input, textarea, th, td, label{
+a, p, span, input, textarea, th, td, label, li{
     font-family: $fuente02;
     color: $color01;
     letter-spacing: .5px;

@@ -247,6 +247,55 @@ apcu_delete()
 
 ## Uso de los Templates para reutilizar html y contenido dinámico en las views
 
+### Guia agnostica para crear recursos (template, data-lang, scss, js, controlador)
+
+Checklist basico para que un recurso sea reusable y escalable:
+
+1. **Template HTML** (`App/templates/_recurso.html`)
+   - Usa un wrapper con clase unica del recurso (ej. `.art18`) y opcional `{classVar}`.
+   - Todo texto o atributo editable debe llevar `data-lang` y placeholders separados:
+     - Texto: `data-lang="{x-dl}"` + `{x-text}`
+     - Enlaces: `data-lang="{x-dl}"` + `{x-href}` + `{x-title}` + `{x-text}`
+     - Imagenes: `data-lang="{x-dl}"` + `{x-src}` + `{x-alt}` + `{x-title}`
+   - Para elementos repetibles usa `{items}` (y placeholders internos del item).
+
+2. **SCSS** (`src/scss/resources/_recurso.scss`)
+   - Anida todo dentro de `.artXX` para evitar conflictos con otros recursos.
+   - Usa variables de `src/scss/_config.scss` (`c.$color..`, `c.$fuente..`) en lugar de hex/rgba.
+   - Evita tocar `body`, `html`, `*` o reglas globales.
+
+3. **JS** (`src/js/resources/_recurso.js`)
+   - Inicializa por instancia: `document.querySelectorAll(".artXX")`.
+   - Evita listeners globales si el efecto es local al recurso.
+   - Para items variables usa indices del DOM, no `data-lang`.
+
+4. **Controlador** (`App/controllers/artXX.php`)
+   - Prefijo de claves: `artXX_{$pad}_...` (incluye indice `00`, `01`, etc).
+   - Usa `resolve_header_levels()` para jerarquia de headings.
+   - Usa `resolve_localized_href()` para enlaces.
+   - Soporta `items` (numero de cards) y `list_items` (numero de `li` por item):
+     - `list_items` puede ser un numero global o un array por letra/indice.
+   - Si hay valores dummy en templates, puedes usarlos como fallback.
+
+5. **Sniper en la vista**
+
+```php
+<?php
+echo controller('art18', 0, [
+    'items' => 3,
+    'list_items' => [
+        'a' => 2,
+        'b' => 3,
+        'c' => 4,
+    ],
+]);
+?>
+```
+
+6. **Idiomas y templates**
+   - Anade valores dummy en `App/config/languages/templates/<lang>.json` con el mismo prefijo y con indice (`00`).
+   - Ejecuta `php tools/update-languages.php <slug>` para generar claves en la vista.
+
 Primero debemos tener ya preparados los templates con sus scss correspondientes. 
 
 ![alt text](/.readme/image-2.png)

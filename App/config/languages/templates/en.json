@@ -1494,6 +1494,69 @@
     "art17_00_b_list_f": {
         "text": "Ongoing financial training"
     },
+    "art18_00_headerPrimary": {
+        "text": "Pricing"
+    },
+    "art18_00_headerSecondary_a": {
+        "text": "Basic"
+    },
+    "art18_00_a_price": {
+        "text": "$9.99"
+    },
+    "art18_00_a_list_a": {
+        "text": "Access to standard workouts and nutrition plans"
+    },
+    "art18_00_a_list_b": {
+        "text": "Email support"
+    },
+    "art18_00_a_cta": {
+        "text": "Get Started",
+        "href": "#basic",
+        "title": "Get Started"
+    },
+    "art18_00_headerSecondary_b": {
+        "text": "Pro"
+    },
+    "art18_00_b_price": {
+        "text": "$19.99"
+    },
+    "art18_00_b_list_a": {
+        "text": "Access to advanced workouts and nutrition plans"
+    },
+    "art18_00_b_list_b": {
+        "text": "Priority Email support"
+    },
+    "art18_00_b_list_c": {
+        "text": "Exclusive access to live Q&A sessions"
+    },
+    "art18_00_b_cta": {
+        "text": "Upgrade to Pro",
+        "href": "#pro",
+        "title": "Upgrade to Pro"
+    },
+    "art18_00_headerSecondary_c": {
+        "text": "Ultimate"
+    },
+    "art18_00_c_price": {
+        "text": "$29.99"
+    },
+    "art18_00_c_list_a": {
+        "text": "Access to all premium workouts and nutrition plans"
+    },
+    "art18_00_c_list_b": {
+        "text": "24/7 Priority support"
+    },
+    "art18_00_c_list_c": {
+        "text": "1-on-1 virtual coaching session every month"
+    },
+    "art18_00_c_list_d": {
+        "text": "Exclusive content and early access to new features"
+    },
+    "art18_00_c_cta": {
+        "text": "Go Ultimate",
+        "href": "#ultimate",
+        "title": "Go Ultimate"
+    },
     "moduleH1Type02_00_h1_text": {
         "text": "Logística inteligente para flotas multiorigen europeas"
     },
