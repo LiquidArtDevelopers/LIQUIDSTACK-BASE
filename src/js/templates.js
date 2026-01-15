@@ -5,6 +5,7 @@ import initArtSlider02 from './resources/_artSlider02.js';
 import initArtZipper from './resources/_artZipper.js';
 import initArt18 from './resources/_art18.js'
 import initArtScatter01 from './resources/_artScatter01.js'
+import initArtMarquee01 from './resources/_artMarquee01.js'
 
 // parallax
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -29,6 +30,7 @@ doc.addEventListener('DOMContentLoaded',()=>{
     initArtZipper()
     initArt18()
     initArtScatter01()
+    initArtMarquee01()
 
     // GSAP PARALLAX SCROLL--
     /* ── función que cambia la imagen según ancho ────────────────── */

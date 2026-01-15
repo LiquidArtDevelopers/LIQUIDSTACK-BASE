@@ -38,6 +38,15 @@
                     ?>
                 </section>
 
+                <section>
+                    <?php
+                    echo controller('artMarquee01', 0, [
+                        'items_row1' => 6,
+                        'items_row2' => 6,
+                    ]);
+                    ?>
+                </section>
+
 
                 <?php
                 // moduleH2Type01 Refactorizado (fondo oscuro y animación)
