@@ -8,6 +8,8 @@
 
 <body>
 
+    
+
     <!-- Global BODY -->
     <?php include_once __DIR__.'/../includes/_globalBody.php'?>  
 
@@ -18,7 +20,7 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
 
-            <?php
+            <!-- <?php
             $boton   = controller('moduleButtonType01', 0);
             $content = controller('moduleH1Type01', 0, [
                 '{a-button-primary}' => $boton
@@ -26,9 +28,53 @@
             echo controller('hero01', 0, ['{hero01-content}' => $content]);
             echo controller('hero00', 0, ['{hero00-content}' => $content]);
             echo controller('hero02', 0, ['{hero02-content}' => $content]);
-            ?>
+            ?> -->
 
             <main>
+
+                <section>
+                    <article class="art18 main flow">
+                        <h3 class="main__heading">Pricing</h3>
+                        <div class="main__cards cards">
+                            <div class="cards__inner">
+                            <div class="cards__card card">
+                                <h4 class="card__heading">Basic</h4>
+                                <p class="card__price">$9.99</p>
+                                <ul role="list" class="card__bullets flow">
+                                <li>Access to standard workouts and nutrition plans</li>
+                                <li>Email support</li>
+                                </ul>
+                                <a href="#basic" class="card__cta cta">Get Started</a>
+                            </div>
+
+                            <div class="cards__card card">
+                                <h4 class="card__heading">Pro</h4>
+                                <p class="card__price">$19.99</p>
+                                <ul role="list" class="card__bullets flow">
+                                <li>Access to advanced workouts and nutrition plans</li>
+                                <li>Priority Email support</li>
+                                <li>Exclusive access to live Q&A sessions</li>
+                                </ul>
+                                <a href="#pro" class="card__cta cta">Upgrade to Pro</a>
+                            </div>
+
+                            <div class="cards__card card">
+                                <h4 class="card__heading">Ultimate</h4>
+                                <p class="card__price">$29.99</p>
+                                <ul role="list" class="card__bullets flow">
+                                <li>Access to all premium workouts and nutrition plans</li>
+                                <li>24/7 Priority support</li>
+                                <li>1-on-1 virtual coaching session every month</li>
+                                <li>Exclusive content and early access to new features</li>
+                                </ul>
+                                <a href="#ultimate" class="card__cta cta">Go Ultimate</a>
+                            </div>
+                            </div>
+                            
+                            <div class="overlay cards__inner"></div>
+                        </div>
+                    </article>
+                </section>
 
 
                 <?php
@@ -228,6 +274,19 @@
                     // art15 Refactorizado (instancia 00)
                     echo controller('art15', 0);
                     ?>
+
+                    <?php
+                    // art15 Refactorizado (instancia 00)
+                    echo controller('art16', 0);
+                    ?>
+
+                    <?php
+                    // art15 Refactorizado (instancia 00)
+                    echo controller('art17', 0);
+                    ?>
+
+                    
+                    
 
                     <?php
                     // artSlider01 Refactorizado (instancia 00)
