@@ -39,8 +39,8 @@ export default function initArtScatter01() {
       textEl._scatterTween.kill();
     }
 
-    const scaleMin = parseFloat(root.dataset.scatterScaleMin || '4'); //tamaño text
-    const scaleMax = parseFloat(root.dataset.scatterScaleMax || '10'); //tamaño texto
+    const scaleMin = parseFloat(root.dataset.scatterScaleMin || '0.5');
+    const scaleMax = parseFloat(root.dataset.scatterScaleMax || '4.5');
     const durationMin = parseFloat(root.dataset.scatterDurationMin || '0.6');
     const durationMax = parseFloat(root.dataset.scatterDurationMax || '1.6');
     const offsetMax = parseFloat(root.dataset.scatterOffsetMax || '0.6');
