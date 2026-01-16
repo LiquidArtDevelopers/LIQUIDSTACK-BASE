@@ -1,7 +1,8 @@
 <?php
 /**
  * Directrices de copy para artMarquee01:
- * - Items por fila: 1-4 palabras en tono imperativo o declarativo.
+ * - Items por fila: 2-3 palabras en tono imperativo o declarativo.
+ * - Cada item admite icono + texto (icono opcional).
  * - Usa frases cortas y repetibles para lectura en loop.
  */
 function controller_artMarquee01(int $i = 0, array $params = []): string
@@ -23,31 +24,49 @@ function controller_artMarquee01(int $i = 0, array $params = []): string
         return $templateLang->{$key} ?? null;
     };
 
-    $row1Pool = [];
-    $row2Pool = [];
+    $getLangObj = static function (string $key) use ($getTemplateLang) {
+        return $GLOBALS[$key] ?? $getTemplateLang($key);
+    };
 
-    foreach ($letters as $letter) {
-        $row1Key = "artMarquee01_{$pad}_row1_item_{$letter}";
-        $row2Key = "artMarquee01_{$pad}_row2_item_{$letter}";
+    $withImages = isset($params['with_images']) ? filter_var($params['with_images'], FILTER_VALIDATE_BOOL) : false;
+    unset($params['with_images']);
 
-        $row1Obj = $GLOBALS[$row1Key] ?? $getTemplateLang($row1Key);
-        $row2Obj = $GLOBALS[$row2Key] ?? $getTemplateLang($row2Key);
+    $buildPool = static function (string $row) use ($letters, $pad, $getLangObj, $withImages) {
+        $pool = [];
+        foreach ($letters as $letter) {
+            $textKey = "artMarquee01_{$pad}_{$row}_item_text_{$letter}";
 
-        if (is_object($row1Obj)) {
-            $row1Pool[] = $row1Obj;
+            $textObj = $getLangObj($textKey);
+            if (!is_object($textObj)) {
+                continue;
+            }
+
+            $imgObj = null;
+            if ($withImages) {
+                $imgObj = $getLangObj("artMarquee01_{$pad}_{$row}_item_img_{$letter}");
+                if (!is_object($imgObj)) {
+                    $imgObj = (object) ['src' => '', 'alt' => '', 'title' => ''];
+                }
+            }
+
+            $pool[] = [
+                'text' => $textObj,
+                'img'  => $imgObj,
+            ];
         }
 
-        if (is_object($row2Obj)) {
-            $row2Pool[] = $row2Obj;
-        }
-    }
+        return $pool;
+    };
+
+    $row1Pool = $buildPool('row1');
+    $row2Pool = $buildPool('row2');
 
     $row1Count = isset($params['items_row1']) ? (int) $params['items_row1'] : (int) ($params['items'] ?? 0);
     $row2Count = isset($params['items_row2']) ? (int) $params['items_row2'] : 0;
 
     if ($row1Count === 0) {
         $row1Count = count($row1Pool);
-        $row1Count = $row1Count > 0 ? $row1Count : 6;
+        $row1Count = $row1Count > 0 ? $row1Count : 4;
     }
 
     if ($row2Count === 0) {
@@ -55,52 +74,83 @@ function controller_artMarquee01(int $i = 0, array $params = []): string
         $row2Count = $row2Count > 0 ? $row2Count : $row1Count;
     }
 
-    $row1Count = max(0, min($row1Count, count($letters)));
-    $row2Count = max(0, min($row2Count, count($letters)));
+    $maxItems  = count($letters);
+    $row1Count = max(0, min($row1Count, $maxItems));
+    $row2Count = max(0, min($row2Count, $maxItems));
 
     unset($params['items'], $params['items_row1'], $params['items_row2']);
 
-    $itemTpl = '<span class="marquee-item" data-lang="{X-dl}">{X-text}</span>';
+    $imgTpl = '<img class="marquee-icon" data-lang="{X-img-dl}" src="{X-img-src}" alt="{X-img-alt}" title="{X-img-title}" width="24" height="24">';
 
-    $row1Items = '';
-    for ($index = 0; $index < $row1Count; $index++) {
-        $letter = $letters[$index];
-        $key    = "artMarquee01_{$pad}_row1_item_{$letter}";
-        $obj    = $GLOBALS[$key] ?? $getTemplateLang($key);
+    $itemTpl = <<<'HTML'
+        <span class="marquee-item">
+            {X-img}
+            <span class="marquee-text" data-lang="{X-text-dl}">{X-text}</span>
+        </span>
+    HTML;
 
-        if (!is_object($obj) && count($row1Pool) > 0) {
-            $obj = $row1Pool[$index % count($row1Pool)];
+    $renderRow = static function (string $row, int $count, array $pool) use ($letters, $pad, $getLangObj, $itemTpl, $imgTpl, $withImages) {
+        $items     = '';
+        $poolCount = count($pool);
+
+        for ($index = 0; $index < $count; $index++) {
+            $letter  = $letters[$index];
+            $textKey = "artMarquee01_{$pad}_{$row}_item_text_{$letter}";
+
+            $textObj = $getLangObj($textKey);
+            $imgObj  = null;
+            $imgKey  = '';
+
+            if ($withImages) {
+                $imgKey = "artMarquee01_{$pad}_{$row}_item_img_{$letter}";
+                $imgObj = $getLangObj($imgKey);
+            }
+
+            if (!is_object($textObj)) {
+                if ($poolCount > 0) {
+                    $fallback = $pool[$index % $poolCount];
+                    $textObj  = $fallback['text'] ?? (object) ['text' => ''];
+                    if ($withImages) {
+                        $imgObj = $fallback['img'] ?? $imgObj;
+                    }
+                } else {
+                    $textObj = (object) ['text' => ''];
+                }
+            }
+
+            $imgMarkup = '';
+            if ($withImages) {
+                if (!is_object($imgObj)) {
+                    $imgObj = (object) ['src' => '', 'alt' => '', 'title' => ''];
+                }
+                $imgMarkup = str_replace(
+                    ['{X-img-dl}', '{X-img-src}', '{X-img-alt}', '{X-img-title}'],
+                    [
+                        $imgKey,
+                        $_ENV['RAIZ'] . '/' . ($imgObj->src ?? ''),
+                        $imgObj->alt ?? '',
+                        $imgObj->title ?? '',
+                    ],
+                    $imgTpl
+                );
+            }
+
+            $items .= str_replace(
+                ['{X-img}', '{X-text-dl}', '{X-text}'],
+                [
+                    $imgMarkup,
+                    $textKey,
+                    $textObj->text ?? '',
+                ],
+                $itemTpl
+            );
         }
-        if (!is_object($obj)) {
-            $obj = (object) ['text' => ''];
-        }
 
-        $row1Items .= str_replace(
-            ['{X-dl}', '{X-text}'],
-            [$key, $obj->text ?? ''],
-            $itemTpl
-        );
-    }
+        return $items;
+    };
 
-    $row2Items = '';
-    for ($index = 0; $index < $row2Count; $index++) {
-        $letter = $letters[$index];
-        $key    = "artMarquee01_{$pad}_row2_item_{$letter}";
-        $obj    = $GLOBALS[$key] ?? $getTemplateLang($key);
-
-        if (!is_object($obj) && count($row2Pool) > 0) {
-            $obj = $row2Pool[$index % count($row2Pool)];
-        }
-        if (!is_object($obj)) {
-            $obj = (object) ['text' => ''];
-        }
-
-        $row2Items .= str_replace(
-            ['{X-dl}', '{X-text}'],
-            [$key, $obj->text ?? ''],
-            $itemTpl
-        );
-    }
+    $row1Items = $renderRow('row1', $row1Count, $row1Pool);
+    $row2Items = $renderRow('row2', $row2Count, $row2Pool);
 
     $vars = [
         '{classVar}'   => "artMarquee01_{$pad}_classVar",

@@ -30,8 +30,8 @@ export default function initArtScatter01() {
       return;
     }
 
-    const maxX = parseInt(root.dataset.scatterX || '320', 10);
-    const maxY = parseInt(root.dataset.scatterY || '220', 10);
+    const maxX = parseInt(root.dataset.scatterX || '500', 10);
+    const maxY = parseInt(root.dataset.scatterY || '500', 10);
     const maxRotate = parseInt(root.dataset.scatterRotate || '35', 10);
 
     if (textEl._scatterTween) {
@@ -44,14 +44,15 @@ export default function initArtScatter01() {
     const durationMin = parseFloat(root.dataset.scatterDurationMin || '0.6');
     const durationMax = parseFloat(root.dataset.scatterDurationMax || '1.6');
     const offsetMax = parseFloat(root.dataset.scatterOffsetMax || '0.6');
-    const pinDistance = parseInt(root.dataset.scatterPin || '220', 10);
+    const pinDistance = parseInt(root.dataset.scatterPin || '220', 4);
 
     words.forEach((word) => {
       const x = gsap.utils.random(-maxX, maxX, 1);
       const y = gsap.utils.random(-maxY, maxY, 1);
-      const rotation = gsap.utils.random(-maxRotate, maxRotate, 1);
+      // const rotation = gsap.utils.random(-maxRotate, maxRotate, 1);
       const scale = gsap.utils.random(scaleMin, scaleMax, 0.01);
-      gsap.set(word, { x, y, rotation, scale, opacity: 0 });
+      // gsap.set(word, { x, y, rotation, scale, opacity: 0 });
+      gsap.set(word, { x, y, scale, opacity: 0 });
     });
 
     const timeline = gsap.timeline({

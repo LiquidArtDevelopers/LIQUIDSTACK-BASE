@@ -41,11 +41,29 @@
                 <section>
                     <?php
                     echo controller('artMarquee01', 0, [
-                        'items_row1' => 6,
-                        'items_row2' => 6,
+                        'items'      => 4,
+                        'items_row1' => 4,
+                        'items_row2' => 4,
+                        'with_images'=> false
                     ]);
                     ?>
                 </section>
+
+                <section>
+                    <?php
+                    $scaleButton = controller('moduleButtonType01', 0);
+                    echo controller('artScale01', 0, [
+                        '{button-primary}' => $scaleButton,
+                    ]);
+                    ?>
+                </section>
+
+                <?php
+                echo controller('sectionParallax01', 0, [
+                    'items'      => 3,
+                    'list_items' => 3,
+                ]);
+                ?>
 
 
                 <?php

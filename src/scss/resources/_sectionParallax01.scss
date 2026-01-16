@@ -1,0 +1,106 @@
+@use '../config' as c;
+
+.sectionParallax01 {
+  background-color: #000;
+  color: c.$color00;
+  padding: 6rem 0;
+  overflow: hidden;
+
+  .sectionParallax01-inner {
+    width: min(1400px, 92vw);
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+  }
+
+  .sectionParallax01-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .sectionParallax01-card {
+    width: min(80vw, 1200px);
+    background-color: #0d0d0d;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    will-change: transform;
+  }
+
+  .sectionParallax01-card-head {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .sectionParallax01-card-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: c.$color00bis;
+  }
+
+  .sectionParallax01-card-title {
+    font-family: c.$fuente02;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1;
+    margin: 0;
+  }
+
+  .sectionParallax01-card-text {
+    font-size: 1.05rem;
+    color: c.$color00bis3;
+    margin: 0;
+  }
+
+  .sectionParallax01-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.6rem;
+
+    li {
+      position: relative;
+      padding-left: 1.2rem;
+      color: c.$color00bis3;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.55rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        background-color: c.$color02;
+      }
+    }
+  }
+
+  .sectionParallax01-card-cta {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: c.$color00;
+    border-bottom: 1px solid c.$color00bis2;
+    padding-bottom: 0.2rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: c.$color02;
+      border-color: c.$color02;
+    }
+  }
+}

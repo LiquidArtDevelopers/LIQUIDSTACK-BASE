@@ -26,7 +26,7 @@ export default function initArtMarquee01() {
         track.appendChild(group.cloneNode(true));
       }
 
-      const speed = parseFloat(marquee.dataset.speed || '20');
+      const speed = parseFloat(marquee.dataset.marqueeSpeed || '20');
       const baseDirection = parseInt(marquee.dataset.direction || '1', 10);
       const baseScale = baseDirection >= 0 ? 1 : -1;
 

@@ -1569,43 +1569,125 @@
         "text": "Ministry of Public Security Ministry of Foreign Affairs Ministry of Culture Sports and Tourism Vingroup Bim Group Petrolimex Vietinbank Vietcombank Techcombank VPBank MB TPBank SHB HDBank MSB PJICO Viettel VNG VTC FPT Vinaphone Samsung LG Vietnam Airlines Bamboo Airways Sony Oppo Hyundai Sabeco Vinaconex and more..."
     },
 
-    "artMarquee01_00_row1_item_a": {
-        "text": "Be different"
+    "artMarquee01_00_row1_item_text_a": {
+        "text": "Creative pulse"
     },
-    "artMarquee01_00_row1_item_b": {
-        "text": "Lead boldly"
+    "artMarquee01_00_row1_item_text_b": {
+        "text": "Bold direction"
     },
-    "artMarquee01_00_row1_item_c": {
-        "text": "Art comes first"
+    "artMarquee01_00_row1_item_text_c": {
+        "text": "Fresh ideas"
     },
-    "artMarquee01_00_row1_item_d": {
-        "text": "Creative above all"
+    "artMarquee01_00_row1_item_text_d": {
+        "text": "Focus forward"
     },
-    "artMarquee01_00_row1_item_e": {
-        "text": "Brand stories"
+    "artMarquee01_00_row2_item_text_a": {
+        "text": "Build momentum"
     },
-    "artMarquee01_00_row1_item_f": {
-        "text": "Bold moves"
+    "artMarquee01_00_row2_item_text_b": {
+        "text": "Design clarity"
     },
-    "artMarquee01_00_row2_item_a": {
-        "text": "That's the Zeit way"
+    "artMarquee01_00_row2_item_text_c": {
+        "text": "Move together"
     },
-    "artMarquee01_00_row2_item_b": {
-        "text": "Studio to screen"
-    },
-    "artMarquee01_00_row2_item_c": {
-        "text": "Events with impact"
-    },
-    "artMarquee01_00_row2_item_d": {
-        "text": "Lead boldly"
-    },
-    "artMarquee01_00_row2_item_e": {
-        "text": "Creative minds"
-    },
-    "artMarquee01_00_row2_item_f": {
-        "text": "And more"
+    "artMarquee01_00_row2_item_text_d": {
+        "text": "Lead with craft"
     },
 
+    "artScale01_00_line1a": {
+        "text": "Ready to"
+    },
+    "artScale01_00_line1b": {
+        "text": "Create"
+    },
+    "artScale01_00_line2a": {
+        "text": "Your"
+    },
+    "artScale01_00_line2b": {
+        "text": "Brand"
+    },
+    "artScale01_00_line3": {
+        "text": "Breakthrough?"
+    },
+    "artScale01_00_video_webm": {
+        "src": "assets/video/dummy/dummy.webm"
+    },
+    "artScale01_00_video_mp4": {
+        "src": "assets/video/dummy/dummy.mp4"
+    },
+    "artScale01_00_video_title": {
+        "title": "Dummy scale reel"
+    },
+
+    "sectionParallax01_00_a_eyebrow": {
+        "text": "Strategy"
+    },
+    "sectionParallax01_00_a_title": {
+        "text": "Shape the signal"
+    },
+    "sectionParallax01_00_a_text": {
+        "text": "Align the narrative, define the audience, and set the release cadence."
+    },
+    "sectionParallax01_00_a_list_a": {
+        "text": "Audience mapping"
+    },
+    "sectionParallax01_00_a_list_b": {
+        "text": "Channel focus"
+    },
+    "sectionParallax01_00_a_list_c": {
+        "text": "Launch timing"
+    },
+    "sectionParallax01_00_a_cta": {
+        "text": "Explore",
+        "href": "#",
+        "title": "Explore this plan"
+    },
+    "sectionParallax01_00_b_eyebrow": {
+        "text": "Production"
+    },
+    "sectionParallax01_00_b_title": {
+        "text": "Build the engine"
+    },
+    "sectionParallax01_00_b_text": {
+        "text": "Craft the story system with modular assets ready for every platform."
+    },
+    "sectionParallax01_00_b_list_a": {
+        "text": "Modular visuals"
+    },
+    "sectionParallax01_00_b_list_b": {
+        "text": "Motion toolkit"
+    },
+    "sectionParallax01_00_b_list_c": {
+        "text": "Sound design"
+    },
+    "sectionParallax01_00_b_cta": {
+        "text": "View case",
+        "href": "#",
+        "title": "View production case"
+    },
+    "sectionParallax01_00_c_eyebrow": {
+        "text": "Momentum"
+    },
+    "sectionParallax01_00_c_title": {
+        "text": "Sustain the lift"
+    },
+    "sectionParallax01_00_c_text": {
+        "text": "Track performance, refine creative, and keep attention compounding."
+    },
+    "sectionParallax01_00_c_list_a": {
+        "text": "Weekly insights"
+    },
+    "sectionParallax01_00_c_list_b": {
+        "text": "Iteration sprints"
+    },
+    "sectionParallax01_00_c_list_c": {
+        "text": "Paid boosts"
+    },
+    "sectionParallax01_00_c_cta": {
+        "text": "Start now",
+        "href": "#",
+        "title": "Start the program"
+    },
     "moduleH1Type02_00_h1_text": {
         "text": "Logística inteligente para flotas multiorigen europeas"
     },
