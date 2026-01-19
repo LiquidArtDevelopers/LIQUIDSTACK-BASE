@@ -1,7 +1,7 @@
 @use '../config' as c;
 
 .sectionParallax01 {
-  background-color: #000;
+  background-color: c.$color06;
   color: c.$color00;
   padding: 6rem 0;
   overflow: hidden;
@@ -22,9 +22,9 @@
 
   .sectionParallax01-card {
     width: min(80vw, 1200px);
-    background-color: #0d0d0d;
+    background-color: c.$color06bis;
     border-radius: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid c.$color00bis2;
     padding: 2.5rem;
     display: grid;
     gap: 1.5rem;

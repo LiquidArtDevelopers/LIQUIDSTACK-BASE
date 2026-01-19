@@ -140,12 +140,12 @@
       opacity: var(--opacity, 0);
       -webkit-mask: radial-gradient(
         25rem 25rem at var(--x) var(--y),
-        #000 1%,
+        c.$color06 1%,
         transparent 50%
       );
       mask: radial-gradient(
         25rem 25rem at var(--x) var(--y),
-        #000 1%,
+        c.$color06 1%,
         transparent 50%
       );
       transition: 400ms mask ease;

@@ -21,34 +21,37 @@ export default function initSectionParallax01() {
       return;
     }
 
-    const pinDistance = parseFloat(section.dataset.stackDistance || '100');
-    const startPoint = section.dataset.stackStart || 'top top';
-    const basePadding = parseFloat(getComputedStyle(section).paddingBottom || '0');
+    const marginRem = parseFloat(section.dataset.stackMarginRem || '2');
+    const pinnedItems = items.slice(0, -1);
 
-    const updateSectionSpacing = () => {
-      section.style.paddingBottom = `${basePadding}px`;
-      const baseHeight = section.scrollHeight;
-      const pinLength = window.innerHeight * (pinDistance / 100);
-      const needed = pinLength * items.length;
-      const extra = Math.max(0, needed - baseHeight);
-      section.style.paddingBottom = `${basePadding + extra}px`;
+    const getStartPoint = () => {
+      if (section.dataset.stackStart) {
+        return section.dataset.stackStart;
+      }
+      const nav = document.querySelector('nav');
+      const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+      const remSize = parseFloat(getComputedStyle(document.documentElement).fontSize || '16');
+      const offset = navHeight + remSize * marginRem;
+      return `top top+=${Math.round(offset)}`;
     };
-
-    updateSectionSpacing();
-    ScrollTrigger.addEventListener('refreshInit', updateSectionSpacing);
 
     items.forEach((item, index) => {
       item.style.zIndex = String(index + 1);
 
       gsap.set(item, { autoAlpha: 1 });
+    });
+
+    pinnedItems.forEach((item, index) => {
+      const nextItem = pinnedItems[index + 1] ?? items[items.length - 1];
 
       gsap.to(item, {
         autoAlpha: 0,
         ease: 'none',
         scrollTrigger: {
           trigger: item,
-          start: startPoint,
-          end: () => `+=${window.innerHeight * (pinDistance / 100)}`,
+          start: getStartPoint,
+          endTrigger: nextItem,
+          end: getStartPoint,
           scrub: true,
           pin: true,
           pinSpacing: false,
