@@ -65,6 +65,48 @@
                 ]);
                 ?>
 
+                <?php
+                $particlesButtonPrimary   = controller('moduleButtonType01', 0);
+                $particlesButtonSecondary = controller('moduleButtonType02', 0);
+
+                $particlesStep1Title = controller('moduleH2Type01', 0);
+                $particlesStep2Title = controller('moduleH2Type01', 1);
+                $particlesStep3Title = controller('moduleH2Type01', 2);
+
+                $particlesStep1Text = $GLOBALS['moduleH1Type02_00_p01_text']->text ?? '';
+                $particlesStep2Text = $GLOBALS['moduleH1Type02_00_p02_text']->text ?? '';
+                $particlesStep3Text = $GLOBALS['moduleTest_00_p_text']->text ?? '';
+
+                $particlesContent = <<<HTML
+                <article data-particles-step data-particles-align="left" data-particles-shape="cube" data-particles-shape-ratio="0.94" data-particles-shape-scale="0.9" data-particles-shape-offset-x="0.26">
+                    <div class="sectionParticles01-copy">
+                        {$particlesStep1Title}
+                        <p data-lang="moduleH1Type02_00_p01_text">{$particlesStep1Text}</p>
+                        <div class="sectionParticles01-cta">{$particlesButtonPrimary}</div>
+                    </div>
+                </article>
+                <article data-particles-step data-particles-align="right" data-particles-shape="matrix" data-particles-shape-ratio="1" data-particles-shape-scale="1.3" data-particles-shape-offset-x="0" data-particles-matrix-cols="96" data-particles-matrix-rows="48" data-particles-matrix-density="0.4" data-particles-matrix-font-scale="0.40" data-particles-matrix-speed="10" data-particles-matrix-word-src="/assets/img/particles/matrix.png" data-particles-matrix-word="THE LAD" data-particles-matrix-word-scale="0.5" data-particles-matrix-word-ratio="0.90" data-particles-matrix-word-density="0.9" data-particles-matrix-word-letter-gap="3" data-particles-matrix-word-letter-gap-threshold="0.42" data-particles-matrix-word-particle-scale="2" data-particles-matrix-word-weight="300" data-particles-matrix-word-font="Times New Roman, serif" data-particles-matrix-word-image-scale="0.24" data-particles-matrix-word-image-boost="8" data-particles-matrix-word-image-step="1" data-particles-matrix-word-image-stack="false" data-particles-matrix-word-image-auto-split="false" data-particles-matrix-word-image-offset-x="-0.17" data-particles-matrix-word-image-offset-y="0">
+                    <div class="sectionParticles01-copy">
+                        {$particlesStep2Title}
+                        <p data-lang="moduleH1Type02_00_p02_text">{$particlesStep2Text}</p>
+                        <div class="sectionParticles01-cta">{$particlesButtonSecondary}</div>
+                    </div>
+                </article>
+                <article data-particles-step data-particles-align="left" data-particles-shape="blackhole" data-particles-shape-ratio="0.92" data-particles-shape-scale="1.1" data-particles-shape-depth="1.6" data-particles-shape-depth-jitter="0.18" data-particles-shape-offset-x="0.18" data-particles-bh-disk-inner="0.34" data-particles-bh-disk-outer="0.74" data-particles-bh-disk-thickness="0.08" data-particles-bh-halo="0.26" data-particles-bh-rim="0.16" data-particles-bh-tilt="18">
+                    <div class="sectionParticles01-copy">
+                        {$particlesStep3Title}
+                        <p data-lang="moduleTest_00_p_text">{$particlesStep3Text}</p>
+                        <div class="sectionParticles01-cta">{$particlesButtonPrimary}</div>
+                    </div>
+                </article>
+                HTML;
+
+                echo controller('sectionParticles01', 0, [
+                    '{content}' => $particlesContent,
+                ]);
+                ?>
+
+
 
                 <?php
                 // moduleH2Type01 Refactorizado (fondo oscuro y animación)

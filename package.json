@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "gsap": "npm:@gsap/shockingly@3.12.5",
-    "leaflet": "1.9.4"
+    "leaflet": "1.9.4",
+    "three": "0.165.0"
   },
   "devDependencies": {
     "concurrently": "9.1.0",
