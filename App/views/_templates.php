@@ -85,7 +85,74 @@
                         <div class="sectionParticles01-cta">{$particlesButtonPrimary}</div>
                     </div>
                 </article>
-                <article data-particles-step data-particles-align="right" data-particles-shape="matrix" data-particles-shape-ratio="1" data-particles-shape-scale="1.3" data-particles-shape-offset-x="0" data-particles-matrix-cols="96" data-particles-matrix-rows="48" data-particles-matrix-density="0.4" data-particles-matrix-font-scale="0.40" data-particles-matrix-speed="10" data-particles-matrix-word-src="/assets/img/particles/matrix.png" data-particles-matrix-word="THE LAD" data-particles-matrix-word-scale="0.5" data-particles-matrix-word-ratio="0.90" data-particles-matrix-word-density="0.9" data-particles-matrix-word-letter-gap="3" data-particles-matrix-word-letter-gap-threshold="0.42" data-particles-matrix-word-particle-scale="2" data-particles-matrix-word-weight="300" data-particles-matrix-word-font="Times New Roman, serif" data-particles-matrix-word-image-scale="0.24" data-particles-matrix-word-image-boost="8" data-particles-matrix-word-image-step="1" data-particles-matrix-word-image-stack="false" data-particles-matrix-word-image-auto-split="false" data-particles-matrix-word-image-offset-x="-0.17" data-particles-matrix-word-image-offset-y="0">
+                <!-- MATRIX CONTROLS (min/max)
+                SHAPE (afecta al conjunto matrix completo):
+                - data-particles-shape-ratio: % de particulas dedicadas al shape (0.3-1). Menos = menos letras+cortina.
+                - data-particles-shape-scale: escala base del shape (0.2-1.3). En matrix puede auto-aumentar para cubrir viewport.
+                - data-particles-shape-offset-x: desplaza en X (-0.45 a 0.45).
+                - data-particles-shape-hold: pausa en el centro (0-0.85; >0.85 se recorta).
+
+                CORTINA (BG) - USAR ESTOS:
+                - data-particles-matrix-bg-cols: columnas de la cortina (10-420).
+                - data-particles-matrix-bg-rows: filas de la cortina (12-320).
+                - data-particles-matrix-bg-column-density: % columnas activas (0.2-2.5; 1=100%).
+                - data-particles-matrix-bg-column-fill: largo de las columnas (0.3-1.8).
+                - data-particles-matrix-bg-column-alpha: brillo de columnas (0.5-2.2).
+                - data-particles-matrix-bg-noise-density: ruido aleatorio (0-2.5).
+                - data-particles-matrix-bg-row-spacing: salto vertical (1-6; 1=mas continuo).
+                - data-particles-matrix-bg-density: base/fallback (0.2-2.5). Solo se usa si no defines bg-column-density o bg-noise-density.
+
+                FALLBACKS (solo si NO hay bg-*):
+                - data-particles-matrix-cols: columnas fallback (10-420).
+                - data-particles-matrix-rows: filas fallback (12-320).
+                - data-particles-matrix-density: densidad base fallback (0.25-2.5).
+                - data-particles-matrix-column-density: columnas activas fallback (0.2-2.5).
+                - data-particles-matrix-column-fill: largo fallback (0.3-1.8).
+                - data-particles-matrix-column-alpha: brillo fallback (0.5-2.2).
+                - data-particles-matrix-noise-density: ruido fallback (0-2.5).
+                - data-particles-matrix-row-spacing: salto vertical fallback (1-6).
+
+                GLIFOS/FONT:
+                - data-particles-matrix-font-scale: tamano del glifo (0.4-1.2).
+
+                MOVIMIENTO:
+                - data-particles-matrix-speed: velocidad de caida (0.5-14).
+
+                LETRAS:
+                - data-particles-matrix-word-src: imagen de las letras.
+                - data-particles-matrix-word-count: particulas SOLO letras (60-max disponible; se recorta si te pasas).
+                - data-particles-matrix-word-letter-gap: separacion interna (0-0.2).
+                - data-particles-matrix-word-particle-scale: tamano particulas letras (0.5-1.2).
+                - data-particles-matrix-word-image-scale: escala imagen letras (0.18-0.8).
+                - data-particles-matrix-word-image-boost: densidad de muestreo (1-10).
+                - data-particles-matrix-word-image-step: paso muestreo (1-4; 1 mas denso).
+                - data-particles-matrix-word-image-offset-x/y: desplazamiento (-0.4 a 0.4).
+                -->
+                <article data-particles-step data-particles-align="right"
+                data-particles-shape="matrix"
+                data-particles-shape-ratio="1"
+                data-particles-shape-scale="1.3"
+                data-particles-shape-offset-x="0"
+                data-particles-shape-hold="1"
+                data-particles-matrix-bg-cols="360"
+                data-particles-matrix-bg-rows="160" 
+                data-particles-matrix-bg-density="2"
+                data-particles-matrix-bg-column-density="2.2"
+                data-particles-matrix-bg-column-fill="1.6"
+                data-particles-matrix-bg-column-alpha="0.2"
+                data-particles-matrix-bg-noise-density="0.35"
+                data-particles-matrix-bg-row-spacing="1"
+                data-particles-matrix-font-scale="0.40"
+                data-particles-matrix-speed="5"
+                data-particles-matrix-word-src="/assets/img/particles/matrix.png"
+                data-particles-matrix-word-count="6000"
+                data-particles-matrix-word-letter-gap="0"
+                data-particles-matrix-word-particle-scale="1"
+                data-particles-matrix-word-image-scale="0.34"
+                data-particles-matrix-word-image-boost="8"
+                data-particles-matrix-word-image-step="1"
+                data-particles-matrix-word-image-offset-x="-0.17"
+                data-particles-matrix-word-image-offset-y="0">
                     <div class="sectionParticles01-copy">
                         {$particlesStep2Title}
                         <p data-lang="moduleH1Type02_00_p02_text">{$particlesStep2Text}</p>

@@ -56,10 +56,10 @@ export default function initSectionParticles01() {
     );
 
     const baseCount = Math.round(
-      clampInt(section.dataset.particlesCount, 1400, 12000, 4200) * densityFactor
+      clampInt(section.dataset.particlesCount, 1400, 32000, 4200) * densityFactor
     );
     const bgCount = Math.round(
-      clampInt(section.dataset.particlesBgCount, 0, 18000, 4200) * densityFactor
+      clampInt(section.dataset.particlesBgCount, 0, 30000, 4200) * densityFactor
     );
     const count = Math.max(1, baseCount + bgCount);
     const size = clampFloat(section.dataset.particlesSize, 0.6, 3.5, 1.7);
@@ -112,6 +112,8 @@ export default function initSectionParticles01() {
     let earthOutline = null;
     let matrixFall = null;
     let activePaletteIndex = -1;
+    let activePaletteNextIndex = -1;
+    let activePaletteMix = -1;
     let totalSegments = 1;
     let hoverRadius = 1;
     let hoverPush = 1;
@@ -123,18 +125,41 @@ export default function initSectionParticles01() {
       const shapeStage = scrollProgress * segments;
       const stepFloat = (shapeStage - 1) / 2;
       if (shapeCounts.length > 0 && palettes.length > 0) {
+        const paletteFloat = Math.max(0, stepFloat);
         const paletteIndex = Math.max(
           0,
-          Math.min(shapeCounts.length - 1, Math.round(stepFloat))
+          Math.min(shapeCounts.length - 1, Math.floor(paletteFloat))
         );
-        if (paletteIndex !== activePaletteIndex) {
+        const nextIndex = Math.min(shapeCounts.length - 1, paletteIndex + 1);
+        const rawMix = paletteFloat - paletteIndex;
+        const mix = smoothstep(Math.max(0, Math.min(1, rawMix)));
+        if (
+          paletteIndex !== activePaletteIndex ||
+          nextIndex !== activePaletteNextIndex ||
+          Math.abs(mix - activePaletteMix) > 0.002
+        ) {
+          if (nextIndex === paletteIndex || mix <= 0.001) {
+            applyPalette(
+              system,
+              palettes[paletteIndex % palettes.length],
+              shapeCounts[paletteIndex],
+              shapeMasks[paletteIndex]
+            );
+          } else {
+            applyPaletteBlend(
+              system,
+              palettes[paletteIndex % palettes.length],
+              palettes[nextIndex % palettes.length],
+              mix,
+              shapeCounts[paletteIndex],
+              shapeMasks[paletteIndex],
+              shapeCounts[nextIndex],
+              shapeMasks[nextIndex]
+            );
+          }
           activePaletteIndex = paletteIndex;
-          applyPalette(
-            system,
-            palettes[paletteIndex % palettes.length],
-            shapeCounts[paletteIndex],
-            shapeMasks[paletteIndex]
-          );
+          activePaletteNextIndex = nextIndex;
+          activePaletteMix = mix;
         }
       }
       stepConfigs.forEach((config, index) => {
@@ -154,9 +179,19 @@ export default function initSectionParticles01() {
     const getStageMeta = () => {
       const stage = scrollProgress * totalSegments;
       const index = Math.min(totalSegments - 1, Math.floor(stage));
-      const t = smoothstep(stage - index);
-      const formation = index % 2 === 0 ? t : 1 - t;
       const stepIndex = Math.min(steps.length - 1, Math.floor(index / 2));
+      let t = stage - index;
+      const stepHold = stepConfigs[stepIndex]?.shapeHold ?? 0;
+      if (index % 2 === 1 && stepHold > 0) {
+        const hold = Math.max(0, Math.min(0.85, stepHold));
+        if (t < hold) {
+          t = 0;
+        } else {
+          t = (t - hold) / (1 - hold);
+        }
+      }
+      t = smoothstep(t);
+      const formation = index % 2 === 0 ? t : 1 - t;
       return { stage, index, t, formation, stepIndex };
     };
 
@@ -175,6 +210,8 @@ export default function initSectionParticles01() {
       });
 
       activePaletteIndex = -1;
+      activePaletteNextIndex = -1;
+      activePaletteMix = -1;
       shapeCounts = [];
       shapeMasks = [];
       earthOutline = null;
@@ -185,7 +222,10 @@ export default function initSectionParticles01() {
         const ratio = config.shapeRatio ?? shapeRatioDefault;
         const shapeCount = Math.max(1, Math.min(count, Math.floor(baseCount * ratio)));
         shapeCounts[index] = shapeCount;
-        const scale = config.shapeScale ?? shapeScaleDefault;
+        let scale = config.shapeScale ?? shapeScaleDefault;
+        if (matrixStepIndex === index && config.matrixCover) {
+          scale = Math.max(scale, getCoverScale(bounds, shapeCloud.aspect || 1));
+        }
         if (matrixStepIndex === index) {
           const matrixFit = fitShapeToBounds(bounds, scale, shapeCloud.aspect || 1);
           const centerY = bounds.height * config.shapeOffsetY;
@@ -254,7 +294,17 @@ export default function initSectionParticles01() {
       hoverPush = depth * 1.5;
     };
 
+    const setViewportSize = () => {
+      const vh = window.innerHeight * 0.01;
+      const vw = window.innerWidth * 0.01;
+      section.style.setProperty('--particles-vh', `${vh}px`);
+      section.style.setProperty('--particles-vw', `${vw}px`);
+    };
+
+    setViewportSize();
+
     const resize = () => {
+      setViewportSize();
       const rect = section.getBoundingClientRect();
       const width = Math.max(1, rect.width);
       const height = Math.max(1, rect.height);
@@ -695,6 +745,131 @@ function applyPalette(system, palette, shapeCount, mask) {
   geometry.attributes.aAlpha.needsUpdate = true;
 }
 
+function applyPaletteBlend(
+  system,
+  paletteA,
+  paletteB,
+  mix,
+  shapeCountA,
+  maskA,
+  shapeCountB,
+  maskB
+) {
+  if (!paletteA || !paletteB || !system) {
+    return;
+  }
+  const { colors, colorSeeds, alphaSeeds, baseAlphas, alphas, geometry } = system;
+  const shapeColorsA = paletteA.shape;
+  const bgColorsA = paletteA.background;
+  const landColorsA = paletteA.land;
+  const oceanColorsA = paletteA.ocean;
+  const shapeColorsB = paletteB.shape;
+  const bgColorsB = paletteB.background;
+  const landColorsB = paletteB.land;
+  const oceanColorsB = paletteB.ocean;
+  if (!shapeColorsA?.length || !bgColorsA?.length || !shapeColorsB?.length || !bgColorsB?.length) {
+    return;
+  }
+  const shapeAlphaA = paletteA.shapeAlpha ?? 1;
+  const landAlphaA = paletteA.landAlpha ?? shapeAlphaA;
+  const oceanAlphaA = paletteA.oceanAlpha ?? shapeAlphaA;
+  const rimAlphaA = paletteA.rimAlpha ?? (shapeAlphaA + 0.6);
+  const bgAlphaA = paletteA.bgAlpha ?? 0.55;
+  const shapeAlphaB = paletteB.shapeAlpha ?? 1;
+  const landAlphaB = paletteB.landAlpha ?? shapeAlphaB;
+  const oceanAlphaB = paletteB.oceanAlpha ?? shapeAlphaB;
+  const rimAlphaB = paletteB.rimAlpha ?? (shapeAlphaB + 0.6);
+  const bgAlphaB = paletteB.bgAlpha ?? 0.55;
+  const tempA = new THREE.Color();
+  const tempB = new THREE.Color();
+  const invMix = 1 - mix;
+
+  for (let i = 0, idx = 0; i < system.count; i += 1, idx += 3) {
+    const seed = colorSeeds[i];
+
+    const inShapeA = i < shapeCountA;
+    const isLandA = inShapeA && maskA ? maskA[i] === 1 : null;
+    const isRimA = inShapeA && maskA ? maskA[i] === 2 : false;
+    const paletteColorsA =
+      inShapeA && isRimA && paletteA.rim?.length
+        ? paletteA.rim
+        : inShapeA && isLandA !== null && landColorsA?.length && oceanColorsA?.length
+        ? isLandA
+          ? landColorsA
+          : oceanColorsA
+        : inShapeA
+          ? shapeColorsA
+          : bgColorsA;
+    const baseIndexA = Math.floor(seed * paletteColorsA.length) % paletteColorsA.length;
+    const nextIndexA = (baseIndexA + 1) % paletteColorsA.length;
+    const mixA = (seed * 1.7) % 1;
+    if (!inShapeA && seed < 0.06) {
+      const accent = shapeColorsA[Math.floor(seed * shapeColorsA.length) % shapeColorsA.length];
+      tempA.copy(accent).lerp(paletteColorsA[baseIndexA], 0.35);
+    } else {
+      tempA.copy(paletteColorsA[baseIndexA]).lerp(paletteColorsA[nextIndexA], mixA);
+    }
+    const alphaBoostA = !inShapeA && seed < 0.08 ? 0.3 : 0;
+    const landBoostA = inShapeA && isLandA ? paletteA.landBoost ?? 0.28 : 0;
+    const shapeBaseA = inShapeA
+      ? isRimA
+        ? rimAlphaA
+        : isLandA !== null && landColorsA?.length && oceanColorsA?.length
+          ? isLandA
+            ? landAlphaA
+            : oceanAlphaA
+          : shapeAlphaA
+      : bgAlphaA;
+    const rimBoostA = isRimA ? 0.25 : 0;
+    const alphaFactorA = shapeBaseA + (inShapeA ? landBoostA + rimBoostA : alphaBoostA);
+
+    const inShapeB = i < shapeCountB;
+    const isLandB = inShapeB && maskB ? maskB[i] === 1 : null;
+    const isRimB = inShapeB && maskB ? maskB[i] === 2 : false;
+    const paletteColorsB =
+      inShapeB && isRimB && paletteB.rim?.length
+        ? paletteB.rim
+        : inShapeB && isLandB !== null && landColorsB?.length && oceanColorsB?.length
+        ? isLandB
+          ? landColorsB
+          : oceanColorsB
+        : inShapeB
+          ? shapeColorsB
+          : bgColorsB;
+    const baseIndexB = Math.floor(seed * paletteColorsB.length) % paletteColorsB.length;
+    const nextIndexB = (baseIndexB + 1) % paletteColorsB.length;
+    const mixB = (seed * 1.7) % 1;
+    if (!inShapeB && seed < 0.06) {
+      const accent = shapeColorsB[Math.floor(seed * shapeColorsB.length) % shapeColorsB.length];
+      tempB.copy(accent).lerp(paletteColorsB[baseIndexB], 0.35);
+    } else {
+      tempB.copy(paletteColorsB[baseIndexB]).lerp(paletteColorsB[nextIndexB], mixB);
+    }
+    const alphaBoostB = !inShapeB && seed < 0.08 ? 0.3 : 0;
+    const landBoostB = inShapeB && isLandB ? paletteB.landBoost ?? 0.28 : 0;
+    const shapeBaseB = inShapeB
+      ? isRimB
+        ? rimAlphaB
+        : isLandB !== null && landColorsB?.length && oceanColorsB?.length
+          ? isLandB
+            ? landAlphaB
+            : oceanAlphaB
+          : shapeAlphaB
+      : bgAlphaB;
+    const rimBoostB = isRimB ? 0.25 : 0;
+    const alphaFactorB = shapeBaseB + (inShapeB ? landBoostB + rimBoostB : alphaBoostB);
+
+    colors[idx] = tempA.r * invMix + tempB.r * mix;
+    colors[idx + 1] = tempA.g * invMix + tempB.g * mix;
+    colors[idx + 2] = tempA.b * invMix + tempB.b * mix;
+    baseAlphas[i] = alphaSeeds[i] * (alphaFactorA * invMix + alphaFactorB * mix);
+    alphas[i] = baseAlphas[i];
+  }
+
+  geometry.attributes.color.needsUpdate = true;
+  geometry.attributes.aAlpha.needsUpdate = true;
+}
+
 function buildParticlePalettes() {
   const parse = (list) => list.map((hex) => new THREE.Color(hex));
   return [
@@ -741,6 +916,8 @@ function buildStepConfig(step, index, defaults) {
   const shapeDepth = clampFloat(step.dataset.particlesShapeDepth, 0.2, 3, 0.7);
   const shapeDepthJitter = clampFloat(step.dataset.particlesShapeDepthJitter, 0.05, 0.9, 0.32);
   const matrixSpeed = clampFloat(step.dataset.particlesMatrixSpeed, 0.5, 14, 8);
+  const matrixCover = step.dataset.particlesMatrixCover !== 'false';
+  const shapeHold = clampFloat(step.dataset.particlesShapeHold, 0, 0.85, 0);
 
   const offsetXRaw = parseFloat(step.dataset.particlesShapeOffsetX || '');
   const offsetYRaw = parseFloat(step.dataset.particlesShapeOffsetY || '');
@@ -766,11 +943,13 @@ function buildStepConfig(step, index, defaults) {
     shapeDepthJitter,
     shapeOffsetX,
     shapeOffsetY,
+    shapeHold,
     shapeMode,
     shapeThreshold,
     shapeEdgeThreshold,
     shapeMinBrightness,
     matrixSpeed,
+    matrixCover,
     wordParticleScale,
   };
 }
@@ -791,6 +970,15 @@ function getViewBounds(camera) {
   const height = 2 * Math.tan(vFov / 2) * distance;
   const width = height * camera.aspect;
   return { width, height };
+}
+
+function getCoverScale(bounds, aspect) {
+  const safeAspect = aspect && Number.isFinite(aspect) ? aspect : 1;
+  const viewportAspect = bounds.height > 0 ? bounds.width / bounds.height : 1;
+  if (!Number.isFinite(viewportAspect) || viewportAspect <= 0) {
+    return 1;
+  }
+  return Math.max(viewportAspect / safeAspect, safeAspect / viewportAspect);
 }
 
 function createScatterState(count, bounds, depth) {
@@ -933,9 +1121,22 @@ async function loadShapeClouds(section, stepConfigs, count) {
         }
         const matrixOptions = {
           glyphs: step.dataset.particlesMatrixGlyphs,
-          cols: clampInt(step.dataset.particlesMatrixCols, 10, 80, 48),
-          rows: clampInt(step.dataset.particlesMatrixRows, 12, 90, 52),
-          density: clampFloat(step.dataset.particlesMatrixDensity, 0.25, 1, 0.8),
+          cols: clampInt(step.dataset.particlesMatrixCols, 10, 420, 48),
+          rows: clampInt(step.dataset.particlesMatrixRows, 12, 320, 52),
+          density: clampFloat(step.dataset.particlesMatrixDensity, 0.25, 2.5, 0.8),
+          columnDensity: clampFloat(step.dataset.particlesMatrixColumnDensity, 0.2, 2.5, Number.NaN),
+          noiseDensity: clampFloat(step.dataset.particlesMatrixNoiseDensity, 0, 2.5, Number.NaN),
+          columnFill: clampFloat(step.dataset.particlesMatrixColumnFill, 0.3, 1.8, 1),
+          columnAlpha: clampFloat(step.dataset.particlesMatrixColumnAlpha, 0.5, 2.2, 1),
+          bgCols: clampInt(step.dataset.particlesMatrixBgCols, 10, 420, 0),
+          bgRows: clampInt(step.dataset.particlesMatrixBgRows, 12, 320, 0),
+          bgDensity: clampFloat(step.dataset.particlesMatrixBgDensity, 0.2, 2.5, Number.NaN),
+          bgColumnDensity: clampFloat(step.dataset.particlesMatrixBgColumnDensity, 0.2, 2.5, Number.NaN),
+          bgNoiseDensity: clampFloat(step.dataset.particlesMatrixBgNoiseDensity, 0, 2.5, Number.NaN),
+          bgColumnFill: clampFloat(step.dataset.particlesMatrixBgColumnFill, 0.3, 1.8, Number.NaN),
+          bgColumnAlpha: clampFloat(step.dataset.particlesMatrixBgColumnAlpha, 0.5, 2.2, Number.NaN),
+          bgRowSpacing: clampInt(step.dataset.particlesMatrixBgRowSpacing, 1, 6, 0),
+          rowSpacing: clampInt(step.dataset.particlesMatrixRowSpacing, 1, 6, 2),
           fontFamily: step.dataset.particlesMatrixFont || step.dataset.particlesShapeFont || 'monospace',
           fontWeight: clampInt(step.dataset.particlesMatrixWeight, 300, 900, 700),
           fontScale: clampFloat(step.dataset.particlesMatrixFontScale, 0.4, 1.2, 0.68),
@@ -943,6 +1144,7 @@ async function loadShapeClouds(section, stepConfigs, count) {
           wordScale: clampFloat(step.dataset.particlesMatrixWordScale, 0.12, 0.6, 0.26),
           wordRatio: clampFloat(step.dataset.particlesMatrixWordRatio, 0.2, 0.7, 0.45),
           wordDensity: clampFloat(step.dataset.particlesMatrixWordDensity, 0.2, 1.4, 1),
+          wordCount: parseInt(step.dataset.particlesMatrixWordCount || '', 10),
           wordWeight: clampInt(step.dataset.particlesMatrixWordWeight, 300, 900, 700),
           wordFont: step.dataset.particlesMatrixWordFont,
           wordImageScale: clampFloat(step.dataset.particlesMatrixWordImageScale, 0.18, 0.8, 0.38),
@@ -1195,9 +1397,21 @@ function generateMatrixShape(count, options = {}) {
       : '01ABCDEFGHIJKLMNOPQRSTUVWXYZ$%&*+-';
   const glyphs = glyphsRaw.replace(/\s+/g, '');
   const glyphPool = glyphs.length > 0 ? glyphs : '01';
-  const cols = clampInt(options.cols, 10, 80, 48);
-  const rows = clampInt(options.rows, 12, 90, 52);
-  const density = clampFloat(options.density, 0.2, 1, 0.8);
+  const cols = clampInt(options.cols, 10, 420, 48);
+  const rows = clampInt(options.rows, 12, 320, 52);
+  const density = clampFloat(options.density, 0.2, 2.5, 0.8);
+  const columnDensity = Number.isFinite(options.columnDensity) ? options.columnDensity : density;
+  const noiseDensity = Number.isFinite(options.noiseDensity) ? options.noiseDensity : density;
+  const columnFill = clampFloat(options.columnFill, 0.3, 1.8, 1);
+  const columnAlpha = clampFloat(options.columnAlpha, 0.5, 2.2, 1);
+  const bgCols = options.bgCols > 0 ? options.bgCols : cols;
+  const bgRows = options.bgRows > 0 ? options.bgRows : rows;
+  const bgDensity = Number.isFinite(options.bgDensity) ? options.bgDensity : density;
+  const bgColumnDensity = Number.isFinite(options.bgColumnDensity) ? options.bgColumnDensity : columnDensity;
+  const bgNoiseDensity = Number.isFinite(options.bgNoiseDensity) ? options.bgNoiseDensity : noiseDensity;
+  const bgColumnFill = Number.isFinite(options.bgColumnFill) ? options.bgColumnFill : columnFill;
+  const bgColumnAlpha = Number.isFinite(options.bgColumnAlpha) ? options.bgColumnAlpha : columnAlpha;
+  const bgRowSpacing = options.bgRowSpacing > 0 ? options.bgRowSpacing : options.rowSpacing;
   const fontFamily = options.fontFamily || 'monospace';
   const fontWeight = clampInt(options.fontWeight, 300, 900, 700);
   const fontScale = clampFloat(options.fontScale, 0.4, 1.2, 0.68);
@@ -1215,33 +1429,42 @@ function generateMatrixShape(count, options = {}) {
   const wordRatio = baseWordRatio > 0
     ? clampFloat(baseWordRatio * densityFactor, 0.15, 0.6, baseWordRatio)
     : 0;
-  const wordCount = hasWordImage || hasWordText ? Math.max(140, Math.floor(count * wordRatio)) : 0;
+  let wordCount = hasWordImage || hasWordText ? Math.max(140, Math.floor(count * wordRatio)) : 0;
+  if (Number.isFinite(options.wordCount) && options.wordCount > 0) {
+    wordCount = Math.max(60, Math.min(count - 1, Math.floor(options.wordCount)));
+  }
   const bgCount = Math.max(1, count - wordCount);
 
   const background = generateCanvasShape(
     bgCount,
     (ctx, size) => {
-      const colWidth = size / cols;
-      const rowHeight = size / rows;
+      const colWidth = size / bgCols;
+      const rowHeight = size / bgRows;
       const fontSize = Math.max(6, Math.floor(Math.min(colWidth, rowHeight) * fontScale));
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
 
-      const activeCols = Math.max(1, Math.floor(cols * density));
+      const activeCols = Math.max(1, Math.min(bgCols, Math.floor(bgCols * bgColumnDensity)));
       const columns = new Set();
       while (columns.size < activeCols) {
-        columns.add(Math.floor(Math.random() * cols));
+        columns.add(Math.floor(Math.random() * bgCols));
       }
 
-      const rowSpacing = 2;
+      const rowSpacing = clampInt(bgRowSpacing, 1, 6, 2);
       columns.forEach((col) => {
-        const head = Math.floor(Math.random() * rows);
-        const length = Math.max(8, Math.floor(rows * (0.4 + Math.random() * 0.35)));
+        const head = Math.floor(Math.random() * bgRows);
+        const length = Math.max(
+          6,
+          Math.min(bgRows, Math.floor(bgRows * (0.4 + Math.random() * 0.35) * bgColumnFill))
+        );
         for (let i = 0; i < length; i += 1) {
-          const row = (head + i * rowSpacing) % rows;
+          const row = (head + i * rowSpacing) % bgRows;
           const t = length > 1 ? i / (length - 1) : 0;
-          const alpha = Math.min(1, (1 - t) * 0.85 + 0.12 + (i === 0 ? 0.18 : 0));
+          const alpha = Math.min(
+            1,
+            ((1 - t) * 0.85 + 0.12 + (i === 0 ? 0.18 : 0)) * bgColumnAlpha
+          );
           const glyph = glyphPool[Math.floor(Math.random() * glyphPool.length)];
           const x = colWidth * (col + 0.5);
           const y = rowHeight * (row + 0.5);
@@ -1250,9 +1473,10 @@ function generateMatrixShape(count, options = {}) {
         }
       });
 
-      for (let col = 0; col < cols; col += 1) {
-        for (let row = 0; row < rows; row += 1) {
-          if (Math.random() > density * 0.06) {
+      const noiseFactor = Math.max(0, Math.min(1, bgNoiseDensity * 0.08));
+      for (let col = 0; col < bgCols; col += 1) {
+        for (let row = 0; row < bgRows; row += 1) {
+          if (Math.random() > noiseFactor) {
             continue;
           }
           const glyph = glyphPool[Math.floor(Math.random() * glyphPool.length)];
@@ -1453,6 +1677,67 @@ function generateMatrixShape(count, options = {}) {
           applyGap(false);
         }
       }
+    } else if (wordShape) {
+      const letterGap = clampFloat(options.wordLetterGap, 0, 0.2, 0);
+      if (letterGap > 0) {
+        const gapThreshold = clampFloat(options.wordLetterGapThreshold, 0.05, 0.6, 0.22);
+        const pts = wordShape.points;
+        const bins = 64;
+        const offsetY = 0;
+
+        const applyGap = (isTop) => {
+          let minLineX = Infinity;
+          let maxLineX = -Infinity;
+          let count = 0;
+          for (let i = 0, idx = 0; i < wordCount; i += 1, idx += 3) {
+            const y = pts[idx + 1];
+            if ((isTop && y >= offsetY) || (!isTop && y < offsetY)) {
+              const x = pts[idx];
+              minLineX = Math.min(minLineX, x);
+              maxLineX = Math.max(maxLineX, x);
+              count += 1;
+            }
+          }
+          if (!Number.isFinite(minLineX) || count < 10) {
+            return;
+          }
+          const span = Math.max(0.0001, maxLineX - minLineX);
+          const gapSize = span * letterGap;
+          const counts = new Array(bins).fill(0);
+          for (let i = 0, idx = 0; i < wordCount; i += 1, idx += 3) {
+            const y = pts[idx + 1];
+            if ((isTop && y >= offsetY) || (!isTop && y < offsetY)) {
+              const x = pts[idx];
+              const t = (x - minLineX) / span;
+              const b = Math.max(0, Math.min(bins - 1, Math.floor(t * bins)));
+              counts[b] += 1;
+            }
+          }
+          const avg = count / bins;
+          const threshold = avg * gapThreshold;
+          let offset = 0;
+          const offsets = new Array(bins).fill(0);
+          for (let i = 0; i < bins; i += 1) {
+            if (counts[i] < threshold) {
+              offset += gapSize;
+            }
+            offsets[i] = offset;
+          }
+          const totalOffset = offset;
+          for (let i = 0, idx = 0; i < wordCount; i += 1, idx += 3) {
+            const y = pts[idx + 1];
+            if ((isTop && y >= offsetY) || (!isTop && y < offsetY)) {
+              const x = pts[idx];
+              const t = (x - minLineX) / span;
+              const b = Math.max(0, Math.min(bins - 1, Math.floor(t * bins)));
+              pts[idx] = x + offsets[b] - totalOffset * 0.5;
+            }
+          }
+        };
+
+        applyGap(true);
+        applyGap(false);
+      }
     }
   } else if (wordText && wordCount > 0) {
     wordShape = generateCanvasShape(
@@ -1499,7 +1784,7 @@ function generateMatrixShape(count, options = {}) {
     : 1;
   return {
     points: output,
-    aspect: Math.max(cols / rows, wordAspect),
+    aspect: Math.max(bgCols / bgRows, wordAspect),
     depthScale: options.depthScale ?? 1.1,
     mask,
   };

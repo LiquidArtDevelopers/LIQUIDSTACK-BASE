@@ -11,8 +11,8 @@ function controller_sectionParticles01(int $i = 0, array $params = []): string
     $vars = [
         '{classVar}'         => "sectionParticles01_{$pad}_classVar",
         '{content}'          => '',
-        '{particles-count}'       => '6400',
-        '{particles-bg-count}'    => '6400',
+        '{particles-count}'       => '20000',
+        '{particles-bg-count}'    => '8000',
         '{particles-size}'        => '1.5',
         '{particles-radius}'      => '28',
         '{particles-depth}'       => '20',
