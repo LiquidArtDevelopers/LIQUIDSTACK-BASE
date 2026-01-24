@@ -1729,46 +1729,5 @@
         "text": "Get Started",
         "href": "#basic",
         "title": "Get Started"
-    },
-    "sectionDiskSlider01_00_headerPrimary": {
-        "text": "WebGL disko likidoaren sliderra"
-    },
-    "sectionDiskSlider01_00_intro": {
-        "text": "Scroll egitean erdiko diskoa biratzen da, irudia deformatu eta hurrengo eszena uraren moduan agerraraziz."
-    },
-    "sectionDiskSlider01_00_hint": {
-        "text": "Egin scroll biratzeko"
-    },
-    "sectionDiskSlider01_00_slidea_img": {
-        "src": "assets/img/dummy/jornadas-hettich-2560.avif",
-        "alt": "Gainazal likidoak irudi teknologikoa deformatzen du",
-        "title": "Disko likidoa irudia deformatzen"
-    },
-    "sectionDiskSlider01_00_slidea_caption": {
-        "text": "Deformazio likidoa"
-    },
-    "sectionDiskSlider01_00_slideb_img": {
-        "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Erdiko diskoak eszena digital berria erakusten du",
-        "title": "Diskoarekin WebGL trantsizioa"
-    },
-    "sectionDiskSlider01_00_slideb_caption": {
-        "text": "Agerraldi progresiboa"
-    },
-    "sectionDiskSlider01_00_slidec_img": {
-        "src": "assets/img/dummy/jornadas-hettich-1500.avif",
-        "alt": "Uhin zirkularrak atzeko plano ilunean",
-        "title": "Uhin zirkularrak"
-    },
-    "sectionDiskSlider01_00_slidec_caption": {
-        "text": "Uhinak eta erliebea"
-    },
-    "sectionDiskSlider01_00_slided_img": {
-        "src": "assets/img/dummy/dummy_1800.avif",
-        "alt": "Disko argitsu batek zeharkatutako testura abstraktua",
-        "title": "Testura abstraktua diskoarekin"
-    },
-    "sectionDiskSlider01_00_slided_caption": {
-        "text": "Eszena aldaketa"
     }
 }
