@@ -173,11 +173,7 @@
                 ]);
                 ?>
 
-                <?php
-                echo controller('sectionDiskSlider01', 0, [
-                    'items' => 4,
-                ]);
-                ?>
+
 
                 <?php
                 // moduleH2Type01 Refactorizado (fondo oscuro y animación)
