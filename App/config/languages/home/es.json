@@ -128,5 +128,46 @@
     "text": "(max-width: 899px) 900px, 1800px"
   },
   "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
-  "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w"
+  "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+  "sectionDiskSlider01_00_headerPrimary": {
+    "text": "Slider WebGL con disco líquido"
+  },
+  "sectionDiskSlider01_00_intro": {
+    "text": "El scroll rota un disco central que deforma la imagen y revela la siguiente escena como si fuera agua."
+  },
+  "sectionDiskSlider01_00_hint": {
+    "text": "Scroll para rotar"
+  },
+  "sectionDiskSlider01_00_slidea_img": {
+    "src": "assets/img/dummy/jornadas-hettich-2560.avif",
+    "alt": "Superficie líquida deformando una imagen tecnológica",
+    "title": "Disco líquido deformando imagen"
+  },
+  "sectionDiskSlider01_00_slidea_caption": {
+    "text": "Distorsión líquida"
+  },
+  "sectionDiskSlider01_00_slideb_img": {
+    "src": "assets/img/dummy/dummy_2560.avif",
+    "alt": "Disco central revelando una nueva escena digital",
+    "title": "Transición WebGL con disco"
+  },
+  "sectionDiskSlider01_00_slideb_caption": {
+    "text": "Revelado progresivo"
+  },
+  "sectionDiskSlider01_00_slidec_img": {
+    "src": "assets/img/dummy/jornadas-hettich-1500.avif",
+    "alt": "Ondas circulares sobre un fondo oscuro",
+    "title": "Ondas circulares sobre fondo"
+  },
+  "sectionDiskSlider01_00_slidec_caption": {
+    "text": "Ondas y relieve"
+  },
+  "sectionDiskSlider01_00_slided_img": {
+    "src": "assets/img/dummy/dummy_1800.avif",
+    "alt": "Textura abstracta atravesada por un disco luminoso",
+    "title": "Textura abstracta con disco"
+  },
+  "sectionDiskSlider01_00_slided_caption": {
+    "text": "Cambio de escena"
+  }
 }
