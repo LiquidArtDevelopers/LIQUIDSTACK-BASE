@@ -8,9 +8,13 @@
   padding: 0;
   margin: 0;
   background: #03050b;
-  color: #f5f7ff;
+  color: c.$color00;
   overflow: hidden;
   --disk-size: min(94vmin, 94vh);
+  --disk-bg-x: 0px;
+  --disk-bg-y: 0px;
+  --disk-bg-scale: 1.02;
+  isolation: isolate;
 }
 
 .sectionDiskSlider01-inner,
@@ -38,11 +42,25 @@
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 28%, rgba(0, 0, 0, 0.65) 62%, rgba(0, 0, 0, 0.95) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
 }
 
 .sectionDiskSlider01-canvasWrap {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  transform: translate(var(--disk-bg-x), var(--disk-bg-y)) scale(var(--disk-bg-scale));
+  transform-origin: center;
+  will-change: transform;
 
   canvas {
     width: 100%;
@@ -63,7 +81,7 @@
 
 .sectionDiskSlider01-centerInner {
   text-align: center;
-  color: rgba(244, 247, 255, 0.92);
+  color: c.$color00;
   text-shadow: 0 1.2rem 2.6rem rgba(3, 8, 18, 0.45);
   padding: clamp(1.2rem, 3vw, 2rem);
   max-width: min(58rem, 82vw);
@@ -74,7 +92,7 @@
   font-size: clamp(0.8rem, 1.4vw, 0.98rem);
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(210, 223, 255, 0.65);
+  color: c.$color00;
 }
 
 .sectionDiskSlider01-centerTitle {
@@ -90,6 +108,7 @@
   pointer-events: none;
   display: grid;
   place-items: center;
+  z-index: 4;
 }
 
 .sectionDiskSlider01-overlayDisk {
@@ -132,7 +151,7 @@
   border-radius: 999px;
   background: rgba(5, 8, 18, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  color: rgba(241, 244, 255, 0.78);
+  color: c.$color00;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -162,7 +181,17 @@
 .sectionDiskSlider01-caption {
   margin-top: 0.6rem;
   font-size: 0.95rem;
-  color: rgba(230, 236, 255, 0.78);
+  color: c.$color00;
+}
+
+.sectionDiskSlider01 a,
+.sectionDiskSlider01 p,
+.sectionDiskSlider01 span,
+.sectionDiskSlider01 li,
+.sectionDiskSlider01 h2,
+.sectionDiskSlider01 h3,
+.sectionDiskSlider01 h4 {
+  color: c.$color00;
 }
 
 .sectionDiskSlider01.is-static,

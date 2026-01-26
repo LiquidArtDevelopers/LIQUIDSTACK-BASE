@@ -143,6 +143,71 @@ function clampFloat(value, min, max, fallback) {
   return Math.min(max, Math.max(min, parsed));
 }
 
+function initPointerParallax(section) {
+  const maxShift = clampFloat(section.dataset.diskParallaxShift, 0, 40, 12);
+  if (!Number.isFinite(maxShift) || maxShift <= 0) {
+    return;
+  }
+
+  let currentX = 0;
+  let currentY = 0;
+  let targetX = 0;
+  let targetY = 0;
+  let rafId = null;
+
+  const update = () => {
+    const ease = 0.08;
+    currentX += (targetX - currentX) * ease;
+    currentY += (targetY - currentY) * ease;
+
+    section.style.setProperty('--disk-bg-x', `${currentX.toFixed(2)}px`);
+    section.style.setProperty('--disk-bg-y', `${currentY.toFixed(2)}px`);
+
+    if (Math.abs(targetX - currentX) < 0.1 && Math.abs(targetY - currentY) < 0.1) {
+      currentX = targetX;
+      currentY = targetY;
+      section.style.setProperty('--disk-bg-x', `${currentX.toFixed(2)}px`);
+      section.style.setProperty('--disk-bg-y', `${currentY.toFixed(2)}px`);
+      rafId = null;
+      return;
+    }
+
+    rafId = requestAnimationFrame(update);
+  };
+
+  const queueUpdate = () => {
+    if (rafId === null) {
+      rafId = requestAnimationFrame(update);
+    }
+  };
+
+  const onMove = (event) => {
+    if (event.pointerType && event.pointerType !== 'mouse') {
+      return;
+    }
+    const rect = section.getBoundingClientRect();
+    if (!rect.width || !rect.height) {
+      return;
+    }
+    const relX = (event.clientX - rect.left) / rect.width;
+    const relY = (event.clientY - rect.top) / rect.height;
+    const offsetX = (relX - 0.5) * 2;
+    const offsetY = (relY - 0.5) * 2;
+    targetX = offsetX * maxShift;
+    targetY = offsetY * maxShift;
+    queueUpdate();
+  };
+
+  const onLeave = () => {
+    targetX = 0;
+    targetY = 0;
+    queueUpdate();
+  };
+
+  section.addEventListener('pointermove', onMove);
+  section.addEventListener('pointerleave', onLeave);
+}
+
 function resolveInnerRadius(section, outerRadius) {
   const innerValue = Number.parseFloat(section.dataset.diskInner || '');
   const ratioValue = Number.parseFloat(section.dataset.diskInnerRatio || '');
@@ -305,6 +370,8 @@ export default function initSectionDiskSlider01() {
       markSlideStates(slides, 0, 0);
       return;
     }
+
+    initPointerParallax(section);
 
     const centerTitle = section.querySelector('[data-disk-center-title]');
     const centerKicker = section.querySelector('[data-disk-center-kicker]');
