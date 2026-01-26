@@ -18,16 +18,14 @@ const FRAGMENT_SHADER = `
   uniform sampler2D uTexture1;
   uniform vec2 uResolution;
   uniform float uProgress;
-  uniform float uDirection;
   uniform float uRadius;
-  uniform float uRingThickness;
+  uniform float uInnerRadius;
   uniform float uStrength;
   uniform float uRotation;
   uniform float uArcPadding;
-  uniform float uBorderPadding;
-  uniform float uProgressRing;
   uniform float uTime;
   uniform float uIdleMix;
+  uniform float uEdgeSoftness;
 
   vec2 coverUv(vec2 uv, vec2 resolution) {
     float aspect = resolution.x / max(resolution.y, 1.0);
@@ -38,21 +36,27 @@ const FRAGMENT_SHADER = `
     return centered + 0.5;
   }
 
-  float ringMask(vec2 centered, float outerRadius, float innerRadius) {
+  float diskMask(vec2 centered, float radius, float softness) {
     float dist = length(centered);
-    float outer = 1.0 - smoothstep(outerRadius, outerRadius + 0.035, dist);
-    float inner = smoothstep(innerRadius - 0.03, innerRadius + 0.014, dist);
-    return clamp(outer * inner, 0.0, 1.0);
+    return smoothstep(radius, radius - softness, dist);
   }
 
-  float arcMask(float angle, float progress, float direction, float padding) {
-    float sweep = clamp(progress, 0.0, 0.999) * (6.28318530718 - padding);
+  float ringMask(vec2 centered, float outerRadius, float innerRadius, float softness) {
+    float dist = length(centered);
+    float outer = smoothstep(outerRadius, outerRadius - softness, dist);
+    float inner = smoothstep(innerRadius, innerRadius + softness, dist);
+    return outer * inner;
+  }
+
+  float arcMask(float angle, float progress, float padding) {
+    float clamped = clamp(progress, 0.0, 1.0);
+    if (clamped >= 0.9995) {
+      return 1.0;
+    }
+    float sweep = clamped * (6.28318530718 - padding);
     float startAngle = angle - 1.57079632679;
-    float oriented = direction >= 0.0 ? startAngle : -startAngle;
-    float wrapped = mod(oriented + 6.28318530718, 6.28318530718);
-    float within = step(wrapped, sweep);
-    float edge = smoothstep(sweep - 0.16, sweep + 0.02, wrapped);
-    return within * (1.0 - edge);
+    float wrapped = mod(-startAngle + 6.28318530718, 6.28318530718);
+    return step(wrapped, sweep);
   }
 
   void main() {
@@ -61,35 +65,34 @@ const FRAGMENT_SHADER = `
     vec2 centered = uv - 0.5;
     centered.x *= aspect;
 
-    float outerRadius = uRadius - uBorderPadding;
-    float innerRadius = max(0.04, outerRadius - uRingThickness + uBorderPadding);
-    float ring = ringMask(centered, outerRadius, innerRadius);
+    float dist = length(centered);
+    float ring = ringMask(centered, uRadius, uInnerRadius, uEdgeSoftness);
 
     float angle = atan(centered.y, centered.x);
-    float dist = length(centered);
+    float edgeFactor = smoothstep(0.0, uRadius, dist);
+    float idleStrength = mix(0.25, 1.0, uIdleMix);
 
-    float idleStrength = mix(0.28, 1.0, uIdleMix);
-    float wave = sin(((dist - innerRadius) * 26.0) - (uTime * 1.7) - (uRotation * 3.2));
-    float drift = sin((angle * 2.6) + (uTime * 0.8) + (uRotation * 1.8));
     vec2 normal = dist > 0.0005 ? centered / dist : vec2(0.0, 0.0);
     vec2 tangent = vec2(-normal.y, normal.x);
-    vec2 flow = normal * wave * 0.018 + tangent * drift * 0.012;
-    vec2 offset = flow * uStrength * idleStrength * ring;
+    float swirl = dot(normal, vec2(0.78, 0.62));
+    float swirl2 = dot(normal, vec2(-0.34, 0.94));
+    float wave = sin((dist * 18.0) - (uTime * 1.4) + (uRotation * 0.8) + (swirl * 6.2831853));
+    float ripple = sin((dist * 28.0) + (uTime * 1.1) - (uRotation * 1.1) + (swirl2 * 6.2831853));
+    vec2 flow = normal * wave * 0.018 + tangent * ripple * 0.012;
+    vec2 offset = flow * uStrength * idleStrength * (0.35 + edgeFactor * 0.65) * ring;
 
-    vec4 base0 = texture2D(uTexture0, clamp(uv + offset, 0.0, 1.0));
-    vec4 base1 = texture2D(uTexture1, clamp(uv - offset * 0.65, 0.0, 1.0));
+    vec4 base0 = texture2D(uTexture0, clamp(uv, 0.0, 1.0));
+    vec4 base1 = texture2D(uTexture1, clamp(uv, 0.0, 1.0));
+    vec4 distorted0 = texture2D(uTexture0, clamp(uv + offset, 0.0, 1.0));
+    vec4 distorted1 = texture2D(uTexture1, clamp(uv + offset, 0.0, 1.0));
 
-    float globalMix = smoothstep(0.0, 1.0, uProgress);
-    vec4 baseColor = mix(base0, base1, globalMix);
+    float outsideMix = smoothstep(0.0, 1.0, uProgress);
+    vec4 outsideColor = mix(base0, base1, outsideMix);
 
-    float arc = arcMask(angle, globalMix, uDirection, uArcPadding) * ring;
-    float arcBlend = clamp(arc * 1.2, 0.0, 1.0);
-    vec4 ringColor = mix(base0, base1, arcBlend);
+    float wipe = arcMask(angle, uProgress, uArcPadding);
+    vec4 insideColor = mix(distorted0, distorted1, wipe);
 
-    vec4 color = mix(baseColor, ringColor, ring);
-
-    float highlight = ring * 0.05 * sin((angle * 7.0) - (uTime * 1.2));
-    color.rgb += highlight;
+    vec4 color = mix(outsideColor, insideColor, ring);
 
     gl_FragColor = color;
   }
@@ -101,6 +104,17 @@ function clampFloat(value, min, max, fallback) {
     return fallback;
   }
   return Math.min(max, Math.max(min, parsed));
+}
+
+function resolveInnerRadius(section, outerRadius) {
+  const innerValue = Number.parseFloat(section.dataset.diskInner || '');
+  const ratioValue = Number.parseFloat(section.dataset.diskInnerRatio || '');
+  const ratio = Number.isFinite(ratioValue) ? ratioValue : 0.62;
+  let innerRadius = Number.isFinite(innerValue) ? innerValue : outerRadius * ratio;
+  const minThickness = 0.08;
+  const maxInner = Math.max(0.12, outerRadius - minThickness);
+  innerRadius = Math.min(maxInner, Math.max(0.18, innerRadius));
+  return innerRadius;
 }
 
 function collectSlides(section) {
@@ -119,7 +133,7 @@ function collectSlides(section) {
     .filter((slide) => slide.src !== '');
 }
 
-function updateProgressUi(progressValue, direction, ringEl) {
+function updateProgressUi(progressValue, ringEl) {
   if (!ringEl) {
     return;
   }
@@ -128,19 +142,44 @@ function updateProgressUi(progressValue, direction, ringEl) {
     return;
   }
   const circumference = 2 * Math.PI * radius;
-  const clamped = Math.max(0, Math.min(0.9999, progressValue));
-  const signed = direction >= 0 ? clamped : 1 - clamped;
+  const clamped = Math.max(0, Math.min(1, progressValue));
 
-  ringEl.style.strokeDasharray = `${circumference} ${circumference}`;
-  ringEl.style.strokeDashoffset = `${circumference * (1 - signed)}`;
+  const dash = circumference * clamped;
+  ringEl.style.strokeDasharray = `${dash} ${circumference * 2}`;
+  ringEl.style.strokeDashoffset = '0';
+}
 
+function getNextIndex(index, total) {
+  return total > 0 ? (index + 1) % total : 0;
+}
+
+function easeInOutQuint(t) {
+  if (t < 0.5) {
+    return 16 * t * t * t * t * t;
+  }
+  return 1 - Math.pow(-2 * t + 2, 5) / 2;
+}
+
+function inverseEaseInOut(easeFn, p) {
+  const clamped = Math.max(0, Math.min(1, p));
+  let low = 0;
+  let high = 1;
+  for (let i = 0; i < 24; i += 1) {
+    const mid = (low + high) / 2;
+    if (easeFn(mid) < clamped) {
+      low = mid;
+    } else {
+      high = mid;
+    }
+  }
+  return (low + high) / 2;
 }
 
 function updateCenterContent(slides, baseIndex, progress, titleEl, kickerEl) {
   if (!titleEl && !kickerEl) {
     return;
   }
-  const nextIndex = Math.min(slides.length - 1, baseIndex + 1);
+  const nextIndex = getNextIndex(baseIndex, slides.length);
   const activeIndex = progress >= 0.5 ? nextIndex : baseIndex;
   const activeSlide = slides[activeIndex];
   if (!activeSlide) {
@@ -156,7 +195,7 @@ function updateCenterContent(slides, baseIndex, progress, titleEl, kickerEl) {
 }
 
 function markSlideStates(slides, baseIndex, progress) {
-  const nextIndex = Math.min(slides.length - 1, baseIndex + 1);
+  const nextIndex = getNextIndex(baseIndex, slides.length);
   const activeIndex = progress >= 0.5 ? nextIndex : baseIndex;
   slides.forEach((slide, index) => {
     const isActive = index === activeIndex;
@@ -250,25 +289,27 @@ export default function initSectionDiskSlider01() {
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
 
     const geometry = new THREE.PlaneGeometry(2, 2, 1, 1);
+    const initialRadius = clampFloat(section.dataset.diskRadius, 0.4, 0.64, 0.48);
+    const initialInnerRadius = resolveInnerRadius(section, initialRadius);
     const uniforms = {
       uTexture0: { value: null },
       uTexture1: { value: null },
       uResolution: { value: new THREE.Vector2(1, 1) },
       uProgress: { value: 0 },
-      uDirection: { value: 1 },
       uRadius: {
-        value: clampFloat(section.dataset.diskRadius, 0.4, 0.64, 0.52),
+        value: initialRadius,
       },
-      uRingThickness: { value: 0.25 },
+      uInnerRadius: { value: initialInnerRadius },
       uStrength: {
         value: clampFloat(section.dataset.diskStrength, 0.2, 1.4, 0.68),
       },
       uRotation: { value: 0 },
-      uArcPadding: { value: 0.22 },
-      uBorderPadding: { value: 0.012 },
-      uProgressRing: { value: 0 },
+      uArcPadding: { value: 0 },
       uTime: { value: 0 },
       uIdleMix: { value: 1 },
+      uEdgeSoftness: {
+        value: clampFloat(section.dataset.diskEdgeSoftness, 0.001, 0.02, 0.0035),
+      },
     };
 
     const material = new THREE.ShaderMaterial({
@@ -284,10 +325,16 @@ export default function initSectionDiskSlider01() {
     let progressTarget = 0;
     let currentIndex = 0;
     let scrollRaw = 0;
-    let autoRaw = 0;
     let lastRaw = 0;
-    let directionState = 1;
     let lastActiveTime = performance.now();
+    let wasIdle = false;
+    let outerRadius = uniforms.uRadius.value;
+    let innerRadius = uniforms.uInnerRadius.value;
+    let autoIndex = 0;
+    let autoPhase = 0;
+    let autoProgress = 0;
+    let autoHold = 0;
+    let lastBaseIndex = 0;
 
     const updateSize = () => {
       const rect = stage.getBoundingClientRect();
@@ -297,16 +344,40 @@ export default function initSectionDiskSlider01() {
       uniforms.uResolution.value.set(width, height);
     };
 
+    const syncDiskSize = () => {
+      if (!overlayDisk) {
+        return;
+      }
+      const rect = stage.getBoundingClientRect();
+      const minSide = Math.max(1, Math.min(rect.width, rect.height));
+      outerRadius = clampFloat(section.dataset.diskRadius, 0.4, 0.64, 0.48);
+      innerRadius = resolveInnerRadius(section, outerRadius);
+      uniforms.uRadius.value = outerRadius;
+      uniforms.uInnerRadius.value = innerRadius;
+      const edgeSoftness = clampFloat(
+        section.dataset.diskEdgeSoftness,
+        0.001,
+        0.02,
+        Math.max(0.001, 1.25 / minSide)
+      );
+      uniforms.uEdgeSoftness.value = edgeSoftness;
+      const diameter = Math.round(minSide * outerRadius * 2);
+      section.style.setProperty('--disk-size', `${diameter}px`);
+    };
+
     const setSlidePair = (baseIndex) => {
-      const safeBase = Math.min(textures.length - 2, Math.max(0, baseIndex));
-      const safeNext = safeBase + 1;
+      const total = textures.length;
+      if (total === 0) {
+        return;
+      }
+      const safeBase = ((baseIndex % total) + total) % total;
+      const safeNext = getNextIndex(safeBase, total);
       currentIndex = safeBase;
       uniforms.uTexture0.value = textures[safeBase];
       uniforms.uTexture1.value = textures[safeNext];
     };
 
     const stepVh = clampFloat(section.dataset.diskStepVh, 110, 280, 175);
-    const scrollPower = clampFloat(section.dataset.diskScrollPower, 0.6, 1.9, 1.16);
 
     const syncProgressRadius = () => {
       if (!progressRing || !overlayDisk) {
@@ -314,27 +385,17 @@ export default function initSectionDiskSlider01() {
       }
       const rect = overlayDisk.getBoundingClientRect();
       const size = Math.max(1, Math.min(rect.width, rect.height));
-      const minSide = Math.max(1, Math.min(window.innerWidth || 1, window.innerHeight || 1));
-      const ringThicknessPx = uniforms.uRingThickness.value * minSide;
-      const borderPx = uniforms.uBorderPadding.value * minSide;
-      const innerRadiusPx = Math.max(0, size * 0.5 - ringThicknessPx + borderPx * 1.25);
-      const progressRadius = Math.max(6, innerRadiusPx - 8);
-      const viewRadius = (progressRadius / size) * 100;
+      const ratio = outerRadius > 0 ? innerRadius / outerRadius : 0.62;
+      const radiusPx = Math.max(2, size * 0.5 * ratio - 0.5);
+      const viewRadius = (radiusPx / size) * 100;
       progressRing.setAttribute('r', viewRadius.toFixed(3));
-    };
-
-    const setRingThickness = () => {
-      const minSide = Math.max(1, Math.min(window.innerWidth || 1, window.innerHeight || 1));
-      const desired = minSide * 0.165 * 1.5;
-      const thickness = Math.min(minSide * 0.34, Math.max(minSide * 0.18, desired));
-      uniforms.uRingThickness.value = thickness / minSide;
     };
 
     let trigger = null;
     const setupScrollTrigger = () => {
       trigger?.kill();
       const totalSlides = textures.length;
-      const segments = Math.max(1, totalSlides - 1);
+      const segments = Math.max(1, totalSlides);
       const endDistance = window.innerHeight * (stepVh / 100) * segments;
 
       trigger = ScrollTrigger.create({
@@ -351,57 +412,84 @@ export default function initSectionDiskSlider01() {
         },
         onRefresh: () => {
           updateSize();
-          setRingThickness();
+          syncDiskSize();
           syncProgressRadius();
         },
       });
     };
 
     const clock = new THREE.Clock();
-    const autoDelay = 5;
-    const directionThreshold = 0.00025;
+    const autoTravel = 1.2;
+    const autoHoldDelay = 4;
 
     const renderLoop = () => {
       const delta = Math.min(0.05, clock.getDelta());
       uniforms.uTime.value += delta;
 
-      const segments = Math.max(1, textures.length - 1);
+      const segments = Math.max(1, textures.length);
       const idleFor = (performance.now() - lastActiveTime) / 1000;
       const isIdle = idleFor > 0.6;
 
       if (isIdle) {
-        autoRaw = Math.min(segments - 0.0001, Math.max(autoRaw, scrollRaw) + delta / autoDelay);
+        if (!wasIdle) {
+          autoIndex = Math.min(segments - 1, Math.max(0, Math.floor(lastRaw)));
+          autoProgress = Math.max(0, Math.min(1, lastRaw - autoIndex));
+          autoPhase = inverseEaseInOut(easeInOutQuint, autoProgress);
+          autoHold = 0;
+        }
+        if (autoHold > 0) {
+          autoHold = Math.max(0, autoHold - delta);
+          if (autoHold === 0 && autoProgress >= 1) {
+            autoIndex = (autoIndex + 1) % segments;
+            autoPhase = 0;
+            autoProgress = 0;
+          }
+        } else {
+          autoPhase = Math.min(1, autoPhase + delta / autoTravel);
+          autoProgress = easeInOutQuint(autoPhase);
+          if (autoPhase >= 1) {
+            autoProgress = 1;
+            autoHold = autoHoldDelay;
+          }
+        }
       } else {
-        autoRaw = scrollRaw;
+        const maxRaw = Math.max(0, Math.min(segments - 0.0001, scrollRaw));
+        autoIndex = Math.min(segments - 1, Math.floor(maxRaw));
+        autoProgress = Math.max(0, Math.min(1, maxRaw - autoIndex));
+        autoHold = 0;
+        autoPhase = inverseEaseInOut(easeInOutQuint, autoProgress);
       }
+      wasIdle = isIdle;
 
-      const rawTarget = isIdle ? Math.max(scrollRaw, autoRaw) : scrollRaw;
+      const rawTarget = isIdle ? autoIndex + autoProgress : scrollRaw;
       const rawDiff = rawTarget - lastRaw;
-      const smoothing = Math.min(1, delta * 7.2 * scrollPower);
-      lastRaw += rawDiff * smoothing;
+      lastRaw = rawTarget;
 
-      const baseIndex = Math.min(textures.length - 2, Math.max(0, Math.floor(lastRaw)));
-      const localProgress = lastRaw - baseIndex;
+      const rawForSlides = Math.min(segments, Math.max(0, lastRaw));
+      const rawForRing = rawForSlides;
+      const baseIndex = Math.min(segments - 1, Math.floor(rawForSlides));
+      const localProgress = rawForSlides - baseIndex;
+      const baseChanged = baseIndex !== lastBaseIndex;
 
       if (baseIndex !== currentIndex || uniforms.uTexture0.value === null) {
         setSlidePair(baseIndex);
       }
 
       progressTarget = localProgress;
-      const progressEase = Math.min(1, delta * 8.6);
-      uniforms.uProgress.value += (progressTarget - uniforms.uProgress.value) * progressEase;
-
-      const directionFromDiff = Math.sign(rawDiff);
-      if (Math.abs(rawDiff) > directionThreshold && directionFromDiff !== 0) {
-        directionState = directionFromDiff;
+      if (baseChanged) {
+        uniforms.uProgress.value = localProgress;
+        progressTarget = localProgress;
+      } else {
+        const progressEase = Math.min(1, delta * 8.6);
+        uniforms.uProgress.value += (progressTarget - uniforms.uProgress.value) * progressEase;
       }
-      uniforms.uDirection.value = directionState;
+      lastBaseIndex = baseIndex;
 
       uniforms.uIdleMix.value = isIdle ? 0.38 : 1;
-      uniforms.uRotation.value += rawDiff * Math.PI * 1.05 + delta * 0.35;
+      uniforms.uRotation.value += Math.abs(rawDiff) * Math.PI * 1.05 + delta * 0.35;
 
-      uniforms.uProgressRing.value = segments > 0 ? lastRaw / segments : 0;
-      updateProgressUi(uniforms.uProgressRing.value, directionState, progressRing);
+      const ringProgress = segments > 0 ? rawForRing / segments : 0;
+      updateProgressUi(ringProgress, progressRing);
 
       markSlideStates(slides, currentIndex, uniforms.uProgress.value);
       updateCenterContent(slides, currentIndex, uniforms.uProgress.value, centerTitle, centerKicker);
@@ -413,7 +501,7 @@ export default function initSectionDiskSlider01() {
         textures = loadedTextures;
         section.classList.add('is-ready');
         updateSize();
-        setRingThickness();
+        syncDiskSize();
         syncProgressRadius();
         setSlidePair(0);
         markSlideStates(slides, 0, 0);
@@ -428,7 +516,7 @@ export default function initSectionDiskSlider01() {
 
     const handleResize = () => {
       updateSize();
-      setRingThickness();
+      syncDiskSize();
       syncProgressRadius();
       trigger?.refresh();
     };

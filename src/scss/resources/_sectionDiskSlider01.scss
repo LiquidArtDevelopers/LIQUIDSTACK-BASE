@@ -10,6 +10,7 @@
   background: #03050b;
   color: #f5f7ff;
   overflow: hidden;
+  --disk-size: min(94vmin, 94vh);
 }
 
 .sectionDiskSlider01-inner,
@@ -92,12 +93,13 @@
 }
 
 .sectionDiskSlider01-overlayDisk {
-  width: min(94vmin, 94vh);
-  height: min(94vmin, 94vh);
+  width: var(--disk-size);
+  height: var(--disk-size);
   border-radius: 50%;
   border: none;
   position: relative;
   opacity: 1;
+  pointer-events: none;
 }
 
 .sectionDiskSlider01-progress {
@@ -114,7 +116,7 @@
   stroke-linecap: butt;
   vector-effect: non-scaling-stroke;
   stroke: #ffffff;
-  stroke-width: 0.1;
+  stroke-width: 1;
   stroke-dasharray: 0;
   stroke-dashoffset: 0;
 }
@@ -206,7 +208,7 @@
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
-  filter: drop-shadow(0 0.6rem 1.6rem rgba(5, 12, 28, 0.45));
+  filter: none;
 }
 
 .sectionDiskSlider01-progressTrack,
@@ -217,12 +219,12 @@
 
 .sectionDiskSlider01-progressTrack {
   stroke: rgba(235, 241, 255, 0.12);
-  stroke-width: 1.5;
+  stroke-width: 1;
 }
 
 .sectionDiskSlider01-progressRing {
-  stroke: rgba(246, 249, 255, 0.92);
-  stroke-width: 1.5;
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 1;
   stroke-dasharray: 0;
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 0.2s ease-out;
@@ -251,17 +253,3 @@
   }
 }
 
-@media (max-width: 900px) {
-  .sectionDiskSlider01-overlayDisk {
-    width: min(92vmin, 92vh);
-    height: min(92vmin, 92vh);
-    box-shadow:
-      inset 0 0 0 clamp(2.3rem, 9vw, 7.2rem) rgba(255, 255, 255, 0.03),
-      0 0 0 1px rgba(255, 255, 255, 0.06),
-      0 2.4rem 5rem rgba(2, 6, 18, 0.45);
-
-    &::before {
-      inset: clamp(2.4rem, 9.4vw, 7.6rem);
-    }
-  }
-}

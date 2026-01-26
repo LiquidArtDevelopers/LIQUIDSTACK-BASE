@@ -1740,7 +1740,7 @@
         "text": "Scroll para rotar"
     },
     "sectionDiskSlider01_00_slidea_img": {
-        "src": "assets/img/dummy/jornadas-hettich-2560.avif",
+        "src": "assets/img/dummy/dummy01.avif",
         "alt": "Superficie líquida deformando una imagen tecnológica",
         "title": "Disco líquido deformando imagen"
     },
@@ -1748,7 +1748,7 @@
         "text": "Distorsión líquida"
     },
     "sectionDiskSlider01_00_slideb_img": {
-        "src": "assets/img/dummy/dummy_2560.avif",
+        "src": "assets/img/dummy/dummy02.avif",
         "alt": "Disco central revelando una nueva escena digital",
         "title": "Transición WebGL con disco"
     },
@@ -1756,7 +1756,7 @@
         "text": "Revelado progresivo"
     },
     "sectionDiskSlider01_00_slidec_img": {
-        "src": "assets/img/dummy/dummy_1800.avif",
+        "src": "assets/img/dummy/dummy03.avif",
         "alt": "Ondas circulares sobre un fondo oscuro",
         "title": "Ondas circulares sobre fondo"
     },
@@ -1764,7 +1764,7 @@
         "text": "Ondas y relieve"
     },
     "sectionDiskSlider01_00_slided_img": {
-        "src": "assets/img/dummy/dummy_1800.avif",
+        "src": "assets/img/dummy/dummy04.avif",
         "alt": "Textura abstracta atravesada por un disco luminoso",
         "title": "Textura abstracta con disco"
     },
