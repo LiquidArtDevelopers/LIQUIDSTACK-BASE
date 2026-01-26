@@ -37,10 +37,10 @@ function controller_sectionDiskSlider01(int $i = 0, array $params = []): string
         '{hint-text}'         => $hintText,
         '{slides}'            => '',
         '{center-items}'      => '',
-        '{step-vh}'           => '160',
+        '{step-vh}'           => '100',
         '{disk-radius}'       => '0.48',
         '{disk-strength}'     => '0.75',
-        '{disk-scroll-power}' => '1.1',
+        '{disk-scroll-power}' => '1.6',
     ];
 
     $letters    = range('a', 'z');

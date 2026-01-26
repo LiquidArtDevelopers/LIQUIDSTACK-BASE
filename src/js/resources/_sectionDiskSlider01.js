@@ -2,6 +2,43 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import * as THREE from 'three';
 
+const inputState = {
+  last: performance.now(),
+};
+let inputListenersReady = false;
+
+function markInput() {
+  inputState.last = performance.now();
+}
+
+function ensureInputListeners() {
+  if (inputListenersReady) {
+    return;
+  }
+  inputListenersReady = true;
+  window.addEventListener('wheel', markInput, { passive: true });
+  window.addEventListener('touchstart', markInput, { passive: true });
+  window.addEventListener('touchmove', markInput, { passive: true });
+  window.addEventListener(
+    'keydown',
+    (event) => {
+      const keys = [
+        'ArrowDown',
+        'ArrowUp',
+        'PageDown',
+        'PageUp',
+        'Home',
+        'End',
+        ' ',
+      ];
+      if (keys.includes(event.key)) {
+        markInput();
+      }
+    },
+    { passive: true }
+  );
+}
+
 const VERTEX_SHADER = `
   varying vec2 vUv;
 
@@ -137,16 +174,23 @@ function updateProgressUi(progressValue, ringEl) {
   if (!ringEl) {
     return;
   }
-  const radius = Number.parseFloat(ringEl.getAttribute('r') || '0');
-  if (!Number.isFinite(radius) || radius <= 0) {
+  if (ringEl.hasAttribute('pathLength')) {
+    ringEl.removeAttribute('pathLength');
+  }
+  const circumference =
+    Number.parseFloat(ringEl.dataset.circumference || '') ||
+    (Number.isFinite(Number.parseFloat(ringEl.getAttribute('r') || '0'))
+      ? 2 * Math.PI * Number.parseFloat(ringEl.getAttribute('r') || '0')
+      : 0);
+  if (!Number.isFinite(circumference) || circumference <= 0) {
     return;
   }
-  const circumference = 2 * Math.PI * radius;
   const clamped = Math.max(0, Math.min(1, progressValue));
-
-  const dash = circumference * clamped;
-  ringEl.style.strokeDasharray = `${dash} ${circumference * 2}`;
+  const dash = Math.max(0.0001, circumference * clamped);
+  const gap = Math.max(0.0001, circumference - dash);
+  ringEl.style.strokeDasharray = `${dash} ${gap}`;
   ringEl.style.strokeDashoffset = '0';
+  ringEl.style.opacity = clamped === 0 ? '0' : '1';
 }
 
 function getNextIndex(index, total) {
@@ -160,7 +204,11 @@ function easeInOutQuint(t) {
   return 1 - Math.pow(-2 * t + 2, 5) / 2;
 }
 
-function inverseEaseInOut(easeFn, p) {
+function easeOutQuint(t) {
+  return 1 - Math.pow(1 - t, 5);
+}
+
+function inverseEase(easeFn, p) {
   const clamped = Math.max(0, Math.min(1, p));
   let low = 0;
   let high = 1;
@@ -236,6 +284,7 @@ export default function initSectionDiskSlider01() {
   if (sections.length === 0) {
     return;
   }
+  ensureInputListeners();
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -322,11 +371,9 @@ export default function initSectionDiskSlider01() {
     scene.add(mesh);
 
     let textures = [];
-    let progressTarget = 0;
     let currentIndex = 0;
     let scrollRaw = 0;
     let lastRaw = 0;
-    let lastActiveTime = performance.now();
     let wasIdle = false;
     let outerRadius = uniforms.uRadius.value;
     let innerRadius = uniforms.uInnerRadius.value;
@@ -334,7 +381,11 @@ export default function initSectionDiskSlider01() {
     let autoPhase = 0;
     let autoProgress = 0;
     let autoHold = 0;
+    let autoMode = 'forward';
     let lastBaseIndex = 0;
+    let scrollOffset = 0;
+    let rewindStartProgress = 0;
+    let rewindDuration = 0;
 
     const updateSize = () => {
       const rect = stage.getBoundingClientRect();
@@ -377,7 +428,8 @@ export default function initSectionDiskSlider01() {
       uniforms.uTexture1.value = textures[safeNext];
     };
 
-    const stepVh = clampFloat(section.dataset.diskStepVh, 110, 280, 175);
+    const stepVh = clampFloat(section.dataset.diskStepVh, 80, 240, 100);
+    const scrollPower = clampFloat(section.dataset.diskScrollPower, 0.6, 3, 1.6);
 
     const syncProgressRadius = () => {
       if (!progressRing || !overlayDisk) {
@@ -389,6 +441,7 @@ export default function initSectionDiskSlider01() {
       const radiusPx = Math.max(2, size * 0.5 * ratio - 0.5);
       const viewRadius = (radiusPx / size) * 100;
       progressRing.setAttribute('r', viewRadius.toFixed(3));
+      progressRing.dataset.circumference = (2 * Math.PI * radiusPx).toFixed(3);
     };
 
     let trigger = null;
@@ -396,19 +449,20 @@ export default function initSectionDiskSlider01() {
       trigger?.kill();
       const totalSlides = textures.length;
       const segments = Math.max(1, totalSlides);
-      const endDistance = window.innerHeight * (stepVh / 100) * segments;
+      const power = Math.max(0.1, scrollPower);
+      const endDistance = (window.innerHeight * (stepVh / 100) * segments) / power;
 
       trigger = ScrollTrigger.create({
         trigger: section,
         start: 'top top',
         end: `+=${endDistance}`,
         pin: true,
-        scrub: 0.9,
+        scrub: true,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
           const maxRaw = segments - 0.0001;
-          scrollRaw = Math.min(maxRaw, Math.max(0, self.progress * segments));
-          lastActiveTime = performance.now();
+          const progress = self.progress;
+          scrollRaw = Math.min(maxRaw, Math.max(0, progress * segments));
         },
         onRefresh: () => {
           updateSize();
@@ -420,6 +474,7 @@ export default function initSectionDiskSlider01() {
 
     const clock = new THREE.Clock();
     const autoTravel = 1.2;
+    const autoRewind = 3;
     const autoHoldDelay = 4;
 
     const renderLoop = () => {
@@ -427,43 +482,74 @@ export default function initSectionDiskSlider01() {
       uniforms.uTime.value += delta;
 
       const segments = Math.max(1, textures.length);
-      const idleFor = (performance.now() - lastActiveTime) / 1000;
-      const isIdle = idleFor > 0.6;
+      const idleFor = (performance.now() - inputState.last) / 1000;
+      const isIdle = idleFor > 0.18;
 
       if (isIdle) {
         if (!wasIdle) {
           autoIndex = Math.min(segments - 1, Math.max(0, Math.floor(lastRaw)));
           autoProgress = Math.max(0, Math.min(1, lastRaw - autoIndex));
-          autoPhase = inverseEaseInOut(easeInOutQuint, autoProgress);
+          autoMode = autoProgress >= 0.5 ? 'forward' : 'rewind';
           autoHold = 0;
+          if (autoProgress <= 0 && autoMode === 'rewind') {
+            autoMode = 'hold-start';
+            autoHold = autoHoldDelay;
+          }
+          if (autoMode === 'rewind') {
+            rewindStartProgress = Math.max(0, Math.min(0.5, autoProgress));
+            const rewindScale = rewindStartProgress > 0 ? rewindStartProgress / 0.5 : 0;
+            rewindDuration = autoRewind * Math.max(0.2, rewindScale);
+            autoPhase = 0;
+          } else {
+            autoPhase = inverseEase(easeInOutQuint, autoProgress);
+          }
         }
-        if (autoHold > 0) {
+
+        if (autoMode === 'hold-start' || autoMode === 'hold-end') {
           autoHold = Math.max(0, autoHold - delta);
-          if (autoHold === 0 && autoProgress >= 1) {
-            autoIndex = (autoIndex + 1) % segments;
+          if (autoHold === 0) {
+            if (autoMode === 'hold-end') {
+              autoIndex = (autoIndex + 1) % segments;
+            }
             autoPhase = 0;
             autoProgress = 0;
+            autoMode = 'forward';
           }
-        } else {
+        } else if (autoMode === 'forward') {
           autoPhase = Math.min(1, autoPhase + delta / autoTravel);
           autoProgress = easeInOutQuint(autoPhase);
           if (autoPhase >= 1) {
             autoProgress = 1;
             autoHold = autoHoldDelay;
+            autoMode = 'hold-end';
+          }
+        } else if (autoMode === 'rewind') {
+          const duration = rewindDuration > 0 ? rewindDuration : autoRewind;
+          autoPhase = Math.min(1, autoPhase + delta / duration);
+          autoProgress = rewindStartProgress * (1 - easeOutQuint(autoPhase));
+          if (autoPhase >= 1) {
+            autoProgress = 0;
+            autoHold = autoHoldDelay;
+            autoMode = 'hold-start';
           }
         }
       } else {
-        const maxRaw = Math.max(0, Math.min(segments - 0.0001, scrollRaw));
-        autoIndex = Math.min(segments - 1, Math.floor(maxRaw));
-        autoProgress = Math.max(0, Math.min(1, maxRaw - autoIndex));
+        const manualRaw = Math.max(0, Math.min(segments, scrollRaw + scrollOffset));
+        autoIndex = Math.min(segments - 1, Math.floor(manualRaw));
+        autoProgress = Math.max(0, Math.min(1, manualRaw - autoIndex));
         autoHold = 0;
-        autoPhase = inverseEaseInOut(easeInOutQuint, autoProgress);
+        autoMode = 'manual';
+        autoPhase = inverseEase(easeInOutQuint, autoProgress);
       }
       wasIdle = isIdle;
 
-      const rawTarget = isIdle ? autoIndex + autoProgress : scrollRaw;
-      const rawDiff = rawTarget - lastRaw;
-      lastRaw = rawTarget;
+      if (isIdle) {
+        scrollOffset = lastRaw - scrollRaw;
+      }
+      const rawTarget = isIdle ? autoIndex + autoProgress : scrollRaw + scrollOffset;
+      const clampedTarget = Math.min(segments, Math.max(0, rawTarget));
+      const rawDiff = clampedTarget - lastRaw;
+      lastRaw = clampedTarget;
 
       const rawForSlides = Math.min(segments, Math.max(0, lastRaw));
       const rawForRing = rawForSlides;
@@ -475,10 +561,9 @@ export default function initSectionDiskSlider01() {
         setSlidePair(baseIndex);
       }
 
-      progressTarget = localProgress;
-      if (baseChanged) {
-        uniforms.uProgress.value = localProgress;
-        progressTarget = localProgress;
+      const progressTarget = localProgress;
+      if (baseChanged || isIdle) {
+        uniforms.uProgress.value = progressTarget;
       } else {
         const progressEase = Math.min(1, delta * 8.6);
         uniforms.uProgress.value += (progressTarget - uniforms.uProgress.value) * progressEase;
@@ -499,6 +584,9 @@ export default function initSectionDiskSlider01() {
     loadTextures(renderer, slides)
       .then((loadedTextures) => {
         textures = loadedTextures;
+        textures.forEach((texture) => {
+          renderer.initTexture?.(texture);
+        });
         section.classList.add('is-ready');
         updateSize();
         syncDiskSize();
