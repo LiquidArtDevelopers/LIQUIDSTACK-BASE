@@ -173,7 +173,11 @@
                 ]);
                 ?>
 
-
+                <?php
+                echo controller('sectionDiskSlider01', 0, [
+                    'items' => 3,
+                ]);
+                ?>
 
                 <?php
                 // moduleH2Type01 Refactorizado (fondo oscuro y animación)
@@ -268,7 +272,7 @@
 
                                         
                     <?php
-                    echo controller('art03', 0, ['items' => 4]);
+                    echo controller('art03', 0, ['items' => 3]);
                     ?>
 
 
@@ -279,7 +283,7 @@
 
                     <?php
                     // art05-2 Refactorizado (instancia 00)
-                    echo controller('art05', 0, ['items' => 4]);
+                    echo controller('art05', 0, ['items' => 3]);
                     ?>
 
                     <?php
@@ -404,7 +408,7 @@
 
                     <?php
                     // artSlider02 Refactorizado (instancia 00)
-                    echo controller('artSlider02', 0, ['items' => 4]);
+                    echo controller('artSlider02', 0, ['items' => 3]);
                     ?>
                     
 
