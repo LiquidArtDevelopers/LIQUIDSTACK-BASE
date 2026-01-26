@@ -386,6 +386,8 @@ export default function initSectionDiskSlider01() {
     let scrollOffset = 0;
     let rewindStartProgress = 0;
     let rewindDuration = 0;
+    let lastScrollRaw = 0;
+    let lastScrollTime = performance.now();
 
     const updateSize = () => {
       const rect = stage.getBoundingClientRect();
@@ -450,7 +452,7 @@ export default function initSectionDiskSlider01() {
       const totalSlides = textures.length;
       const segments = Math.max(1, totalSlides);
       const power = Math.max(0.1, scrollPower);
-      const endDistance = (window.innerHeight * (stepVh / 100) * segments) / power;
+      const endDistance = window.innerHeight * (stepVh / 100) * segments * power;
 
       trigger = ScrollTrigger.create({
         trigger: section,
@@ -463,6 +465,24 @@ export default function initSectionDiskSlider01() {
           const maxRaw = segments - 0.0001;
           const progress = self.progress;
           scrollRaw = Math.min(maxRaw, Math.max(0, progress * segments));
+          if (Math.abs(scrollRaw - lastScrollRaw) > 0.00005 || Math.abs(self.getVelocity()) > 4) {
+            lastScrollTime = performance.now();
+            lastScrollRaw = scrollRaw;
+          }
+        },
+        onEnter: () => {
+          lastRaw = scrollRaw;
+          scrollOffset = 0;
+          autoHold = 0;
+          autoMode = 'manual';
+          wasIdle = false;
+        },
+        onEnterBack: () => {
+          lastRaw = scrollRaw;
+          scrollOffset = 0;
+          autoHold = 0;
+          autoMode = 'manual';
+          wasIdle = false;
         },
         onRefresh: () => {
           updateSize();
@@ -482,8 +502,9 @@ export default function initSectionDiskSlider01() {
       uniforms.uTime.value += delta;
 
       const segments = Math.max(1, textures.length);
-      const idleFor = (performance.now() - inputState.last) / 1000;
-      const isIdle = idleFor > 0.18;
+      const lastActivity = Math.max(inputState.last, lastScrollTime);
+      const idleFor = (performance.now() - lastActivity) / 1000;
+      const isIdle = idleFor > 0.08;
 
       if (isIdle) {
         if (!wasIdle) {
