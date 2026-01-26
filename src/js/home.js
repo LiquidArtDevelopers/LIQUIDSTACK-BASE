@@ -1,9 +1,7 @@
 import '../scss/home.scss';
-import './_global.js';
-import initSectionDiskSlider01 from './resources/_sectionDiskSlider01.js';
+import "./_global.js"
 
-const documentElement = document;
+const midocumentoHTML = document
+midocumentoHTML.addEventListener('DOMContentLoaded',()=>{
 
-documentElement.addEventListener('DOMContentLoaded', () => {
-  initSectionDiskSlider01();
 });
