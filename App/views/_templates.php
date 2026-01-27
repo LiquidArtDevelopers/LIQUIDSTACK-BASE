@@ -177,6 +177,7 @@
                 echo controller('sectionDiskSlider01', 0, [
                     'items' => 5,
                     '{disk-hold-delay}' => '2',
+                    '{disk-strength}' => '1.1',
                 ]);
                 ?>
 
