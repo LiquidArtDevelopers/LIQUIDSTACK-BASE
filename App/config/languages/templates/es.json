@@ -549,9 +549,6 @@
     "art03_00_c_p": {
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
     },
-    "art03_00_headerSecondary_d": {
-        "text": "Planes de continuidad certificados ISO"
-    },
     "art03_00_d_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Sala de crisis ejecuta planes de contingencia certificados",
@@ -1386,9 +1383,6 @@
     "art05_00_c_firma": {
         "text": "Uxue Garaia"
     },
-    "art05_00_headerSecondary_d": {
-        "text": "Industria alimentaria optimiza autoconsumo frío"
-    },
     "art05_00_d_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
         "alt": "Operario ajusta paneles solares en cubierta logística",
@@ -1730,6 +1724,7 @@
         "href": "#basic",
         "title": "Get Started"
     },
+
     "sectionDiskSlider01_00_headerPrimary": {
         "text": "Slider WebGL con disco líquido"
     },
@@ -1771,16 +1766,27 @@
     "sectionDiskSlider01_00_slided_caption": {
         "text": "Cambio de escena"
     },
-  "sectionDiskSlider01_00_slidea_kicker": {
-    "text": "Residencial"
-  },
-  "sectionDiskSlider01_00_slideb_kicker": {
-    "text": "Showroom"
-  },
-  "sectionDiskSlider01_00_slidec_kicker": {
-    "text": "Eventos"
-  },
-  "sectionDiskSlider01_00_slided_kicker": {
-    "text": "Arquitectura"
-  }
+    "sectionDiskSlider01_00_slidea_kicker": {
+        "text": "Residencial"
+    },
+    "sectionDiskSlider01_00_slideb_kicker": {
+        "text": "Showroom"
+    },
+    "sectionDiskSlider01_00_slidec_kicker": {
+        "text": "Eventos"
+    },
+    "sectionDiskSlider01_00_slided_kicker": {
+        "text": "Arquitectura"
+    },
+    "sectionDiskSlider01_00_slidee_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Superficie líquida deformando una imagen tecnológica",
+        "title": "Disco líquido deformando imagen"
+    },
+    "sectionDiskSlider01_00_slidee_caption": {
+        "text": "Distorsión líquida"
+    },
+    "sectionDiskSlider01_00_slidee_kicker": {
+        "text": "Residencial"
+    }
 }

@@ -175,8 +175,8 @@
 
                 <?php
                 echo controller('sectionDiskSlider01', 0, [
-                    'items' => 4,
-                    '{disk-hold-delay}' => '8',
+                    'items' => 5,
+                    '{disk-hold-delay}' => '2',
                 ]);
                 ?>
 
