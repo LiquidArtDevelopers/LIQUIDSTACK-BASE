@@ -198,6 +198,29 @@
                 ?>
 
                 <?php
+                // Works skew controls (min/max):
+                // - {skew-max}: 2 - 30 (deg)
+                // - {skew-factor}: 6 - 30 (mas alto = menos sesgado)
+                // - {skew-text-factor}: 0.2 - 1 (multiplicador de texto)
+                // - {skew-ease}: 0.02 - 0.4
+                // - {skew-return}: 0.02 - 0.6 (mas alto = vuelve antes)
+                // - {skew-media-shift}: 0 - 160 (px)
+                // - {skew-text-shift}: 0 - 500 (px)
+                // - {skew-direction}: -1 o 1
+                echo controller('artWorksSkew01', 0, [
+                    'items' => 4,
+                    '{skew-max}' => '2',
+                    '{skew-factor}' => '14',
+                    '{skew-text-factor}' => '0.45',
+                    '{skew-ease}' => '0.12',
+                    '{skew-return}' => '0.22',
+                    '{skew-media-shift}' => '40',
+                    '{skew-text-shift}' => '500',
+                    '{skew-direction}' => '-1',
+                ]);
+                ?>
+
+                <?php
                 // moduleH2Type01 Refactorizado (fondo oscuro y animación)
                 $h2 = controller('moduleH2Type01', 0);
                 ?>
