@@ -1788,5 +1788,78 @@
     },
     "sectionDiskSlider01_00_slidee_kicker": {
         "text": "Residencial"
+    },
+
+    "sectionSkewGallery01_00_headerPrimary": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_intro": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itema_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "",
+        "title": ""
+    },
+    "sectionSkewGallery01_00_itema_title": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itema_text": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemb_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "",
+        "title": ""
+    },
+    "sectionSkewGallery01_00_itemb_title": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemb_text": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemc_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "",
+        "title": ""
+    },
+    "sectionSkewGallery01_00_itemc_title": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemc_text": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemd_img": {
+        "src": "assets/img/dummy/dummy04.avif",
+        "alt": "",
+        "title": ""
+    },
+    "sectionSkewGallery01_00_itemd_title": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemd_text": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_iteme_img": {
+        "src": "assets/img/dummy/dummy05.avif",
+        "alt": "",
+        "title": ""
+    },
+    "sectionSkewGallery01_00_iteme_title": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_iteme_text": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemf_img": {
+        "src": "assets/img/dummy/dummy06.avif",
+        "alt": "",
+        "title": ""
+    },
+    "sectionSkewGallery01_00_itemf_title": {
+        "text": ""
+    },
+    "sectionSkewGallery01_00_itemf_text": {
+        "text": ""
     }
 }

@@ -176,8 +176,24 @@
                 <?php
                 echo controller('sectionDiskSlider01', 0, [
                     'items' => 5,
-                    '{disk-hold-delay}' => '2',
+                    '{disk-hold-delay}' => '1',
                     '{disk-strength}' => '1.1',
+                    '{data-skew-max}' => '0.1',
+                ]);
+                ?>
+
+                <?php
+                // Skew controls (min/max):
+                // - {skew-max}: 4 - 40 (deg)
+                // - {skew-factor}: 6 - 30 (más alto = menos sesgado)
+                // - {skew-direction}: -1 o 1
+                // {skew-return} (0.02–0.6): más alto = vuelve antes.
+                echo controller('sectionSkewGallery01', 0, [
+                    'items' => 4,
+                    '{skew-max}' => '2',
+                    '{skew-factor}' => '15',
+                    '{skew-direction}' => '-1',
+                    '{skew-return}' => '0.03',
                 ]);
                 ?>
 
