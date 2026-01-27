@@ -42,6 +42,20 @@ function controller_sectionDiskSlider01(int $i = 0, array $params = []): string
         '{disk-strength}'     => '0.75',
         '{disk-scroll-power}' => '1.3',
         '{disk-hold-delay}'   => '4',
+        '{disk-parallax-shift}' => '14',
+        '{disk-noise-strength}' => '0.55',
+        '{disk-noise-scale}'    => '2.6',
+        '{disk-noise-speed}'    => '0.55',
+        '{disk-noise-edge}'     => '0.45',
+        '{disk-mask-sin-strength}'  => '0.35',
+        '{disk-mask-sin-speed}'     => '1',
+        '{disk-mask-sin-frequency}' => '2.4',
+        '{disk-mask-softness}'      => '0.08',
+        '{disk-vignette-strength}'  => '0.32',
+        '{disk-vignette-power}'     => '1.35',
+        '{disk-edge-color}'         => '#dce8ff',
+        '{disk-edge-mix}'           => '0.28',
+        '{disk-mouse-strength}'     => '0.5',
     ];
 
     $letters    = range('a', 'z');

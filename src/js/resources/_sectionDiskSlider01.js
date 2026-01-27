@@ -63,6 +63,21 @@ const FRAGMENT_SHADER = `
   uniform float uTime;
   uniform float uIdleMix;
   uniform float uEdgeSoftness;
+  uniform vec2 uMouse;
+  uniform float uMouseStrength;
+  uniform float uParallaxStrength;
+  uniform float uNoiseStrength;
+  uniform float uNoiseScale;
+  uniform float uNoiseSpeed;
+  uniform float uNoiseEdge;
+  uniform float uMaskSinStrength;
+  uniform float uMaskSinSpeed;
+  uniform float uMaskSinFrequency;
+  uniform float uMaskSoftness;
+  uniform float uVignetteStrength;
+  uniform float uVignettePower;
+  uniform vec3 uEdgeColor;
+  uniform float uEdgeMix;
 
   vec2 coverUv(vec2 uv, vec2 resolution) {
     float aspect = resolution.x / max(resolution.y, 1.0);
@@ -85,7 +100,7 @@ const FRAGMENT_SHADER = `
     return outer * inner;
   }
 
-  float arcMask(float angle, float progress, float padding) {
+  float arcMask(float angle, float progress, float padding, float softness, float jitter) {
     float clamped = clamp(progress, 0.0, 1.0);
     if (clamped >= 0.9995) {
       return 1.0;
@@ -93,11 +108,68 @@ const FRAGMENT_SHADER = `
     float sweep = clamped * (6.28318530718 - padding);
     float startAngle = angle - 1.57079632679;
     float wrapped = mod(-startAngle + 6.28318530718, 6.28318530718);
-    return step(wrapped, sweep);
+    float edge = sweep - wrapped + jitter;
+    return smoothstep(-softness, softness, edge);
+  }
+
+  vec3 mod289(vec3 x) {
+    return x - floor(x * (1.0 / 289.0)) * 289.0;
+  }
+
+  vec2 mod289(vec2 x) {
+    return x - floor(x * (1.0 / 289.0)) * 289.0;
+  }
+
+  vec3 permute(vec3 x) {
+    return mod289(((x * 34.0) + 1.0) * x);
+  }
+
+  float snoise(vec2 v) {
+    const vec4 C = vec4(
+      0.211324865405187,
+      0.366025403784439,
+      -0.577350269189626,
+      0.024390243902439
+    );
+
+    vec2 i = floor(v + dot(v, C.yy));
+    vec2 x0 = v - i + dot(i, C.xx);
+
+    vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+    vec4 x12 = x0.xyxy + C.xxzz;
+    x12.xy -= i1;
+
+    i = mod289(i);
+    vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+
+    vec3 m = max(0.5 - vec3(dot(x0, x0), dot(x12.xy, x12.xy), dot(x12.zw, x12.zw)), 0.0);
+    m *= m;
+    m *= m;
+
+    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+    vec3 h = abs(x) - 0.5;
+    vec3 ox = floor(x + 0.5);
+    vec3 a0 = x - ox;
+
+    m *= 1.79284291400159 - 0.85373472095314 * (a0 * a0 + h * h);
+
+    vec3 g;
+    g.x = a0.x * x0.x + h.x * x0.y;
+    g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+    return 130.0 * dot(m, g);
+  }
+
+  float vignette(vec2 uv) {
+    vec2 d = uv - 0.5;
+    float dist = length(d);
+    float vig = smoothstep(0.25, 0.9, dist);
+    return pow(vig, uVignettePower);
   }
 
   void main() {
     vec2 uv = coverUv(vUv, uResolution);
+    vec2 parallax = (uMouse - vec2(0.5)) * uParallaxStrength / uResolution;
+    vec2 uvOutside = clamp(uv + parallax, 0.0, 1.0);
     float aspect = uResolution.x / max(uResolution.y, 1.0);
     vec2 centered = uv - 0.5;
     centered.x *= aspect;
@@ -116,20 +188,40 @@ const FRAGMENT_SHADER = `
     float wave = sin((dist * 18.0) - (uTime * 1.4) + (uRotation * 0.8) + (swirl * 6.2831853));
     float ripple = sin((dist * 28.0) + (uTime * 1.1) - (uRotation * 1.1) + (swirl2 * 6.2831853));
     vec2 flow = normal * wave * 0.018 + tangent * ripple * 0.012;
-    vec2 offset = flow * uStrength * idleStrength * (0.35 + edgeFactor * 0.65) * ring;
+    float noiseTime = uTime * uNoiseSpeed;
+    float noiseA = snoise(centered * uNoiseScale + noiseTime);
+    float noiseB = snoise(centered * (uNoiseScale * 1.7) - noiseTime * 1.3);
+    float noise = (noiseA * 0.65 + noiseB * 0.35);
+    float mouseDist = length(uMouse - vec2(0.5));
+    float mouseBoost = 1.0 + mouseDist * uMouseStrength;
+    vec2 noiseOffset = (normal * noise * 0.02 + tangent * noise * 0.014) * uNoiseStrength * mouseBoost;
 
-    vec4 base0 = texture2D(uTexture0, clamp(uv, 0.0, 1.0));
-    vec4 base1 = texture2D(uTexture1, clamp(uv, 0.0, 1.0));
+    vec2 offset = flow * uStrength * idleStrength * (0.35 + edgeFactor * 0.65) * ring;
+    offset += noiseOffset * idleStrength * ring;
+
+    vec4 base0 = texture2D(uTexture0, uvOutside);
+    vec4 base1 = texture2D(uTexture1, uvOutside);
     vec4 distorted0 = texture2D(uTexture0, clamp(uv + offset, 0.0, 1.0));
     vec4 distorted1 = texture2D(uTexture1, clamp(uv + offset, 0.0, 1.0));
 
     float outsideMix = smoothstep(0.0, 1.0, uProgress);
     vec4 outsideColor = mix(base0, base1, outsideMix);
 
-    float wipe = arcMask(angle, uProgress, uArcPadding);
+    float sinJitter = sin(angle * uMaskSinFrequency + (uTime * uMaskSinSpeed)) * uMaskSinStrength;
+    float noiseJitter = noise * uNoiseEdge;
+    float jitter = (sinJitter + noiseJitter) * (0.4 + edgeFactor * 0.6);
+    float wipe = arcMask(angle, uProgress, uArcPadding, uMaskSoftness, jitter);
     vec4 insideColor = mix(distorted0, distorted1, wipe);
 
     vec4 color = mix(outsideColor, insideColor, ring);
+
+    float vig = vignette(uv);
+    color.rgb *= mix(1.0, 1.0 - vig, uVignetteStrength);
+
+    float outerEdge = smoothstep(uRadius - uEdgeSoftness * 3.0, uRadius, dist);
+    float innerEdge = 1.0 - smoothstep(uInnerRadius, uInnerRadius + uEdgeSoftness * 3.0, dist);
+    float edgeMask = max(outerEdge, innerEdge) * ring;
+    color.rgb = mix(color.rgb, uEdgeColor, edgeMask * uEdgeMix);
 
     gl_FragColor = color;
   }
@@ -143,8 +235,18 @@ function clampFloat(value, min, max, fallback) {
   return Math.min(max, Math.max(min, parsed));
 }
 
+function parseColor(value, fallback = '#ffffff') {
+  const color = new THREE.Color();
+  try {
+    color.set(value || fallback);
+  } catch (error) {
+    color.set(fallback);
+  }
+  return color;
+}
+
 function initPointerParallax(section) {
-  const maxShift = clampFloat(section.dataset.diskParallaxShift, 0, 40, 12);
+  const maxShift = clampFloat(section.dataset.diskParallaxShift, 0, 40, 0);
   if (!Number.isFinite(maxShift) || maxShift <= 0) {
     return;
   }
@@ -206,6 +308,43 @@ function initPointerParallax(section) {
 
   section.addEventListener('pointermove', onMove);
   section.addEventListener('pointerleave', onLeave);
+}
+
+function initMouseControl(stage) {
+  const mouse = {
+    x: 0.5,
+    y: 0.5,
+    tx: 0.5,
+    ty: 0.5,
+  };
+
+  if (!stage) {
+    return mouse;
+  }
+
+  const onMove = (event) => {
+    if (event.pointerType && event.pointerType !== 'mouse') {
+      return;
+    }
+    const rect = stage.getBoundingClientRect();
+    if (!rect.width || !rect.height) {
+      return;
+    }
+    const relX = (event.clientX - rect.left) / rect.width;
+    const relY = (event.clientY - rect.top) / rect.height;
+    mouse.tx = Math.max(0, Math.min(1, relX));
+    mouse.ty = Math.max(0, Math.min(1, relY));
+  };
+
+  const onLeave = () => {
+    mouse.tx = 0.5;
+    mouse.ty = 0.5;
+  };
+
+  stage.addEventListener('pointermove', onMove, { passive: true });
+  stage.addEventListener('pointerleave', onLeave, { passive: true });
+
+  return mouse;
 }
 
 function resolveInnerRadius(section, outerRadius) {
@@ -388,8 +527,6 @@ export default function initSectionDiskSlider01() {
       return;
     }
 
-    initPointerParallax(section);
-
     const centerTitle = section.querySelector('[data-disk-center-title]');
     const centerKicker = section.querySelector('[data-disk-center-kicker]');
     const progressRing = section.querySelector('[data-disk-progress-ring]');
@@ -400,6 +537,7 @@ export default function initSectionDiskSlider01() {
       section.classList.add('is-static');
       return;
     }
+    const mouseState = initMouseControl(stage);
 
     let renderer;
     try {
@@ -442,6 +580,49 @@ export default function initSectionDiskSlider01() {
       uIdleMix: { value: 1 },
       uEdgeSoftness: {
         value: clampFloat(section.dataset.diskEdgeSoftness, 0.001, 0.02, 0.0035),
+      },
+      uMouse: { value: new THREE.Vector2(0.5, 0.5) },
+      uMouseStrength: {
+        value: clampFloat(section.dataset.diskMouseStrength, 0, 2, 0.5),
+      },
+      uParallaxStrength: {
+        value: clampFloat(section.dataset.diskParallaxShift, 0, 40, 14),
+      },
+      uNoiseStrength: {
+        value: clampFloat(section.dataset.diskNoiseStrength, 0, 2, 0.55),
+      },
+      uNoiseScale: {
+        value: clampFloat(section.dataset.diskNoiseScale, 0.5, 8, 2.6),
+      },
+      uNoiseSpeed: {
+        value: clampFloat(section.dataset.diskNoiseSpeed, 0, 3, 0.55),
+      },
+      uNoiseEdge: {
+        value: clampFloat(section.dataset.diskNoiseEdge, 0, 1.5, 0.45),
+      },
+      uMaskSinStrength: {
+        value: clampFloat(section.dataset.diskMaskSinStrength, 0, 1, 0.35),
+      },
+      uMaskSinSpeed: {
+        value: clampFloat(section.dataset.diskMaskSinSpeed, 0, 4, 1),
+      },
+      uMaskSinFrequency: {
+        value: clampFloat(section.dataset.diskMaskSinFrequency, 0.5, 6, 2.4),
+      },
+      uMaskSoftness: {
+        value: clampFloat(section.dataset.diskMaskSoftness, 0.01, 0.4, 0.08),
+      },
+      uVignetteStrength: {
+        value: clampFloat(section.dataset.diskVignetteStrength, 0, 1, 0.32),
+      },
+      uVignettePower: {
+        value: clampFloat(section.dataset.diskVignettePower, 0.5, 3, 1.35),
+      },
+      uEdgeColor: {
+        value: parseColor(section.dataset.diskEdgeColor, '#dce8ff'),
+      },
+      uEdgeMix: {
+        value: clampFloat(section.dataset.diskEdgeMix, 0, 1, 0.28),
       },
     };
 
@@ -524,7 +705,11 @@ export default function initSectionDiskSlider01() {
       const rect = overlayDisk.getBoundingClientRect();
       const size = Math.max(1, Math.min(rect.width, rect.height));
       const ratio = outerRadius > 0 ? innerRadius / outerRadius : 0.62;
-      const radiusPx = Math.max(2, size * 0.5 * ratio - 0.5);
+      const scaleValue = Number.parseFloat(
+        getComputedStyle(section).getPropertyValue('--disk-bg-scale')
+      );
+      const scale = Number.isFinite(scaleValue) ? Math.max(0.9, Math.min(1.2, scaleValue)) : 1;
+      const radiusPx = Math.max(2, size * 0.5 * ratio * scale);
       const viewRadius = (radiusPx / size) * 100;
       progressRing.setAttribute('r', viewRadius.toFixed(3));
       progressRing.dataset.circumference = (2 * Math.PI * radiusPx).toFixed(3);
@@ -584,6 +769,10 @@ export default function initSectionDiskSlider01() {
     const renderLoop = () => {
       const delta = Math.min(0.05, clock.getDelta());
       uniforms.uTime.value += delta;
+      const mouseEase = 0.08;
+      mouseState.x += (mouseState.tx - mouseState.x) * mouseEase;
+      mouseState.y += (mouseState.ty - mouseState.y) * mouseEase;
+      uniforms.uMouse.value.set(mouseState.x, mouseState.y);
 
       const segments = Math.max(1, textures.length);
       const lastActivity = Math.max(inputState.last, lastScrollTime);
