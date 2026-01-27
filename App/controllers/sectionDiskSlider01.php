@@ -41,6 +41,7 @@ function controller_sectionDiskSlider01(int $i = 0, array $params = []): string
         '{disk-radius}'       => '0.48',
         '{disk-strength}'     => '0.75',
         '{disk-scroll-power}' => '1.3',
+        '{disk-hold-delay}'   => '4',
     ];
 
     $letters    = range('a', 'z');

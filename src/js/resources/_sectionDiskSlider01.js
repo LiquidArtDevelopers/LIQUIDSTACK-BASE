@@ -579,7 +579,7 @@ export default function initSectionDiskSlider01() {
     const clock = new THREE.Clock();
     const autoTravel = 1.2;
     const autoRewind = 3;
-    const autoHoldDelay = 4;
+    const autoHoldDelay = clampFloat(section.dataset.diskHoldDelay, 0, 20, 4);
 
     const renderLoop = () => {
       const delta = Math.min(0.05, clock.getDelta());
