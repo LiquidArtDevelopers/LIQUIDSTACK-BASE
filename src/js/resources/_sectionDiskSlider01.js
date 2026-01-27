@@ -235,7 +235,7 @@ function collectSlides(section) {
     .filter((slide) => slide.src !== '');
 }
 
-function updateProgressUi(progressValue, ringEl) {
+function updateProgressUi(progressValue, ringEl, options = {}) {
   if (!ringEl) {
     return;
   }
@@ -251,10 +251,27 @@ function updateProgressUi(progressValue, ringEl) {
     return;
   }
   const clamped = Math.max(0, Math.min(1, progressValue));
-  const dash = Math.max(0.0001, circumference * clamped);
-  const gap = Math.max(0.0001, circumference - dash);
+  const isFull = clamped >= 0.9995;
+  let dash = circumference * clamped;
+  let gap = circumference - dash;
+  if (isFull) {
+    dash = circumference;
+    gap = 0;
+  } else {
+    dash = Math.max(0.0001, dash);
+    gap = Math.max(0.0001, gap);
+  }
+  let offset = 0;
+  if (!isFull && options.lockEnd === true) {
+    offset = dash;
+  }
   ringEl.style.strokeDasharray = `${dash} ${gap}`;
-  ringEl.style.strokeDashoffset = '0';
+  ringEl.style.strokeDashoffset = `${offset}`;
+  if (options.lockEnd === true) {
+    ringEl.style.transition = 'none';
+  } else {
+    ringEl.style.transition = '';
+  }
   ringEl.style.opacity = clamped === 0 ? '0' : '1';
 }
 
@@ -661,8 +678,13 @@ export default function initSectionDiskSlider01() {
       uniforms.uIdleMix.value = isIdle ? 0.38 : 1;
       uniforms.uRotation.value += Math.abs(rawDiff) * Math.PI * 1.05 + delta * 0.35;
 
-      const ringProgress = segments > 0 ? rawForRing / segments : 0;
-      updateProgressUi(ringProgress, progressRing);
+      let ringProgress = segments > 0 ? rawForRing / segments : 0;
+      let ringOptions = {};
+      if (isIdle && autoMode === 'hold-end' && autoIndex === segments - 1 && autoHoldDelay > 0) {
+        ringProgress = Math.max(0, Math.min(1, autoHold / autoHoldDelay));
+        ringOptions = { lockEnd: true };
+      }
+      updateProgressUi(ringProgress, progressRing, ringOptions);
 
       markSlideStates(slides, currentIndex, uniforms.uProgress.value);
       updateCenterContent(slides, currentIndex, uniforms.uProgress.value, centerTitle, centerKicker);
