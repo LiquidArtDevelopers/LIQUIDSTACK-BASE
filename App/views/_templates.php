@@ -221,6 +221,25 @@
                 ?>
 
                 <?php
+                echo controller('sectionHScroll01', 0, [
+                    'items' => 4,
+                    '{hscroll-speed}' => '1.1',
+                ]);
+                ?>
+
+                <?php
+                // Hero scroll controls:
+                // - {title-shift}: 6 - 60 (px)
+                // - {word-shift}: 4 - 40 (px)
+                echo controller('artHeroScroll01', 0, [
+                    'items' => 4,
+                    'list_items' => 3,
+                    '{title-shift}' => '28',
+                    '{word-shift}' => '18',
+                ]);
+                ?>
+
+                <?php
                 // moduleH2Type01 Refactorizado (fondo oscuro y animación)
                 $h2 = controller('moduleH2Type01', 0);
                 ?>

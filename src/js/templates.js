@@ -11,7 +11,9 @@ import initSectionParallax01 from './resources/_sectionParallax01.js'
 import initSectionParticles01 from './resources/_sectionParticles01.js'
 import initSectionDiskSlider01 from './resources/_sectionDiskSlider01.js'
 import initSectionSkewGallery01 from './resources/_sectionSkewGallery01.js'
+import initSectionHScroll01 from './resources/_sectionHScroll01.js'
 import initArtWorksSkew01 from './resources/_artWorksSkew01.js'
+import initArtHeroScroll01 from './resources/_artHeroScroll01.js'
 
 // parallax
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -42,7 +44,9 @@ doc.addEventListener('DOMContentLoaded',()=>{
     initSectionParticles01()
     initSectionDiskSlider01()
     initSectionSkewGallery01()
+    initSectionHScroll01()
     initArtWorksSkew01()
+    initArtHeroScroll01()
 
     // GSAP PARALLAX SCROLL--
     /* ── función que cambia la imagen según ancho ────────────────── */
