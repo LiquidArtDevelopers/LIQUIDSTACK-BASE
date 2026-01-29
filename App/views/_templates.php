@@ -28,18 +28,42 @@
             echo controller('hero01', 0, ['{hero01-content}' => $content]);
             echo controller('hero00', 0, ['{hero00-content}' => $content]);
             echo controller('hero02', 0, ['{hero02-content}' => $content]);
+            // Hero03 cursor parallax controls:
+            // - {mouse-enabled}: true/false activa el movimiento por mouse.
+            // - {mouse-bg}: 0 - 40 (px) movimiento de la imagen de fondo.
+            // - {mouse-brand}: 0 - 24 (px) movimiento del logo + h2.
+            echo controller('hero03', 0, [
+                '{mouse-enabled}' => 'true',
+                '{mouse-bg}' => '18',
+                '{mouse-brand}' => '8',
+            ]);
             ?>
 
             <main>
 
                 <section>
                     <?php
+                    // artScatter01 (min/max recomendados):
+                    // - data-scatter-x / data-scatter-y: 0 - 800 (px) dispersion del texto.
+                    // - data-scatter-rotate: 0 - 90 (deg, reservado).
+                    // - data-scatter-scale-min / data-scatter-scale-max: 0.3 - 6 (escala de palabras).
+                    // - data-scatter-duration-min / data-scatter-duration-max: 0.2 - 2.4 (s) duracion de entrada.
+                    // - data-scatter-offset-max: 0 - 1 (offset inicial en timeline).
+                    // - data-scatter-pin: 120 - 320 (%) distancia de pin.
+                    // Resumen: dispersa cada palabra y la reagrupa durante el scroll con pin.
+                    // Nota: los data-* se editan en el template si se quiere ajustar.
                     echo controller('artScatter01', 0);
                     ?>
                 </section>
 
                 <section>
                     <?php
+                    // artMarquee01 (min/max):
+                    // - items / items_row1 / items_row2: 0 - 26 (cantidad de items por fila).
+                    // - with_images: true/false (muestra iconos por item).
+                    // - data-marquee-speed: 6 - 40 (s) velocidad del loop (en template).
+                    // - data-direction: -1 / 1 (sentido del loop, en template).
+                    // Resumen: doble cinta de textos en bucle, con inversion de sentido al scroll.
                     echo controller('artMarquee01', 0, [
                         'items'      => 4,
                         'items_row1' => 4,
@@ -51,6 +75,9 @@
 
                 <section>
                     <?php
+                    // artScale01:
+                    // - Sin modificadores en sniper (pin + escala fijos en JS).
+                    // Resumen: video escala de 0.15 a 1 con pin, y el copy sube suavemente.
                     $scaleButton = controller('moduleButtonType01', 0);
                     echo controller('artScale01', 0, [
                         '{button-primary}' => $scaleButton,
@@ -198,7 +225,7 @@
                 ?>
 
                 <?php
-                // Works skew controls (min/max):
+                // artWorksSkew01 (min/max):
                 // - {skew-max}: 2 - 30 (deg)
                 // - {skew-factor}: 6 - 30 (mas alto = menos sesgado)
                 // - {skew-text-factor}: 0.2 - 1 (multiplicador de texto)
@@ -207,6 +234,7 @@
                 // - {skew-media-shift}: 0 - 160 (px)
                 // - {skew-text-shift}: 0 - 500 (px)
                 // - {skew-direction}: -1 o 1
+                // Resumen: tarjetas con skew dinamico y desplazamiento de media/texto.
                 echo controller('artWorksSkew01', 0, [
                     'items' => 4,
                     '{skew-max}' => '2',
@@ -228,9 +256,12 @@
                 ?>
 
                 <?php
-                // Hero scroll controls:
-                // - {title-shift}: 6 - 60 (px)
-                // - {word-shift}: 4 - 40 (px)
+                // artHeroScroll01 (min/max):
+                // - items: 1 - 26 (numero de cards).
+                // - list_items / subitems: 0 - 26 (subitems por card).
+                // - {title-shift}: 6 - 60 (px, reservado en template).
+                // - {word-shift}: 4 - 40 (px, reservado en template).
+                // Resumen: cards con titulos split/hover y palabra destacada en cabecera.
                 echo controller('artHeroScroll01', 0, [
                     'items' => 4,
                     'list_items' => 3,
@@ -462,18 +493,26 @@
                     
 
                     <?php
-                    // artSlider01 Refactorizado (instancia 00)
+                    // artSlider01 (min/max):
+                    // - items: 1 - 26 (slides).
+                    // - Autoplay: delay 6s, duracion 2s (fijo en JS).
+                    // Resumen: carrusel infinito draggable con autoplay y botones prev/next.
                     echo controller('artSlider01', 0, ['items' => 10]);
                     ?>
 
                     <?php
-                    // artSlider02 Refactorizado (instancia 00)
+                    // artSlider02 (min/max):
+                    // - items: 1 - 26 (slides).
+                    // - Autoplay: delay 6s, duracion 2s (fijo en JS).
+                    // Resumen: slider draggable con titulos en viewport y botones prev/next.
                     echo controller('artSlider02', 0, ['items' => 3]);
                     ?>
                     
 
                     <?php
-                    // artForm01 Refactorizado (instancia 00)
+                    // artForm01:
+                    // - Sin modificadores (solo copy + campos).
+                    // Resumen: formulario completo con loader, validacion y bloque lateral.
                     echo controller('artForm01', 0);
                     ?>
                     <?php
@@ -483,7 +522,9 @@
 
 
                     <?php
-                    // artZipper Refactorizado — dinámico (instancia 00)
+                    // artZipper (min/max):
+                    // - items: 1 - 26 (titulos).
+                    // Resumen: lista con animacion zipper y pin en scroll.
                     echo controller('artZipper', 0, ['items' => 5]);
                     ?>
                     <?php

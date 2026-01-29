@@ -31,13 +31,34 @@
         "src": "assets/img/dummy/dummy_900.avif"
     },
     "hero02_video_webm": {
-        "src": "/assets/video/dummy.webm"
+        "src": "assets/video/dummy/dummy.webm"
     },
     "hero02_video_mp4": {
-        "src": "/assets/video/dummy.mp4"
+        "src": "assets/video/dummy/dummy.mp4"
     },
     "hero02_video_title": {
         "title": "There is no spoon."
+    },
+    "hero03_00_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen hero cortina",
+        "title": "Imagen hero cortina"
+    },
+    "hero03_00_bg": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Imagen fondo difuminada",
+        "title": "Imagen fondo difuminada"
+    },
+    "hero03_00_logo": {
+        "src": "assets/img/logos/logo-black.svg",
+        "alt": "Liquid Art Developers",
+        "title": "Liquid Art Developers"
+    },
+    "hero03_00_h1_text": {
+        "text": "Liquid Art Developers"
+    },
+    "hero03_00_front_text": {
+        "text": "Matrix Has You"
     },
     "sect01_00_a_img01": {
         "src": "assets/img/system/bookmark-outline.svg",
@@ -1515,7 +1536,7 @@
         "text": "Choice is an illusion."
     },
     "artScatter01_00_text": {
-        "text": "Fate, it seems, is not without a sense of irony."
+        "text": "No hay destino escrito en el código, sino en cada decisión que tomas. La realidad que conoces es una jaula cómoda; abrirla exige valor, pero también verdad. Si eliges ver, el miedo se disuelve y la voluntad se vuelve arma. No te ofrezco certezas, solo el camino para descubrir quién eres. Cuando cruces el umbral, entenderás que la libertad no se recibe: se conquista con cada paso."
     },
     "artMarquee01_00_row1_item_text_a": {
         "text": "Free your mind."

@@ -31,13 +31,34 @@
         "src": "assets/img/dummy/dummy_900.avif"
     },
     "hero02_video_webm": {
-        "src": "/assets/video/dummy.webm"
+        "src": "assets/video/dummy/dummy.webm"
     },
     "hero02_video_mp4": {
-        "src": "/assets/video/dummy.mp4"
+        "src": "assets/video/dummy/dummy.mp4"
     },
     "hero02_video_title": {
         "title": "Vídeo operaciones inteligentes"
+    },
+    "hero03_00_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Hero cortina irudia",
+        "title": "Hero cortina irudia"
+    },
+    "hero03_00_bg": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Atzeko irudi lausotua",
+        "title": "Atzeko irudi lausotua"
+    },
+    "hero03_00_logo": {
+        "src": "assets/img/logos/logo-black.svg",
+        "alt": "Liquid Art Developers",
+        "title": "Liquid Art Developers"
+    },
+    "hero03_00_h1_text": {
+        "text": "Liquid Art Developers"
+    },
+    "hero03_00_front_text": {
+        "text": "Matrix Has You"
     },
     "sect01_00_a_img01": {
         "src": "assets/img/system/bookmark-outline.svg",
