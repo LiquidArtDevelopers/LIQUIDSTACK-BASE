@@ -1578,6 +1578,97 @@
         "href": "#ultimate",
         "title": "Go Ultimate"
     },
+    "artPricingGlass01_00_bg_text": {
+        "text": "Matrix"
+    },
+    "artPricingGlass01_00_headerSecondary_a": {
+        "text": "Free"
+    },
+    "artPricingGlass01_00_a_price": {
+        "text": "$0/mo"
+    },
+    "artPricingGlass01_00_a_sub": {
+        "text": "Starter Plan"
+    },
+    "artPricingGlass01_00_a_list_a": {
+        "text": "Access to core features"
+    },
+    "artPricingGlass01_00_a_list_b": {
+        "text": "Community email support"
+    },
+    "artPricingGlass01_00_a_list_c": {
+        "text": "Basic analytics dashboard"
+    },
+    "artPricingGlass01_00_a_list_d": {
+        "text": "Up to 3 projects"
+    },
+    "artPricingGlass01_00_a_list_e": {
+        "text": "Shared templates library"
+    },
+    "artPricingGlass01_00_a_cta": {
+        "text": "Get Started",
+        "href": "#free",
+        "title": "Start with the free plan"
+    },
+    "artPricingGlass01_00_headerSecondary_b": {
+        "text": "Standard"
+    },
+    "artPricingGlass01_00_b_price": {
+        "text": "$9.99/mo"
+    },
+    "artPricingGlass01_00_b_sub": {
+        "text": "Standard Plan"
+    },
+    "artPricingGlass01_00_b_list_a": {
+        "text": "Everything in Free, plus more"
+    },
+    "artPricingGlass01_00_b_list_b": {
+        "text": "Priority email support"
+    },
+    "artPricingGlass01_00_b_list_c": {
+        "text": "Advanced analytics insights"
+    },
+    "artPricingGlass01_00_b_list_d": {
+        "text": "Unlimited projects forever"
+    },
+    "artPricingGlass01_00_b_list_e": {
+        "text": "Team collaboration tools"
+    },
+    "artPricingGlass01_00_b_cta": {
+        "text": "Upgrade Now",
+        "href": "#standard",
+        "title": "Switch to the standard plan"
+    },
+    "artPricingGlass01_00_headerSecondary_c": {
+        "text": "Pro"
+    },
+    "artPricingGlass01_00_c_price": {
+        "text": "$19.99/mo"
+    },
+    "artPricingGlass01_00_c_sub": {
+        "text": "Pro Plan"
+    },
+    "artPricingGlass01_00_c_list_a": {
+        "text": "Dedicated success manager"
+    },
+    "artPricingGlass01_00_c_list_b": {
+        "text": "Custom integrations available"
+    },
+    "artPricingGlass01_00_c_list_c": {
+        "text": "SLA response times"
+    },
+    "artPricingGlass01_00_c_list_d": {
+        "text": "Security and compliance reports"
+    },
+    "artPricingGlass01_00_c_list_e": {
+        "text": "Early access to new features"
+    },
+    "artPricingGlass01_00_c_cta": {
+        "text": "Go Pro",
+        "href": "#pro",
+        "title": "Unlock the pro experience"
+    },
+
     "artScatter01_00_label": {
         "text": "Featured clients"
     },

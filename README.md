@@ -16,6 +16,40 @@ A continuación describiremos algunas casuísticas y tips a tener en cuenta para
 
 Los recursos se sirven siempre desde `public/assets`, por lo que no se genera ninguna carpeta `dist` adicional.
 
+### Cambio de puerto local (checklist rapido)
+
+Cuando quieras mover el stack a otro puerto (por ejemplo `1309`), revisa estos 4 archivos:
+
+1. `package.json`
+   - Script `lad`:
+   - Cambiar `php -S localhost:1309 -t public` al puerto que quieras.
+
+2. `vite.config.js`
+   - En `server.origin`:
+   - Cambiar `http://localhost:1309` al nuevo puerto.
+
+3. `.env`
+   - Variable `RAIZ`:
+   - Cambiar `RAIZ=http://localhost:1309`.
+
+4. `.env.development`
+   - Variable `RAIZ`:
+   - Cambiar `RAIZ=http://localhost:1309`.
+
+Ejemplo rapido:
+
+```bash
+# Nuevo puerto
+PUERTO=1309
+```
+
+```txt
+package.json      -> php -S localhost:1309 -t public
+vite.config.js    -> origin: "http://localhost:1309"
+.env              -> RAIZ=http://localhost:1309
+.env.development  -> RAIZ=http://localhost:1309
+```
+
 ### Gestión de perfiles `.env`
 
 - El script `node scripts/swap-env.mjs <perfil>` **no** borra tu `.env`. En su lugar lee `.env.<perfil>` y sobreescribe únicamente las claves listadas (ej. `RAIZ`, `DEV_MODE`, `DISPLAY_ERROR`) dentro de tu `.env` existente. Si `.env` no existe, se crea a partir de `.env.example` para que tengas el resto de variables disponibles.

@@ -37,9 +37,47 @@
                 '{mouse-bg}' => '18',
                 '{mouse-brand}' => '8',
             ]);
+            // hero04 (WebGL fluid) - configuracion:
+            // - {hero04-quality}: 0 - 3 (0 = max, 3 = low).
+            // - {hero04-random}: true/false (splats aleatorios).
+            // - {hero04-colorful}: true/false (paleta multicolor).
+            // - {hero04-content}: placeholder libre (item interior del header).
+            echo controller('hero04', 0, [
+                '{hero04-content}' => $content,
+                '{hero04-quality}' => '0',
+                '{hero04-random}' => 'false',
+                '{hero04-colorful}' => 'true',
+            ]);
+            // hero05 (Liquid distortion) - configuracion:
+            // - {hero05-text}: texto de fondo (2-4 palabras recomendado).
+            // - {hero05-content}: placeholder libre (item interior del header).
+            // - {hero05-distortion}: 0.02 - 0.35 (fuerza de refraccion).
+            // - {hero05-chroma}: 0 - 3 (aberracion cromatica).
+            // - {hero05-damping}: 0.9 - 0.9995 (persistencia del oleaje).
+            // - {hero05-radius}: 0.02 - 0.18 (radio de impacto del cursor).
+            // - {hero05-force}: 0.2 - 3 (energia del impacto del cursor).
+            // - {hero05-sim}: 96 - 512 (resolucion de simulacion).
+            echo controller('hero05', 0, [
+                '{hero05-text}' => 'Liquid Matrix',
+                '{hero05-distortion}' => '0.15',
+                '{hero05-chroma}' => '1',
+                '{hero05-damping}' => '0.99',
+                '{hero05-radius}' => '0.03',
+                '{hero05-force}' => '1',
+                '{hero05-sim}' => '512',
+            ]);
             ?>
 
             <main>
+
+                <?php
+                // aniBackground01 (clase utilitaria):
+                // - Se aplica por clase .aniBackground01 a cualquier caja del layout.
+                // - Config JS en src/js/resources/_aniBackground01.js (ANI_BACKGROUND01_DEFAULTS).
+                // - Rango recomendado countDesktop/countTablet/countMobile: 8 - 500.
+                // Resumen: fondo WebGL con relojes en tiempo real reutilizable por clase.
+                ?>
+                <section class="aniBackground01"></section>
 
                 <section>
                     <?php
@@ -76,6 +114,7 @@
                 <section>
                     <?php
                     // artScale01:
+                    // - {button-primary}: placeholder para CTA/boton.
                     // - Sin modificadores en sniper (pin + escala fijos en JS).
                     // Resumen: video escala de 0.15 a 1 con pin, y el copy sube suavemente.
                     $scaleButton = controller('moduleButtonType01', 0);
@@ -86,6 +125,14 @@
                 </section>
 
                 <?php
+                // sectionParallax01 (min/max):
+                // - items: 1 - 26 (cards).
+                // - list_items: 0 - 26 (items por lista).
+                // - {a-list-items}, {b-list-items}... (override HTML por card).
+                // - data-parallax-shift: 0 - 40 (px) parallax por pointer (opcional en template).
+                // - data-stack-margin-rem: 0 - 6 (rem) offset del pin (opcional en template).
+                // - Títulos/CTA vienen del JSON (no hay placeholder directo de botón).
+                // Resumen: stack de cards con parallax y pin progresivo.
                 echo controller('sectionParallax01', 0, [
                     'items'      => 3,
                     'list_items' => 3,
@@ -93,6 +140,7 @@
                 ?>
 
                 <?php
+                
                 $particlesButtonPrimary   = controller('moduleButtonType01', 0);
                 $particlesButtonSecondary = controller('moduleButtonType02', 0);
 
@@ -104,15 +152,22 @@
                 $particlesStep2Text = $GLOBALS['moduleH1Type02_00_p02_text']->text ?? '';
                 $particlesStep3Text = $GLOBALS['moduleTest_00_p_text']->text ?? '';
 
-                $particlesContent = <<<HTML
-                <article data-particles-step data-particles-align="left" data-particles-shape="cube" data-particles-shape-ratio="0.94" data-particles-shape-scale="0.9" data-particles-shape-offset-x="0.26">
-                    <div class="sectionParticles01-copy">
-                        {$particlesStep1Title}
-                        <p data-lang="moduleH1Type02_00_p01_text">{$particlesStep1Text}</p>
-                        <div class="sectionParticles01-cta">{$particlesButtonPrimary}</div>
-                    </div>
-                </article>
-                <!-- MATRIX CONTROLS (min/max)
+                // sectionParticles01 (min/max):
+                // - {particles-count}: 1400 - 32000 (cantidad base).
+                // - {particles-bg-count}: 0 - 30000 (particulas de fondo).
+                // - {particles-size}: 0.6 - 3.5 (tamano particula).
+                // - {particles-depth}: 6 - 44 (profundidad).
+                // - {particles-speed}: 0.2 - 2.2 (velocidad).
+                // - {particles-shape-ratio}: 0.3 - 1 (ratio de particulas en shape).
+                // - {particles-shape-scale}: 0.25 - 1.2 (escala base del shape).
+                // - {particles-step-vh}: 80 - 240 (alto por step).
+                // - {particles-radius}: reservado (no se usa en JS).
+                // - items: array de steps (cada item -> <article data-particles-step>).
+                // - Usa claves en snake_case (ej: shape_ratio -> data-particles-shape-ratio).
+                // - "content" es el HTML interno del step (ahi puedes inyectar titulos/botones).
+                // Resumen: morph de particulas por steps con pin y animacion en scroll.
+                // MATRIX CONTROLS (min/max)
+                /*
                 SHAPE (afecta al conjunto matrix completo):
                 - data-particles-shape-ratio: % de particulas dedicadas al shape (0.3-1). Menos = menos letras+cortina.
                 - data-particles-shape-scale: escala base del shape (0.2-1.3). En matrix puede auto-aumentar para cubrir viewport.
@@ -154,53 +209,109 @@
                 - data-particles-matrix-word-image-boost: densidad de muestreo (1-10).
                 - data-particles-matrix-word-image-step: paso muestreo (1-4; 1 mas denso).
                 - data-particles-matrix-word-image-offset-x/y: desplazamiento (-0.4 a 0.4).
-                -->
-                <article data-particles-step data-particles-align="right"
-                data-particles-shape="matrix"
-                data-particles-shape-ratio="1"
-                data-particles-shape-scale="1.3"
-                data-particles-shape-offset-x="0"
-                data-particles-shape-hold="1"
-                data-particles-matrix-bg-cols="360"
-                data-particles-matrix-bg-rows="160" 
-                data-particles-matrix-bg-density="2"
-                data-particles-matrix-bg-column-density="2.2"
-                data-particles-matrix-bg-column-fill="1.6"
-                data-particles-matrix-bg-column-alpha="0.2"
-                data-particles-matrix-bg-noise-density="0.35"
-                data-particles-matrix-bg-row-spacing="1"
-                data-particles-matrix-font-scale="0.40"
-                data-particles-matrix-speed="5"
-                data-particles-matrix-word-src="/assets/img/particles/matrix.png"
-                data-particles-matrix-word-count="6000"
-                data-particles-matrix-word-letter-gap="0"
-                data-particles-matrix-word-particle-scale="1"
-                data-particles-matrix-word-image-scale="0.34"
-                data-particles-matrix-word-image-boost="8"
-                data-particles-matrix-word-image-step="1"
-                data-particles-matrix-word-image-offset-x="-0.17"
-                data-particles-matrix-word-image-offset-y="0">
-                    <div class="sectionParticles01-copy">
-                        {$particlesStep2Title}
-                        <p data-lang="moduleH1Type02_00_p02_text">{$particlesStep2Text}</p>
-                        <div class="sectionParticles01-cta">{$particlesButtonSecondary}</div>
-                    </div>
-                </article>
-                <article data-particles-step data-particles-align="left" data-particles-shape="blackhole" data-particles-shape-ratio="0.92" data-particles-shape-scale="1.1" data-particles-shape-depth="1.6" data-particles-shape-depth-jitter="0.18" data-particles-shape-offset-x="0.18" data-particles-bh-disk-inner="0.34" data-particles-bh-disk-outer="0.74" data-particles-bh-disk-thickness="0.08" data-particles-bh-halo="0.26" data-particles-bh-rim="0.16" data-particles-bh-tilt="18">
-                    <div class="sectionParticles01-copy">
-                        {$particlesStep3Title}
-                        <p data-lang="moduleTest_00_p_text">{$particlesStep3Text}</p>
-                        <div class="sectionParticles01-cta">{$particlesButtonPrimary}</div>
-                    </div>
-                </article>
-                HTML;
+                */
+                $particlesItems = [
+                    [
+                        'align' => 'left',
+                        'shape' => 'cube',
+                        'shape_ratio' => '0.94',
+                        'shape_scale' => '0.9',
+                        'shape_offset_x' => '0.26',
+                        'content' => <<<HTML
+                        <div class="sectionParticles01-copy">
+                            {$particlesStep1Title}
+                            <p data-lang="moduleH1Type02_00_p01_text">{$particlesStep1Text}</p>
+                            <div class="sectionParticles01-cta">{$particlesButtonPrimary}</div>
+                        </div>
+                        HTML,
+                    ],
+                    [
+                        'align' => 'right',
+                        'shape' => 'matrix',
+                        'shape_ratio' => '1',
+                        'shape_scale' => '1.3',
+                        'shape_offset_x' => '0',
+                        'shape_hold' => '1',
+                        'matrix_bg_cols' => '360',
+                        'matrix_bg_rows' => '160',
+                        'matrix_bg_density' => '2',
+                        'matrix_bg_column_density' => '2.2',
+                        'matrix_bg_column_fill' => '1.6',
+                        'matrix_bg_column_alpha' => '0.2',
+                        'matrix_bg_noise_density' => '0.35',
+                        'matrix_bg_row_spacing' => '1',
+                        'matrix_font_scale' => '0.40',
+                        'matrix_speed' => '5',
+                        'matrix_word_src' => '/assets/img/particles/matrix.png',
+                        'matrix_word_count' => '6000',
+                        'matrix_word_letter_gap' => '0',
+                        'matrix_word_particle_scale' => '1',
+                        'matrix_word_image_scale' => '0.34',
+                        'matrix_word_image_boost' => '8',
+                        'matrix_word_image_step' => '1',
+                        'matrix_word_image_offset_x' => '-0.17',
+                        'matrix_word_image_offset_y' => '0',
+                        'content' => <<<HTML
+                        <div class="sectionParticles01-copy">
+                            {$particlesStep2Title}
+                            <p data-lang="moduleH1Type02_00_p02_text">{$particlesStep2Text}</p>
+                            <div class="sectionParticles01-cta">{$particlesButtonSecondary}</div>
+                        </div>
+                        HTML,
+                    ],
+                    [
+                        'align' => 'left',
+                        'shape' => 'blackhole',
+                        'shape_ratio' => '0.92',
+                        'shape_scale' => '1.1',
+                        'shape_depth' => '1.6',
+                        'shape_depth_jitter' => '0.18',
+                        'shape_offset_x' => '0.18',
+                        'bh_disk_inner' => '0.34',
+                        'bh_disk_outer' => '0.74',
+                        'bh_disk_thickness' => '0.08',
+                        'bh_halo' => '0.26',
+                        'bh_rim' => '0.16',
+                        'bh_tilt' => '18',
+                        'content' => <<<HTML
+                        <div class="sectionParticles01-copy">
+                            {$particlesStep3Title}
+                            <p data-lang="moduleTest_00_p_text">{$particlesStep3Text}</p>
+                            <div class="sectionParticles01-cta">{$particlesButtonPrimary}</div>
+                        </div>
+                        HTML,
+                    ],
+                ];
 
                 echo controller('sectionParticles01', 0, [
-                    '{content}' => $particlesContent,
+                    'items' => $particlesItems,
                 ]);
                 ?>
 
                 <?php
+                // sectionDiskSlider01 (min/max):
+                // - items: 1 - 26 (slides).
+                // - {header-primary}: placeholder para titulo (opcional).
+                // - {step-vh}: 80 - 240 (alto por step).
+                // - {disk-radius}: 0.4 - 0.64 (radio del disco).
+                // - {disk-strength}: 0.2 - 1.4 (intensidad del shader).
+                // - {disk-scroll-power}: 0.6 - 3 (sensibilidad al scroll).
+                // - {disk-hold-delay}: 0 - 20 (s) pausa automatica.
+                // - {disk-parallax-shift}: 0 - 40 (px) parallax del fondo.
+                // - {disk-noise-strength}: 0 - 2.
+                // - {disk-noise-scale}: 0.5 - 8.
+                // - {disk-noise-speed}: 0 - 3.
+                // - {disk-noise-edge}: 0 - 1.5.
+                // - {disk-mask-sin-strength}: 0 - 1.
+                // - {disk-mask-sin-speed}: 0 - 4.
+                // - {disk-mask-sin-frequency}: 0.5 - 6.
+                // - {disk-mask-softness}: 0.01 - 0.4.
+                // - {disk-vignette-strength}: 0 - 1.
+                // - {disk-vignette-power}: 0.5 - 3.
+                // - {disk-edge-color}: color hex.
+                // - {disk-edge-mix}: 0 - 1.
+                // - {disk-mouse-strength}: 0 - 2.
+                // Resumen: slider circular con canvas + progresion en scroll.
                 echo controller('sectionDiskSlider01', 0, [
                     'items' => 5,
                     '{disk-hold-delay}' => '1',
@@ -210,11 +321,14 @@
                 ?>
 
                 <?php
-                // Skew controls (min/max):
+                // sectionSkewGallery01 (min/max):
+                // - items: 1 - 26 (cards).
+                // - {header-primary}: placeholder para titulo (opcional).
                 // - {skew-max}: 4 - 40 (deg)
                 // - {skew-factor}: 6 - 30 (más alto = menos sesgado)
                 // - {skew-direction}: -1 o 1
                 // {skew-return} (0.02–0.6): más alto = vuelve antes.
+                // Resumen: galeria con skew reactivo al scroll.
                 echo controller('sectionSkewGallery01', 0, [
                     'items' => 4,
                     '{skew-max}' => '2',
@@ -234,6 +348,7 @@
                 // - {skew-media-shift}: 0 - 160 (px)
                 // - {skew-text-shift}: 0 - 500 (px)
                 // - {skew-direction}: -1 o 1
+                // - {header-primary}: placeholder para titulo (opcional).
                 // Resumen: tarjetas con skew dinamico y desplazamiento de media/texto.
                 echo controller('artWorksSkew01', 0, [
                     'items' => 4,
@@ -249,6 +364,11 @@
                 ?>
 
                 <?php
+                // sectionHScroll01 (min/max):
+                // - items: 2 - 26 (cards).
+                // - {hscroll-speed}: 0.6 - 3 (multiplica distancia de scroll).
+                // - {header-primary}: placeholder para titulo (opcional).
+                // Resumen: carrusel horizontal con pin y desplazamiento por scroll.
                 echo controller('sectionHScroll01', 0, [
                     'items' => 4,
                     '{hscroll-speed}' => '1.1',
@@ -261,6 +381,7 @@
                 // - list_items / subitems: 0 - 26 (subitems por card).
                 // - {title-shift}: 6 - 60 (px, reservado en template).
                 // - {word-shift}: 4 - 40 (px, reservado en template).
+                // - {header-primary}: placeholder para titulo (opcional).
                 // Resumen: cards con titulos split/hover y palabra destacada en cabecera.
                 echo controller('artHeroScroll01', 0, [
                     'items' => 4,
@@ -489,7 +610,36 @@
                     ]);
                     ?>
 
-                    
+                    <?php
+                    // artPricingGlass01 (min/max):
+                    // - items: 1 - 26 (cards).
+                    // - list_items: 0 - 26 (beneficios por card).
+                    // - {bg-text}: texto gigante de fondo (key artPricingGlass01_00_bg_text).
+                    // - Titulos cards: artPricingGlass01_00_headerSecondary_[a..z].
+                    // - CTA cards: artPricingGlass01_00_[a..z]_cta (text/href/title).
+                    // - {glass-strength}: 0 - 80 (scale del displacement).
+                    // - {glass-noise}: 0.001 - 0.05 (ruido del turbulence).
+                    // - {glass-blur}: 0 - 12 (blur del ruido).
+                    // - {glass-alpha}: 0 - 1 (tinte del glass).
+                    // - {glass-chroma}: 0 - 3 (aberracion cromatica sutil).
+                    // - {glass-text-scale}: 0.6 - 1.6 (escala del texto de fondo).
+                    // Resumen: pricing cards con liquid glass sutil sobre el texto de fondo.
+                    echo controller('artPricingGlass01', 0, [
+                        'items' => 3,
+                        'list_items' => [
+                            'a' => 5,
+                            'b' => 5,
+                            'c' => 5
+                        ],
+                        '{glass-strength}' => '40',
+                        '{glass-noise}' => '0.005',
+                        '{glass-blur}' => '4',
+                        '{glass-alpha}' => '0.5',
+                        '{glass-chroma}' => '1',
+                        '{glass-text-scale}' => '1.6',
+                    ]);
+                    ?>
+
                     
 
                     <?php

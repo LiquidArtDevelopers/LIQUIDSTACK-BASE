@@ -390,7 +390,7 @@
         "href": "example.pdf"
     },
     "moduleH1Type01_00_h1_text": {
-        "text": "There is no spoon."
+        "text": "Liquid Art Developers"
     },
     "moduleH1Type01_00_p01_text": {
         "text": "Wake up, Neo."
@@ -907,7 +907,7 @@
         "text": "Your mind makes it real."
     },
     "art14_00_img": {
-        "src": "assets/img/logos/logo-business-b.svg",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Red pill or blue pill.",
         "title": "Red pill or blue pill."
     },
@@ -1532,6 +1532,96 @@
         "href": "#ultimate",
         "title": "Choice is an illusion."
     },
+    "artPricingGlass01_00_bg_text": {
+        "text": "Matrix"
+    },
+    "artPricingGlass01_00_headerSecondary_a": {
+        "text": "Free"
+    },
+    "artPricingGlass01_00_a_price": {
+        "text": "0 ?/mes"
+    },
+    "artPricingGlass01_00_a_sub": {
+        "text": "Plan inicial"
+    },
+    "artPricingGlass01_00_a_list_a": {
+        "text": "Acceso a funciones esenciales"
+    },
+    "artPricingGlass01_00_a_list_b": {
+        "text": "Soporte por correo comunitario"
+    },
+    "artPricingGlass01_00_a_list_c": {
+        "text": "Panel b?sico de anal?ticas"
+    },
+    "artPricingGlass01_00_a_list_d": {
+        "text": "Hasta 3 proyectos activos"
+    },
+    "artPricingGlass01_00_a_list_e": {
+        "text": "Biblioteca compartida de plantillas"
+    },
+    "artPricingGlass01_00_a_cta": {
+        "text": "Empieza ahora",
+        "href": "#free",
+        "title": "Comienza con el plan gratis"
+    },
+    "artPricingGlass01_00_headerSecondary_b": {
+        "text": "Estandar"
+    },
+    "artPricingGlass01_00_b_price": {
+        "text": "9,99 ?/mes"
+    },
+    "artPricingGlass01_00_b_sub": {
+        "text": "Plan est?ndar"
+    },
+    "artPricingGlass01_00_b_list_a": {
+        "text": "Todo lo del plan gratis"
+    },
+    "artPricingGlass01_00_b_list_b": {
+        "text": "Soporte prioritario por email"
+    },
+    "artPricingGlass01_00_b_list_c": {
+        "text": "Anal?ticas avanzadas en tiempo real"
+    },
+    "artPricingGlass01_00_b_list_d": {
+        "text": "Proyectos ilimitados para equipos"
+    },
+    "artPricingGlass01_00_b_list_e": {
+        "text": "Herramientas de colaboraci?n"
+    },
+    "artPricingGlass01_00_b_cta": {
+        "text": "Mejorar plan",
+        "href": "#standard",
+        "title": "Pasa al plan est?ndar"
+    },
+    "artPricingGlass01_00_headerSecondary_c": {
+        "text": "Pro"
+    },
+    "artPricingGlass01_00_c_price": {
+        "text": "19,99 ?/mes"
+    },
+    "artPricingGlass01_00_c_sub": {
+        "text": "Plan profesional"
+    },
+    "artPricingGlass01_00_c_list_a": {
+        "text": "Gestor de ?xito dedicado"
+    },
+    "artPricingGlass01_00_c_list_b": {
+        "text": "Integraciones personalizadas disponibles"
+    },
+    "artPricingGlass01_00_c_list_c": {
+        "text": "Tiempos de respuesta SLA"
+    },
+    "artPricingGlass01_00_c_list_d": {
+        "text": "Reportes de seguridad y cumplimiento"
+    },
+    "artPricingGlass01_00_c_list_e": {
+        "text": "Acceso anticipado a nuevas funciones"
+    },
+    "artPricingGlass01_00_c_cta": {
+        "text": "Hazte Pro",
+        "href": "#pro",
+        "title": "Desbloquea la experiencia Pro"
+    },
     "artScatter01_00_label": {
         "text": "Choice is an illusion."
     },
@@ -1767,7 +1857,7 @@
     "sectionSkewGallery01_00_itema_img": {
         "src": "assets/img/dummy/dummy01.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionSkewGallery01_00_itema_title": {
         "text": ""
@@ -1778,7 +1868,7 @@
     "sectionSkewGallery01_00_itemb_img": {
         "src": "assets/img/dummy/dummy02.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionSkewGallery01_00_itemb_title": {
         "text": ""
@@ -1789,7 +1879,7 @@
     "sectionSkewGallery01_00_itemc_img": {
         "src": "assets/img/dummy/dummy03.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionSkewGallery01_00_itemc_title": {
         "text": ""
@@ -1800,7 +1890,7 @@
     "sectionSkewGallery01_00_itemd_img": {
         "src": "assets/img/dummy/dummy04.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionSkewGallery01_00_itemd_title": {
         "text": ""
@@ -1811,7 +1901,7 @@
     "sectionSkewGallery01_00_iteme_img": {
         "src": "assets/img/dummy/dummy05.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionSkewGallery01_00_iteme_title": {
         "text": ""
@@ -1822,7 +1912,7 @@
     "sectionSkewGallery01_00_itemf_img": {
         "src": "assets/img/dummy/dummy06.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionSkewGallery01_00_itemf_title": {
         "text": ""
@@ -1848,7 +1938,7 @@
     "artWorksSkew01_00_itema_img": {
         "src": "assets/img/dummy/dummy01.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "artWorksSkew01_00_itemb_index": {
         "text": "02"
@@ -1862,7 +1952,7 @@
     "artWorksSkew01_00_itemb_img": {
         "src": "assets/img/dummy/dummy02.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "artWorksSkew01_00_itemc_index": {
         "text": "03"
@@ -1876,7 +1966,7 @@
     "artWorksSkew01_00_itemc_img": {
         "src": "assets/img/dummy/dummy03.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "artWorksSkew01_00_itemd_index": {
         "text": "04"
@@ -1890,7 +1980,7 @@
     "artWorksSkew01_00_itemd_img": {
         "src": "assets/img/dummy/dummy04.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "artWorksSkew01_00_iteme_index": {
         "text": "05"
@@ -1904,7 +1994,7 @@
     "artWorksSkew01_00_iteme_img": {
         "src": "assets/img/dummy/dummy05.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "artWorksSkew01_00_itemf_index": {
         "text": "06"
@@ -1918,26 +2008,26 @@
     "artWorksSkew01_00_itemf_img": {
         "src": "assets/img/dummy/dummy06.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "artWorksSkew01_00_itema_link": {
         "href": "#",
-        "title": "",
+        "title": "The system is watching.",
         "text": ""
     },
     "artWorksSkew01_00_itemb_link": {
         "href": "#",
-        "title": "",
+        "title": "The system is watching.",
         "text": ""
     },
     "artWorksSkew01_00_itemc_link": {
         "href": "#",
-        "title": "",
+        "title": "The system is watching.",
         "text": ""
     },
     "artWorksSkew01_00_itemd_link": {
         "href": "#",
-        "title": "",
+        "title": "The system is watching.",
         "text": ""
     },
     "sectionHScroll01_00_headerPrimary": {
@@ -1958,7 +2048,7 @@
     "sectionHScroll01_00_itema_img": {
         "src": "assets/img/dummy/dummy01.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionHScroll01_00_itemb_index": {
         "text": "02"
@@ -1972,7 +2062,7 @@
     "sectionHScroll01_00_itemb_img": {
         "src": "assets/img/dummy/dummy02.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionHScroll01_00_itemc_index": {
         "text": "03"
@@ -1986,7 +2076,7 @@
     "sectionHScroll01_00_itemc_img": {
         "src": "assets/img/dummy/dummy03.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "sectionHScroll01_00_itemd_index": {
         "text": "04"
@@ -2000,7 +2090,7 @@
     "sectionHScroll01_00_itemd_img": {
         "src": "assets/img/dummy/dummy04.avif",
         "alt": "",
-        "title": ""
+        "title": "The system is watching."
     },
     "artHeroScroll01_00_headerPrimary": {
         "text": "The Matrix Is Watching"

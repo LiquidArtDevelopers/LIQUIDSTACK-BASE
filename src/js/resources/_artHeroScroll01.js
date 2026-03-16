@@ -141,3 +141,4 @@ export default function initArtHeroScroll01() {
     initSplits(section);
   });
 }
+

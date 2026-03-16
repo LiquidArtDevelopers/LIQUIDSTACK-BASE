@@ -82,7 +82,7 @@ export default defineConfig(({ mode }) => { // Exporta la configuración princip
       outDir: "./public/", // Indica la carpeta donde Vite guardará los archivos compilados
     },
     server: { // Opciones del servidor de desarrollo
-      origin: "http://localhost:3000", // Define el origen para las URLs generadas por Vite
+      origin: "http://localhost:1309", // Define el origen para las URLs generadas por Vite
     },
   };
 });
