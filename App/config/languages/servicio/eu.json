@@ -12,15 +12,15 @@
     },
 
     "title": {
-        "text": "LAD Framework Templates"
+        "text": "Zerbitzu digitala | LiquidStack proiektua"
     },
 
     "description": {
-        "content": ""
+        "content": "Kontsultatu adibideko zerbitzu-orri modular bat, LiquidStack proiektu batean irismena, prozesua, abantailak eta ekintza-deiak egokitzeko prestatua."
     },
 
     "robots": {
-        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     },
 
     "hero00_bg_mobile": {
@@ -33,192 +33,196 @@
         "src": "assets/img/dummy/dummy_2560.avif"
     },
     "hero00_bg_fallback": {
-        "src": "assets/img/dummy/dummy_900.avif"
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "",
+        "title": "link",
+        "width": "",
+        "height": ""
     },
 
     "moduleH1Type01_00_h1_text": {
-        "text": "Encabezado H1"
+        "text": "Zure helburuetara egokitzen den zerbitzu digitala"
     },
     "moduleH1Type01_00_p01_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+        "text": "Aurkeztu zerbitzuaren balioa egitura argi, malgu eta editatzeko erraz batekin."
     },
     "moduleH1Type01_00_p02_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+        "text": "Ordeztu lagin-eduki hau benetako proiektuaren irismen, prozesu eta emaitza egiaztagarriekin."
     },
 
     "moduleH2Type01_02_h2_text": {
-        "text": "Descarga guías y recursos técnicos"
+        "text": "Inplementazioa prestatzeko baliabideak"
     },
 
     "moduleButtonType01_00_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Zerbitzu honi buruz galdetu"
     },
     "moduleButtonType01_00_cta_span": {
-        "text": "Planifica demo"
+        "text": "Informazioa eskatu"
     },
     "moduleButtonType01_00_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Aurrera gezia",
+        "title": "Kontsultara joan"
     },
 
     "art03_00_headerPrimary": {
-        "text": "Coberturas industriales premium para proteger activos estratégicos clave"
+        "text": "Fasetan egituratutako adibideko zerbitzua"
     },
     "art03_00_intro_p": {
-        "text": "Fortalecemos la resiliencia operativa con pólizas modulares que cubren maquinaria crítica, interrupciones prolongadas y requisitos normativos, asegurando continuidad financiera mientras alineamos la estrategia de riesgos con tus objetivos de crecimiento."
+        "text": "Konposizio honen bidez zerbitzu bat nola zehaztu, baliozkotu, inplementatu eta hobetu azal daiteke, txantiloia jarduera jakin bati lotu gabe."
     },
     "art03_00_headerSecondary_a": {
-        "text": "Análisis pericial para activos críticos"
+        "text": "Azterketa eta irismena"
     },
     "art03_00_a_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Equipo técnico auditando almacén de alto rendimiento",
-        "title": "Supervisión pericial con tecnología avanzada"
+        "alt": "Taldea proiektu baten eskakizunak antolatzen",
+        "title": "Irismenaren hasierako definizioa"
     },
     "art03_00_a_link": {
         "href": "#",
-        "title": "Explorar programa de aseguramiento"
+        "title": "Azterketa-fasea ezagutu"
     },
     "art03_00_a_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Bildu helburuak, hartzaileak eta mugak, diseinua hasi aurretik partekatutako lehentasunak ezartzeko."
     },
     "art03_00_headerSecondary_b": {
-        "text": "Monitorización predictiva de siniestros"
+        "text": "Diseinua eta baliozkotzea"
     },
     "art03_00_b_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Panel de control analiza riesgos operativos críticos",
-        "title": "Modelado predictivo para prevenir incidencias"
+        "alt": "Pertsonak interfaze-proposamen bat berrikusten",
+        "title": "Proposamen digital baten baliozkotzea"
     },
     "art03_00_b_link": {
         "href": "#",
-        "title": "Ver protocolos de respuesta rápida"
+        "title": "Diseinu-fasea ezagutu"
     },
     "art03_00_b_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Egiaztatu arkitektura, edukiak eta ibilbide nagusiak entrega ulergarrien eta berrikuspen mugatuen bidez."
     },
     "art03_00_headerSecondary_c": {
-        "text": "Cobertura logística y cadena global"
+        "text": "Inplementazio modularra"
     },
     "art03_00_c_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Centro logístico coordina envíos internacionales sensibles",
-        "title": "Cadena global alineada con normativas vigentes"
+        "alt": "Osagai digitalak modulutan antolatuta",
+        "title": "Osagai berrerabilgarrien bidezko inplementazioa"
     },
     "art03_00_c_link": {
         "href": "#",
-        "title": "Consultar auditoría integral anual"
+        "title": "Inplementazio-fasea ezagutu"
     },
     "art03_00_c_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Eraiki bloke bakoitza oinarri komun baten gainean, aldaketak, berrerabilpena eta etorkizuneko hedapenak errazteko."
     },
     "art03_00_headerSecondary_d": {
-        "text": "Planes de continuidad certificados ISO"
+        "text": "Neurketa eta bilakaera"
     },
     "art03_00_d_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Sala de crisis ejecuta planes de contingencia certificados",
-        "title": "Continuidad operativa avalada por auditorías ISO"
+        "alt": "Adibideko adierazleak dituen jarraipen-panela",
+        "title": "Zerbitzuaren bilakaeraren jarraipena"
     },
     "art03_00_d_link": {
         "href": "#",
-        "title": "Descubrir beneficios para plantas"
+        "title": "Hobekuntza-fasea ezagutu"
     },
     "art03_00_d_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Berrikusi funtzionamendua, jaso behar berriak eta lehenetsi hurrengo zikloari balioa emango dioten hobekuntzak."
     },
 
     "art10_00_headerPrimary": {
-        "text": "Servicios modulares para activar equipos comerciales omnicanal ágiles"
+        "text": "Hasieratik amaierara arteko prozesu argia"
     },
     "art10_00_headerSecondary_a": {
-        "text": "Diagnóstico táctico en tienda"
+        "text": "Proiektua prestatzea"
     },
     "art10_00_a_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono checklist de operaciones ágiles",
-        "title": "Verificación diaria de aperturas eficientes"
+        "alt": "Prestaketa-zerrenda baten ikonoa",
+        "title": "Proiektuaren prestaketa ordenatua"
     },
     "art10_00_a_p": {
-        "text": "Auditamos rutinas operativas y configuramos listas dinámicas de tareas para habilitar aperturas ágiles con menos incidencias durante las primeras semanas."
+        "text": "Helburuak, arduradunak eta entregagaiak adosten ditugu, erabaki bakoitzak parte-hartzaile guztiek ezagutzen duten testuingurua izan dezan."
     },
     "art10_00_headerSecondary_b": {
-        "text": "Soporte formativo bajo demanda"
+        "text": "Elkarlanean berrikustea"
     },
     "art10_00_b_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono monitor con aula virtual",
-        "title": "Panel activo de formación continua"
+        "alt": "Berrikuspen partekatu baten ikonoa",
+        "title": "Aurrerapenen elkarlaneko berrikuspena"
     },
     "art10_00_b_p": {
-        "text": "Implementamos cápsulas microlearning y seguimiento de hitos comerciales que elevaron un 19 % el ticket medio de los lanzamientos regionales."
+        "text": "Aurrerapenak etapa kudeagarrietan aurkezten ditugu, eta beharrezko aldaketak erregistratzen ditugu hurrengo blokera igaro aurretik."
     },
     "art10_00_headerSecondary_c": {
-        "text": "Automatización de reporting comercial"
+        "text": "Emaitza eta jarraipena"
     },
     "art10_00_c_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono gráfico con alertas activas",
-        "title": "Seguimiento inteligente de indicadores clave"
+        "alt": "Proiektuaren jarraipen-ikonoa",
+        "title": "Bilakaerarako prestatutako emaitza"
     },
     "art10_00_c_p": {
-        "text": "Integramos dashboards predictivos con alertas de stock y campañas para reducir un 28 % las roturas y acelerar la reposición prioritaria."
+        "text": "Soluzioa dokumentatzen dugu, eta zerbitzua behar denean mantendu, neurtu eta zabaltzeko oinarri ulergarria uzten dugu."
     },
     "art10_00_top_fill": "#ffffff",
     "art10_00_bottom_fill": "#ffffff",
 
     "art12_00_headerPrimary": {
-        "text": "Estrategias modulares que optimizan tu canal digital de ventas"
+        "text": "Proiektuaren arabera aktiba ditzakezun gaitasunak"
     },
     "art12_00_headerSecondary_a": {
-        "text": "Onboarding ágil de partners"
+        "text": "Edukien kudeaketa"
     },
     "art12_00_a_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono proceso de activación",
-        "title": "Proceso de activación guiado"
+        "alt": "Edukien kudeaketaren ikonoa",
+        "title": "Eduki editagarri eta antolatua"
     },
     "art12_00_a_imgBack": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Equipo configurando paneles colaborativos digitales",
-        "title": "Panel colaborativo listo para partners"
+        "alt": "Pertsonak interfaze batean edukiak editatzen",
+        "title": "Proiektuaren edukien edizioa"
     },
     "art12_00_a_p": {
-        "text": "Integramos catálogos y flujos legales en semanas, liberando a tu equipo comercial para enfocarse en captar distribuidores estratégicos."
+        "text": "Antolatu testuak, irudiak eta ekintza-deiak, taldeak funtsezko informazioa eguneratuta eduki dezan."
     },
     "art12_00_headerSecondary_b": {
-        "text": "Soporte proactivo multilingüe"
+        "text": "Aukerako integrazioak"
     },
     "art12_00_b_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono de asistencia continua",
-        "title": "Asistencia continua para socios"
+        "alt": "Konexio digitalen ikonoa",
+        "title": "Proiektura egokitutako integrazioak"
     },
     "art12_00_b_imgBack": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Analistas revisando panel global colaborativo",
-        "title": "Panel global activo en directo"
+        "alt": "Tresnen arteko konexioen diagrama",
+        "title": "Tresnen konexio modularra"
     },
     "art12_00_b_p": {
-        "text": "Monitorizamos incidencias y ventas en tiempo real para escalar respuestas, priorizar oportunidades premium y blindar la satisfacción de tus partners."
+        "text": "Konektatu behar diren tresnak soilik, eta mantendu kontratu argiak aurrerago ordezkatu edo zabaltzeko."
     },
     "art12_00_headerSecondary_c": {
-        "text": "Datos accionables seguros"
+        "text": "Mantentzea eta laguntza"
     },
     "art12_00_c_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono control de datos",
-        "title": "Control seguro de datos"
+        "alt": "Mantentze-lanen ikonoa",
+        "title": "Zerbitzuaren etengabeko mantentzea"
     },
     "art12_00_c_imgBack": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Dashboard con métricas protegidas críticas",
-        "title": "Dashboard protegido para escalado global"
+        "alt": "Mantentze-lan digitalen panela",
+        "title": "Mantentze-lanen jarraipena"
     },
     "art12_00_c_p": {
-        "text": "Automatizamos reporting, alertas antifraude y conciliaciones para que cada partner acceda solo a los datos relevantes y trace planes de crecimiento."
+        "text": "Planifikatu berrikuspenak, eguneratzeak eta hobekuntzak, proiektuaren benetako bilakaerara egokitutako irismen ulergarri batekin."
     },
     "art12_00_top_fill": "#ffffff",
     "art12_00_bottom_fill": "#ffffff",
@@ -241,25 +245,25 @@
     "art03_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
 
     "moduleH1Type02_00_h1_text": {
-        "text": "Logística inteligente para flotas multiorigen europeas"
+        "text": "Etapaz etapa hazteko soluzio malgua"
     },
     "moduleH1Type02_00_p01_text": {
-        "text": "Conectamos almacenes, última milla y partners europeos mediante integraciones EDI y seguimiento IoT para anticipar incidencias, redistribuir cargas y garantizar entregas just-in-time sin saturar tus recursos internos ni los equipos de atención posventa, manteniendo SLA críticos en campañas estacionales."
+        "text": "Orriak baliabide berrerabilgarriak konbinatzen ditu zerbitzua azaltzeko, haren faseak antolatzeko eta bisita bakoitza ekintza esanguratsu batera bideratzeko, negozio-eredu jakin baten mende egon gabe."
     },
     "moduleH1Type02_00_p02_text": {
-        "text": "Automatizamos previsiones de demanda, controlamos niveles de stock y activamos transportistas alternativos desde un único panel operativo, apoyándonos en analítica predictiva para reducir devoluciones, emisiones por ruta y tiempos de respuesta ante cualquier incidencia regional."
+        "text": "Edukia aldatu, moduluak berrantolatu eta gaitasun berriak aktiba ditzakezu irismena baieztatu ahala, proiektu osorako oinarri tekniko komunari eutsita."
     },
 
     "moduleButtonType01_01_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Zerbitzu honi buruz galdetu"
     },
     "moduleButtonType01_01_cta_span": {
-        "text": "Planifica demo"
+        "text": "Informazioa eskatu"
     },
     "moduleButtonType01_01_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Aurrera gezia",
+        "title": "Kontsultara joan"
     }
 }

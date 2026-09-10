@@ -13,18 +13,32 @@ return [
         ],
         '/es/showroom' => [
             'resources' => 'templates',
-            'content'   => 'showroom',
+            'content'   => 'templates',
             'view'      => '../App/views/_showroom.php'
         ],
-        "/es/descargar?file={file}" => [
-            'view' => '../App/app/downloadFile.php'
+        '/es/descargar?file={file}' => [
+            'view' => '../App/app/downloadFile.php',
+            'session' => false,
+            'sitemap' => false
         ],
-
         // Páginas comerciales
         '/' => [
             'resources' => 'home',
             'content' => 'home',
             'view' => '../App/views/home.php'
+        ],
+        '/es/blog' => [
+            'resources' => 'blog',
+            'content' => 'blog',
+            'view' => '../App/views/blog.php',
+            'session' => false
+        ],
+        '/es/blog/page/{page}' => [
+            'resources' => 'blog',
+            'content' => 'blog',
+            'view' => '../App/views/blog.php',
+            'session' => false,
+            'sitemap' => false
         ],
         '/es/servicios' => [
             'resources' => 'servicios',
@@ -41,45 +55,12 @@ return [
             'content' => 'contacto',
             'view' => '../App/views/contacto.php'
         ],
-        
-
-        // Páginas con acceso privado
-        '/es/acceso' => [
-            'resources' => 'login',
-            'content' => 'login',
-            'view' => '../App/views/login.php'
-        ],
-        '/es/area-socio' => [
-            'resources' => 'socio',
-            'content' => 'socio',
-            'view' => '../App/views/socio.php'
-        ],
-        '/es/area-socio/documentos-club' => [
-            'resources' => 'documentos',
-            'content' => 'documentos',
-            'view' => '../App/views/documentos.php'
-        ],
-        '/es/area-socio/comunicados-socios' => [
-            'resources' => 'comunicados',
-            'content' => 'comunicados',
-            'view' => '../App/views/comunicados.php'
-        ],
-
-        "/es/logout" => [
-            "view" => "../App/app/logout.php"
-        ],
-        '/es/recordar-contraseña' => [
-            'resources' => 'remember-password',
-            'content' => 'remember-password',
-            'view' => '../App/views/remember-password.php'
-        ],
-        '/es/restablecer-contraseña?t={token}' => [
-            'resources' => 'reset-password',
-            'content' => 'reset-password',
-            'view' => '../App/views/reset-password.php'
+        // Par simétrico del alias EU para preservar el mapeo entre idiomas.
+        '/es/deskargatu?file={file}' => [
+            'view' => '../App/app/downloadFile.php',
+            'session' => false,
+            'sitemap' => false
         ]
-
-        
     ],
 
     /* ====================
@@ -94,18 +75,32 @@ return [
         ],
         '/eu/showroom' => [
             'resources' => 'templates',
-            'content'   => 'showroom',
+            'content'   => 'templates',
             'view'      => '../App/views/_showroom.php'
         ],
-        "/eu/deskargatu?file={file}" => [
-            'view' => '../App/app/downloadFile.php'
+        '/eu/deskargatu?file={file}' => [
+            'view' => '../App/app/downloadFile.php',
+            'session' => false,
+            'sitemap' => false
         ],
-
         // Páginas comerciales
         '/eu' => [
             'resources' => 'home',
             'content' => 'home',
             'view' => '../App/views/home.php'
+        ],
+        '/eu/blog' => [
+            'resources' => 'blog',
+            'content' => 'blog',
+            'view' => '../App/views/blog.php',
+            'session' => false
+        ],
+        '/eu/blog/page/{page}' => [
+            'resources' => 'blog',
+            'content' => 'blog',
+            'view' => '../App/views/blog.php',
+            'session' => false,
+            'sitemap' => false
         ],
         '/eu/serbitzuak' => [
             'resources' => 'servicios',
@@ -122,43 +117,12 @@ return [
             'content' => 'contacto',
             'view' => '../App/views/contacto.php'
         ],
-
-        // Páginas con acceso privado
-        '/eu/sarrera' => [
-            'resources' => 'login',
-            'content' => 'login',
-            'view' => '../App/views/login.php'
-        ],
-        '/eu/bazkide-gunea' => [
-            'resources' => 'socio',
-            'content' => 'socio',
-            'view' => '../App/views/socio.php'
-        ],
-        '/eu/bazkide-gunea/klubeko-dokumentuak' => [
-            'resources' => 'documentos',
-            'content' => 'documentos',
-            'view' => '../App/views/documentos.php'
-        ],
-        '/eu/bazkide-gunea/oharrak-bazkideentzat' => [
-            'resources' => 'comunicados',
-            'content' => 'comunicados',
-            'view' => '../App/views/comunicados.php'
-        ],
-
-        "/eu/logout" => [
-            "view" => "../App/app/logout.php"
-        ],
-        '/eu/gogoratu-pasahitza' => [
-            'resources' => 'remember-password',
-            'content' => 'remember-password',
-            'view' => '../App/views/remember-password.php'
-        ],
-        '/eu/berrezarpen-pasahitza?t={token}' => [
-            'resources' => 'reset-password',
-            'content' => 'reset-password',
-            'view' => '../App/views/reset-password.php'
+        // Alias simétrico del endpoint canónico generado por sectTabs01.
+        '/eu/descargar?file={file}' => [
+            'view' => '../App/app/downloadFile.php',
+            'session' => false,
+            'sitemap' => false
         ]
-        
     ],
 
 ];

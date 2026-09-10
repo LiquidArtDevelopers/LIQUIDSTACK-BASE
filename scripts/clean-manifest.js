@@ -2,7 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 const outDir = path.resolve(__dirname, '../public');
-const manifestPath = path.join(outDir, 'manifest.json');
+const manifestPaths = [
+  path.join(outDir, 'manifest.json'),
+  path.join(outDir, '.vite', 'manifest.json'),
+];
 
 const removeCompiledAssets = (subDir) => {
   const dirPath = path.join(outDir, 'assets', subDir);
@@ -24,7 +27,11 @@ const removeCompiledAssets = (subDir) => {
 removeCompiledAssets('css');
 removeCompiledAssets('js');
 
-if (fs.existsSync(manifestPath)) {
+manifestPaths.forEach((manifestPath) => {
+  if (!fs.existsSync(manifestPath)) {
+    return;
+  }
+
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
   Object.values(manifest).forEach(({ file }) => {
     if (file && (file.endsWith('.js') || file.endsWith('.css'))) {
@@ -35,4 +42,4 @@ if (fs.existsSync(manifestPath)) {
     }
   });
   fs.unlinkSync(manifestPath);
-}
+});

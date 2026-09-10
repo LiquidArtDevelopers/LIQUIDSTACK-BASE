@@ -39,7 +39,7 @@ final class IndexTest extends TestCase
         $_ENV['ES_SIMPLIFICADO'] = '0';
         $_ENV['DEV_MODE'] = '1';
         $_ENV['DISPLAY_ERROR'] = '1';
-        $_ENV['VITE_BUSINESS_NAME'] = 'Bazkide Test';
+        $_ENV['VITE_BUSINESS_NAME'] = 'Empresa de prueba';
 
         $output = $this->runIndex();
 

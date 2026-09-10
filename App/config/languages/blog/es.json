@@ -1,0 +1,135 @@
+{
+  "title": {
+    "text": "Blog y noticias | Proyecto LiquidStack"
+  },
+  "description": {
+    "content": "Índice de artículos de ejemplo del proyecto. Consulta publicaciones, categorías y archivo desde el módulo Blog de LiquidStack."
+  },
+  "robots": {
+    "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+  },
+  "hero00_bg_mobile": {
+    "src": "assets/img/dummy/dummy_900.avif"
+  },
+  "hero00_bg_tablet": {
+    "src": "assets/img/dummy/dummy_1800.avif"
+  },
+  "hero00_bg_desktop": {
+    "src": "assets/img/dummy/dummy_2560.avif"
+  },
+  "hero00_bg_fallback": {
+    "src": "assets/img/dummy/dummy_900.avif",
+    "alt": "Composición abstracta de ejemplo",
+    "title": "Cabecera del blog",
+    "width": "2560",
+    "height": "1600"
+  },
+  "moduleH1Type01_00_h1_text": {
+    "text": "Blog y noticias del proyecto"
+  },
+  "moduleH1Type01_00_p01_text": {
+    "text": "Esta vista de ejemplo integra el índice público del módulo Blog con la navegación, el pie, los metadatos y la presentación global del proyecto."
+  },
+  "moduleH1Type01_00_p02_text": {
+    "text": "Personaliza este contenido, las rutas y los recursos visuales al iniciar un nuevo stack; la consulta y publicación de artículos permanecen en CORE."
+  },
+  "blog_index_page": {
+    "text": "Página"
+  },
+  "blog_index_results_heading": {
+    "text": "Publicaciones"
+  },
+  "blog_index_card_cta": {
+    "text": "Leer más"
+  },
+  "blog_index_search_label": {
+    "text": "Buscar publicaciones"
+  },
+  "blog_index_search_placeholder": {
+    "text": "Título, contenido o etiqueta"
+  },
+  "blog_index_search_minimum": {
+    "text": "Escribe al menos 2 caracteres."
+  },
+  "blog_index_order_label": {
+    "text": "Ordenar publicaciones"
+  },
+  "blog_index_order_newest": {
+    "text": "Más recientes"
+  },
+  "blog_index_order_oldest": {
+    "text": "Más antiguas"
+  },
+  "blog_index_order_updated": {
+    "text": "Actualizadas recientemente"
+  },
+  "blog_index_search_submit": {
+    "text": "Buscar"
+  },
+  "blog_index_clear_search": {
+    "text": "Limpiar búsqueda"
+  },
+  "blog_index_categories_label": {
+    "text": "Filtrar por categorías"
+  },
+  "blog_index_category_mode_label": {
+    "text": "Coincidencia de categorías"
+  },
+  "blog_index_category_mode_any": {
+    "text": "Cualquiera"
+  },
+  "blog_index_category_mode_all": {
+    "text": "Todas"
+  },
+  "blog_index_apply_categories": {
+    "text": "Aplicar categorías"
+  },
+  "blog_index_clear_categories": {
+    "text": "Quitar categorías"
+  },
+  "blog_index_categories_empty": {
+    "text": "No hay categorías disponibles."
+  },
+  "blog_index_results_updated": {
+    "text": "Resultados actualizados"
+  },
+  "blog_index_empty": {
+    "text": "Todavía no hay publicaciones."
+  },
+  "blog_index_no_results": {
+    "text": "No hay publicaciones para esta selección."
+  },
+  "blog_index_unavailable": {
+    "text": "Las publicaciones no están disponibles temporalmente."
+  },
+  "blog_index_previous_page": {
+    "text": "Página anterior"
+  },
+  "blog_index_next_page": {
+    "text": "Página siguiente"
+  },
+  "blog_index_archive_heading": {
+    "text": "Archivo de publicaciones"
+  },
+  "blog_index_archive_entry_singular": {
+    "text": "entrada"
+  },
+  "blog_index_archive_entry_plural": {
+    "text": "entradas"
+  },
+  "blog_index_archive_period_format": {
+    "text": "{month} de {year}"
+  },
+  "blog_index_month_01": { "text": "Enero" },
+  "blog_index_month_02": { "text": "Febrero" },
+  "blog_index_month_03": { "text": "Marzo" },
+  "blog_index_month_04": { "text": "Abril" },
+  "blog_index_month_05": { "text": "Mayo" },
+  "blog_index_month_06": { "text": "Junio" },
+  "blog_index_month_07": { "text": "Julio" },
+  "blog_index_month_08": { "text": "Agosto" },
+  "blog_index_month_09": { "text": "Septiembre" },
+  "blog_index_month_10": { "text": "Octubre" },
+  "blog_index_month_11": { "text": "Noviembre" },
+  "blog_index_month_12": { "text": "Diciembre" }
+}

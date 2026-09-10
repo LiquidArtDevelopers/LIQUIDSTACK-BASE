@@ -12,30 +12,30 @@
     },
 
     "title": {
-        "text": "LAD Framework Templates"
+        "text": "Zerbitzu digitalak | LiquidStack proiektua"
     },
 
     "description": {
-        "content": ""
+        "content": "Ezagutu zerbitzu digital modular eta editagarrien egitura, LiquidStack proiektu hau erakunde bakoitzaren balio-proposamenera egokitzeko."
     },
 
     "robots": {
-        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     },
 
     "sect02_00_a_h3_text": {
-        "text": "Nuestro primer comunicado!"
+        "text": "Estrategia eta helburu digitalak"
     },
     "sect02_00_a_p01_text": {
-        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Liquid Stack. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
+        "text": "Orri bakoitzaren helburua, hartzaileak eta ekintza nagusiak zehazten ditugu, hasierako ideia egitura argi eta mantentzen erraz bihurtzeko."
     },
     "sect02_00_a_p02_text": {
-        "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
+        "text": "Adibide-eduki hau proiektu bakoitzaren proposamen, prozesu eta mezu propioekin ordezka daiteke."
     },
     "sect02_00_a_img": {
         "src": "assets/img/dummy/dummy_1200.avif",
-        "alt": "Primer comunicado",
-        "title": "Primer Comunicado del LS"
+        "alt": "Taldea proiektu digital baten estrategia zehazten",
+        "title": "Egitura digital moldagarri baten plangintza"
     },
     "sect02_00_a_img_sizes": {
         "text": "(max-width: 899px) 900px, 1800px"
@@ -43,18 +43,18 @@
     "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
     "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
     "sect02_00_b_h3_text": {
-        "text": "Producción audiovisual para lanzamientos globales"
+        "text": "Esperientziaren eta edukien diseinua"
     },
     "sect02_00_b_p01_text": {
-        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
+        "text": "Informazioa, ibilbideak eta osagai bisualak antolatzen ditugu, gailu eta hizkuntza desberdinetan esperientzia koherentea eraikitzeko."
     },
     "sect02_00_b_p02_text": {
-        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
+        "text": "Moduluek testuak, irudiak eta ekintza-deiak doitzea ahalbidetzen dute, gunearen oinarri teknikoa aldatu gabe."
     },
     "sect02_00_b_img": {
         "src": "assets/img/dummy/dummy_1200.avif",
-        "alt": "Equipo creativo coordinando rodaje inmersivo global",
-        "title": "Equipo creativo coordina rodaje inmersivo global"
+        "alt": "Pertsonak web-interfaze modular bat berrikusten",
+        "title": "Web-esperientzia koherente baten diseinua"
     },
     "sect02_00_b_img_sizes": {
         "text": "(max-width: 899px) 900px, 1800px"
@@ -62,18 +62,18 @@
     "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
     "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
     "sect02_00_c_h3_text": {
-        "text": "Analítica de visitas y monetización"
+        "text": "Garapena eta etengabeko hobekuntza"
     },
     "sect02_00_c_p01_text": {
-        "text": "Implementamos cuadros de mando, atribución asistida y modelos de conversión para medir el impacto económico de cada experiencia en vivo y digital de alto valor."
+        "text": "Oinarri tekniko hedagarria prestatzen dugu, baliabide berrerabilgarriekin eta orri zein funtzionalitate berriak gehitzeko pentsatutako antolaketarekin."
     },
     "sect02_00_c_p02_text": {
-        "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
+        "text": "Neurketak eta mantentze-lanek hobekuntzak lehenesten laguntzen dute, proiektua garatu ahala."
     },
     "sect02_00_c_img": {
         "src": "assets/img/dummy/dummy_1200.avif",
-        "alt": "Panel financiero comparando métricas de experiencias",
-        "title": "Panel financiero compara métricas de experiencias"
+        "alt": "Web-proiektu baten jarraipen-panela",
+        "title": "Plataforma digital baten etengabeko bilakaera"
     },
     "sect02_00_c_img_sizes": {
         "text": "(max-width: 899px) 900px, 1800px"
@@ -82,135 +82,135 @@
     "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
 
     "moduleH1Type01_00_h1_text": {
-        "text": "Encabezado H1"
+        "text": "Proiektu eskalagarri baterako zerbitzu digitalak"
     },
     "moduleH1Type01_00_p01_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+        "text": "Gaitasunak, prozesuak eta proposamenak argi aurkezteko oinarri modularra."
     },
     "moduleH1Type01_00_p02_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+        "text": "Egokitu adibide-bloke hauek erakundearen benetako edukira, eta aktibatu proiektuak behar dituen baliabideak soilik."
     },
 
     "moduleH2Type01_01_h2_text": {
-        "text": "Soluciones modulares por vertical"
+        "text": "Zure beharretara egokitzeko oinarri modularra"
     },
 
     "moduleButtonType01_00_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Zerbitzu bati buruz galdetu"
     },
     "moduleButtonType01_00_cta_span": {
-        "text": "Planifica demo"
+        "text": "Proiektuari buruz hitz egin"
     },
     "moduleButtonType01_00_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Aurrera gezia",
+        "title": "Kontsultara joan"
     },
 
     "moduleButtonType02_00_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Zerbitzuaren xehetasuna ikusi"
     },
     "moduleButtonType02_00_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Zerbitzua aztertu"
     },
 
     "art04_00_headerPrimary": {
-        "text": "Galería de proyectos y casos destacados"
+        "text": "Konfigura daitezkeen soluzioen adibideak"
     },
     "art04_00_intro_p": {
-        "text": "Seleccionamos intervenciones recientes que ilustran nuestra capacidad para integrar seguridad, eficiencia energética y narrativa visual en entornos industriales con altos requisitos de cumplimiento."
+        "text": "Pieza hauek erakusten dute nola konbinatu edukiak, irudiak eta estekak, oinarri bisual berean hainbat ikuspegi aurkezteko."
     },
     "art04_00_a_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Operario ajusta luminarias inteligentes en planta",
-        "title": "Calibración lumínica segura y certificada"
+        "alt": "Informazio-orri baten adibideko ikuspegia",
+        "title": "Konfigura daitekeen informazio-orria"
     },
     "art04_00_a_link": {
         "href": "#",
-        "title": "Ver caso iluminación"
+        "title": "Informazio-adibidea ikusi"
     },
     "art04_00_b_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Ingeniera supervisa centro de control energético",
-        "title": "Supervisión energética con métricas en vivo"
+        "alt": "Katalogo digital baten adibideko ikuspegia",
+        "title": "Konfigura daitekeen katalogo digitala"
     },
     "art04_00_b_link": {
         "href": "#",
-        "title": "Abrir control energético"
+        "title": "Katalogo-adibidea ikusi"
     },
     "art04_00_c_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Fachada industrial renovada con señalética sostenible",
-        "title": "Señalética sostenible guiando flujos seguros"
+        "alt": "Harremanetarako orri baten adibideko ikuspegia",
+        "title": "Konfigura daitekeen harremanetarako orria"
     },
     "art04_00_c_link": {
         "href": "#",
-        "title": "Explorar fachada sostenible"
+        "title": "Harremanetarako adibidea ikusi"
     },
 
     "art05_00_headerPrimary": {
-        "text": "Historias reales de confianza local certificada"
+        "text": "Pertsonalizatzeko erabilera-adibideak"
     },
     "art05_00_intro_p": {
-        "text": "Nuestros clientes describen cómo la instalación solar optimiza sus costes energéticos y refuerza su compromiso con la sostenibilidad, destacando la cercanía del equipo técnico y la monitorización continua que ofrecemos en cada proyecto residencial."
+        "text": "Ondoko testuak argitalpen-adibideak dira. Konposizioa egiaztatzeko balio dute, eta proiektua argitaratu aurretik benetako kasu, lekukotasun edo argudioekin ordezkatu behar dira."
     },
     "art05_00_headerSecondary_a": {
-        "text": "Consumo optimizado en vivienda unifamiliar"
+        "text": "Erakunde baten aurkezpena"
     },
     "art05_00_a_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Técnica revisando inversores solares en planta industrial",
-        "title": "Supervisión profesional de inversores industriales en operación"
+        "alt": "Aurkezpen-egoera baten ikonoa",
+        "title": "Erakunde-aurkezpenaren adibidea"
     },
     "art05_00_a_p": {
-        "text": "Diseñamos campos solares escalables que se adaptan al consumo real de cada sede, priorizando inversores híbridos y cableado eficiente. El equipo coordina permisos y puesta en marcha sin detener los turnos críticos de producción."
+        "text": "Konbinatu proposamen argia, azalpen laburra eta lotutako edukietarako estekak, webgunea lehen aldiz bisitatzen duena gidatzeko."
     },
     "art05_00_a_firma": {
-        "text": "Laura Pérez"
+        "text": "01 adibidea"
     },
     "art05_00_headerSecondary_b": {
-        "text": "Cadena hotelera con autoconsumo activo"
+        "text": "Zerbitzuen katalogoa"
     },
     "art05_00_b_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Gestora analizando panel de monitorización solar",
-        "title": "Seguimiento digital del autoconsumo en hoteles"
+        "alt": "Zerbitzu-katalogo baten ikonoa",
+        "title": "Katalogo modularraren adibidea"
     },
     "art05_00_b_p": {
-        "text": "Automatizamos cubiertas y salas técnicas con paneles ligeros que respetan la estética del complejo. Gestionamos con la distribuidora el vertido de excedentes y ajustamos la curva de consumo según ocupación y demanda estacional."
+        "text": "Bildu gaitasunak bloke berrerabilgarrietan, eta eskaini ibilbide erraza zerbitzu bakoitzaren informazio xehera iristeko."
     },
     "art05_00_b_firma": {
-        "text": "Carlos Medina"
+        "text": "02 adibidea"
     },
     "art05_00_headerSecondary_c": {
-        "text": "Cooperativa agro instala bombeo eficiente"
+        "text": "Edukiak argitaratzea"
     },
     "art05_00_c_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Técnica revisa cuadros solares en cooperativa rural",
-        "title": "Supervisión de bombeo fotovoltaico cooperativo"
+        "alt": "Argitalpen digital baten ikonoa",
+        "title": "Argitalpen-edukiaren adibidea"
     },
     "art05_00_c_p": {
-        "text": "Implementamos bombeo solar en comunidades de regantes con variadores de frecuencia y depósitos inteligentes. La plataforma predice necesidades hídricas y coordina mantenimientos para evitar paradas en temporada alta de cosecha."
+        "text": "Erabili bloga proiektuaren benetako jarduerarekin lotutako berriak, ezagutza eta baliabideak partekatzeko."
     },
     "art05_00_c_firma": {
-        "text": "Uxue Garaia"
+        "text": "03 adibidea"
     },
     "art05_00_headerSecondary_d": {
-        "text": "Industria alimentaria optimiza autoconsumo frío"
+        "text": "Kontsultak jasotzea"
     },
     "art05_00_d_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Operario ajusta paneles solares en cubierta logística",
-        "title": "Mantenimiento fotovoltaico en planta alimentaria"
+        "alt": "Harremanetarako formulario baten ikonoa",
+        "title": "Kontsultak jasotzeko adibidea"
     },
     "art05_00_d_p": {
-        "text": "Reforzamos cubiertas con estructuras antiviento y sensores térmicos para mantener cámaras frigoríficas eficientes. Con contratos PPA internos garantizamos precios estables y certificamos la energía verde en auditorías de exportación."
+        "text": "Amaitu ibilbidea ekintza-dei ulergarri batekin eta beharrezko datuak soilik eskatzen dituen formularioarekin."
     },
     "art05_00_d_firma": {
-        "text": "Nora Salvat"
+        "text": "04 adibidea"
     },
 
     "art04_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
@@ -227,13 +227,13 @@
     "art04_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
 
     "art16_00_h3_1": {
-        "text": "Servicios logísticos avanzados"
+        "text": "Zerbitzu digitalak"
     },
     "art16_00_h3_2": {
-        "text": "para cadenas sostenibles"
+        "text": "oinarri malgu baterako"
     },
     "art16_00_body_p": {
-        "text": "Optimizamos rutas, almacenaje y entregas con analítica en tiempo real para reducir costes, emisiones y reclamaciones mientras ofrecemos trazabilidad completa a tus clientes en cada etapa de la cadena regional."
+        "text": "Berrerabili osagaiak, egokitu edukiak eta zabaldu egitura behar berriak agertu ahala, hasierako proiektua jarduera edo kokapen jakin bati lotu gabe."
     },
     "art16_00_bg_mobile": "assets/img/dummy/dummy_900.avif",
     "art16_00_bg_tablet": "assets/img/dummy/dummy_1800.avif",
@@ -241,17 +241,17 @@
 
     "moduleButtonType02_01_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Zerbitzuaren xehetasuna ikusi"
     },
     "moduleButtonType02_01_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Zerbitzua aztertu"
     },
 
     "moduleButtonType02_02_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Zerbitzuaren xehetasuna ikusi"
     },
     "moduleButtonType02_02_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Zerbitzua aztertu"
     }
 }

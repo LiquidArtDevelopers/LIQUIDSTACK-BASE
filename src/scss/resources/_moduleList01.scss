@@ -1,0 +1,77 @@
+@use '../config' as c;
+
+.moduleList01 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+
+    .moduleList01-item {
+        min-width: 0;
+        display: grid;
+        grid-template-columns: 1.35rem minmax(0, 1fr);
+        align-items: start;
+        gap: .75rem;
+
+        > span:last-child {
+            line-height: 1.45;
+        }
+    }
+
+    .moduleList01-marker {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: .1rem;
+        border: 2px solid var(
+            --moduleList01-marker-color,
+            #{c.$color02}
+        );
+        border-radius: 50%;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: .45rem;
+            height: .22rem;
+            border-bottom: 2px solid c.$color02;
+            border-left: 2px solid c.$color02;
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &[data-marker-icon]:not([data-marker-icon="default"]):not([data-marker-icon="none"]) {
+        .moduleList01-marker {
+            border: 0;
+            border-radius: 0;
+            background: var(
+                --moduleList01-marker-color,
+                #{c.$color02}
+            );
+            -webkit-mask: var(--moduleList01-marker-mask) center / contain no-repeat;
+            mask: var(--moduleList01-marker-mask) center / contain no-repeat;
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &[data-marker-icon="none"] {
+        .moduleList01-item {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .moduleList01-marker {
+            display: none;
+        }
+    }
+
+    @media (min-width: c.$tablet) {
+        gap: 1.25rem;
+    }
+}

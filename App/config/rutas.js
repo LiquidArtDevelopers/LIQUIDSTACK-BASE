@@ -6,36 +6,24 @@
 export default {
     'es':{
         '/es/templates': 'templates',
-        '/es/showroom': 'showroom',
-        '/es/descargar?file={file}': 'downloadFile',
+        '/es/showroom': 'templates',
 
         '/' : 'home',
+        '/es/blog' : 'blog',
+        '/es/blog/page/{page}' : 'blog',
         '/es/servicios' : 'servicios',
         '/es/servicios/servicio' : 'servicio',
-        '/es/contacto' : 'contacto',
-        '/es/acceso' : 'login',
-        '/es/area-socio' : 'socio',
-        '/es/area-socio/documentos-club' : 'documentos',
-        '/es/area-socio/comunicados-socios' : 'comunicados',
-        '/es/logout' : 'logout',
-        '/es/recordar-contraseña' : 'remember-password',
-        '/es/restablecer-contraseña?t={token}' : 'reset-password'
+        '/es/contacto' : 'contacto'
     },
     'eu':{
         '/eu/templates': 'templates',
-        '/eu/showroom': 'showroom',
-        '/eu/deskargatu?file={file}': 'downloadFile',
+        '/eu/showroom': 'templates',
 
         '/eu' : 'home',
-        '/es/serbitzuak' : 'servicios',
-        '/es/serbitzuak/serbitzua' : 'servicio',
-        '/es/kontaktua' : 'contacto',
-        '/eu/sarrera' : 'login',
-        '/eu/bazkide-gunea' : 'socio',
-        '/eu/bazkide-gunea/klubeko-dokumentuak' : 'documentos',
-        '/eu/bazkide-gunea/oharrak-bazkideentzat' : 'comunicados',
-        '/eu/logout' : 'logout',
-        '/eu/gogoratu-pasahitza' : 'remember-password',
-        '/eu/berrezarpen-pasahitza?t={token}' : 'reset-password'
+        '/eu/blog' : 'blog',
+        '/eu/blog/page/{page}' : 'blog',
+        '/eu/serbitzuak' : 'servicios',
+        '/eu/serbitzuak/serbitzua' : 'servicio',
+        '/eu/kontaktua' : 'contacto'
     },
 }

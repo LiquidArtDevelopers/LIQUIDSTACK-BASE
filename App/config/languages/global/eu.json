@@ -1,5 +1,7 @@
 {
+
     "aImgNav": "",
+
     "navMegamenu01_00_forward": {
         "src": "assets/img/system/chevron-forward-outline.svg",
         "alt": ">",
@@ -26,61 +28,19 @@
     "navMegamenu01_00_servicesItem0Text": {
         "text": "Zerbitzua"
     },
+    "navMegamenu01_00_blog": {
+        "title": "Bloga",
+        "href": "blog"
+    },
+    "navMegamenu01_00_blogText": {
+        "text": "Bloga"
+    },
     "navMegamenu01_00_contactLink": {
         "title": "Kontaktua",
         "href": "kontaktua"
     },
     "navMegamenu01_00_contactText": {
         "text": "Kontaktua"
-    },
-    "navMegamenu01_00_login": {
-        "title": "Saioa hasi",
-        "href": "sarrera"
-    },
-    "navMegamenu01_00_loginText": {
-        "text": "Saioa hasi"
-    },
-    "navMegamenu01_00_link0not": {
-        "title": "Bazkidea zara? Sartu hemen",
-        "href": ""
-    },
-    "navMegamenu01_00_link0Textnot": {
-        "text": "Bazkidea zara? Sartu hemen"
-    },
-    "navMegamenu01_00_link0": {
-        "title": "Bazkideen Gunearen Hasiera",
-        "href": "bazkide-gunea"
-    },
-    "navMegamenu01_00_link0Text": {
-        "text": "Bazkideen Gunea"
-    },
-    "navMegamenu01_00_link4": {
-        "title": "Klubeko dokumentuak",
-        "href": "bazkide-gunea/klubeko-dokumentuak"
-    },
-    "navMegamenu01_00_link4Text": {
-        "text": "Klubeko dokumentuak"
-    },
-    "navMegamenu01_00_link1": {
-        "title": "Bazkideentzako oharrak eta jarduerak",
-        "href": "bazkide-gunea/oharrak-bazkideentzat"
-    },
-    "navMegamenu01_00_link1Text": {
-        "text": "Bazkideentzako oharrak eta jarduerak"
-    },
-    "navMegamenu01_00_link2": {
-        "title": "Saioa itxi",
-        "href": "logout"
-    },
-    "navMegamenu01_00_link2Text": {
-        "text": "Saioa itxi"
-    },
-    "navMegamenu01_00_link3": {
-        "title": "Pasahitza aldatu",
-        "href": "pasahitza-berrezarri"
-    },
-    "navMegamenu01_00_link3Text": {
-        "text": "Pasahitza aldatu"
     },
     "navMegamenu01_00_logo_business": {
         "src": "assets/img/logos/logo-black.svg",
@@ -90,9 +50,9 @@
     "navMegamenu01_00_correo_link": {
         "title": "Posta elektronikoa"
     },
-    "navMegamenu01_00_correo_link_href": "comunicacion@atletico-ss.org",
+    "navMegamenu01_00_correo_link_href": "info@example.com",
     "navMegamenu01_00_correo_text": {
-        "text": "comunicacion@atletico-ss.org"
+        "text": "info@example.com"
     },
     "navMegamenu01_00_correo_img": {
         "src": "assets/img/system/mail.svg",
@@ -132,11 +92,13 @@
     "navMegamenu01_00_contact": {
         "text": "Kontaktua"
     },
+
     "footerInfo01_00_img1": {
         "src": "",
         "alt": "",
         "title": "esteka"
     },
+
     "footerInfo0100_cookie-policy": {
         "text": "Cookie-politika"
     },
@@ -149,13 +111,16 @@
     "footerInfo0100_rights-reserved": {
         "text": "Eskubide guztiak erreserbatuta"
     },
-    "footerInfo01_lad_info_href": "https://infoda.eus",
+
+    "footerInfo01_lad_info_href": "https://example.com",
+
     "footerInfo0100_lad-info-a": {
-        "title": "Liquid Art Developers"
+        "title": "LiquidStack"
     },
     "footerInfo0100_lad-info-p": {
-        "text": "Liquid Art Developers-ek garatua"
+        "text": "LiquidStack-en oinarritutako proiektua"
     },
+
     "navMegamenu01_00_col02span2_01": {
         "text": "Cookie-politika"
     },
@@ -292,21 +257,19 @@
     },
     "navMegamenu01_00_col02link_01_href": "",
     "navMegamenu01_00_col02link_02_href": "",
-    "navMegamenu01_00_become_member_button": {
-        "href": "",
-        "title": "esteka",
-        "text": ""
-    },
     "navMegamenu01_00_rrss_yt_href": "",
     "navMegamenu01_00_rrss_in_href": "",
     "navMegamenu01_00_rrss_fb_href": "",
     "navMegamenu01_00_rrss_ig_href": "",
+
     "title": {
-        "text": "Zona pribatura sarbidea"
+        "text": "LiquidStack baliabide txantiloiak"
     },
+
     "description": {
         "content": ""
     },
+
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     }

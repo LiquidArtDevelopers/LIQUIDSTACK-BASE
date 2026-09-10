@@ -12,15 +12,15 @@
     },
 
     "title": {
-        "text": "LAD Framework Templates"
+        "text": "Harremana | LiquidStack proiektua"
     },
 
     "description": {
-        "content": ""
+        "content": "Erabili harremanetarako orri modular hau kontsultak jasotzeko eta LiquidStack proiektu bat nola hasten den argi azaltzeko abiapuntu gisa."
     },
 
     "robots": {
-        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     },
 
     "hero02_video_webm": {
@@ -30,352 +30,364 @@
         "src": "/assets/video/dummy/dummy.mp4"
     },
     "hero02_video_title": {
-        "title": "Vídeo operaciones inteligentes"
+        "title": "Proiektuaren aurkezpen-bideoa"
     },
 
     "sect01_00_a_img01": {
         "src": "assets/img/system/bookmark-outline.svg",
-        "alt": "Icono seguimiento clientes",
-        "title": "Icono seguimiento de clientes"
+        "alt": "Lehen elkarrizketaren ikonoa",
+        "title": "Proiektuari buruzko elkarrizketaren hasiera"
     },
     "sect01_00_a_h3_text": {
-        "text": "Integración ágil de showroom digital"
+        "text": "Lehen harremana"
     },
     "sect01_00_a_p01_text": {
-        "text": "Conectamos catálogos, visitas guiadas y paneles compartidos para que tu equipo comercial cierre acuerdos sin fricciones y mantenga la narrativa visual en cada demostración."
+        "text": "Partekatu testuinguru orokorra, helburu nagusia eta proiektua zer fasetan dagoen, elkarrizketa baliagarria prestatzeko."
     },
     "sect01_00_a_p02_text": {
-        "text": "Aportamos métricas de seguimiento y soporte remoto continuo para nutrir oportunidades tras cada evento híbrido."
+        "text": "Ez da beharrezkoa xehetasun guztiak aldez aurretik zehaztea; nahikoa da lehentasunak eta hasierako zalantzak azaltzea."
     },
     "sect01_00_a_img02": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Equipo analizando panel de métricas",
-        "title": "Equipo analiza panel de métricas"
+        "alt": "Pertsonak kontsulta digital bat prestatzen",
+        "title": "Kontsulta bat prestatzea"
     },
     "sect01_00_a_img03": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Clientes revisando catálogo interactivo",
-        "title": "Clientes revisan catálogo interactivo"
+        "alt": "Taldea proiektu baten oharrak berrikusten",
+        "title": "Hasierako testuingurua berrikustea"
     },
     "sect01_00_a_img04": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Showroom híbrido con asistentes conectados",
-        "title": "Showroom híbrido para asistentes conectados"
+        "alt": "Proiektu digital baten hasierako bilera",
+        "title": "Proiektuaren lehen bilera"
     },
     "sect01_00_b_img01": {
         "src": "assets/img/system/bookmark-outline.svg",
-        "alt": "Icono agenda automatizada",
-        "title": "Icono de agenda automatizada"
+        "alt": "Beharrak zehazteko ikonoa",
+        "title": "Proiektuaren beharrak zehaztea"
     },
     "sect01_00_b_h3_text": {
-        "text": "Flujos automatizados de seguimiento comercial"
+        "text": "Beharrak zehaztea"
     },
     "sect01_00_b_p01_text": {
-        "text": "Orquestamos workflows que sincronizan visitas, firmas electrónicas, presupuestos y reporting financiero para sostener oportunidades complejas sin depender de tareas manuales repetitivas."
+        "text": "Eskakizunak, parte hartzen duten pertsonak eta eskuragarri dauden edukiak antolatzen ditugu, funtsezkoa dena eta geroago landu daitekeena bereizteko."
     },
     "sect01_00_b_p02_text": {
-        "text": "Enlazamos CRM, mailing y chat proactivo para activar respuestas rápidas cuando surge un nuevo requisito."
+        "text": "Fase honek irismen ulergarria zehazten laguntzen du, diseinuari edo garapenari buruzko erabakiak hartu aurretik."
     },
     "sect01_00_b_img02": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Panel con hitos automatizados activos",
-        "title": "Panel muestra hitos automatizados activos"
+        "alt": "Eskakizunak antolatuta dituen panela",
+        "title": "Proiektuaren eskakizunak antolatuta"
     },
     "sect01_00_b_img03": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Equipo coordinando seguimiento multicanal integrado",
-        "title": "Equipo coordina seguimiento multicanal integrado"
+        "alt": "Pertsonak partekatutako zereginak lehenesten",
+        "title": "Zereginen elkarlaneko lehenespena"
     },
     "sect01_00_b_img04": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Representación de workflow comercial inteligente",
-        "title": "Workflow comercial inteligente en ejecución"
+        "alt": "Proiektu baten irismenaren eskema",
+        "title": "Irismenaren definizio bisuala"
     },
     "sect01_00_c_img01": {
         "src": "assets/img/system/bookmark-outline.svg",
-        "alt": "Icono experiencia inmersiva",
-        "title": "Icono de experiencia inmersiva"
+        "alt": "Proposamenaren eta baliozkotzearen ikonoa",
+        "title": "Baliozkotzeko prestatutako proposamena"
     },
     "sect01_00_c_h3_text": {
-        "text": "Experiencias phygital guiadas en directo"
+        "text": "Proposamena eta baliozkotzea"
     },
     "sect01_00_c_p01_text": {
-        "text": "Diseñamos recorridos combinando streaming, chat moderado y pruebas táctiles para que cada asistente experimente la solución como si estuviera en planta."
+        "text": "Soluzio modular bat proposatzen dugu, eta elkarrekin berrikusten ditugu haren egitura, edukiak eta ekintza nagusiak, inplementatu aurretik."
     },
     "sect01_00_c_p02_text": {
-        "text": "Incluimos resúmenes descargables y agendas de talleres para mantener viva la conversación tras el tour."
+        "text": "Erabakiak erregistratuta geratzen dira, hurrengo urratsa partekatutako erreferentzia batetik abiatzeko."
     },
     "sect01_00_c_img02": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Visitantes probando módulos interactivos conectados",
-        "title": "Visitantes prueban módulos interactivos conectados"
+        "alt": "Pertsonak proposamen digital bat berrikusten",
+        "title": "Proposamen bat berrikustea"
     },
     "sect01_00_c_img03": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Guía facilitando demostración phygital colaborativa",
-        "title": "Guía facilita demostración phygital colaborativa"
+        "alt": "Taldea web-egitura bat baliozkotzen",
+        "title": "Egituraren baliozkotzea"
     },
     "sect01_00_c_img04": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Escenario inmersivo con señalética dinámica",
-        "title": "Escenario inmersivo muestra señalética dinámica"
+        "alt": "Soluzio modular baten aurkezpena",
+        "title": "Proiektuaren proposamen modularra"
     },
     "sect01_00_d_img01": {
         "src": "assets/img/system/bookmark-outline.svg",
-        "alt": "Icono formación continua",
-        "title": "Icono de formación continua"
+        "alt": "Abiaraztearen ikonoa",
+        "title": "Proiektuaren hasiera eta jarraipena"
     },
     "sect01_00_d_h3_text": {
-        "text": "Academia para partners certificados"
+        "text": "Abiaraztea eta jarraipena"
     },
     "sect01_00_d_p01_text": {
-        "text": "Creamos itinerarios modulares con sesiones técnicas, cápsulas de producto y evaluaciones para acreditar a distribuidores y reforzar la consistencia del mensaje comercial."
+        "text": "Lana urrats kudeagarrietan banatzen dugu, berrikuspen zehatzekin eta egiteke dagoenaren ikuspegi argiarekin."
     },
     "sect01_00_d_p02_text": {
-        "text": "Ofrecemos foros privados y soporte experto para resolver dudas avanzadas y compartir mejores prácticas."
+        "text": "Argitaratu ondoren, oinarria mantendu eta zabaldu daiteke behar berriak agertu ahala."
     },
     "sect01_00_d_img02": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Sesión formativa con instructores certificados",
-        "title": "Sesión formativa para partners certificados"
+        "alt": "Taldea emaitza digital bat prestatzen",
+        "title": "Emaitza bat prestatzea"
     },
     "sect01_00_d_img03": {
         "src": "assets/img/dummy/dummy_900.avif",
-        "alt": "Participantes evaluando módulos técnicos especializados",
-        "title": "Participantes evalúan módulos técnicos especializados"
+        "alt": "Zereginen jarraipen-panela",
+        "title": "Aurrerapenaren jarraipena"
     },
     "sect01_00_d_img04": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Plataforma académica con progreso gamificado",
-        "title": "Plataforma académica muestra progreso gamificado"
+        "alt": "Bilakaerarako prest dagoen proiektu digitala",
+        "title": "Hobekuntza berrietarako prestatutako oinarria"
     },
 
     "moduleH1Type01_00_h1_text": {
-        "text": "Encabezado H1"
+        "text": "Jar gaitezen harremanetan zure proiektuari forma emateko"
     },
     "moduleH1Type01_00_p01_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+        "text": "Azaldu zer behar duzun eta ideia zer fasetan dagoen."
     },
     "moduleH1Type01_00_p02_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+        "text": "Adibideko orri honek elkarrizketa hasteko oinarrizko kanalak eta informazioa biltzen ditu."
     },
 
     "moduleH2Type01_00_h2_text": {
-        "text": "Sectores que transformamos con datos"
+        "text": "Nola egin kontsulta"
     },
 
     "moduleH2Type01_01_h2_text": {
-        "text": "Soluciones modulares por vertical"
+        "text": "Prozesu moldagarri baten urratsak"
     },
 
     "moduleButtonType01_00_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Kontsulta bat bidali"
     },
     "moduleButtonType01_00_cta_span": {
-        "text": "Planifica demo"
+        "text": "Proiektuari buruz hitz egin"
     },
     "moduleButtonType01_00_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Aurrera gezia",
+        "title": "Formulariora joan"
     },
 
     "moduleButtonType02_00_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Hurrengo urratsa ezagutu"
     },
     "moduleButtonType02_00_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Prozesua ikusi"
     },
 
     "art08_00_headerPrimary": {
-        "text": "Estrategias solares para ampliar la competitividad industrial regional en Gipuzkoa"
+        "text": "Hurrengo urratsa zehazteko hasierako elkarrizketa"
     },
     "art08_00_a_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Render de placas solares sobre nave logística automatizada",
-        "title": "Fotovoltaica industrial conectada a sistemas de control inteligente"
+        "alt": "Pertsonak proiektu baten testuingurua partekatzen",
+        "title": "Helburuei eta testuinguruari buruzko elkarrizketa"
     },
     "art08_00_headerSecondary_a": {
-        "text": "Diagnóstico integral y dimensionamiento de tejados activos"
+        "text": "Testuingurua eta helburuak"
     },
     "art08_00_a_p": {
-        "text": "Analizamos consumos históricos, calculamos cargas estructurales y definimos configuraciones híbridas que permiten integrar almacenamiento, monitorización en tiempo real y contratos PPA adaptados al perfil de demanda de cada línea de producción."
+        "text": "Azaldu zer konpondu behar duen proiektuak, nori zuzentzen zaion eta zer material dagoen, abiapuntu errealista identifikatzeko."
     },
     "art08_00_b_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Equipo instalando inversores trifásicos en centro de control",
-        "title": "Comisionado eléctrico con pruebas de seguridad industrial avanzada"
+        "alt": "Taldea proiektu baten lehentasunak antolatzen",
+        "title": "Lehentasunen definizio partekatua"
     },
     "art08_00_headerSecondary_b": {
-        "text": "Integración financiera y retorno asegurado del proyecto"
+        "text": "Irismena eta lehentasunak"
     },
     "art08_00_b_p": {
-        "text": "Gestionamos subvenciones autonómicas, coordinamos créditos verdes y modelizamos escenarios de retorno para que cada inversión fotovoltaica mantenga flujos de caja positivos desde el primer ejercicio fiscal sin comprometer la liquidez operativa."
+        "text": "Adosten dugu zein bloke diren ezinbestekoak, zein gehitu daitezkeen geroago eta zer informazio falta den aurrera egin aurretik."
     },
 
     "moduleH1Type02_00_h1_text": {
-        "text": "Logística inteligente para flotas multiorigen europeas"
+        "text": "Hitz egin dezagun zure hurrengo proiektuaz"
     },
     "moduleH1Type02_00_p01_text": {
-        "text": "Conectamos almacenes, última milla y partners europeos mediante integraciones EDI y seguimiento IoT para anticipar incidencias, redistribuir cargas y garantizar entregas just-in-time sin saturar tus recursos internos ni los equipos de atención posventa, manteniendo SLA críticos en campañas estacionales."
+        "text": "Erabili formulario hau behar bat partekatzeko, informazioa eskatzeko edo lehen bilera proposatzeko. Eremuak oinarri editagarria dira, eta erakunde bakoitzak benetan behar dituen datuetara egokitu behar dira."
     },
     "moduleH1Type02_00_p02_text": {
-        "text": "Automatizamos previsiones de demanda, controlamos niveles de stock y activamos transportistas alternativos desde un único panel operativo, apoyándonos en analítica predictiva para reducir devoluciones, emisiones por ruta y tiempos de respuesta ante cualquier incidencia regional."
+        "text": "Webgunea argitaratu aurretik, konfiguratu benetako harreman-bideak, lege-testuak eta erantzuteko epeak. Txantiloi honek ez du kokapen, jarduera edo ordutegi jakinik aurresuposatzen."
     },
 
     "moduleButtonType02_01_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Harremanetarako formularioa ireki"
     },
     "moduleButtonType02_01_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Kontsulta bidali"
     },
 
     "moduleButtonType01_01_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Kontsulta bat bidali"
     },
     "moduleButtonType01_01_cta_span": {
-        "text": "Planifica demo"
+        "text": "Proiektuari buruz hitz egin"
     },
     "moduleButtonType01_01_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Aurrera gezia",
+        "title": "Formulariora joan"
     },
 
     "moduleButtonType01_02_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Kontsulta bat bidali"
     },
     "moduleButtonType01_02_cta_span": {
-        "text": "Planifica demo"
+        "text": "Proiektuari buruz hitz egin"
     },
     "moduleButtonType01_02_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Aurrera gezia",
+        "title": "Formulariora joan"
     },
 
     "moduleH2Type01_02_h2_text": {
-        "text": "Sectores que transformamos con datos"
+        "text": "Azaldu zer behar duzun"
     },
 
     "artForm01_00_headerPrimary": {
-        "text": "Solicita información rápida"
+        "text": "Bidali zure kontsulta"
     },
     "artForm01_00_headerSecondary": {
-        "text": "Completa el formulario"
+        "text": "Bete formularioa"
     },
     "artForm01_00_intro_p": {
-        "text": "Comparte los datos clave de tu consulta y nuestro equipo de logística evaluará la mejor solución para tus envíos recurrentes. Responderemos con recomendaciones personalizadas sobre rutas, tarifas y herramientas digitales que impulsen tus operaciones diarias."
+        "text": "Partekatu proiektuaren funtsezko informazioa eta kontsultaren arrazoia. Egokitu eremu eta mezu hauek benetako arreta-politikara, webgunea argitaratu aurretik."
     },
     "artForm01_00_label_name": {
-        "text": "Nombre y apellidos"
+        "text": "Izen-abizenak"
     },
     "artForm01_00_ph_name": {
-        "placeholder": "Escribe tu nombre completo"
+        "placeholder": "Idatzi zure izen-abizenak"
     },
     "artForm01_00_label_phone": {
-        "text": "Teléfono de contacto"
+        "text": "Harremanetarako telefonoa"
     },
     "artForm01_00_ph_phone": {
-        "placeholder": "Incluye tu teléfono"
+        "placeholder": "Idatzi zure telefonoa"
     },
     "artForm01_00_label_mail": {
-        "text": "Correo electrónico"
+        "text": "Helbide elektronikoa"
     },
     "artForm01_00_ph_mail": {
-        "placeholder": "Introduce tu correo"
+        "placeholder": "Idatzi zure helbide elektronikoa"
     },
     "artForm01_00_label_msg": {
-        "text": "Detalla tu consulta"
+        "text": "Mezua"
     },
     "artForm01_00_ph_msg": {
-        "placeholder": "Describe necesidades logísticas"
+        "placeholder": "Azaldu labur zure kontsulta"
     },
     "artForm01_00_terms": {
-        "text": "Acepto recibir información comercial de la empresa conforme al aviso legal actualizado."
+        "text": "Erakundearen informazioa jasotzea onartzen dut, konfiguratutako lege-oharraren eta pribatutasun-politikaren arabera."
     },
     "artForm01_00_privacy": {
-        "text": "Política de privacidad"
+        "text": "Pribatutasun-politika"
     },
     "artForm01_00_label_captcha": {
-        "text": "Verificación"
+        "text": "Egiaztapena"
     },
     "artForm01_00_ph_captcha": {
-        "placeholder": "Escribe el resultado"
+        "placeholder": "Idatzi emaitza"
     },
     "artForm01_00_submit": {
-        "value": "Enviar solicitud"
+        "value": "Bidali kontsulta"
     },
     "artForm01_00_headerSecondary_side": {
-        "text": "También puedes contactar"
+        "text": "Beste bide batzuk ere erabil ditzakezu"
     },
     "artForm01_00_side_p": {
-        "text": "Si prefieres una atención inmediata, escríbenos o llámanos para coordinar recogidas urgentes, seguimiento de incidencias o asesoramiento sobre integraciones. Nuestro equipo operativo responde de lunes a viernes en horario ampliado para adaptarse a tus ventanas de carga y descarga."
+        "text": "Konfiguratu hemen proiektuaren benetako harreman-bideak. Ondoko datuak adibideko markatzaileak dira, eta webgunea argitaratu aurretik berrikusi behar dira."
     },
     "artForm01_00_contact_tel_img": {
         "src": "assets/img/system/tel.svg",
-        "alt": "Teléfono",
-        "title": "Teléfono"
+        "alt": "Telefonoa",
+        "title": "Telefonoa"
     },
     "artForm01_00_contact_tel": {
-        "text": "Teléfono pendiente de actualización"
+        "text": "Konfiguratu beharreko telefonoa"
     },
     "artForm01_00_contact_mail_img": {
         "src": "assets/img/system/mail.svg",
-        "alt": "Mail",
-        "title": "Mail"
+        "alt": "Helbide elektronikoa",
+        "title": "Helbide elektronikoa"
     },
     "artForm01_00_contact_mail": {
-        "text": "Escríbenos a info@ejemplo.com"
+        "text": "Idatzi info@ejemplo.com helbidera"
     },
     "artForm01_00_contact_addr_img": {
         "src": "assets/img/system/wp.svg",
-        "alt": "Dirección",
-        "title": "Dirección"
+        "alt": "Helbidea",
+        "title": "Helbidea"
     },
     "artForm01_00_contact_addr": {
-        "text": "Dirección pendiente de actualización"
+        "text": "Konfiguratu beharreko helbidea"
     },
     "artForm01_00_contact_web_img": {
         "src": "assets/img/system/web.svg",
-        "alt": "Web",
-        "title": "Web"
+        "alt": "Webgunea",
+        "title": "Webgunea"
     },
     "artForm01_00_contact_web": {
-        "text": "Accede a www.ejemplo.com"
+        "text": "Bisitatu www.ejemplo.com"
     },
     "artForm01_00_sent_img": {
         "src": "assets/img/system/mail.svg",
-        "alt": "Enviado",
-        "title": "Mensaje enviado"
+        "alt": "Kontsulta bidalita",
+        "title": "Kontsulta bidalita"
     },
     "artForm01_00_headerSecondary_sent": {
-        "text": "Hemos recibido tu consulta"
+        "text": "Zure kontsulta jaso dugu"
     },
     "artForm01_00_sent_p1": {
-        "text": "Te contactaremos en menos de un día laborable."
+        "text": "Proiekturako konfiguratutako epean erantzungo dizugu."
     },
     "artForm01_00_sent_p2": {
-        "text": "Gracias por confiar en nuestro equipo."
+        "text": "Eskerrik asko beharrezko informazioa partekatzeagatik."
     },
     "artForm01_00_new_query": {
-        "text": "Enviar otra solicitud"
+        "text": "Beste kontsulta bat bidali"
     },
     "artForm01_00_contact_tel_href": "tel:+00000000000",
-    "artForm01_00_contact_tel_title": "Llamar por teléfono",
+    "artForm01_00_contact_tel_title": "Telefonoz deitu",
     "artForm01_00_contact_mail_href": "mailto:info@ejemplo.com",
-    "artForm01_00_contact_mail_title": "Enviar correo",
+    "artForm01_00_contact_mail_title": "Mezu elektronikoa bidali",
     "artForm01_00_contact_addr_href": "https://maps.app.goo.gl/xxxxx",
-    "artForm01_00_contact_addr_title": "Cómo llegar",
+    "artForm01_00_contact_addr_title": "Nola iritsi",
     "artForm01_00_contact_web_href": "https://www.ejemplo.com",
-    "artForm01_00_contact_web_title": "Visitar web",
+    "artForm01_00_contact_web_title": "Webgunea bisitatu",
     "artForm01_00_map_src": "https://www.google.com/maps/embed?pb=...",
     "artForm01_00_map_width": "600",
     "artForm01_00_map_height": "300",
-    "artForm01_00_map_title": "Localización de la delegación principal"
+    "artForm01_00_map_title": "Konfiguratu beharreko kokapena",
+
+    "moduleButtonType02_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Aurrera gezia",
+        "title": "Jarraitu untxi zuriari"
+    },
+
+    "moduleButtonType02_01_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Aurrera gezia",
+        "title": "Jarraitu untxi zuriari"
+    }
 }

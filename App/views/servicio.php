@@ -32,7 +32,10 @@
                     echo controller('moduleH2Type01', 2);
 
                     $secondaryCta = controller('moduleButtonType01', 1);
-                    echo controller('moduleH1Type02', 0, ['{a-button-primary}' => $secondaryCta]);
+                    echo controller('moduleH1Type02', 0, [
+                        '{a-button-primary}' => $secondaryCta,
+                        'header_level' => 2,
+                    ]);
 
                     echo controller('art03', 0, ['items' => 4]);
                     echo controller('art10', 0, ['items' => 3]);

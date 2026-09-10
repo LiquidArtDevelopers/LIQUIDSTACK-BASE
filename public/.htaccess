@@ -1,15 +1,7 @@
 RewriteEngine On
 
-# Si viene con www y vamos a sin www
-RewriteCond %{HTTP_HOST} !^bazkide\.atleticosansebastian\.com$ [NC]
-RewriteRule ^ https://bazkide.atleticosansebastian.com%{REQUEST_URI} [R=301,L]
-
-# Si viene por http pasamos a https
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
-RewriteCond %{HTTP:CF-Visitor} !https [NC]
-RewriteCond %{HTTP:Forwarded} !proto=https [NC]
-RewriteRule ^ https://bazkide.atleticosansebastian.com%{REQUEST_URI} [R=301,L]
+# BASE no fuerza un host de cliente ni HTTPS. Configura la redirección
+# canónica en el proyecto o en el proxy/servidor de producción.
 
 # quitamos la / del final (excepto en la raíz) y sin afectar a archivos/dir reales
 RewriteCond %{REQUEST_URI} !^/$
@@ -75,7 +67,7 @@ RewriteRule ^ index.php [L,QSA]
         Header set Cache-Control "public, max-age=2592000"
     </FilesMatch>
 
-    <FilesMatch "\.(?:html|php)$">
+    <FilesMatch "\.html$">
         Header set Cache-Control "no-cache, no-store, must-revalidate"
     </FilesMatch>
 </IfModule>

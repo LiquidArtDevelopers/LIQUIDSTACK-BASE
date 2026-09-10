@@ -12,30 +12,30 @@
     },
 
     "title": {
-        "text": "LAD Framework Templates"
+        "text": "Servicios digitales | Proyecto LiquidStack"
     },
 
     "description": {
-        "content": ""
+        "content": "Descubre una estructura de servicios digital, modular y editable para adaptar este proyecto LiquidStack a la propuesta de valor de cada organización."
     },
 
     "robots": {
-        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     },
 
     "sect02_00_a_h3_text": {
-        "text": "Producción audiovisual para lanzamientos globales"
+        "text": "Estrategia y objetivos digitales"
     },
     "sect02_00_a_p01_text": {
-        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
+        "text": "Definimos el propósito de cada página, sus públicos y las acciones principales para convertir una idea inicial en una estructura clara y fácil de mantener."
     },
     "sect02_00_a_p02_text": {
-        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
+        "text": "Este contenido de ejemplo se puede sustituir por la propuesta, el proceso y los mensajes propios de cada proyecto."
     },
     "sect02_00_a_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Equipo creativo coordinando rodaje inmersivo global",
-        "title": "Equipo creativo coordina rodaje inmersivo global"
+        "alt": "Equipo definiendo la estrategia de un proyecto digital",
+        "title": "Planificación de una estructura digital adaptable"
     },
     "sect02_00_a_img_sizes": {
         "text": "(max-width: 899px) 1000px, 1500px"
@@ -43,18 +43,18 @@
     "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
     "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
     "sect02_00_b_h3_text": {
-        "text": "Producción audiovisual para lanzamientos globales"
+        "text": "Diseño de experiencia y contenidos"
     },
     "sect02_00_b_p01_text": {
-        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
+        "text": "Organizamos la información, los recorridos y los componentes visuales para construir una experiencia coherente en distintos dispositivos e idiomas."
     },
     "sect02_00_b_p02_text": {
-        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
+        "text": "Los módulos permiten ajustar textos, imágenes y llamadas a la acción sin alterar la base técnica del sitio."
     },
     "sect02_00_b_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Equipo creativo coordinando rodaje inmersivo global",
-        "title": "Equipo creativo coordina rodaje inmersivo global"
+        "alt": "Personas revisando una interfaz web modular",
+        "title": "Diseño de una experiencia web coherente"
     },
     "sect02_00_b_img_sizes": {
         "text": "(max-width: 899px) 1000px, 1500px"
@@ -62,18 +62,18 @@
     "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
     "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
     "sect02_00_c_h3_text": {
-        "text": "Analítica de visitas y monetización"
+        "text": "Desarrollo y mejora continua"
     },
     "sect02_00_c_p01_text": {
-        "text": "Implementamos cuadros de mando, atribución asistida y modelos de conversión para medir el impacto económico de cada experiencia en vivo y digital de alto valor."
+        "text": "Preparamos una base técnica ampliable, con recursos reutilizables y una organización pensada para incorporar nuevas páginas y funcionalidades."
     },
     "sect02_00_c_p02_text": {
-        "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
+        "text": "La medición y el mantenimiento ayudan a priorizar mejoras conforme evoluciona el proyecto."
     },
     "sect02_00_c_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Panel financiero comparando métricas de experiencias",
-        "title": "Panel financiero compara métricas de experiencias"
+        "alt": "Panel de seguimiento de un proyecto web",
+        "title": "Evolución continua de una plataforma digital"
     },
     "sect02_00_c_img_sizes": {
         "text": "(max-width: 899px) 1000px, 1500px"
@@ -82,135 +82,135 @@
     "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
 
     "moduleH1Type01_00_h1_text": {
-        "text": "Encabezado H1"
+        "text": "Servicios digitales para un proyecto escalable"
     },
     "moduleH1Type01_00_p01_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+        "text": "Una base modular para presentar capacidades, procesos y propuestas con claridad."
     },
     "moduleH1Type01_00_p02_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+        "text": "Adapta estos bloques de ejemplo al contenido real de la organización y activa solo los recursos que necesite el proyecto."
     },
 
     "moduleH2Type01_01_h2_text": {
-        "text": "Soluciones modulares por vertical"
+        "text": "Una base modular que puedes adaptar"
     },
 
     "moduleButtonType01_00_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Consultar un servicio"
     },
     "moduleButtonType01_00_cta_span": {
-        "text": "Planifica demo"
+        "text": "Hablar sobre el proyecto"
     },
     "moduleButtonType01_00_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Flecha hacia delante",
+        "title": "Ir a la consulta"
     },
 
     "moduleButtonType02_00_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Ver el detalle del servicio"
     },
     "moduleButtonType02_00_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Explorar servicio"
     },
 
     "art04_00_headerPrimary": {
-        "text": "Galería de proyectos y casos destacados"
+        "text": "Ejemplos de soluciones configurables"
     },
     "art04_00_intro_p": {
-        "text": "Seleccionamos intervenciones recientes que ilustran nuestra capacidad para integrar seguridad, eficiencia energética y narrativa visual en entornos industriales con altos requisitos de cumplimiento."
+        "text": "Estas piezas ilustran cómo combinar contenidos, imágenes y enlaces para presentar distintos enfoques dentro de una misma base visual."
     },
     "art04_00_a_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Operario ajusta luminarias inteligentes en planta",
-        "title": "Calibración lumínica segura y certificada"
+        "alt": "Vista de ejemplo de una página informativa",
+        "title": "Página informativa configurable"
     },
     "art04_00_a_link": {
         "href": "#",
-        "title": "Ver caso iluminación"
+        "title": "Ver ejemplo informativo"
     },
     "art04_00_b_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Ingeniera supervisa centro de control energético",
-        "title": "Supervisión energética con métricas en vivo"
+        "alt": "Vista de ejemplo de un catálogo digital",
+        "title": "Catálogo digital configurable"
     },
     "art04_00_b_link": {
         "href": "#",
-        "title": "Abrir control energético"
+        "title": "Ver ejemplo de catálogo"
     },
     "art04_00_c_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Fachada industrial renovada con señalética sostenible",
-        "title": "Señalética sostenible guiando flujos seguros"
+        "alt": "Vista de ejemplo de una página de contacto",
+        "title": "Página de contacto configurable"
     },
     "art04_00_c_link": {
         "href": "#",
-        "title": "Explorar fachada sostenible"
+        "title": "Ver ejemplo de contacto"
     },
 
     "art05_00_headerPrimary": {
-        "text": "Historias reales de confianza local certificada"
+        "text": "Escenarios de uso para personalizar"
     },
     "art05_00_intro_p": {
-        "text": "Nuestros clientes describen cómo la instalación solar optimiza sus costes energéticos y refuerza su compromiso con la sostenibilidad, destacando la cercanía del equipo técnico y la monitorización continua que ofrecemos en cada proyecto residencial."
+        "text": "Los siguientes textos son ejemplos editoriales. Sirven para comprobar la composición y deben reemplazarse por casos, testimonios o argumentos reales antes de publicar el proyecto."
     },
     "art05_00_headerSecondary_a": {
-        "text": "Consumo optimizado en vivienda unifamiliar"
+        "text": "Presentación de una organización"
     },
     "art05_00_a_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Técnica revisando inversores solares en planta industrial",
-        "title": "Supervisión profesional de inversores industriales en operación"
+        "alt": "Icono de un escenario de presentación",
+        "title": "Ejemplo de presentación institucional"
     },
     "art05_00_a_p": {
-        "text": "Diseñamos campos solares escalables que se adaptan al consumo real de cada sede, priorizando inversores híbridos y cableado eficiente. El equipo coordina permisos y puesta en marcha sin detener los turnos críticos de producción."
+        "text": "Combina una propuesta clara, una explicación breve y enlaces a contenidos relacionados para orientar a quien visita la web por primera vez."
     },
     "art05_00_a_firma": {
-        "text": "Laura Pérez"
+        "text": "Ejemplo 01"
     },
     "art05_00_headerSecondary_b": {
-        "text": "Cadena hotelera con autoconsumo activo"
+        "text": "Catálogo de servicios"
     },
     "art05_00_b_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Gestora analizando panel de monitorización solar",
-        "title": "Seguimiento digital del autoconsumo en hoteles"
+        "alt": "Icono de un catálogo de servicios",
+        "title": "Ejemplo de catálogo modular"
     },
     "art05_00_b_p": {
-        "text": "Automatizamos cubiertas y salas técnicas con paneles ligeros que respetan la estética del complejo. Gestionamos con la distribuidora el vertido de excedentes y ajustamos la curva de consumo según ocupación y demanda estacional."
+        "text": "Agrupa las capacidades en bloques reutilizables y ofrece una ruta sencilla hacia la información detallada de cada servicio."
     },
     "art05_00_b_firma": {
-        "text": "Carlos Medina"
+        "text": "Ejemplo 02"
     },
     "art05_00_headerSecondary_c": {
-        "text": "Cooperativa agro instala bombeo eficiente"
+        "text": "Publicación de contenidos"
     },
     "art05_00_c_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Técnica revisa cuadros solares en cooperativa rural",
-        "title": "Supervisión de bombeo fotovoltaico cooperativo"
+        "alt": "Icono de una publicación digital",
+        "title": "Ejemplo de contenido editorial"
     },
     "art05_00_c_p": {
-        "text": "Implementamos bombeo solar en comunidades de regantes con variadores de frecuencia y depósitos inteligentes. La plataforma predice necesidades hídricas y coordina mantenimientos para evitar paradas en temporada alta de cosecha."
+        "text": "Utiliza el blog para compartir novedades, conocimiento y recursos relacionados con la actividad real del proyecto."
     },
     "art05_00_c_firma": {
-        "text": "Uxue Garaia"
+        "text": "Ejemplo 03"
     },
     "art05_00_headerSecondary_d": {
-        "text": "Industria alimentaria optimiza autoconsumo frío"
+        "text": "Captación de consultas"
     },
     "art05_00_d_img": {
         "src": "/assets/img/system/bookmark-outline.svg",
-        "alt": "Operario ajusta paneles solares en cubierta logística",
-        "title": "Mantenimiento fotovoltaico en planta alimentaria"
+        "alt": "Icono de un formulario de contacto",
+        "title": "Ejemplo de captación de consultas"
     },
     "art05_00_d_p": {
-        "text": "Reforzamos cubiertas con estructuras antiviento y sensores térmicos para mantener cámaras frigoríficas eficientes. Con contratos PPA internos garantizamos precios estables y certificamos la energía verde en auditorías de exportación."
+        "text": "Cierra el recorrido con una llamada a la acción comprensible y un formulario que solicite solo los datos necesarios."
     },
     "art05_00_d_firma": {
-        "text": "Nora Salvat"
+        "text": "Ejemplo 04"
     },
 
     "art04_00_b_avif_src01": "assets/img/dummy/dummy_1200.avif 1200w",
@@ -227,13 +227,13 @@
     "art04_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
 
     "art16_00_h3_1": {
-        "text": "Servicios logísticos avanzados"
+        "text": "Servicios digitales"
     },
     "art16_00_h3_2": {
-        "text": "para cadenas sostenibles"
+        "text": "para una base flexible"
     },
     "art16_00_body_p": {
-        "text": "Optimizamos rutas, almacenaje y entregas con analítica en tiempo real para reducir costes, emisiones y reclamaciones mientras ofrecemos trazabilidad completa a tus clientes en cada etapa de la cadena regional."
+        "text": "Reutiliza componentes, adapta los contenidos y amplía la estructura a medida que aparezcan nuevas necesidades, sin vincular el proyecto inicial a una actividad o ubicación concreta."
     },
     "art16_00_bg_mobile": "assets/img/dummy/dummy_900.avif",
     "art16_00_bg_tablet": "assets/img/dummy/dummy_1800.avif",
@@ -241,17 +241,17 @@
 
     "moduleButtonType02_01_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Ver el detalle del servicio"
     },
     "moduleButtonType02_01_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Explorar servicio"
     },
 
     "moduleButtonType02_02_cta_link": {
         "href": "#",
-        "title": "Explorar caso de éxito"
+        "title": "Ver el detalle del servicio"
     },
     "moduleButtonType02_02_cta_span": {
-        "text": "Ver caso completo"
+        "text": "Explorar servicio"
     }
 }

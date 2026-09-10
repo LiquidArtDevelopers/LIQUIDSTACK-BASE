@@ -1,0 +1,255 @@
+---
+name: liquidstack-resource-migration
+description: Migración y promoción de recursos entre un proyecto LiquidStack consumidor, liquidstack/core, el laboratorio BASE y proyectos React. Usar al copiar recursos, convertir diseños, promover un recurso probado a CORE, portar GSAP/Three/Draggable, registrar templates/showroom, regenerar el historial de huellas gestionadas o comprobar qué debe viajar mediante Composer.
+---
+
+# LiquidStack Resource Migration
+
+## Preparación
+
+1. Respetar las instrucciones aplicables y cargar las skills locales
+   complementarias de cada repositorio; no depender de guías legacy en la
+   raíz.
+2. Ejecutar `git status --short` en el proyecto consumidor y en CORE.
+3. No tocar un repositorio con cambios coincidentes sin identificar primero su propietario y alcance.
+4. Tratar `liquidstack/core` como fuente canónica de recursos estables y el proyecto consumidor como laboratorio.
+5. No editar `vendor/liquidstack/core` como fuente de verdad.
+
+Localizaciones habituales en este entorno, que deben verificarse antes de usarse:
+
+- BASE: `C:\xampp\htdocs\__LIQUIDSTACK\LIQUIDSTACK-BASE`
+- CORE: `C:\xampp\htdocs\__LIQUIDSTACK\LIQUIDSTACK-CORE`
+- showroom BASE: el origen de aplicación que publique `npm run lad`, seguido
+  de `/es/showroom` (con `/es/templates` como alias compatible). Si 1309 está
+  libre será normalmente `http://localhost:1309/es/showroom`; no asumirlo si
+  hay otro stack activo.
+
+En otros entornos, localizar CORE mediante Composer, el repositorio configurado o las instrucciones del proyecto; no inventar rutas.
+
+El supervisor gestionado intenta PHP desde 1309 y Vite desde 5173 y avanza
+independientemente hasta encontrar puertos libres. Tratar
+`LIQUIDSTACK_DEV_APP_PORT` y `LIQUIDSTACK_DEV_VITE_PORT` como overrides
+exactos, no como inicios de rango. Los orígenes elegidos se inyectan al proceso
+sin persistir los puertos; el `swap-env` previo mantiene su activación habitual
+del perfil de desarrollo. Al cerrar el laboratorio, detener solo su supervisor
+y conservar los procesos de otros stacks.
+
+## Comparación antes de migrar
+
+Antes de asumir que un recurso es canónico:
+
+1. Comparar la implementación del consumidor, BASE y CORE.
+2. Inspeccionar el recurso renderizado si el entorno local está disponible.
+3. Identificar contrato, dependencias, imágenes, opciones, items y niveles de encabezado.
+4. Conservar cambios locales que no formen parte de la migración.
+
+Si un recurso existe en un consumidor o en BASE pero no en CORE, tratarlo como local/en pruebas hasta que se promocione expresamente.
+
+## Promoción de consumidor a CORE
+
+Promover solo cuando el recurso funcione y sea reutilizable sin copy ni supuestos de un cliente.
+
+### Contrato
+
+Definir:
+
+- nombre estable del recurso
+- template y naturaleza semántica
+- campos de copy, enlaces e imágenes
+- items y opciones variables
+- nivel base de encabezados
+- clases/variantes
+- dependencias JS y ciclo de limpieza
+
+### Mapa de ficheros
+
+Copiar o adaptar:
+
+| Consumidor | CORE |
+| --- | --- |
+| `src/scss/resources/_<recurso>.scss` | `resources/scss/_<recurso>.scss` |
+| `src/js/resources/_<recurso>.js` | `resources/js/_<recurso>.js` |
+| `public/assets/img/...` | `resources/img/...` |
+| `public/assets/video/...` | `resources/video/...` |
+| `App/templates/_<recurso>.html` | `stubs/App/templates/_<recurso>.html` |
+| `App/controllers/<recurso>.php` | `stubs/App/controllers/<recurso>.php` |
+| `App/config/languages/templates/*.json` | `stubs/App/config/languages/templates/*.json` |
+| ejemplo de `App/views/showroom/_<categoria>.php` | `stubs/App/views/showroom/_<categoria>.php` |
+| `App/app/updateLanguage.php` cuando cambia el editor | `stubs/App/app/updateLanguage.php` |
+
+Actualizar además:
+
+- `src/scss/showroom/<categoria>.scss`
+- `src/js/showroom/<categoria>.js` si hay comportamiento
+- `package.core.json` si se añade una dependencia frontend
+- `resources/img` con dummies reutilizables, no imágenes privadas de cliente
+- `resources/video` con medios y pistas dummy estrictamente necesarios, nunca
+  vídeos privados del cliente
+- README/CHANGELOG de CORE cuando cambie el contrato público o la actualización requiera pasos
+
+Antes de promover SCSS, comprobar el contrato cromático: un recurso estándar
+solo puede depender de `color00..color03` y de sus variantes `bis` o
+`colorNNSVG`. `color04` queda disponible para temas locales, y `color05+` o
+`filterColor*` no deben viajar en recursos canónicos. Si se amplía el contrato,
+actualizar conjuntamente el config de referencia, el manifiesto v2, la
+migración aditiva y sus pruebas; nunca copiar `_config.scss` completo sobre un
+consumidor.
+
+No es necesario inventariar individualmente cada recurso en el Installer
+mientras esté dentro de estos directorios ya sincronizados; sí es obligatorio
+registrarlo una sola vez en la categoría correcta del showroom, mantener
+`_templates.php` como acceso compatible, registrar el controlador y comprobar
+la hidratación. Las subrutas de ambos accesos usan el bundle y los idiomas
+`templates`.
+
+No añadir un recurso estable directamente a `_showroom.php` ni reintroducir
+todos sus imports en `templates.js`/`templates.scss`: el shell, el menú y el
+loader son infraestructura compartida. Los recursos locales sin promover usan
+los hooks `_local.php` y `src/js/showroom/local/<categoria>.js`.
+
+Si el recurso amplía infraestructura compartida —por ejemplo fondos
+responsive, colecciones o selectores de icono del editor inline— promover en
+el mismo lote el runtime común, el endpoint correspondiente y sus pruebas. Un
+fichero nuevo situado fuera de los directorios ya espejados debe registrarse
+explícitamente en `Installer::syncProjectAssets()` y comprobarse en un fixture
+de Composer; copiar únicamente el recurso visual deja la funcionalidad
+incompleta.
+
+Cuando un recurso reutiliza un backend configurable —formularios, correo,
+autenticación o integraciones— distribuir una semilla genérica solo si falta y
+preservar las copias locales existentes junto con sus catálogos y transporte.
+No copiar a CORE destinatarios, credenciales, BCC, branding, contenido legal o
+plantillas propias del cliente. Si un runtime canónico contiene datos
+regulatorios locales, separarlo en una variante o marcarlo como preservable
+antes de permitir que Composer actualice el consumidor.
+
+Los directorios de medios no se consideran distribuidos solo por existir en
+`resources`: verificar que `Installer::syncResources()` los copie al destino
+público correspondiente y que preserve archivos locales no gestionados.
+En particular, `resources/img/logos` puede aportar logos genéricos a un stack
+nuevo, pero Composer debe conservar cualquier fichero homónimo ya existente en
+`public/assets/img/logos`; el branding del consumidor nunca se sobrescribe
+desde CORE.
+
+### Historial de ficheros gestionados en CORE
+
+Todo alta o cambio de un fichero que CORE sincroniza con política gestionada
+debe registrar también su huella actual en
+`manifests/managed-file-history.json`. Esto incluye, entre otros,
+controladores, templates, SCSS, JS, vistas e imágenes distribuidas. El
+manifiesto permite reconocer versiones canónicas anteriores sin confundirlas
+con personalizaciones del consumidor.
+
+Ejecutar desde la raíz de CORE, después de cerrar todos los cambios gestionados
+y antes de crear o enmendar el commit de release:
+
+```powershell
+php tools/build-managed-file-history.php
+php tools/build-managed-file-history.php --check
+php vendor/bin/phpunit --configuration phpunit.xml.dist --do-not-cache-result --filter ManagedFileManifestTest
+```
+
+- Usar siempre el generador; no editar a mano el JSON, sustituir arrays ni
+  retirar huellas anteriores. El script recompone el historial desde las
+  etiquetas, el working tree y los baselines legacy.
+- Revisar el diff del manifiesto y confirmar que las nuevas huellas corresponden
+  exclusivamente a los ficheros gestionados del lote. Si aparecen cambios
+  ajenos, detenerse e identificar primero a su propietario.
+- Regenerar al final: un cambio posterior en controlador, template, SCSS, JS o
+  cualquier otro origen gestionado invalida de nuevo la huella.
+- No confundir este manifiesto de CORE con
+  `.liquidstack/core/managed-files.json`, que es estado de sincronización de
+  cada proyecto consumidor y no se regenera con esta herramienta.
+- Si `composer release` informa de una huella ausente, no reintentar a ciegas:
+  comprobar rama, commit, tags y remoto; regenerar, inspeccionar y añadir el
+  manifiesto al mismo lote. Si el commit sigue solo local, enmendarlo
+  únicamente cuando corresponda y repetir primero el test dirigido.
+
+CORE no debe copiar ni sobrescribir `App/config/routes/get.php` o
+`App/config/rutas.js` completos: contienen rutas propias de cada consumidor.
+Si se incorpora `/showroom`, registrar o documentar en cada proyecto una ruta
+con `resources => templates`, `content => templates` y la vista
+`_showroom.php`; mapear igualmente esa URL a `templates` en `rutas.js`. CORE
+resuelve después, mediante allowlist, las subrutas de categoría que cuelgan de
+ese padre; no es necesario multiplicarlas en todos los ficheros de rutas una
+vez instalada la versión compatible.
+Por el mismo motivo, al promover el editor de idiomas se sincroniza
+`App/app/updateLanguage.php`, pero se conserva la ruta POST local del
+consumidor. Verificar que `/languages/update` siga apuntando a
+`updateLanguage.php` sin sustituir el fichero de rutas completo.
+
+### Idiomas
+
+- Mantener el mismo prefijo que el controlador.
+- Conservar `$pad`, `$letter`, objetos `data-lang` y valores dummy de referencia.
+- Conservar en el showroom el identificador exacto del recurso dentro del
+  encabezado principal de su ejemplo. Si el encabezado es un módulo inyectado,
+  mantener índices independientes para no mezclar rótulos de recursos
+  distintos.
+- Fusionar JSON por clave; no sustituir a ciegas archivos completos si CORE contiene otros recursos.
+- Incluir todos los idiomas base existentes en CORE.
+
+### Validación
+
+1. Ejecutar `php -l` en controladores y vistas modificados.
+2. Validar JSON.
+3. Compilar frontend y probar el índice, todas las subrutas de `/showroom` y
+   sus equivalentes bajo `/templates`.
+4. Probar múltiples instancias e items.
+5. Revisar mobile, tablet y desktop.
+6. Verificar limpieza de JS, accesibilidad y jerarquía de encabezados.
+7. Comparar consumidor y CORE para confirmar que no falta ningún fichero.
+8. Ejecutar una sincronización Composer en un fixture o consumidor limpio.
+9. Confirmar que el config del fixture conserva sus valores y recibe solo las
+   variables cromáticas ausentes, y que una segunda sincronización es
+   idempotente.
+10. Regenerar y validar `manifests/managed-file-history.json` después del
+    último cambio gestionado y antes de ejecutar `composer release`.
+
+No probar un `composer update` destructivo sobre BASE si tiene cambios locales que colisionan.
+
+## Semántica de composición
+
+- Conservar un `article` como `article`; no neutralizarlo por comodidad.
+- Dejar que la vista consumidora establezca la jerarquía.
+- En una sección con varios artículos, usar normalmente H2 para el concepto de sección y H3 para cada artículo.
+- Si un único artículo expresa exactamente el mismo concepto que la sección, evitar un H2 redundante e inyectar el H2 como encabezado primario del artículo.
+- Recalcular descendientes de forma relativa hasta `h6`.
+- Mantener H2 de sección y H3 de artículo cuando representen niveles conceptuales distintos.
+
+## LiquidStack a React
+
+1. Leer primero la versión CORE y después la versión local si es más nueva.
+2. Convertir placeholders y variables globales en props tipadas o claves i18n.
+3. Preservar clases LiquidStack como hooks de estilo/comportamiento.
+4. Controlar el nivel de encabezado desde la página React.
+5. Acotar selectores al root del componente.
+6. Limpiar timelines GSAP, `ScrollTrigger`, `Draggable`, listeners, RAF, observadores y contextos WebGL.
+7. Mantener copy y backend del cliente fuera del componente reutilizable.
+
+## React a LiquidStack
+
+1. Diseñar primero el contrato reutilizable.
+2. Convertir props en placeholders, params de controlador y claves de idioma.
+3. Implementar HTML semántico, SCSS con variables del config y JS inicializable.
+4. Registrar todos los ficheros del mapa de CORE.
+5. Separar UI de integraciones backend específicas.
+6. Sincronizar a un consumidor y validar allí el resultado renderizado.
+
+## Entrega
+
+Indicar:
+
+- qué versión era local y cuál quedó canónica
+- qué ficheros se promovieron
+- qué registros e hidratación se añadieron
+- si hace falta release SemVer, `composer update liquidstack/core` o `npm install`
+- qué integración específica del cliente quedó fuera de CORE
+
+No publicar commits ni etiquetas sin autorización expresa del usuario. Cuando
+el usuario autorice una release y CORE ya esté validado, usar `composer release`
+desde `main` en lugar de crear o subir el tag manualmente. El comando muestra
+las propuestas patch/minor/major, permite editar la versión, repite las
+validaciones y publica rama + tag anotado mediante un push atómico. Si solo se
+prepara la migración, informar de la versión recomendada y dejar la publicación
+pendiente.

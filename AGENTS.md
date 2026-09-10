@@ -1,11 +1,10 @@
-# ÍNDICE DE INSTRUCCIONES
+# Guía de agentes
 
-A continuación un índice para que revises únicamente los documentos pertinentes a la tarea encomendada.
+Las instrucciones operativas viven en `.codex/skills`:
 
-## Tareas relativas al funcionamiento del stack en etapa de desarrollo o producción.
+- `dev-stack`: desarrollo y recursos LiquidStack.
+- `liquidstack-resource-migration`: promoción entre un consumidor y CORE.
+- `seo-content`: arquitectura y redacción SEO comunes.
 
-- Para entender el flujo del stack en etapas de desarrollo o producción o realizar tareas de creación de nuevos recursos, controladores, u otras funcionalidades revisa `AGENTS_DEV.md`.
-
-## Tareas relativas a copy de contenido
-
-- Antes de redactar, consulta `AGENTS_SEO_GENERAL` para entender las instrucciones en lo relativo a generar textos copy orientados a un SEO óptimo.
+Las skills sincronizadas por CORE son la fuente de verdad. Cada proyecto
+derivado puede añadir skills propias sin modificar las gestionadas por CORE.

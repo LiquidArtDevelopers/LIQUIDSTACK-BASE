@@ -1,192 +1,180 @@
 {
-
-    "example": {
-        "alt": "",
-        "title": "link",
-        "text": "",
-        "placeholder": "",
-        "value": "",
-        "content": "",
-        "href": "",
-        "src": ""
-    },
-
-    "title": {
-        "text": "LAD Framework Templates"
-    },
-
-    "description": {
-        "content": ""
-    },
-
-    "robots": {
-        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
-    },
-
-    "moduleButtonType01_00_cta": {
-        "href": "#",
-        "title": "Solicitar diagnóstico logístico"
-    },
-    "moduleButtonType01_00_cta_span": {
-        "text": "Planifica demo"
-    },
-    "moduleButtonType01_00_cta_img": {
-        "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
-    },
-
-    "moduleH1Type01_00_h1_text": {
-        "text": "Encabezado H1"
-    },
-    "moduleH1Type01_00_p01_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
-    },
-    "moduleH1Type01_00_p02_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
-    },
-
-    "hero02_video_webm": {
-        "src": "/assets/video/dummy/dummy.webm"
-    },
-    "hero02_video_mp4": {
-        "src": "/assets/video/dummy/dummy.mp4"
-    },
-    "hero02_video_title": {
-        "title": "Vídeo operaciones inteligentes"
-    },
-
-    "moduleH2Type01_00_h2_text": {
-        "text": "Sectores que transformamos con datos"
-    },
-
-    "moduleButtonType02_00_cta_link": {
-        "href": "#",
-        "title": "Explorar caso de éxito"
-    },
-    "moduleButtonType02_00_cta_span": {
-        "text": "Ver caso completo"
-    },
-
-    "moduleButtonType02_01_cta_link": {
-        "href": "#",
-        "title": "Explorar caso de éxito"
-    },
-    "moduleButtonType02_01_cta_span": {
-        "text": "Ver caso completo"
-    },
-
-    "moduleButtonType02_02_cta_link": {
-        "href": "#",
-        "title": "Explorar caso de éxito"
-    },
-    "moduleButtonType02_02_cta_span": {
-        "text": "Ver caso completo"
-    },
-
-    "sect02_00_b_h3_text": {
-        "text": "Producción audiovisual para lanzamientos globales"
-    },
-    "sect02_00_b_p01_text": {
-        "text": "Planificamos rodajes multicámara, traducciones simultáneas y espacios virtuales para amplificar cada lanzamiento sin depender de la logística presencial tradicional y reforzar la comunidad profesional."
-    },
-    "sect02_00_b_p02_text": {
-        "text": "Gestionamos clipping, boletines y sesiones de preguntas para prolongar la conversación internacional digital después del estreno."
-    },
-    "sect02_00_b_img": {
-        "src": "assets/img/dummy/dummy_1200.avif",
-        "alt": "Equipo creativo coordinando rodaje inmersivo global",
-        "title": "Equipo creativo coordina rodaje inmersivo global"
-    },
-    "sect02_00_b_img_sizes": {
-        "text": "(max-width: 899px) 900px, 1800px"
-    },
-    "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
-    "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
-    "sect02_00_c_h3_text": {
-        "text": "Analítica de visitas y monetización"
-    },
-    "sect02_00_c_p01_text": {
-        "text": "Implementamos cuadros de mando, atribución asistida y modelos de conversión para medir el impacto económico de cada experiencia en vivo y digital de alto valor."
-    },
-    "sect02_00_c_p02_text": {
-        "text": "Integramos CRM, facturación y encuestas para detectar palancas de upselling y ajustar campañas en tiempo real."
-    },
-    "sect02_00_c_img": {
-        "src": "assets/img/dummy/dummy_1200.avif",
-        "alt": "Panel financiero comparando métricas de experiencias",
-        "title": "Panel financiero compara métricas de experiencias"
-    },
-    "sect02_00_c_img_sizes": {
-        "text": "(max-width: 899px) 900px, 1800px"
-    },
-    "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
-    "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
-    "sect02_00_a_h3_text": {
-        "text": "Nuestro primer comunicado!"
-    },
-    "sect02_00_a_p01_text": {
-        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Liquid Stack. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
-    },
-    "sect02_00_a_p02_text": {
-        "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
-    },
-    "sect02_00_a_img": {
-        "src": "assets/img/dummy/dummy_1200.avif",
-        "alt": "Primer comunicado",
-        "title": "Primer Comunicado del LS"
-    },
-    "sect02_00_a_img_sizes": {
-        "text": "(max-width: 899px) 900px, 1800px"
-    },
-    "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
-    "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
-    "sectionDiskSlider01_00_headerPrimary": {
-        "text": "WebGL disko likidoaren sliderra"
-    },
-    "sectionDiskSlider01_00_intro": {
-        "text": "Scroll egitean erdiko diskoa biratzen da, irudia deformatu eta hurrengo eszena uraren moduan agerraraziz."
-    },
-    "sectionDiskSlider01_00_hint": {
-        "text": "Egin scroll biratzeko"
-    },
-    "sectionDiskSlider01_00_slidea_img": {
-        "src": "assets/img/dummy/jornadas-hettich-2560.avif",
-        "alt": "Gainazal likidoak irudi teknologikoa deformatzen du",
-        "title": "Disko likidoa irudia deformatzen"
-    },
-    "sectionDiskSlider01_00_slidea_caption": {
-        "text": "Deformazio likidoa"
-    },
-    "sectionDiskSlider01_00_slideb_img": {
-        "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Erdiko diskoak eszena digital berria erakusten du",
-        "title": "Diskoarekin WebGL trantsizioa"
-    },
-    "sectionDiskSlider01_00_slideb_caption": {
-        "text": "Agerraldi progresiboa"
-    },
-    "sectionDiskSlider01_00_slidec_img": {
-        "src": "assets/img/dummy/dummy_1800.avif",
-        "alt": "Uhin zirkularrak atzeko plano ilunean",
-        "title": "Uhin zirkularrak"
-    },
-    "sectionDiskSlider01_00_slidec_caption": {
-        "text": "Uhinak eta erliebea"
-    },
-    "sectionDiskSlider01_00_slided_img": {
-        "src": "assets/img/dummy/dummy_1800.avif",
-        "alt": "Disko argitsu batek zeharkatutako testura abstraktua",
-        "title": "Testura abstraktua diskoarekin"
-    },
-    "sectionDiskSlider01_00_slided_caption": {
-        "text": "Eszena aldaketa"
-    },
+  "example": {
+    "alt": "",
+    "title": "link",
+    "text": "",
+    "placeholder": "",
+    "value": "",
+    "content": "",
+    "href": "",
+    "src": ""
+  },
+  "title": {
+    "text": "Errendimendu handiko web garapen natiboa"
+  },
+  "description": {
+    "content": "Produktu digitalak programazio natiboarekin, frontend eta backend optimizazioekin eta SEO teknikoaren auditoriekin sortzen ditugu, webgunea azkar kargatu, oztoporik gabe eskalatu eta ikusgarritasuna sendotu dadin."
+  },
+  "robots": {
+    "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+  },
+  "moduleButtonType01_00_cta": {
+    "href": "#",
+    "title": "Diagnostiko teknikoa eskatu"
+  },
+  "moduleButtonType01_00_cta_span": {
+    "text": "Auditoria planifikatu"
+  },
+  "moduleButtonType01_00_cta_img": {
+    "src": "assets/img/system/arrow-forward-outline.svg",
+    "alt": "Aurrera egiteko gezia",
+    "title": "Aurrera egiteko gezia"
+  },
+  "moduleH1Type01_00_h1_text": {
+    "text": "Errendimendu handiagoa duten web-aplikazio natiboak"
+  },
+  "moduleH1Type01_00_p01_text": {
+    "text": "Kode natiboz diseinatu eta garatzen dugu, nabigatzailearen eta zerbitzariaren baliabide guztiak aprobetxatzeko, beharrezkoak ez diren mendekotasunak kentzeko eta egonkortasuna indartzeko."
+  },
+  "moduleH1Type01_00_p02_text": {
+    "text": "Gure ikuspegiak errendimendua, irisgarritasuna eta SEO teknikoa arkitekturatik bertatik uztartzen ditu, plataformak segurtasunez eskalatu eta trafiko organiko iraunkorra lor dezan."
+  },
+  "hero02_video_webm": {
+    "src": "/assets/video/dummy/dummy.webm"
+  },
+  "hero02_video_mp4": {
+    "src": "/assets/video/dummy/dummy.mp4"
+  },
+  "hero02_video_title": {
+    "title": "Eragiketa adimendunen bideoa"
+  },
+  "moduleH2Type01_00_h2_text": {
+    "text": "Nola bultzatzen ditugun produktu digital natiboak"
+  },
+  "moduleButtonType02_00_cta_link": {
+    "href": "#",
+    "title": "Errendimendu-auditoria aztertu"
+  },
+  "moduleButtonType02_00_cta_span": {
+    "text": "Auditoria teknikoa ikusi"
+  },
+  "moduleButtonType02_01_cta_link": {
+    "href": "#",
+    "title": "Migrazio natiboa aztertu"
+  },
+  "moduleButtonType02_01_cta_span": {
+    "text": "Migrazioa ikusi"
+  },
+  "moduleButtonType02_02_cta_link": {
+    "href": "#",
+    "title": "SEO teknikoa aztertu"
+  },
+  "moduleButtonType02_02_cta_span": {
+    "text": "SEO plana ikusi"
+  },
+  "sect02_00_b_h3_text": {
+    "text": "Eskalatzeko prest dauden arkitektura natiboak"
+  },
+  "sect02_00_b_p01_text": {
+    "text": "Kode-oinarri arinak sortzen ditugu, frameworken gainkargarik gabe, exekuzio natiboa eta cacheen, ilaren zein APIen erabilera eraginkorra lehenetsiz, trafiko-gailurrei eusteko."
+  },
+  "sect02_00_b_p02_text": {
+    "text": "Hedapen bakoitza behagarritasunarekin, sendotze-neurriekin eta karga-probekin automatizatzen dugu, azpiegiturak iterazio berri bakoitzean azkar erantzun dezan."
+  },
+  "sect02_00_b_img": {
+    "src": "assets/img/dummy/dummy_1200.avif",
+    "alt": "Garapen-taldea arkitektura natiboa berrikusten",
+    "title": "Garapen-taldeak arkitektura natiboa berrikusten du"
+  },
+  "sect02_00_b_img_sizes": {
+    "text": "(max-width: 899px) 900px, 1800px"
+  },
+  "sect02_00_b_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+  "sect02_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+  "sect02_00_c_h3_text": {
+    "text": "Frontend irisgarria eta oso azkarra"
+  },
+  "sect02_00_c_p01_text": {
+    "text": "Interakzio bakoitza errendatze progresiboarekin, lazy loading teknikarekin eta neurrira egindako bundleekin optimizatzen dugu, Core Web Vitals eta gailu guztietako erabilgarritasuna hobetzeko."
+  },
+  "sect02_00_c_p02_text": {
+    "text": "Portaeraren analitika eta irisgarritasun-probak gehitzen ditugu, bihurketetan eta benetako erantzun-denboran eragina duten hobekuntzak lehenesteko."
+  },
+  "sect02_00_c_img": {
+    "src": "assets/img/dummy/dummy_1200.avif",
+    "alt": "Web-esperientziaren metrikak dituen errendimendu-panela",
+    "title": "Web-esperientziaren metrikak dituen errendimendu-panela"
+  },
+  "sect02_00_c_img_sizes": {
+    "text": "(max-width: 899px) 900px, 1800px"
+  },
+  "sect02_00_c_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+  "sect02_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+  "sect02_00_a_h3_text": {
+    "text": "Zure ikusgarritasuna babesten duen SEO teknikoa"
+  },
+  "sect02_00_a_p01_text": {
+    "text": "Logak, arakatze-mapak eta indexazio-egoerak auditatzen ditugu blokeoak aurkitzeko, sitemapak optimizatzeko eta barne-egitura indartzeko, abiadura galdu gabe."
+  },
+  "sect02_00_a_p02_text": {
+    "text": "Datu egituratuetan, kanonikalizazioan eta segurtasunean etengabeko hobekuntzak egiten ditugu, errendimendu organikoa epe luzera mantentzeko."
+  },
+  "sect02_00_a_img": {
+    "src": "assets/img/dummy/dummy_1200.avif",
+    "alt": "Espezialista SEO teknikoaren auditoria berrikusten",
+    "title": "Espezialistak SEO teknikoaren auditoria berrikusten du"
+  },
+  "sect02_00_a_img_sizes": {
+    "text": "(max-width: 899px) 900px, 1800px"
+  },
+  "sect02_00_a_img_srcset01": "assets/img/dummy/dummy_900.avif 900w",
+  "sect02_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+  "sectionDiskSlider01_00_headerPrimary": {
+    "text": "WebGL disko likidoaren sliderra"
+  },
+  "sectionDiskSlider01_00_intro": {
+    "text": "Scroll egitean erdiko diskoa biratzen da, irudia deformatu eta hurrengo eszena uraren moduan agerraraziz."
+  },
+  "sectionDiskSlider01_00_hint": {
+    "text": "Egin scroll biratzeko"
+  },
+  "sectionDiskSlider01_00_slidea_img": {
+    "src": "assets/img/dummy/dummy01.avif",
+    "alt": "Gainazal likidoak irudi teknologikoa deformatzen du",
+    "title": "Disko likidoa irudia deformatzen"
+  },
+  "sectionDiskSlider01_00_slidea_caption": {
+    "text": "Deformazio likidoa"
+  },
+  "sectionDiskSlider01_00_slideb_img": {
+    "src": "assets/img/dummy/dummy02.avif",
+    "alt": "Erdiko diskoak eszena digital berria erakusten du",
+    "title": "Diskoarekin WebGL trantsizioa"
+  },
+  "sectionDiskSlider01_00_slideb_caption": {
+    "text": "Agerraldi progresiboa"
+  },
+  "sectionDiskSlider01_00_slidec_img": {
+    "src": "assets/img/dummy/dummy03.avif",
+    "alt": "Uhin zirkularrak hondo ilun baten gainean",
+    "title": "Uhin zirkularrak hondo ilun baten gainean"
+  },
+  "sectionDiskSlider01_00_slidec_caption": {
+    "text": "Uhinak eta erliebea"
+  },
+  "sectionDiskSlider01_00_slided_img": {
+    "src": "assets/img/dummy/dummy04.avif",
+    "alt": "Disko argitsu batek zeharkatutako testura abstraktua",
+    "title": "Testura abstraktua diskoarekin"
+  },
+  "sectionDiskSlider01_00_slided_caption": {
+    "text": "Eszena-aldaketa"
+  },
   "sectionDiskSlider01_00_slidea_kicker": {
     "text": "Etxebizitza"
   },
   "sectionDiskSlider01_00_slideb_kicker": {
-    "text": "Showroom"
+    "text": "Showrooma"
   },
   "sectionDiskSlider01_00_slidec_kicker": {
     "text": "Ekitaldiak"

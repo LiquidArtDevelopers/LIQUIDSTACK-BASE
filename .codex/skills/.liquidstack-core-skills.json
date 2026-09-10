@@ -1,0 +1,9 @@
+{
+    "managed": [
+        "dev-stack",
+        "liquidstack-module-operations",
+        "liquidstack-resource-migration",
+        "seo-content",
+        "test-functional-ui"
+    ]
+}

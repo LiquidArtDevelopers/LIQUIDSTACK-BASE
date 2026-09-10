@@ -12,15 +12,15 @@
     },
 
     "title": {
-        "text": "LAD Framework Templates"
+        "text": "Servicio digital | Proyecto LiquidStack"
     },
 
     "description": {
-        "content": ""
+        "content": "Consulta una página de servicio modular de ejemplo, preparada para adaptar alcance, proceso, ventajas y llamadas a la acción en un proyecto LiquidStack."
     },
 
     "robots": {
-        "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
     },
 
     "hero00_bg_mobile": {
@@ -33,192 +33,196 @@
         "src": "assets/img/dummy/dummy_2560.avif"
     },
     "hero00_bg_fallback": {
-        "src": "assets/img/dummy/dummy_900.avif"
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "",
+        "title": "The system is watching.",
+        "width": "",
+        "height": ""
     },
 
     "moduleH1Type01_00_h1_text": {
-        "text": "Encabezado H1"
+        "text": "Servicio digital adaptable a tus objetivos"
     },
     "moduleH1Type01_00_p01_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+        "text": "Presenta el valor del servicio con una estructura clara, flexible y fácil de editar."
     },
     "moduleH1Type01_00_p02_text": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+        "text": "Sustituye este contenido de muestra por el alcance, el proceso y los resultados verificables del proyecto real."
     },
 
     "moduleH2Type01_02_h2_text": {
-        "text": "Descarga guías y recursos técnicos"
+        "text": "Recursos para preparar la implementación"
     },
 
     "moduleButtonType01_00_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Consultar este servicio"
     },
     "moduleButtonType01_00_cta_span": {
-        "text": "Planifica demo"
+        "text": "Solicitar información"
     },
     "moduleButtonType01_00_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Flecha hacia delante",
+        "title": "Ir a la consulta"
     },
 
     "art03_00_headerPrimary": {
-        "text": "Coberturas industriales premium para proteger activos estratégicos clave"
+        "text": "Un servicio de ejemplo estructurado por fases"
     },
     "art03_00_intro_p": {
-        "text": "Fortalecemos la resiliencia operativa con pólizas modulares que cubren maquinaria crítica, interrupciones prolongadas y requisitos normativos, asegurando continuidad financiera mientras alineamos la estrategia de riesgos con tus objetivos de crecimiento."
+        "text": "Esta composición permite explicar cómo se define, valida, implementa y mejora un servicio sin vincular la plantilla a una actividad concreta."
     },
     "art03_00_headerSecondary_a": {
-        "text": "Análisis pericial para activos críticos"
+        "text": "Descubrimiento y alcance"
     },
     "art03_00_a_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Equipo técnico auditando almacén de alto rendimiento",
-        "title": "Supervisión pericial con tecnología avanzada"
+        "alt": "Equipo ordenando los requisitos de un proyecto",
+        "title": "Definición inicial del alcance"
     },
     "art03_00_a_link": {
         "href": "#",
-        "title": "Explorar programa de aseguramiento"
+        "title": "Conocer la fase de descubrimiento"
     },
     "art03_00_a_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Recopila los objetivos, los públicos y las restricciones para establecer prioridades compartidas antes de diseñar la solución."
     },
     "art03_00_headerSecondary_b": {
-        "text": "Monitorización predictiva de siniestros"
+        "text": "Diseño y validación"
     },
     "art03_00_b_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Panel de control analiza riesgos operativos críticos",
-        "title": "Modelado predictivo para prevenir incidencias"
+        "alt": "Personas revisando una propuesta de interfaz",
+        "title": "Validación de una propuesta digital"
     },
     "art03_00_b_link": {
         "href": "#",
-        "title": "Ver protocolos de respuesta rápida"
+        "title": "Conocer la fase de diseño"
     },
     "art03_00_b_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Contrasta la arquitectura, los contenidos y los recorridos principales mediante entregas comprensibles y revisiones acotadas."
     },
     "art03_00_headerSecondary_c": {
-        "text": "Cobertura logística y cadena global"
+        "text": "Implementación modular"
     },
     "art03_00_c_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Centro logístico coordina envíos internacionales sensibles",
-        "title": "Cadena global alineada con normativas vigentes"
+        "alt": "Componentes digitales organizados en módulos",
+        "title": "Implementación con componentes reutilizables"
     },
     "art03_00_c_link": {
         "href": "#",
-        "title": "Consultar auditoría integral anual"
+        "title": "Conocer la fase de implementación"
     },
     "art03_00_c_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Construye cada bloque sobre una base común para facilitar cambios, reutilización y futuras ampliaciones del proyecto."
     },
     "art03_00_headerSecondary_d": {
-        "text": "Planes de continuidad certificados ISO"
+        "text": "Medición y evolución"
     },
     "art03_00_d_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Sala de crisis ejecuta planes de contingencia certificados",
-        "title": "Continuidad operativa avalada por auditorías ISO"
+        "alt": "Panel de seguimiento con indicadores de ejemplo",
+        "title": "Seguimiento de la evolución del servicio"
     },
     "art03_00_d_link": {
         "href": "#",
-        "title": "Descubrir beneficios para plantas"
+        "title": "Conocer la fase de mejora"
     },
     "art03_00_d_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Revisa el funcionamiento, recoge necesidades nuevas y prioriza mejoras que aporten valor al siguiente ciclo."
     },
 
     "art10_00_headerPrimary": {
-        "text": "Servicios modulares para activar equipos comerciales omnicanal ágiles"
+        "text": "Un proceso claro de principio a fin"
     },
     "art10_00_headerSecondary_a": {
-        "text": "Diagnóstico táctico en tienda"
+        "text": "Preparación del proyecto"
     },
     "art10_00_a_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono checklist de operaciones ágiles",
-        "title": "Verificación diaria de aperturas eficientes"
+        "alt": "Icono de una lista de preparación",
+        "title": "Preparación ordenada del proyecto"
     },
     "art10_00_a_p": {
-        "text": "Auditamos rutinas operativas y configuramos listas dinámicas de tareas para habilitar aperturas ágiles con menos incidencias durante las primeras semanas."
+        "text": "Acordamos objetivos, responsables y entregables para que cada decisión tenga un contexto conocido por todas las personas implicadas."
     },
     "art10_00_headerSecondary_b": {
-        "text": "Soporte formativo bajo demanda"
+        "text": "Revisión colaborativa"
     },
     "art10_00_b_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono monitor con aula virtual",
-        "title": "Panel activo de formación continua"
+        "alt": "Icono de una revisión compartida",
+        "title": "Revisión colaborativa de avances"
     },
     "art10_00_b_p": {
-        "text": "Implementamos cápsulas microlearning y seguimiento de hitos comerciales que elevaron un 19 % el ticket medio de los lanzamientos regionales."
+        "text": "Presentamos avances en etapas manejables y registramos los cambios necesarios antes de continuar con el siguiente bloque."
     },
     "art10_00_headerSecondary_c": {
-        "text": "Automatización de reporting comercial"
+        "text": "Entrega y continuidad"
     },
     "art10_00_c_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono gráfico con alertas activas",
-        "title": "Seguimiento inteligente de indicadores clave"
+        "alt": "Icono de seguimiento del proyecto",
+        "title": "Entrega preparada para evolucionar"
     },
     "art10_00_c_p": {
-        "text": "Integramos dashboards predictivos con alertas de stock y campañas para reducir un 28 % las roturas y acelerar la reposición prioritaria."
+        "text": "Documentamos la solución y dejamos una base comprensible para mantener, medir y ampliar el servicio cuando sea necesario."
     },
     "art10_00_top_fill": "#ffffff",
     "art10_00_bottom_fill": "#ffffff",
 
     "art12_00_headerPrimary": {
-        "text": "Estrategias modulares que optimizan tu canal digital de ventas"
+        "text": "Capacidades que puedes activar según el proyecto"
     },
     "art12_00_headerSecondary_a": {
-        "text": "Onboarding ágil de partners"
+        "text": "Gestión de contenidos"
     },
     "art12_00_a_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono proceso de activación",
-        "title": "Proceso de activación guiado"
+        "alt": "Icono de gestión de contenidos",
+        "title": "Contenido editable y organizado"
     },
     "art12_00_a_imgBack": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Equipo configurando paneles colaborativos digitales",
-        "title": "Panel colaborativo listo para partners"
+        "alt": "Personas editando contenidos en una interfaz",
+        "title": "Edición de contenidos del proyecto"
     },
     "art12_00_a_p": {
-        "text": "Integramos catálogos y flujos legales en semanas, liberando a tu equipo comercial para enfocarse en captar distribuidores estratégicos."
+        "text": "Organiza textos, imágenes y llamadas a la acción para que el equipo pueda mantener la información esencial al día."
     },
     "art12_00_headerSecondary_b": {
-        "text": "Soporte proactivo multilingüe"
+        "text": "Integraciones opcionales"
     },
     "art12_00_b_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono de asistencia continua",
-        "title": "Asistencia continua para socios"
+        "alt": "Icono de conexiones digitales",
+        "title": "Integraciones adaptadas al proyecto"
     },
     "art12_00_b_imgBack": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Analistas revisando panel global colaborativo",
-        "title": "Panel global activo en directo"
+        "alt": "Diagrama de conexiones entre herramientas",
+        "title": "Conexión modular de herramientas"
     },
     "art12_00_b_p": {
-        "text": "Monitorizamos incidencias y ventas en tiempo real para escalar respuestas, priorizar oportunidades premium y blindar la satisfacción de tus partners."
+        "text": "Conecta únicamente las herramientas necesarias y conserva contratos claros para sustituirlas o ampliarlas más adelante."
     },
     "art12_00_headerSecondary_c": {
-        "text": "Datos accionables seguros"
+        "text": "Mantenimiento y soporte"
     },
     "art12_00_c_img": {
         "src": "assets/img/system/star-outline.svg",
-        "alt": "Icono control de datos",
-        "title": "Control seguro de datos"
+        "alt": "Icono de mantenimiento",
+        "title": "Mantenimiento continuo del servicio"
     },
     "art12_00_c_imgBack": {
         "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Dashboard con métricas protegidas críticas",
-        "title": "Dashboard protegido para escalado global"
+        "alt": "Panel con tareas de mantenimiento digital",
+        "title": "Seguimiento del mantenimiento"
     },
     "art12_00_c_p": {
-        "text": "Automatizamos reporting, alertas antifraude y conciliaciones para que cada partner acceda solo a los datos relevantes y trace planes de crecimiento."
+        "text": "Planifica revisiones, actualizaciones y mejoras con un alcance comprensible y ajustado a la evolución real del proyecto."
     },
     "art12_00_top_fill": "#ffffff",
     "art12_00_bottom_fill": "#ffffff",
@@ -241,25 +245,25 @@
     "art03_00_a_img_src02": "assets/img/dummy/dummy_1800.avif 1800w",
 
     "moduleH1Type02_00_h1_text": {
-        "text": "Logística inteligente para flotas multiorigen europeas"
+        "text": "Una solución flexible para crecer por etapas"
     },
     "moduleH1Type02_00_p01_text": {
-        "text": "Conectamos almacenes, última milla y partners europeos mediante integraciones EDI y seguimiento IoT para anticipar incidencias, redistribuir cargas y garantizar entregas just-in-time sin saturar tus recursos internos ni los equipos de atención posventa, manteniendo SLA críticos en campañas estacionales."
+        "text": "La página combina recursos reutilizables para explicar el servicio, ordenar sus fases y dirigir cada visita hacia una acción relevante sin depender de un modelo de negocio específico."
     },
     "moduleH1Type02_00_p02_text": {
-        "text": "Automatizamos previsiones de demanda, controlamos niveles de stock y activamos transportistas alternativos desde un único panel operativo, apoyándonos en analítica predictiva para reducir devoluciones, emisiones por ruta y tiempos de respuesta ante cualquier incidencia regional."
+        "text": "Puedes cambiar el contenido, reorganizar los módulos y activar nuevas capacidades conforme se confirme el alcance, manteniendo una base técnica común para todo el proyecto."
     },
 
     "moduleButtonType01_01_cta": {
         "href": "#",
-        "title": "Solicitar diagnóstico logístico"
+        "title": "Consultar este servicio"
     },
     "moduleButtonType01_01_cta_span": {
-        "text": "Planifica demo"
+        "text": "Solicitar información"
     },
     "moduleButtonType01_01_cta_img": {
         "src": "assets/img/system/arrow-forward-outline.svg",
-        "alt": "Flecha avanzar",
-        "title": "Flecha avanzar"
+        "alt": "Flecha hacia delante",
+        "title": "Ir a la consulta"
     }
 }

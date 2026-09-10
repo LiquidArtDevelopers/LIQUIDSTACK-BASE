@@ -30,7 +30,10 @@
                 <?php
                 $contactHeader    = controller('moduleH2Type01', 0);
                 $primaryContactCta = controller('moduleButtonType01', 0);
-                echo controller('moduleH1Type02', 0, ['{a-button-primary}' => $primaryContactCta]);
+                echo controller('moduleH1Type02', 0, [
+                    '{a-button-primary}' => $primaryContactCta,
+                    'header_level' => 2,
+                ]);
 
                 $secondaryButtonA = controller('moduleButtonType02', 0);
                 $secondaryButtonB = controller('moduleButtonType02', 1);

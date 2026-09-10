@@ -1,54 +1,108 @@
-Stack version: 3.2 Date: 2025/11/17
+Stack BASE: plantilla de nuevos proyectos LiquidStack
 
 # Tips para instalación y uso de este framework
 
 A continuación describiremos algunas casuísticas y tips a tener en cuenta para la instalación, configuración inicial y uso del framework.
 
+## Crear un proyecto desde BASE
+
+BASE contiene la estructura inicial que CORE no debe sobrescribir en un
+proyecto ya existente. En particular, su `src/scss/_config.scss` es la
+referencia completa del contrato de colores actual: familias `color00` a
+`color04`, variantes y filtros SVG. Los recursos estándar de CORE solo
+dependen de `color00` a `color03`; `color04` y posteriores quedan para tema y
+modificadores del proyecto.
+
+Al crear un proyecto:
+
+1. Copia o clona BASE sin `vendor`, `node_modules`, `composer.lock` ni los
+   assets compilados.
+2. Ejecuta `composer install` y `npm install`.
+3. Crea `.env` desde `.env.example`.
+4. Ejecuta `composer liquidstack:doctor` para conocer los requisitos locales
+   pendientes, sin aplicar migraciones.
+5. Personaliza los valores de `_config.scss`, pero conserva las claves del
+   contrato.
+6. Define las rutas, idiomas, navegación, branding y copy propios.
+
+Si la copia física de BASE incluye un `composer.lock` local, elimínalo antes de
+la primera instalación para no heredar una versión antigua de CORE. BASE no
+versiona ese lock.
+
+## Qué actualiza CORE y qué conserva el proyecto
+
+`composer install` y `composer update liquidstack/core` sincronizan recursos,
+controladores, templates, helpers, herramientas, catálogo del showroom y las
+skills base de `.codex/skills`. La sincronización es aditiva y usa el
+manifiesto `.liquidstack/core/managed-files.json`: actualiza copias conocidas,
+añade novedades y preserva personalizaciones locales desconocidas.
+
+BASE selecciona `liquidstack/blog`, que activa también su dependencia
+`webadmin`; ambos se distribuyen desde el mismo paquete versionado de CORE.
+Esto deja disponibles sus providers, assets y shell público desde el primer
+`composer install`, sin copiar implementaciones desde otro proyecto. Su uso
+real sigue siendo explícito: cada proyecto aporta secretos y configuración,
+revisa `doctor`, hace backup y solo entonces autoriza sus migraciones.
+
+El starter aporta además una vista de índice personalizable en `/es/blog` y
+`/eu/blog`, el shell de artículo y configuraciones no secretas para ambos
+módulos. WebAdmin vive en `/admin`; Blog y WebAdmin comparten por defecto la
+conexión `BBDD_*` con prefijos de tabla independientes. Cambiar a la conexión
+dedicada `liquidstack` es una decisión project-owned y exige completar las
+variables `LIQUIDSTACK_DB_*`.
+
+Son propiedad del proyecto y no se sustituyen de forma global:
+
+- `src/scss/_config.scss`, `_global.scss` y los SCSS/JS de cada página;
+- `App/config/routes/get.php`, `post.php` y `rutas.js`;
+- `.env`, idiomas habilitados, navegación, footer, logos y copy;
+- base de datos, usuarios, medios, correo y credenciales;
+- `.codex/config.toml` y las skills locales no gestionadas por CORE.
+
+Las rutas privadas propias que añada cada proyecto deben declarar
+`'sitemap' => false`. Las rutas de WebAdmin y Blog pertenecen a sus providers
+de CORE y no se duplican en `App/config/routes/get.php`.
+
+CookieLad queda desactivado mientras `COOKIE_LAD_KEY` esté vacío. Cada proyecto
+debe usar su propia clave y color en `.env`; BASE no distribuye credenciales de
+consentimiento ni modifica el DOM interno del widget.
+
+CORE solo amplía `_config.scss` de forma quirúrgica cuando falta una variable
+requerida; no cambia colores existentes. Por eso BASE mantiene el fichero de
+referencia completo para que un proyecto recién creado no nazca con aliases
+históricos incompatibles.
+
 ## Desarrollo local
 
 1. Completa tu `.env` (se puede generar copiando `.env.example`) con todas las credenciales y secretos del proyecto. Ese archivo nunca se versiona y actúa como fuente de verdad para el resto de variables.
-2. Personaliza `.env.production` y `.env.development` únicamente con las claves que deben variar entre perfiles (por defecto sólo redefinen `RAIZ`, `DEV_MODE` y `DISPLAY_ERROR`).
-3. Instala dependencias de Node: `npm install`.
+2. Personaliza `.env.production` y `.env.development` únicamente con las claves que deben variar entre perfiles (por defecto redefinen `RAIZ`, `DEV_MODE`, `DISPLAY_ERROR` y `LANG_SKIP_UPDATE`).
+3. Usa Node `^20.19` o `>=22.12` e instala dependencias con `npm install`.
 4. Para trabajar en desarrollo existe un comando que levanta todo el entorno:
-   - `npm run start` ejecuta `node scripts/swap-env.mjs development` antes de lanzar el servidor PHP en `http://localhost:3000` y `npm run dev` para Vite en modo hot-reload.
+   - `npm run lad` aplica `.env.development`, busca para PHP el primer puerto
+     libre desde `1309` y para Vite el primero desde `5173`, e inyecta ambos
+     orígenes efectivos al runtime.
    - También puedes usar `npm run dev` si ya tienes un servidor PHP iniciado manualmente.
-5. Para preparar el proyecto para producción ejecutar `npm run build`, que sincroniza `.env.production` y luego genera el sitemap multilingüe con `hreflang` y compila los assets dentro de `public/assets`.
+5. Antes del primer build real sustituye el origen reservado `https://example.com`
+   de `.env.production` por el dominio canónico del proyecto. Después ejecuta
+   `npm run build`, que sincroniza ese perfil, genera el sitemap multilingüe con
+   `hreflang` y compila los assets dentro de `public/assets`.
 
 Los recursos se sirven siempre desde `public/assets`, por lo que no se genera ninguna carpeta `dist` adicional.
 
-### Cambio de puerto local (checklist rapido)
+### Puertos locales concurrentes
 
-Cuando quieras mover el stack a otro puerto (por ejemplo `1309`), revisa estos 4 archivos:
+No hay que editar archivos para abrir varios proyectos a la vez. Cada
+`npm run lad` reserva sus puertos y mantiene estable la pareja elegida durante
+ese proceso. Por ejemplo, si otro stack usa `1309` y `5173`, el siguiente
+normalmente arrancará en `1310` y `5174`.
 
-1. `package.json`
-   - Script `lad`:
-   - Cambiar `php -S localhost:1309 -t public` al puerto que quieras.
-
-2. `vite.config.js`
-   - En `server.origin`:
-   - Cambiar `http://localhost:1309` al nuevo puerto.
-
-3. `.env`
-   - Variable `RAIZ`:
-   - Cambiar `RAIZ=http://localhost:1309`.
-
-4. `.env.development`
-   - Variable `RAIZ`:
-   - Cambiar `RAIZ=http://localhost:1309`.
-
-Ejemplo rapido:
-
-```bash
-# Nuevo puerto
-PUERTO=1309
-```
-
-```txt
-package.json      -> php -S localhost:1309 -t public
-vite.config.js    -> origin: "http://localhost:1309"
-.env              -> RAIZ=http://localhost:1309
-.env.development  -> RAIZ=http://localhost:1309
-```
+Los overrides `LIQUIDSTACK_DEV_APP_PORT` y
+`LIQUIDSTACK_DEV_VITE_PORT` fuerzan puertos exactos y fallan si están
+ocupados. `LIQUIDSTACK_DEV_PHP_BINARY` permite escoger el ejecutable PHP sin
+imponer una instalación concreta. El supervisor publica además
+`LIQUIDSTACK_DEV_APP_ORIGIN`, `LIQUIDSTACK_DEV_VITE_ORIGIN` y una identidad
+opaca del proyecto; las sesiones de WebAdmin no dependen del número de puerto
+y permanecen separadas entre stacks y dominios.
 
 ### Gestión de perfiles `.env`
 
@@ -65,17 +119,17 @@ Durante el desarrollo disponemos de varios scripts auxiliares:
 
 ## Validación y pruebas
 
-- Instala las dependencias PHP (incluido `liquidstack/core` con versionado semántico `^1.0`) con `composer install`.
+- Instala las dependencias PHP (incluido `liquidstack/core` con versionado semántico compatible) con `composer install`.
 - Ejecuta `vendor/bin/phpunit` o `composer test` para correr las pruebas unitarias de helpers/controladores y el smoke test de `public/index.php`.
 - Lanza esta batería después de actualizar `liquidstack/core` para detectar regresiones en el enrutado y en los recursos compartidos.
 
-## Paquete reutilizable `stack-core`
+## Paquete reutilizable `liquidstack/core`
 
 - El núcleo del stack se publica como paquete Composer con namespace `App\Core\` y helpers cargados vía autoload.
-- Los scripts `post-install-cmd` y `post-update-cmd` sincronizan automáticamente `public/index.php` y los activos PHP críticos desde `stack-core/stubs` hacia el proyecto consumidor.
+- Los eventos `post-install-cmd` y `post-update-cmd` sincronizan automáticamente `public/index.php` y los activos PHP críticos desde CORE hacia el proyecto consumidor.
 - El punto de entrada `public/index.php` delega ahora en `App\Core\Application`, que centraliza la carga de entorno, rutas y helpers.
-- Los controladores, templates y herramientas agnósticas se copian automáticamente a `App/` tras `composer install`/`composer update` desde `stack-core`, de modo que en producción siguen estando disponibles aunque el paquete no se suba al repositorio. Esto incluye el directorio completo `App/tools`, que reaparece tras cada instalación o actualización aunque no esté versionado. Si faltan, vuelve a instalar las dependencias o ejecuta `composer stack-core:sync-resources` (alias heredado: `composer stack-liquid-core:sync-resources`).
-- Los assets front de `stack-core` se replican en cada instalación hacia `src/js/resources` y `src/scss/resources` (y adicionalmente en `vendor/liquidstack/core/resources`) para restaurar cualquier archivo borrado antes de lanzar Vite.
+- Los controladores, templates y herramientas agnósticas se copian automáticamente a `App/` tras `composer install`/`composer update`, de modo que en producción siguen disponibles fuera de `vendor`. Esto incluye `App/tools`, que reaparece en cada instalación aunque BASE lo ignore.
+- Los recursos frontend se sincronizan hacia `src/js/resources`, `src/scss/resources` y `public/assets` antes de lanzar Vite.
 
 ## Editor en línea de traducciones
 
@@ -83,8 +137,10 @@ El editor en línea sólo está disponible cuando `DEV_MODE=true` en el entorno 
 
 ### Puesta en marcha
 
-1. Arranca el stack con `npm run start`, que levanta el servidor PHP y Vite en modo desarrollo.
-2. Accede a la URL local (por defecto `http://localhost:3000`) con un usuario con permisos de edición.
+1. Arranca el stack con `npm run lad`, que levanta el servidor PHP y Vite en modo desarrollo.
+2. Accede a la URL local elegida por el supervisor con `DEV_MODE=1`. El
+   editor no depende del antiguo sistema de usuarios; nunca expongas este modo
+   en un dominio público.
 
 ### Uso del editor
 
@@ -118,7 +174,7 @@ $ctaHref = resolve_localized_href($ctaObj->href ?? '');
 Con esta llamada los contenidos pueden introducir:
 
 - Rutas internas (`"/distribuidores"`, `"contacto"`, etc.), que se completarán automáticamente con el dominio e idioma activo.
-- URLs absolutas (`"https://bazkide.eus"`, `"mailto:info@example.com"`, …), que el helper devolverá tal y como se escriban en el JSON.
+- URLs absolutas (`"https://example.com"`, `"mailto:info@example.com"`, …), que el helper devolverá tal y como se escriban en el JSON.
 
 Si necesitas recuperar únicamente la ruta interna sin anteponer el dominio, pasa la opción `['absolute' => false]`:
 
@@ -132,27 +188,6 @@ Utiliza siempre este helper cuando añadas nuevos recursos o refactorices contro
 
 1. **Arquitectura de URL**: definir manualmente en `App/config/routes/get.php` la ruta, recursos y contenido a servir por cada URL, teniendo en cuenta los diferentes idiomas y un estudio SEO del sector y del negocio.
 2. **Creación de views y recursos**: para cada entrada en `get.php` crear la vista PHP, la carpeta de contenido en `App/config/languages/<slug>` (los JSON se generan con el script de idiomas) y los archivos `.scss` y `.js` en `src/` cuando la ruta haya declarado `resources`. Estos archivos deben importar los controladores necesarios según se añadan o eliminen en cada vista.
-
-## Configuración en tareas programadas para ejecución de consola con la versión PHP del Host.
-
-Tenemos que ejecutar el archivo previamente con una ruta absoluta hacia el binario donde está la versión PHP de nuestro host. Si necesitamos ejecutar un script php que tiene dependencias superiores a 7.0, debemos hacerlo así, sino el script se ejecutará con una consola con PHP desactualizado.
-
-Así bien:
-```bash
-45 * * * * /home/hettich-iberia/.bin/php -q /home/hettich-iberia/www/php/tasks/pending_mail_stack.php
-```
-
-Así mal, se ejecutará 
-```bash
-45 * * * * php -q www/php/tasks/pending_mail_stack.php
-```
-
-Si queremos hacer una tarea que a en punto limpie todas las tareas del dominio que hayan quedado en ejecución por fallo, hacemos un kill.
-```bash
-05 * * * * /home/hettich-iberia/.bin/php -q /home/hettich-iberia/www/php/tasks/pending_mail_stack.php >> /home/hettich-iberia/logs/cron_logs/log.txt 2>&1
-00 * * * * killall -9 -u hettich-iberia
-```
-Además, guardamos en un log, dentro del servidor, todos los echo que hagamos en el script php que se ejecuta. Así podemos llevar un control de la itinerancia de los procesos.
 
 ## Clase PHP para convertir en amigables las fechas
 

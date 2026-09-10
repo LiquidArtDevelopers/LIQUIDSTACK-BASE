@@ -6,6 +6,7 @@ package-lock.json
 .npmrc
 /public/assets/css/
 /public/assets/js/
+/public/.vite/
 /public/assets/video/customer/
 assets/**/*.min.js
 assets/**/*.min.css
@@ -13,3 +14,5 @@ assets/**/*.min.js.map
 assets/**/*.min.css.map
 App/tools
 App/bootstrap.php
+/.codex/tmp/
+/.phpunit.result.cache

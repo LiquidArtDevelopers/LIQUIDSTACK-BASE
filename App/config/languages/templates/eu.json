@@ -12,7 +12,7 @@
     },
 
     "title": {
-        "text": "LAD Framework Templates"
+        "text": "LiquidStack baliabide txantiloiak"
     },
 
     "description": {
@@ -21,6 +21,67 @@
 
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "showroom_catalog_title": {
+        "text": "LiquidStack baliabideen katalogoa"
+    },
+    "showroom_catalog_intro": {
+        "text": "Aukeratu kategoria bat katalogo osoa kargatu gabe baliabideak berrikusteko."
+    },
+    "showroom_catalog_nav": {
+        "text": "Showroom kategoriak"
+    },
+    "showroom_catalog_index": {
+        "text": "Aurkibidea"
+    },
+    "showroom_catalog_category_heroes_label": {
+        "text": "Heroiak"
+    },
+    "showroom_catalog_category_heroes_description": {
+        "text": "Hasierako headerrak eta haien H1 konposizioak."
+    },
+    "showroom_catalog_category_particles_label": {
+        "text": "Partikulak"
+    },
+    "showroom_catalog_category_particles_description": {
+        "text": "Partikula, canvas eta WebGL atzeko planoak."
+    },
+    "showroom_catalog_category_gsap_specials_label": {
+        "text": "GSAP bereziak"
+    },
+    "showroom_catalog_category_gsap_specials_description": {
+        "text": "Pin, scroll eta WebGL esperientzia murgiltzaileak."
+    },
+    "showroom_catalog_category_common_label": {
+        "text": "Artikulu arruntak"
+    },
+    "showroom_catalog_category_common_description": {
+        "text": "Irudi, izenburu eta testu konposizio zuzenak."
+    },
+    "showroom_catalog_category_cards_grids_label": {
+        "text": "Fitxak eta saretak"
+    },
+    "showroom_catalog_category_cards_grids_description": {
+        "text": "Txartelak, matrizeak, zerrendak eta bloke errepikagarriak."
+    },
+    "showroom_catalog_category_media_label": {
+        "text": "Multimedia"
+    },
+    "showroom_catalog_category_media_description": {
+        "text": "Bideoa, irudia, sliderrak eta galeria interaktiboak."
+    },
+    "showroom_catalog_category_forms_interactive_label": {
+        "text": "Formularioak eta interakzioa"
+    },
+    "showroom_catalog_category_forms_interactive_description": {
+        "text": "Formularioak, akordeoiak eta fitxak."
+    },
+    "showroom_catalog_category_modules_sections_label": {
+        "text": "Moduluak eta sekzioak"
+    },
+    "showroom_catalog_category_modules_sections_description": {
+        "text": "Atomo berrerabilgarriak eta sekzio konposizioak."
     },
 
     "hero00_bg_mobile": {
@@ -33,7 +94,11 @@
         "src": "assets/img/dummy/dummy_2560.avif"
     },
     "hero00_bg_fallback": {
-        "src": "assets/img/dummy/dummy_900.avif"
+        "src": "assets/img/dummy/dummy_900.avif",
+        "alt": "",
+        "title": "link",
+        "width": "",
+        "height": ""
     },
 
     "hero02_video_webm": {
@@ -58,14 +123,14 @@
     },
     "hero03_00_logo": {
         "src": "assets/img/logos/logo-black.svg",
-        "alt": "Liquid Art Developers",
-        "title": "Liquid Art Developers"
+        "alt": "LiquidStack",
+        "title": "LiquidStack"
     },
     "hero03_00_h1_text": {
-        "text": "Liquid Art Developers"
+        "text": "LiquidStack"
     },
     "hero03_00_front_text": {
-        "text": "Matrix Has You"
+        "text": "hero03 · Matrix Has You"
     },
 
     "sect01_00_a_img01": {
@@ -186,18 +251,18 @@
     },
 
     "sect02_00_a_h3_text": {
-        "text": "Nuestro primer comunicado!"
+        "text": "Baliabide berrerabilgarrien erakusketa"
     },
     "sect02_00_a_p01_text": {
-        "text": "Inauguramos este espacio pensado exclusivamente para quienes formáis parte del Liquid Stack. Aquí centralizaremos todas las novedades internas, manteniéndote al día con información clara y cercana. Nuestro objetivo es ofrecerte un punto de encuentro digital donde conocer, participar y seguir de cerca la vida del club."
+        "text": "Atal honek LiquidStack-en baliabide berrerabilgarriak aurkezten ditu, egitura, edukia eta portaera testuinguru neutral batean berrikusi ahal izateko. Proiektu bakoitzak bere marka eta beharretara egokitu behar ditu."
     },
     "sect02_00_a_p02_text": {
-        "text": "A partir de ahora encontrarás comunicados importantes, anuncios oficiales y actividades reservadas únicamente para socios y socias. Queremos que este canal sea una vía directa y útil, facilitando el acceso a todo lo que afecta a nuestra comunidad. Te invitamos a visitarlo con frecuencia y mantenerte siempre informado."
+        "text": "Adibideek ez dute bezero, sektore edo kokapen zehatzik ordezkatzen. Erabili konposizioa abiapuntu gisa, eta ordezkatu testuak, irudiak, estekak eta metadatuak argitaratu aurretik."
     },
     "sect02_00_a_img": {
         "src": "assets/img/dummy/dummy_1200.avif",
-        "alt": "Primer comunicado",
-        "title": "Primer Comunicado del LS"
+        "alt": "LiquidStack baliabide berrerabilgarriaren adibidea",
+        "title": "LiquidStack baliabidearen erakusketa"
     },
     "sect02_00_a_img_sizes": {
         "text": "(max-width: 899px) 900px, 1800px"
@@ -401,7 +466,7 @@
     },
 
     "moduleH1Type01_00_h1_text": {
-        "text": "Encabezado H1"
+        "text": "hero01 · moduleH1Type01"
     },
     "moduleH1Type01_00_p01_text": {
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
@@ -410,24 +475,139 @@
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
     },
 
+    "moduleH1Type01_01_h1_text": {
+        "text": "hero00 · moduleH1Type01"
+    },
+    "moduleH1Type01_01_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_01_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    },
+
+    "moduleH1Type01_02_h1_text": {
+        "text": "hero02 · moduleH1Type01"
+    },
+    "moduleH1Type01_02_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_02_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    },
+
+    "moduleH1Type01_03_h1_text": {
+        "text": "hero04 · moduleH1Type01"
+    },
+    "moduleH1Type01_03_p01_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex!"
+    },
+    "moduleH1Type01_03_p02_text": {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima optio cumque inventore perferendis similique…"
+    },
+
     "moduleH2Type01_00_h2_text": {
-        "text": "Sectores que transformamos con datos"
+        "text": "sect01 · moduleH2Type01"
     },
 
     "moduleH2Type01_01_h2_text": {
-        "text": "Soluciones modulares por vertical"
+        "text": "sect02 · moduleH2Type01"
     },
 
     "moduleH2Type01_02_h2_text": {
-        "text": "Descarga guías y recursos técnicos"
+        "text": "sectTabs01 · moduleH2Type01"
     },
 
     "moduleH2Type01_03_h2_text": {
-        "text": "Historias reales de eficiencia logística"
+        "text": "moduleH2Type01"
     },
 
     "moduleH2Type01_04_h2_text": {
-        "text": "Laguntza estrategikoa eta operatiboa"
+        "text": "art17 · moduleH2Type01"
+    },
+
+    "moduleH2Type01_05_h2_text": {
+        "text": "art02little · icon · moduleList01 · moduleH2Type01"
+    },
+
+    "moduleH2Type01_06_h2_text": {
+        "text": "sectionParticles01 · moduleH2Type01"
+    },
+
+    "moduleH2Type01_07_h2_text": {
+        "text": "Soluciones modulares por vertical"
+    },
+
+    "moduleH2Type01_08_h2_text": {
+        "text": "Descarga guías y recursos técnicos"
+    },
+
+    "moduleH2Type01_09_h2_text": {
+        "text": "moduleButtonType03 · moduleButtonType04"
+    },
+
+    "moduleParrafo01_00_p_text": {
+        "text": "Modulu honek paragrafo independente bat edozein txarteletan txertatzeko aukera ematen du."
+    },
+
+    "moduleParrafo01_01_p_text": {
+        "text": "Eduki modularrak egitura malgua, berrerabilgarria eta erraz eskalatzeko modukoa mantentzen du."
+    },
+
+    "moduleList01_00_a_li_text": {
+        "text": "Txartel bakoitzerako eduki independentea."
+    },
+    "moduleList01_00_b_li_text": {
+        "text": "Elementu nabarmen batetik hirura."
+    },
+    "moduleList01_00_c_li_text": {
+        "text": "Hierarkia semantiko moldagarria."
+    },
+    "moduleList01_00_d_li_text": {
+        "text": "Diseinu moldagarria tamaina guztietan."
+    },
+    "moduleList01_00_e_li_text": {
+        "text": "Irudiak edo ikonoak erabiltzeko aukera."
+    },
+    "moduleList01_00_f_li_text": {
+        "text": "Modulu berrerabilgarrien bidezko konposizioa."
+    },
+
+    "moduleList01_01_a_li_text": {
+        "text": "Goiburu nagusi konfiguragarria."
+    },
+    "moduleList01_01_b_li_text": {
+        "text": "Barne-goiburu eskalagarriak."
+    },
+    "moduleList01_01_c_li_text": {
+        "text": "Eduki-modulu trukagarriak."
+    },
+    "moduleList01_01_d_li_text": {
+        "text": "Ikusizko aldaera integratuak."
+    },
+    "moduleList01_01_e_li_text": {
+        "text": "Elementu kopuru konfiguragarria."
+    },
+    "moduleList01_01_f_li_text": {
+        "text": "HTML egitura semantikoa."
+    },
+
+    "moduleList01_02_a_li_text": {
+        "text": "Elementu bakoitzerako eduki espezifikoa."
+    },
+    "moduleList01_02_b_li_text": {
+        "text": "Gehienez hiru txartel nabarmen."
+    },
+    "moduleList01_02_c_li_text": {
+        "text": "Portaera moldagarri koherentea."
+    },
+    "moduleList01_02_d_li_text": {
+        "text": "Egitura eta edukia argi bereizita."
+    },
+    "moduleList01_02_e_li_text": {
+        "text": "Orri desberdinetan erraz berrerabiltzeko."
+    },
+    "moduleList01_02_f_li_text": {
+        "text": "Hazteko prest dagoen konfigurazioa."
     },
 
     "moduleButtonType01_00_cta": {
@@ -450,9 +630,30 @@
     "moduleButtonType02_00_cta_span": {
         "text": "Ver caso completo"
     },
+    "moduleButtonType02_00_cta_img": {
+        "src": "assets/img/system/arrow-forward-outline.svg",
+        "alt": "Aurrera gezia",
+        "title": "Jarraitu untxi zuriari"
+    },
+
+    "moduleButtonType03_00_cta_link": {
+        "href": "#showroom-button-modules",
+        "title": "Take the red pill."
+    },
+    "moduleButtonType03_00_cta_span": {
+        "text": "Wake up, Neo."
+    },
+
+    "moduleButtonType04_00_cta_link": {
+        "href": "#showroom-button-modules",
+        "title": "Free your mind."
+    },
+    "moduleButtonType04_00_cta_span": {
+        "text": "Enter the Matrix."
+    },
 
     "art01_00_headerPrimary": {
-        "text": "Encabezado variable h3 art01"
+        "text": "art01"
     },
     "art01_00_intro_p": {
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa sapiente placeat? Voluptatibus optio maiores vel nemo, voluptatem repellat iure?"
@@ -486,42 +687,283 @@
     },
 
     "art02_00_headerPrimary": {
-        "text": "Encabezado variable h3 art02"
+        "text": "art02 · zortzi txartel ikonodun"
     },
     "art02_00_intro_p": {
-        "text": "Lorem ipsum dolor sit."
+        "text": "Matrix ipsum probak kodea, erabakiak eta sistemaren seinaleak lotzen ditu; zortzi elementuek informazio zabala antolatzen dute erritmoa, irakurgarritasuna eta ikusizko koherentzia galdu gabe, proba tekniko bakoitzean."
     },
     "art02_00_p1": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita quam laudantium voluptatem consectetur nobis nemo."
+        "text": "Bloke bakoitzak ikono ezagungarri bat, goiburu labur bat eta txartelen altuera, lerro-jauziak, zutabeen oreka eta pantaila-zabalera desberdinetako responsive portaera egiaztatzeko adinako paragrafoa uztartzen ditu proba bakoitzean."
     },
     "art02_00_p2": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae voluptatem tempore, tempora assumenda temporibus quasi at ducimus velit."
+        "text": "Edukia nahita dummy da, dentsitatea, lerrokatzea eta eskalagarritasuna baliabidea benetako orri batera eraman aurretik ebaluatu ahal izateko modu fidagarrian."
     },
     "art02_00_headerSecondary_a": {
-        "text": "Encabezado variable h4 art02"
+        "text": "Sistemaren barruko orientazioa"
     },
     "art02_00_a_img": {
-        "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Imagen dummy",
-        "title": "Imagen dummy"
+        "src": "assets/img/system/compass-outline.svg",
+        "alt": "art02 orientatzeko iparrorratz ikonoa",
+        "title": "Sistemaren barruko orientazioa"
     },
     "art02_00_a_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Matrix ipsum probak Neo seinale aldakorren artean gidatzen du, ibilbide posibleak alderatzen ditu eta hurrengo mugimendua testuingurua galdu gabe aukeratzeko erreferentziak gordetzen ditu."
     },
     "art02_00_headerSecondary_b": {
-        "text": "Encabezado variable h4 art02"
+        "text": "Kodea eta erabaki lotuak"
     },
     "art02_00_b_img": {
-        "src": "assets/img/dummy/dummy_2560.avif",
-        "alt": "Imagen dummy",
-        "title": "Imagen dummy"
+        "src": "assets/img/system/code-slash-outline.svg",
+        "alt": "Erabaki lotuetarako kode ikonoa",
+        "title": "Kodea eta erabaki lotuak"
     },
     "art02_00_b_p": {
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati omnis qui consectetur odit doloribus."
+        "text": "Kode-lerroek arauak, salbuespenak eta proba-emaitzak lotzen dituzte, paragrafoak hainbat lerro jarraian hartzen dituenean txartel bakoitzak nola erantzuten duen erakusteko, konposizio osoaren erritmoa hobeto neurtzeko."
+    },
+    "art02_00_headerSecondary_c": {
+        "text": "Simulazioaren aurkako babesa"
+    },
+    "art02_00_c_img": {
+        "src": "assets/img/system/shield-checkmark-outline.svg",
+        "alt": "Sistema babesteko ezkutu ikonoa",
+        "title": "Simulazioaren aurkako babesa"
+    },
+    "art02_00_c_p": {
+        "text": "Ezkutuak sarbideak berrikusten, ustekabeko seinaleak egiaztatzen eta ikusgai dagoen informazioa handitu arren konposizioa egonkor mantentzen duen kontrol-geruza adierazten du, pantaila-zabalera desberdin guztietan."
+    },
+    "art02_00_headerSecondary_d": {
+        "text": "Seinaleak interpretatzen dituzten pertsonak"
+    },
+    "art02_00_d_img": {
+        "src": "assets/img/system/people.svg",
+        "alt": "Seinaleak interpretatzeko pertsonen ikonoa",
+        "title": "Seinaleak interpretatzen dituzten pertsonak"
+    },
+    "art02_00_d_p": {
+        "text": "Taldeak behaketak partekatzen, irakurketak alderatzen eta erabakiak banatzen ditu, Matrix ipsum urrats bakoitzak multzoaren barruan azalpen ulergarria izan dezan, erabaki bakoitza argi utzita."
+    },
+    "art02_00_headerSecondary_e": {
+        "text": "Ekin aurreko ikaskuntza"
+    },
+    "art02_00_e_img": {
+        "src": "assets/img/system/book-outline.svg",
+        "alt": "Probako ikaskuntzarako liburu ikonoa",
+        "title": "Ekin aurreko ikaskuntza"
+    },
+    "art02_00_e_p": {
+        "text": "Liburuak ereduak, hipotesiak eta dummy adibideak biltzen ditu, ikusizko proba hau proiektuaren behin betiko informazio bihurtu aurretik edukia berrikusteko, akats bisualak garaiz aurkitzeko."
+    },
+    "art02_00_headerSecondary_f": {
+        "text": "Arau eta mugen konfigurazioa"
+    },
+    "art02_00_f_img": {
+        "src": "assets/img/system/settings-outline.svg",
+        "alt": "Arau eta mugetarako ezarpen ikonoa",
+        "title": "Arau eta mugen konfigurazioa"
+    },
+    "art02_00_f_p": {
+        "text": "Ezarpenek tarteak, tamainak eta baliabidearen mugak egiaztatzen laguntzen dute, viewporta, copyaren luzera edo hizkuntza aldatu arren zortzi elementuak orekatuta mantenduz, proba guztietan."
+    },
+    "art02_00_headerSecondary_g": {
+        "text": "Ezkutuko ereduak erakusten dituzten distirak"
+    },
+    "art02_00_g_img": {
+        "src": "assets/img/system/sparkles-outline.svg",
+        "alt": "Ezkutuko ereduetarako distira ikonoa",
+        "title": "Ezkutuko ereduak erakusten dituzten distirak"
+    },
+    "art02_00_g_p": {
+        "text": "Distirek proba-datuen arteko harremanak nabarmentzen dituzte eta ikusizko aniztasuna gehitzen dute kontrastea, lerrokatzea, ikonoaren eskala eta txartelen koherentzia berrikusteko, ikuspegi desberdin guztietan."
+    },
+    "art02_00_headerSecondary_h": {
+        "text": "Datuak interpretatzeko abiadura"
+    },
+    "art02_00_h_img": {
+        "src": "assets/img/system/speedometer-outline.svg",
+        "alt": "Datuak interpretatzeko abiadura-neurgailu ikonoa",
+        "title": "Datuak interpretatzeko abiadura"
+    },
+    "art02_00_h_p": {
+        "text": "Azken adierazleak diseinuaren erritmoa eta erantzuna neurtzen ditu, irakurketa, banaketa eta responsive portaera balioztatzeko zortzi adibide luzez osatutako matrizea itxiz, pantaila-tamaina guztietan."
+    },
+
+    "art32_00_headerPrimary": {
+        "text": "art32 · kutxako zortzi txartel ikonodun"
+    },
+    "art32_00_intro_p": {
+        "text": "Matrix ipsum probak kodea, erabakiak eta sistemaren seinaleak lotzen ditu; zortzi elementuek informazio zabala antolatzen dute erritmoa, irakurgarritasuna eta ikusizko koherentzia galdu gabe, proba tekniko bakoitzean."
+    },
+    "art32_00_p1": {
+        "text": "Bloke bakoitzak ikono ezagungarri bat, goiburu labur bat eta txartelen altuera, lerro-jauziak, zutabeen oreka eta pantaila-zabalera desberdinetako responsive portaera egiaztatzeko adinako paragrafoa uztartzen ditu proba bakoitzean."
+    },
+    "art32_00_p2": {
+        "text": "Edukia nahita dummy da, dentsitatea, lerrokatzea eta eskalagarritasuna baliabidea benetako orri batera eraman aurretik ebaluatu ahal izateko modu fidagarrian."
+    },
+    "art32_00_headerSecondary_a": {
+        "text": "Sistemaren barruko orientazioa"
+    },
+    "art32_00_a_img": {
+        "src": "assets/img/system/compass-outline.svg",
+        "alt": "art02 orientatzeko iparrorratz ikonoa",
+        "title": "Sistemaren barruko orientazioa"
+    },
+    "art32_00_a_p": {
+        "text": "Matrix ipsum probak Neo seinale aldakorren artean gidatzen du, ibilbide posibleak alderatzen ditu eta hurrengo mugimendua testuingurua galdu gabe aukeratzeko erreferentziak gordetzen ditu."
+    },
+    "art32_00_headerSecondary_b": {
+        "text": "Kodea eta erabaki lotuak"
+    },
+    "art32_00_b_img": {
+        "src": "assets/img/system/code-slash-outline.svg",
+        "alt": "Erabaki lotuetarako kode ikonoa",
+        "title": "Kodea eta erabaki lotuak"
+    },
+    "art32_00_b_p": {
+        "text": "Kode-lerroek arauak, salbuespenak eta proba-emaitzak lotzen dituzte, paragrafoak hainbat lerro jarraian hartzen dituenean txartel bakoitzak nola erantzuten duen erakusteko, konposizio osoaren erritmoa hobeto neurtzeko."
+    },
+    "art32_00_headerSecondary_c": {
+        "text": "Simulazioaren aurkako babesa"
+    },
+    "art32_00_c_img": {
+        "src": "assets/img/system/shield-checkmark-outline.svg",
+        "alt": "Sistema babesteko ezkutu ikonoa",
+        "title": "Simulazioaren aurkako babesa"
+    },
+    "art32_00_c_p": {
+        "text": "Ezkutuak sarbideak berrikusten, ustekabeko seinaleak egiaztatzen eta ikusgai dagoen informazioa handitu arren konposizioa egonkor mantentzen duen kontrol-geruza adierazten du, pantaila-zabalera desberdin guztietan."
+    },
+    "art32_00_headerSecondary_d": {
+        "text": "Seinaleak interpretatzen dituzten pertsonak"
+    },
+    "art32_00_d_img": {
+        "src": "assets/img/system/people.svg",
+        "alt": "Seinaleak interpretatzeko pertsonen ikonoa",
+        "title": "Seinaleak interpretatzen dituzten pertsonak"
+    },
+    "art32_00_d_p": {
+        "text": "Taldeak behaketak partekatzen, irakurketak alderatzen eta erabakiak banatzen ditu, Matrix ipsum urrats bakoitzak multzoaren barruan azalpen ulergarria izan dezan, erabaki bakoitza argi utzita."
+    },
+    "art32_00_headerSecondary_e": {
+        "text": "Ekin aurreko ikaskuntza"
+    },
+    "art32_00_e_img": {
+        "src": "assets/img/system/book-outline.svg",
+        "alt": "Probako ikaskuntzarako liburu ikonoa",
+        "title": "Ekin aurreko ikaskuntza"
+    },
+    "art32_00_e_p": {
+        "text": "Liburuak ereduak, hipotesiak eta dummy adibideak biltzen ditu, ikusizko proba hau proiektuaren behin betiko informazio bihurtu aurretik edukia berrikusteko, akats bisualak garaiz aurkitzeko."
+    },
+    "art32_00_headerSecondary_f": {
+        "text": "Arau eta mugen konfigurazioa"
+    },
+    "art32_00_f_img": {
+        "src": "assets/img/system/settings-outline.svg",
+        "alt": "Arau eta mugetarako ezarpen ikonoa",
+        "title": "Arau eta mugen konfigurazioa"
+    },
+    "art32_00_f_p": {
+        "text": "Ezarpenek tarteak, tamainak eta baliabidearen mugak egiaztatzen laguntzen dute, viewporta, copyaren luzera edo hizkuntza aldatu arren zortzi elementuak orekatuta mantenduz, proba guztietan."
+    },
+    "art32_00_headerSecondary_g": {
+        "text": "Ezkutuko ereduak erakusten dituzten distirak"
+    },
+    "art32_00_g_img": {
+        "src": "assets/img/system/sparkles-outline.svg",
+        "alt": "Ezkutuko ereduetarako distira ikonoa",
+        "title": "Ezkutuko ereduak erakusten dituzten distirak"
+    },
+    "art32_00_g_p": {
+        "text": "Distirek proba-datuen arteko harremanak nabarmentzen dituzte eta ikusizko aniztasuna gehitzen dute kontrastea, lerrokatzea, ikonoaren eskala eta txartelen koherentzia berrikusteko, ikuspegi desberdin guztietan."
+    },
+    "art32_00_headerSecondary_h": {
+        "text": "Datuak interpretatzeko abiadura"
+    },
+    "art32_00_h_img": {
+        "src": "assets/img/system/speedometer-outline.svg",
+        "alt": "Datuak interpretatzeko abiadura-neurgailu ikonoa",
+        "title": "Datuak interpretatzeko abiadura"
+    },
+    "art32_00_h_p": {
+        "text": "Azken adierazleak diseinuaren erritmoa eta erantzuna neurtzen ditu, irakurketa, banaketa eta responsive portaera balioztatzeko zortzi adibide luzez osatutako matrizea itxiz, pantaila-tamaina guztietan."
+    },
+
+    "art02little_00_headerPrimary": {
+        "text": "art02little · image · moduleParrafo01"
+    },
+    "art02little_00_intro_p": {
+        "text": "Elementu nabarmen bat, bi edo hirurentzako baliabide malgua."
+    },
+    "art02little_00_p1": {
+        "text": "Txartel bakoitzak eduki independentea onartzen du modulu berrerabilgarri baten bidez."
+    },
+    "art02little_00_p2": {
+        "text": "Konposizioa automatikoki egokitzen zaio elementu kopuruari."
+    },
+    "art02little_00_headerSecondary_a": {
+        "text": "Lehen elementu nabarmena"
+    },
+    "art02little_00_a_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Lehen elementuaren proba-irudia",
+        "title": "Lehen elementu nabarmena"
+    },
+    "art02little_00_headerSecondary_b": {
+        "text": "Bigarren elementu nabarmena"
+    },
+    "art02little_00_b_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Bigarren elementuaren proba-irudia",
+        "title": "Bigarren elementu nabarmena"
+    },
+    "art02little_00_headerSecondary_c": {
+        "text": "Hirugarren elementu nabarmena"
+    },
+    "art02little_00_c_img": {
+        "src": "assets/img/dummy/dummy_2560.avif",
+        "alt": "Hirugarren elementuaren proba-irudia",
+        "title": "Hirugarren elementu nabarmena"
+    },
+
+    "art02little_01_headerPrimary": {
+        "text": "art02little · icon · moduleList01"
+    },
+    "art02little_01_intro_p": {
+        "text": "Elementu bakoitzak eduki-modulu independente bat jaso dezake."
+    },
+    "art02little_01_p1": {
+        "text": "Goiburu nagusia kanpoko osagai baten bidez ere eman daiteke."
+    },
+    "art02little_01_p2": {
+        "text": "Barneko goiburuen hierarkia automatikoki egokitzen da."
+    },
+    "art02little_01_headerSecondary_a": {
+        "text": "Eduki malgua"
+    },
+    "art02little_01_a_img": {
+        "src": "assets/img/system/compass-outline.svg",
+        "alt": "Iparrorratzaren ikonoa",
+        "title": "Orientazioa"
+    },
+    "art02little_01_headerSecondary_b": {
+        "text": "Egitura semantikoa"
+    },
+    "art02little_01_b_img": {
+        "src": "assets/img/system/people.svg",
+        "alt": "Taldearen ikonoa",
+        "title": "Pertsonak"
+    },
+    "art02little_01_headerSecondary_c": {
+        "text": "Elementu eskalagarriak"
+    },
+    "art02little_01_c_img": {
+        "src": "assets/img/system/shield-checkmark-outline.svg",
+        "alt": "Ezkutu egiaztatuaren ikonoa",
+        "title": "Babesa"
     },
 
     "art03_00_headerPrimary": {
-        "text": "Coberturas industriales premium para proteger activos estratégicos clave"
+        "text": "art03"
     },
     "art03_00_intro_p": {
         "text": "Fortalecemos la resiliencia operativa con pólizas modulares que cubren maquinaria crítica, interrupciones prolongadas y requisitos normativos, asegurando continuidad financiera mientras alineamos la estrategia de riesgos con tus objetivos de crecimiento."
@@ -585,7 +1027,7 @@
     },
 
     "art04_00_headerPrimary": {
-        "text": "Galería de proyectos y casos destacados"
+        "text": "art04"
     },
     "art04_00_intro_p": {
         "text": "Seleccionamos intervenciones recientes que ilustran nuestra capacidad para integrar seguridad, eficiencia energética y narrativa visual en entornos industriales con altos requisitos de cumplimiento."
@@ -619,7 +1061,7 @@
     },
 
     "art06_00_headerPrimary": {
-        "text": "Soluciones solares que escalan con tu negocio"
+        "text": "art06"
     },
     "art06_00_headerSecondary_a": {
         "text": "Ingeniería fotovoltaica modular a medida"
@@ -677,7 +1119,7 @@
     "art07_00_bgMatrix_tablet": "assets/img/dummy/dummy_1800.avif",
     "art07_00_bgMatrix_desktop": "assets/img/dummy/dummy_2560.avif",
     "art07_00_h3_1": {
-        "text": "Plan integral solar"
+        "text": "art07"
     },
     "art07_00_h3_2": {
         "text": "en barrios industriales"
@@ -693,7 +1135,7 @@
     },
 
     "art08_00_headerPrimary": {
-        "text": "Estrategias solares para ampliar la competitividad industrial regional en Gipuzkoa"
+        "text": "art08"
     },
     "art08_00_a_img": {
         "src": "assets/img/dummy/dummy_2560.avif",
@@ -719,7 +1161,7 @@
     },
 
     "art09_00_headerPrimary": {
-        "text": "Casos de interiorismo con retorno medible en retail"
+        "text": "art09"
     },
     "art09_00_p1": {
         "text": "Analizamos implantaciones híbridas con datos de afluencia, conversiones cruzadas y fidelización para replicar experiencias omnicanal que eleven la permanencia media por visita en cada tienda."
@@ -728,12 +1170,12 @@
         "text": "Consulta el informe"
     },
     "art09_00_link": {
-        "href": "https://ejemplo.com",
+        "href": "https://example.com",
         "title": "Descubre métricas completas del proyecto",
         "text": "Ver informe"
     },
     "art09_00_headerSecondary_a": {
-        "text": "Rediseño flagship centro Bilbao"
+        "text": "Esperientzia nagusiaren birdiseinua"
     },
     "art09_00_a_img1": {
         "src": "assets/img/system/star-outline.svg",
@@ -749,7 +1191,7 @@
         "text": "Reordenamos la circulación principal con señalética dinámica y pruebas de producto asistidas que incrementaron un 18 % las ventas cruzadas y redujeron el tiempo de espera medio en caja."
     },
     "art09_00_headerSecondary_b": {
-        "text": "Plan piloto showroom Barcelona"
+        "text": "Showroom interaktiboaren proba pilotua"
     },
     "art09_00_b_img1": {
         "src": "assets/img/system/star-outline.svg",
@@ -782,7 +1224,7 @@
     },
 
     "art10_00_headerPrimary": {
-        "text": "Servicios modulares para activar equipos comerciales omnicanal ágiles"
+        "text": "art10"
     },
     "art10_00_headerSecondary_a": {
         "text": "Diagnóstico táctico en tienda"
@@ -821,7 +1263,7 @@
     "art10_00_bottom_fill": "#ffffff",
 
     "art11_00_headerPrimary": {
-        "text": "Nuestra experiencia en cifras"
+        "text": "art11"
     },
     "art11_00_a_target": {
         "value": "998"
@@ -855,7 +1297,7 @@
     },
 
     "art12_00_headerPrimary": {
-        "text": "Estrategias modulares que optimizan tu canal digital de ventas"
+        "text": "art12"
     },
     "art12_00_headerSecondary_a": {
         "text": "Onboarding ágil de partners"
@@ -879,7 +1321,7 @@
     "art12_00_b_img": {
         "src": "assets/img/system/star-outline.svg",
         "alt": "Icono de asistencia continua",
-        "title": "Asistencia continua para socios"
+        "title": "Proiekturako etengabeko laguntza"
     },
     "art12_00_b_imgBack": {
         "src": "assets/img/dummy/dummy_2560.avif",
@@ -909,7 +1351,7 @@
     "art12_00_bottom_fill": "#ffffff",
 
     "art13_00_headerPrimary": {
-        "text": "Clientes que impulsan nuestra innovación diaria conjunta"
+        "text": "art13"
     },
     "art13_00_a_quote": {
         "text": "Tras migrar con AvT logramos integrar canales físicos y digitales sin fricciones. El equipo nos guio en automatizaciones críticas y definió métricas compartidas que hoy permiten a cada partner acceder a reportes fiables y coordinar lanzamientos conjuntos estratégicos."
@@ -932,19 +1374,19 @@
     },
 
     "art14_00_headerPrimary": {
-        "text": "Servicios legales ágiles para la industria inteligente vasca"
+        "text": "art14"
     },
     "art14_00_p": {
-        "text": "Nuestro equipo combina asesoría jurídica tecnológica con conocimiento industrial para acelerar implantaciones seguras en Bizkaia. Coordinamos evaluaciones regulatorias, contratos de innovación y formación preventiva para que tus lanzamientos conecten con partners locales y cumplan la norma europea sin fricciones operativas. Supervisamos auditorías de datos, licencias y cláusulas de ciberseguridad que blindan el crecimiento sostenible de cada planta."
+        "text": "Nuestro equipo combina asesoría jurídica tecnológica con conocimiento industrial para acelerar implantaciones seguras en distintos mercados. Coordinamos evaluaciones regulatorias, contratos de innovación y formación preventiva para que tus lanzamientos conecten con partners locales y cumplan la norma europea sin fricciones operativas. Supervisamos auditorías de datos, licencias y cláusulas de ciberseguridad que blindan el crecimiento sostenible de cada planta."
     },
     "art14_00_img": {
-        "src": "assets/img/logos/logo-business-b.svg",
+        "src": "assets/img/dummy/dummy_2560.avif",
         "alt": "Abogada revisando contrato de innovación industrial estratégica",
         "title": "Revisión jurídica de innovación industrial estratégica"
     },
 
     "art15_00_headerPrimary": {
-        "text": "Metodología integral para digitalizar cadenas logísticas complejas de Euskadi"
+        "text": "art15"
     },
     "art15_00_p1": {
         "text": "Analizamos cada nodo de suministro junto a tus responsables de operaciones para detectar cuellos de botella, modelar escenarios con datos reales y priorizar automatizaciones. Integrando plataformas IoT y analítica avanzada reducimos tiempos de respuesta, trazamos incidencias y alineamos KPI críticos con los objetivos comerciales del territorio."
@@ -964,7 +1406,7 @@
     },
 
     "artForm01_00_headerPrimary": {
-        "text": "Solicita información rápida"
+        "text": "artForm01"
     },
     "artForm01_00_headerSecondary": {
         "text": "Completa el formulario"
@@ -1027,7 +1469,7 @@
     "artForm01_00_contact_tel": {
         "text": "Teléfono pendiente de actualización"
     },
-    "artForm01_00_contact_mail_href": "mailto:info@ejemplo.com",
+    "artForm01_00_contact_mail_href": "mailto:info@example.com",
     "artForm01_00_contact_mail_title": "Enviar correo",
     "artForm01_00_contact_mail_img": {
         "src": "assets/img/system/mail.svg",
@@ -1035,9 +1477,9 @@
         "title": "Mail"
     },
     "artForm01_00_contact_mail": {
-        "text": "Escríbenos a info@ejemplo.com"
+        "text": "Idatzi info@example.com helbidera"
     },
-    "artForm01_00_contact_addr_href": "https://maps.app.goo.gl/xxxxx",
+    "artForm01_00_contact_addr_href": "https://example.com/map",
     "artForm01_00_contact_addr_title": "Cómo llegar",
     "artForm01_00_contact_addr_img": {
         "src": "assets/img/system/wp.svg",
@@ -1047,7 +1489,7 @@
     "artForm01_00_contact_addr": {
         "text": "Dirección pendiente de actualización"
     },
-    "artForm01_00_contact_web_href": "https://www.ejemplo.com",
+    "artForm01_00_contact_web_href": "https://www.example.com",
     "artForm01_00_contact_web_title": "Visitar web",
     "artForm01_00_contact_web_img": {
         "src": "assets/img/system/web.svg",
@@ -1055,7 +1497,7 @@
         "title": "Web"
     },
     "artForm01_00_contact_web": {
-        "text": "Accede a www.ejemplo.com"
+        "text": "Sartu www.example.com helbidean"
     },
     "artForm01_00_map_src": "https://www.google.com/maps/embed?pb=...",
     "artForm01_00_map_width": "600",
@@ -1080,7 +1522,7 @@
     },
 
     "artSlider01_00_headerPrimary": {
-        "text": "Ideas y noticias de logística urbana"
+        "text": "artSlider01"
     },
     "artSlider01_00_viewmore": {
         "text": "Explorar publicaciones",
@@ -1268,7 +1710,7 @@
     },
 
     "artSlider02_00_headerPrimary": {
-        "text": "Experiencias formativas con partners industriales"
+        "text": "artSlider02"
     },
     "artSlider02_00_prev": {
         "text": "Anterior"
@@ -1310,29 +1752,29 @@
     },
 
     "artAccordion01_00_headerPrimary": {
-        "text": "Preguntas clave de matriculación"
+        "text": "artAccordion01"
     },
     "artAccordion01_00_itema_title": {
-        "text": "¿Qué documentos debo presentar?"
+        "text": "Zer eduki erakuts dezake osagai honek?"
     },
     "artAccordion01_00_itema_content": {
-        "text": "Lleva DNI vigente, fotografía tamaño carnet, justificante de tasas y certificado psicotécnico actualizado; si ya tienes permisos previos, añade copia compulsada para agilizar el alta y evitar desplazamientos adicionales."
+        "text": "Erabili panel bakoitza ohiko galderak, zerbitzu baten xehetasunak edo laguntza-edukia proiektuaren testu eta estekekin antolatzeko."
     },
     "artAccordion01_00_itemb_title": {
-        "text": "¿Cómo se organiza la teoría?"
+        "text": "Atalak itxita has daitezke?"
     },
     "artAccordion01_00_itemb_content": {
-        "text": "Planificamos sesiones en vivo de dos horas cada tarde durante diez días laborables, reforzadas con cuestionarios descargables y tutoría online para que consolides normativa, señalización y maniobras antes de pasar a las prácticas obligatorias."
+        "text": "Bai. Proiektuak hasierako egoera zehaztu dezake, pertsona bakoitzak behar duen informazioa soilik ireki dezan."
     },
     "artAccordion01_00_itemc_title": {
-        "text": "¿Qué opciones de pago tengo?"
+        "text": "Teklatuarekin erabil daiteke osagaia?"
     },
     "artAccordion01_00_itemc_content": {
-        "text": "Ofrecemos financiación interna sin intereses en tres cuotas mensuales, domiciliación bancaria flexible y acuerdos con entidades colaboradoras para adaptar el desembolso a tu calendario, siempre con asesoría para elegir el plan más conveniente."
+        "text": "Kontrolek foku ikusgarria eta egitura semantikoa mantentzen dituzte, teklatuarekin eta laguntza-teknologiekin elkarreragina ulergarria izan dadin."
     },
 
     "artZipper_00_h3": {
-        "text": "FAQs sobre logística integral"
+        "text": "artZipper"
     },
     "artZipper_00_a_h4": {
         "text": "¿Cómo optimizamos rutas?"
@@ -1351,14 +1793,14 @@
     },
 
     "moduleTest_00_h2_text": {
-        "text": "Prueba piloto controlada en 30 días"
+        "text": "moduleTest"
     },
     "moduleTest_00_p_text": {
         "text": "Validamos integraciones, definimos indicadores y formamos a tus equipos operativos con soporte continuo durante la prueba para medir reducción de errores, capacidad de reacción y eficiencia en costes antes del despliegue completo en toda la red multialmacén."
     },
 
     "art05_00_headerPrimary": {
-        "text": "Historias reales de confianza local certificada"
+        "text": "art05"
     },
     "art05_00_intro_p": {
         "text": "Nuestros clientes describen cómo la instalación solar optimiza sus costes energéticos y refuerza su compromiso con la sostenibilidad, destacando la cercanía del equipo técnico y la monitorización continua que ofrecemos en cada proyecto residencial."
@@ -1367,7 +1809,7 @@
         "text": "Consumo optimizado en vivienda unifamiliar"
     },
     "art05_00_a_img": {
-        "src": "/assets/img/system/bookmark-outline.svg",
+        "src": "assets/img/system/bookmark-outline.svg",
         "alt": "Técnica revisando inversores solares en planta industrial",
         "title": "Supervisión profesional de inversores industriales en operación"
     },
@@ -1381,7 +1823,7 @@
         "text": "Cadena hotelera con autoconsumo activo"
     },
     "art05_00_b_img": {
-        "src": "/assets/img/system/bookmark-outline.svg",
+        "src": "assets/img/system/bookmark-outline.svg",
         "alt": "Gestora analizando panel de monitorización solar",
         "title": "Seguimiento digital del autoconsumo en hoteles"
     },
@@ -1395,7 +1837,7 @@
         "text": "Cooperativa agro instala bombeo eficiente"
     },
     "art05_00_c_img": {
-        "src": "/assets/img/system/bookmark-outline.svg",
+        "src": "assets/img/system/bookmark-outline.svg",
         "alt": "Técnica revisa cuadros solares en cooperativa rural",
         "title": "Supervisión de bombeo fotovoltaico cooperativo"
     },
@@ -1406,7 +1848,7 @@
         "text": "Uxue Garaia"
     },
     "art05_00_d_img": {
-        "src": "/assets/img/system/bookmark-outline.svg",
+        "src": "assets/img/system/bookmark-outline.svg",
         "alt": "Operario ajusta paneles solares en cubierta logística",
         "title": "Mantenimiento fotovoltaico en planta alimentaria"
     },
@@ -1473,7 +1915,7 @@
     "artSlider02_00_slidea_img_sizes": "(max-width: 768px) 100vw, 1500px",
 
     "art16_00_h3_1": {
-        "text": "Servicios logísticos avanzados"
+        "text": "art16"
     },
     "art16_00_h3_2": {
         "text": "para cadenas sostenibles"
@@ -1486,7 +1928,7 @@
     "art16_00_bg_desktop": "assets/img/dummy/dummy_2560.avif",
 
     "art17_00_headerPrimary": {
-        "text": "Zergatik aukeratu eta nola lan egiten dugu"
+        "text": "art17"
     },
     "art17_00_headerSecondary_a": {
         "text": "Zergatik gu"
@@ -1518,7 +1960,7 @@
     },
 
     "art18_00_headerPrimary": {
-        "text": "Pricing"
+        "text": "art18"
     },
     "art18_00_headerSecondary_a": {
         "text": "Basic"
@@ -1582,7 +2024,7 @@
         "text": "Matrix"
     },
     "artPricingGlass01_00_headerSecondary_a": {
-        "text": "Free"
+        "text": "artPricingGlass01 · Free"
     },
     "artPricingGlass01_00_a_price": {
         "text": "$0/mo"
@@ -1712,7 +2154,7 @@
         "text": "Strategy"
     },
     "sectionParallax01_00_a_title": {
-        "text": "Shape the signal"
+        "text": "sectionParallax01 · Shape the signal"
     },
     "sectionParallax01_00_a_text": {
         "text": "Align the narrative, define the audience, and set the release cadence."
@@ -1779,7 +2221,7 @@
     },
 
     "moduleH1Type02_00_h1_text": {
-        "text": "Logística inteligente para flotas multiorigen europeas"
+        "text": "moduleH1Type02"
     },
     "moduleH1Type02_00_p01_text": {
         "text": "Conectamos almacenes, última milla y partners europeos mediante integraciones EDI y seguimiento IoT para anticipar incidencias, redistribuir cargas y garantizar entregas just-in-time sin saturar tus recursos internos ni los equipos de atención posventa, manteniendo SLA críticos en campañas estacionales."
@@ -1821,7 +2263,7 @@
     },
 
     "sectionDiskSlider01_00_headerPrimary": {
-        "text": "WebGL disko likidoaren sliderra"
+        "text": "sectionDiskSlider01"
     },
     "sectionDiskSlider01_00_intro": {
         "text": "Scroll egitean erdiko diskoa biratzen da, irudia deformatu eta hurrengo eszena uraren moduan agerraraziz."
@@ -1830,7 +2272,7 @@
         "text": "Egin scroll biratzeko"
     },
     "sectionDiskSlider01_00_slidea_img": {
-        "src": "assets/img/dummy/jornadas-hettich-2560.avif",
+        "src": "assets/img/dummy/dummy01.avif",
         "alt": "Gainazal likidoak irudi teknologikoa deformatzen du",
         "title": "Disko likidoa irudia deformatzen"
     },
@@ -1874,7 +2316,7 @@
         "text": "Arkitektura"
     },
     "sectionDiskSlider01_00_slidee_img": {
-        "src": "assets/img/dummy/jornadas-hettich-2560.avif",
+        "src": "assets/img/dummy/dummy01.avif",
         "alt": "Gainazal likidoak irudi teknologikoa deformatzen du",
         "title": "Disko likidoa irudia deformatzen"
     },
@@ -1886,7 +2328,7 @@
     },
 
     "sectionSkewGallery01_00_headerPrimary": {
-        "text": ""
+        "text": "sectionSkewGallery01"
     },
     "sectionSkewGallery01_00_intro": {
         "text": ""
@@ -1936,7 +2378,7 @@
         "text": ""
     },
     "sectionSkewGallery01_00_iteme_img": {
-        "src": "assets/img/dummy/dummy05.avif",
+        "src": "assets/img/dummy/dummy01.avif",
         "alt": "",
         "title": "link"
     },
@@ -1947,7 +2389,7 @@
         "text": ""
     },
     "sectionSkewGallery01_00_itemf_img": {
-        "src": "assets/img/dummy/dummy06.avif",
+        "src": "assets/img/dummy/dummy02.avif",
         "alt": "",
         "title": "link"
     },
@@ -1959,7 +2401,7 @@
     },
 
     "artWorksSkew01_00_headerPrimary": {
-        "text": "Proiektu hautatuak"
+        "text": "artWorksSkew01"
     },
     "artWorksSkew01_00_intro": {
         "text": "Nabarmendutako lanen multzoa, sakontasun sentsazioarekin eta scrollari lotutako mugimenduarekin."
@@ -2030,7 +2472,7 @@
         "text": ""
     },
     "artWorksSkew01_00_iteme_img": {
-        "src": "assets/img/dummy/dummy05.avif",
+        "src": "assets/img/dummy/dummy01.avif",
         "alt": "",
         "title": "link"
     },
@@ -2044,7 +2486,7 @@
         "text": ""
     },
     "artWorksSkew01_00_itemf_img": {
-        "src": "assets/img/dummy/dummy06.avif",
+        "src": "assets/img/dummy/dummy02.avif",
         "alt": "",
         "title": "link"
     },
@@ -2070,7 +2512,7 @@
     },
 
     "sectionHScroll01_00_headerPrimary": {
-        "text": "Matrixari buruz"
+        "text": "sectionHScroll01"
     },
     "sectionHScroll01_00_intro": {
         "text": "Printzipioak eta erabakiak, simulazioan kodea gidatzen dutenak."
@@ -2133,7 +2575,7 @@
     },
 
     "artHeroScroll01_00_headerPrimary": {
-        "text": "The Matrix Is Watching"
+        "text": "artHeroScroll01"
     },
     "artHeroScroll01_00_intro": {
         "text": "Reality bends when you choose the truth."
@@ -2223,7 +2665,9 @@
         "text": "Fate has a sense of irony"
     },
 
-    "art19_00_headerPrimary": "",
+    "art19_00_headerPrimary": {
+        "text": "art19"
+    },
     "art19_00_clickHint": "",
     "art19_00_slidea_img": {
         "src": "",
@@ -2268,5 +2712,1660 @@
     },
     "art19_00_slided_p": {
         "text": ""
+    },
+
+    "moduleList01_00_marker_icon": "default",
+
+    "moduleList01_01_marker_icon": "default",
+
+    "moduleList01_02_marker_icon": "default",
+
+    "moduleH2Type02_00_headerPrimary": {
+        "text": "moduleH2Type02 · Encabezado H2 con gradiente animado"
+    },
+
+    "moduleH1Type03_00_eyebrow_text": {
+        "text": "Matrix ipsum · Header principal"
+    },
+    "moduleH1Type03_00_h1_text": {
+        "text": "hero06 · moduleH1Type03 · Header inmersivo a pantalla completa"
+    },
+    "moduleH1Type03_00_p01_text": {
+        "text": "Matrix ipsum dolor sit amet. Neo eligendi veritatis codicem et simulacrum mientras Morpheus muestra la entrada a una realidad distinta."
+    },
+
+    "hero06_00_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Neo observa el código de Matrix",
+        "title": "Escena de Matrix para hero06"
+    },
+
+    "moduleH1Type04_00_eyebrow_text": {
+        "text": "Matrix ipsum · Header interior"
+    },
+    "moduleH1Type04_00_h1_text": {
+        "text": "hero07 · moduleH1Type04 · Header interior compacto"
+    },
+    "moduleH1Type04_00_p01_text": {
+        "text": "Matrix ipsum dolor sit amet. Trinity recorre el sistema y Agent Smith vigila cada decisión desde las líneas del código."
+    },
+
+    "hero07_00_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Trinity dentro del universo Matrix",
+        "title": "Escena de Matrix para hero07"
+    },
+
+    "art20_00_headerPrimary": {
+        "text": "art20 · Article media split"
+    },
+    "art20_00_intro_p": {
+        "text": "Matrix ipsum dolor sit amet. Neo elige la píldora roja y descubre que el simulacro oculta una realidad construida por las máquinas."
+    },
+    "art20_00_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Escena dividida del universo Matrix",
+        "title": "Matrix ipsum para art20"
+    },
+
+    "art21_00_headerPrimary": {
+        "text": "art21 · Article galería de imágenes"
+    },
+    "art21_00_intro_p": {
+        "text": "Matrix ipsum dolor sit amet. Morpheus abre tres ventanas al código para que Neo observe el sistema desde perspectivas diferentes."
+    },
+    "art21_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Escena a de la galería Matrix",
+        "title": "Matrix ipsum a para art21"
+    },
+    "art21_00_b_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Escena b de la galería Matrix",
+        "title": "Matrix ipsum b para art21"
+    },
+    "art21_00_c_img": {
+        "src": "assets/img/dummy/dummy04.avif",
+        "alt": "Escena c de la galería Matrix",
+        "title": "Matrix ipsum c para art21"
+    },
+
+    "art22_00_headerPrimary": {
+        "text": "art22 · Article galería enlazada"
+    },
+    "art22_00_intro_p": {
+        "text": "Matrix ipsum dolor sit amet. Cada acceso conduce a una lectura distinta del simulacro y de las decisiones que mantienen despierto a Neo."
+    },
+    "art22_00_headerSecondary_a": {
+        "text": "Matrix ipsum 01"
+    },
+    "art22_00_a_link": {
+        "href": "#",
+        "title": "Abrir Matrix ipsum 01"
+    },
+    "art22_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Escena 01 de la galería enlazada Matrix",
+        "title": "Matrix ipsum 01 para art22"
+    },
+    "art22_00_headerSecondary_b": {
+        "text": "Matrix ipsum 02"
+    },
+    "art22_00_b_link": {
+        "href": "#",
+        "title": "Abrir Matrix ipsum 02"
+    },
+    "art22_00_b_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Escena 02 de la galería enlazada Matrix",
+        "title": "Matrix ipsum 02 para art22"
+    },
+    "art22_00_headerSecondary_c": {
+        "text": "Matrix ipsum 03"
+    },
+    "art22_00_c_link": {
+        "href": "#",
+        "title": "Abrir Matrix ipsum 03"
+    },
+    "art22_00_c_img": {
+        "src": "assets/img/dummy/dummy04.avif",
+        "alt": "Escena 03 de la galería enlazada Matrix",
+        "title": "Matrix ipsum 03 para art22"
+    },
+
+    "art23_00_headerPrimary": {
+        "text": "art23 · Article prosa con imagen"
+    },
+    "art23_00_p1": {
+        "text": "Matrix ipsum dolor sit amet. Neo aprende a leer el código mientras Trinity le muestra que cada regla del sistema puede ser cuestionada."
+    },
+    "art23_00_p2": {
+        "text": "Morpheus conserva la fe, Zion permanece alerta y el Oráculo recuerda que conocer el camino no equivale a recorrerlo."
+    },
+    "art23_00_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Escena panorámica del código Matrix",
+        "title": "Matrix ipsum para art23"
+    },
+
+    "art24_00_headerPrimary": {
+        "text": "art24 · Article grid de fichas"
+    },
+    "art24_00_headerSecondary_a": {
+        "text": "Matrix ipsum 01"
+    },
+    "art24_00_a_p": {
+        "text": "Matrix ipsum dolor sit amet. El código cambia cuando Neo comprende que la elección también transforma el sistema."
+    },
+    "art24_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Retrato Matrix de la ficha 01",
+        "title": "Matrix ipsum 01 para art24"
+    },
+    "art24_00_headerSecondary_b": {
+        "text": "Matrix ipsum 02"
+    },
+    "art24_00_b_p": {
+        "text": "Matrix ipsum dolor sit amet. El código cambia cuando Neo comprende que la elección también transforma el sistema."
+    },
+    "art24_00_b_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Retrato Matrix de la ficha 02",
+        "title": "Matrix ipsum 02 para art24"
+    },
+    "art24_00_headerSecondary_c": {
+        "text": "Matrix ipsum 03"
+    },
+    "art24_00_c_p": {
+        "text": "Matrix ipsum dolor sit amet. El código cambia cuando Neo comprende que la elección también transforma el sistema."
+    },
+    "art24_00_c_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Retrato Matrix de la ficha 03",
+        "title": "Matrix ipsum 03 para art24"
+    },
+    "art24_00_headerSecondary_d": {
+        "text": "Matrix ipsum 04"
+    },
+    "art24_00_d_p": {
+        "text": "Matrix ipsum dolor sit amet. El código cambia cuando Neo comprende que la elección también transforma el sistema."
+    },
+    "art24_00_d_img": {
+        "src": "assets/img/dummy/dummy04.avif",
+        "alt": "Retrato Matrix de la ficha 04",
+        "title": "Matrix ipsum 04 para art24"
+    },
+
+    "art25_00_headerPrimary": {
+        "text": "art25 · Article CTA centrado"
+    },
+    "art25_00_p01": {
+        "text": "Matrix ipsum dolor sit amet. Neo debe decidir si continúa dentro del simulacro o acepta mirar más allá de sus límites."
+    },
+    "art25_00_p02": {
+        "text": "Morpheus ofrece una elección clara: permanecer junto a la ilusión conocida o descubrir la verdad que sostiene el sistema."
+    },
+
+    "art26_00_headerPrimary": {
+        "text": "art26 · Article CTA offset"
+    },
+    "art26_00_p": {
+        "text": "Matrix ipsum dolor sit amet. Agent Smith protege las reglas del simulacro mientras Zion reúne la voluntad necesaria para mantener abierta una salida."
+    },
+
+    "art27_00_headerPrimary": {
+        "text": "art27 · Article grid de iconos"
+    },
+    "art27_00_intro_p": {
+        "text": "Matrix ipsum dolor sit amet. Nueve señales ayudan a reconocer el sistema, recorrer sus capas y comprender por qué cada decisión altera el código."
+    },
+    "art27_00_headerSecondary_a": {
+        "text": "Matrix ipsum 01"
+    },
+    "art27_00_a_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_a_img": {
+        "src": "assets/img/system/compass-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_b": {
+        "text": "Matrix ipsum 02"
+    },
+    "art27_00_b_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_b_img": {
+        "src": "assets/img/system/shield-checkmark-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_c": {
+        "text": "Matrix ipsum 03"
+    },
+    "art27_00_c_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_c_img": {
+        "src": "assets/img/system/people.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_d": {
+        "text": "Matrix ipsum 04"
+    },
+    "art27_00_d_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_d_img": {
+        "src": "assets/img/system/school-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_e": {
+        "text": "Matrix ipsum 05"
+    },
+    "art27_00_e_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_e_img": {
+        "src": "assets/img/system/speedometer-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_f": {
+        "text": "Matrix ipsum 06"
+    },
+    "art27_00_f_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_f_img": {
+        "src": "assets/img/system/settings-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_g": {
+        "text": "Matrix ipsum 07"
+    },
+    "art27_00_g_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_g_img": {
+        "src": "assets/img/system/cube-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_h": {
+        "text": "Matrix ipsum 08"
+    },
+    "art27_00_h_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_h_img": {
+        "src": "assets/img/system/code-slash-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art27_00_headerSecondary_i": {
+        "text": "Matrix ipsum 09"
+    },
+    "art27_00_i_p": {
+        "text": "Matrix ipsum dolor sit amet. Una señal del sistema revela el siguiente movimiento dentro del código."
+    },
+    "art27_00_i_img": {
+        "src": "assets/img/system/stats-chart-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+
+    "art28_00_headerPrimary": {
+        "text": "art28 · Article media alterna"
+    },
+    "art28_00_headerSecondary_a": {
+        "text": "Matrix ipsum 01"
+    },
+    "art28_00_a_p01": {
+        "text": "Matrix ipsum dolor sit amet. Neo recorre una nueva capa del simulacro y descubre que las reglas aparentes también pueden doblarse."
+    },
+    "art28_00_a_p02": {
+        "text": "Trinity mantiene abierta la conexión mientras Morpheus guía la elección y Agent Smith intenta cerrar todas las salidas."
+    },
+    "art28_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Escena Matrix de la fila 01",
+        "title": "Matrix ipsum 01 para art28"
+    },
+    "art28_00_a_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art28_00_a_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art28_00_headerSecondary_b": {
+        "text": "Matrix ipsum 02"
+    },
+    "art28_00_b_p01": {
+        "text": "Matrix ipsum dolor sit amet. Neo recorre una nueva capa del simulacro y descubre que las reglas aparentes también pueden doblarse."
+    },
+    "art28_00_b_p02": {
+        "text": "Trinity mantiene abierta la conexión mientras Morpheus guía la elección y Agent Smith intenta cerrar todas las salidas."
+    },
+    "art28_00_b_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Escena Matrix de la fila 02",
+        "title": "Matrix ipsum 02 para art28"
+    },
+    "art28_00_b_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art28_00_b_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+    "art28_00_headerSecondary_c": {
+        "text": "Matrix ipsum 03"
+    },
+    "art28_00_c_p01": {
+        "text": "Matrix ipsum dolor sit amet. Neo recorre una nueva capa del simulacro y descubre que las reglas aparentes también pueden doblarse."
+    },
+    "art28_00_c_p02": {
+        "text": "Trinity mantiene abierta la conexión mientras Morpheus guía la elección y Agent Smith intenta cerrar todas las salidas."
+    },
+    "art28_00_c_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Escena Matrix de la fila 03",
+        "title": "Matrix ipsum 03 para art28"
+    },
+    "art28_00_c_img_srcset01": "assets/img/dummy/dummy_1200.avif 1200w",
+    "art28_00_c_img_srcset02": "assets/img/dummy/dummy_1800.avif 1800w",
+
+    "art29_00_headerPrimary": {
+        "text": "art29 · Article editorial centrado"
+    },
+    "art29_00_p_a": {
+        "text": "Matrix ipsum dolor sit amet. Neo observa cómo el código cae sobre la ciudad y comprende que la realidad visible solo es una interfaz."
+    },
+    "art29_00_p_b": {
+        "text": "El Oráculo deja una pregunta abierta, Morpheus conserva la fe y Trinity convierte la duda en el siguiente movimiento."
+    },
+    "art29_00_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Escena editorial del universo Matrix",
+        "title": "Matrix ipsum para art29"
+    },
+    "art29_00_cta": {
+        "text": "",
+        "href": "",
+        "title": ""
+    },
+
+    "art30_00_headerPrimary": {
+        "text": "art30 · Article galería hover con beneficios"
+    },
+    "art30_00_intro_p_a": {
+        "text": "Matrix ipsum dolor sit amet. Tres accesos presentan distintas formas de recorrer el simulacro y de interpretar las señales escondidas en el código."
+    },
+    "art30_00_intro_p_b": {
+        "text": "Cada elección revela una parte del sistema y añade una ventaja al recorrido de quienes deciden permanecer despiertos."
+    },
+    "art30_00_headerSecondary_a": {
+        "text": "Matrix ipsum 01"
+    },
+    "art30_00_a_p": {
+        "text": "Neo elige una perspectiva distinta y descubre un nuevo patrón dentro de las líneas del sistema."
+    },
+    "art30_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Escena Matrix de la tarjeta 01",
+        "title": "Matrix ipsum 01 para art30"
+    },
+    "art30_00_a_link": {
+        "href": "#",
+        "title": "Abrir Matrix ipsum 01"
+    },
+    "art30_00_headerSecondary_b": {
+        "text": "Matrix ipsum 02"
+    },
+    "art30_00_b_p": {
+        "text": "Neo elige una perspectiva distinta y descubre un nuevo patrón dentro de las líneas del sistema."
+    },
+    "art30_00_b_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Escena Matrix de la tarjeta 02",
+        "title": "Matrix ipsum 02 para art30"
+    },
+    "art30_00_b_link": {
+        "href": "#",
+        "title": "Abrir Matrix ipsum 02"
+    },
+    "art30_00_headerSecondary_c": {
+        "text": "Matrix ipsum 03"
+    },
+    "art30_00_c_p": {
+        "text": "Neo elige una perspectiva distinta y descubre un nuevo patrón dentro de las líneas del sistema."
+    },
+    "art30_00_c_img": {
+        "src": "assets/img/dummy/dummy04.avif",
+        "alt": "Escena Matrix de la tarjeta 03",
+        "title": "Matrix ipsum 03 para art30"
+    },
+    "art30_00_c_link": {
+        "href": "#",
+        "title": "Abrir Matrix ipsum 03"
+    },
+    "art30_00_headerSecondary_d": {
+        "text": "Matrix ipsum 04"
+    },
+    "art30_00_d_p": {
+        "text": "Trinity sigue una señal inesperada, conecta los indicios dispersos y descubre otra ruta posible dentro del código de Matrix."
+    },
+    "art30_00_d_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Escena Matrix de la tarjeta 04",
+        "title": "Matrix ipsum 04 para art30"
+    },
+    "art30_00_d_link": {
+        "href": "#",
+        "title": "Abrir Matrix ipsum 04"
+    },
+    "art30_00_benefit_a_headerSecondary": {
+        "text": "Orientación Matrix"
+    },
+    "art30_00_benefit_a_img": {
+        "src": "assets/img/system/compass-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art30_00_benefit_b_headerSecondary": {
+        "text": "Conexión protegida"
+    },
+    "art30_00_benefit_b_img": {
+        "src": "assets/img/system/shield-checkmark-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art30_00_benefit_c_headerSecondary": {
+        "text": "Tripulación de Zion"
+    },
+    "art30_00_benefit_c_img": {
+        "src": "assets/img/system/people.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art30_00_benefit_d_headerSecondary": {
+        "text": "Respuesta inmediata"
+    },
+    "art30_00_benefit_d_img": {
+        "src": "assets/img/system/time.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art30_00_benefit_e_headerSecondary": {
+        "text": "Código medible"
+    },
+    "art30_00_benefit_e_img": {
+        "src": "assets/img/system/stats-chart-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+    "art30_00_benefit_f_headerSecondary": {
+        "text": "Experiencia Matrix"
+    },
+    "art30_00_benefit_f_img": {
+        "src": "assets/img/system/ribbon-outline.svg",
+        "alt": "",
+        "title": ""
+    },
+
+    "artAccordion02_00_headerPrimary": {
+        "text": "artAccordion02 · Article acordeón con imagen"
+    },
+    "artAccordion02_00_intro_p_a": {
+        "text": "Matrix ipsum dolor sit amet. Estas preguntas reúnen las dudas habituales de quienes acaban de descubrir que el mundo visible es un simulacro."
+    },
+    "artAccordion02_00_intro_p_b": {
+        "text": "Abre cada respuesta para seguir a Morpheus, Trinity y Neo a través de las decisiones que cambian el código."
+    },
+    "artAccordion02_00_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Morpheus responde preguntas sobre Matrix",
+        "title": "Matrix ipsum para artAccordion02"
+    },
+    "artAccordion02_00_headerSecondary_a": {
+        "text": "¿Qué oculta realmente Matrix?"
+    },
+    "artAccordion02_00_a_p": {
+        "text": "Matrix ipsum dolor sit amet. Matrix es una simulación construida para mantener a la humanidad dentro de una realidad controlada por las máquinas."
+    },
+    "artAccordion02_00_headerSecondary_b": {
+        "text": "¿Por qué Neo debe elegir?"
+    },
+    "artAccordion02_00_b_p": {
+        "text": "Morpheus no impone una respuesta. La píldora roja abre la verdad y la azul permite regresar a la seguridad aparente del simulacro."
+    },
+    "artAccordion02_00_headerSecondary_c": {
+        "text": "¿Cómo encuentra Trinity una salida?"
+    },
+    "artAccordion02_00_c_p": {
+        "text": "Trinity lee las señales del código, mantiene la conexión con la nave y localiza el punto exacto antes de que los agentes cierren el acceso."
+    },
+    "artAccordion02_00_headerSecondary_d": {
+        "text": "¿Qué protege Agent Smith?"
+    },
+    "artAccordion02_00_d_p": {
+        "text": "Agent Smith defiende la estabilidad del sistema, elimina anomalías y persigue a cualquiera que cuestione las reglas impuestas por Matrix."
+    },
+    "artAccordion02_00_headerSecondary_e": {
+        "text": "¿Por qué Zion sigue resistiendo?"
+    },
+    "artAccordion02_00_e_p": {
+        "text": "Zion conserva a quienes viven fuera del simulacro y representa la posibilidad de una humanidad capaz de decidir su propio futuro."
+    },
+    "artAccordion02_00_headerSecondary_f": {
+        "text": "¿Puede Neo cambiar las reglas?"
+    },
+    "artAccordion02_00_f_p": {
+        "text": "Cuando Neo comprende la naturaleza del código deja de obedecer sus límites y comienza a transformar las leyes que parecían inamovibles."
+    },
+
+    "art31_00_headerPrimary": {
+        "text": "art31 · Article filas alternas"
+    },
+    "art31_00_headerSecondary_a": {
+        "text": "Leer el primer patrón"
+    },
+    "art31_00_a_p01": {
+        "text": "Neo observa el código y reconoce que cada detalle del simulacro responde a una estructura diseñada por las máquinas."
+    },
+    "art31_00_a_p02": {
+        "text": "Morpheus señala el punto de partida y recuerda que comprender una regla es el primer paso para poder cambiarla."
+    },
+    "art31_00_a_cta": {
+        "text": "Matrix ipsum",
+        "href": "#",
+        "title": "Continuar el recorrido Matrix"
+    },
+    "art31_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Escena Matrix de la fila 01",
+        "title": "Matrix ipsum 01 para art31"
+    },
+    "art31_00_headerSecondary_b": {
+        "text": "Atravesar el simulacro"
+    },
+    "art31_00_b_p01": {
+        "text": "Trinity mantiene abierta la conexión mientras Neo avanza por un entorno que modifica sus límites a cada nueva decisión."
+    },
+    "art31_00_b_p02": {
+        "text": "Agent Smith sigue el rastro, multiplica su presencia y convierte el recorrido en una carrera contra el control del sistema."
+    },
+    "art31_00_b_cta": {
+        "text": "Matrix ipsum",
+        "href": "#",
+        "title": "Continuar el recorrido Matrix"
+    },
+    "art31_00_b_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Escena Matrix de la fila 02",
+        "title": "Matrix ipsum 02 para art31"
+    },
+    "art31_00_headerSecondary_c": {
+        "text": "Elegir una nueva dirección"
+    },
+    "art31_00_c_p01": {
+        "text": "El Oráculo no entrega respuestas cerradas; deja una pregunta que obliga a Neo a reconocer el peso real de su elección."
+    },
+    "art31_00_c_p02": {
+        "text": "Zion observa desde fuera y Morpheus conserva la confianza en que el código puede revelar una salida diferente."
+    },
+    "art31_00_c_cta": {
+        "text": "Matrix ipsum",
+        "href": "#",
+        "title": "Continuar el recorrido Matrix"
+    },
+    "art31_00_c_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Escena Matrix de la fila 03",
+        "title": "Matrix ipsum 03 para art31"
+    },
+    "art31_00_headerSecondary_d": {
+        "text": "Cerrar el ciclo Matrix"
+    },
+    "art31_00_d_p01": {
+        "text": "Neo integra lo aprendido, deja de reaccionar ante las reglas y comienza a decidir cómo debe continuar su recorrido."
+    },
+    "art31_00_d_p02": {
+        "text": "La última fila invierte su composición para hacer visible que cada paso par cambia también la dirección de la historia."
+    },
+    "art31_00_d_cta": {
+        "text": "Matrix ipsum",
+        "href": "#",
+        "title": "Continuar el recorrido Matrix"
+    },
+    "art31_00_d_img": {
+        "src": "assets/img/dummy/dummy04.avif",
+        "alt": "Escena Matrix de la fila 04",
+        "title": "Matrix ipsum 04 para art31"
+    },
+
+    "moduleVideo01_00_settings": {
+        "type": "youtube"
+    },
+    "moduleVideo01_00_youtube": {
+        "src": "https://www.youtube-nocookie.com/embed/vKQi3bBA1y8",
+        "title": "Matrix trailerra moduleVideo01 baliabiderako",
+        "playLabel": "Bideoa erreproduzitu"
+    },
+    "moduleVideo01_00_consent": {
+        "text": "Gaitu cookie sozialak zure hobespenetan YouTubeko bideo hau erreproduzitzeko."
+    },
+    "moduleVideo01_00_video": {
+        "poster": "assets/img/dummy/dummy01.avif",
+        "title": "Tokiko Matrix bideoa moduleVideo01 baliabiderako"
+    },
+    "moduleVideo01_00_webm": {
+        "src": "assets/video/dummy/dummy.webm"
+    },
+    "moduleVideo01_00_mp4": {
+        "src": "assets/video/dummy/dummy.mp4"
+    },
+    "moduleVideo01_00_captions": {
+        "src": "assets/video/dummy/dummy-eu.vtt",
+        "kind": "captions",
+        "srclang": "eu",
+        "label": "Euskara"
+    },
+
+    "moduleParrafo01_02_p_text": {
+        "text": "Matrix ipsum dolor sit amet. Neok kodearen lerroak berrantolatzen ikusten ditu, eta Morpheusek azaltzen dio erabaki bakoitzak simulazioa aldatzen duela eta egiaranzko beste bide bat irekitzen duela."
+    },
+
+    "moduleButtonType04_01_cta_link": {
+        "href": "#showroom-profe-resources",
+        "title": "Ezagutu Matrix bideoa"
+    },
+    "moduleButtonType04_01_cta_span": {
+        "text": "Ikusi bideoa"
+    },
+
+    "artVideo01_00_headerPrimary": {
+        "text": "artVideo01 · YouTubeko bideoa"
+    },
+
+    "moduleVideo01_01_settings": {
+        "type": "local"
+    },
+    "moduleVideo01_01_youtube": {
+        "src": "https://www.youtube-nocookie.com/embed/vKQi3bBA1y8",
+        "title": "Matrix trailerra moduleVideo01 baliabiderako",
+        "playLabel": "Bideoa erreproduzitu"
+    },
+    "moduleVideo01_01_consent": {
+        "text": "Gaitu cookie sozialak zure hobespenetan YouTubeko bideo hau erreproduzitzeko."
+    },
+    "moduleVideo01_01_video": {
+        "poster": "assets/img/dummy/dummy01.avif",
+        "title": "Tokiko Matrix bideoa moduleVideo01 baliabiderako"
+    },
+    "moduleVideo01_01_webm": {
+        "src": "assets/video/dummy/dummy.webm"
+    },
+    "moduleVideo01_01_mp4": {
+        "src": "assets/video/dummy/dummy.mp4"
+    },
+    "moduleVideo01_01_captions": {
+        "src": "assets/video/dummy/dummy-eu.vtt",
+        "kind": "captions",
+        "srclang": "eu",
+        "label": "Euskara"
+    },
+
+    "moduleList01_03_marker_icon": "check",
+    "moduleList01_03_a_li_text": {
+        "text": "Neok Matrixen ezkutatutako seinaleak irakurtzen ikasten du."
+    },
+    "moduleList01_03_b_li_text": {
+        "text": "Pilula gorriak simulazioaren egitura erakusten du."
+    },
+    "moduleList01_03_c_li_text": {
+        "text": "Trinityk mundu errealarekiko konexioa irekita mantentzen du."
+    },
+    "moduleList01_03_d_li_text": {
+        "text": "Morpheusek aukera gidatzen du ondorioak ezkutatu gabe."
+    },
+    "moduleList01_03_e_li_text": {
+        "text": "Orakuluak galdera bat uzten du kodearen barruan."
+    },
+    "moduleList01_03_f_li_text": {
+        "text": "Zionek makinen kontroletik kanpoko irteera bat gordetzen du."
+    },
+
+    "artVideo01_01_headerPrimary": {
+        "text": "artVideo01 · Tokiko bideoa"
+    },
+
+    "moduleVideo01_02_settings": {
+        "type": "local"
+    },
+    "moduleVideo01_02_youtube": {
+        "src": "https://www.youtube-nocookie.com/embed/vKQi3bBA1y8",
+        "title": "Matrix trailerra moduleVideo01 baliabiderako",
+        "playLabel": "Bideoa erreproduzitu"
+    },
+    "moduleVideo01_02_consent": {
+        "text": "Gaitu cookie sozialak zure hobespenetan YouTubeko bideo hau erreproduzitzeko."
+    },
+    "moduleVideo01_02_video": {
+        "poster": "assets/img/dummy/dummy01.avif",
+        "title": "Tokiko Matrix bideoa moduleVideo01 baliabiderako"
+    },
+    "moduleVideo01_02_webm": {
+        "src": "assets/video/dummy/dummy.webm"
+    },
+    "moduleVideo01_02_mp4": {
+        "src": "assets/video/dummy/dummy.mp4"
+    },
+    "moduleVideo01_02_captions": {
+        "src": "assets/video/dummy/dummy-eu.vtt",
+        "kind": "captions",
+        "srclang": "eu",
+        "label": "Euskara"
+    },
+
+    "moduleParrafo01_04_p_text": {
+        "text": "Matrix ipsum dolor sit amet. Neo korridorea zeharkatzen ari da, Trinityk sistemaren seinale bakoitza zaintzen duen bitartean, eta Morpheusek gogorarazten du irudi batek errealitatearen hainbat geruza ezkuta ditzakeela kodea berriro antolatu aurretik."
+    },
+
+    "moduleButtonType04_02_cta_link": {
+        "href": "#showroom-profe-resources",
+        "title": "Aztertu zutabeko bideoa"
+    },
+    "moduleButtonType04_02_cta_span": {
+        "text": "Aztertu bideoa"
+    },
+
+    "artVideo02_00_headerPrimary": {
+        "text": "artVideo02 · Zutabeko bideoa"
+    },
+
+    "art17_00_a_list_c": {
+        "text": "Tailored strategy for the long term"
+    },
+    "art17_00_a_list_d": {
+        "text": "Advanced use of AI"
+    },
+    "art17_00_a_list_e": {
+        "text": "Deep macroeconomic analysis"
+    },
+    "art17_00_a_list_f": {
+        "text": "Full transparency on fees and process"
+    },
+    "art17_00_a_list_g": {
+        "text": "Luxury and sustainable focus (SRI3 index)"
+    },
+    "art17_00_b_list_c": {
+        "text": "Close monitoring through KPIs"
+    },
+    "art17_00_b_list_d": {
+        "text": "Intuitive, easy-to-use technology"
+    },
+    "art17_00_b_list_e": {
+        "text": "Smooth, noise-free communication"
+    },
+    "art17_00_b_list_f": {
+        "text": "Ongoing financial training"
+    },
+
+    "art18_00_c_list_d": {
+        "text": "Exclusive content and early access to new features"
+    },
+
+    "artPricingGlass01_00_a_list_d": {
+        "text": "Up to 3 projects"
+    },
+    "artPricingGlass01_00_a_list_e": {
+        "text": "Shared templates library"
+    },
+    "artPricingGlass01_00_b_list_d": {
+        "text": "Unlimited projects forever"
+    },
+    "artPricingGlass01_00_b_list_e": {
+        "text": "Team collaboration tools"
+    },
+    "artPricingGlass01_00_c_list_d": {
+        "text": "Security and compliance reports"
+    },
+    "artPricingGlass01_00_c_list_e": {
+        "text": "Early access to new features"
+    },
+
+    "artMarquee01_00_row1_item_img_a": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+    "artMarquee01_00_row1_item_img_b": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+    "artMarquee01_00_row1_item_img_c": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+    "artMarquee01_00_row1_item_img_d": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+    "artMarquee01_00_row2_item_img_a": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+    "artMarquee01_00_row2_item_img_b": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+    "artMarquee01_00_row2_item_img_c": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+    "artMarquee01_00_row2_item_img_d": {
+        "src": "assets/img/system/check-OK.svg",
+        "alt": "Egiaztapen-ikonoa",
+        "title": "Egiaztapen-ikonoa"
+    },
+
+    "art33_00_headerPrimary": {
+        "text": "art33 · eduki modularreko artikulua"
+    },
+    "art33_00_headerSecondary_a": {
+        "text": "Follow the white rabbit."
+    },
+    "art33_00_headerSecondary_b": {
+        "text": "There is no spoon."
+    },
+
+    "art34_00_headerPrimary": {
+        "text": "art34 · CTA nagusidun artikulu modularra"
+    },
+    "art34_00_headerSecondary_a": {
+        "text": "Welcome to the real world."
+    },
+    "art34_00_headerSecondary_b": {
+        "text": "Free your mind."
+    },
+
+    "moduleParrafo01_05_p_text": {
+        "text": "Matrixek itxurazko errealitatea eraikitzen du, untxi zuriak beste bide bat erakusten duen bitartean. Probako paragrafo honek eduki modularrak txartel malgu batean duen portaera egiaztatzen du."
+    },
+
+    "moduleParrafo01_06_p_text": {
+        "text": "Neok kodea behatzen du, bere mugak zalantzan jartzen ditu eta hautua ere sistemaren parte dela deskubritzen du. Testu honek erritmo bertikala eta diseinu moldagarria probatzen ditu."
+    },
+
+    "moduleList01_04_marker_icon": "shield",
+    "moduleList01_04_a_li_text": {
+        "text": "Follow the white rabbit."
+    },
+    "moduleList01_04_b_li_text": {
+        "text": "There is no spoon."
+    },
+    "moduleList01_04_c_li_text": {
+        "text": "Free your mind."
+    },
+    "moduleList01_04_d_li_text": {
+        "text": "Welcome to the real world."
+    },
+
+    "moduleList01_05_marker_icon": "shield",
+    "moduleList01_05_a_li_text": {
+        "text": "Wake up, Neo."
+    },
+    "moduleList01_05_b_li_text": {
+        "text": "The Matrix has you."
+    },
+    "moduleList01_05_c_li_text": {
+        "text": "Choice is an illusion."
+    },
+    "moduleList01_05_d_li_text": {
+        "text": "Dodge this."
+    },
+    "moduleList01_05_e_li_text": {
+        "text": "Believe."
+    },
+
+    "moduleFormContact01_00_legend": {
+        "text": "moduleFormContact01 · Inprimaki editoriala"
+    },
+    "moduleFormContact01_00_intro": {
+        "text": "Neok kanal segurua irekitzen du Trinityk Matrixeko seinaleak ordenatzen dituen bitartean. Bete datuak eta sistemak zure kontsulta ibilbidearen hurrengo mailara eramango du."
+    },
+    "moduleFormContact01_00_label_name": {
+        "text": "Izena"
+    },
+    "moduleFormContact01_00_ph_name": {
+        "placeholder": "Idatzi zure izena"
+    },
+    "moduleFormContact01_00_label_phone": {
+        "text": "Telefonoa"
+    },
+    "moduleFormContact01_00_ph_phone": {
+        "placeholder": "Adierazi zure telefonoa"
+    },
+    "moduleFormContact01_00_label_mail": {
+        "text": "Posta elektronikoa"
+    },
+    "moduleFormContact01_00_ph_mail": {
+        "placeholder": "izena@matrix.test"
+    },
+    "moduleFormContact01_00_label_message": {
+        "text": "Kontsulta"
+    },
+    "moduleFormContact01_00_ph_message": {
+        "placeholder": "Azaldu zein seinale deskodetu nahi duzun"
+    },
+    "moduleFormContact01_00_terms": {
+        "text": "Nire datuen tratamendua onartzen dut honen arabera:"
+    },
+    "moduleFormContact01_00_privacy": {
+        "text": "pribatutasun politika",
+        "href": "#privacy",
+        "title": "Pribatutasun politika kontsultatu"
+    },
+    "moduleFormContact01_00_terms_error": {
+        "text": "Pribatutasun politika onartu behar duzu jarraitzeko."
+    },
+    "moduleFormContact01_00_label_captcha": {
+        "text": "Ebatzi egiaztapena"
+    },
+    "moduleFormContact01_00_ph_captcha": {
+        "placeholder": "Emaitza"
+    },
+    "moduleFormContact01_00_submit": {
+        "text": "Bidali kontsulta"
+    },
+    "moduleFormContact01_00_sending": {
+        "text": "Seinalea bidaltzen..."
+    },
+    "moduleFormContact01_00_success_title": {
+        "text": "Seinalea iritsi da"
+    },
+    "moduleFormContact01_00_success_text": {
+        "text": "Operadoreak zure mezua jaso du eta Matrixeko hurrengo nodoa erabilgarri dagoenean erantzungo dizu."
+    },
+    "moduleFormContact01_00_new_query": {
+        "text": "Kontsulta berria"
+    },
+    "moduleFormContact01_00_network_error": {
+        "text": "Sistema lineaz kanpo dago. Saiatu berriro."
+    },
+    "moduleFormContact01_00_server_error": {
+        "text": "Sistemak ezin izan du kontsulta prozesatu."
+    },
+
+    "moduleFormContact02_00_legend": {
+        "text": "moduleFormContact02 · Gaueko inprimakia"
+    },
+    "moduleFormContact02_00_intro": {
+        "text": "Morpheusek gaueko linea irekita mantentzen du sistemaren zaratatik kanpo. Utzi zure kontsulta eta taldeak arrastoa jarraituko du Matrixek kodea berriro erakustean."
+    },
+    "moduleFormContact02_00_label_name": {
+        "text": "Identitatea"
+    },
+    "moduleFormContact02_00_ph_name": {
+        "placeholder": "Nola deitu behar dizugu"
+    },
+    "moduleFormContact02_00_label_phone": {
+        "text": "Telefono kanala"
+    },
+    "moduleFormContact02_00_ph_phone": {
+        "placeholder": "Zure harremanetarako zenbakia"
+    },
+    "moduleFormContact02_00_label_mail": {
+        "text": "Posta kanala"
+    },
+    "moduleFormContact02_00_ph_mail": {
+        "placeholder": "neo@matrix.test"
+    },
+    "moduleFormContact02_00_label_message": {
+        "text": "Mezu zifratua"
+    },
+    "moduleFormContact02_00_ph_message": {
+        "placeholder": "Azaldu berrikusi behar dugun kontsulta"
+    },
+    "moduleFormContact02_00_terms": {
+        "text": "Nire datuak erabiltzea baimentzen dut honen arabera:"
+    },
+    "moduleFormContact02_00_privacy": {
+        "text": "pribatutasun politika",
+        "href": "#privacy",
+        "title": "Pribatutasun politika irakurri"
+    },
+    "moduleFormContact02_00_terms_error": {
+        "text": "Baimendu datuen tratamendua bidali aurretik."
+    },
+    "moduleFormContact02_00_label_captcha": {
+        "text": "Egiaztatu gizakia zarela"
+    },
+    "moduleFormContact02_00_ph_captcha": {
+        "placeholder": "Batuketa"
+    },
+    "moduleFormContact02_00_submit": {
+        "text": "Ireki kanala"
+    },
+    "moduleFormContact02_00_sending": {
+        "text": "Operadorearekin konektatzen..."
+    },
+    "moduleFormContact02_00_success_title": {
+        "text": "Kanala baieztatuta"
+    },
+    "moduleFormContact02_00_success_text": {
+        "text": "Zure mezuak sistema zeharkatu du. Trinityk berrikusiko du kanal seguru batetik erantzun aurretik."
+    },
+    "moduleFormContact02_00_new_query": {
+        "text": "Bidali beste mezu bat"
+    },
+    "moduleFormContact02_00_network_error": {
+        "text": "Konexioa eten da. Saiatu berriro."
+    },
+    "moduleFormContact02_00_server_error": {
+        "text": "Operadorea ez dago erabilgarri une honetan."
+    },
+
+    "moduleFormContact03_00_legend": {
+        "text": "moduleFormContact03 · Liburu nagusiko inprimakia"
+    },
+    "moduleFormContact03_00_intro": {
+        "text": "Erabaki bakoitzak lerro bat uzten du Matrixeko liburu nagusian. Erregistratu funtsezko datuak eta egin kontsulta zehatza hurrengo mugimendua antolatzeko."
+    },
+    "moduleFormContact03_00_label_name": {
+        "text": "Izen-abizenak"
+    },
+    "moduleFormContact03_00_ph_name": {
+        "placeholder": "Operadorearen izena"
+    },
+    "moduleFormContact03_00_label_phone": {
+        "text": "Zuzeneko telefonoa"
+    },
+    "moduleFormContact03_00_ph_phone": {
+        "placeholder": "Harremanetarako zenbakia"
+    },
+    "moduleFormContact03_00_label_mail": {
+        "text": "Erantzuteko posta"
+    },
+    "moduleFormContact03_00_ph_mail": {
+        "placeholder": "trinity@matrix.test"
+    },
+    "moduleFormContact03_00_label_message": {
+        "text": "Oharra"
+    },
+    "moduleFormContact03_00_ph_message": {
+        "placeholder": "Laburbildu zain dagoen erabakia"
+    },
+    "moduleFormContact03_00_terms": {
+        "text": "Irakurri dudala eta hau onartzen dudala baieztatzen dut:"
+    },
+    "moduleFormContact03_00_privacy": {
+        "text": "pribatutasun politika",
+        "href": "#privacy",
+        "title": "Pribatutasun politika berrikusi"
+    },
+    "moduleFormContact03_00_terms_error": {
+        "text": "Baieztatu pribatutasun politika kontsulta erregistratzeko."
+    },
+    "moduleFormContact03_00_label_captcha": {
+        "text": "Erregistroaren balidazioa"
+    },
+    "moduleFormContact03_00_ph_captcha": {
+        "placeholder": "Guztira"
+    },
+    "moduleFormContact03_00_submit": {
+        "text": "Erregistratu kontsulta"
+    },
+    "moduleFormContact03_00_sending": {
+        "text": "Eragiketa erregistratzen..."
+    },
+    "moduleFormContact03_00_success_title": {
+        "text": "Erregistroa osatuta"
+    },
+    "moduleFormContact03_00_success_text": {
+        "text": "Kontsulta sisteman dago eta taldeak aztertu ahal izango du ibilbide berri bat ireki aurretik."
+    },
+    "moduleFormContact03_00_new_query": {
+        "text": "Sortu beste erregistro bat"
+    },
+    "moduleFormContact03_00_network_error": {
+        "text": "Ezin da erregistrora sartu. Egiaztatu konexioa."
+    },
+    "moduleFormContact03_00_server_error": {
+        "text": "Erregistroa ez dago erabilgarri aldi baterako."
+    },
+
+    "moduleTable01_00_header_01": {
+        "text": "Lehen zutabea"
+    },
+    "moduleTable01_00_header_02": {
+        "text": "Bigarren zutabea"
+    },
+    "moduleTable01_00_header_03": {
+        "text": "Hirugarren zutabea"
+    },
+    "moduleTable01_00_header_04": {
+        "text": "Laugarren zutabea"
+    },
+    "moduleTable01_00_header_05": {
+        "text": "Bosgarren zutabea"
+    },
+    "moduleTable01_00_header_06": {
+        "text": "Seigarren zutabea"
+    },
+    "moduleTable01_00_header_07": {
+        "text": "Zazpigarren zutabea"
+    },
+    "moduleTable01_00_header_08": {
+        "text": "Zortzigarren zutabea"
+    },
+    "moduleTable01_00_caption": {
+        "text": "moduleTable01 · Datu-matrizea"
+    },
+    "moduleTable01_00_a_list_a": {
+        "text": "Matrix ipsum A1"
+    },
+    "moduleTable01_00_a_list_b": {
+        "text": "Matrix ipsum A2"
+    },
+    "moduleTable01_00_a_list_c": {
+        "text": "Matrix ipsum A3"
+    },
+    "moduleTable01_00_b_list_a": {
+        "text": "Matrix ipsum B1"
+    },
+    "moduleTable01_00_b_list_b": {
+        "text": "Matrix ipsum B2"
+    },
+    "moduleTable01_00_b_list_c": {
+        "text": "Matrix ipsum B3"
+    },
+    "moduleTable01_00_c_list_a": {
+        "text": "Matrix ipsum C1"
+    },
+    "moduleTable01_00_c_list_b": {
+        "text": "Matrix ipsum C2"
+    },
+    "moduleTable01_00_c_list_c": {
+        "text": "Matrix ipsum C3"
+    },
+
+    "moduleH2Type01_10_h2_text": {
+        "text": "moduleH2Type01 · Inprimaki interaktiboak"
+    },
+
+    "art02v1_00_headerPrimary": {
+        "text": "art02v1 · erretratu zirkularreko lau profil"
+    },
+    "art02v1_00_intro_p": {
+        "text": "Matrix ipsum probak lau profil biltzen ditu, izenak, rolak, erretratuak eta deskribapen zabalak konposizio editorial argi, orekatu eta moldagarri batean nola uztartzen diren egiaztatzeko."
+    },
+    "art02v1_00_p1": {
+        "text": "Txartel bakoitzak irudi fotografiko zirkularra eta azalera independentea erabiltzen ditu, edukia profilen artean aldatzean mozketak, altuerak, kontrastea, irakurketa-erritmoa eta lerrokatzea berrikusteko."
+    },
+    "art02v1_00_p2": {
+        "text": "Azken lerroa zentratuta mantentzen da, eta aukerako CTAek kokapena gordetzen dute profilen deskribapenek luzera desberdina dutenean."
+    },
+    "art02v1_00_headerSecondary_a": {
+        "text": "<b>Morpheus</b><br>Tripulazioaren kapitaina"
+    },
+    "art02v1_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Morpheus profilaren dummy erretratua",
+        "title": "Morpheus, tripulazioaren kapitaina"
+    },
+    "art02v1_00_a_p": {
+        "text": "Morpheusek sistemaren seinaleak interpretatzen ditu, taldearen lehentasunak antolatzen ditu eta helburu partekatua ikusgai mantentzen du Matrix ipsum barruan erabaki konplexuak agertzen direnean."
+    },
+    "art02v1_00_headerSecondary_b": {
+        "text": "<b>Trinity</b><br>Operazioetako espezialista"
+    },
+    "art02v1_00_b_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Trinity profilaren dummy erretratua",
+        "title": "Trinity, operazioetako espezialista"
+    },
+    "art02v1_00_b_p": {
+        "text": "Trinityk estrategia eta exekuzioa lotzen ditu, aldaketak azkar hautematen ditu eta ekintza bakoitzak tripulazioak adostutako ibilbidearekin koherentzia mantentzen duela egiaztatzen du."
+    },
+    "art02v1_00_headerSecondary_c": {
+        "text": "<b>Neo</b><br>Kodearen analista"
+    },
+    "art02v1_00_c_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Neo profilaren dummy erretratua",
+        "title": "Neo, kodearen analista"
+    },
+    "art02v1_00_c_p": {
+        "text": "Neok ereduak aztertzen ditu, hipotesiak alderatzen ditu eta informazio sakabanatua erabaki ulergarri bihurtzen du, taldeak erreferentzia partekatu batekin aurrera egin dezan."
+    },
+    "art02v1_00_headerSecondary_d": {
+        "text": "<b>Niobe</b><br>Nabigazioaren arduraduna"
+    },
+    "art02v1_00_d_img": {
+        "src": "assets/img/dummy/dummy04.avif",
+        "alt": "Niobe profilaren dummy erretratua",
+        "title": "Niobe, nabigazioaren arduraduna"
+    },
+    "art02v1_00_d_p": {
+        "text": "Niobek ibilbide posibleak alderatzen ditu, arriskuak aurreikusten ditu eta norabidea egokitzen du egonkortasuna galdu gabe, testuinguruak Matrix ipsum hasierako plana berrikustea eskatzen duenean ere."
+    },
+
+    "art05v1_00_headerPrimary": {
+        "text": "art05v1"
+    },
+    "art05v1_00_intro_p": {
+        "text": "Nuestros clientes describen cómo la instalación solar optimiza sus costes energéticos y refuerza su compromiso con la sostenibilidad, destacando la cercanía del equipo técnico y la monitorización continua que ofrecemos en cada proyecto residencial."
+    },
+    "art05v1_00_headerSecondary_a": {
+        "text": "Consumo optimizado en vivienda unifamiliar"
+    },
+    "art05v1_00_a_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Retrato Matrix de la ficha 01",
+        "title": "Matrix ipsum 01 para art05v1"
+    },
+    "art05v1_00_a_p": {
+        "text": "Diseñamos campos solares escalables que se adaptan al consumo real de cada sede, priorizando inversores híbridos y cableado eficiente. El equipo coordina permisos y puesta en marcha sin detener los turnos críticos de producción."
+    },
+    "art05v1_00_a_firma": {
+        "text": "Laura Pérez"
+    },
+    "art05v1_00_headerSecondary_b": {
+        "text": "Cadena hotelera con autoconsumo activo"
+    },
+    "art05v1_00_b_img": {
+        "src": "assets/img/dummy/dummy02.avif",
+        "alt": "Retrato Matrix de la ficha 02",
+        "title": "Matrix ipsum 02 para art05v1"
+    },
+    "art05v1_00_b_p": {
+        "text": "Automatizamos cubiertas y salas técnicas con paneles ligeros que respetan la estética del complejo. Gestionamos con la distribuidora el vertido de excedentes y ajustamos la curva de consumo según ocupación y demanda estacional."
+    },
+    "art05v1_00_b_firma": {
+        "text": "Carlos Medina"
+    },
+    "art05v1_00_headerSecondary_c": {
+        "text": "Cooperativa agro instala bombeo eficiente"
+    },
+    "art05v1_00_c_img": {
+        "src": "assets/img/dummy/dummy03.avif",
+        "alt": "Retrato Matrix de la ficha 03",
+        "title": "Matrix ipsum 03 para art05v1"
+    },
+    "art05v1_00_c_p": {
+        "text": "Implementamos bombeo solar en comunidades de regantes con variadores de frecuencia y depósitos inteligentes. La plataforma predice necesidades hídricas y coordina mantenimientos para evitar paradas en temporada alta de cosecha."
+    },
+    "art05v1_00_c_firma": {
+        "text": "Uxue Garaia"
+    },
+
+    "artAuth01_00_headerPrimary": {
+        "text": "artAuth01 · Matrixera sarbidea"
+    },
+    "artAuth01_00_intro": {
+        "text": "Sartu zure kredentzialak sistema zeharkatzeko, operadoreak zure seinalea ezagutzeko eta untxi zuriaren gordelekua noraino iristen den deskubritzeko bidean jarraitzeko."
+    },
+    "artAuth01_00_headerSecondary": {
+        "text": "Pilula aukeratu aurretik"
+    },
+    "artAuth01_00_support": {
+        "text": "Egiaztatu helbidea, babestu zure kodea eta gogoratu sarbide bakoitzak seinale bat uzten duela Matrix barruan."
+    },
+
+    "moduleFormAuthLogin01_00_legend": {
+        "text": "moduleFormAuthLogin01 · Identifikatu zure seinalea"
+    },
+    "moduleFormAuthLogin01_00_intro": {
+        "text": "Operadoreak zure nortasuna ezagutu behar du erresistentziarekin linea segurua ireki aurretik."
+    },
+    "moduleFormAuthLogin01_00_emailLabel": {
+        "text": "Sarbideko e-posta"
+    },
+    "moduleFormAuthLogin01_00_emailPlaceholder": {
+        "placeholder": "neo@matrix.example"
+    },
+    "moduleFormAuthLogin01_00_emailHint": {
+        "text": "Erabili zure nortasun digitalari lotutako kontua."
+    },
+    "moduleFormAuthLogin01_00_passwordLabel": {
+        "text": "Kode sekretua"
+    },
+    "moduleFormAuthLogin01_00_passwordPlaceholder": {
+        "placeholder": "Idatzi sarbide-kodea"
+    },
+    "moduleFormAuthLogin01_00_passwordHint": {
+        "text": "Ez partekatu kode hau inolako agenterekin."
+    },
+    "moduleFormAuthLogin01_00_toggleShow": {
+        "text": "Erakutsi pasahitza"
+    },
+    "moduleFormAuthLogin01_00_toggleHide": {
+        "text": "Ezkutatu pasahitza"
+    },
+    "moduleFormAuthLogin01_00_submit": {
+        "text": "Sartu Matrixen"
+    },
+    "moduleFormAuthLogin01_00_feedback": {
+        "text": "Operadorea zure seinalea egiaztatzen ari da."
+    },
+    "moduleFormAuthLogin01_00_secondaryAction": {
+        "text": "Sarbide-kodea ahaztu duzu?",
+        "href": "#",
+        "title": "Sarbide-kodea berreskuratu"
+    },
+
+    "moduleFormAuthRecover01_00_legend": {
+        "text": "moduleFormAuthRecover01 · Berreskuratu konexioa"
+    },
+    "moduleFormAuthRecover01_00_intro": {
+        "text": "Eman lotutako kontua eta operadoreak zure konexio segurua berrezartzeko beharrezko jarraibideak bidaliko ditu."
+    },
+    "moduleFormAuthRecover01_00_emailLabel": {
+        "text": "Lotutako e-posta"
+    },
+    "moduleFormAuthRecover01_00_emailPlaceholder": {
+        "placeholder": "trinity@matrix.example"
+    },
+    "moduleFormAuthRecover01_00_emailHint": {
+        "text": "Aldi baterako esteka jasoko duzu helbide honetan."
+    },
+    "moduleFormAuthRecover01_00_submit": {
+        "text": "Bidali esteka segurua"
+    },
+    "moduleFormAuthRecover01_00_feedback": {
+        "text": "Transmisioa bidaltzeko prest dago."
+    },
+    "moduleFormAuthRecover01_00_secondaryAction": {
+        "text": "Itzuli sarbidera",
+        "href": "#",
+        "title": "Itzuli sarbide-formulariora"
+    },
+
+    "moduleFormAuthPassword01_00_legend": {
+        "text": "moduleFormAuthPassword01 · Berritu zure kodea"
+    },
+    "moduleFormAuthPassword01_00_intro": {
+        "text": "Sortu pasahitz sendoa konexio berria babesteko, operadorearen sistemara itzuli aurretik."
+    },
+    "moduleFormAuthPassword01_00_passwordLabel": {
+        "text": "Pasahitz berria"
+    },
+    "moduleFormAuthPassword01_00_passwordPlaceholder": {
+        "placeholder": "Idatzi pasahitz segurua"
+    },
+    "moduleFormAuthPassword01_00_passwordHint": {
+        "text": "Adierazitako baldintza guztiak bete behar ditu."
+    },
+    "moduleFormAuthPassword01_00_confirmationLabel": {
+        "text": "Errepikatu pasahitza"
+    },
+    "moduleFormAuthPassword01_00_confirmationPlaceholder": {
+        "placeholder": "Idatzi berriro pasahitza"
+    },
+    "moduleFormAuthPassword01_00_confirmationHint": {
+        "text": "Bi pasahitzek berdinak izan behar dute."
+    },
+    "moduleFormAuthPassword01_00_toggleShow": {
+        "text": "Erakutsi pasahitza"
+    },
+    "moduleFormAuthPassword01_00_toggleHide": {
+        "text": "Ezkutatu pasahitza"
+    },
+    "moduleFormAuthPassword01_00_requirementsLabel": {
+        "text": "Pasahitzaren baldintzak"
+    },
+    "moduleFormAuthPassword01_00_requirementLength": {
+        "text": "15 eta 1024 byte artean UTF-8n"
+    },
+    "moduleFormAuthPassword01_00_submit": {
+        "text": "Gorde pasahitz berria"
+    },
+    "moduleFormAuthPassword01_00_feedback": {
+        "text": "Kode berria baliozkotzeko prest dago."
+    },
+    "moduleFormAuthPassword01_00_secondaryAction": {
+        "text": "Itzuli sarbidera",
+        "href": "#",
+        "title": "Itzuli sarbide-formulariora"
+    },
+
+    "showroom_catalog_category_blog_label": {
+        "text": "Bloga"
+    },
+    "showroom_catalog_category_blog_description": {
+        "text": "Blogaren aurkibide eta sarreretarako baliabide dinamikoak."
+    },
+
+    "sectionBlogGrid01_00_headerPrimary": {
+        "text": "sectionBlogGrid01 · Matrixeko azken seinaleak"
+    },
+    "sectionBlogGrid01_00_a_link": {
+        "text": "Neo esnatu zuen deia",
+        "href": "/eu/albisteak/neo-esnatu-zuen-deia",
+        "title": "Irakurri Neo esnatu zuen deia"
+    },
+    "sectionBlogGrid01_00_a_excerpt": {
+        "text": "Pantaila beltz batek, ezinezko galdera batek eta untxi zuriaren arrastoak Thomas Andersonen egunerokoaren eta mundu errealaren arteko lehen arrakala ireki zuten."
+    },
+    "sectionBlogGrid01_00_a_publishedAt": {
+        "text": "1999/03/18",
+        "datetime": "1999-03-18"
+    },
+    "sectionBlogGrid01_00_b_link": {
+        "text": "Sion hiriak berriro eusten dio",
+        "href": "/eu/albisteak/sion-hiriak-berriro-eusten-dio",
+        "title": "Irakurri Sion hiriak berriro eusten dio"
+    },
+    "sectionBlogGrid01_00_b_excerpt": {
+        "text": "Makinak Sionera hurbiltzen diren bitartean, Neok ikasten du profezia bat ere bere erabakien inguruan eraikitako beste kontrol-sistema baten zatia izan daitekeela."
+    },
+    "sectionBlogGrid01_00_b_publishedAt": {
+        "text": "2003/05/15",
+        "datetime": "2003-05-15"
+    },
+    "sectionBlogGrid01_00_c_link": {
+        "text": "Bi munduen aldeko azken borroka",
+        "href": "/eu/albisteak/bi-munduen-aldeko-azken-borroka",
+        "title": "Irakurri Bi munduen aldeko azken borroka"
+    },
+    "sectionBlogGrid01_00_c_excerpt": {
+        "text": "Neok eta Trinityk azken muga zeharkatzen dute, gizakiek eta makinek kodearen barruan jaiotako mehatxu bati elkarrekin aurre egin beharko dioten etorkizuna negoziatzeko."
+    },
+    "sectionBlogGrid01_00_c_publishedAt": {
+        "text": "2003/11/05",
+        "datetime": "2003-11-05"
+    },
+    "sectionBlogGrid01_00_d_link": {
+        "text": "Berreraikitako errealitatera itzulera",
+        "href": "/eu/albisteak/berreraikitako-errealitatera-itzulera",
+        "title": "Irakurri Berreraikitako errealitatera itzulera"
+    },
+    "sectionBlogGrid01_00_d_excerpt": {
+        "text": "Matrixen bertsio berri batek Neo eta Trinityren oroitzapenak giltzapetu nahi ditu, baina bien arteko konexioak sistemak ezarritako arauak berriro desafiatzen ditu."
+    },
+    "sectionBlogGrid01_00_d_publishedAt": {
+        "text": "2021/12/22",
+        "datetime": "2021-12-22"
+    },
+
+    "artAuth02_00_headerPrimary": {
+        "text": "artAuth02 · Erresistentziarekin linea segurua"
+    },
+    "artAuth02_00_intro": {
+        "text": "Konposizio berrerabilgarri honek Matrixeko kudeaketa-eremura sartzeko bidea antolatzen du, irakurketa argiarekin, kontraste sendoarekin eta Nabukodonosorreko operadoreak babestutako formularioarekin."
+    },
+    "artAuth02_00_headerSecondary": {
+        "text": "Seinale argia eta babestua"
+    },
+    "artAuth02_00_support": {
+        "text": "Egiaztatu zure identitatea, babestu kode sekretua eta gogoratu sarbide bakoitzak arrasto bat uzten duela Matrixen barruan."
+    },
+
+    "artAuth02_01_headerPrimary": {
+        "text": "artAuth02 · Matrixerako sarbidea berreskuratzea"
+    },
+    "artAuth02_01_intro": {
+        "text": "Aldaera honek ekintza bakarrean jartzen du arreta: operadoreari behin-behineko lotura eskatzea, adierazitako helbidea erresistentziako kontu bati dagokion jakinarazi gabe."
+    },
+    "artAuth02_01_headerSecondary": {
+        "text": "Zaratarik gabeko transmisioa"
+    },
+    "artAuth02_01_support": {
+        "text": "Mezuak hurrengo urratsa azaltzen du, eta pilula aukeratu aurreko sarbide-formulariora itzultzeko bidea ikusgai mantentzen du."
+    },
+
+    "artAuth02_02_headerPrimary": {
+        "text": "artAuth02 · Sarbide-kode segurua"
+    },
+    "artAuth02_02_intro": {
+        "text": "Formularioak kode berria sortzen laguntzen du egiaztapen ulergarri eta progresiboekin; baldintza guztiak bete arte, Matrixera itzultzeko bidalketa blokeatuta geratzen da."
+    },
+    "artAuth02_02_headerSecondary": {
+        "text": "Baldintzak berehala ikusgai"
+    },
+    "artAuth02_02_support": {
+        "text": "Mugarri bakoitza idaztean aldatzen da, eta baieztapena bi sarbide-kodeak zehazki berdinak direnean baino ez da baliozkotzen."
+    },
+
+    "moduleFormAuthLogin02_00_legend": {
+        "text": "moduleFormAuthLogin02 · Identifikatu zure seinalea"
+    },
+    "moduleFormAuthLogin02_00_intro": {
+        "text": "Sartu zure kredentzialak, operadoreak nortasuna egiaztatu eta erresistentziaren kudeaketa-tresnetarako linea segurua ireki dezan."
+    },
+    "moduleFormAuthLogin02_00_emailLabel": {
+        "text": "Sarbideko helbide elektronikoa"
+    },
+    "moduleFormAuthLogin02_00_emailPlaceholder": {
+        "placeholder": "neo@matrix.example"
+    },
+    "moduleFormAuthLogin02_00_emailHint": {
+        "text": "Erabili zure Matrixeko identitateari lotutako kontua."
+    },
+    "moduleFormAuthLogin02_00_passwordLabel": {
+        "text": "Pasahitza"
+    },
+    "moduleFormAuthLogin02_00_passwordPlaceholder": {
+        "placeholder": "Idatzi zure sarbide-kodea"
+    },
+    "moduleFormAuthLogin02_00_passwordHint": {
+        "text": "Pasahitzak letra larriak eta xeheak bereizten ditu."
+    },
+    "moduleFormAuthLogin02_00_toggleShow": {
+        "text": "Erakutsi pasahitza"
+    },
+    "moduleFormAuthLogin02_00_toggleHide": {
+        "text": "Ezkutatu pasahitza"
+    },
+    "moduleFormAuthLogin02_00_submit": {
+        "text": "Sartu Matrixen"
+    },
+    "moduleFormAuthLogin02_00_feedback": {
+        "text": "Operadorea zure seinalea egiaztatzen ari da."
+    },
+    "moduleFormAuthLogin02_00_secondaryAction": {
+        "text": "Pasahitza ahaztu duzu?",
+        "href": "#artAuth02-01-heading",
+        "title": "Eskatu sarbidea berreskuratzeko lotura"
+    },
+
+    "moduleFormAuthRecover02_00_legend": {
+        "text": "moduleFormAuthRecover02 · Berreskuratu konexioa"
+    },
+    "moduleFormAuthRecover02_00_intro": {
+        "text": "Adierazi lotutako helbidea eta, kontua aktibo badago, operadoreak sarbide-kode berria ezartzeko behin-behineko lotura bidaliko dizu."
+    },
+    "moduleFormAuthRecover02_00_emailLabel": {
+        "text": "Lotutako helbide elektronikoa"
+    },
+    "moduleFormAuthRecover02_00_emailPlaceholder": {
+        "placeholder": "trinity@matrix.example"
+    },
+    "moduleFormAuthRecover02_00_emailHint": {
+        "text": "Argibideak erregistratutako kontura bidaliko dira."
+    },
+    "moduleFormAuthRecover02_00_submit": {
+        "text": "Bidali lotura segurua"
+    },
+    "moduleFormAuthRecover02_00_feedback": {
+        "text": "Transmisioa operadoreari bidaltzeko prest dago."
+    },
+    "moduleFormAuthRecover02_00_secondaryAction": {
+        "text": "Itzuli sarbidera",
+        "href": "#artAuth02-00-heading",
+        "title": "Itzuli sarbide-formulariora"
+    },
+
+    "moduleFormAuthPassword02_00_legend": {
+        "text": "moduleFormAuthPassword02 · Berritu zure kodea"
+    },
+    "moduleFormAuthPassword02_00_intro": {
+        "text": "Bete baldintza guztiak eta errepikatu sarbide-kode bera konexio berria gorde eta sistemara itzuli aurretik."
+    },
+    "moduleFormAuthPassword02_00_passwordLabel": {
+        "text": "Pasahitz berria"
+    },
+    "moduleFormAuthPassword02_00_passwordPlaceholder": {
+        "placeholder": "Idatzi pasahitz segurua"
+    },
+    "moduleFormAuthPassword02_00_passwordHint": {
+        "text": "Pasahitz-kudeatzaileak sortutako kode bat itsats dezakezu."
+    },
+    "moduleFormAuthPassword02_00_confirmationLabel": {
+        "text": "Errepikatu pasahitza"
+    },
+    "moduleFormAuthPassword02_00_confirmationPlaceholder": {
+        "placeholder": "Idatzi berriro"
+    },
+    "moduleFormAuthPassword02_00_confirmationHint": {
+        "text": "Bi balioek zehazki bat etorri behar dute."
+    },
+    "moduleFormAuthPassword02_00_toggleShow": {
+        "text": "Erakutsi pasahitza"
+    },
+    "moduleFormAuthPassword02_00_toggleHide": {
+        "text": "Ezkutatu pasahitza"
+    },
+    "moduleFormAuthPassword02_00_requirementsLabel": {
+        "text": "Pasahitz berriaren baldintzak"
+    },
+    "moduleFormAuthPassword02_00_requirementLength": {
+        "text": "Gutxienez 8 karaktere"
+    },
+    "moduleFormAuthPassword02_00_requirementLowercase": {
+        "text": "Gutxienez letra xehe bat"
+    },
+    "moduleFormAuthPassword02_00_requirementUppercase": {
+        "text": "Gutxienez letra larri bat"
+    },
+    "moduleFormAuthPassword02_00_requirementNumber": {
+        "text": "Gutxienez zenbaki bat"
+    },
+    "moduleFormAuthPassword02_00_requirementSymbol": {
+        "text": "Gutxienez ikur bat"
+    },
+    "moduleFormAuthPassword02_00_requirementMatch": {
+        "text": "Bi pasahitzak bat datoz"
+    },
+    "moduleFormAuthPassword02_00_summaryProgress": {
+        "text": "%total% baldintzetatik %complete% bete dituzu."
+    },
+    "moduleFormAuthPassword02_00_summaryComplete": {
+        "text": "Pasahitzaren baldintza guztiak bete dira."
+    },
+    "moduleFormAuthPassword02_00_submit": {
+        "text": "Gorde pasahitza"
+    },
+    "moduleFormAuthPassword02_00_feedback": {
+        "text": "Kode-aldaketaren emaitza hemen agertuko da."
+    },
+    "moduleFormAuthPassword02_00_secondaryAction": {
+        "text": "Itzuli sarbidera",
+        "href": "#artAuth02-00-heading",
+        "title": "Itzuli sarbide-formulariora"
     }
 }

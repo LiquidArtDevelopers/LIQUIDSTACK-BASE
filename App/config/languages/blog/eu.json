@@ -1,0 +1,135 @@
+{
+  "title": {
+    "text": "Bloga eta albisteak | LiquidStack proiektua"
+  },
+  "description": {
+    "content": "Proiektuaren adibideko artikuluen aurkibidea. Kontsultatu argitalpenak, kategoriak eta artxiboa LiquidStack Blog moduluaren bidez."
+  },
+  "robots": {
+    "content": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+  },
+  "hero00_bg_mobile": {
+    "src": "assets/img/dummy/dummy_900.avif"
+  },
+  "hero00_bg_tablet": {
+    "src": "assets/img/dummy/dummy_1800.avif"
+  },
+  "hero00_bg_desktop": {
+    "src": "assets/img/dummy/dummy_2560.avif"
+  },
+  "hero00_bg_fallback": {
+    "src": "assets/img/dummy/dummy_900.avif",
+    "alt": "Adibideko konposizio abstraktua",
+    "title": "Blogaren goiburua",
+    "width": "2560",
+    "height": "1600"
+  },
+  "moduleH1Type01_00_h1_text": {
+    "text": "Proiektuaren bloga eta albisteak"
+  },
+  "moduleH1Type01_00_p01_text": {
+    "text": "Adibideko ikuspegi honek Blog moduluaren aurkibide publikoa proiektuaren nabigazioarekin, oinarekin, metadatuekin eta aurkezpen globalarekin integratzen du."
+  },
+  "moduleH1Type01_00_p02_text": {
+    "text": "Pertsonalizatu edukia, ibilbideak eta baliabide bisualak stack berri bat abiatzean; artikuluen kontsulta eta argitalpena COREn mantentzen dira."
+  },
+  "blog_index_page": {
+    "text": "Orria"
+  },
+  "blog_index_results_heading": {
+    "text": "Argitalpenak"
+  },
+  "blog_index_card_cta": {
+    "text": "Gehiago irakurri"
+  },
+  "blog_index_search_label": {
+    "text": "Argitalpenak bilatu"
+  },
+  "blog_index_search_placeholder": {
+    "text": "Izenburua, edukia edo etiketa"
+  },
+  "blog_index_search_minimum": {
+    "text": "Idatzi gutxienez 2 karaktere."
+  },
+  "blog_index_order_label": {
+    "text": "Argitalpenak ordenatu"
+  },
+  "blog_index_order_newest": {
+    "text": "Berrienak"
+  },
+  "blog_index_order_oldest": {
+    "text": "Zaharrenak"
+  },
+  "blog_index_order_updated": {
+    "text": "Duela gutxi eguneratuak"
+  },
+  "blog_index_search_submit": {
+    "text": "Bilatu"
+  },
+  "blog_index_clear_search": {
+    "text": "Bilaketa garbitu"
+  },
+  "blog_index_categories_label": {
+    "text": "Kategorien arabera iragazi"
+  },
+  "blog_index_category_mode_label": {
+    "text": "Kategorien bat-etortzea"
+  },
+  "blog_index_category_mode_any": {
+    "text": "Edozein"
+  },
+  "blog_index_category_mode_all": {
+    "text": "Guztiak"
+  },
+  "blog_index_apply_categories": {
+    "text": "Kategoriak aplikatu"
+  },
+  "blog_index_clear_categories": {
+    "text": "Kategoriak kendu"
+  },
+  "blog_index_categories_empty": {
+    "text": "Ez dago kategoriarik eskuragarri."
+  },
+  "blog_index_results_updated": {
+    "text": "Emaitzak eguneratu dira"
+  },
+  "blog_index_empty": {
+    "text": "Oraindik ez dago argitalpenik."
+  },
+  "blog_index_no_results": {
+    "text": "Ez dago hautapen honetarako argitalpenik."
+  },
+  "blog_index_unavailable": {
+    "text": "Argitalpenak ez daude erabilgarri aldi baterako."
+  },
+  "blog_index_previous_page": {
+    "text": "Aurreko orria"
+  },
+  "blog_index_next_page": {
+    "text": "Hurrengo orria"
+  },
+  "blog_index_archive_heading": {
+    "text": "Argitalpenen artxiboa"
+  },
+  "blog_index_archive_entry_singular": {
+    "text": "sarrera"
+  },
+  "blog_index_archive_entry_plural": {
+    "text": "sarrera"
+  },
+  "blog_index_archive_period_format": {
+    "text": "{year}(e)ko {month}"
+  },
+  "blog_index_month_01": { "text": "Urtarrila" },
+  "blog_index_month_02": { "text": "Otsaila" },
+  "blog_index_month_03": { "text": "Martxoa" },
+  "blog_index_month_04": { "text": "Apirila" },
+  "blog_index_month_05": { "text": "Maiatza" },
+  "blog_index_month_06": { "text": "Ekaina" },
+  "blog_index_month_07": { "text": "Uztaila" },
+  "blog_index_month_08": { "text": "Abuztua" },
+  "blog_index_month_09": { "text": "Iraila" },
+  "blog_index_month_10": { "text": "Urria" },
+  "blog_index_month_11": { "text": "Azaroa" },
+  "blog_index_month_12": { "text": "Abendua" }
+}

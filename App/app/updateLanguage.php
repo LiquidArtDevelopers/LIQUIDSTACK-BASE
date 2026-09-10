@@ -31,23 +31,50 @@ $rawInput = file_get_contents('php://input');
 $data = [];
 
 if ($rawInput !== false && $rawInput !== '') {
-    $decoded = json_decode($rawInput, true);
-    if (is_array($decoded)) {
-        $data = $decoded;
+    if (strlen($rawInput) > 1048576) {
+        $respond(413, [
+            'status'  => 'error',
+            'message' => 'Language update payload is too large.',
+        ]);
     }
+
+    try {
+        $decoded = json_decode(
+            $rawInput,
+            true,
+            512,
+            JSON_THROW_ON_ERROR
+        );
+    } catch (JsonException $exception) {
+        $respond(400, [
+            'status'  => 'error',
+            'message' => 'Invalid JSON payload.',
+        ]);
+    }
+
+    if (!is_array($decoded)) {
+        $respond(400, [
+            'status'  => 'error',
+            'message' => 'Invalid update payload.',
+        ]);
+    }
+
+    $data = $decoded;
 }
 
 if (!$data && $_POST) {
     $data = $_POST;
 }
 
-$lang  = isset($data['lang']) ? trim((string) $data['lang']) : '';
-$key   = isset($data['key']) ? trim((string) $data['key']) : '';
-$scope = isset($data['scope']) ? trim((string) $data['scope']) : '';
-$route = isset($data['route']) ? trim((string) $data['route']) : '';
-$values = $data['values'] ?? null;
+$lang       = isset($data['lang']) ? trim((string) $data['lang']) : '';
+$key        = isset($data['key']) ? trim((string) $data['key']) : '';
+$scope      = isset($data['scope']) ? trim((string) $data['scope']) : '';
+$route      = isset($data['route']) ? trim((string) $data['route']) : '';
+$values     = $data['values'] ?? null;
+$batchInput = $data['updates'] ?? null;
+$isBatch    = is_array($batchInput);
 
-if ($lang === '' || $key === '') {
+if ($lang === '' || (!$isBatch && $key === '')) {
     $respond(400, [
         'status'  => 'error',
         'message' => 'Missing required parameters.',
@@ -71,7 +98,7 @@ if ($baseDir === false) {
 }
 
 $langSanitized = preg_replace('/[^a-zA-Z0-9_-]/', '', $lang);
-if ($langSanitized === '') {
+if ($langSanitized === '' || $langSanitized !== $lang) {
     $respond(400, [
         'status'  => 'error',
         'message' => 'Invalid language identifier.',
@@ -82,7 +109,7 @@ if ($targetScope === 'global') {
     $scopeDir = realpath($baseDir . '/global');
 } else {
     $scopeSanitized = preg_replace('/[^a-zA-Z0-9_-]/', '', $targetScope);
-    if ($scopeSanitized === '') {
+    if ($scopeSanitized === '' || $scopeSanitized !== $targetScope) {
         $respond(400, [
             'status'  => 'error',
             'message' => 'Invalid route identifier.',
@@ -107,34 +134,127 @@ if (!is_file($filePath) || !is_readable($filePath) || !is_writable($filePath)) {
     ]);
 }
 
-$fileContents = file_get_contents($filePath);
+$normalizeValues = static function ($rawValues) {
+    if (!is_array($rawValues)) {
+        return is_scalar($rawValues) || $rawValues === null
+            ? (string) $rawValues
+            : '';
+    }
+
+    $normalized = [];
+    foreach ($rawValues as $attr => $value) {
+        if (!is_string($attr) || $attr === '') {
+            continue;
+        }
+        if (is_scalar($value) || $value === null) {
+            $normalized[$attr] = $value === null ? '' : (string) $value;
+        }
+    }
+
+    return $normalized;
+};
+
+$rawUpdates = $isBatch
+    ? $batchInput
+    : [['key' => $key, 'values' => $values]];
+
+if ($isBatch && count($rawUpdates) > 500) {
+    $respond(413, [
+        'status'  => 'error',
+        'message' => 'Too many language updates were provided.',
+    ]);
+}
+
+$updates = [];
+foreach ($rawUpdates as $rawUpdate) {
+    if (!is_array($rawUpdate)) {
+        $respond(400, [
+            'status'  => 'error',
+            'message' => 'Invalid update payload.',
+        ]);
+    }
+
+    $updateKey = isset($rawUpdate['key']) ? trim((string) $rawUpdate['key']) : '';
+    if (
+        $updateKey === ''
+        || strlen($updateKey) > 190
+        || preg_match('/^[A-Za-z0-9_-]+$/', $updateKey) !== 1
+    ) {
+        $respond(400, [
+            'status'  => 'error',
+            'message' => 'Invalid language key.',
+        ]);
+    }
+
+    $updates[$updateKey] = $normalizeValues($rawUpdate['values'] ?? null);
+}
+
+if ($updates === []) {
+    $respond(400, [
+        'status'  => 'error',
+        'message' => 'No language updates were provided.',
+    ]);
+}
+
+$handle = fopen($filePath, 'c+');
+if ($handle === false) {
+    $respond(500, [
+        'status'  => 'error',
+        'message' => 'Unable to open language file.',
+    ]);
+}
+
+if (!flock($handle, LOCK_EX)) {
+    fclose($handle);
+    $respond(500, [
+        'status'  => 'error',
+        'message' => 'Unable to lock language file.',
+    ]);
+}
+
+rewind($handle);
+$fileContents = stream_get_contents($handle);
 if ($fileContents === false) {
+    flock($handle, LOCK_UN);
+    fclose($handle);
     $respond(500, [
         'status'  => 'error',
         'message' => 'Unable to read language file.',
     ]);
 }
 
-$decodedJson = json_decode($fileContents, true);
-if (!is_array($decodedJson)) {
-    $decodedJson = [];
+try {
+    $decodedJson = json_decode(
+        $fileContents,
+        true,
+        512,
+        JSON_THROW_ON_ERROR
+    );
+} catch (JsonException $exception) {
+    flock($handle, LOCK_UN);
+    fclose($handle);
+    $respond(409, [
+        'status'  => 'error',
+        'message' => 'Language file contains invalid JSON and was not changed.',
+    ]);
 }
 
-if (is_array($values)) {
-    $normalizedValues = [];
-    foreach ($values as $attr => $value) {
-        if (!is_string($attr) || $attr === '') {
-            continue;
-        }
-        if (is_scalar($value) || $value === null) {
-            $normalizedValues[$attr] = $value === null ? '' : (string) $value;
-        }
-    }
-    $decodedJson[$key] = $normalizedValues;
-    $finalValue = $normalizedValues;
-} else {
-    $decodedJson[$key] = is_scalar($values) || $values === null ? (string) $values : '';
-    $finalValue = $decodedJson[$key];
+if (!is_array($decodedJson)) {
+    flock($handle, LOCK_UN);
+    fclose($handle);
+    $respond(409, [
+        'status'  => 'error',
+        'message' => 'Language file must contain a JSON object.',
+    ]);
+}
+
+$results = [];
+foreach ($updates as $updateKey => $normalizedValue) {
+    $decodedJson[$updateKey] = $normalizedValue;
+    $results[] = [
+        'key'  => $updateKey,
+        'data' => $normalizedValue,
+    ];
 }
 
 $encoded = json_encode($decodedJson, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
@@ -149,16 +269,47 @@ if (substr($encoded, -1) !== "\n") {
     $encoded .= "\n";
 }
 
-if (file_put_contents($filePath, $encoded, LOCK_EX) === false) {
+if (!rewind($handle) || !ftruncate($handle, 0)) {
+    flock($handle, LOCK_UN);
+    fclose($handle);
     $respond(500, [
         'status'  => 'error',
-        'message' => 'Unable to write language file.',
+        'message' => 'Unable to prepare language file for writing.',
     ]);
 }
 
-$respond(200, [
+$bytesWritten = 0;
+$encodedLength = strlen($encoded);
+
+while ($bytesWritten < $encodedLength) {
+    $written = fwrite($handle, substr($encoded, $bytesWritten));
+
+    if ($written === false || $written === 0) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        $respond(500, [
+            'status'  => 'error',
+            'message' => 'Unable to write language file.',
+        ]);
+    }
+
+    $bytesWritten += $written;
+}
+
+fflush($handle);
+flock($handle, LOCK_UN);
+fclose($handle);
+
+$payload = [
     'status' => 'ok',
     'scope'  => $targetScope,
-    'key'    => $key,
-    'data'   => $finalValue,
-]);
+];
+
+if ($isBatch) {
+    $payload['updates'] = $results;
+} else {
+    $payload['key']  = $results[0]['key'];
+    $payload['data'] = $results[0]['data'];
+}
+
+$respond(200, $payload);
