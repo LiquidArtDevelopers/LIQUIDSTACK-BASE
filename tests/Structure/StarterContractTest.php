@@ -25,6 +25,30 @@ final class StarterContractTest extends TestCase
         );
 
         self::assertStringContainsString('LANG_SKIP_UPDATE=0', $environment);
+        self::assertStringContainsString(
+            'BBDD_NAME=example_liquidstack_dev',
+            $environment
+        );
+        self::assertStringContainsString('BBDD_USER=example_user', $environment);
+        self::assertStringContainsString('BBDD_PASS=example_pass', $environment);
+        self::assertStringContainsString(
+            'LIQUIDSTACK_WEBADMIN_SECURITY_KEY='
+                . 'EXAMPLE_ONLY_CHANGE_ME_BEFORE_REAL_USE_0000',
+            $environment
+        );
+        self::assertStringContainsString(
+            'LIQUIDSTACK_WEBADMIN_SYSTEM_SUPERADMIN_EMAIL=aranaz@webda.eus',
+            $environment
+        );
+        self::assertStringContainsString(
+            'LIQUIDSTACK_WEBADMIN_SITE_ADMIN_EMAIL=aranaz@gmail.com',
+            $environment
+        );
+        self::assertStringContainsString(
+            'No desplegar estas credenciales en producción.',
+            $environment
+        );
+        self::assertStringContainsString('DEMO PÚBLICA', $environment);
         self::assertMatchesRegularExpression(
             '/^COOKIE_LAD_KEY=\s*$/m',
             $environment
@@ -46,6 +70,57 @@ final class StarterContractTest extends TestCase
             'liquid art developers',
             $neutralPublicMetadata
         );
+    }
+
+    public function testVersionedExampleDatabaseIsCompleteAndSanitized(): void
+    {
+        $root = dirname(__DIR__, 2);
+        $path = $root . '/example_liquidstack_dev.sql';
+
+        self::assertFileExists($path);
+        $sql = (string) file_get_contents($path);
+        self::assertNotSame('', $sql);
+
+        foreach ([
+            'CREATE USER',
+            'GRANT ',
+            'example_pass',
+            'EXAMPLE_ONLY_CHANGE_ME_BEFORE_REAL_USE_0000',
+            "'bootstrap.initial_accounts','completed'",
+            'INSERT INTO `ls_webadmin_sessions`',
+            'INSERT INTO `ls_webadmin_action_tokens`',
+            'INSERT INTO `ls_webadmin_outbox`',
+            'INSERT INTO `ls_webadmin_rate_limits`',
+            'INSERT INTO `ls_webadmin_audit_log`',
+            'INSERT INTO `ls_webadmin_credentials`',
+            'INSERT INTO `ls_blog_analytics_sessions`',
+            'INSERT INTO `ls_blog_analytics_views`',
+            'INSERT INTO `ls_blog_copy_operations`',
+        ] as $forbidden) {
+            self::assertStringNotContainsStringIgnoringCase(
+                $forbidden,
+                $sql,
+                "El snapshot demo no debe contener {$forbidden}."
+            );
+        }
+
+        foreach ([
+            'CREATE TABLE `ls_webadmin_users`',
+            'CREATE TABLE `ls_blog_posts`',
+            '0025_blog_tag_capabilities',
+            'aranaz@webda.eus',
+            'aranaz@gmail.com',
+            'Bienvenido al blog de tu nuevo proyecto',
+            'Ongi etorri zure proiektu berriaren blogera',
+            'Cómo personalizar BASE sin perder actualizaciones',
+            'Nola pertsonalizatu BASE eguneraketak galdu gabe',
+            'Novedades',
+            'Berriak',
+            'LiquidStack',
+            "'bootstrap.initial_accounts','pending'",
+        ] as $required) {
+            self::assertStringContainsString($required, $sql);
+        }
     }
 
     public function testLegacyMembershipSurfaceIsAbsentFromTheStarter(): void
