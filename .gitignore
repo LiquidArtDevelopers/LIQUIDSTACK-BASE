@@ -1,9 +1,8 @@
 vendor
 node_modules
-composer.lock
-package-lock.json
 .env
 .npmrc
+/auth.json
 /public/assets/css/
 /public/assets/js/
 /public/.vite/

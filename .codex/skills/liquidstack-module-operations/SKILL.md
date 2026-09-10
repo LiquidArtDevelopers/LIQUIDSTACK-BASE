@@ -83,7 +83,11 @@ php -r "echo in_array('argon2id', password_algos(), true) ? 'Argon2id=available'
    Si el plugin instalado aún no normaliza el selector, usar explícitamente `:*`.
 3. Actualizar el código físico con `composer update liquidstack/core`; actualizar CORE por sí solo no activa WebAdmin ni Blog.
 4. Para desactivar, usar `composer remove` sobre el selector directo. Nunca borrar automáticamente tablas, usuarios, artículos, medios, configuración o assets conservados.
-5. Revisar el resumen del sincronizador: un fichero project-owned o personalizado debe preservarse salvo que exista un contrato de versión gestionada reconocido.
+5. Revisar el resumen del sincronizador: un fichero project-owned o
+   personalizado debe preservarse salvo que exista un contrato de versión
+   gestionada reconocido. El estado instalado y el historial de huellas son
+   evidencias acumulativas; una huella histórica exacta sigue siendo gestionada
+   aunque el estado haya quedado desfasado.
 
 No ejecutar `require`, `remove`, migraciones, commit, push o release si el usuario solo ha pedido una auditoría.
 
@@ -1224,9 +1228,9 @@ composer liquidstack:migrate --dry-run
   `public-collections-support`. No agruparlos con `resource-support`: una
   personalización del helper o loader visual no debe impedir instalar o
   actualizar el adaptador backend que requiere cada vista.
-- RESOURCE-001 forma parte de CORE principal desde este corte `Unreleased`.
-  Mantener como gate de publicación sus pruebas técnicas y la QA funcional y
-  visual tras instalarlo en un consumidor; no confundir integración con release.
+- RESOURCE-001 forma parte de CORE versionado desde `v1.22.0`. Mantener sus
+  pruebas técnicas y la QA funcional y visual como gates de regresión tras
+  instalarlo en un consumidor.
 - Si el contrato de `src/scss/_config.scss` no está disponible, publicar solo
   los assets autocontenidos de cada módulo bajo sus namespaces
   `public/assets/modules/<id>`, `src/js/modules/<id>` y

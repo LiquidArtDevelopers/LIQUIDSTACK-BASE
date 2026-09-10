@@ -465,6 +465,13 @@
             ],
             "group": "resource:artZipper"
         },
+        "App/controllers/footerInfo01.php": {
+            "source": "stubs/App/controllers/footerInfo01.php",
+            "fingerprints": [
+                "sha256:ec6c39bcb7fa76263565301c5f87682e501ca89a3df2cb424944d00d43ec702a"
+            ],
+            "group": "resource:footerInfo01"
+        },
         "App/controllers/hero00.php": {
             "source": "stubs/App/controllers/hero00.php",
             "fingerprints": [
@@ -489,7 +496,7 @@
         "App/controllers/hero03.php": {
             "source": "stubs/App/controllers/hero03.php",
             "fingerprints": [
-                "sha256:78fce85b80ab459bd86dc6c979ccb2e0664fdc07e8d204f6ea371cf99cdfd72b"
+                "sha256:8d592cbd73a3a1cbd07f8f499d56b38e3bfa24ede85cbce5c8b941883c9a2a20"
             ],
             "group": "resource:hero03"
         },
@@ -755,7 +762,7 @@
         "App/controllers/navMegamenu01.php": {
             "source": "stubs/App/controllers/navMegamenu01.php",
             "fingerprints": [
-                "sha256:20228c72982aae0ca7696823d30cb42948a9f59a76bd59b2bd1f0459255b694a"
+                "sha256:4b5d325389fb877684055fd4ae4aa401b93edf3a220bd6831b2213e770b06e78"
             ],
             "group": "resource:navMegamenu01"
         },
@@ -1256,6 +1263,13 @@
                 "sha256:8d30c34fee009a67acc06acedf6c46295288da7ee4bab853631fa809e33e406b"
             ],
             "group": "resource:artZipper"
+        },
+        "App/templates/_footerInfo01.html": {
+            "source": "stubs/App/templates/_footerInfo01.html",
+            "fingerprints": [
+                "sha256:3270411394e4c295d10875a95949565fd5c2b759067e698b1d947a7b9bcf0862"
+            ],
+            "group": "resource:footerInfo01"
         },
         "App/templates/_hero00.html": {
             "source": "stubs/App/templates/_hero00.html",
@@ -2879,6 +2893,13 @@
                 "sha256:f6060e8c8a0c4990dbda03ea2bbed3616e249d21524949555da2a4eba4ba9f58"
             ],
             "group": "resource:showPassword"
+        },
+        "src/js/resources/_terminos.js": {
+            "source": "resources/js/_terminos.js",
+            "fingerprints": [
+                "sha256:74117fcec4f751b59796b1a541160c379624b81b20b51083417f1734500b219e"
+            ],
+            "group": "resource:terminos"
         },
         "src/js/resources/_toast.js": {
             "source": "resources/js/_toast.js",

@@ -4,3 +4,21 @@
 # Los scripts nativos de Windows conservan CRLF.
 *.bat text eol=crlf
 *.cmd text eol=crlf
+
+# Nunca exportar estado local, credenciales ni artefactos regenerables.
+/.git export-ignore
+/.env export-ignore
+/.npmrc export-ignore
+/auth.json export-ignore
+/.phpunit.result.cache export-ignore
+/.codex/tmp export-ignore
+/.liquidstack/core/sync-transactions export-ignore
+/vendor export-ignore
+/node_modules export-ignore
+/App/tools export-ignore
+/App/bootstrap.php export-ignore
+/storage export-ignore
+/public/.vite export-ignore
+/public/assets/css export-ignore
+/public/assets/js export-ignore
+/public/assets/video/customer export-ignore
