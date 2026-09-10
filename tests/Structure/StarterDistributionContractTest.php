@@ -28,11 +28,17 @@ final class StarterDistributionContractTest extends TestCase
             $composer['config']['allow-plugins']['liquidstack/core'] ?? false
         );
         self::assertSame(
-            ['@php tools/test-create-project.php'],
+            [
+                'Composer\\Config::disableProcessTimeout',
+                '@php tools/test-create-project.php',
+            ],
             $composer['scripts']['test:create-project'] ?? null
         );
         self::assertSame(
-            ['@php tools/release.php'],
+            [
+                'Composer\\Config::disableProcessTimeout',
+                '@php tools/release.php',
+            ],
             $composer['scripts']['release'] ?? null
         );
         self::assertFileExists($this->root . '/tools/release.php');

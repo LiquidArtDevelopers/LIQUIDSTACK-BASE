@@ -510,12 +510,15 @@ crear la etiqueta se puede repetir contra GitHub y, cuando el paquete esté
 registrado, contra Packagist:
 
 ```powershell
-composer test:create-project -- --source=vcs --version=^1.0
-composer test:create-project -- --source=packagist --version=^1.0
+composer test:create-project -- --source=vcs
+composer test:create-project -- --source=packagist
 ```
 
 Ambos modos externos ejecutan un `create-project` real con `--prefer-dist` y
-`--remove-vcs`; el fallback VCS usa el remoto canónico de BASE.
+`--remove-vcs`; el fallback VCS usa el remoto canónico de BASE. Si no se indica
+`--version`, prueban la última release compatible con `^1.0`. Los dos scripts
+largos desactivan el timeout del proceso padre de Composer; cada subproceso
+sigue fallando y deteniendo el gate si devuelve un código distinto de cero.
 
 Después se actualiza `CHANGELOG.md` con la versión y fecha, se revisa el lote
 exacto y se crea el commit. El gate propio repite las validaciones, comprueba

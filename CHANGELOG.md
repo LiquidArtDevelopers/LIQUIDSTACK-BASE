@@ -5,6 +5,14 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-09-10
+
+### Fixed
+
+- Los gates largos de release y `create-project` ya no quedan interrumpidos
+  por el timeout de 300 segundos del proceso padre de Composer cuando GitHub
+  necesita descargar el repositorio VCS con la caché fría.
+
 ## [1.0.0] - 2026-09-10
 
 ### Added
