@@ -231,6 +231,8 @@ pero nunca aplica migraciones ni crea usuarios automáticamente.
 IMPORTANTE:
 Debemos activar en el php.ini la directriz zend.exception_ignore_args=1
 
+También, antes de importar la Base de Datos al proveedor asegurarse que está en Cotejamiento: utf8mb4_unicode_ci
+
 ```powershell
 zend.exception_ignore_args=1
 ```
