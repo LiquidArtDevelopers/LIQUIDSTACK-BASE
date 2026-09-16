@@ -70,16 +70,16 @@
         },
         {
             "name": "liquidstack/core",
-            "version": "v1.29.0",
+            "version": "v1.31.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LiquidArtDevelopers/LIQUIDSTACK-CORE.git",
-                "reference": "d8d1447764d3f8a41a806dc96bc8cc04d52fd49b"
+                "reference": "4b4722f36de3d832345647842a6230c4963d3157"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LiquidArtDevelopers/LIQUIDSTACK-CORE/zipball/d8d1447764d3f8a41a806dc96bc8cc04d52fd49b",
-                "reference": "d8d1447764d3f8a41a806dc96bc8cc04d52fd49b",
+                "url": "https://api.github.com/repos/LiquidArtDevelopers/LIQUIDSTACK-CORE/zipball/4b4722f36de3d832345647842a6230c4963d3157",
+                "reference": "4b4722f36de3d832345647842a6230c4963d3157",
                 "shasum": ""
             },
             "require": {
@@ -125,7 +125,7 @@
                 "issues": "https://github.com/LiquidArtDevelopers/liquidstack-core/issues",
                 "source": "https://github.com/LiquidArtDevelopers/liquidstack-core"
             },
-            "time": "2026-09-10T15:03:54+00:00"
+            "time": "2026-09-15T10:40:49+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

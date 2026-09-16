@@ -482,7 +482,7 @@
         "App/controllers/hero01.php": {
             "source": "stubs/App/controllers/hero01.php",
             "fingerprints": [
-                "sha256:8f93f24c0564e256092c1c9e2b45d74afe858ff8f13e436969fddc56dc852775"
+                "sha256:453066cfa4afec36451d7674c23be1171d1c45e1b65817eb1449d491da57b45e"
             ],
             "group": "resource:hero01"
         },
@@ -1281,7 +1281,7 @@
         "App/templates/_hero01.html": {
             "source": "stubs/App/templates/_hero01.html",
             "fingerprints": [
-                "sha256:f9a07bceadce6ae8d0a5cfbc819381ba7a1c3b1d519694d5d4738ffa7246537d"
+                "sha256:515e39d6de338c46c33a8a2b5b3fee49820db8359871fb509687138ff33c3989"
             ],
             "group": "resource:hero01"
         },
@@ -1795,7 +1795,7 @@
         "App/views/showroom/_heroes.php": {
             "source": "stubs/App/views/showroom/_heroes.php",
             "fingerprints": [
-                "sha256:8d2c05f7a4b817766767786e3fab8b66aa342c4a66cf9bf93877adce9f9fea96"
+                "sha256:a20129e13381faba94bae92dfa15f71da7ccc2e60958c5526d997782be487c9e"
             ],
             "group": "catalog:showroom"
         },
@@ -2397,14 +2397,14 @@
         "public/assets/modules/blog/blog-editor.js": {
             "source": "modules/blog/published/assets/blog-editor.js",
             "fingerprints": [
-                "sha256:20d568be908b7c3f6c9c1c7fc5980c0cd4d6ebcc28556e2b3bbca705024b9264"
+                "sha256:135c9fbefa264570831f2002e5de0cf10c6a260b74988f66bc7f8bbfce2b25b1"
             ],
             "group": "module:blog:public/assets/modules/blog"
         },
         "public/assets/modules/blog/blog-public.css": {
             "source": "modules/blog/published/assets/blog-public.css",
             "fingerprints": [
-                "sha256:b6319de54947243fa8c02c094d78a63ea1fef30ae54cbceda002cd506f77302f"
+                "sha256:e1e7fcdf1bd76e7831a0afbcc7b78732d4bce0883ec57b6c43e03ed7ee57d90a"
             ],
             "group": "module:blog:public/assets/modules/blog"
         },
@@ -2746,14 +2746,14 @@
         "src/js/resources/_inlineEditor.js": {
             "source": "resources/js/_inlineEditor.js",
             "fingerprints": [
-                "sha256:b22435d044183c4dd85271b39d7a98721cbeea2da46ffc924af907d295f2b17a"
+                "sha256:3282ede73706d83f408f79e69ff68f54a9e5c9f4b3df435b17f5230833731dab"
             ],
             "group": "runtime:inline-editor"
         },
         "src/js/resources/_inlineResponsivePicture.js": {
             "source": "resources/js/_inlineResponsivePicture.js",
             "fingerprints": [
-                "sha256:b5c996aa770dad5da55d631855cd70673a9f17df604f374c32ebeebb179987a9"
+                "sha256:476e16dc72260691b069bd5c9922fd44623bc145f0620f2062067a563dc16c2e"
             ],
             "group": "runtime:inline-editor"
         },
@@ -2967,7 +2967,7 @@
         "src/js/showroom/heroes.js": {
             "source": "src/js/showroom/heroes.js",
             "fingerprints": [
-                "sha256:7b0544fa03b1fd11e2e2b2a60406ab7d9139f9454d099faebb4d5f016fd8647e"
+                "sha256:2b2a22df8da953b3f33bb83f034338f693477c0e79d3476546167239403acf1d"
             ],
             "group": "catalog:showroom"
         },
@@ -3312,7 +3312,7 @@
         "src/scss/resources/_artBlogArticle01.scss": {
             "source": "modules/blog/resources/project/src/scss/resources/_artBlogArticle01.scss",
             "fingerprints": [
-                "sha256:bf751d2cfe40bf1144dbb5458171e3bcb75a5768fc86af512425224819579328"
+                "sha256:856aa3e7a8287d82940f0a3a41f7bc8ab5783e82af2813f05a2e4827684f1f02"
             ],
             "group": "module:blog:resource-artBlogArticle01"
         },
@@ -3432,7 +3432,7 @@
         "src/scss/resources/_hero01.scss": {
             "source": "resources/scss/_hero01.scss",
             "fingerprints": [
-                "sha256:3fa4c88bbfc2d84d25e3663a7cb17e4ec9534656a706c828d91b5328ce0a5afe"
+                "sha256:0bed6297d12f63f1bd48efeebd89ac5633cd77b63aea8f7e1df4e2abc6ba6409"
             ],
             "group": "resource:hero01"
         },

@@ -1,6 +1,8 @@
 {
     "managed": [
         "dev-stack",
+        "liquidstack-content-localization",
+        "liquidstack-deployment",
         "liquidstack-module-operations",
         "liquidstack-resource-migration",
         "seo-content",

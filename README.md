@@ -228,6 +228,13 @@ El `composer.json` de BASE ya selecciona `liquidstack/blog`, por lo que una
 instalación nueva dispone también de WebAdmin. Composer distribuye el código,
 pero nunca aplica migraciones ni crea usuarios automáticamente.
 
+IMPORTANTE:
+Debemos activar en el php.ini la directriz zend.exception_ignore_args=1
+
+```powershell
+zend.exception_ignore_args=1
+```
+
 ## Conexión de base de datos
 
 Blog y WebAdmin usan por defecto la conexión `shared` declarada en

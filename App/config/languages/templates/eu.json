@@ -4367,5 +4367,12 @@
         "text": "Itzuli sarbidera",
         "href": "#artAuth02-00-heading",
         "title": "Itzuli sarbide-formulariora"
+    },
+    "hero01_00_img": {
+        "src": "assets/img/dummy/dummy01.avif",
+        "alt": "Hero01 baliabiderako probako irudia",
+        "title": "Hero01 baliabidearen atzeko plano editagarria",
+        "width": 2560,
+        "height": 1600
     }
 }

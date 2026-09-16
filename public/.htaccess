@@ -71,3 +71,20 @@ RewriteRule ^ index.php [L,QSA]
         Header set Cache-Control "no-cache, no-store, must-revalidate"
     </FilesMatch>
 </IfModule>
+
+# <liquidstack-core:discovery-cache-policy>
+# Los documentos de descubrimiento se pueden almacenar, pero
+# deben revalidarse para no heredar la caché general de activos.
+<IfModule mod_expires.c>
+    <FilesMatch "^(?:sitemap\.xml|robots\.txt)$">
+        ExpiresActive Off
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "^(?:sitemap\.xml|robots\.txt)$">
+        Header set Cache-Control "public, no-cache, must-revalidate"
+        Header unset Expires
+    </FilesMatch>
+</IfModule>
+# </liquidstack-core:discovery-cache-policy>

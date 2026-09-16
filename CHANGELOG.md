@@ -5,6 +5,12 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+### Changed
+
+- El starter queda bloqueado reproduciblemente en CORE `v1.31.0`, con la
+  nueva guía de localización y las correcciones de listas y CSS avanzado del
+  Blog.
+
 ## [1.0.1] - 2026-09-10
 
 ### Fixed

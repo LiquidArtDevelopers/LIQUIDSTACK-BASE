@@ -94,11 +94,11 @@ final class StarterDistributionContractTest extends TestCase
         $packages = array_column($composerLock['packages'] ?? [], null, 'name');
         self::assertArrayHasKey('liquidstack/core', $packages);
         self::assertSame(
-            'v1.29.0',
+            'v1.31.1',
             $packages['liquidstack/core']['version'] ?? null
         );
         self::assertSame(
-            'd8d1447764d3f8a41a806dc96bc8cc04d52fd49b',
+            'c3006d329b683245e7026180ba9c70b458908bf2',
             $packages['liquidstack/core']['source']['reference'] ?? null
         );
 
