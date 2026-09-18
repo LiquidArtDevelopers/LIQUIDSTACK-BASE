@@ -10,6 +10,7 @@
 /.env export-ignore
 /.npmrc export-ignore
 /auth.json export-ignore
+/composer.lock export-ignore
 /.phpunit.result.cache export-ignore
 /.codex/tmp export-ignore
 /.liquidstack/core/sync-transactions export-ignore

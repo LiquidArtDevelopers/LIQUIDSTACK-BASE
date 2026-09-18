@@ -100,12 +100,16 @@ Ambas órdenes requieren una etiqueta compatible; la primera es `v1.0.0`.
 `dev-main` queda reservado para probar cambios de BASE antes de una release y
 no es una versión estable para proyectos de cliente.
 
-`create-project` instala las dependencias PHP bloqueadas y permite al plugin de
-CORE sincronizar sus recursos. No crea `.env`, no instala paquetes npm, no
-conecta con la DB, no migra, no crea cuentas y no ejecuta onboarding. Después:
+El paquete distribuido no incluye el `composer.lock` interno de BASE.
+`create-project` resuelve la versión más reciente de CORE compatible con la
+restricción declarada, activa los selectores lógicos de WebAdmin y Blog y genera
+un `composer.lock` propio para el nuevo proyecto. No crea `.env`, no instala
+paquetes npm, no conecta con la DB, no migra, no crea cuentas y no ejecuta
+onboarding. Después:
 
-1. Entra en el directorio y conserva versionados `composer.lock` y
-   `package-lock.json`; forman parte del punto de partida reproducible.
+1. Entra en el directorio y conserva versionados el `composer.lock` recién
+   generado y `package-lock.json`; forman parte del punto de partida
+   reproducible.
 2. Crea el entorno privado de forma explícita:
 
    ```powershell
@@ -155,9 +159,10 @@ El `name: liquidstack/base` que llega con `create-project` identifica el
 artefacto de origen; no es una dependencia de runtime y no debe conservarse
 como identidad del nuevo proyecto.
 
-Si se obtiene BASE mediante un clon manual en vez de `create-project`, el paso
-equivalente es `composer install`, nunca un `composer update` inicial que
-resuelva versiones distintas a las validadas por la release.
+Si se obtiene BASE mediante un clon manual para mantener la propia plantilla,
+se usa `composer install` con su lock versionado. Para iniciar un cliente con
+las versiones más recientes debe usarse `create-project`; así el lock interno
+de BASE no se hereda accidentalmente.
 
 ## Ownership y ciclo de vida
 
@@ -501,7 +506,7 @@ de proyectos nuevos. No se instalan ni se mezclan sobre proyectos ya nacidos.
 Antes de publicar una etiqueta de BASE:
 
 ```powershell
-composer validate --strict --no-check-publish
+composer validate --strict --no-check-publish --no-check-all
 composer test
 composer test:create-project
 git diff --check

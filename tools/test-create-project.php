@@ -6,8 +6,8 @@ declare(strict_types=1);
  * End-to-end smoke test for the distributable LiquidStack BASE package.
  *
  * It installs BASE through Composer's create-project flow (from a local
- * archive, the canonical VCS repository or Packagist), installs the locked
- * PHP dependencies and runs CORE's synchronizer twice. It deliberately never
+ * archive, the canonical VCS repository or Packagist), resolves fresh PHP
+ * dependencies and runs CORE's synchronizer twice. It deliberately never
  * creates .env, invokes npm or touches migration/onboarding commands.
  */
 
@@ -135,6 +135,21 @@ final class CreateProjectProbe
             '--no-progress',
             '--no-ansi',
         ], $projectDirectory);
+
+        $this->assert(
+            is_file($projectDirectory . '/composer.lock'),
+            'composer install no generó el lock propio del nuevo proyecto.'
+        );
+        $composerLockHash = hash_file(
+            'sha256',
+            $projectDirectory . '/composer.lock'
+        );
+        if ($composerLockHash === false) {
+            throw new RuntimeException(
+                'No se pudo resumir el composer.lock generado.'
+            );
+        }
+        $protected['composer.lock'] = $composerLockHash;
 
         $this->assert(is_dir($projectDirectory . '/vendor/liquidstack/core'),
             'composer install no instaló liquidstack/core.');
@@ -380,6 +395,7 @@ final class CreateProjectProbe
             '.env',
             '.npmrc',
             'auth.json',
+            'composer.lock',
             '.phpunit.result.cache',
             'App/bootstrap.php',
         ] as $forbiddenFile) {
@@ -410,7 +426,6 @@ final class CreateProjectProbe
         }
         foreach ([
             'composer.json',
-            'composer.lock',
             'package.json',
             'package-lock.json',
             '.env.example',
@@ -435,6 +450,7 @@ final class CreateProjectProbe
     private function assertProjectStartsClean(string $projectDirectory): void
     {
         foreach ([
+            'composer.lock',
             '.git',
             '.env',
             '.npmrc',
@@ -451,7 +467,6 @@ final class CreateProjectProbe
             );
         }
         foreach ([
-            'composer.lock',
             'package-lock.json',
             '.env.example',
             '.npmrc.example',
@@ -470,7 +485,6 @@ final class CreateProjectProbe
         $hashes = [];
         foreach ([
             'composer.json',
-            'composer.lock',
             'package.json',
             'package-lock.json',
             '.env.example',

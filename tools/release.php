@@ -69,7 +69,7 @@ final class BaseReleaseGate
         $failure = null;
         try {
             $this->runComposer([
-                'validate', '--strict', '--no-check-publish',
+                'validate', '--strict', '--no-check-publish', '--no-check-all',
                 '--no-interaction', '--no-ansi',
             ]);
             $this->runComposer([

@@ -7,9 +7,11 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ### Changed
 
-- El starter queda bloqueado reproduciblemente en CORE `v1.31.0`, con la
-  nueva guía de localización y las correcciones de listas y CSS avanzado del
-  Blog.
+- El repositorio de BASE conserva un lock reproducible para su mantenimiento,
+  pero lo excluye del paquete distribuido: cada `create-project` resuelve el
+  CORE `^1.31` más reciente y genera el lock propio del nuevo consumidor.
+- WebAdmin y Blog quedan seleccionados explícitamente mediante sus alias
+  lógicos; ambos siguen viajando dentro del único paquete físico CORE.
 
 ## [1.0.1] - 2026-09-10
 

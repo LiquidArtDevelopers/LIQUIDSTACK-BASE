@@ -22,8 +22,9 @@ final class StarterDistributionContractTest extends TestCase
         self::assertSame('>=8.1', $composer['require']['php'] ?? null);
         self::assertSame('*', $composer['require']['ext-dom'] ?? null);
         self::assertSame('*', $composer['require']['ext-pdo_mysql'] ?? null);
-        self::assertSame('^1.29', $composer['require']['liquidstack/core'] ?? null);
-        self::assertSame('^1.29', $composer['require']['liquidstack/blog'] ?? null);
+        self::assertSame('^1.31', $composer['require']['liquidstack/core'] ?? null);
+        self::assertSame('*', $composer['require']['liquidstack/webadmin'] ?? null);
+        self::assertSame('*', $composer['require']['liquidstack/blog'] ?? null);
         self::assertTrue(
             $composer['config']['allow-plugins']['liquidstack/core'] ?? false
         );
@@ -65,6 +66,7 @@ final class StarterDistributionContractTest extends TestCase
             '/.env',
             '/.npmrc',
             '/auth.json',
+            '/composer.lock',
             '/.phpunit.result.cache',
             '/.codex/tmp',
             '/.liquidstack/core/sync-transactions',
@@ -93,13 +95,16 @@ final class StarterDistributionContractTest extends TestCase
         $composerLock = $this->readJson('composer.lock');
         $packages = array_column($composerLock['packages'] ?? [], null, 'name');
         self::assertArrayHasKey('liquidstack/core', $packages);
-        self::assertSame(
-            'v1.31.1',
-            $packages['liquidstack/core']['version'] ?? null
-        );
-        self::assertSame(
-            'c3006d329b683245e7026180ba9c70b458908bf2',
-            $packages['liquidstack/core']['source']['reference'] ?? null
+        $coreVersion = ltrim((string) (
+            $packages['liquidstack/core']['version'] ?? ''
+        ), 'v');
+        self::assertTrue(version_compare($coreVersion, '1.31.0', '>='));
+        self::assertTrue(version_compare($coreVersion, '2.0.0', '<'));
+        self::assertMatchesRegularExpression(
+            '/^[0-9a-f]{40}$/D',
+            (string) (
+                $packages['liquidstack/core']['source']['reference'] ?? ''
+            )
         );
 
         $package = $this->readJson('package.json');
@@ -152,6 +157,7 @@ final class StarterDistributionContractTest extends TestCase
             "'git', 'archive', '--format=zip'",
             "['ci', '--ignore-scripts']",
             "'test:create-project'",
+            "'--no-check-all'",
             "['git', 'diff', '--check']",
             'createValidationProject',
             'assertTagAvailable',
@@ -181,6 +187,7 @@ final class StarterDistributionContractTest extends TestCase
             '/.env export-ignore',
             '/.npmrc export-ignore',
             '/auth.json export-ignore',
+            '/composer.lock export-ignore',
             '/.liquidstack/core/sync-transactions export-ignore',
             '/vendor export-ignore',
             '/node_modules export-ignore',
