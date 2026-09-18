@@ -13,6 +13,12 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 - WebAdmin y Blog quedan seleccionados explícitamente mediante sus alias
   lógicos; ambos siguen viajando dentro del único paquete físico CORE.
 
+## [1.1.1] - 2026-09-18
+
+### Changed
+
+- Se añade en el env.example la clave para el token de GSAP
+
 ## [1.1.0] - 2026-09-18
 
 ### Changed
