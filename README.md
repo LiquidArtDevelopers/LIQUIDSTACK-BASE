@@ -749,25 +749,30 @@ inicializador la conserva como referencia documental, pero elimina del proyecto
 cliente los scripts, herramientas y tests citados aquí; no intentes publicar un
 cliente con el release gate de la plantilla.
 
-BASE tiene un ciclo SemVer independiente de CORE. Su serie estable comenzó en
-`v1.0.0`; las siguientes etiquetas describen cambios en el punto de partida de
-proyectos nuevos. No se instalan ni se mezclan sobre proyectos ya nacidos.
+BASE tiene un ciclo SemVer independiente de CORE. Sus etiquetas describen el
+punto de partida de proyectos nuevos; no se instalan ni se mezclan sobre
+proyectos ya nacidos.
 
-Antes de publicar una etiqueta de BASE:
+### Publicar BASE: bloque corto para PowerShell
+
+Este es el bloque completo. Es siempre igual y no hay que editarlo:
 
 ```powershell
-composer validate --strict --no-check-publish --no-check-all
-composer test
-composer test:create-project
-git diff --check
-git status --short
-composer release -- --version=v1.0.0 --dry-run
+composer release
 ```
 
-El E2E crea un consumidor temporal desde el archive real, ejecuta
-`composer install`, sincroniza CORE dos veces y demuestra que el flujo no crea
-`.env`, `.npmrc` o `node_modules`, no altera el snapshot SQL y es idempotente.
-No ejecuta npm, migraciones, Media ni onboarding.
+Antes de pegarlo, mueve las notas de `Unreleased` a una única sección fechada
+`## [X.Y.Z] - AAAA-MM-DD`, confirma los cambios y súbelos a `main`. El comando
+detecta esa versión comparándola con las etiquetas, la propone para confirmar y
+solicita una descripción breve para el tag anotado. Si falta una versión
+pendiente o hay varias, se detiene con una explicación antes del gate.
+
+El gate exige el árbol limpio, comprueba rama, remoto, changelog, locks y
+etiqueta; después valida Composer, ejecuta las pruebas y crea un consumidor
+temporal, instala npm, audita y construye el archive. Solo al terminar publica
+`main` y la etiqueta con un push atómico. La descripción solicitada pertenece
+al tag y no reescribe el commit ya subido. Nunca copies aquí la versión de CORE:
+por ejemplo, BASE `v1.2.0` y CORE `v1.32.0` son releases independientes.
 
 `composer test:create-project` usa el archive local antes de publicar. Tras
 crear la etiqueta se puede repetir contra GitHub y, cuando el paquete esté
@@ -780,28 +785,12 @@ composer test:create-project -- --source=packagist
 
 Ambos modos externos ejecutan un `create-project` real con `--prefer-dist` y
 `--remove-vcs`; el fallback VCS usa el remoto canónico de BASE. Si no se indica
-`--version`, prueban la última release compatible con `^1.0`. Los dos scripts
-largos desactivan el timeout del proceso padre de Composer; cada subproceso
-sigue fallando y deteniendo el gate si devuelve un código distinto de cero.
+`--version`, prueban la última release compatible con `^1.0`. No ejecutan
+migraciones, Media ni onboarding.
 
-Después se actualiza `CHANGELOG.md` con la versión y fecha, se revisa el lote
-exacto y se crea el commit. El gate propio repite las validaciones, comprueba
-`main` frente a `origin/main`, lockfiles versionados, ausencia del manifest,
-tag SemVer libre y changelog cerrado; finalmente publica rama y etiqueta
-anotada mediante un único push atómico. Para la primera release:
-
-```powershell
-git add -A
-git diff --cached --check
-git commit -m "feat(base): publish installable project template"
-composer release -- --version=v1.0.0 --yes
-```
-
-`composer release -- --version=v1.0.0 --dry-run` ejecuta el mismo gate sin
-crear ni publicar la etiqueta. El gate exige un árbol limpio y ejecuta
-`composer install`, `npm ci`, la auditoría y el build dentro de un archive
-temporal del commit exacto. No modifica el `.env`, `node_modules` ni los assets
-del checkout de BASE y no ejecuta migraciones, Media ni onboarding.
+Para diagnosticar sin publicar se puede usar
+`composer release -- --dry-run`. No es un paso obligatorio:
+repite el gate completo y puede tardar varios minutos.
 
 El alta inicial de `liquidstack/base` en Packagist es un paso externo y
 separado del gate Git. Tras registrarlo, Packagist descubre las etiquetas del

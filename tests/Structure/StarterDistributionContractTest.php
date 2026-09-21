@@ -207,6 +207,8 @@ final class StarterDistributionContractTest extends TestCase
             "'--no-check-all'",
             "['git', 'diff', '--check']",
             'createValidationProject',
+            'detectPendingChangelogVersion',
+            'Descripción breve de la release',
             'assertTagAvailable',
             'LiquidArtDevelopers/LIQUIDSTACK-BASE',
             'npm-cli.js',
@@ -258,7 +260,9 @@ final class StarterDistributionContractTest extends TestCase
             '.npmrc.example',
             'auth.json',
             'public/.vite/manifest.json',
-            'composer release -- --version=v1.0.0 --yes',
+            'Este es el bloque completo. Es siempre igual',
+            "```powershell\ncomposer release\n```",
+            'BASE `v1.2.0` y CORE',
             'composer test:create-project -- --source=vcs',
             'Desvincular la identidad de la plantilla',
         ] as $contract) {
@@ -268,10 +272,58 @@ final class StarterDistributionContractTest extends TestCase
             'BASE tiene un ciclo SemVer independiente de CORE',
             $changelog
         );
+        self::assertStringContainsString(
+            'detecta la única',
+            $changelog
+        );
         self::assertMatchesRegularExpression(
             '/un proyecto ya creado no\s+depende después de BASE/u',
             $changelog
         );
+    }
+
+    public function testReleaseDetectsOnePendingChangelogVersionAndRejectsInvalidStates(): void
+    {
+        require_once $this->root . '/tools/release.php';
+
+        self::assertSame(
+            'v1.2.1',
+            BaseReleaseGate::detectPendingVersion(
+                "# Changelog\n\n## [Unreleased]\n\n"
+                    . "## [1.2.1] - 2026-09-21\n\n"
+                    . "## [1.2.0] - 2026-09-20\n",
+                ['v1.2.0']
+            )
+        );
+
+        try {
+            BaseReleaseGate::detectPendingVersion(
+                "# Changelog\n\n## [Unreleased]\n\n"
+                    . "## [1.2.0] - 2026-09-20\n",
+                ['v1.2.0']
+            );
+            self::fail('Debía exigir una versión posterior en CHANGELOG.md.');
+        } catch (RuntimeException $exception) {
+            self::assertStringContainsString(
+                'Falta preparar la versión',
+                $exception->getMessage()
+            );
+        }
+
+        try {
+            BaseReleaseGate::detectPendingVersion(
+                "# Changelog\n\n## [Unreleased]\n\n"
+                    . "## [1.3.0] - 2026-09-22\n\n"
+                    . "## [1.2.1] - 2026-09-21\n",
+                ['v1.2.0']
+            );
+            self::fail('Debía rechazar dos versiones pendientes.');
+        } catch (RuntimeException $exception) {
+            self::assertStringContainsString(
+                'varias versiones posteriores',
+                $exception->getMessage()
+            );
+        }
     }
 
     /** @return array<string, mixed> */

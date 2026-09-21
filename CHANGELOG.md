@@ -5,6 +5,15 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-09-21
+
+### Fixed
+
+- El README separa inequívocamente las releases de BASE y CORE y reduce la
+  publicación al bloque invariable `composer release`. El gate detecta la única
+  versión pendiente del changelog, avisa si falta o es ambigua y pregunta la
+  descripción del tag antes de validar y hacer el push atómico.
+
 ## [1.2.0] - 2026-09-21
 
 ### Changed

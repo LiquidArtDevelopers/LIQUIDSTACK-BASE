@@ -30,11 +30,25 @@ final class BaseReleaseGate
     }
 
     public function run(
-        string $version,
+        ?string $version,
+        ?string $description,
         bool $dryRun,
         bool $confirmed
     ): void
     {
+        $this->assertGitPreflight();
+
+        if ($version === null || trim($version) === '') {
+            $version = $this->detectPendingChangelogVersion();
+            fwrite(
+                STDOUT,
+                "Versión pendiente detectada en CHANGELOG.md: {$version}\n"
+            );
+            $version = $confirmed
+                ? $version
+                : $this->prompt("Versión a publicar [{$version}]: ", $version);
+        }
+
         if (!preg_match(
             '/^v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/D',
             $version
@@ -44,14 +58,28 @@ final class BaseReleaseGate
             );
         }
 
-        if (!$dryRun && !$confirmed) {
-            throw new InvalidArgumentException(
-                'Publicar requiere confirmacion explicita mediante --yes.'
-            );
+        $this->assertReleaseMetadata($version);
+        $this->assertReleaseVersion($version);
+        $description = $this->resolveDescription(
+            $description,
+            $version,
+            $confirmed
+        );
+
+        fwrite(
+            STDOUT,
+            "Release BASE preparada:\n"
+                . "  Versión: {$version}\n"
+                . "  Descripción: {$description}\n"
+        );
+
+        if (!$dryRun && !$confirmed
+            && !$this->confirm('¿Ejecutar el gate y publicar esta release? [S/n]: ')
+        ) {
+            fwrite(STDOUT, "Release BASE cancelada; no se modificó Git.\n");
+            return;
         }
 
-        $this->assertReleaseMetadata($version);
-        $this->assertGitPreflight($version);
         $releaseBranch = trim($this->capture([
             'git', 'branch', '--show-current',
         ]));
@@ -135,7 +163,7 @@ final class BaseReleaseGate
         try {
             $this->execute([
                 'git', 'tag', '-a', $version, '-m',
-                "LiquidStack BASE {$version}", $releaseCommit,
+                $description, $releaseCommit,
             ], 'git tag -a ' . $version);
             $tagCreated = true;
             $this->execute([
@@ -198,7 +226,7 @@ final class BaseReleaseGate
         $this->assertNoCompiledManifest();
     }
 
-    private function assertGitPreflight(string $version): void
+    private function assertGitPreflight(): void
     {
         if (trim($this->capture(['git', 'branch', '--show-current'])) !== 'main') {
             throw new RuntimeException('La release de BASE solo sale desde main.');
@@ -244,6 +272,10 @@ final class BaseReleaseGate
             );
         }
 
+    }
+
+    private function assertReleaseVersion(string $version): void
+    {
         $this->assertTagAvailable($version);
         foreach (preg_split('/\R/', trim($this->capture([
             'git', 'tag', '--list', 'v*',
@@ -259,6 +291,77 @@ final class BaseReleaseGate
                 );
             }
         }
+    }
+
+    private function detectPendingChangelogVersion(): string
+    {
+        $contents = @file_get_contents($this->root . '/CHANGELOG.md');
+        if (!is_string($contents)) {
+            throw new RuntimeException('No se puede leer CHANGELOG.md.');
+        }
+        $tags = preg_split('/\R/', trim($this->capture([
+            'git', 'tag', '--list', 'v*',
+        ]))) ?: [];
+
+        return self::detectPendingVersion($contents, $tags);
+    }
+
+    /** @param list<string> $tags */
+    public static function detectPendingVersion(
+        string $contents,
+        array $tags
+    ): string {
+        if (preg_match('/^## \[Unreleased\]\s*$/m', $contents) !== 1) {
+            throw new RuntimeException(
+                'CHANGELOG.md debe conservar la sección "## [Unreleased]".'
+            );
+        }
+
+        $latest = null;
+        foreach ($tags as $tag) {
+            $tag = trim($tag);
+            if (preg_match(
+                '/^v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/D',
+                $tag
+            ) !== 1) {
+                continue;
+            }
+            $plain = substr($tag, 1);
+            if ($latest === null || version_compare($plain, $latest, '>')) {
+                $latest = $plain;
+            }
+        }
+
+        $pattern = '/^## \[((?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*))\] - \d{4}-\d{2}-\d{2}\s*$/m';
+        preg_match_all($pattern, $contents, $matches);
+        $candidates = [];
+        foreach ($matches[1] ?? [] as $plain) {
+            if ($latest !== null && version_compare($plain, $latest, '<=')) {
+                continue;
+            }
+            $candidates['v' . $plain] = true;
+        }
+        $versions = array_keys($candidates);
+
+        if ($versions === []) {
+            $reference = $latest !== null ? 'v' . $latest : 'ninguna etiqueta previa';
+            throw new RuntimeException(
+                'Falta preparar la versión en CHANGELOG.md. Debajo de '
+                    . '"## [Unreleased]" añade una sección fechada posterior a '
+                    . $reference . ' con el formato '
+                    . '"## [X.Y.Z] - AAAA-MM-DD", confirma el cambio y súbelo '
+                    . 'antes de publicar.'
+            );
+        }
+        if (count($versions) > 1) {
+            throw new RuntimeException(
+                'CHANGELOG.md contiene varias versiones posteriores a la última '
+                    . 'etiqueta (' . implode(', ', $versions) . '). Debe quedar '
+                    . 'una sola versión pendiente antes de publicar.'
+            );
+        }
+
+        return $versions[0];
     }
 
     private function assertTagAvailable(string $version): void
@@ -304,6 +407,52 @@ final class BaseReleaseGate
                 'Retira public/.vite/manifest.json: es un output de build.'
             );
         }
+    }
+
+    private function resolveDescription(
+        ?string $description,
+        string $version,
+        bool $assumeYes
+    ): string {
+        if ($description === null) {
+            $description = $assumeYes
+                ? "LiquidStack BASE {$version}"
+                : $this->prompt('Descripción breve de la release: ', '');
+        }
+        $description = trim($description);
+        if ($description === '') {
+            throw new RuntimeException(
+                'La descripción de la release es obligatoria.'
+            );
+        }
+        if (strlen($description) > 200
+            || preg_match('/[\r\n\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/', $description) === 1
+        ) {
+            throw new RuntimeException(
+                'La descripción debe ser una sola línea de hasta 200 bytes.'
+            );
+        }
+        return $description;
+    }
+
+    private function prompt(string $message, string $default): string
+    {
+        fwrite(STDOUT, $message);
+        $input = fgets(STDIN);
+        if ($input === false) {
+            throw new RuntimeException(
+                'No se pudo leer la consola interactiva; usa --version, '
+                    . '--description y --yes en automatizaciones.'
+            );
+        }
+        $input = trim($input);
+        return $input !== '' ? $input : $default;
+    }
+
+    private function confirm(string $message): bool
+    {
+        $answer = strtolower($this->prompt($message, 's'));
+        return in_array($answer, ['s', 'si', 'sí', 'y', 'yes'], true);
     }
 
     /** @return array{0: string, 1: string} */
@@ -565,7 +714,7 @@ final class BaseReleaseGate
         $binary = getenv('COMPOSER_BINARY');
         if ($binary === false || trim($binary) === '') {
             throw new RuntimeException(
-                'Ejecuta el gate con composer release -- --version=vX.Y.Z.'
+                'Ejecuta el gate mediante composer release.'
             );
         }
         return str_ends_with(strtolower($binary), '.phar')
@@ -633,37 +782,45 @@ final class BaseReleaseGate
     }
 }
 
-$version = null;
-$dryRun = false;
-$confirmed = false;
-foreach (array_slice($argv, 1) as $argument) {
-    if ($argument === '--dry-run') {
-        $dryRun = true;
-    } elseif ($argument === '--yes' || $argument === '-y') {
-        $confirmed = true;
-    } elseif (str_starts_with($argument, '--version=')) {
-        $version = substr($argument, strlen('--version='));
-    } else {
-        fwrite(STDERR, "Argumento de release desconocido: {$argument}\n");
-        exit(1);
+/** @param list<string> $arguments */
+function baseReleaseMain(array $arguments): int
+{
+    $version = null;
+    $description = null;
+    $dryRun = false;
+    $confirmed = false;
+    foreach ($arguments as $argument) {
+        if ($argument === '--dry-run') {
+            $dryRun = true;
+        } elseif ($argument === '--yes' || $argument === '-y') {
+            $confirmed = true;
+        } elseif (str_starts_with($argument, '--version=')) {
+            $version = substr($argument, strlen('--version='));
+        } elseif (str_starts_with($argument, '--description=')) {
+            $description = substr($argument, strlen('--description='));
+        } else {
+            fwrite(STDERR, "Argumento de release desconocido: {$argument}\n");
+            return 1;
+        }
+    }
+
+    try {
+        (new BaseReleaseGate(dirname(__DIR__)))->run(
+            $version,
+            $description,
+            $dryRun,
+            $confirmed
+        );
+        return 0;
+    } catch (Throwable $exception) {
+        fwrite(
+            STDERR,
+            'Release BASE detenida: ' . $exception->getMessage() . "\n"
+        );
+        return 1;
     }
 }
 
-if (!is_string($version) || $version === '') {
-    fwrite(
-        STDERR,
-        "Uso: composer release -- --version=vMAJOR.MINOR.PATCH [--dry-run|--yes]\n"
-    );
-    exit(1);
-}
-
-try {
-    (new BaseReleaseGate(dirname(__DIR__)))->run(
-        $version,
-        $dryRun,
-        $confirmed
-    );
-} catch (Throwable $exception) {
-    fwrite(STDERR, 'Release BASE detenida: ' . $exception->getMessage() . "\n");
-    exit(1);
+if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) {
+    exit(baseReleaseMain(array_slice($argv, 1)));
 }
