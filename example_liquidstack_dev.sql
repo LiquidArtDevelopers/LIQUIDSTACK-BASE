@@ -792,6 +792,544 @@ LOCK TABLES `ls_blog_url_history` WRITE;
 INSERT INTO `ls_blog_url_history` VALUES (1,'es','bienvenido-blog-nuevo-proyecto','active',NULL,'2026-09-10 10:00:11.000000','2026-09-10 10:00:11.000000'),(3,'es','personalizar-base-sin-perder-actualizaciones','active',NULL,'2026-09-10 10:00:20.000000','2026-09-10 10:00:20.000000'),(4,'eu','base-pertsonalizatu-eguneraketak-galdu-gabe','active',NULL,'2026-09-10 10:00:21.000000','2026-09-10 10:00:21.000000'),(2,'eu','ongi-etorri-proiektu-berriaren-blogera','active',NULL,'2026-09-10 10:00:12.000000','2026-09-10 10:00:12.000000');
 /*!40000 ALTER TABLE `ls_blog_url_history` ENABLE KEYS */;
 UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_attribute_localizations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_attribute_localizations` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `attribute_id` bigint(20) unsigned NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `translation_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_attribute_locale` (`attribute_id`,`locale`),
+  CONSTRAINT `ls_commerce_f_al_attribute` FOREIGN KEY (`attribute_id`) REFERENCES `ls_commerce_attributes` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_al_status` CHECK (`translation_status` in ('source','translated','fallback'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_attribute_localizations` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_attribute_localizations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_attribute_localizations` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_attribute_option_localizations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_attribute_option_localizations` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `option_id` bigint(20) unsigned NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `label` varchar(255) DEFAULT NULL,
+  `translation_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_option_locale` (`option_id`,`locale`),
+  CONSTRAINT `ls_commerce_f_aol_option` FOREIGN KEY (`option_id`) REFERENCES `ls_commerce_attribute_options` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_aol_status` CHECK (`translation_status` in ('source','translated','fallback'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_attribute_option_localizations` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_attribute_option_localizations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_attribute_option_localizations` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_attribute_options`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_attribute_options` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `attribute_id` bigint(20) unsigned NOT NULL,
+  `code` varchar(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `sort_order` int(10) unsigned NOT NULL DEFAULT 0,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_options_public` (`public_id`),
+  UNIQUE KEY `uq_commerce_options_code` (`attribute_id`,`code`),
+  CONSTRAINT `ls_commerce_f_option_attribute` FOREIGN KEY (`attribute_id`) REFERENCES `ls_commerce_attributes` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_attribute_options` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_attribute_options` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_attribute_options` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_attributes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_attributes` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `code` varchar(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `type` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `category_id` bigint(20) unsigned DEFAULT NULL,
+  `unit` varchar(32) DEFAULT NULL,
+  `is_filterable` tinyint(3) unsigned NOT NULL DEFAULT 0,
+  `sort_order` int(10) unsigned NOT NULL DEFAULT 0,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_attributes_public` (`public_id`),
+  UNIQUE KEY `uq_commerce_attributes_code` (`code`),
+  KEY `idx_commerce_attributes_category` (`category_id`,`sort_order`),
+  CONSTRAINT `ls_commerce_f_attribute_category` FOREIGN KEY (`category_id`) REFERENCES `ls_commerce_categories` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `ls_commerce_c_attribute_type` CHECK (`type` in ('text','number','boolean','select','multiselect','date')),
+  CONSTRAINT `ls_commerce_c_attribute_filter` CHECK (`is_filterable` in (0,1))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_attributes` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_attributes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_attributes` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_basket_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_basket_items` (
+  `basket_id` bigint(20) unsigned NOT NULL,
+  `product_id` bigint(20) unsigned NOT NULL,
+  `quantity` int(10) unsigned NOT NULL DEFAULT 1,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`basket_id`,`product_id`),
+  KEY `idx_commerce_bi_product` (`product_id`,`basket_id`),
+  CONSTRAINT `ls_commerce_f_bi_basket` FOREIGN KEY (`basket_id`) REFERENCES `ls_commerce_baskets` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_f_bi_product` FOREIGN KEY (`product_id`) REFERENCES `ls_commerce_products` (`id`),
+  CONSTRAINT `ls_commerce_c_bi_quantity` CHECK (`quantity` > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ls_commerce_baskets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_baskets` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `token_sha256` char(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT 'open',
+  `expires_at` datetime(6) NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_baskets_public` (`public_id`),
+  UNIQUE KEY `uq_commerce_baskets_token` (`token_sha256`),
+  KEY `idx_commerce_baskets_expiry` (`status`,`expires_at`),
+  CONSTRAINT `ls_commerce_c_basket_status` CHECK (`status` in ('open','submitted','expired'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ls_commerce_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_categories` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `parent_id` bigint(20) unsigned DEFAULT NULL,
+  `sort_order` int(10) unsigned NOT NULL DEFAULT 0,
+  `lock_version` bigint(20) unsigned NOT NULL DEFAULT 1,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_categories_public` (`public_id`),
+  KEY `idx_commerce_categories_parent` (`parent_id`,`sort_order`,`id`),
+  CONSTRAINT `ls_commerce_f_cat_parent` FOREIGN KEY (`parent_id`) REFERENCES `ls_commerce_categories` (`id`),
+  CONSTRAINT `ls_commerce_c_cat_public` CHECK (char_length(`public_id`) = 36),
+  CONSTRAINT `ls_commerce_c_cat_lock` CHECK (`lock_version` > 0),
+  CONSTRAINT `ls_commerce_c_cat_sort` CHECK (`sort_order` <= 10000)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_categories` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_categories` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_categories` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_category_localizations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_category_localizations` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `category_id` bigint(20) unsigned NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `slug` varchar(190) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `translation_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `lock_version` bigint(20) unsigned NOT NULL DEFAULT 1,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_category_locale` (`category_id`,`locale`),
+  UNIQUE KEY `uq_commerce_category_slug` (`locale`,`slug`),
+  CONSTRAINT `ls_commerce_f_cl_category` FOREIGN KEY (`category_id`) REFERENCES `ls_commerce_categories` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_cl_status` CHECK (`translation_status` in ('source','translated','fallback')),
+  CONSTRAINT `ls_commerce_c_cl_lock` CHECK (`lock_version` > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_category_localizations` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_category_localizations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_category_localizations` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_inquiries`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_inquiries` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `operation_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `payload_sha256` char(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `basket_id` bigint(20) unsigned DEFAULT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `contact_name` varchar(255) NOT NULL,
+  `email` varchar(320) NOT NULL,
+  `phone` varchar(64) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `privacy_version` varchar(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_inquiries_public` (`public_id`),
+  UNIQUE KEY `uq_commerce_inquiries_operation` (`operation_id`),
+  UNIQUE KEY `uq_commerce_inquiries_basket` (`basket_id`),
+  KEY `idx_commerce_inquiries_time` (`created_at`),
+  CONSTRAINT `ls_commerce_f_inquiry_basket` FOREIGN KEY (`basket_id`) REFERENCES `ls_commerce_baskets` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `ls_commerce_c_inquiry_hash` CHECK (`payload_sha256` regexp '^[0-9a-f]{64}$')
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ls_commerce_inquiry_lines`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_inquiry_lines` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `inquiry_id` bigint(20) unsigned NOT NULL,
+  `product_public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `sku` varchar(190) DEFAULT NULL,
+  `requested_locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `resolved_locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `public_path` varchar(1024) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `cover_media_public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `quantity` int(10) unsigned NOT NULL DEFAULT 1,
+  `unit_price_minor` bigint(20) unsigned DEFAULT NULL,
+  `currency` char(3) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `availability_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_line_product` (`inquiry_id`,`product_public_id`),
+  CONSTRAINT `ls_commerce_f_line_inquiry` FOREIGN KEY (`inquiry_id`) REFERENCES `ls_commerce_inquiries` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_line_quantity` CHECK (`quantity` > 0),
+  CONSTRAINT `ls_commerce_c_line_availability` CHECK (`availability_status` in ('available','reserved','sold','unavailable'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ls_commerce_inquiry_outbox`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_inquiry_outbox` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `inquiry_id` bigint(20) unsigned NOT NULL,
+  `audience` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `recipient_email` varchar(320) NOT NULL,
+  `template_key` varchar(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `payload_json` longtext NOT NULL,
+  `status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT 'pending',
+  `attempts` int(10) unsigned NOT NULL DEFAULT 0,
+  `available_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `locked_at` datetime(6) DEFAULT NULL,
+  `lock_token` char(36) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `sent_at` datetime(6) DEFAULT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_outbox_public` (`public_id`),
+  UNIQUE KEY `uq_commerce_outbox_audience` (`inquiry_id`,`audience`),
+  KEY `idx_commerce_outbox_dispatch` (`status`,`available_at`),
+  CONSTRAINT `ls_commerce_f_outbox_inquiry` FOREIGN KEY (`inquiry_id`) REFERENCES `ls_commerce_inquiries` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_outbox_audience` CHECK (`audience` in ('requester','admin')),
+  CONSTRAINT `ls_commerce_c_outbox_status` CHECK (`status` in ('pending','processing','sent','failed'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ls_commerce_inquiry_rate_limits`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_inquiry_rate_limits` (
+  `action` varchar(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `subject_hash` char(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `attempts` int(10) unsigned NOT NULL DEFAULT 0,
+  `window_started_at` datetime(6) NOT NULL,
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`action`,`subject_hash`),
+  KEY `idx_commerce_rate_updated` (`updated_at`),
+  CONSTRAINT `ls_commerce_c_rate_hash` CHECK (`subject_hash` regexp '^[0-9a-f]{64}$'),
+  CONSTRAINT `ls_commerce_c_rate_attempts` CHECK (`attempts` > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ls_commerce_product_attribute_value_options`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_attribute_value_options` (
+  `value_id` bigint(20) unsigned NOT NULL,
+  `option_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`value_id`,`option_id`),
+  KEY `idx_commerce_pavo_option` (`option_id`,`value_id`),
+  CONSTRAINT `ls_commerce_f_pavo_option` FOREIGN KEY (`option_id`) REFERENCES `ls_commerce_attribute_options` (`id`),
+  CONSTRAINT `ls_commerce_f_pavo_value` FOREIGN KEY (`value_id`) REFERENCES `ls_commerce_product_attribute_values` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_product_attribute_value_options` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_product_attribute_value_options` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_product_attribute_value_options` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_product_attribute_values`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_attribute_values` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_id` bigint(20) unsigned NOT NULL,
+  `attribute_id` bigint(20) unsigned NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT '',
+  `text_value` text DEFAULT NULL,
+  `number_value` decimal(20,6) DEFAULT NULL,
+  `boolean_value` tinyint(3) unsigned DEFAULT NULL,
+  `date_value` date DEFAULT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_product_attribute` (`product_id`,`attribute_id`,`locale`),
+  KEY `idx_commerce_pav_attribute` (`attribute_id`,`product_id`),
+  CONSTRAINT `ls_commerce_f_pav_attribute` FOREIGN KEY (`attribute_id`) REFERENCES `ls_commerce_attributes` (`id`),
+  CONSTRAINT `ls_commerce_f_pav_product` FOREIGN KEY (`product_id`) REFERENCES `ls_commerce_products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_pav_boolean` CHECK (`boolean_value` is null or `boolean_value` in (0,1))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_product_attribute_values` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_product_attribute_values` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_product_attribute_values` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_product_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_categories` (
+  `product_id` bigint(20) unsigned NOT NULL,
+  `category_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`product_id`,`category_id`),
+  KEY `idx_commerce_pc_category` (`category_id`,`product_id`),
+  CONSTRAINT `ls_commerce_f_pc_category` FOREIGN KEY (`category_id`) REFERENCES `ls_commerce_categories` (`id`),
+  CONSTRAINT `ls_commerce_f_pc_product` FOREIGN KEY (`product_id`) REFERENCES `ls_commerce_products` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_product_categories` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_product_categories` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_product_categories` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_product_inquiry_stats`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_inquiry_stats` (
+  `product_id` bigint(20) unsigned NOT NULL,
+  `inquiry_count` bigint(20) unsigned NOT NULL DEFAULT 0,
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`product_id`),
+  CONSTRAINT `ls_commerce_f_stats_product` FOREIGN KEY (`product_id`) REFERENCES `ls_commerce_products` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ls_commerce_product_localizations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_localizations` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_id` bigint(20) unsigned NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `slug` varchar(190) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `summary` text DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `seo_title` varchar(255) DEFAULT NULL,
+  `seo_description` varchar(320) DEFAULT NULL,
+  `translation_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `public_path` varchar(1024) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `lock_version` bigint(20) unsigned NOT NULL DEFAULT 1,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_product_locale` (`product_id`,`locale`),
+  UNIQUE KEY `uq_commerce_product_slug` (`locale`,`slug`),
+  UNIQUE KEY `uq_commerce_product_path` (`public_path`(190)),
+  CONSTRAINT `ls_commerce_f_pl_product` FOREIGN KEY (`product_id`) REFERENCES `ls_commerce_products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_pl_status` CHECK (`translation_status` in ('source','translated','fallback')),
+  CONSTRAINT `ls_commerce_c_pl_lock` CHECK (`lock_version` > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_product_localizations` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_product_localizations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_product_localizations` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_product_media`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_media` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_id` bigint(20) unsigned NOT NULL,
+  `media_asset_public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `role` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `sort_order` int(10) unsigned NOT NULL DEFAULT 0,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_product_media` (`product_id`,`media_asset_public_id`),
+  KEY `idx_commerce_media_asset` (`media_asset_public_id`),
+  KEY `idx_commerce_media_order` (`product_id`,`role`,`sort_order`),
+  CONSTRAINT `ls_commerce_f_pm_product` FOREIGN KEY (`product_id`) REFERENCES `ls_commerce_products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_pm_asset` CHECK (char_length(`media_asset_public_id`) = 36),
+  CONSTRAINT `ls_commerce_c_pm_role` CHECK (`role` in ('cover','gallery'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_product_media` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_product_media` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_product_media` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_product_media_localizations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_media_localizations` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `media_id` bigint(20) unsigned NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `alt_text` varchar(500) DEFAULT NULL,
+  `caption` text DEFAULT NULL,
+  `translation_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_media_locale` (`media_id`,`locale`),
+  CONSTRAINT `ls_commerce_f_pml_media` FOREIGN KEY (`media_id`) REFERENCES `ls_commerce_product_media` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_pml_status` CHECK (`translation_status` in ('source','translated','fallback')),
+  CONSTRAINT `ls_commerce_c_pml_content` CHECK (`translation_status` = 'fallback' and `alt_text` is null and `caption` is null or `translation_status` in ('source','translated') and `alt_text` is not null and char_length(trim(`alt_text`)) between 1 and 500 and (`caption` is null or char_length(`caption`) <= 2000))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_product_media_localizations` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_product_media_localizations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_product_media_localizations` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_product_tags`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_product_tags` (
+  `product_id` bigint(20) unsigned NOT NULL,
+  `tag_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`product_id`,`tag_id`),
+  KEY `idx_commerce_pt_tag` (`tag_id`,`product_id`),
+  CONSTRAINT `ls_commerce_f_pt_product` FOREIGN KEY (`product_id`) REFERENCES `ls_commerce_products` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_f_pt_tag` FOREIGN KEY (`tag_id`) REFERENCES `ls_commerce_tags` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_product_tags` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_product_tags` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_product_tags` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_products` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `sku` varchar(190) DEFAULT NULL,
+  `editorial_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT 'draft',
+  `availability_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL DEFAULT 'available',
+  `price_minor` bigint(20) unsigned DEFAULT NULL,
+  `currency` char(3) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `canonical_category_id` bigint(20) unsigned DEFAULT NULL,
+  `lock_version` bigint(20) unsigned NOT NULL DEFAULT 1,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_products_public` (`public_id`),
+  UNIQUE KEY `uq_commerce_products_sku` (`sku`),
+  KEY `idx_commerce_products_state` (`editorial_status`,`availability_status`),
+  KEY `idx_commerce_products_category` (`canonical_category_id`),
+  CONSTRAINT `ls_commerce_f_product_category` FOREIGN KEY (`canonical_category_id`) REFERENCES `ls_commerce_categories` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `ls_commerce_c_product_public` CHECK (char_length(`public_id`) = 36),
+  CONSTRAINT `ls_commerce_c_product_editorial` CHECK (`editorial_status` in ('draft','active','inactive','archived')),
+  CONSTRAINT `ls_commerce_c_product_availability` CHECK (`availability_status` in ('available','reserved','sold','unavailable')),
+  CONSTRAINT `ls_commerce_c_product_money` CHECK (`price_minor` is null and `currency` is null or `price_minor` is not null and `currency` regexp '^[A-Z]{3}$'),
+  CONSTRAINT `ls_commerce_c_product_lock` CHECK (`lock_version` > 0)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_products` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_products` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_products` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_tag_localizations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_tag_localizations` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `tag_id` bigint(20) unsigned NOT NULL,
+  `locale` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `slug` varchar(190) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+  `translation_status` varchar(16) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_tag_locale` (`tag_id`,`locale`),
+  UNIQUE KEY `uq_commerce_tag_slug` (`locale`,`slug`),
+  CONSTRAINT `ls_commerce_f_tl_tag` FOREIGN KEY (`tag_id`) REFERENCES `ls_commerce_tags` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `ls_commerce_c_tl_status` CHECK (`translation_status` in ('source','translated','fallback'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_tag_localizations` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_tag_localizations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_tag_localizations` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_tags`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_tags` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `public_id` char(36) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_tags_public` (`public_id`),
+  CONSTRAINT `ls_commerce_c_tag_public` CHECK (char_length(`public_id`) = 36)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_tags` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_tags` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_tags` ENABLE KEYS */;
+UNLOCK TABLES;
+DROP TABLE IF EXISTS `ls_commerce_url_history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ls_commerce_url_history` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_localization_id` bigint(20) unsigned NOT NULL,
+  `old_path` varchar(1024) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `new_path` varchar(1024) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `created_at` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uq_commerce_url_old` (`old_path`(190)),
+  KEY `idx_commerce_url_localization` (`product_localization_id`,`created_at`),
+  CONSTRAINT `ls_commerce_f_url_localization` FOREIGN KEY (`product_localization_id`) REFERENCES `ls_commerce_product_localizations` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+LOCK TABLES `ls_commerce_url_history` WRITE;
+/*!40000 ALTER TABLE `ls_commerce_url_history` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ls_commerce_url_history` ENABLE KEYS */;
+UNLOCK TABLES;
 DROP TABLE IF EXISTS `ls_module_migrations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -809,7 +1347,7 @@ CREATE TABLE `ls_module_migrations` (
 
 LOCK TABLES `ls_module_migrations` WRITE;
 /*!40000 ALTER TABLE `ls_module_migrations` DISABLE KEYS */;
-INSERT INTO `ls_module_migrations` VALUES ('blog','0001_blog_posts','51cb25e2bc0029ee61decac1810f055543591589a2026fffbe2c04dbc45f9d77','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:44.096695'),('blog','0002_blog_capabilities','09e727d09bce7f0c60306099a15df21b882766f878eb0be4c40aca546791d2e7','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:44.105995'),('blog','0003_blog_categories','6a78d00acae0d13d175f2632ccb1598b4f1d53ba9c09f5840ea3f73c88661e97','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:44.717068'),('blog','0004_blog_category_capabilities','c8b6f45611a344342b16f147d0edbe62e765ed6e1a70ebead8793dbc9b846345','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:44.723925'),('blog','0005_blog_structured_content','4aca1e340d1a818940173feebeeaf67b5c319b464f8ec67e9b5691542753a4bd','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:45.720329'),('blog','0006_blog_sitemap_publication_state','c9d6b26281a35fe4190db7cc2402fb163d9546387476190d0d7077d2d5d5cad8','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:46.671852'),('blog','0007_blog_post_tombstones','e75445d2c440bb5e0fa17e41c1a36833b48bbdb20258bea6e9a830c039c7ad32','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:47.727023'),('blog','0008_blog_article_delete_capability','a8efddc1fa22ae5ac81dae64d8a950f80550001340e661b667de5a8a419f1a2b','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:47.736909'),('blog','0009_blog_analytics','91cfcbcfa7ebba5e77018b924284bb6a07a0b6cb8c00e59f03ed80149e3d73a9','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:48.985469'),('blog','0010_blog_analytics_view_capability','ca2f6a15e58cab0f54cbcd41032a31d7acc796b6d920d2f25e6b59bc9de8d3af','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:48.992984'),('blog','0011_blog_layout_editor_v2','12d59ea0546272e00e92350cf380bb6d493c0783fb665878ee501e2cd8c58448','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:50.598421'),('blog','0012_blog_editor_preferences','45cfcd81f3ec2371eae92302da052c46306358aed8d50b34fca7d5af80b23c82','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:52.017478'),('blog','0013_blog_settings_manage_capability','9cf4940e3910162ae9b9efeb94883176d49f92a75ab9ee78ef1b3dd71c3e09fb','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:52.025559'),('blog','0014_blog_private_draft_publication','dc2fd2d8aa9bfbb8fc803e711cc5140cc026ae6bc2f443b450b9e82d80d8afda','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:53.724751'),('blog','0015_blog_robots_preferences','27e9b92cdbab9c28538a9f42a91d42e24381ad162d22f13e4ba843de4580666f','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:55.553456'),('blog','0016_blog_url_history','c06ec813029da517e21882b65a848f0632a7fcd93e12668b820ef06ea70ee2ea','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:57.412511'),('blog','0017_blog_dummy_category','9a62a791e33f83ce9932c311dc8e2aff36a5af2b0b916519f22e590b2018ee32','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:57.418799'),('blog','0018_blog_dummy_category_normalization','32730febd8e9a78647f93fe6678448377a4e9a7ba4e0b1301b1c5edafdc3e0c0','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:59.183373'),('blog','0019_blog_copy_operation_idempotency','313437bf2e27749b1b7fb0fac3ad655aefa4d367e256c3c0142cd2160b17360a','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:00.973451'),('blog','0020_blog_tags','9496020075a17971a658af619f5b984a64248c225aa14435221007e7eb5f966f','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:02.800636'),('blog','0021_blog_localization_tags','b1d0e3fd5552d122d1a0dc4056c4e1e9738e19a12aba7034c4d4ef267771463e','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:04.881116'),('blog','0022_blog_tag_assignment_heads','25834e1cd01b4dd625144e2afbb13d65845f04caba0ae31120ae4371a75f38cb','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:06.941525'),('blog','0023_blog_tag_assignment_workspaces','b4ba7c59190a741abea4ba184157883a68ea86c197bb6db1b1e57b03f0e73328','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:09.246565'),('blog','0024_blog_tag_assignment_workspace_items','4730844270de32b68a4f186230cac290e25b303f295def8059e8b358d23da83c','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:11.436819'),('blog','0025_blog_tag_capabilities','7c44dc5da765c041edcbc470e1512d3e5374a1f672331a792bf7c335f97a90d9','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:13:11.442824'),('webadmin','0001_webadmin_identity_and_access','8ae682db1275f779938b247a2bddbe20ecc01bc2e972499fef60104d4d141d27','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:42.668189'),('webadmin','0002_webadmin_media_library','2c3595970aa0adfc618dc0437806d955d26dfd05a1e4466d69a44c036524c52e','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:42.988778'),('webadmin','0003_webadmin_media_avif_source','ecddd34bd8a1b39be542fc3e47fada4ee79b95927ab7d1e63c6cd15caa7f7048','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:43.394030'),('webadmin','0004_webadmin_profile_preferences','32c12ee11814c0ed7cc8f21b7ed9f1009978c7a850caf582b225b1691dc72173','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:43.460122'),('webadmin','0005_webadmin_media_quarantine','d252e20d70d50e1919d2cd858017c6d63b66c35d669466b30aaec5c7826ef07d','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:43.871934');
+INSERT INTO `ls_module_migrations` VALUES ('blog','0001_blog_posts','51cb25e2bc0029ee61decac1810f055543591589a2026fffbe2c04dbc45f9d77','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:44.096695'),('blog','0002_blog_capabilities','09e727d09bce7f0c60306099a15df21b882766f878eb0be4c40aca546791d2e7','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:44.105995'),('blog','0003_blog_categories','6a78d00acae0d13d175f2632ccb1598b4f1d53ba9c09f5840ea3f73c88661e97','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:44.717068'),('blog','0004_blog_category_capabilities','c8b6f45611a344342b16f147d0edbe62e765ed6e1a70ebead8793dbc9b846345','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:44.723925'),('blog','0005_blog_structured_content','4aca1e340d1a818940173feebeeaf67b5c319b464f8ec67e9b5691542753a4bd','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:45.720329'),('blog','0006_blog_sitemap_publication_state','c9d6b26281a35fe4190db7cc2402fb163d9546387476190d0d7077d2d5d5cad8','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:46.671852'),('blog','0007_blog_post_tombstones','e75445d2c440bb5e0fa17e41c1a36833b48bbdb20258bea6e9a830c039c7ad32','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:47.727023'),('blog','0008_blog_article_delete_capability','a8efddc1fa22ae5ac81dae64d8a950f80550001340e661b667de5a8a419f1a2b','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:47.736909'),('blog','0009_blog_analytics','91cfcbcfa7ebba5e77018b924284bb6a07a0b6cb8c00e59f03ed80149e3d73a9','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:48.985469'),('blog','0010_blog_analytics_view_capability','ca2f6a15e58cab0f54cbcd41032a31d7acc796b6d920d2f25e6b59bc9de8d3af','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:48.992984'),('blog','0011_blog_layout_editor_v2','12d59ea0546272e00e92350cf380bb6d493c0783fb665878ee501e2cd8c58448','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:50.598421'),('blog','0012_blog_editor_preferences','45cfcd81f3ec2371eae92302da052c46306358aed8d50b34fca7d5af80b23c82','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:52.017478'),('blog','0013_blog_settings_manage_capability','9cf4940e3910162ae9b9efeb94883176d49f92a75ab9ee78ef1b3dd71c3e09fb','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:52.025559'),('blog','0014_blog_private_draft_publication','dc2fd2d8aa9bfbb8fc803e711cc5140cc026ae6bc2f443b450b9e82d80d8afda','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:53.724751'),('blog','0015_blog_robots_preferences','27e9b92cdbab9c28538a9f42a91d42e24381ad162d22f13e4ba843de4580666f','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:55.553456'),('blog','0016_blog_url_history','c06ec813029da517e21882b65a848f0632a7fcd93e12668b820ef06ea70ee2ea','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:57.412511'),('blog','0017_blog_dummy_category','9a62a791e33f83ce9932c311dc8e2aff36a5af2b0b916519f22e590b2018ee32','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:57.418799'),('blog','0018_blog_dummy_category_normalization','32730febd8e9a78647f93fe6678448377a4e9a7ba4e0b1301b1c5edafdc3e0c0','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:12:59.183373'),('blog','0019_blog_copy_operation_idempotency','313437bf2e27749b1b7fb0fac3ad655aefa4d367e256c3c0142cd2160b17360a','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:00.973451'),('blog','0020_blog_tags','9496020075a17971a658af619f5b984a64248c225aa14435221007e7eb5f966f','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:02.800636'),('blog','0021_blog_localization_tags','b1d0e3fd5552d122d1a0dc4056c4e1e9738e19a12aba7034c4d4ef267771463e','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:04.881116'),('blog','0022_blog_tag_assignment_heads','25834e1cd01b4dd625144e2afbb13d65845f04caba0ae31120ae4371a75f38cb','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:06.941525'),('blog','0023_blog_tag_assignment_workspaces','b4ba7c59190a741abea4ba184157883a68ea86c197bb6db1b1e57b03f0e73328','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:09.246565'),('blog','0024_blog_tag_assignment_workspace_items','4730844270de32b68a4f186230cac290e25b303f295def8059e8b358d23da83c','8284f2269291da041214e1d1394260fa9cf9f4eae9b6820716f809c45eb3607f',1,'2026-09-10 06:13:11.436819'),('blog','0025_blog_tag_capabilities','7c44dc5da765c041edcbc470e1512d3e5374a1f672331a792bf7c335f97a90d9','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:13:11.442824'),('commerce','0001_commerce_catalog','b1c432e03897c3c138ef3316e4f7a985a3ba7474543a858b522d61bc80021417','e6de61b89f7cccc9c7b1f8bcdf4885da02002c395c6455dae908faa4fc1d023a',2,'2026-09-21 17:23:50.187029'),('commerce','0002_commerce_inquiries','f5e2dca482423c0ac2000f329826b2ffb2cbc0aa24a200646b59953ddd9cb86b','e6de61b89f7cccc9c7b1f8bcdf4885da02002c395c6455dae908faa4fc1d023a',2,'2026-09-21 17:23:50.266648'),('commerce','0003_commerce_capabilities','d6a26de91849f37608863ac183ed44b75a4fa32ecf486fc0feacda0273c87e3f','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',2,'2026-09-21 17:23:50.270649'),('webadmin','0001_webadmin_identity_and_access','8ae682db1275f779938b247a2bddbe20ecc01bc2e972499fef60104d4d141d27','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:42.668189'),('webadmin','0002_webadmin_media_library','2c3595970aa0adfc618dc0437806d955d26dfd05a1e4466d69a44c036524c52e','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:42.988778'),('webadmin','0003_webadmin_media_avif_source','ecddd34bd8a1b39be542fc3e47fada4ee79b95927ab7d1e63c6cd15caa7f7048','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:43.394030'),('webadmin','0004_webadmin_profile_preferences','32c12ee11814c0ed7cc8f21b7ed9f1009978c7a850caf582b225b1691dc72173','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:43.460122'),('webadmin','0005_webadmin_media_quarantine','d252e20d70d50e1919d2cd858017c6d63b66c35d669466b30aaec5c7826ef07d','0e8fe8bee99c8f87e5ee37454b492fa218176dd560c55ce93890e1cb8d085d2d',1,'2026-09-10 06:12:43.871934');
 /*!40000 ALTER TABLE `ls_module_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `ls_webadmin_action_tokens`;
@@ -866,7 +1404,7 @@ CREATE TABLE `ls_webadmin_audit_log` (
   CONSTRAINT `ls_webadmin_c_au_request` CHECK (char_length(`request_id`) = 36),
   CONSTRAINT `ls_webadmin_c_au_ip` CHECK (`ip_hash` is null or char_length(`ip_hash`) = 64),
   CONSTRAINT `ls_webadmin_c_au_ua` CHECK (`user_agent_hash` is null or char_length(`user_agent_hash`) = 64)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `ls_webadmin_capabilities`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -882,12 +1420,12 @@ CREATE TABLE `ls_webadmin_capabilities` (
   UNIQUE KEY `uq_wa_capabilities_code` (`code`),
   KEY `idx_wa_capabilities_module` (`module_id`),
   CONSTRAINT `ls_webadmin_c_ca_delegate` CHECK (`is_delegable` in (0,1))
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `ls_webadmin_capabilities` WRITE;
 /*!40000 ALTER TABLE `ls_webadmin_capabilities` DISABLE KEYS */;
-INSERT INTO `ls_webadmin_capabilities` VALUES (1,'webadmin','webadmin.access','webadmin.capabilities.access',0,'2026-09-10 06:12:42.526472'),(2,'webadmin','webadmin.profile.manage_self','webadmin.capabilities.profile_manage_self',0,'2026-09-10 06:12:42.526472'),(3,'webadmin','webadmin.users.view','webadmin.capabilities.users_view',1,'2026-09-10 06:12:42.526472'),(4,'webadmin','webadmin.users.invite','webadmin.capabilities.users_invite',0,'2026-09-10 06:12:42.526472'),(5,'webadmin','webadmin.users.suspend','webadmin.capabilities.users_suspend',0,'2026-09-10 06:12:42.526472'),(6,'webadmin','webadmin.users.capabilities.manage','webadmin.capabilities.users_capabilities_manage',0,'2026-09-10 06:12:42.526472'),(7,'webadmin','webadmin.audit.view','webadmin.capabilities.audit_view',0,'2026-09-10 06:12:42.526472'),(8,'webadmin','webadmin.system.diagnose','webadmin.capabilities.system_diagnose',0,'2026-09-10 06:12:42.526472'),(9,'webadmin','webadmin.media.view','webadmin.capabilities.media_view',1,'2026-09-10 06:12:42.702786'),(10,'webadmin','webadmin.media.upload','webadmin.capabilities.media_upload',1,'2026-09-10 06:12:42.702786'),(11,'webadmin','webadmin.media.delete','webadmin.capabilities.media_delete',1,'2026-09-10 06:12:43.482548'),(12,'blog','blog.articles.view','blog.capabilities.articles_view',1,'2026-09-10 06:12:44.098862'),(13,'blog','blog.articles.edit','blog.capabilities.articles_edit',1,'2026-09-10 06:12:44.098862'),(14,'blog','blog.articles.publish','blog.capabilities.articles_publish',1,'2026-09-10 06:12:44.098862'),(15,'blog','blog.categories.view','blog.capabilities.categories_view',1,'2026-09-10 06:12:44.718943'),(16,'blog','blog.categories.edit','blog.capabilities.categories_edit',1,'2026-09-10 06:12:44.718943'),(17,'blog','blog.articles.delete','blog.capabilities.articles_delete',1,'2026-09-10 06:12:47.729943'),(18,'blog','blog.analytics.view','blog.capabilities.analytics_view',1,'2026-09-10 06:12:48.987060'),(19,'blog','blog.settings.manage','blog.capabilities.settings_manage',0,'2026-09-10 06:12:52.018709'),(20,'blog','blog.tags.view','blog.capabilities.tags_view',1,'2026-09-10 06:13:11.438542'),(21,'blog','blog.tags.edit','blog.capabilities.tags_edit',1,'2026-09-10 06:13:11.438542');
+INSERT INTO `ls_webadmin_capabilities` VALUES (1,'webadmin','webadmin.access','webadmin.capabilities.access',0,'2026-09-10 06:12:42.526472'),(2,'webadmin','webadmin.profile.manage_self','webadmin.capabilities.profile_manage_self',0,'2026-09-10 06:12:42.526472'),(3,'webadmin','webadmin.users.view','webadmin.capabilities.users_view',1,'2026-09-10 06:12:42.526472'),(4,'webadmin','webadmin.users.invite','webadmin.capabilities.users_invite',0,'2026-09-10 06:12:42.526472'),(5,'webadmin','webadmin.users.suspend','webadmin.capabilities.users_suspend',0,'2026-09-10 06:12:42.526472'),(6,'webadmin','webadmin.users.capabilities.manage','webadmin.capabilities.users_capabilities_manage',0,'2026-09-10 06:12:42.526472'),(7,'webadmin','webadmin.audit.view','webadmin.capabilities.audit_view',0,'2026-09-10 06:12:42.526472'),(8,'webadmin','webadmin.system.diagnose','webadmin.capabilities.system_diagnose',0,'2026-09-10 06:12:42.526472'),(9,'webadmin','webadmin.media.view','webadmin.capabilities.media_view',1,'2026-09-10 06:12:42.702786'),(10,'webadmin','webadmin.media.upload','webadmin.capabilities.media_upload',1,'2026-09-10 06:12:42.702786'),(11,'webadmin','webadmin.media.delete','webadmin.capabilities.media_delete',1,'2026-09-10 06:12:43.482548'),(12,'blog','blog.articles.view','blog.capabilities.articles_view',1,'2026-09-10 06:12:44.098862'),(13,'blog','blog.articles.edit','blog.capabilities.articles_edit',1,'2026-09-10 06:12:44.098862'),(14,'blog','blog.articles.publish','blog.capabilities.articles_publish',1,'2026-09-10 06:12:44.098862'),(15,'blog','blog.categories.view','blog.capabilities.categories_view',1,'2026-09-10 06:12:44.718943'),(16,'blog','blog.categories.edit','blog.capabilities.categories_edit',1,'2026-09-10 06:12:44.718943'),(17,'blog','blog.articles.delete','blog.capabilities.articles_delete',1,'2026-09-10 06:12:47.729943'),(18,'blog','blog.analytics.view','blog.capabilities.analytics_view',1,'2026-09-10 06:12:48.987060'),(19,'blog','blog.settings.manage','blog.capabilities.settings_manage',0,'2026-09-10 06:12:52.018709'),(20,'blog','blog.tags.view','blog.capabilities.tags_view',1,'2026-09-10 06:13:11.438542'),(21,'blog','blog.tags.edit','blog.capabilities.tags_edit',1,'2026-09-10 06:13:11.438542'),(22,'commerce','commerce.products.view','commerce.capabilities.products_view',1,'2026-09-21 17:23:50.267485'),(23,'commerce','commerce.products.edit','commerce.capabilities.products_edit',1,'2026-09-21 17:23:50.267485'),(24,'commerce','commerce.products.publish','commerce.capabilities.products_publish',1,'2026-09-21 17:23:50.267485'),(25,'commerce','commerce.products.archive','commerce.capabilities.products_archive',1,'2026-09-21 17:23:50.267485'),(26,'commerce','commerce.taxonomies.view','commerce.capabilities.taxonomies_view',1,'2026-09-21 17:23:50.267485'),(27,'commerce','commerce.taxonomies.edit','commerce.capabilities.taxonomies_edit',1,'2026-09-21 17:23:50.267485'),(28,'commerce','commerce.inquiries.view','commerce.capabilities.inquiries_view',1,'2026-09-21 17:23:50.267485'),(29,'commerce','commerce.inquiries.manage','commerce.capabilities.inquiries_manage',1,'2026-09-21 17:23:50.267485'),(30,'commerce','commerce.settings.manage','commerce.capabilities.settings_manage',0,'2026-09-21 17:23:50.267485');
 /*!40000 ALTER TABLE `ls_webadmin_capabilities` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `ls_webadmin_credentials`;
@@ -1072,7 +1610,7 @@ CREATE TABLE `ls_webadmin_role_capabilities` (
 
 LOCK TABLES `ls_webadmin_role_capabilities` WRITE;
 /*!40000 ALTER TABLE `ls_webadmin_role_capabilities` DISABLE KEYS */;
-INSERT INTO `ls_webadmin_role_capabilities` VALUES (1,1,'2026-09-10 06:12:42.529080'),(1,2,'2026-09-10 06:12:42.529080'),(1,3,'2026-09-10 06:12:42.529080'),(1,4,'2026-09-10 06:12:42.529080'),(1,5,'2026-09-10 06:12:42.529080'),(1,6,'2026-09-10 06:12:42.529080'),(1,7,'2026-09-10 06:12:42.529080'),(1,8,'2026-09-10 06:12:42.529080'),(1,9,'2026-09-10 06:12:42.703748'),(1,10,'2026-09-10 06:12:42.703748'),(1,11,'2026-09-10 06:12:43.483667'),(1,12,'2026-09-10 06:12:44.100355'),(1,13,'2026-09-10 06:12:44.100355'),(1,14,'2026-09-10 06:12:44.100355'),(1,15,'2026-09-10 06:12:44.719976'),(1,16,'2026-09-10 06:12:44.719976'),(1,17,'2026-09-10 06:12:47.731777'),(1,18,'2026-09-10 06:12:48.988108'),(1,19,'2026-09-10 06:12:52.019719'),(1,20,'2026-09-10 06:13:11.439935'),(1,21,'2026-09-10 06:13:11.439935'),(2,1,'2026-09-10 06:12:42.529080'),(2,2,'2026-09-10 06:12:42.529080'),(2,3,'2026-09-10 06:12:42.529080'),(2,4,'2026-09-10 06:12:42.529080'),(2,5,'2026-09-10 06:12:42.529080'),(2,6,'2026-09-10 06:12:42.529080'),(2,7,'2026-09-10 06:12:42.529080'),(2,9,'2026-09-10 06:12:42.703748'),(2,10,'2026-09-10 06:12:42.703748'),(2,11,'2026-09-10 06:12:43.483667'),(2,12,'2026-09-10 06:12:44.100355'),(2,13,'2026-09-10 06:12:44.100355'),(2,14,'2026-09-10 06:12:44.100355'),(2,15,'2026-09-10 06:12:44.719976'),(2,16,'2026-09-10 06:12:44.719976'),(2,17,'2026-09-10 06:12:47.731777'),(2,18,'2026-09-10 06:12:48.988108'),(2,19,'2026-09-10 06:12:52.019719'),(2,20,'2026-09-10 06:13:11.439935'),(2,21,'2026-09-10 06:13:11.439935'),(3,1,'2026-09-10 06:12:42.529080'),(3,2,'2026-09-10 06:12:42.529080');
+INSERT INTO `ls_webadmin_role_capabilities` VALUES (1,1,'2026-09-10 06:12:42.529080'),(1,2,'2026-09-10 06:12:42.529080'),(1,3,'2026-09-10 06:12:42.529080'),(1,4,'2026-09-10 06:12:42.529080'),(1,5,'2026-09-10 06:12:42.529080'),(1,6,'2026-09-10 06:12:42.529080'),(1,7,'2026-09-10 06:12:42.529080'),(1,8,'2026-09-10 06:12:42.529080'),(1,9,'2026-09-10 06:12:42.703748'),(1,10,'2026-09-10 06:12:42.703748'),(1,11,'2026-09-10 06:12:43.483667'),(1,12,'2026-09-10 06:12:44.100355'),(1,13,'2026-09-10 06:12:44.100355'),(1,14,'2026-09-10 06:12:44.100355'),(1,15,'2026-09-10 06:12:44.719976'),(1,16,'2026-09-10 06:12:44.719976'),(1,17,'2026-09-10 06:12:47.731777'),(1,18,'2026-09-10 06:12:48.988108'),(1,19,'2026-09-10 06:12:52.019719'),(1,20,'2026-09-10 06:13:11.439935'),(1,21,'2026-09-10 06:13:11.439935'),(1,22,'2026-09-21 17:23:50.268348'),(1,23,'2026-09-21 17:23:50.268348'),(1,24,'2026-09-21 17:23:50.268348'),(1,25,'2026-09-21 17:23:50.268348'),(1,26,'2026-09-21 17:23:50.268348'),(1,27,'2026-09-21 17:23:50.268348'),(1,28,'2026-09-21 17:23:50.268348'),(1,29,'2026-09-21 17:23:50.268348'),(1,30,'2026-09-21 17:23:50.268348'),(2,1,'2026-09-10 06:12:42.529080'),(2,2,'2026-09-10 06:12:42.529080'),(2,3,'2026-09-10 06:12:42.529080'),(2,4,'2026-09-10 06:12:42.529080'),(2,5,'2026-09-10 06:12:42.529080'),(2,6,'2026-09-10 06:12:42.529080'),(2,7,'2026-09-10 06:12:42.529080'),(2,9,'2026-09-10 06:12:42.703748'),(2,10,'2026-09-10 06:12:42.703748'),(2,11,'2026-09-10 06:12:43.483667'),(2,12,'2026-09-10 06:12:44.100355'),(2,13,'2026-09-10 06:12:44.100355'),(2,14,'2026-09-10 06:12:44.100355'),(2,15,'2026-09-10 06:12:44.719976'),(2,16,'2026-09-10 06:12:44.719976'),(2,17,'2026-09-10 06:12:47.731777'),(2,18,'2026-09-10 06:12:48.988108'),(2,19,'2026-09-10 06:12:52.019719'),(2,20,'2026-09-10 06:13:11.439935'),(2,21,'2026-09-10 06:13:11.439935'),(2,22,'2026-09-21 17:23:50.268348'),(2,23,'2026-09-21 17:23:50.268348'),(2,24,'2026-09-21 17:23:50.268348'),(2,25,'2026-09-21 17:23:50.268348'),(2,26,'2026-09-21 17:23:50.268348'),(2,27,'2026-09-21 17:23:50.268348'),(2,28,'2026-09-21 17:23:50.268348'),(2,29,'2026-09-21 17:23:50.268348'),(2,30,'2026-09-21 17:23:50.268348'),(3,1,'2026-09-10 06:12:42.529080'),(3,2,'2026-09-10 06:12:42.529080');
 /*!40000 ALTER TABLE `ls_webadmin_role_capabilities` ENABLE KEYS */;
 UNLOCK TABLES;
 DROP TABLE IF EXISTS `ls_webadmin_roles`;
@@ -1128,7 +1666,7 @@ CREATE TABLE `ls_webadmin_sessions` (
   CONSTRAINT `ls_webadmin_c_se_csrf` CHECK (char_length(`csrf_token_hash`) = 64),
   CONSTRAINT `ls_webadmin_c_se_identity` CHECK (`session_type` = 'preauth' and `user_id` is null and `auth_version` is null or `session_type` = 'authenticated' and `user_id` is not null and `auth_version` is not null),
   CONSTRAINT `ls_webadmin_c_se_expiry` CHECK (`idle_expires_at` > `created_at` and `absolute_expires_at` >= `idle_expires_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 DROP TABLE IF EXISTS `ls_webadmin_state`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

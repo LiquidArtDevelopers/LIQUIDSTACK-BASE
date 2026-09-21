@@ -22,9 +22,10 @@ final class StarterDistributionContractTest extends TestCase
         self::assertSame('>=8.1', $composer['require']['php'] ?? null);
         self::assertSame('*', $composer['require']['ext-dom'] ?? null);
         self::assertSame('*', $composer['require']['ext-pdo_mysql'] ?? null);
-        self::assertSame('^1.31', $composer['require']['liquidstack/core'] ?? null);
+        self::assertSame('^1.33', $composer['require']['liquidstack/core'] ?? null);
         self::assertSame('*', $composer['require']['liquidstack/webadmin'] ?? null);
         self::assertSame('*', $composer['require']['liquidstack/blog'] ?? null);
+        self::assertSame('*', $composer['require']['liquidstack/commerce'] ?? null);
         self::assertTrue(
             $composer['config']['allow-plugins']['liquidstack/core'] ?? false
         );
@@ -257,6 +258,10 @@ final class StarterDistributionContractTest extends TestCase
             'v1.0.0',
             'no depende de BASE',
             'composer update liquidstack/core',
+            'liquidstack/commerce',
+            '0001_commerce_catalog',
+            'liquidstack:commerce-mail-dispatch --limit=20',
+            'public.enabled=false',
             '.npmrc.example',
             'auth.json',
             'public/.vite/manifest.json',

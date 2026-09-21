@@ -158,6 +158,13 @@ final class StarterContractTest extends TestCase
             'INSERT INTO `ls_blog_analytics_sessions`',
             'INSERT INTO `ls_blog_analytics_views`',
             'INSERT INTO `ls_blog_copy_operations`',
+            'INSERT INTO `ls_commerce_baskets`',
+            'INSERT INTO `ls_commerce_basket_items`',
+            'INSERT INTO `ls_commerce_inquiries`',
+            'INSERT INTO `ls_commerce_inquiry_lines`',
+            'INSERT INTO `ls_commerce_inquiry_outbox`',
+            'INSERT INTO `ls_commerce_inquiry_rate_limits`',
+            'INSERT INTO `ls_commerce_product_inquiry_stats`',
         ] as $forbidden) {
             self::assertStringNotContainsStringIgnoringCase(
                 $forbidden,
@@ -169,7 +176,9 @@ final class StarterContractTest extends TestCase
         foreach ([
             'CREATE TABLE `ls_webadmin_users`',
             'CREATE TABLE `ls_blog_posts`',
+            'CREATE TABLE `ls_commerce_products`',
             '0025_blog_tag_capabilities',
+            '0003_commerce_capabilities',
             'aranaz@webda.eus',
             'aranaz@gmail.com',
             'Bienvenido al blog de tu nuevo proyecto',
@@ -521,20 +530,33 @@ final class StarterContractTest extends TestCase
         }
     }
 
-    public function testWebAdminAndBlogUseTheSameDatabaseProfile(): void
+    public function testModulesUseTheSameDatabaseProfile(): void
     {
         $root = dirname(__DIR__, 2);
         $webAdmin = require $root . '/App/config/modules/webadmin.php';
         $blog = require $root . '/App/config/modules/blog.php';
+        $commerce = require $root . '/App/config/modules/commerce.php';
 
         self::assertSame(
             $webAdmin['database']['connection'],
             $blog['database']['connection']
         );
         self::assertSame('liquidstack', $blog['database']['connection']);
+        self::assertSame(
+            $webAdmin['database']['connection'],
+            $commerce['database']['connection']
+        );
         self::assertNotSame(
             $webAdmin['database']['table_prefix'],
             $blog['database']['table_prefix']
+        );
+        self::assertNotSame(
+            $webAdmin['database']['table_prefix'],
+            $commerce['database']['table_prefix']
+        );
+        self::assertNotSame(
+            $blog['database']['table_prefix'],
+            $commerce['database']['table_prefix']
         );
     }
 

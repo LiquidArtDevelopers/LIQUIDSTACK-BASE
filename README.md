@@ -2,7 +2,7 @@
 
 BASE es el starter neutro para crear proyectos LiquidStack. Contiene la
 estructura que pertenece al proyecto consumidor y selecciona, por defecto, el
-paquete físico `liquidstack/core` junto con Blog y WebAdmin.
+paquete físico `liquidstack/core` junto con WebAdmin, Blog y Commerce.
 
 CORE aporta y actualiza la parte común; BASE aporta una aplicación dummy lista
 para personalizar. AIWA, ARRO y los proyectos futuros deben poder nacer de este
@@ -12,7 +12,8 @@ repositorio sin copiar código privado de otro cliente.
 
 - La aplicación PHP/Vite, rutas y vistas públicas iniciales.
 - Los shells personalizables del índice y del artículo de Blog.
-- La configuración no secreta de Blog y WebAdmin.
+- Los shells públicos de Commerce y sus recursos visuales gestionados.
+- La configuración no secreta de WebAdmin, Blog y Commerce.
 - Recursos, idiomas y showroom neutros para empezar un proyecto.
 - `.env.example` con valores de desarrollo deliberadamente públicos.
 - `example_liquidstack_dev.sql`, un snapshot demostrativo de la base modular.
@@ -33,7 +34,7 @@ Los requisitos se separan por superficie:
 
 - el runtime base debe satisfacer `composer check-platform-reqs --no-dev`;
 - BASE exige `ext-dom` porque activa Blog y `ext-pdo_mysql` porque configura
-  WebAdmin/Blog sobre MySQL/MariaDB; Composer los comprueba al instalar;
+  WebAdmin/Blog/Commerce sobre MySQL/MariaDB; Composer los comprueba al instalar;
 - WebAdmin necesita además el preflight PHP descrito abajo;
 - Media añade sus propios codecs, `fileinfo`, Imagick/AVIF y límites de subida;
 - las pruebas de desarrollo requieren las extensiones de PHPUnit indicadas por
@@ -108,7 +109,7 @@ para proyectos de cliente.
 
 El paquete distribuido no incluye el `composer.lock` interno de BASE.
 `create-project` resuelve la versión más reciente de CORE compatible con la
-restricción declarada, activa los selectores lógicos de WebAdmin y Blog y genera
+restricción declarada, activa los selectores lógicos de WebAdmin, Blog y Commerce y genera
 un `composer.lock` propio para el nuevo proyecto. El inicializador de BASE
 desvincula además la identidad de la plantilla a partir del nombre de la carpeta.
 No crea `.env`, no instala paquetes npm, no conecta con la DB, no migra, no crea
@@ -130,8 +131,8 @@ cuentas y no ejecuta onboarding. Después sigue este orden:
    ```
 
 4. Sustituye todos los valores demo, incluida la clave de seguridad. Elige una
-   única conexión `LIQUIDSTACK_DB_*` para WebAdmin/Blog y configura SMTP antes
-   del onboarding. Si vas a importar el snapshot, conserva sus dos emails
+   única conexión `LIQUIDSTACK_DB_*` para WebAdmin/Blog/Commerce y configura
+   SMTP antes del onboarding. Si vas a importar el snapshot, conserva sus dos emails
    bootstrap hasta reconciliar las cuentas por primera vez.
 5. Configura el acceso privado a GSAP sin versionar el token. Una opción local
    en PowerShell es:
@@ -158,7 +159,8 @@ cuentas y no ejecuta onboarding. Después sigue este orden:
    hasta obtener cero pendientes.
 8. Sigue el cierre común documentado abajo: inicializa Media, arranca
    `npm run lad`, usa el origen real que anuncie LAD para el onboarding, abre
-   las dos invitaciones y realiza el smoke de `/admin`, Blog y web pública.
+   las dos invitaciones y realiza el smoke de `/admin`, Blog, Commerce y web
+   pública.
 9. Ejecuta `composer test`, `npm run build`, revisa `git status`/`git diff` y
    solo entonces crea el primer commit del proyecto personalizado.
 
@@ -351,16 +353,25 @@ caché desactivada puede quedar vacía. Git ignore evita versionar esos datos,
 pero no impide que un despliegue borre una ruta mal situada: DB y storage deben
 respaldarse, trasladarse y restaurarse como una unidad.
 
+Commerce reutiliza esa misma biblioteca Media. No tiene un segundo storage.
+`LIQUIDSTACK_COMMERCE_INQUIRY_RECIPIENT` es el buzón que recibe cada solicitud
+de información; debe configurarse antes de activar la superficie pública.
+`LIQUIDSTACK_COMMERCE_PRIVACY_VERSION` identifica el texto legal aceptado y se
+guarda junto a la solicitud. Cambiar el aviso legal exige avanzar ese valor.
+`LIQUIDSTACK_COMMERCE_DEVELOPMENT_FIXTURES=1` habilita datos ficticios solo con
+`DEV_MODE=1`; debe permanecer en `0` para cualquier uso real.
+
 ## Elegir módulos
 
-CORE es el único paquete físico publicado. WebAdmin y Blog son selectores
-lógicos de esa misma versión:
+CORE es el único paquete físico publicado. WebAdmin, Blog y Commerce son
+selectores lógicos de esa misma versión:
 
 | Selección directa | Resultado |
 | --- | --- |
 | `liquidstack/core` | CORE sin módulos internos |
 | `liquidstack/webadmin` | CORE + WebAdmin |
 | `liquidstack/blog` | CORE + WebAdmin + Blog |
+| `liquidstack/commerce` | CORE + WebAdmin + Commerce |
 
 Comandos de selección:
 
@@ -368,17 +379,19 @@ Comandos de selección:
 composer require liquidstack/core
 composer require liquidstack/webadmin
 composer require liquidstack/blog
+composer require liquidstack/commerce
 ```
 
-El `composer.json` de BASE ya selecciona `liquidstack/blog`, por lo que una
-instalación nueva dispone también de WebAdmin. Composer distribuye el código,
-pero nunca aplica migraciones ni crea usuarios automáticamente.
+El `composer.json` de BASE ya selecciona Blog y Commerce; ambos reutilizan el
+mismo WebAdmin. Composer distribuye código, configuración inicial y recursos,
+pero nunca aplica migraciones, inicializa Media, crea usuarios ni habilita la
+tienda pública automáticamente.
 
 ## Conexión de base de datos
 
-BASE configura Blog y WebAdmin con el perfil `liquidstack` en
-`App/config/modules/blog.php` y `App/config/modules/webadmin.php`. Los dos
-módulos comparten una sola conexión y leen exclusivamente:
+BASE configura WebAdmin, Blog y Commerce con el perfil `liquidstack` en sus
+ficheros `App/config/modules/*.php`. Los tres módulos comparten una sola
+conexión y leen exclusivamente:
 
 ```dotenv
 LIQUIDSTACK_DB_HOST=127.0.0.1
@@ -447,12 +460,13 @@ El fichero raíz `example_liquidstack_dev.sql` contiene:
 - categorías, etiquetas y artículos neutros de ejemplo en español y euskera.
 
 No contiene **datos** de sesiones, tokens de invitación, outbox, rate limits,
-analítica, auditoría o credenciales; tampoco contiene hashes de contraseña,
-usuarios SQL ni permisos del servidor. Sus tablas vacías sí forman parte del
-esquema. El SQL es una fotografía reproducible para BASE; las migraciones de
-CORE siguen siendo la fuente canónica. Impórtalo únicamente en una DB de
-desarrollo vacía: el dump reconstruye sus tablas y no debe ejecutarse sobre
-datos que se quieran conservar.
+analítica, auditoría o credenciales. También excluye cestas, solicitudes,
+contactos y agregados sociales de Commerce. Tampoco contiene hashes de
+contraseña, usuarios SQL ni permisos del servidor. Sus tablas vacías sí
+forman parte del esquema. El SQL es una fotografía reproducible para BASE; las
+migraciones de CORE siguen siendo la fuente canónica. Impórtalo únicamente en
+una DB de desarrollo vacía: el dump reconstruye sus tablas y no debe
+ejecutarse sobre datos que se quieran conservar.
 
 Ejemplo de importación desde PowerShell, suponiendo que `mysql.exe` está en
 `PATH`:
@@ -507,17 +521,22 @@ composer liquidstack:migrate --plan --format=json
 composer liquidstack:migrate --dry-run --format=json
 ```
 
-Después de revisar el plan y crear un backup verificable de la DB:
+Después de revisar el plan y crear un backup verificable de la DB, aplica las
+migraciones seguras:
 
 ```powershell
-composer liquidstack:migrate --apply --allow-destructive `
-    --backup-confirmed --yes --format=json
+composer liquidstack:migrate --apply --yes --format=json
 composer liquidstack:migrate --dry-run --format=json
 ```
 
+Solo si el plan identifica realmente migraciones destructivas, repite el
+`--apply` autorizado añadiendo `--allow-destructive --backup-confirmed`. No
+uses esos flags de forma preventiva.
+
 No continúes hasta que el segundo dry-run confirme cero pendientes y ningún
 bloqueador. `migrate --apply` es una mutación y exige autorización consciente;
-`--backup-confirmed` declara que el backup ya existe, no lo crea. La ausencia
+Cuando sea necesario, `--backup-confirmed` declara que el backup ya existe, no
+lo crea. La ausencia
 de un driver PHP o de una directiva de runtime no se corrige migrando. En
 diagnóstico no se modifican automáticamente `php.ini`, `.env`, `PATH` ni la DB.
 
@@ -642,6 +661,60 @@ CookieLad permanece desactivado mientras `COOKIE_LAD_KEY` esté vacío. El shell
 de artículo usa los includes globales del proyecto, de modo que navegación,
 footer y consentimiento pueden mantenerse coherentes con el resto de la web.
 
+## Commerce: preparar antes de publicar
+
+BASE instala el selector `liquidstack/commerce` y sus 26 ficheros canónicos,
+pero `App/config/modules/commerce.php` mantiene `public.enabled=false`. Así se
+puede preparar el catálogo en WebAdmin sin reclamar todavía rutas públicas. Los
+paths de catálogo y lista de interés se derivan de `App/config/langs.php`: hay
+segmentos propios para español, euskera e inglés y un fallback neutral para
+otros locales. No dupliques esas rutas en `App/config/routes/get.php` ni en
+`App/config/rutas.js`; el provider de CORE las resuelve después de las rutas
+estáticas del proyecto.
+
+Commerce comparte con WebAdmin la conexión `LIQUIDSTACK_DB_*`, el transporte
+SMTP y la biblioteca Media. Las tres migraciones iniciales son
+`0001_commerce_catalog`, `0002_commerce_inquiries` y
+`0003_commerce_capabilities`. Revísalas y aplícalas con el flujo común de
+migraciones anterior; no necesitan un procedimiento distinto para Commerce:
+
+```powershell
+composer liquidstack:doctor --format=json
+composer liquidstack:migrate --plan --format=json
+composer liquidstack:migrate --dry-run --format=json
+# Crea y verifica el backup de DB + Media antes de autorizar la escritura.
+composer liquidstack:migrate --apply --yes --format=json
+composer liquidstack:migrate --dry-run --format=json
+```
+
+Añade `--allow-destructive --backup-confirmed` únicamente si el plan real
+informa migraciones destructivas. Esos flags no crean el backup ni deben
+usarse por defecto.
+
+Después configura el destinatario de consultas, la versión de privacidad y
+SMTP; inicializa Media por el procedimiento común y crea productos, categorías,
+etiquetas, atributos y sus variantes de idioma desde WebAdmin. El modo inicial
+es exclusivamente `inquiry`: la venta/pago permanece visible como capacidad
+futura, pero no es seleccionable. La lista de interés usa una cookie necesaria
+HttpOnly, no `localStorage`, y envía dos correos desde un outbox propio: acuse al
+visitante y aviso al destinatario administrativo.
+
+En producción programa el dispatcher one-shot desde el scheduler del hosting,
+con una frecuencia acorde al proyecto:
+
+```powershell
+composer liquidstack:commerce-mail-dispatch --limit=20
+```
+
+El comando procesa un lote y termina; Composer no instala cron ni envía correo
+durante `install` o `update`. Activa `public.enabled=true` solo después de
+validar traducciones, URLs, política de privacidad, catálogo, ficha, lista de
+interés, correos y sitemap. Dejarlo en `false` mantiene cerrada toda la
+superficie pública aunque el módulo siga disponible en WebAdmin. El contador
+«X solicitudes de información» también nace desactivado: habilita
+`social_proof.enabled=true` solo como opt-in tras decidir que ese dato debe ser
+público y revisar su umbral `minimum_count`.
+
 ## Qué personalizar en cada proyecto
 
 Como mínimo:
@@ -649,7 +722,7 @@ Como mínimo:
 - `.env`, perfiles y dominios;
 - idiomas y slugs públicos;
 - `App/config/routes/get.php`, `post.php` y `rutas.js`;
-- `App/config/modules/blog.php` y `webadmin.php`;
+- `App/config/modules/blog.php`, `webadmin.php` y `commerce.php`;
 - navegación, footer, logos, favicon y datos legales;
 - copy y metadatos de cada idioma;
 - `src/scss/_config.scss`, `_global.scss` y estilos de página;
@@ -668,8 +741,8 @@ Para actualizar todo el código físico LiquidStack ya seleccionado:
 composer update liquidstack/core
 ```
 
-No hace falta actualizar Blog o WebAdmin por separado: comparten la versión de
-CORE. `composer update` sin paquete también puede actualizar PHPMailer,
+No hace falta actualizar Blog, WebAdmin o Commerce por separado: comparten la
+versión de CORE. `composer update` sin paquete también puede actualizar PHPMailer,
 Dotenv, PHPUnit y cualquier otra dependencia; úsalo solo cuando quieras revisar
 todo el lock.
 
@@ -731,7 +804,7 @@ obsoletos: después de configurar el registro npm, ejecuta `npm ci` y
 `npm run build`. Hasta entonces `doctor` puede avisar de que falta el manifest;
 no es una razón para migrar la DB.
 
-El cierre funcional de un proyecto con Blog/WebAdmin debe comprobar como
+El cierre funcional de un proyecto con Blog/WebAdmin/Commerce debe comprobar como
 usuario real, al menos:
 
 - home, navegación, footer, cookies y cambio de idioma;
@@ -740,6 +813,8 @@ usuario real, al menos:
 - categorías, etiquetas, SEO, index/follow y acciones del listado;
 - biblioteca de medios y límites del servidor;
 - índice y artículo públicos, metadatos, sitemap y 404;
+- gestión Commerce, catálogo, ficha, filtros, lista de interés, emails y
+  contador de solicitudes, cuando `public.enabled=true`;
 - responsive y consola/red del navegador sin errores inesperados.
 
 ## Releases de BASE

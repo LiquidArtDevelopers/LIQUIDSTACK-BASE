@@ -3,6 +3,7 @@
         "dev-stack",
         "liquidstack-content-localization",
         "liquidstack-deployment",
+        "liquidstack-github-actions",
         "liquidstack-module-operations",
         "liquidstack-resource-migration",
         "seo-content",

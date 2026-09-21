@@ -23,12 +23,26 @@
             ],
             "group": "module:blog:public-index-support"
         },
+        "App/app/_moduleCommercePublic.php": {
+            "source": "modules/commerce/resources/project/App/app/_moduleCommercePublic.php",
+            "fingerprints": [
+                "sha256:53f004f25786dc04b402642bfd3fcbf0e68d8cb21dd8c6d6749e0b4b48bd5512"
+            ],
+            "group": "module:commerce:commerce-public-support"
+        },
         "App/app/_phpmailer.php": {
             "source": "stubs/App/app/_phpmailer.php",
             "fingerprints": [
                 "sha256:ee358b642ca709a69e50348031276e84e7106384c55ce42a933e81c0f353a7c1"
             ],
             "group": "runtime:mail"
+        },
+        "App/app/commerce/CommercePresentationAdapter.php": {
+            "source": "modules/commerce/resources/project/App/app/commerce/CommercePresentationAdapter.php",
+            "fingerprints": [
+                "sha256:c4ab5be0f9157afe8e18afa32ccc75b45e80cbb29b939da705c9add00f302fd9"
+            ],
+            "group": "module:commerce:commerce-public-support"
         },
         "App/app/formContact.php": {
             "source": "stubs/App/app/formContact.php",
@@ -64,6 +78,13 @@
                 "sha256:9367e39931d635383f9317decd455da47f060901bca535d703db0466bd561b54"
             ],
             "group": "module:blog:resource-support"
+        },
+        "App/controllers/_moduleCommerceResources.php": {
+            "source": "modules/commerce/resources/project/App/controllers/_moduleCommerceResources.php",
+            "fingerprints": [
+                "sha256:6550af1696931726342c3d314190a8b51ba147ef5aa2cad78bfcedac97687928"
+            ],
+            "group": "module:commerce:commerce-resource-support"
         },
         "App/controllers/_moduleFormAuth.php": {
             "source": "stubs/App/controllers/_moduleFormAuth.php",
@@ -380,6 +401,13 @@
                 "sha256:f08cc0e21e57553a298cb064acaad7b6e14039c9772a133533b8b8613c3da700"
             ],
             "group": "module:blog:resource-artBlogArticle01"
+        },
+        "App/controllers/artCommerceItem01.php": {
+            "source": "modules/commerce/resources/project/App/controllers/artCommerceItem01.php",
+            "fingerprints": [
+                "sha256:89b5bd1982021ad48dfa0afb21f0522d4dba5d11860584838132d78268822bef"
+            ],
+            "group": "module:commerce:resource-artCommerceItem01"
         },
         "App/controllers/artForm01.php": {
             "source": "stubs/App/controllers/artForm01.php",
@@ -762,7 +790,7 @@
         "App/controllers/navMegamenu01.php": {
             "source": "stubs/App/controllers/navMegamenu01.php",
             "fingerprints": [
-                "sha256:4b5d325389fb877684055fd4ae4aa401b93edf3a220bd6831b2213e770b06e78"
+                "sha256:5ee5f36363f2e2212ec8051879ffd00c98b172369e557c4ad309845082f96923"
             ],
             "group": "resource:navMegamenu01"
         },
@@ -842,6 +870,20 @@
                 "sha256:ec9a07bf9c57d8823f5e57ba38c676649cd49c6ed73d951bc4693f9ae2c94eb1"
             ],
             "group": "module:blog:resource-sectionBlogStack01"
+        },
+        "App/controllers/sectionCommerceCatalog01.php": {
+            "source": "modules/commerce/resources/project/App/controllers/sectionCommerceCatalog01.php",
+            "fingerprints": [
+                "sha256:2fa820c7893647c07b1575d2f26dd3a11e19679f80ef11c45508a322d4d0e1ba"
+            ],
+            "group": "module:commerce:resource-sectionCommerceCatalog01"
+        },
+        "App/controllers/sectionCommerceInquiry01.php": {
+            "source": "modules/commerce/resources/project/App/controllers/sectionCommerceInquiry01.php",
+            "fingerprints": [
+                "sha256:05db6a1742424f062c68badab72430dc04eddaa84dd240e89de1b5ff66745686"
+            ],
+            "group": "module:commerce:resource-sectionCommerceInquiry01"
         },
         "App/controllers/sectionDiskSlider01.php": {
             "source": "stubs/App/controllers/sectionDiskSlider01.php",
@@ -1176,6 +1218,13 @@
                 "sha256:170046792b00807a96abeb6dd1f23ca13042563e31917d5b699d5b4bd1bdea9e"
             ],
             "group": "module:blog:resource-artBlogArticle01"
+        },
+        "App/templates/_artCommerceItem01.html": {
+            "source": "modules/commerce/resources/project/App/templates/_artCommerceItem01.html",
+            "fingerprints": [
+                "sha256:8ee526db314f5a3c185a824c7cd6d344093b0515431148109f266097333e1f15"
+            ],
+            "group": "module:commerce:resource-artCommerceItem01"
         },
         "App/templates/_artForm01.html": {
             "source": "stubs/App/templates/_artForm01.html",
@@ -1659,6 +1708,20 @@
             ],
             "group": "module:blog:resource-sectionBlogStack01"
         },
+        "App/templates/_sectionCommerceCatalog01.html": {
+            "source": "modules/commerce/resources/project/App/templates/_sectionCommerceCatalog01.html",
+            "fingerprints": [
+                "sha256:ee597becb8b057f39048c43c7ea09289679f727255f7dc9c17aede48b6729cc7"
+            ],
+            "group": "module:commerce:resource-sectionCommerceCatalog01"
+        },
+        "App/templates/_sectionCommerceInquiry01.html": {
+            "source": "modules/commerce/resources/project/App/templates/_sectionCommerceInquiry01.html",
+            "fingerprints": [
+                "sha256:673f483df624bd319368fea3b9a230c8db45194ffadb291c74fb235f620eb32c"
+            ],
+            "group": "module:commerce:resource-sectionCommerceInquiry01"
+        },
         "App/templates/_sectionDiskSlider01.html": {
             "source": "stubs/App/templates/_sectionDiskSlider01.html",
             "fingerprints": [
@@ -1756,6 +1819,27 @@
                 "sha256:be8a4d1fea8b98ff9a2937f788891991e9f9c7d02d5409bf0b1b075c68271069"
             ],
             "group": "module:blog:public-article-shell"
+        },
+        "App/views/commerce-inquiry.php": {
+            "source": "modules/commerce/resources/project/App/views/commerce-inquiry.php",
+            "fingerprints": [
+                "sha256:643ddb05beebbc333f76ae26af5d596edb83835b033cc0769cc2d31d3a22470d"
+            ],
+            "group": "module:commerce:commerce-public-shells"
+        },
+        "App/views/commerce-item.php": {
+            "source": "modules/commerce/resources/project/App/views/commerce-item.php",
+            "fingerprints": [
+                "sha256:63ef6b33ea362ea4fc7dbe48b8bd3c5e4e73c71f673a2c64947151299939a0c6"
+            ],
+            "group": "module:commerce:commerce-public-shells"
+        },
+        "App/views/commerce.php": {
+            "source": "modules/commerce/resources/project/App/views/commerce.php",
+            "fingerprints": [
+                "sha256:8a590f2672ac3fe01e940284793fec49059f161b033449967a2211eb13a9d3b6"
+            ],
+            "group": "module:commerce:commerce-public-shells"
         },
         "App/views/showroom/_blog.php": {
             "source": "modules/blog/resources/project/App/views/showroom/_blog.php",
@@ -2541,6 +2625,27 @@
             ],
             "group": "module:blog:public-article-shell"
         },
+        "src/js/commerce.js": {
+            "source": "modules/commerce/resources/project/src/js/commerce.js",
+            "fingerprints": [
+                "sha256:c944fdc9ac523eafc3f8f6db6043d7da99039bfd4a2eb7eb5a71414e9a76f18f"
+            ],
+            "group": "module:commerce:commerce-public-shells"
+        },
+        "src/js/commerceInquiry.js": {
+            "source": "modules/commerce/resources/project/src/js/commerceInquiry.js",
+            "fingerprints": [
+                "sha256:5ad54160e1ed3a12b1d36aa45d9eec4b716407ac8b77298cc255b037fe5c7cb9"
+            ],
+            "group": "module:commerce:commerce-public-shells"
+        },
+        "src/js/commerceItem.js": {
+            "source": "modules/commerce/resources/project/src/js/commerceItem.js",
+            "fingerprints": [
+                "sha256:bf76ae470653b3fbecf4303e6ae9ae19253f1040df35d93d69a7f1c5e4a5ea03"
+            ],
+            "group": "module:commerce:commerce-public-shells"
+        },
         "src/js/modules/blog/blogCollectionLoader.js": {
             "source": "modules/blog/resources/project/src/js/modules/blog/blogCollectionLoader.js",
             "fingerprints": [
@@ -2655,6 +2760,13 @@
             ],
             "group": "resource:artZipper"
         },
+        "src/js/resources/_commerce.js": {
+            "source": "modules/commerce/resources/project/src/js/resources/_commerce.js",
+            "fingerprints": [
+                "sha256:3d974740a7a5b330cb29483d8d37250f8b861ec38eba4180060d67e42ddf9df6"
+            ],
+            "group": "module:commerce:commerce-resource-support"
+        },
         "src/js/resources/_createCursorRippleEffect.js": {
             "source": "resources/js/_createCursorRippleEffect.js",
             "fingerprints": [
@@ -2718,7 +2830,7 @@
         "src/js/resources/_gsapScroll.js": {
             "source": "resources/js/_gsapScroll.js",
             "fingerprints": [
-                "sha256:f578ae8cb58ebedf3db59bb89b626bb4c39647d7c88cc39ad50fdf77db67a441"
+                "sha256:37b506a994f1b8438a59e8a4a16187c9da61e040fa8d9ecd98be0a433d6c9abe"
             ],
             "group": "resource:gsapScroll"
         },
@@ -3005,6 +3117,27 @@
                 "sha256:82caa62052f1c81ce9d51c073669127b8a22e822a9e89706e189f3b6c0cb7954"
             ],
             "group": "module:blog:public-article-shell"
+        },
+        "src/scss/commerce.scss": {
+            "source": "modules/commerce/resources/project/src/scss/commerce.scss",
+            "fingerprints": [
+                "sha256:99e4843646b4f9360666802a9745c08e9da34c35aa160072a8f3371bfdd43384"
+            ],
+            "group": "module:commerce:commerce-public-shells"
+        },
+        "src/scss/commerceInquiry.scss": {
+            "source": "modules/commerce/resources/project/src/scss/commerceInquiry.scss",
+            "fingerprints": [
+                "sha256:59322791865540ddcf87e21aee6104c741d560545d78ecbf11ea206cd2cb794c"
+            ],
+            "group": "module:commerce:commerce-public-shells"
+        },
+        "src/scss/commerceItem.scss": {
+            "source": "modules/commerce/resources/project/src/scss/commerceItem.scss",
+            "fingerprints": [
+                "sha256:9b8b6d2b4c4bbbac8fb20ec4ae55c7f790a62c6a355bc64738299d7db22b2487"
+            ],
+            "group": "module:commerce:commerce-public-shells"
         },
         "src/scss/resources/_aniBackground01.scss": {
             "source": "resources/scss/_aniBackground01.scss",
@@ -3316,6 +3449,13 @@
             ],
             "group": "module:blog:resource-artBlogArticle01"
         },
+        "src/scss/resources/_artCommerceItem01.scss": {
+            "source": "modules/commerce/resources/project/src/scss/resources/_artCommerceItem01.scss",
+            "fingerprints": [
+                "sha256:5faf6d53acf7bf688aa81aa3c88b3252945c8779f1b7a03081b9cd7c4d69d708"
+            ],
+            "group": "module:commerce:resource-artCommerceItem01"
+        },
         "src/scss/resources/_artForm01.scss": {
             "source": "resources/scss/_artForm01.scss",
             "fingerprints": [
@@ -3546,7 +3686,7 @@
         "src/scss/resources/_moduleButtonType03.scss": {
             "source": "resources/scss/_moduleButtonType03.scss",
             "fingerprints": [
-                "sha256:e048a777149dbde40c4be20121f7128f7c3a4d9302e409579bc25dc8f5218176"
+                "sha256:20f4a8487f0bdc4e1e3649fa5333b4537a04aa78885530657c9716a74f6412c0"
             ],
             "group": "resource:moduleButtonType03"
         },
@@ -3842,6 +3982,20 @@
                 "sha256:e8b0b898bd5a35ce9f1f243045c98832d7693947a621b65280858d037bcf4a85"
             ],
             "group": "module:blog:resource-sectionBlogStack01"
+        },
+        "src/scss/resources/_sectionCommerceCatalog01.scss": {
+            "source": "modules/commerce/resources/project/src/scss/resources/_sectionCommerceCatalog01.scss",
+            "fingerprints": [
+                "sha256:6ec5dd77d7a107d166a534329bc9a70c5ac3ebe5b898208852907c1b5df44a44"
+            ],
+            "group": "module:commerce:resource-sectionCommerceCatalog01"
+        },
+        "src/scss/resources/_sectionCommerceInquiry01.scss": {
+            "source": "modules/commerce/resources/project/src/scss/resources/_sectionCommerceInquiry01.scss",
+            "fingerprints": [
+                "sha256:9fc0ef285ed7e9441e6a7a95b379a0169ec35aee7128c03b4e5cf54f6647f9da"
+            ],
+            "group": "module:commerce:resource-sectionCommerceInquiry01"
         },
         "src/scss/resources/_sectionDiskSlider01.scss": {
             "source": "resources/scss/_sectionDiskSlider01.scss",

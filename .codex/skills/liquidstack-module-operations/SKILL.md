@@ -1,6 +1,6 @@
 ---
 name: liquidstack-module-operations
-description: Activación, diagnóstico, actualización, desarrollo y cierre funcional seguro de los módulos internos WebAdmin y Blog de LiquidStack. Usar cuando Codex deba ejecutar o revisar composer require/remove/update de liquidstack/webadmin o liquidstack/blog, configurar App/config/modules, comprobar /admin, interpretar liquidstack:doctor, preparar migraciones, validar adopción en un stack consumidor, modificar manifiestos/providers modulares o planificar y ejecutar QA exploratoria adversarial de recorridos de usuario sobre herramientas funcionales.
+description: Activación, diagnóstico, actualización, desarrollo y cierre funcional seguro de los módulos internos WebAdmin, Blog y Commerce de LiquidStack. Usar cuando Codex deba ejecutar o revisar composer require/remove/update de sus selectores, configurar App/config/modules, comprobar /admin o superficies públicas modulares, interpretar liquidstack:doctor, preparar migraciones, validar adopción en un stack consumidor, modificar manifiestos/providers modulares o planificar y ejecutar QA exploratoria adversarial de recorridos de usuario sobre herramientas funcionales.
 ---
 
 # Operar módulos LiquidStack
@@ -8,8 +8,11 @@ description: Activación, diagnóstico, actualización, desarrollo y cierre func
 ## Mantener el modelo correcto
 
 - Tratar `liquidstack/core` como único paquete, repositorio y release físicos.
-- Tratar `liquidstack/webadmin` y `liquidstack/blog` como selectores lógicos declarados en el `require` directo del proyecto.
-- Recordar que Blog activa WebAdmin por dependencia interna. WebAdmin puede existir sin Blog.
+- Tratar `liquidstack/webadmin`, `liquidstack/blog` y
+  `liquidstack/commerce` como selectores lógicos declarados en el `require`
+  directo del proyecto.
+- Recordar que Blog y Commerce activan WebAdmin por dependencia interna, pero
+  son independientes entre sí. WebAdmin puede existir sin ninguno de ellos.
 - No confundir WebAdmin con una zona privada legacy del cliente. No compartir sus rutas, tablas, endpoints, modelos, cookie o sesión.
 - No editar `vendor/liquidstack/core` ni decidir módulos desde `composer.lock`, `replace`, `provide` o `InstalledVersions`.
 
@@ -78,10 +81,12 @@ php -r "echo in_array('argon2id', password_algos(), true) ? 'Argon2id=available'
    ```bash
    composer require liquidstack/webadmin
    composer require liquidstack/blog
+   composer require liquidstack/commerce
    ```
 
    Si el plugin instalado aún no normaliza el selector, usar explícitamente `:*`.
-3. Actualizar el código físico con `composer update liquidstack/core`; actualizar CORE por sí solo no activa WebAdmin ni Blog.
+3. Actualizar el código físico con `composer update liquidstack/core`;
+   actualizar CORE por sí solo no activa WebAdmin, Blog ni Commerce.
 4. Para desactivar, usar `composer remove` sobre el selector directo. Nunca borrar automáticamente tablas, usuarios, artículos, medios, configuración o assets conservados.
 5. Revisar el resumen del sincronizador: un fichero project-owned o
    personalizado debe preservarse salvo que exista un contrato de versión
@@ -101,7 +106,7 @@ Usar opcionalmente `App/config/modules/webadmin.php`, propiedad del proyecto:
 return [
     'path' => '/admin',
     'database' => [
-        'connection' => 'shared',
+        'connection' => 'liquidstack',
         'table_prefix' => 'ls_webadmin_',
     ],
     'session' => [
@@ -127,26 +132,39 @@ return [
   exige consentimiento `cookie_custom` de CookieLad.
 
 - Mantener secretos fuera de este fichero. Composer no debe crearlo, fusionarlo ni sobrescribirlo.
-- Conservar `shared` como default compatible: reutiliza `BBDD_SERVER`,
-  `BBDD_USER`, `BBDD_PASS` y `BBDD_NAME`.
-- Usar `liquidstack` solo como opt-in explícito para una DB modular por proyecto
-  y entorno. Requiere `LIQUIDSTACK_DB_HOST`, `LIQUIDSTACK_DB_PORT`,
+- Conservar `shared` como fallback de compatibilidad del runtime: reutiliza
+  `BBDD_SERVER`, `BBDD_USER`, `BBDD_PASS` y `BBDD_NAME`. No presentarlo como
+  selector de desarrollo/producción. En consumidores legacy esas variables
+  pueden pertenecer a una zona privada de negocio independiente.
+- En BASE y proyectos nuevos, seleccionar explícitamente `liquidstack` para la
+  única DB modular de WebAdmin, Blog y futuras extensiones. Requiere
+  `LIQUIDSTACK_DB_HOST`, `LIQUIDSTACK_DB_PORT`,
   `LIQUIDSTACK_DB_NAME`, `LIQUIDSTACK_DB_USER`,
   `LIQUIDSTACK_DB_PASSWORD` y `LIQUIDSTACK_DB_CHARSET=utf8mb4`.
+- Tratar el host como endpoint del runtime, no como tipo de entorno: desde
+  desarrollo puede ser loopback o un túnel/red confiable; en producción suele
+  ser el endpoint interno del proveedor. `LIQUIDSTACK_DB_HOST` admite solo el
+  hostname o IP, sin esquema ni puerto; el puerto se declara por separado en
+  `LIQUIDSTACK_DB_PORT`. No duplicar la misma DB modular bajo `BBDD_*` y
+  `LIQUIDSTACK_DB_*`, ni elegirla implícitamente mediante `DEV_MODE`.
+- CORE no configura todavía TLS/CA en PDO. No normalizar una conexión directa
+  por Internet a una DB productiva; exigir red confiable, VPN/túnel o un
+  contrato TLS verificable antes de recomendar ese acceso.
 - No aceptar DSN ni opciones PDO libres. Una variable dedicada ausente o
   inválida debe fallar cerrada, nunca volver silenciosamente a `shared`.
-- Cuando Blog esté activo, exigir que Blog y WebAdmin declaren la misma
-  conexión. Comparten un único PDO y operaciones cross-scope; una discrepancia
-  bloquea diagnóstico, migraciones y runtime antes de conectar.
+- Cuando Blog o Commerce estén activos, exigir que todos los módulos activos
+  declaren la misma conexión que WebAdmin. Comparten un único PDO y
+  operaciones cross-scope; una discrepancia bloquea diagnóstico, migraciones
+  y runtime antes de conectar.
 - Tratar `.env` y `App/config/modules/*.php` como project-owned. Cambiar el
   perfil con tablas o datos existentes requiere backup, migración y
   verificación manual; Composer no traslada ni adopta datos.
-- Limitar por ahora `liquidstack` a `localhost` o redes confiables. No usarlo
-  contra un host no confiable hasta disponer de TLS con CA y verificación del
-  servidor.
 - Guardar `LIQUIDSTACK_WEBADMIN_SECURITY_KEY` únicamente en el entorno o gestor
   de secretos: debe contener 32 bytes aleatorios como base64url canónico de 43
-  caracteres. No reutilizar una contraseña ni registrar su valor.
+  caracteres. El sentinel público
+  `EXAMPLE_ONLY_CHANGE_ME_BEFORE_REAL_USE_0000` es deliberadamente inválido y
+  debe bloquear tanto `doctor` como el runtime hasta sustituirlo. No reutilizar
+  una contraseña ni registrar su valor.
 - Exigir en toda creación, activación o restablecimiento un mínimo de ocho
   caracteres Unicode, una minúscula, una mayúscula, un número y un signo,
   UTF-8 válido y un máximo de 1024 bytes. Mantener separada la validación de
@@ -436,9 +454,12 @@ composer liquidstack:migrate --dry-run
   SMTP. No llamarlo automáticamente desde `composer install`/`update`.
 - Configurar producción con
   `LIQUIDSTACK_WEBADMIN_MEDIA_STORAGE_ROOT` apuntando a una ruta absoluta,
-  persistente y fuera del árbol del proyecto/deploy. El único default interno
-  permitido es `storage/liquidstack/webadmin/media` cuando coinciden
-  `DEV_MODE=1` y una `RAIZ` loopback canónica.
+  privada, persistente, fuera del document root efectivo y fuera del árbol que
+  el deploy reemplaza. La ruta canónica interna
+  `storage/liquidstack/webadmin/media` puede declararse explícitamente si el
+  document root es un hijo separado como `www` y el workflow preserva
+  `storage`; sin variable solo actúa como default cuando coinciden `DEV_MODE=1`
+  y una `RAIZ` loopback canónica.
 - No usar `public`, `vendor`, `.git`, la raíz del proyecto, una raíz de disco,
   traversal, symlinks o junctions como storage. DB y storage se respaldan y
   restauran como una unidad; cambiar la variable no mueve ni adopta medios.
@@ -446,6 +467,10 @@ composer liquidstack:migrate --dry-run
   ownership. El inicializador crea además el lock, `.staging/` y un `.gitignore`
   interno; puede reparar auxiliares de una raíz marcada, pero nunca adoptar de
   forma implícita una raíz no vacía sin marcador válido.
+- Tratar ese `.gitignore` únicamente como protección frente al tracking. No
+  evita que Actions, `rsync --delete`, una extracción o la limpieza de releases
+  borren Media. El deploy productivo no puede poseer ni alcanzar la raíz
+  persistente; auditarlo con `liquidstack-github-actions`.
 - Reservar
   `composer liquidstack:media:init --adopt-existing --backup-confirmed --yes`
   exclusivamente para upgrades con medios legacy anteriores al marker. No
@@ -500,6 +525,61 @@ composer liquidstack:migrate --dry-run
   asset compartido: pertenecen al uso localizado que hará Blog u otro editor.
 - Consultar `docs/mejoras-pendientes/webadmin-media-library.md` para el
   contrato implementado y sus pendientes reales de ciclo de vida y formatos.
+
+## Operar Liquid Commerce
+
+- Activar Commerce solo mediante el selector directo `liquidstack/commerce`;
+  activa WebAdmin, pero no Blog. Consultar `docs/liquid-commerce.md` antes de
+  ampliar su dominio, rutas, persistencia o flujo de correo.
+- Tratar `App/config/modules/commerce.php` como configuración project-owned.
+  Debe usar la misma conexión que WebAdmin, declarar rutas únicas para todos
+  los locales activos y nacer con `public.enabled=false`. Composer puede
+  instalar el scaffold inicial, pero no debe activar la superficie pública,
+  los fixtures, el contador social ni una ruta de pago.
+- Mantener inquiry como único modo operativo. La venta online permanece
+  visible solo como evolución deshabilitada y no seleccionable; no simular una
+  compra ni conectar pasarelas desde el flujo de solicitud de información.
+- Aplicar las migraciones `0001_commerce_catalog`,
+  `0002_commerce_inquiries` y `0003_commerce_capabilities` mediante el flujo
+  común `doctor` → `migrate --plan` → `migrate --dry-run` → backup
+  verificable → autorización → `migrate --apply` → segundo dry-run.
+  Son no destructivas, por lo que no añadir `--allow-destructive` salvo que el
+  plan real informe otra migración pendiente que lo exija. En MariaDB 10.4,
+  usar CORE `v1.33.1` o posterior; no reintentar a ciegas un DDL fallido ni
+  adoptar tablas parciales manualmente.
+- Mantener productos y taxonomías localizados. Categorías jerárquicas,
+  etiquetas, atributos tipados, medios, slugs y rutas canónicas se editan por
+  los puertos oficiales del dominio, con fallback al idioma principal cuando
+  falte traducción. Prevenir ciclos de categorías en el repositorio bajo la
+  misma transacción; no depender de un `CHECK` contra la clave autoincremental.
+- Reutilizar exclusivamente la biblioteca Media de WebAdmin. La salida pública
+  solo puede servir derivados AVIF verificados que estén referenciados por un
+  producto activo; nunca exponer `storage_key`, rutas privadas o un original.
+- Tratar la lista de interés como estado funcional necesario del servidor:
+  cookie opaca `HttpOnly`, `SameSite=Lax`, `Secure` fuera del laboratorio y
+  aislada por proyecto en localhost aunque cambie el puerto. No usar
+  `localStorage`, `sessionStorage` ni una cookie legible por JavaScript, y no
+  condicionarla a una categoría opcional de CookieLad.
+- Revalidar cesta, disponibilidad, contacto, privacidad, origen, honeypot,
+  idempotencia y límites persistentes dentro del flujo de inquiry. Una
+  solicitud aceptada crea el agregado durable y exactamente dos trabajos de
+  outbox —visitante y administración—; nunca enviar SMTP dentro del POST.
+  Despachar en lotes acotados con
+  `composer liquidstack:commerce-mail-dispatch -- --limit=<1..100>` y un
+  scheduler externo por proyecto. No instalar cron desde Composer.
+- Mantener el contador público desactivado por defecto. Si el proyecto lo
+  activa, debe representar solicitudes aceptadas agregadas, no personas,
+  identidades ni actividad en tiempo real.
+- Los fixtures requieren simultáneamente `DEV_MODE=1` y
+  `LIQUIDSTACK_COMMERCE_DEVELOPMENT_FIXTURES=1`; nunca son fallback de una DB
+  vacía ni pueden aparecer en producción.
+- En QA real cubrir como mínimo permisos y CRUD administrativo, locales y
+  fallback, categorías anidadas, etiquetas, atributos, precio opcional,
+  disponibilidad, Media, activación/archivo, catálogo/búsqueda/filtros/ficha,
+  añadir y retirar varios items, persistencia tras redirect, validaciones de
+  inquiry, dos filas de outbox sin envío externo y aumento del agregado.
+  Probar SSR, móvil, teclado, consola y red; no declarar cerrado el módulo con
+  unitarios o SQLite solamente.
 
 ## Operar Liquid Blog
 
@@ -1003,7 +1083,11 @@ composer liquidstack:migrate --dry-run
   `composer liquidstack:blog:sitemap-cache:init`; en producción exige además
   `--shared-storage-confirmed` y
   `LIQUIDSTACK_BLOG_SITEMAP_CACHE_ROOT` absoluto, privado, persistente, fuera
-  del deploy y compartido por todos los nodos. Confirmar operativamente que el
+  del document root y del árbol reemplazado por el deploy, y compartido por
+  todos los nodos. La ruta canónica interna
+  `storage/liquidstack/blog/sitemap-cache` puede declararse si el document root
+  es un hijo separado y el workflow preserva `storage`. Confirmar
+  operativamente que el
   volumen ofrece `flock` coherente y `rename` atómico; el flag no puede probar
   esas propiedades. No inicializar desde Composer ni rotar una generación
   activa por intuición; respaldar y restaurar DB y storage como una unidad.
@@ -1314,7 +1398,7 @@ composer liquidstack:migrate --dry-run
 ## Cerrar herramientas funcionales de los módulos
 
 - Usar además `$test-functional-ui` al crear, cambiar, auditar o cerrar
-  cualquier interfaz funcional de WebAdmin o Blog. Seguir por completo sus dos
+  cualquier interfaz funcional de WebAdmin, Blog o Commerce. Seguir por completo sus dos
   capas obligatorias: validación técnica y exploración práctica de todos los
   recorridos de usuario en navegador real.
 - Aplicar en esas sesiones las restricciones propias de LiquidStack: instalar
@@ -1364,6 +1448,10 @@ composer liquidstack:migrate --dry-run
    - Blog: activa primero WebAdmin, sus migraciones asignan las capacidades y
      repetir onboarding verifica las identidades y el acceso sin duplicar
      usuarios ni entregas válidas.
+   - Commerce: activa primero WebAdmin sin activar Blog; distribuye sus shells
+     con la superficie pública cerrada, no muta DB durante Composer y solo
+     registra rutas, navegación, Media y migraciones cuando el selector está
+     activo.
    - `composer install`/`update`: no mutan DB, cuentas, outbox o SMTP; el
      onboarding sin confirmación tampoco lo hace.
    - GET/HEAD modulares: no abren la sesión legacy; un miss sí la recupera antes
@@ -1373,7 +1461,7 @@ composer liquidstack:migrate --dry-run
      `session => false`.
    - Config inválida, prefijo localizado o colisión: la web pública permanece operativa.
 
-8. Ejecutar `composer validate --strict --no-check-publish`, `composer test` y `composer test:module-e2e`. El E2E debe usar un consumidor temporal y demostrar que `doctor` y `migrate --plan` no modifican configuración, lock, `.env` ni datos. Los tests SQLite deben demostrar además que `--dry-run` no muta y que solo `--apply` confirmado escribe. Ante cambios de DDL o persistencia, ejecutar también `composer test:mysql-integration` con sus variables TEST contra versiones soportadas reales; debe cubrir el ciclo outbox/acciones, gestión de editores, carrera de identidad única y los órdenes concurrentes de locks, y nunca apuntar a la DB de un proyecto.
+8. Ejecutar `composer validate --strict --no-check-publish`, `composer test` y `composer test:module-e2e`. Las suites canónicas deben desactivar el timeout general de Composer: superar 300 segundos no equivale a un fallo funcional. El E2E debe usar un consumidor temporal y demostrar que `doctor` y `migrate --plan` no modifican configuración, lock, `.env` ni datos. Los tests SQLite deben demostrar además que `--dry-run` no muta y que solo `--apply` confirmado escribe. Ante cambios de DDL o persistencia, ejecutar también `composer test:mysql-integration` con sus variables TEST contra versiones soportadas reales; debe cubrir el ciclo outbox/acciones, gestión de editores, carrera de identidad única y los órdenes concurrentes de locks, y nunca apuntar a la DB de un proyecto. El gate normal `composer release` debe detectar una única versión pendiente fechada en `CHANGELOG.md`, pedir la descripción del tag, comprobar el historial gestionado y ejecutar la suite CORE y el E2E; `composer release:prepare` solo regenera el historial antes del commit.
 9. Actualizar README, arquitectura, changelog y esta skill cuando cambie el contrato operativo.
 
 ## Adoptar cambios en un consumidor
@@ -1383,18 +1471,25 @@ composer liquidstack:migrate --dry-run
 - Para una instalación nueva con DB dedicada, crear primero una DB vacía y un
   usuario acotado, declarar las seis variables `LIQUIDSTACK_DB_*` fuera de Git
   y seleccionar `connection => liquidstack` en los dos configs project-owned.
+  BASE ya nace con esa selección; `shared` queda para consumidores legacy.
 - Antes del primer onboarding, obtener desde la fuente privada del operador las
   dos variables bootstrap distintas y preparar el transporte. No copiar sus
   valores a documentación, `.env.example`, commits, salidas o informes.
-- Registrar el entorno real antes de operar. El consumidor de referencia usa
-  actualmente una DB modular local de XAMPP; otros consumidores pueden usar
-  local, staging o
-  producción, pero el código no cambia entre ellos y los secretos nunca se
-  reutilizan.
+- Registrar el entorno real antes de operar. Otros consumidores pueden usar
+  una DB local, staging o producción, pero el código no cambia entre ellos. El
+  `.env` privado de cada runtime declara un único bloque modular activo; un
+  perfil del tooling del consumidor puede materializar en `.env` solo otro
+  host si nombre/usuario/clave son realmente los mismos, sin versionar secretos.
+  CORE no carga por sí mismo `.env.development` o `.env.production`: consume el
+  `.env` ya resuelto y las variables de proceso, que tienen prioridad.
 - Distinguir una producción vacía de una promoción con datos. En el primer
   caso se aplica el catálogo sobre destino vacío; en el segundo se exige un
   plan coordinado para esquemas, `ls_module_migrations`, datos y medios. Un
   cambio de `LIQUIDSTACK_DB_*` nunca mueve ni adopta contenido.
+- Para cualquier creación de DB productiva o traslado local → producción, leer
+  [el procedimiento distribuido de promoción DB y Media](references/production-db-media-promotion.md).
+  Si existe un workflow de despliegue, revisarlo además con
+  `liquidstack-github-actions` antes del corte.
 - Antes de apuntar a producción, rotar cualquier credencial usada o compartida
   durante desarrollo y consultar
   `docs/mejoras-pendientes/promocion-db-modulos-local-produccion.md`.

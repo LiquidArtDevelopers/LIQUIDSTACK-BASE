@@ -5,6 +5,24 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-09-21
+
+### Added
+
+- Commerce queda seleccionado por defecto junto con WebAdmin y Blog, con sus
+  26 ficheros canónicos, catálogo multidioma, consultas mediante lista de
+  interés y entrega diferida de sus dos correos a través de outbox.
+- BASE documenta y distribuye las tres migraciones iniciales de Commerce sin
+  ejecutarlas automáticamente.
+
+### Changed
+
+- Los proyectos nuevos parten de CORE `^1.33`, la primera línea compatible con
+  Commerce.
+- La superficie pública de Commerce nace cerrada; cada proyecto debe preparar
+  y validar su catálogo antes de activar `public.enabled` y, si lo desea, el
+  contador público de consultas mediante `social_proof.enabled`.
+
 ## [1.2.1] - 2026-09-21
 
 ### Fixed

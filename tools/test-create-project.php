@@ -14,6 +14,36 @@ declare(strict_types=1);
 
 final class CreateProjectProbe
 {
+    /** @var list<string> */
+    private const COMMERCE_PROJECT_TARGETS = [
+        'App/app/_moduleCommercePublic.php',
+        'App/app/commerce/CommercePresentationAdapter.php',
+        'App/config/languages/commerce/en.json',
+        'App/config/languages/commerce/es.json',
+        'App/config/languages/commerce/eu.json',
+        'App/config/modules/commerce.php',
+        'App/controllers/_moduleCommerceResources.php',
+        'App/controllers/artCommerceItem01.php',
+        'App/controllers/sectionCommerceCatalog01.php',
+        'App/controllers/sectionCommerceInquiry01.php',
+        'App/templates/_artCommerceItem01.html',
+        'App/templates/_sectionCommerceCatalog01.html',
+        'App/templates/_sectionCommerceInquiry01.html',
+        'App/views/commerce.php',
+        'App/views/commerce-inquiry.php',
+        'App/views/commerce-item.php',
+        'src/js/commerce.js',
+        'src/js/commerceInquiry.js',
+        'src/js/commerceItem.js',
+        'src/js/resources/_commerce.js',
+        'src/scss/commerce.scss',
+        'src/scss/commerceInquiry.scss',
+        'src/scss/commerceItem.scss',
+        'src/scss/resources/_artCommerceItem01.scss',
+        'src/scss/resources/_sectionCommerceCatalog01.scss',
+        'src/scss/resources/_sectionCommerceInquiry01.scss',
+    ];
+
     private string $root;
     private string $temporaryRoot;
     private string $workspace;
@@ -559,14 +589,19 @@ final class CreateProjectProbe
                 "create-project generó {$forbidden} antes del bootstrap manual."
             );
         }
-        foreach ([
+        $requiredFiles = array_merge([
             'composer.json',
             'package.json',
             'package-lock.json',
             '.env.example',
             '.npmrc.example',
             'example_liquidstack_dev.sql',
-        ] as $required) {
+        ], self::COMMERCE_PROJECT_TARGETS);
+        $this->assert(
+            count(self::COMMERCE_PROJECT_TARGETS) === 26,
+            'El contrato Commerce debe enumerar sus 26 destinos canónicos.'
+        );
+        foreach ($requiredFiles as $required) {
             $this->assert(
                 is_file($projectDirectory . '/' . $required),
                 "create-project no copió {$required}."
@@ -581,6 +616,10 @@ final class CreateProjectProbe
         );
         $packageLock = $this->readJsonFile(
             $projectDirectory . '/package-lock.json'
+        );
+        $this->assert(
+            ($composer['require']['liquidstack/commerce'] ?? null) === '*',
+            'create-project no conservó el selector lógico Commerce.'
         );
         $environmentLines = preg_split(
             '/\R/',
