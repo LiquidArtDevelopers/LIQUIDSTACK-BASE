@@ -790,7 +790,7 @@
         "App/controllers/navMegamenu01.php": {
             "source": "stubs/App/controllers/navMegamenu01.php",
             "fingerprints": [
-                "sha256:5ee5f36363f2e2212ec8051879ffd00c98b172369e557c4ad309845082f96923"
+                "sha256:4963d1ff0269b39197f3932c8488a372050d4aaad0052d588003012b26749a16"
             ],
             "group": "resource:navMegamenu01"
         },
@@ -874,7 +874,7 @@
         "App/controllers/sectionCommerceCatalog01.php": {
             "source": "modules/commerce/resources/project/App/controllers/sectionCommerceCatalog01.php",
             "fingerprints": [
-                "sha256:2fa820c7893647c07b1575d2f26dd3a11e19679f80ef11c45508a322d4d0e1ba"
+                "sha256:4d55c6a8828ada67c1d1f46840fc4124ce19d8e02af1d68cc2f970a59ac22dcf"
             ],
             "group": "module:commerce:resource-sectionCommerceCatalog01"
         },
@@ -1802,7 +1802,7 @@
         "App/views/_showroom.php": {
             "source": "stubs/App/views/_showroom.php",
             "fingerprints": [
-                "sha256:d4a447fee9ace2bfc09a236b71e919ec502a005035cca081087142d795cda07a"
+                "sha256:f0b8eeb3de8925b9d6c47a7a4e0db911a5ccf1ae114f294ff548524a49c93a9c"
             ],
             "group": "catalog:showroom"
         },
@@ -1854,6 +1854,13 @@
                 "sha256:5a08be23fa14abdd3bccc1ef9d715fd51f3ce75a41a0a11f29243848e72a178e"
             ],
             "group": "catalog:showroom"
+        },
+        "App/views/showroom/_commerce.php": {
+            "source": "modules/commerce/resources/project/App/views/showroom/_commerce.php",
+            "fingerprints": [
+                "sha256:fd73ab74a8cce58015cd666959b93c050528b437062f2c0acbe22837c842ac8a"
+            ],
+            "group": "module:commerce:showroom-hooks"
         },
         "App/views/showroom/_common.php": {
             "source": "stubs/App/views/showroom/_common.php",
@@ -3055,6 +3062,13 @@
             ],
             "group": "catalog:showroom"
         },
+        "src/js/showroom/commerce.js": {
+            "source": "modules/commerce/resources/project/src/js/showroom/commerce.js",
+            "fingerprints": [
+                "sha256:6df9b4b82b31056caaf87e07bbc11498be67a915558bd3c656926f7557b85fb3"
+            ],
+            "group": "module:commerce:showroom-hooks"
+        },
         "src/js/showroom/common.js": {
             "source": "src/js/showroom/common.js",
             "fingerprints": [
@@ -4053,6 +4067,13 @@
                 "sha256:ed58e41ee5a35cd3863943e01fd1a694b45616e1920d2c028841325e6cdeb078"
             ],
             "group": "catalog:showroom"
+        },
+        "src/scss/showroom/commerce.scss": {
+            "source": "modules/commerce/resources/project/src/scss/showroom/commerce.scss",
+            "fingerprints": [
+                "sha256:5722bd2b0807421450dba3c7b3d53a32839339e59b2f60d1ae3db44eda1d518d"
+            ],
+            "group": "module:commerce:showroom-hooks"
         },
         "src/scss/showroom/common.scss": {
             "source": "src/scss/showroom/common.scss",

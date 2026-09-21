@@ -4368,11 +4368,19 @@
         "href": "#artAuth02-00-heading",
         "title": "Volver al formulario de acceso"
     },
+
     "hero01_00_img": {
         "src": "assets/img/dummy/dummy01.avif",
         "alt": "Imagen de prueba para hero01",
         "title": "Fondo editable de hero01",
         "width": 2560,
         "height": 1600
+    },
+
+    "showroom_catalog_category_commerce_label": {
+        "text": "Commerce"
+    },
+    "showroom_catalog_category_commerce_description": {
+        "text": "Catálogo, ficha y solicitud de información de Commerce."
     }
 }

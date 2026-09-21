@@ -72,6 +72,7 @@ final class CommerceContractTest extends TestCase
             'App/templates/_artCommerceItem01.html',
             'App/templates/_sectionCommerceCatalog01.html',
             'App/templates/_sectionCommerceInquiry01.html',
+            'App/views/showroom/_commerce.php',
             'App/views/commerce.php',
             'App/views/commerce-inquiry.php',
             'App/views/commerce-item.php',
@@ -79,17 +80,114 @@ final class CommerceContractTest extends TestCase
             'src/js/commerceInquiry.js',
             'src/js/commerceItem.js',
             'src/js/resources/_commerce.js',
+            'src/js/showroom/commerce.js',
             'src/scss/commerce.scss',
             'src/scss/commerceInquiry.scss',
             'src/scss/commerceItem.scss',
             'src/scss/resources/_artCommerceItem01.scss',
             'src/scss/resources/_sectionCommerceCatalog01.scss',
             'src/scss/resources/_sectionCommerceInquiry01.scss',
+            'src/scss/showroom/commerce.scss',
         ];
 
-        self::assertCount(26, $files);
+        self::assertCount(29, $files);
         foreach ($files as $file) {
             self::assertFileExists($this->root . '/' . $file);
+        }
+    }
+
+    public function testShowroomFixturesExerciseCommerceWithoutBecomingCatalogData(): void
+    {
+        $partialPath = $this->root . '/App/views/showroom/_commerce.php';
+        $partial = (string) file_get_contents($partialPath);
+        $javascript = (string) file_get_contents(
+            $this->root . '/src/js/showroom/commerce.js'
+        );
+        $styles = (string) file_get_contents(
+            $this->root . '/src/scss/showroom/commerce.scss'
+        );
+
+        preg_match_all(
+            "/\['[a-z0-9-]+', 'MX-APP-[0-9]{3}'/",
+            $partial,
+            $fixtureMatches
+        );
+        self::assertCount(20, $fixtureMatches[0] ?? []);
+        self::assertSame(
+            20,
+            count(array_unique($fixtureMatches[0] ?? [])),
+            'Cada prenda Matrix del showroom debe tener identidad propia.'
+        );
+
+        foreach ([
+            "'outerwear'",
+            "'tops'",
+            "'bottoms'",
+            "'dresses'",
+            "'footwear'",
+            "'accessories'",
+            "'bags'",
+            "'technical'",
+            "'unisex'",
+            "'urban'",
+            "'limited'",
+            "'new'",
+            "controller('sectionCommerceCatalog01'",
+            "controller('artCommerceItem01'",
+            "controller('sectionCommerceInquiry01'",
+            "'development_fixture' => '1'",
+        ] as $contract) {
+            self::assertStringContainsString($contract, $partial);
+        }
+
+        foreach ([
+            'PDO',
+            'INSERT INTO',
+            'CommercePresentationAdapter',
+            '_moduleCommercePublic',
+            'ls_commerce_',
+        ] as $runtimeDependency) {
+            self::assertStringNotContainsString(
+                $runtimeDependency,
+                $partial,
+                'Los ejemplos del showroom no pueden depender del runtime ni de la DB.'
+            );
+        }
+
+        self::assertStringContainsString(
+            "from '../resources/_commerce.js'",
+            $javascript
+        );
+        self::assertStringContainsString('cleanupCommerce();', $javascript);
+        foreach ([
+            "@use '../resources/artCommerceItem01';",
+            "@use '../resources/sectionCommerceCatalog01';",
+            "@use '../resources/sectionCommerceInquiry01';",
+        ] as $resourceImport) {
+            self::assertStringContainsString($resourceImport, $styles);
+        }
+
+        $fixtureRealPath = realpath($partialPath);
+        self::assertNotFalse($fixtureRealPath);
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator(
+                $this->root . '/App',
+                FilesystemIterator::SKIP_DOTS
+            )
+        );
+        foreach ($iterator as $file) {
+            if (
+                !$file->isFile()
+                || realpath($file->getPathname()) === $fixtureRealPath
+            ) {
+                continue;
+            }
+
+            self::assertStringNotContainsString(
+                'MX-APP-',
+                (string) file_get_contents($file->getPathname()),
+                'Las prendas Matrix solo pueden existir en el partial del showroom.'
+            );
         }
     }
 

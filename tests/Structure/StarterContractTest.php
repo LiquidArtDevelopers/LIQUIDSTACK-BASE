@@ -372,6 +372,7 @@ final class StarterContractTest extends TestCase
                 'catalog_hrefs' => [
                     'services' => 'servicios',
                     'blog' => 'blog',
+                    'commerce' => 'comercio',
                     'contactLink' => 'contacto',
                 ],
             ],
@@ -383,6 +384,7 @@ final class StarterContractTest extends TestCase
                 'catalog_hrefs' => [
                     'services' => 'serbitzuak',
                     'blog' => 'blog',
+                    'commerce' => 'merkataritza',
                     'contactLink' => 'kontaktua',
                 ],
             ],
@@ -419,16 +421,55 @@ final class StarterContractTest extends TestCase
         }
         self::assertSame($catalogKeys['es'], $catalogKeys['eu']);
 
+        $navigationFactoryPath = $root . '/App/config/public-navigation.php';
+        self::assertFileExists($navigationFactoryPath);
+        $navigationFactory = require $navigationFactoryPath;
+        self::assertIsCallable($navigationFactory);
+
+        $blogLink = [[
+            'link' => 'navMegamenu01_00_blog',
+            'text' => 'navMegamenu01_00_blogText',
+        ]];
+        self::assertSame($blogLink, $navigationFactory('es', [
+            'public' => ['enabled' => false],
+            'public_paths' => ['es' => '/es/comercio'],
+        ]));
+        self::assertSame(
+            [...$blogLink, [
+                'link' => 'navMegamenu01_00_commerce',
+                'text' => 'navMegamenu01_00_commerceText',
+                'href' => '/es/comercio-a-medida',
+            ]],
+            $navigationFactory('es', [
+                'public' => ['enabled' => true],
+                'public_paths' => ['es' => '/es/comercio-a-medida'],
+            ]),
+            'El menu debe respetar el path exacto configurado por el proyecto.'
+        );
+        self::assertSame($blogLink, $navigationFactory('es', [
+            'public' => ['enabled' => true],
+            'public_paths' => ['es' => 'https://example.com/commerce'],
+        ]));
+
         foreach ([$navigation, $footer] as $publicInclude) {
             self::assertStringContainsString(
                 "'show_private_access' => false",
                 $publicInclude
             );
             self::assertStringContainsString(
-                "'link' => 'navMegamenu01_00_blog'",
+                "../config/public-navigation.php",
+                $publicInclude
+            );
+            self::assertStringContainsString(
+                '$liquidstackPublicNavigation(',
                 $publicInclude
             );
         }
+
+        self::assertStringContainsString(
+            "\$publicLinkKey['href']",
+            $controller
+        );
 
         self::assertLessThan(
             strpos($controller, 'contactLink'),
@@ -574,6 +615,7 @@ final class StarterContractTest extends TestCase
             'forms-interactive',
             'modules-sections',
             'blog',
+            'commerce',
         ];
 
         foreach (['es', 'eu'] as $language) {
@@ -618,6 +660,14 @@ final class StarterContractTest extends TestCase
         self::assertStringContainsString(
             "import.meta.glob('./showroom/local/*.js')",
             $showroomEntry
+        );
+        self::assertStringContainsString(
+            "case 'commerce':",
+            $showroomShell
+        );
+        self::assertStringContainsString(
+            "'/showroom/_commerce.php'",
+            $showroomShell
         );
         self::assertFileExists(
             $root . '/.liquidstack/core/managed-files.json'

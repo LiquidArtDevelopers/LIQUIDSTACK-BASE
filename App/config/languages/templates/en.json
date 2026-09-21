@@ -4360,5 +4360,11 @@
         "title": "Editable hero01 background",
         "width": 2560,
         "height": 1600
+    },
+    "showroom_catalog_category_commerce_label": {
+        "text": "Commerce"
+    },
+    "showroom_catalog_category_commerce_description": {
+        "text": "Commerce catalogue, item and inquiry resources."
     }
 }

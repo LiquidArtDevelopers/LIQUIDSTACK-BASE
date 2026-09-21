@@ -35,6 +35,13 @@
     "navMegamenu01_00_blogText": {
         "text": "Blog"
     },
+    "navMegamenu01_00_commerce": {
+        "title": "Tienda",
+        "href": "comercio"
+    },
+    "navMegamenu01_00_commerceText": {
+        "text": "Tienda"
+    },
     "navMegamenu01_00_contactLink": {
         "title": "Contacto",
         "href": "contacto"

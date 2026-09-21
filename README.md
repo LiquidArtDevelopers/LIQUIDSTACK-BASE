@@ -663,7 +663,7 @@ footer y consentimiento pueden mantenerse coherentes con el resto de la web.
 
 ## Commerce: preparar antes de publicar
 
-BASE instala el selector `liquidstack/commerce` y sus 26 ficheros canónicos,
+BASE instala el selector `liquidstack/commerce` y sus 29 ficheros canónicos,
 pero `App/config/modules/commerce.php` mantiene `public.enabled=false`. Así se
 puede preparar el catálogo en WebAdmin sin reclamar todavía rutas públicas. Los
 paths de catálogo y lista de interés se derivan de `App/config/langs.php`: hay
@@ -671,6 +671,22 @@ segmentos propios para español, euskera e inglés y un fallback neutral para
 otros locales. No dupliques esas rutas en `App/config/routes/get.php` ni en
 `App/config/rutas.js`; el provider de CORE las resuelve después de las rutas
 estáticas del proyecto.
+
+El showroom incorpora la categoría `/es/showroom/commerce` (y su equivalente
+por idioma) con los tres recursos públicos y veinte prendas ficticias inspiradas
+en Matrix. Son fixtures de presentación declaradas exclusivamente en
+`App/views/showroom/_commerce.php`: sirven para probar tarjetas, búsqueda,
+taxonomías, ficha y lista de interés, pero nunca se insertan en la DB, aparecen
+en WebAdmin ni alimentan el catálogo público. Al crear productos reales no hay
+que ocultarlas ni borrarlas porque ambas fuentes están totalmente separadas.
+
+La navegación sigue siendo propiedad del proyecto. BASE compone sus enlaces en
+`App/config/public-navigation.php`: Blog se muestra siempre y Tienda se añade
+solo cuando `commerce.php` tiene `public.enabled=true`, usando sin reconstruir
+el path exacto de `public_paths` para el locale activo. Un proyecto consumidor
+ya existente debe adoptar expresamente ese helper y sus claves localizadas en
+sus propios `_nav.php`, `_footer.php` y catálogos; actualizar CORE no sobrescribe
+automáticamente menús ya personalizados.
 
 Commerce comparte con WebAdmin la conexión `LIQUIDSTACK_DB_*`, el transporte
 SMTP y la biblioteca Media. Las tres migraciones iniciales son

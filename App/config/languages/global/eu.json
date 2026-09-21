@@ -35,6 +35,13 @@
     "navMegamenu01_00_blogText": {
         "text": "Bloga"
     },
+    "navMegamenu01_00_commerce": {
+        "title": "Denda",
+        "href": "merkataritza"
+    },
+    "navMegamenu01_00_commerceText": {
+        "text": "Denda"
+    },
     "navMegamenu01_00_contactLink": {
         "title": "Kontaktua",
         "href": "kontaktua"

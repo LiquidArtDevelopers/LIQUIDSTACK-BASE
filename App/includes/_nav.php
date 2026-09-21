@@ -20,13 +20,15 @@
     </div>
     <?php
     // Global megamenu rendered via controller
+    $liquidstackPublicNavigation = require __DIR__
+        . '/../config/public-navigation.php';
     echo controller('navMegamenu01', 0, [
         'offices' => [],
         'show_private_access' => false,
-        'public_link_keys' => [[
-            'link' => 'navMegamenu01_00_blog',
-            'text' => 'navMegamenu01_00_blogText',
-        ]],
+        'public_link_keys' => $liquidstackPublicNavigation(
+            (string) ($GLOBALS['lang'] ?? '')
+        ),
     ]);
+    unset($liquidstackPublicNavigation);
     ?>
 </nav>

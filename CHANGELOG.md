@@ -5,6 +5,23 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-09-21
+
+### Added
+
+- El showroom incorpora una categoría Commerce con sus tres recursos y veinte
+  prendas Matrix localizadas para probar catálogo, taxonomías, ficha y lista de
+  interés sin crear registros en la DB ni contenido en WebAdmin.
+- La mochila canónica de Commerce suma los hooks PHP, JavaScript y SCSS del
+  showroom y pasa de 26 a 29 ficheros gestionados.
+
+### Changed
+
+- La navegación project-owned de BASE añade Tienda solo cuando la superficie
+  pública de Commerce está habilitada y conserva el path exacto configurado por
+  locale; los consumidores existentes deben adoptar esta composición de forma
+  explícita para no sobrescribir sus menús personalizados.
+
 ## [1.3.0] - 2026-09-21
 
 ### Added
