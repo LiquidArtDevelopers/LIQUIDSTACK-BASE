@@ -41,6 +41,11 @@ fs.writeFileSync(envPath, merged);
 const appliedKeys = Object.keys(profileOverrides);
 const summary = appliedKeys.length ? appliedKeys.join(', ') : 'sin claves nuevas';
 console.log(`Perfil "${profile}" aplicado en .env (${summary}).`);
+if (appliedKeys.includes('LIQUIDSTACK_DB_HOST')) {
+  console.log(
+    'El endpoint de la DB modular ha cambiado con el perfil; ejecuta doctor antes de cualquier mutación.',
+  );
+}
 
 function parseEnv(content) {
   return content
@@ -69,7 +74,7 @@ function applyOverrides(baseContent, overrides) {
   const lines = baseContent.split(/\r?\n/);
 
   for (const [key, value] of Object.entries(overrides)) {
-    const pattern = new RegExp(`^${escapeRegExp(key)}\s*=`, 'i');
+    const pattern = new RegExp(`^${escapeRegExp(key)}\\s*=`, 'i');
     let replaced = false;
 
     for (let i = 0; i < lines.length; i += 1) {

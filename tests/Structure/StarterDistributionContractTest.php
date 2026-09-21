@@ -29,6 +29,18 @@ final class StarterDistributionContractTest extends TestCase
             $composer['config']['allow-plugins']['liquidstack/core'] ?? false
         );
         self::assertSame(
+            ['tools/ProjectInitializer.php'],
+            $composer['autoload']['classmap'] ?? null
+        );
+        self::assertSame(
+            ['LiquidStackBase\\ProjectInitializer::initialize'],
+            $composer['scripts']['post-create-project-cmd'] ?? null
+        );
+        self::assertSame(
+            ['LiquidStackBase\\ProjectInitializer::initialize'],
+            $composer['scripts']['project:init'] ?? null
+        );
+        self::assertSame(
             [
                 'Composer\\Config::disableProcessTimeout',
                 '@php tools/test-create-project.php',
@@ -43,6 +55,41 @@ final class StarterDistributionContractTest extends TestCase
             $composer['scripts']['release'] ?? null
         );
         self::assertFileExists($this->root . '/tools/release.php');
+        self::assertFileExists(
+            $this->root . '/tools/ProjectInitializer.php'
+        );
+
+        $initializer = (string) file_get_contents(
+            $this->root . '/tools/ProjectInitializer.php'
+        );
+        foreach ([
+            "'liquid-art-developers/' . \$slug",
+            "'liquidstack-' . \$slug",
+            "unset(\$composer['homepage'], \$composer['support'])",
+            "unset(\$composer['scripts']['project:init'])",
+            "getLocker()->updateHash(",
+            "'tools/release.php'",
+            "'tools/test-create-project.php'",
+            "'tests/Structure/StarterContractTest.php'",
+            "'tests/Structure/StarterDistributionContractTest.php'",
+        ] as $initializerContract) {
+            self::assertStringContainsString(
+                $initializerContract,
+                $initializer
+            );
+        }
+        foreach ([
+            'npm install',
+            'npm ci',
+            'liquidstack:migrate',
+            'liquidstack:webadmin:onboard',
+            "file_put_contents(\$this->path('.env')",
+        ] as $forbiddenInitializerEffect) {
+            self::assertStringNotContainsString(
+                $forbiddenInitializerEffect,
+                $initializer
+            );
+        }
 
         $scripts = strtolower((string) json_encode(
             $composer['scripts'] ?? [],

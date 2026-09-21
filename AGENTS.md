@@ -3,6 +3,7 @@
 Las instrucciones operativas viven en `.codex/skills`:
 
 - `dev-stack`: desarrollo y recursos LiquidStack.
+- `liquidstack-module-operations`: activación y operación segura de WebAdmin y Blog.
 - `liquidstack-resource-migration`: promoción entre un consumidor y CORE.
 - `seo-content`: arquitectura y redacción SEO comunes.
 

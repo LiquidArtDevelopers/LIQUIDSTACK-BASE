@@ -8,7 +8,8 @@ declare(strict_types=1);
  * It installs BASE through Composer's create-project flow (from a local
  * archive, the canonical VCS repository or Packagist), resolves fresh PHP
  * dependencies and runs CORE's synchronizer twice. It deliberately never
- * creates .env, invokes npm or touches migration/onboarding commands.
+ * creates .env, invokes npm or touches migration/onboarding commands. The
+ * real post-create identity hook does run and is part of this contract.
  */
 
 final class CreateProjectProbe
@@ -60,7 +61,7 @@ final class CreateProjectProbe
     {
         $artifactDirectory = $this->workspace . '/artifacts';
         $sourceDirectory = $this->workspace . '/source';
-        $projectDirectory = $this->workspace . '/project';
+        $projectDirectory = $this->workspace . '/client-project';
 
         $this->makeDirectory($this->workspace);
         $createArguments = [
@@ -116,29 +117,30 @@ final class CreateProjectProbe
             $createArguments[] = '--prefer-dist';
             $createArguments[] = '--remove-vcs';
         }
+        $recoveryArguments = $createArguments;
         array_push(
             $createArguments,
-            '--no-install',
-            '--no-scripts',
             '--no-interaction',
             '--no-ansi'
         );
 
         $this->runComposer($createArguments, $this->workspace);
 
-        $this->assertProjectStartsClean($projectDirectory);
+        $this->assertInitializedIdentity($projectDirectory, 'client-project');
         $protected = $this->protectedHashes($projectDirectory);
 
         $this->runComposer([
-            'install',
+            'validate',
+            '--strict',
+            '--no-check-publish',
+            '--no-check-all',
             '--no-interaction',
-            '--no-progress',
             '--no-ansi',
         ], $projectDirectory);
 
         $this->assert(
             is_file($projectDirectory . '/composer.lock'),
-            'composer install no generó el lock propio del nuevo proyecto.'
+            'create-project no generó el lock propio del nuevo proyecto.'
         );
         $composerLockHash = hash_file(
             'sha256',
@@ -150,6 +152,10 @@ final class CreateProjectProbe
             );
         }
         $protected['composer.lock'] = $composerLockHash;
+
+        if ($this->sourceMode === 'archive') {
+            $this->assertRecoveryFlow($recoveryArguments);
+        }
 
         $this->assert(is_dir($projectDirectory . '/vendor/liquidstack/core'),
             'composer install no instaló liquidstack/core.');
@@ -432,6 +438,11 @@ final class CreateProjectProbe
             '.npmrc.example',
             'CHANGELOG.md',
             'example_liquidstack_dev.sql',
+            'tools/ProjectInitializer.php',
+            'tools/release.php',
+            'tools/test-create-project.php',
+            'tests/Structure/StarterContractTest.php',
+            'tests/Structure/StarterDistributionContractTest.php',
         ] as $requiredFile) {
             $this->assert(
                 isset($entries[$requiredFile]),
@@ -447,19 +458,101 @@ final class CreateProjectProbe
         $zip->close();
     }
 
-    private function assertProjectStartsClean(string $projectDirectory): void
+    /** @param list<string> $createArguments */
+    private function assertRecoveryFlow(array $createArguments): void
     {
+        $projectDirectory = $this->workspace . '/recovery-project';
+        $createArguments[2] = $projectDirectory;
+        array_push(
+            $createArguments,
+            '--no-install',
+            '--no-scripts',
+            '--no-interaction',
+            '--no-ansi'
+        );
+
+        $this->runComposer($createArguments, $this->workspace);
+
+        $composer = $this->readJsonFile(
+            $projectDirectory . '/composer.json'
+        );
+        $this->assert(
+            ($composer['name'] ?? null) === 'liquidstack/base',
+            'El modo recovery debe conservar BASE hasta ejecutar project:init.'
+        );
+        foreach ([
+            'tools/ProjectInitializer.php',
+            'tools/release.php',
+            'tools/test-create-project.php',
+            'tests/Structure/StarterContractTest.php',
+            'tests/Structure/StarterDistributionContractTest.php',
+        ] as $baseArtifact) {
+            $this->assert(
+                is_file($projectDirectory . '/' . $baseArtifact),
+                "El recovery perdió antes de tiempo {$baseArtifact}."
+            );
+        }
         foreach ([
             'composer.lock',
+            'vendor',
+            '.env',
+            '.npmrc',
+            'node_modules',
+        ] as $absent) {
+            $this->assert(
+                !file_exists($projectDirectory . '/' . $absent),
+                "create-project --no-install/--no-scripts generó {$absent}."
+            );
+        }
+
+        $this->runComposer([
+            'install',
+            '--no-scripts',
+            '--no-interaction',
+            '--no-progress',
+            '--no-ansi',
+        ], $projectDirectory);
+        $this->runComposer([
+            'project:init',
+            '--no-interaction',
+            '--no-ansi',
+        ], $projectDirectory);
+        $this->runComposer([
+            'validate',
+            '--strict',
+            '--no-check-publish',
+            '--no-check-all',
+            '--no-interaction',
+            '--no-ansi',
+        ], $projectDirectory);
+
+        $this->assertInitializedIdentity(
+            $projectDirectory,
+            'recovery-project'
+        );
+        $this->assert(
+            is_file($projectDirectory . '/composer.lock'),
+            'El recovery no conservó el lock generado antes de project:init.'
+        );
+    }
+
+    private function assertInitializedIdentity(
+        string $projectDirectory,
+        string $slug
+    ): void
+    {
+        foreach ([
             '.git',
             '.env',
             '.npmrc',
             'auth.json',
-            'vendor',
             'node_modules',
-            'App/tools',
-            'App/bootstrap.php',
             'storage',
+            'tools/ProjectInitializer.php',
+            'tools/release.php',
+            'tools/test-create-project.php',
+            'tests/Structure/StarterContractTest.php',
+            'tests/Structure/StarterDistributionContractTest.php',
         ] as $forbidden) {
             $this->assert(
                 !file_exists($projectDirectory . '/' . $forbidden),
@@ -467,6 +560,8 @@ final class CreateProjectProbe
             );
         }
         foreach ([
+            'composer.json',
+            'package.json',
             'package-lock.json',
             '.env.example',
             '.npmrc.example',
@@ -477,6 +572,105 @@ final class CreateProjectProbe
                 "create-project no copió {$required}."
             );
         }
+
+        $composer = $this->readJsonFile(
+            $projectDirectory . '/composer.json'
+        );
+        $package = $this->readJsonFile(
+            $projectDirectory . '/package.json'
+        );
+        $packageLock = $this->readJsonFile(
+            $projectDirectory . '/package-lock.json'
+        );
+        $environmentLines = preg_split(
+            '/\R/',
+            (string) file_get_contents($projectDirectory . '/.env.example')
+        );
+        $this->assert(
+            is_array($environmentLines),
+            'No se pudo inspeccionar el contrato de entorno distribuido.'
+        );
+        foreach ($environmentLines as $index => $line) {
+            if (preg_match('/^([A-Z][A-Z0-9_]*)=/', $line, $match) !== 1) {
+                continue;
+            }
+            $comment = $environmentLines[$index - 1] ?? '';
+            $this->assert(
+                str_starts_with($comment, '# Función:')
+                    && str_contains($comment, 'Ejemplo:'),
+                ".env.example no documenta {$match[1]} en el proyecto creado."
+            );
+        }
+
+        $this->assert(
+            ($composer['name'] ?? null)
+                === 'liquid-art-developers/' . $slug,
+            'El hook no derivó la identidad Composer desde la carpeta destino.'
+        );
+        $displayName = ucwords(str_replace('-', ' ', $slug));
+        $this->assert(
+            ($composer['description'] ?? null)
+                === "Proyecto web de {$displayName} sobre LiquidStack.",
+            'El hook no declaró la descripción del proyecto cliente.'
+        );
+        $this->assert(
+            ($composer['license'] ?? null) === 'proprietary',
+            'El proyecto cliente no conserva la licencia propietaria.'
+        );
+        $this->assert(
+            !array_key_exists('homepage', $composer)
+                && !array_key_exists('support', $composer),
+            'El proyecto cliente conserva URLs de soporte de BASE.'
+        );
+        foreach ([
+            'post-create-project-cmd',
+            'project:init',
+            'release',
+            'test:create-project',
+        ] as $baseScript) {
+            $this->assert(
+                !array_key_exists($baseScript, $composer['scripts'] ?? []),
+                "El proyecto cliente conserva el script BASE {$baseScript}."
+            );
+        }
+        $this->assert(
+            !isset($composer['autoload']['classmap'])
+                || !in_array(
+                    'tools/ProjectInitializer.php',
+                    $composer['autoload']['classmap'],
+                    true
+                ),
+            'El proyecto cliente conserva el classmap del inicializador.'
+        );
+        $this->assert(
+            ($package['name'] ?? null) === 'liquidstack-' . $slug
+                && ($package['private'] ?? null) === true,
+            'package.json no quedó identificado como proyecto privado.'
+        );
+        $this->assert(
+            ($packageLock['name'] ?? null) === 'liquidstack-' . $slug
+                && ($packageLock['packages']['']['name'] ?? null)
+                    === 'liquidstack-' . $slug,
+            'package-lock.json no sincronizó su identidad raíz.'
+        );
+    }
+
+    /** @return array<string, mixed> */
+    private function readJsonFile(string $path): array
+    {
+        $decoded = json_decode(
+            (string) file_get_contents($path),
+            true,
+            512,
+            JSON_THROW_ON_ERROR
+        );
+        if (!is_array($decoded)) {
+            throw new RuntimeException(
+                basename($path) . ' no contiene un objeto JSON.'
+            );
+        }
+
+        return $decoded;
     }
 
     /** @return array<string, string> */

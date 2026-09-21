@@ -5,6 +5,8 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-09-21
+
 ### Changed
 
 - El repositorio de BASE conserva un lock reproducible para su mantenimiento,
@@ -12,6 +14,27 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
   CORE `^1.31` más reciente y genera el lock propio del nuevo consumidor.
 - WebAdmin y Blog quedan seleccionados explícitamente mediante sus alias
   lógicos; ambos siguen viajando dentro del único paquete físico CORE.
+- `create-project` desvincula automáticamente la identidad de BASE, sincroniza
+  los nombres Composer/npm y retira las herramientas exclusivas de publicación
+  sin crear `.env`, ejecutar npm ni acceder a la base de datos.
+- WebAdmin y Blog usan en proyectos nuevos un único bloque
+  `LIQUIDSTACK_DB_*`; los perfiles de entorno pueden cambiar su host o puerto
+  sin duplicar nombre, usuario o contraseña.
+- El README convierte la puesta en marcha en un recorrido verificable: preflight
+  de runtimes, gate de migraciones, puerto LAD real para onboarding, cierre de
+  Media, DB remota segura, primer Git y promoción coordinada de DB + storage.
+
+### Fixed
+
+- El contrato de entorno conserva una estructura canónica y explica cada
+  variable mediante un comentario inmediato de función y ejemplo; correo,
+  bootstrap, CookieLad y storage quedan claros, y `GSAP_TOKEN` permanece
+  únicamente como secreto del proceso npm.
+- La clave pública `EXAMPLE_ONLY...` queda documentada como sentinel de formato
+  válido pero inseguro; todo proyecto debe reemplazarla por una clave aleatoria
+  privada antes de cualquier uso real.
+- `swap-env` reconoce correctamente espacios alrededor de las asignaciones y
+  avisa cuando un perfil cambia el endpoint de la DB modular.
 
 ## [1.1.1] - 2026-09-18
 

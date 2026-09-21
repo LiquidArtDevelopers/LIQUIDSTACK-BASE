@@ -6,6 +6,33 @@ use PHPUnit\Framework\TestCase;
 
 final class StarterContractTest extends TestCase
 {
+    public function testEveryEnvironmentVariableHasFunctionAndExampleComment(): void
+    {
+        $root = dirname(__DIR__, 2);
+
+        foreach (['.env.example', '.env.development', '.env.production'] as $file) {
+            $lines = preg_split(
+                '/\R/',
+                (string) file_get_contents($root . '/' . $file)
+            );
+            self::assertIsArray($lines);
+
+            foreach ($lines as $index => $line) {
+                if (preg_match('/^([A-Z][A-Z0-9_]*)=/', $line, $match) !== 1) {
+                    continue;
+                }
+
+                $comment = $lines[$index - 1] ?? '';
+                self::assertStringStartsWith(
+                    '# Función:',
+                    $comment,
+                    $file . ' debe explicar ' . $match[1] . '.'
+                );
+                self::assertStringContainsString('Ejemplo:', $comment);
+            }
+        }
+    }
+
     public function testStarterEnvironmentAndHeadContainNoClientCredentials(): void
     {
         $root = dirname(__DIR__, 2);
@@ -26,11 +53,21 @@ final class StarterContractTest extends TestCase
 
         self::assertStringContainsString('LANG_SKIP_UPDATE=0', $environment);
         self::assertStringContainsString(
-            'BBDD_NAME=example_liquidstack_dev',
+            'LIQUIDSTACK_DB_NAME=example_liquidstack_dev',
             $environment
         );
-        self::assertStringContainsString('BBDD_USER=example_user', $environment);
-        self::assertStringContainsString('BBDD_PASS=example_pass', $environment);
+        self::assertStringContainsString(
+            'LIQUIDSTACK_DB_USER=example_user',
+            $environment
+        );
+        self::assertStringContainsString(
+            'LIQUIDSTACK_DB_PASSWORD=example_pass',
+            $environment
+        );
+        self::assertStringContainsString(
+            'LIQUIDSTACK_DB_HOST=127.0.0.1',
+            $environment
+        );
         self::assertStringContainsString(
             'LIQUIDSTACK_WEBADMIN_SECURITY_KEY='
                 . 'EXAMPLE_ONLY_CHANGE_ME_BEFORE_REAL_USE_0000',
@@ -45,10 +82,30 @@ final class StarterContractTest extends TestCase
             $environment
         );
         self::assertStringContainsString(
-            'No desplegar estas credenciales en producción.',
+            'LIQUIDSTACK_WEBADMIN_MAIL_TRANSPORT=smtp',
             $environment
         );
-        self::assertStringContainsString('DEMO PÚBLICA', $environment);
+        self::assertStringContainsString(
+            'MAIL_ENCRYPTION=smtps',
+            $environment
+        );
+        self::assertStringContainsString(
+            "MAIL_FROM_NAME='NOMBRE EMPRESA'",
+            $environment
+        );
+        self::assertStringContainsString(
+            'LIQUIDSTACK_WEBADMIN_MEDIA_STORAGE_ROOT=',
+            $environment
+        );
+        self::assertStringContainsString(
+            'LIQUIDSTACK_BLOG_SITEMAP_CACHE_ROOT=',
+            $environment
+        );
+        self::assertStringContainsString(
+            'No versionar `.env` cuando contenga credenciales reales.',
+            $environment
+        );
+        self::assertStringContainsString('cambia la demo', $environment);
         self::assertMatchesRegularExpression(
             '/^COOKIE_LAD_KEY=\s*$/m',
             $environment
@@ -62,6 +119,11 @@ final class StarterContractTest extends TestCase
         self::assertStringNotContainsString('isotipo.svg', $head);
         self::assertStringNotContainsString('atleticosansebastian', $apache);
         self::assertStringNotContainsString('BBDD_PREFIX=', $environment);
+        self::assertDoesNotMatchRegularExpression(
+            '/^BBDD_(?:SERVER|NAME|USER|PASS)=/m',
+            $environment
+        );
+        self::assertStringNotContainsString("\nGSAP_TOKEN=", $environment);
         self::assertStringNotContainsString('API_USER_REQUEST=', $environment);
         self::assertStringNotContainsString('API_TOKEN_AUTH=', $environment);
         self::assertStringNotContainsString('dinaserver.com', $environment);
@@ -121,6 +183,37 @@ final class StarterContractTest extends TestCase
         ] as $required) {
             self::assertStringContainsString($required, $sql);
         }
+    }
+
+    public function testEnvironmentProfilesSwitchOnlyRuntimeFacingValues(): void
+    {
+        $root = dirname(__DIR__, 2);
+        $development = (string) file_get_contents(
+            $root . '/.env.development'
+        );
+        $production = (string) file_get_contents(
+            $root . '/.env.production'
+        );
+        $swapScript = (string) file_get_contents(
+            $root . '/scripts/swap-env.mjs'
+        );
+
+        foreach ([$development, $production] as $profile) {
+            self::assertStringContainsString(
+                'LIQUIDSTACK_DB_HOST=127.0.0.1',
+                $profile
+            );
+            self::assertStringNotContainsString(
+                'LIQUIDSTACK_DB_PASSWORD=',
+                $profile
+            );
+            self::assertDoesNotMatchRegularExpression(
+                '/^BBDD_(?:SERVER|NAME|USER|PASS)=/m',
+                $profile
+            );
+        }
+
+        self::assertStringContainsString('}\\\\s*=`', $swapScript);
     }
 
     public function testLegacyMembershipSurfaceIsAbsentFromTheStarter(): void
@@ -438,7 +531,7 @@ final class StarterContractTest extends TestCase
             $webAdmin['database']['connection'],
             $blog['database']['connection']
         );
-        self::assertSame('shared', $blog['database']['connection']);
+        self::assertSame('liquidstack', $blog['database']['connection']);
         self::assertNotSame(
             $webAdmin['database']['table_prefix'],
             $blog['database']['table_prefix']

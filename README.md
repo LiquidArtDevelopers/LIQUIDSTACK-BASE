@@ -51,10 +51,15 @@ el binario y su configuración efectivos:
 
 ```powershell
 where.exe php
+where.exe composer
 php --ini
+php -r 'echo PHP_BINARY, PHP_EOL;'
 php -r 'echo implode('','', PDO::getAvailableDrivers()), PHP_EOL;'
-php -r 'var_export((bool) ini_get(''zend.exception_ignore_args'')); echo PHP_EOL;'
-php -r 'var_export(defined(''PASSWORD_ARGON2ID'')); echo PHP_EOL;'
+php -r 'echo ini_get(''zend.exception_ignore_args'') ? ''On'' : ''Off'', PHP_EOL;'
+php -r 'echo in_array(''argon2id'', password_algos(), true) ? ''Argon2id disponible'' : ''Argon2id ausente'', PHP_EOL;'
+composer --version
+node --version
+npm --version
 ```
 
 WebAdmin sobre MySQL/MariaDB necesita, como mínimo:
@@ -96,30 +101,39 @@ composer create-project liquidstack/base mi-proyecto "^1.0" `
     --prefer-dist --remove-vcs
 ```
 
-Ambas órdenes requieren una etiqueta compatible; la primera es `v1.0.0`.
-`dev-main` queda reservado para probar cambios de BASE antes de una release y
-no es una versión estable para proyectos de cliente.
+Ambas órdenes eligen la etiqueta estable más reciente compatible con `^1.0`
+(cualquier release `1.x`; `v1.0.0` fue la primera). `dev-main` queda reservado
+para probar cambios de BASE antes de una release y no es una versión estable
+para proyectos de cliente.
 
 El paquete distribuido no incluye el `composer.lock` interno de BASE.
 `create-project` resuelve la versión más reciente de CORE compatible con la
 restricción declarada, activa los selectores lógicos de WebAdmin y Blog y genera
-un `composer.lock` propio para el nuevo proyecto. No crea `.env`, no instala
-paquetes npm, no conecta con la DB, no migra, no crea cuentas y no ejecuta
-onboarding. Después:
+un `composer.lock` propio para el nuevo proyecto. El inicializador de BASE
+desvincula además la identidad de la plantilla a partir del nombre de la carpeta.
+No crea `.env`, no instala paquetes npm, no conecta con la DB, no migra, no crea
+cuentas y no ejecuta onboarding. Después sigue este orden:
 
-1. Entra en el directorio y conserva versionados el `composer.lock` recién
-   generado y `package-lock.json`; forman parte del punto de partida
-   reproducible.
-2. Crea el entorno privado de forma explícita:
+1. Entra en el directorio y revisa la identidad generada en `composer.json` y
+   `package.json`. Inicializa el Git del cliente, añade su remoto y completa
+   dominio, `homepage` y `support` cuando existan; el inicializador no los
+   inventa.
+2. Conserva versionados el `composer.lock` recién generado y
+   `package-lock.json`; forman parte del punto de partida reproducible. Antes
+   de configurar servicios, valida la instalación con
+   `composer validate --strict --no-check-publish --no-check-all` y
+   `composer check-platform-reqs --no-dev`.
+3. Crea el entorno privado de forma explícita:
 
    ```powershell
    Copy-Item -LiteralPath '.env.example' -Destination '.env'
    ```
 
-3. Sustituye los valores demo descritos en la siguiente sección. Si vas a
-   importar el snapshot, conserva sus dos emails bootstrap hasta reconciliar
-   las cuentas por primera vez.
-4. Configura el acceso privado a GSAP sin versionar el token. Una opción local
+4. Sustituye todos los valores demo, incluida la clave de seguridad. Elige una
+   única conexión `LIQUIDSTACK_DB_*` para WebAdmin/Blog y configura SMTP antes
+   del onboarding. Si vas a importar el snapshot, conserva sus dos emails
+   bootstrap hasta reconciliar las cuentas por primera vez.
+5. Configura el acceso privado a GSAP sin versionar el token. Una opción local
    en PowerShell es:
 
    ```powershell
@@ -135,29 +149,85 @@ onboarding. Después:
    `auth.json` también está ignorado y excluido del paquete: si Composer exige
    autenticación, usa `COMPOSER_AUTH` o el almacén global del operador. Nunca
    copies `.npmrc` o `auth.json` al repositorio ni al archive del cliente.
-5. Importa el snapshot de ejemplo o parte de una DB vacía.
-6. Ejecuta `composer liquidstack:doctor` antes de levantar el panel.
-7. Personaliza rutas, idiomas, tema, navegación, footer, identidad y copy.
+   `GSAP_TOKEN` es una variable del proceso npm: escribirla en el `.env` PHP no
+   autentica el registro privado.
+6. Decide el destino antes de operar: DB local o remota segura, y snapshot de
+   demo o DB vacía. Sigue exactamente una de las dos rutas documentadas abajo.
+7. Ejecuta en orden `doctor`, plan y dry-run. Si hay migraciones pendientes,
+   detente, crea un backup y aplica solo el plan revisado; repite el dry-run
+   hasta obtener cero pendientes.
+8. Sigue el cierre común documentado abajo: inicializa Media, arranca
+   `npm run lad`, usa el origen real que anuncie LAD para el onboarding, abre
+   las dos invitaciones y realiza el smoke de `/admin`, Blog y web pública.
+9. Ejecuta `composer test`, `npm run build`, revisa `git status`/`git diff` y
+   solo entonces crea el primer commit del proyecto personalizado.
+
+El primer repositorio del cliente se prepara, sustituyendo la URL de ejemplo,
+con:
+
+```powershell
+git init
+git branch -M main
+git remote add origin https://github.com/organizacion/mi-proyecto.git
+```
+
+Antes del primer `git add`, confirma que los secretos y outputs siguen
+ignorados. `git check-ignore` debe devolver las tres rutas:
+
+```powershell
+git check-ignore .env .npmrc public/.vite/manifest.json
+git status --short --ignored
+```
+
+Tras completar el smoke y revisar el lote:
+
+```powershell
+git add -A
+git diff --cached --check
+git status --short
+git commit -m "chore: initialize client project"
+git push -u origin main
+```
 
 ### Desvincular la identidad de la plantilla
 
-Nada más crear el repositorio del cliente:
+El hook one-shot de `create-project` usa el nombre de la carpeta para:
 
-- cambia `name`, `description`, `license`, `homepage` y `support` en
-  `composer.json`;
-- cambia `name` en `package.json` y regenera `package-lock.json` con
-  `npm install --package-lock-only`;
-- configura el nuevo remoto Git del proyecto antes de publicar ningún commit;
-- sustituye este README/CHANGELOG por la documentación del proyecto;
-- después del primer smoke, retira los scripts `release` y
-  `test:create-project` de Composer junto con `tools/release.php`,
-  `tools/test-create-project.php` y el test
-  `tests/Structure/StarterDistributionContractTest.php`. Esos artefactos
-  gobiernan releases de la plantilla BASE, no releases de un cliente.
+- sustituir `liquidstack/base` por
+  `liquid-art-developers/<slug-del-proyecto>`;
+- crear una descripción neutra de proyecto de cliente y conservar la licencia
+  `proprietary`;
+- retirar `homepage` y `support` de BASE, porque todavía no conoce el dominio ni
+  el repositorio del cliente;
+- cambiar `name` en `package.json` y en las dos entradas raíz de
+  `package-lock.json`, sin volver a resolver dependencias;
+- retirar los scripts, herramientas y pruebas que sirven exclusivamente para
+  publicar nuevas releases de BASE.
 
-El `name: liquidstack/base` que llega con `create-project` identifica el
-artefacto de origen; no es una dependencia de runtime y no debe conservarse
-como identidad del nuevo proyecto.
+El inicializador falla cerrado si el directorio no produce un slug de paquete
+válido y nunca crea `.env`, remoto Git, dominio, DB ni cuentas. Revisa después
+el nombre humano y la descripción, añade `homepage` y `support` cuando conozcas
+las URLs reales y configura el nuevo remoto Git. Después del primer smoke,
+adapta README/CHANGELOG a la documentación del cliente, conservando en ella el
+runbook operativo que siga necesitando el proyecto. No dejes enlaces de soporte
+hacia BASE.
+
+El nombre `liquidstack/base` identifica únicamente el artefacto de origen; no
+es una dependencia de runtime ni debe conservarse como identidad del proyecto.
+
+La vía normal no necesita flags adicionales. Si una creación excepcional se
+hizo con `--no-install --no-scripts`, la identidad sigue siendo la de BASE
+porque el hook no pudo ejecutarse. La recuperación segura y explícita es:
+
+```powershell
+composer install --no-scripts
+composer project:init
+composer validate --strict --no-check-publish --no-check-all
+```
+
+`project:init` se elimina a sí mismo al terminar. No ejecutes `create-project`
+solo con `--no-install`: el callback PHP necesita primero el autoload generado
+por Composer.
 
 Si se obtiene BASE mediante un clon manual para mantener la propia plantilla,
 se usa `composer install` con su lock versionado. Para iniciar un cliente con
@@ -188,11 +258,17 @@ no sustituye archivos project-owned de AIWA, ARRO ni de otros consumidores.
 `.env.example` incluye estos defaults públicos para que BASE sea reproducible
 en local:
 
+El orden de sus grupos y el comentario breve `Función` + `Ejemplo` situado
+justo encima de cada variable forman la plantilla canónica. `create-project`
+los entrega sin pasos adicionales a todo proyecto nuevo. Un consumidor antiguo
+puede conservar al final bloques project-owned o legacy, pero no debe alterar
+el orden ni la explicación de las variables comunes.
+
 | Variable | Valor demo |
 | --- | --- |
-| `BBDD_NAME` | `example_liquidstack_dev` |
-| `BBDD_USER` | `example_user` |
-| `BBDD_PASS` | `example_pass` |
+| `LIQUIDSTACK_DB_NAME` | `example_liquidstack_dev` |
+| `LIQUIDSTACK_DB_USER` | `example_user` |
+| `LIQUIDSTACK_DB_PASSWORD` | `example_pass` |
 | `LIQUIDSTACK_WEBADMIN_SECURITY_KEY` | clave pública marcada `EXAMPLE_ONLY...` |
 | superadmin de sistema | `aranaz@webda.eus` |
 | admin del sitio | `aranaz@gmail.com` |
@@ -209,6 +285,71 @@ También deben cambiarse `RAIZ`, `DOMAIN`, `DOMAIN_URL`, todos los `MAIL_*`, los
 datos legales `VITE_BUSINESS_*`, CookieLad y cualquier ruta privada antes de un
 despliegue real. `https://example.com` es un origen reservado, no un dominio de
 producción.
+
+### Referencia rápida del entorno
+
+El bloque SMTP canónico lo comparten los formularios y WebAdmin:
+
+| Variable | Función | ¿Puede quedar vacía? |
+| --- | --- | --- |
+| `MAIL_HOST` | Servidor SMTP | No, si se enviará correo |
+| `MAIL_PORT` | Puerto SMTP, normalmente 465 o 587 | No |
+| `MAIL_ENCRYPTION` | `smtps` o `starttls` | No |
+| `MAIL_USERNAME` | Cuenta autenticada y dirección From | No |
+| `MAIL_PASSWORD` | Credencial SMTP | No |
+| `MAIL_FROM_NAME` | Nombre visible del remitente | No |
+| `MAIL_ADMIN` | Destinatario principal de formularios públicos | No, si hay formularios |
+| `MAIL_LAD` | Copia oculta técnica opcional de formularios | Sí |
+| `MAIL_LAD_BIS` | Segunda copia oculta técnica opcional | Sí |
+| `MAIL_WEB` | Compatibilidad con código project-owned antiguo | Sí; BASE no la usa |
+
+WebAdmin nunca usa `MAIL_ADMIN`, `MAIL_LAD`, `MAIL_LAD_BIS` o `MAIL_WEB` como
+destinatarios de invitaciones o recuperaciones. Envía únicamente a la identidad
+validada por cada flujo. BASE declara
+`LIQUIDSTACK_WEBADMIN_MAIL_TRANSPORT=smtp`; el runtime mantiene el valor vacío
+como compatibilidad y ambos usan el bloque anterior. `local_capture_smtp` se reserva a un
+capturador loopback de desarrollo; solo en ese modo se completan
+`LIQUIDSTACK_WEBADMIN_SMTP_HOST`, `..._PORT` y los dos `..._MAIL_FROM_*`.
+
+Ejemplo local, suponiendo que ya existe un capturador externo escuchando solo
+en loopback y sin relay:
+
+```dotenv
+DEV_MODE=1
+RAIZ=http://localhost:1309
+LIQUIDSTACK_WEBADMIN_MAIL_TRANSPORT=local_capture_smtp
+LIQUIDSTACK_WEBADMIN_SMTP_HOST=127.0.0.1
+LIQUIDSTACK_WEBADMIN_SMTP_PORT=1025
+LIQUIDSTACK_WEBADMIN_MAIL_FROM_ADDRESS=no-reply@localhost.test
+LIQUIDSTACK_WEBADMIN_MAIL_FROM_NAME="WebAdmin local"
+```
+
+CORE no instala ni arranca ese capturador. Si no hay un proceso escuchando en
+el puerto indicado, las invitaciones y recuperaciones no se entregarán.
+
+`LIQUIDSTACK_WEBADMIN_SECURITY_KEY` es un secreto permanente del proyecto, no
+una contraseña de usuario. Debe ser única, aleatoria y estable. El sentinel
+`EXAMPLE_ONLY...` tiene un formato aceptable, pero es deliberadamente público e
+inseguro; hay que sustituirlo antes de cualquier uso real. Las
+variables `LIQUIDSTACK_WEBADMIN_SYSTEM_SUPERADMIN_EMAIL` y
+`LIQUIDSTACK_WEBADMIN_SITE_ADMIN_EMAIL` son dos identidades distintas usadas
+una sola vez por el onboarding inicial. Reciben invitaciones para crear sus
+contraseñas; escribirlas en `.env` no activa las cuentas ni convierte esos
+correos en destinatarios automáticos de recuperación.
+
+`COOKIE_LAD_KEY` identifica la configuración remota de consentimiento del
+proyecto; si está vacía, el loader no se monta. `COOKIE_LAD_COLOR` personaliza
+su color hexadecimal. El widget sigue siendo la fuente de verdad de las
+preferencias y el proyecto no debe cargar analítica, marketing o embeds antes
+del consentimiento correspondiente.
+
+`LIQUIDSTACK_WEBADMIN_MEDIA_STORAGE_ROOT` puede quedar vacía en loopback, pero
+si se usa Media en producción debe señalar un directorio absoluto, privado y
+persistente fuera del release. `LIQUIDSTACK_BLOG_SITEMAP_CACHE_ROOT` solo es
+obligatoria si se activa expresamente `sitemap_cache.enabled=true`; con la
+caché desactivada puede quedar vacía. Git ignore evita versionar esos datos,
+pero no impide que un despliegue borre una ruta mal situada: DB y storage deben
+respaldarse, trasladarse y restaurarse como una unidad.
 
 ## Elegir módulos
 
@@ -233,40 +374,74 @@ El `composer.json` de BASE ya selecciona `liquidstack/blog`, por lo que una
 instalación nueva dispone también de WebAdmin. Composer distribuye el código,
 pero nunca aplica migraciones ni crea usuarios automáticamente.
 
-IMPORTANTE:
-Debemos activar en el php.ini la directriz zend.exception_ignore_args=1
-
-También, antes de importar la Base de Datos al proveedor asegurarse que está en Cotejamiento: utf8mb4_unicode_ci
-
-```powershell
-zend.exception_ignore_args=1
-```
-
 ## Conexión de base de datos
 
-Blog y WebAdmin usan por defecto la conexión `shared` declarada en
-`App/config/modules/blog.php` y `App/config/modules/webadmin.php`. Esa opción
-lee:
+BASE configura Blog y WebAdmin con el perfil `liquidstack` en
+`App/config/modules/blog.php` y `App/config/modules/webadmin.php`. Los dos
+módulos comparten una sola conexión y leen exclusivamente:
 
 ```dotenv
-BBDD_NAME=example_liquidstack_dev
-BBDD_USER=example_user
-BBDD_PASS=example_pass
-BBDD_SERVER=127.0.0.1
+LIQUIDSTACK_DB_HOST=127.0.0.1
+LIQUIDSTACK_DB_PORT=3306
+LIQUIDSTACK_DB_NAME=example_liquidstack_dev
+LIQUIDSTACK_DB_USER=example_user
+LIQUIDSTACK_DB_PASSWORD=example_pass
+LIQUIDSTACK_DB_CHARSET=utf8mb4
 ```
 
-Si un proyecto decide usar la conexión dedicada `liquidstack`, debe cambiar
-ambos módulos a la vez y completar todo el bloque `LIQUIDSTACK_DB_*`. No mezcles
-un módulo en `shared` y otro en `liquidstack`.
+`liquidstack` significa «DB de los módulos», no «DB de producción». El valor de
+`LIQUIDSTACK_DB_HOST` determina el destino visible desde el proceso actual:
+
+- `127.0.0.1` o `localhost` cuando la DB está en la misma máquina;
+- el extremo local de un túnel SSH/VPN cuando la DB está en otra red;
+- un hostname interno del proveedor cuando el stack ya se ejecuta en
+  producción.
+
+Nombre, usuario, contraseña y charset se escriben una sola vez en el `.env`
+privado. Los perfiles `.env.development` y `.env.production` pueden sustituir
+el host y, si el endpoint lo exige, el puerto al ejecutar `npm run lad` o
+`npm run build`; así no se duplican las credenciales. Revisa siempre el mensaje
+de `swap-env` antes de ejecutar un comando que pueda escribir en DB.
+
+Por ejemplo, si el desarrollo accede mediante una red privada y el hosting ve
+su propia DB en loopback, solo cambia esta clave entre perfiles:
+
+```dotenv
+# .env.development: endpoint accesible por VPN o red privada desde el equipo.
+LIQUIDSTACK_DB_HOST=db-proyecto.red-privada.test
+LIQUIDSTACK_DB_PORT=3307
+
+# .env.production: PHP y MariaDB viven en el mismo hosting.
+LIQUIDSTACK_DB_HOST=127.0.0.1
+LIQUIDSTACK_DB_PORT=3306
+```
+
+Una DB de producción vacía sigue la opción B. Si ya contiene el esquema y los
+datos promovidos desde local, no se importa el snapshot ni se adopta por
+intuición: se valida con `doctor` y `migrate --dry-run` antes de escribir.
+
+CORE no configura todavía opciones PDO de TLS/CA. No conectes el portátil
+directamente a un MySQL/MariaDB público sin una red confiable y cifrada. Para
+trabajar contra producción desde local usa preferentemente VPN o túnel SSH y
+limita el usuario SQL; rota cualquier credencial temporal después del corte.
+
+El perfil alternativo `shared` y las variables `BBDD_*` existen solo por
+compatibilidad con aplicaciones antiguas que tienen una zona privada de negocio
+propia. No representan desarrollo/producción. Un proyecto que conserve esa zona
+puede tener ambos bloques porque son dos dominios de datos distintos; BASE no
+incluye esa aplicación legacy. Nunca pongas la misma DB modular en ambos
+namespaces.
 
 La creación de la DB y del usuario SQL se hace fuera del repositorio. BASE no
-incluye `CREATE USER`, contraseñas del servidor ni `GRANT`.
+incluye `CREATE USER`, contraseñas del servidor ni `GRANT`. Al crear una DB que
+recibirá el snapshot, usa `utf8mb4` con cotejamiento
+`utf8mb4_unicode_ci`; el propio SQL declara ese contrato en sus tablas.
 
 ## Opción A: importar el snapshot demo
 
 El fichero raíz `example_liquidstack_dev.sql` contiene:
 
-- el esquema resultante de las 30 migraciones canónicas actuales;
+- el esquema resultante del catálogo incluido en esta release de BASE;
 - roles, capacidades y semillas técnicas;
 - las dos cuentas iniciales en estado de invitación, sin contraseña;
 - categorías, etiquetas y artículos neutros de ejemplo en español y euskera.
@@ -294,36 +469,35 @@ Si se usa XAMPP, `C:\xampp\mysql\bin\mysql.exe` puede ser la ruta local, pero
 no es un requisito universal.
 
 Después de importar, valida primero que el snapshot coincide con el catálogo
-instalado e inicializa el storage privado de Media, que no se versiona:
+instalado:
 
 ```powershell
+composer liquidstack:doctor --format=json
+composer liquidstack:migrate --plan --format=json
 composer liquidstack:migrate --dry-run --format=json
-composer liquidstack:media:init --yes --format=json
 ```
 
-El dry-run debe indicar cero migraciones pendientes mientras el snapshot y la
-versión instalada de CORE coincidan. Si CORE es posterior, revisa el plan, crea
-un backup y aplica únicamente las migraciones nuevas.
+No continúes con Media ni onboarding mientras el dry-run muestre pendientes o
+bloqueadores. Si CORE es posterior al snapshot, revisa el plan, crea un backup,
+aplica únicamente las migraciones nuevas con el comando confirmado de la
+opción B y repite el dry-run hasta obtener cero pendientes. Entonces sigue el
+cierre común.
 
 Las cuentas del snapshot no tienen acceso utilizable y el bootstrap permanece
-deliberadamente en estado `pending`. Reconcílialas para crear las filas
-técnicas e invitaciones nuevas con la clave privada del proyecto. Durante esta
-primera reconciliación, las variables bootstrap deben conservar exactamente
-`aranaz@webda.eus` y `aranaz@gmail.com`; después las identidades se administran
-desde WebAdmin y no cambiando el snapshot. Tras configurar un transporte de
-correo local o real, entrega la cola de forma explícita:
+deliberadamente en estado `pending`. Durante esta primera reconciliación, las
+variables bootstrap deben conservar exactamente `aranaz@webda.eus` y
+`aranaz@gmail.com`. `onboard` completa las filas técnicas, genera las
+invitaciones y contacta el SMTP: puede enviar mensajes reales. Abre ambos
+enlaces y establece las contraseñas. Hasta entonces «He olvidado mi contraseña»
+no envía correo porque una identidad `invited` todavía no tiene credencial que
+recuperar.
 
-```powershell
-composer liquidstack:webadmin:bootstrap --yes --format=json
-composer liquidstack:doctor --format=json
-composer liquidstack:webadmin:mail:dispatch --limit=20
-```
+No sustituyas este paso por `bootstrap` + dispatcher salvo en una recuperación
+operativa deliberada. Después de activar las dos cuentas, la DB es la fuente de
+verdad y las identidades se administran desde WebAdmin, no editando el snapshot
+ni cambiando las variables bootstrap.
 
-`liquidstack:webadmin:onboard --yes` puede componer bootstrap y entrega en un
-solo paso cuando el correo ya está preparado; puede enviar mensajes reales a
-las dos direcciones configuradas.
-
-## Opción B: comenzar con una DB vacía
+## Opción B: comenzar con una DB vacía local o de producción
 
 Con una DB vacía y el `.env` ya configurado, usa este orden:
 
@@ -338,19 +512,80 @@ Después de revisar el plan y crear un backup verificable de la DB:
 ```powershell
 composer liquidstack:migrate --apply --allow-destructive `
     --backup-confirmed --yes --format=json
+composer liquidstack:migrate --dry-run --format=json
+```
+
+No continúes hasta que el segundo dry-run confirme cero pendientes y ningún
+bloqueador. `migrate --apply` es una mutación y exige autorización consciente;
+`--backup-confirmed` declara que el backup ya existe, no lo crea. La ausencia
+de un driver PHP o de una directiva de runtime no se corrige migrando. En
+diagnóstico no se modifican automáticamente `php.ini`, `.env`, `PATH` ni la DB.
+
+Las migraciones crean esquema e infraestructura, no artículos de ejemplo. Esos
+datos solo proceden del snapshot demo o de entradas creadas desde WebAdmin.
+Cuando el esquema esté al día, sigue el cierre común.
+
+## Cierre común: Media, onboarding y smoke
+
+Con el dry-run a cero, inicializa el storage privado de Media:
+
+```powershell
 composer liquidstack:media:init --yes --format=json
+```
+
+Arranca el proyecto en una primera consola y conserva el proceso abierto:
+
+```powershell
+npm run lad
+```
+
+LAD busca puertos libres; por eso no hay que asumir `1309`. Copia el origen PHP
+exacto que anuncie, abre una segunda consola y úsalo temporalmente al crear los
+enlaces de activación. Sustituye `1310` por el puerto real:
+
+```powershell
+$env:RAIZ = 'http://localhost:1310'
 composer liquidstack:webadmin:onboard --yes --format=json
 composer liquidstack:doctor --format=json
 ```
 
-`migrate --apply`, `media:init`, bootstrap y onboarding son mutaciones y exigen
-autorización consciente. La ausencia de un driver PHP o de una directiva de
-runtime no se corrige migrando. En diagnóstico no se modifican automáticamente
-`php.ini`, `.env`, `PATH` ni la DB.
+Mantén esa segunda consola abierta. El override solo la afecta a ella y evita
+generar invitaciones hacia un puerto distinto. Los enlaces `localhost` solo se
+abren en esa misma máquina.
+En una instalación ya desplegada, el onboarding debe usar el origen HTTPS real
+y accesible del proyecto, no un puerto local ni el valor `example.com`.
 
-Las 30 migraciones crean esquema e infraestructura, no artículos de ejemplo.
-Esos datos solo proceden del snapshot demo o de entradas creadas desde
-WebAdmin.
+Abre las dos invitaciones, define las contraseñas y comprueba `/admin`, Blog y
+la web pública. En la segunda consola, repite `onboard`; al verificar el par
+2/2 no debe duplicar usuarios ni invitaciones. Deja entonces vacías las dos
+variables bootstrap en el `.env` privado, ejecuta el `doctor` final y retira el
+override:
+
+```powershell
+composer liquidstack:webadmin:onboard --yes --format=json
+composer liquidstack:doctor --format=json
+Remove-Item Env:RAIZ
+```
+
+La DB pasa a ser la fuente de verdad. Un `bootstrap_ready=false` posterior
+puede ser una advertencia no bloqueante sobre la capacidad de iniciar otra DB;
+no invalida el 2/2 ya verificado.
+
+`media:init` y onboarding son mutaciones deliberadas. No se ejecutan desde
+`composer install`, `composer update` ni desde una tarea de diagnóstico.
+
+## Producción: DB vacía o promoción con datos
+
+- Para una DB productiva nueva y vacía, configura el perfil de producción y
+  sigue la opción B en el entorno que realmente vaya a servir la aplicación.
+- Para trasladar contenido existente, respalda y restaura conjuntamente la DB
+  completa —incluida `ls_module_migrations`— y el storage Media. Cambiar
+  `LIQUIDSTACK_DB_*` o la ruta de storage no mueve ni adopta datos.
+- Antes de escribir en el destino, verifica credenciales, origen HTTPS,
+  storage persistente, `doctor`, plan y dry-run. Conserva una copia recuperable
+  hasta terminar el smoke.
+- El despliegue debe preservar el storage fuera del release; `.gitignore` no
+  protege frente a limpiezas, extracciones o sincronizaciones con borrado.
 
 ## Desarrollo local
 
@@ -376,7 +611,17 @@ En producción la separación se deriva del dominio/proyecto, no de un puerto.
 
 Los perfiles `.env.development` y `.env.production` solo deben incluir claves
 que cambian entre entornos. `scripts/swap-env.mjs` fusiona esas claves en
-`.env`; no debe borrar las credenciales privadas que ya existen.
+`.env`; no borra las credenciales privadas que ya existen. BASE incluye
+`LIQUIDSTACK_DB_HOST=127.0.0.1` en ambos como default seguro. Si desarrollo debe
+usar una DB remota mediante túnel/VPN, cambia únicamente el host del perfil de
+desarrollo; conserva el endpoint visto desde el hosting en producción. El
+script informa de las claves aplicadas y no selecciona una DB por `DEV_MODE`.
+
+El cambio de perfil es físico: `npm run build` aplica `.env.production` sobre
+`.env` y deja esos valores activos al terminar. Antes de volver a ejecutar
+`doctor`, migraciones o comandos editoriales desde local, recupera el perfil
+esperado con `npm run lad` o `node scripts/swap-env.mjs development` y verifica
+en el mensaje del script y en `doctor` que el host es el previsto.
 
 ## Blog público y WebAdmin
 
@@ -499,9 +744,14 @@ usuario real, al menos:
 
 ## Releases de BASE
 
-BASE tiene un ciclo SemVer independiente de CORE. Su primera release prevista
-es `v1.0.0`; las siguientes etiquetas describen cambios en el punto de partida
-de proyectos nuevos. No se instalan ni se mezclan sobre proyectos ya nacidos.
+Esta sección se aplica únicamente al checkout mantenedor de BASE. El
+inicializador la conserva como referencia documental, pero elimina del proyecto
+cliente los scripts, herramientas y tests citados aquí; no intentes publicar un
+cliente con el release gate de la plantilla.
+
+BASE tiene un ciclo SemVer independiente de CORE. Su serie estable comenzó en
+`v1.0.0`; las siguientes etiquetas describen cambios en el punto de partida de
+proyectos nuevos. No se instalan ni se mezclan sobre proyectos ya nacidos.
 
 Antes de publicar una etiqueta de BASE:
 

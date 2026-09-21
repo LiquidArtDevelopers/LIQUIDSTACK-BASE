@@ -14,7 +14,18 @@
         "liquidstack/webadmin": "*",
         "liquidstack/blog": "*"
     },
+    "autoload": {
+        "classmap": [
+            "tools/ProjectInitializer.php"
+        ]
+    },
     "scripts": {
+        "post-create-project-cmd": [
+            "LiquidStackBase\\ProjectInitializer::initialize"
+        ],
+        "project:init": [
+            "LiquidStackBase\\ProjectInitializer::initialize"
+        ],
         "release": [
             "Composer\\Config::disableProcessTimeout",
             "@php tools/release.php"

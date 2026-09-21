@@ -9,7 +9,7 @@ declare(strict_types=1);
 return [
     'path' => '/admin',
     'database' => [
-        'connection' => 'shared',
+        'connection' => 'liquidstack',
         'table_prefix' => 'ls_webadmin_',
     ],
 ];

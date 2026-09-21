@@ -16,7 +16,7 @@ return [
     'sitemap_path' => '/blog-sitemap.xml',
     'public_article_view' => 'App/views/blog-article.php',
     'database' => [
-        'connection' => 'shared',
+        'connection' => 'liquidstack',
         'table_prefix' => 'ls_blog_',
     ],
 ];
