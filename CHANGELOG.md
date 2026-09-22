@@ -5,6 +5,13 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-09-22
+
+### Fixed
+
+- Commerce y su enlace Tienda quedan activos por defecto en proyectos nuevos;
+  cada consumidor puede desactivarlos expresamente si no los necesita.
+
 ## [1.4.0] - 2026-09-21
 
 ### Added

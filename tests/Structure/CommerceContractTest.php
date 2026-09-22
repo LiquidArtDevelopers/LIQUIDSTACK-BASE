@@ -13,7 +13,7 @@ final class CommerceContractTest extends TestCase
         $this->root = dirname(__DIR__, 2);
     }
 
-    public function testCommerceIsSelectedButItsPublicSurfaceStartsClosed(): void
+    public function testCommerceIsSelectedAndItsPublicSurfaceStartsOpen(): void
     {
         $composer = $this->json('composer.json');
         self::assertSame(
@@ -22,7 +22,7 @@ final class CommerceContractTest extends TestCase
         );
 
         $config = require $this->root . '/App/config/modules/commerce.php';
-        self::assertFalse($config['public']['enabled'] ?? true);
+        self::assertTrue($config['public']['enabled'] ?? false);
         self::assertSame('inquiry', $config['transaction_mode'] ?? null);
         self::assertSame(
             'liquidstack',

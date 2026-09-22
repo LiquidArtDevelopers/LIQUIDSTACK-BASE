@@ -661,12 +661,13 @@ CookieLad permanece desactivado mientras `COOKIE_LAD_KEY` esté vacío. El shell
 de artículo usa los includes globales del proyecto, de modo que navegación,
 footer y consentimiento pueden mantenerse coherentes con el resto de la web.
 
-## Commerce: preparar antes de publicar
+## Commerce: activo por defecto
 
 BASE instala el selector `liquidstack/commerce` y sus 29 ficheros canónicos,
-pero `App/config/modules/commerce.php` mantiene `public.enabled=false`. Así se
-puede preparar el catálogo en WebAdmin sin reclamar todavía rutas públicas. Los
-paths de catálogo y lista de interés se derivan de `App/config/langs.php`: hay
+con `App/config/modules/commerce.php` en `public.enabled=true`. Por ello Tienda
+aparece en la navegación de un proyecto nuevo; cada consumidor puede cambiarlo
+a `false` si decide no usar el módulo público. Los paths de catálogo y lista de
+interés se derivan de `App/config/langs.php`: hay
 segmentos propios para español, euskera e inglés y un fallback neutral para
 otros locales. No dupliques esas rutas en `App/config/routes/get.php` ni en
 `App/config/rutas.js`; el provider de CORE las resuelve después de las rutas
@@ -723,10 +724,10 @@ composer liquidstack:commerce-mail-dispatch --limit=20
 ```
 
 El comando procesa un lote y termina; Composer no instala cron ni envía correo
-durante `install` o `update`. Activa `public.enabled=true` solo después de
-validar traducciones, URLs, política de privacidad, catálogo, ficha, lista de
-interés, correos y sitemap. Dejarlo en `false` mantiene cerrada toda la
-superficie pública aunque el módulo siga disponible en WebAdmin. El contador
+durante `install` o `update`. Antes de publicar valida traducciones, URLs,
+política de privacidad, catálogo, ficha, lista de interés, correos y sitemap.
+Cambiar `public.enabled` a `false` mantiene cerrada toda la superficie pública
+aunque el módulo siga disponible en WebAdmin. El contador
 «X solicitudes de información» también nace desactivado: habilita
 `social_proof.enabled=true` solo como opt-in tras decidir que ese dato debe ser
 público y revisar su umbral `minimum_count`.

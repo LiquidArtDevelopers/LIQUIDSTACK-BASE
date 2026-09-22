@@ -261,7 +261,7 @@ final class StarterDistributionContractTest extends TestCase
             'liquidstack/commerce',
             '0001_commerce_catalog',
             'liquidstack:commerce-mail-dispatch --limit=20',
-            'public.enabled=false',
+            'public.enabled=true',
             '.npmrc.example',
             'auth.json',
             'public/.vite/manifest.json',
