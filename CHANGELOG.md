@@ -7,7 +7,7 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [1.4.4] - 2026-09-23
 
-### Fixed
+### Changed
 
 - Al instalar un nuevo proyecto no se instalaba la tienda online correctamente
 
