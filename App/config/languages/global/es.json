@@ -279,5 +279,48 @@
 
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "navMegamenu01_00_login": {
+        "title": "Acceso privado",
+        "href": "login"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Acceso privado"
+    },
+    "navMegamenu01_00_link0": {
+        "title": "Área privada",
+        "href": ""
+    },
+    "navMegamenu01_00_link0Text": {
+        "text": "Área privada"
+    },
+    "navMegamenu01_00_link4": {
+        "title": "Perfil",
+        "href": ""
+    },
+    "navMegamenu01_00_link4Text": {
+        "text": "Perfil"
+    },
+    "navMegamenu01_00_link1": {
+        "title": "Contenido privado",
+        "href": ""
+    },
+    "navMegamenu01_00_link1Text": {
+        "text": "Contenido privado"
+    },
+    "navMegamenu01_00_link2": {
+        "title": "Preferencias",
+        "href": ""
+    },
+    "navMegamenu01_00_link2Text": {
+        "text": "Preferencias"
+    },
+    "navMegamenu01_00_link3": {
+        "title": "Cerrar sesión",
+        "href": ""
+    },
+    "navMegamenu01_00_link3Text": {
+        "text": "Cerrar sesión"
     }
 }

@@ -1,0 +1,187 @@
+{
+
+    "navMegamenu01_00_forward": {
+        "src": "assets/img/system/chevron-forward-outline.svg",
+        "alt": ">",
+        "title": ">"
+    },
+    "navMegamenu01_00_home": {
+        "title": "Hasiera",
+        "href": ""
+    },
+    "navMegamenu01_00_homeText": {
+        "text": "Hasiera"
+    },
+    "navMegamenu01_00_services": {
+        "title": "Zerbitzuak",
+        "href": "serbitzuak"
+    },
+    "navMegamenu01_00_servicesText": {
+        "text": "Zerbitzuak"
+    },
+    "navMegamenu01_00_servicesItem0": {
+        "title": "Zerbitzua",
+        "href": "serbitzuak/serbitzua"
+    },
+    "navMegamenu01_00_servicesItem0Text": {
+        "text": "Zerbitzua"
+    },
+    "navMegamenu01_00_blog": {
+        "title": "Bloga",
+        "href": "blog"
+    },
+    "navMegamenu01_00_blogText": {
+        "text": "Bloga"
+    },
+    "navMegamenu01_00_commerce": {
+        "title": "Denda",
+        "href": "merkataritza"
+    },
+    "navMegamenu01_00_commerceText": {
+        "text": "Denda"
+    },
+    "navMegamenu01_00_contactLink": {
+        "title": "Kontaktua",
+        "href": "kontaktua"
+    },
+    "navMegamenu01_00_contactText": {
+        "text": "Kontaktua"
+    },
+    "navMegamenu01_00_login": {
+        "title": "Sarbide pribatua",
+        "href": "login"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Sarbide pribatua"
+    },
+    "navMegamenu01_00_link0": {
+        "title": "Eremu pribatua",
+        "href": ""
+    },
+    "navMegamenu01_00_link0Text": {
+        "text": "Eremu pribatua"
+    },
+    "navMegamenu01_00_link4": {
+        "title": "Profila",
+        "href": ""
+    },
+    "navMegamenu01_00_link4Text": {
+        "text": "Profila"
+    },
+    "navMegamenu01_00_link1": {
+        "title": "Eduki pribatua",
+        "href": ""
+    },
+    "navMegamenu01_00_link1Text": {
+        "text": "Eduki pribatua"
+    },
+    "navMegamenu01_00_link2": {
+        "title": "Hobespenak",
+        "href": ""
+    },
+    "navMegamenu01_00_link2Text": {
+        "text": "Hobespenak"
+    },
+    "navMegamenu01_00_link3": {
+        "title": "Saioa itxi",
+        "href": ""
+    },
+    "navMegamenu01_00_link3Text": {
+        "text": "Saioa itxi"
+    },
+    "navMegamenu01_00_logo_business": {
+        "src": "assets/img/logos/logo-black.svg",
+        "alt": "LiquidStack",
+        "title": "LiquidStack"
+    },
+    "navMegamenu01_00_correo_link": {
+        "title": "Posta elektronikoa"
+    },
+    "navMegamenu01_00_correo_link_href": "info@example.com",
+    "navMegamenu01_00_correo_text": {
+        "text": "info@example.com"
+    },
+    "navMegamenu01_00_correo_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Posta elektronikoa",
+        "title": "Posta elektronikoa"
+    },
+    "navMegamenu01_00_tel_link": {
+        "title": "Harremanetarako telefonoa"
+    },
+    "navMegamenu01_00_tel_img": {
+        "src": "assets/img/system/tel.svg",
+        "alt": "Telefonoa",
+        "title": "Telefonoa"
+    },
+    "navMegamenu01_00_mp_img": {
+        "src": "assets/img/system/mp.svg",
+        "alt": "Mugikorra",
+        "title": "Mugikorra"
+    },
+    "navMegamenu01_00_ubicacion_link": {
+        "title": "Kokapena"
+    },
+    "navMegamenu01_00_ubicacion_img": {
+        "src": "assets/img/system/wp.svg",
+        "alt": "Kokapena",
+        "title": "Kokapena"
+    },
+    "navMegamenu01_00_content_of_this_website": {
+        "text": "Webgune honetako edukia"
+    },
+    "navMegamenu01_00_link_of_interest": {
+        "text": "Esteka interesgarriak"
+    },
+    "navMegamenu01_00_follow_us_social_media": {
+        "text": "Jarraitu gaitzazu"
+    },
+    "navMegamenu01_00_contact": {
+        "text": "Kontaktua"
+    },
+    "navMegamenu01_00_col02span2_01": {
+        "text": "Cookie politika"
+    },
+    "navMegamenu01_00_col02span2_02": {
+        "text": "Pribatutasun politika"
+    },
+    "navMegamenu01_00_col02span2_03": {
+        "text": "Lege oharra"
+    },
+    "navMegamenu01_00_rrss_fb": {
+        "title": "Facebook"
+    },
+    "navMegamenu01_00_rrss_fb_img": {
+        "src": "assets/img/system/fb.svg",
+        "alt": "Facebook",
+        "title": "Facebook"
+    },
+    "navMegamenu01_00_rrss_fb_href": "",
+    "navMegamenu01_00_rrss_in": {
+        "title": "LinkedIn"
+    },
+    "navMegamenu01_00_rrss_in_img": {
+        "src": "assets/img/system/in.svg",
+        "alt": "LinkedIn",
+        "title": "LinkedIn"
+    },
+    "navMegamenu01_00_rrss_in_href": "",
+    "navMegamenu01_00_rrss_yt": {
+        "title": "YouTube"
+    },
+    "navMegamenu01_00_rrss_yt_img": {
+        "src": "assets/img/system/yt.svg",
+        "alt": "YouTube",
+        "title": "YouTube"
+    },
+    "navMegamenu01_00_rrss_yt_href": "",
+    "navMegamenu01_00_rrss_ig": {
+        "title": "Instagram"
+    },
+    "navMegamenu01_00_rrss_ig_img": {
+        "src": "assets/img/system/ig.svg",
+        "alt": "Instagram",
+        "title": "Instagram"
+    },
+    "navMegamenu01_00_rrss_ig_href": ""
+}

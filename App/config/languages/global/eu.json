@@ -279,5 +279,48 @@
 
     "robots": {
         "content": "nofollow, noindex, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+
+    "navMegamenu01_00_login": {
+        "title": "Sarbide pribatua",
+        "href": "login"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Sarbide pribatua"
+    },
+    "navMegamenu01_00_link0": {
+        "title": "Eremu pribatua",
+        "href": ""
+    },
+    "navMegamenu01_00_link0Text": {
+        "text": "Eremu pribatua"
+    },
+    "navMegamenu01_00_link4": {
+        "title": "Profila",
+        "href": ""
+    },
+    "navMegamenu01_00_link4Text": {
+        "text": "Profila"
+    },
+    "navMegamenu01_00_link1": {
+        "title": "Eduki pribatua",
+        "href": ""
+    },
+    "navMegamenu01_00_link1Text": {
+        "text": "Eduki pribatua"
+    },
+    "navMegamenu01_00_link2": {
+        "title": "Hobespenak",
+        "href": ""
+    },
+    "navMegamenu01_00_link2Text": {
+        "text": "Hobespenak"
+    },
+    "navMegamenu01_00_link3": {
+        "title": "Saioa itxi",
+        "href": ""
+    },
+    "navMegamenu01_00_link3Text": {
+        "text": "Saioa itxi"
     }
 }

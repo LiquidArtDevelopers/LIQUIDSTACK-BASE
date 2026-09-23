@@ -1,0 +1,187 @@
+{
+
+    "navMegamenu01_00_forward": {
+        "src": "assets/img/system/chevron-forward-outline.svg",
+        "alt": ">",
+        "title": ">"
+    },
+    "navMegamenu01_00_home": {
+        "title": "Inicio",
+        "href": ""
+    },
+    "navMegamenu01_00_homeText": {
+        "text": "Inicio"
+    },
+    "navMegamenu01_00_services": {
+        "title": "Servicios",
+        "href": "servicios"
+    },
+    "navMegamenu01_00_servicesText": {
+        "text": "Servicios"
+    },
+    "navMegamenu01_00_servicesItem0": {
+        "title": "Servicio",
+        "href": "servicios/servicio"
+    },
+    "navMegamenu01_00_servicesItem0Text": {
+        "text": "Servicio"
+    },
+    "navMegamenu01_00_blog": {
+        "title": "Blog",
+        "href": "blog"
+    },
+    "navMegamenu01_00_blogText": {
+        "text": "Blog"
+    },
+    "navMegamenu01_00_commerce": {
+        "title": "Tienda",
+        "href": "comercio"
+    },
+    "navMegamenu01_00_commerceText": {
+        "text": "Tienda"
+    },
+    "navMegamenu01_00_contactLink": {
+        "title": "Contacto",
+        "href": "contacto"
+    },
+    "navMegamenu01_00_contactText": {
+        "text": "Contacto"
+    },
+    "navMegamenu01_00_login": {
+        "title": "Acceso privado",
+        "href": "login"
+    },
+    "navMegamenu01_00_loginText": {
+        "text": "Acceso privado"
+    },
+    "navMegamenu01_00_link0": {
+        "title": "Área privada",
+        "href": ""
+    },
+    "navMegamenu01_00_link0Text": {
+        "text": "Área privada"
+    },
+    "navMegamenu01_00_link4": {
+        "title": "Perfil",
+        "href": ""
+    },
+    "navMegamenu01_00_link4Text": {
+        "text": "Perfil"
+    },
+    "navMegamenu01_00_link1": {
+        "title": "Contenido privado",
+        "href": ""
+    },
+    "navMegamenu01_00_link1Text": {
+        "text": "Contenido privado"
+    },
+    "navMegamenu01_00_link2": {
+        "title": "Preferencias",
+        "href": ""
+    },
+    "navMegamenu01_00_link2Text": {
+        "text": "Preferencias"
+    },
+    "navMegamenu01_00_link3": {
+        "title": "Cerrar sesión",
+        "href": ""
+    },
+    "navMegamenu01_00_link3Text": {
+        "text": "Cerrar sesión"
+    },
+    "navMegamenu01_00_logo_business": {
+        "src": "assets/img/logos/logo-black.svg",
+        "alt": "LiquidStack",
+        "title": "LiquidStack"
+    },
+    "navMegamenu01_00_correo_link": {
+        "title": "Correo electrónico"
+    },
+    "navMegamenu01_00_correo_link_href": "info@example.com",
+    "navMegamenu01_00_correo_text": {
+        "text": "info@example.com"
+    },
+    "navMegamenu01_00_correo_img": {
+        "src": "assets/img/system/mail.svg",
+        "alt": "Correo electrónico",
+        "title": "Correo electrónico"
+    },
+    "navMegamenu01_00_tel_link": {
+        "title": "Teléfono de contacto"
+    },
+    "navMegamenu01_00_tel_img": {
+        "src": "assets/img/system/tel.svg",
+        "alt": "Teléfono",
+        "title": "Teléfono"
+    },
+    "navMegamenu01_00_mp_img": {
+        "src": "assets/img/system/mp.svg",
+        "alt": "Móvil",
+        "title": "Móvil"
+    },
+    "navMegamenu01_00_ubicacion_link": {
+        "title": "Ubicación"
+    },
+    "navMegamenu01_00_ubicacion_img": {
+        "src": "assets/img/system/wp.svg",
+        "alt": "Ubicación",
+        "title": "Ubicación"
+    },
+    "navMegamenu01_00_content_of_this_website": {
+        "text": "Contenido de esta web"
+    },
+    "navMegamenu01_00_link_of_interest": {
+        "text": "Enlaces de interés"
+    },
+    "navMegamenu01_00_follow_us_social_media": {
+        "text": "Síguenos"
+    },
+    "navMegamenu01_00_contact": {
+        "text": "Contacto"
+    },
+    "navMegamenu01_00_col02span2_01": {
+        "text": "Política de cookies"
+    },
+    "navMegamenu01_00_col02span2_02": {
+        "text": "Política de privacidad"
+    },
+    "navMegamenu01_00_col02span2_03": {
+        "text": "Aviso legal"
+    },
+    "navMegamenu01_00_rrss_fb": {
+        "title": "Facebook"
+    },
+    "navMegamenu01_00_rrss_fb_img": {
+        "src": "assets/img/system/fb.svg",
+        "alt": "Facebook",
+        "title": "Facebook"
+    },
+    "navMegamenu01_00_rrss_fb_href": "",
+    "navMegamenu01_00_rrss_in": {
+        "title": "LinkedIn"
+    },
+    "navMegamenu01_00_rrss_in_img": {
+        "src": "assets/img/system/in.svg",
+        "alt": "LinkedIn",
+        "title": "LinkedIn"
+    },
+    "navMegamenu01_00_rrss_in_href": "",
+    "navMegamenu01_00_rrss_yt": {
+        "title": "YouTube"
+    },
+    "navMegamenu01_00_rrss_yt_img": {
+        "src": "assets/img/system/yt.svg",
+        "alt": "YouTube",
+        "title": "YouTube"
+    },
+    "navMegamenu01_00_rrss_yt_href": "",
+    "navMegamenu01_00_rrss_ig": {
+        "title": "Instagram"
+    },
+    "navMegamenu01_00_rrss_ig_img": {
+        "src": "assets/img/system/ig.svg",
+        "alt": "Instagram",
+        "title": "Instagram"
+    },
+    "navMegamenu01_00_rrss_ig_href": ""
+}
