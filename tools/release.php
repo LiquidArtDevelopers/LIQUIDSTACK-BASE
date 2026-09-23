@@ -18,8 +18,15 @@ final class BaseReleaseGate
     /** @var list<string> */
     private array $npmCommand;
 
-    public function __construct(string $root)
-    {
+    private ?\Closure $promptHandler;
+
+    private ?\Closure $confirmationHandler;
+
+    public function __construct(
+        string $root,
+        ?callable $promptHandler = null,
+        ?callable $confirmationHandler = null
+    ) {
         $resolved = realpath($root);
         if ($resolved === false) {
             throw new RuntimeException('No se pudo resolver la raíz de BASE.');
@@ -27,6 +34,12 @@ final class BaseReleaseGate
         $this->root = $resolved;
         $this->composerCommand = $this->resolveComposerCommand();
         $this->npmCommand = $this->resolveNpmCommand();
+        $this->promptHandler = $promptHandler !== null
+            ? \Closure::fromCallable($promptHandler)
+            : null;
+        $this->confirmationHandler = $confirmationHandler !== null
+            ? \Closure::fromCallable($confirmationHandler)
+            : null;
     }
 
     public function run(
@@ -437,6 +450,10 @@ final class BaseReleaseGate
 
     private function prompt(string $message, string $default): string
     {
+        if ($this->promptHandler !== null) {
+            return ($this->promptHandler)($message, $default);
+        }
+
         fwrite(STDOUT, $message);
         $input = fgets(STDIN);
         if ($input === false) {
@@ -451,6 +468,10 @@ final class BaseReleaseGate
 
     private function confirm(string $message): bool
     {
+        if ($this->confirmationHandler !== null) {
+            return ($this->confirmationHandler)($message);
+        }
+
         $answer = strtolower($this->prompt($message, 's'));
         return in_array($answer, ['s', 'si', 'sí', 'y', 'yes'], true);
     }
@@ -782,8 +803,16 @@ final class BaseReleaseGate
     }
 }
 
-/** @param list<string> $arguments */
-function baseReleaseMain(array $arguments): int
+/**
+ * @param list<string> $arguments
+ * @param null|callable(string, string): string $promptHandler
+ * @param null|callable(string): bool $confirmationHandler
+ */
+function baseReleaseMain(
+    array $arguments,
+    ?callable $promptHandler = null,
+    ?callable $confirmationHandler = null
+): int
 {
     $version = null;
     $description = null;
@@ -805,7 +834,11 @@ function baseReleaseMain(array $arguments): int
     }
 
     try {
-        (new BaseReleaseGate(dirname(__DIR__)))->run(
+        (new BaseReleaseGate(
+            dirname(__DIR__),
+            $promptHandler,
+            $confirmationHandler
+        ))->run(
             $version,
             $description,
             $dryRun,

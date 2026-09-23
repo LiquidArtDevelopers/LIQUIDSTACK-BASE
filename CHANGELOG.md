@@ -5,6 +5,16 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+### Changed
+
+- BASE adopta el mismo uso que CORE para publicar: árbol limpio y un único
+  `composer release`, sin un paso público `release:prepare`.
+
+### Fixed
+
+- El release usa la consola interactiva de Composer, por lo que puede solicitar
+  versión, confirmación y descripción sin depender directamente de `STDIN`.
+
 ## [1.4.2] - 2026-09-23
 
 ### Fixed

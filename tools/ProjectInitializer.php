@@ -22,6 +22,7 @@ final class ProjectInitializer
 
     /** @var list<string> */
     private const BASE_ONLY_ARTIFACTS = [
+        'tools/ReleaseScript.php',
         'tools/release.php',
         'tools/test-create-project.php',
         'tests/Structure/StarterContractTest.php',
@@ -256,6 +257,7 @@ final class ProjectInitializer
             $classmap,
             static fn (mixed $path): bool => $path
                 !== 'tools/ProjectInitializer.php'
+                && $path !== 'tools/ReleaseScript.php'
         ));
         if ($classmap === []) {
             unset($composer['autoload']['classmap']);

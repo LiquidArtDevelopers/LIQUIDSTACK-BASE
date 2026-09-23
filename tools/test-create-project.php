@@ -469,6 +469,7 @@ final class CreateProjectProbe
             'CHANGELOG.md',
             'example_liquidstack_dev.sql',
             'tools/ProjectInitializer.php',
+            'tools/ReleaseScript.php',
             'tools/release.php',
             'tools/test-create-project.php',
             'tests/Structure/StarterContractTest.php',
@@ -512,6 +513,7 @@ final class CreateProjectProbe
         );
         foreach ([
             'tools/ProjectInitializer.php',
+            'tools/ReleaseScript.php',
             'tools/release.php',
             'tools/test-create-project.php',
             'tests/Structure/StarterContractTest.php',
@@ -579,6 +581,7 @@ final class CreateProjectProbe
             'node_modules',
             'storage',
             'tools/ProjectInitializer.php',
+            'tools/ReleaseScript.php',
             'tools/release.php',
             'tools/test-create-project.php',
             'tests/Structure/StarterContractTest.php',

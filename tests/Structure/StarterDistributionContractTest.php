@@ -32,7 +32,10 @@ final class StarterDistributionContractTest extends TestCase
             $composer['config']['allow-plugins']['liquidstack/core'] ?? false
         );
         self::assertSame(
-            ['tools/ProjectInitializer.php'],
+            [
+                'tools/ProjectInitializer.php',
+                'tools/ReleaseScript.php',
+            ],
             $composer['autoload']['classmap'] ?? null
         );
         self::assertSame(
@@ -50,20 +53,15 @@ final class StarterDistributionContractTest extends TestCase
             ],
             $composer['scripts']['test:create-project'] ?? null
         );
+        self::assertArrayNotHasKey('release:prepare', $composer['scripts']);
         self::assertSame(
             [
                 'Composer\\Config::disableProcessTimeout',
-                '@composer require "liquidstack/core:^1.35" --with-all-dependencies',
-            ],
-            $composer['scripts']['release:prepare'] ?? null
-        );
-        self::assertSame(
-            [
-                'Composer\\Config::disableProcessTimeout',
-                '@php tools/release.php',
+                'LiquidStackBase\\ReleaseScript::run',
             ],
             $composer['scripts']['release'] ?? null
         );
+        self::assertFileExists($this->root . '/tools/ReleaseScript.php');
         self::assertFileExists($this->root . '/tools/release.php');
         self::assertFileExists(
             $this->root . '/tools/ProjectInitializer.php'
@@ -79,6 +77,7 @@ final class StarterDistributionContractTest extends TestCase
             "unset(\$composer['scripts']['project:init'])",
             "\$composer['scripts']['release:prepare']",
             "getLocker()->updateHash(",
+            "'tools/ReleaseScript.php'",
             "'tools/release.php'",
             "'tools/test-create-project.php'",
             "'tests/Structure/StarterContractTest.php'",
@@ -275,8 +274,7 @@ final class StarterDistributionContractTest extends TestCase
             '.npmrc.example',
             'auth.json',
             'public/.vite/manifest.json',
-            'Este es el bloque completo. Es siempre igual',
-            'composer release:prepare',
+            'Después de confirmar los cambios y dejar el árbol limpio',
             'composer release',
             'BASE `v1.2.0` y CORE',
             'composer test:create-project -- --source=vcs',
@@ -296,6 +294,40 @@ final class StarterDistributionContractTest extends TestCase
             '/un proyecto ya creado no\s+depende después de BASE/u',
             $changelog
         );
+    }
+
+    public function testReleaseScriptBridgesComposerIoIntoTheGate(): void
+    {
+        require_once $this->root . '/tools/release.php';
+
+        $gate = new BaseReleaseGate(
+            $this->root,
+            static fn (string $message, string $default): string => $default
+                . '-composer-io',
+            static fn (string $message): bool => true
+        );
+        $prompt = new ReflectionMethod($gate, 'prompt');
+        $prompt->setAccessible(true);
+        $confirm = new ReflectionMethod($gate, 'confirm');
+        $confirm->setAccessible(true);
+
+        self::assertSame(
+            'v1.4.3-composer-io',
+            $prompt->invoke($gate, 'Version: ', 'v1.4.3')
+        );
+        self::assertTrue($confirm->invoke($gate, 'Publish?'));
+
+        $script = (string) file_get_contents(
+            $this->root . '/tools/ReleaseScript.php'
+        );
+        foreach ([
+            '$event->getIO()',
+            '$event->getArguments()',
+            '$io->ask(',
+            '$io->askConfirmation(',
+        ] as $composerIoContract) {
+            self::assertStringContainsString($composerIoContract, $script);
+        }
     }
 
     public function testReleaseDetectsOnePendingChangelogVersionAndRejectsInvalidStates(): void
