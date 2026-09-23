@@ -282,6 +282,14 @@ final class StarterDistributionContractTest extends TestCase
         ] as $contract) {
             self::assertStringContainsString($contract, $readme);
         }
+        self::assertStringNotContainsString(
+            'mi-proyecto "^1.0"',
+            $readme
+        );
+        self::assertStringContainsString(
+            'al atravesar `composer.bat`',
+            $readme
+        );
         self::assertStringContainsString(
             'BASE tiene un ciclo SemVer independiente de CORE',
             $changelog

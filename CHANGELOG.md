@@ -17,6 +17,9 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 - El release usa la consola interactiva de Composer, por lo que puede solicitar
   versión, confirmación y descripción sin depender directamente de `STDIN`.
+- La instalación nueva omite la restricción `^1.0` del comando
+  `create-project`: en Windows podía degradarse a `1.0` al atravesar
+  `composer.bat` e instalar BASE `v1.0.0` sin Commerce.
 
 ## [1.4.2] - 2026-09-23
 

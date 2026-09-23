@@ -88,8 +88,7 @@ La vía estable, con una etiqueta publicada y el paquete disponible en
 Packagist, es:
 
 ```powershell
-composer create-project liquidstack/base mi-proyecto "^1.0" `
-    --prefer-dist --remove-vcs
+composer create-project liquidstack/base mi-proyecto --prefer-dist --remove-vcs
 ```
 
 Si Packagist no está disponible o se necesita validar una etiqueta directamente
@@ -97,15 +96,16 @@ desde GitHub, se puede declarar el repositorio VCS de forma explícita sin
 añadirlo al proyecto resultante:
 
 ```powershell
-composer create-project liquidstack/base mi-proyecto "^1.0" `
+composer create-project liquidstack/base mi-proyecto `
     --repository='{"type":"vcs","url":"https://github.com/LiquidArtDevelopers/LIQUIDSTACK-BASE.git"}' `
     --prefer-dist --remove-vcs
 ```
 
-Ambas órdenes eligen la etiqueta estable más reciente compatible con `^1.0`
-(cualquier release `1.x`; `v1.0.0` fue la primera). `dev-main` queda reservado
-para probar cambios de BASE antes de una release y no es una versión estable
-para proyectos de cliente.
+Al no indicar una versión, ambas órdenes eligen la etiqueta estable más
+reciente. No añadas `^1.0` al comando en Windows: al atravesar `composer.bat`
+puede llegar como `1.0` y fijar por error la release antigua `v1.0.0`.
+`dev-main` queda reservado para probar cambios de BASE antes de una release y
+no es una versión estable para proyectos de cliente.
 
 El paquete distribuido no incluye el `composer.lock` interno de BASE.
 `create-project` resuelve la versión más reciente de CORE compatible con la
@@ -879,7 +879,8 @@ composer test:create-project -- --source=packagist
 
 Ambos modos externos ejecutan un `create-project` real con `--prefer-dist` y
 `--remove-vcs`; el fallback VCS usa el remoto canónico de BASE. Si no se indica
-`--version`, prueban la última release compatible con `^1.0`. No ejecutan
+`--version`, omiten ese argumento y Composer prueba la última release estable.
+`--version=v1.4.2` permite comprobar una etiqueta exacta. No ejecutan
 migraciones, Media ni onboarding.
 
 Para diagnosticar sin publicar se puede usar

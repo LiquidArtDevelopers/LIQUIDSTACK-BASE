@@ -54,7 +54,7 @@ final class CreateProjectProbe
     public function __construct(
         string $root,
         private readonly string $sourceMode = 'archive',
-        private readonly string $version = 'dev-main',
+        private readonly ?string $version = null,
         private readonly ?string $repositoryUrl = null
     ) {
         $resolvedRoot = realpath($root);
@@ -98,8 +98,10 @@ final class CreateProjectProbe
             'create-project',
             'liquidstack/base',
             $projectDirectory,
-            $this->version,
         ];
+        if ($this->version !== null) {
+            $createArguments[] = $this->version;
+        }
 
         if ($this->sourceMode === 'archive') {
             $this->makeDirectory($artifactDirectory);
@@ -850,8 +852,8 @@ foreach (array_slice($argv, 1) as $argument) {
         exit(1);
     }
 }
-if ($requestedVersion === null) {
-    $requestedVersion = $sourceMode === 'archive' ? 'dev-main' : '^1.0';
+if ($requestedVersion === null && $sourceMode === 'archive') {
+    $requestedVersion = 'dev-main';
 }
 if ($sourceMode === 'vcs' && $repositoryUrl === null) {
     $repositoryUrl =
