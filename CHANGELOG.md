@@ -13,6 +13,8 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
   contrato estructural impide volver a fijarlo a una versión exacta.
 - Los contratos de BASE validan la navegación realmente expuesta y comparan
   los catálogos localizados por claves, sin depender del orden del JSON.
+- El bloque de release evita el prompt PHP que Composer no expone en algunas
+  consolas y pasa la descripción recogida por PowerShell en modo confirmado.
 
 ### Changed
 

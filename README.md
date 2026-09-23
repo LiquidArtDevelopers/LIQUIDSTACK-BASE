@@ -857,16 +857,18 @@ composer release:prepare
 git add -A
 git diff --cached --check
 git commit -m $CommitMessage
-composer release
+$ReleaseDescription = Read-Host 'Descripción breve de la release'
+composer release -- --description="$ReleaseDescription" --yes
 ```
 
 Antes de pegarlo, mueve las notas de `Unreleased` a una única sección fechada
 `## [X.Y.Z] - AAAA-MM-DD`. `release:prepare` actualiza CORE a la última release
 compatible, conserva `^1.35` y sincroniza en BASE sus ficheros gestionados. El
 bloque crea el commit local; no ejecutes `git push` por separado. `composer
-release` detecta la versión comparándola con las etiquetas, la propone para
-confirmar y solicita una descripción breve para el tag anotado. Si falta una
-versión pendiente o hay varias, se detiene con una explicación antes del gate.
+release` detecta la versión comparándola con las etiquetas. La descripción se
+recoge desde PowerShell y `--yes` evita depender del STDIN interno de Composer.
+Si falta una versión pendiente o hay varias, se detiene con una explicación
+antes del gate.
 
 El gate exige el árbol limpio, comprueba rama, remoto, changelog, locks y
 etiqueta; después valida Composer, ejecuta las pruebas y crea un consumidor
