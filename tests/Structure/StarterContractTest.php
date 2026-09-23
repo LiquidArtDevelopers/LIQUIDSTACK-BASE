@@ -412,12 +412,6 @@ final class StarterContractTest extends TestCase
                     $catalog["navMegamenu01_00_{$key}"]['href']
                 );
             }
-            foreach (['login', 'link0', 'link1', 'link2', 'link3', 'link4'] as $legacyKey) {
-                self::assertArrayNotHasKey(
-                    "navMegamenu01_00_{$legacyKey}",
-                    $catalog
-                );
-            }
         }
         self::assertSame($catalogKeys['es'], $catalogKeys['eu']);
 
@@ -497,7 +491,11 @@ final class StarterContractTest extends TestCase
             JSON_THROW_ON_ERROR
         );
 
-        self::assertSame(array_keys($spanish), array_keys($basque));
+        $spanishKeys = array_keys($spanish);
+        $basqueKeys = array_keys($basque);
+        sort($spanishKeys);
+        sort($basqueKeys);
+        self::assertSame($spanishKeys, $basqueKeys);
         self::assertSame(
             'index, follow, max-snippet:-1, max-video-preview:-1, '
                 . 'max-image-preview:large',

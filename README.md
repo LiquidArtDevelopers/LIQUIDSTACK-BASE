@@ -851,20 +851,28 @@ proyectos ya nacidos.
 Este es el bloque completo. Es siempre igual y no hay que editarlo:
 
 ```powershell
+git status --short
+$CommitMessage = Read-Host 'Mensaje del commit'
+composer release:prepare
+git add -A
+git diff --cached --check
+git commit -m $CommitMessage
 composer release
 ```
 
 Antes de pegarlo, mueve las notas de `Unreleased` a una única sección fechada
-`## [X.Y.Z] - AAAA-MM-DD`, confirma los cambios y súbelos a `main`. El comando
-detecta esa versión comparándola con las etiquetas, la propone para confirmar y
-solicita una descripción breve para el tag anotado. Si falta una versión
-pendiente o hay varias, se detiene con una explicación antes del gate.
+`## [X.Y.Z] - AAAA-MM-DD`. `release:prepare` actualiza CORE a la última release
+compatible, conserva `^1.35` y sincroniza en BASE sus ficheros gestionados. El
+bloque crea el commit local; no ejecutes `git push` por separado. `composer
+release` detecta la versión comparándola con las etiquetas, la propone para
+confirmar y solicita una descripción breve para el tag anotado. Si falta una
+versión pendiente o hay varias, se detiene con una explicación antes del gate.
 
 El gate exige el árbol limpio, comprueba rama, remoto, changelog, locks y
 etiqueta; después valida Composer, ejecuta las pruebas y crea un consumidor
 temporal, instala npm, audita y construye el archive. Solo al terminar publica
 `main` y la etiqueta con un push atómico. La descripción solicitada pertenece
-al tag y no reescribe el commit ya subido. Nunca copies aquí la versión de CORE:
+al tag y no reescribe el commit. Nunca copies aquí la versión de CORE:
 por ejemplo, BASE `v1.2.0` y CORE `v1.32.0` son releases independientes.
 
 `composer test:create-project` usa el archive local antes de publicar. Tras

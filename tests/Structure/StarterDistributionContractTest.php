@@ -53,6 +53,13 @@ final class StarterDistributionContractTest extends TestCase
         self::assertSame(
             [
                 'Composer\\Config::disableProcessTimeout',
+                '@composer require "liquidstack/core:^1.35" --with-all-dependencies',
+            ],
+            $composer['scripts']['release:prepare'] ?? null
+        );
+        self::assertSame(
+            [
+                'Composer\\Config::disableProcessTimeout',
                 '@php tools/release.php',
             ],
             $composer['scripts']['release'] ?? null
@@ -70,6 +77,7 @@ final class StarterDistributionContractTest extends TestCase
             "'liquidstack-' . \$slug",
             "unset(\$composer['homepage'], \$composer['support'])",
             "unset(\$composer['scripts']['project:init'])",
+            "\$composer['scripts']['release:prepare']",
             "getLocker()->updateHash(",
             "'tools/release.php'",
             "'tools/test-create-project.php'",
@@ -268,7 +276,8 @@ final class StarterDistributionContractTest extends TestCase
             'auth.json',
             'public/.vite/manifest.json',
             'Este es el bloque completo. Es siempre igual',
-            "```powershell\ncomposer release\n```",
+            'composer release:prepare',
+            'composer release',
             'BASE `v1.2.0` y CORE',
             'composer test:create-project -- --source=vcs',
             'Desvincular la identidad de la plantilla',

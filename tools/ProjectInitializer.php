@@ -95,6 +95,7 @@ final class ProjectInitializer
             );
         }
         unset(
+            $composer['scripts']['release:prepare'],
             $composer['scripts']['release'],
             $composer['scripts']['test:create-project']
         );

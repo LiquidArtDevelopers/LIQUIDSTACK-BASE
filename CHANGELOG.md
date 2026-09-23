@@ -11,6 +11,13 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 - Los proyectos nuevos heredan `liquidstack/core` con el rango `^1.35` y el
   contrato estructural impide volver a fijarlo a una versión exacta.
+- Los contratos de BASE validan la navegación realmente expuesta y comparan
+  los catálogos localizados por claves, sin depender del orden del JSON.
+
+### Changed
+
+- BASE adopta el mismo flujo de publicación que CORE: `release:prepare`, commit
+  local y publicación atómica de `main` más la etiqueta mediante `release`.
 
 ## [1.4.1] - 2026-09-22
 

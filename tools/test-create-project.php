@@ -664,6 +664,7 @@ final class CreateProjectProbe
         foreach ([
             'post-create-project-cmd',
             'project:init',
+            'release:prepare',
             'release',
             'test:create-project',
         ] as $baseScript) {
