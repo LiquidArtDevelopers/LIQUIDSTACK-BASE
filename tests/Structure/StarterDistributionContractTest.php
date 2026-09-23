@@ -22,7 +22,9 @@ final class StarterDistributionContractTest extends TestCase
         self::assertSame('>=8.1', $composer['require']['php'] ?? null);
         self::assertSame('*', $composer['require']['ext-dom'] ?? null);
         self::assertSame('*', $composer['require']['ext-pdo_mysql'] ?? null);
-        self::assertSame('^1.33', $composer['require']['liquidstack/core'] ?? null);
+        $coreConstraint = $composer['require']['liquidstack/core'] ?? null;
+        self::assertSame('^1.35', $coreConstraint);
+        self::assertStringStartsWith('^', $coreConstraint);
         self::assertSame('*', $composer['require']['liquidstack/webadmin'] ?? null);
         self::assertSame('*', $composer['require']['liquidstack/blog'] ?? null);
         self::assertSame('*', $composer['require']['liquidstack/commerce'] ?? null);

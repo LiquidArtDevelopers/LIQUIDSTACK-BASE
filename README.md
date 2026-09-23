@@ -755,11 +755,12 @@ disponibles para el tema del consumidor.
 Para actualizar todo el código físico LiquidStack ya seleccionado:
 
 ```powershell
-composer update liquidstack/core
+composer require "liquidstack/core:^1.35" --with-all-dependencies
 ```
 
 No hace falta actualizar Blog, WebAdmin o Commerce por separado: comparten la
-versión de CORE. `composer update` sin paquete también puede actualizar PHPMailer,
+versión de CORE. El caret se conserva para recibir las siguientes releases
+estables `1.x`. `composer update` sin paquete también puede actualizar PHPMailer,
 Dotenv, PHPUnit y cualquier otra dependencia; úsalo solo cuando quieras revisar
 todo el lock.
 
@@ -767,7 +768,7 @@ Para separar la resolución de dependencias de la escritura de ficheros
 gestionados y revisar el lote antes de aplicarlo:
 
 ```powershell
-composer update liquidstack/core --with-dependencies `
+composer require "liquidstack/core:^1.35" --with-all-dependencies `
     --no-plugins --no-scripts
 composer liquidstack:sync --plan
 composer liquidstack:sync --dry-run --format=json

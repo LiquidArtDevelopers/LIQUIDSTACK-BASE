@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04747fc75e8aaf3100686c78fabbc2b2",
+    "content-hash": "8945833dcdd2d87899d9c6a4be8c45a3",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -70,16 +70,16 @@
         },
         {
             "name": "liquidstack/core",
-            "version": "v1.35.0",
+            "version": "v1.35.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LiquidArtDevelopers/LIQUIDSTACK-CORE.git",
-                "reference": "1ee4180bff20adc6684c40324b8189baedbed069"
+                "reference": "7efb9900a923ef612a13cce0a94d85028e0dd0d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LiquidArtDevelopers/LIQUIDSTACK-CORE/zipball/1ee4180bff20adc6684c40324b8189baedbed069",
-                "reference": "1ee4180bff20adc6684c40324b8189baedbed069",
+                "url": "https://api.github.com/repos/LiquidArtDevelopers/LIQUIDSTACK-CORE/zipball/7efb9900a923ef612a13cce0a94d85028e0dd0d5",
+                "reference": "7efb9900a923ef612a13cce0a94d85028e0dd0d5",
                 "shasum": ""
             },
             "require": {
@@ -126,7 +126,7 @@
                 "issues": "https://github.com/LiquidArtDevelopers/liquidstack-core/issues",
                 "source": "https://github.com/LiquidArtDevelopers/liquidstack-core"
             },
-            "time": "2026-09-23T10:15:34+00:00"
+            "time": "2026-09-23T14:39:32+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

@@ -5,6 +5,13 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.4.2] - 2026-09-23
+
+### Fixed
+
+- Los proyectos nuevos heredan `liquidstack/core` con el rango `^1.35` y el
+  contrato estructural impide volver a fijarlo a una versión exacta.
+
 ## [1.4.1] - 2026-09-22
 
 ### Fixed
