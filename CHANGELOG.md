@@ -5,6 +5,9 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+
+## [1.4.3] - 2026-09-23
+
 ### Changed
 
 - BASE adopta el mismo uso que CORE para publicar: árbol limpio y un único
