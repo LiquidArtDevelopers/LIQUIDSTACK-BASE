@@ -199,7 +199,7 @@ final class CommerceContractTest extends TestCase
         foreach ([
             'LIQUIDSTACK_COMMERCE_INQUIRY_RECIPIENT=',
             'LIQUIDSTACK_COMMERCE_PRIVACY_VERSION=',
-            'LIQUIDSTACK_COMMERCE_DEVELOPMENT_FIXTURES=0',
+            'LIQUIDSTACK_COMMERCE_DEVELOPMENT_FIXTURES=1',
         ] as $key) {
             self::assertStringContainsString($key, $environment);
         }
