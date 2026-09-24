@@ -181,10 +181,20 @@ final class StarterContractTest extends TestCase
             '0003_commerce_capabilities',
             'aranaz@webda.eus',
             'aranaz@gmail.com',
-            'Bienvenido al blog de tu nuevo proyecto',
-            'Ongi etorri zure proiektu berriaren blogera',
-            'Cómo personalizar BASE sin perder actualizaciones',
-            'Nola pertsonalizatu BASE eguneraketak galdu gabe',
+            'Matrix: despertar frente a una realidad construida',
+            'Matrix: eraikitako errealitate baten aurrean esnatzea',
+            'Matrix Reloaded: elegir dentro de un sistema previsto',
+            'Matrix Revolutions: una tregua para romper el ciclo',
+            'Matrix Resurrections: recordar para volver a elegir',
+            'Cine',
+            'Zinema',
+            'INSERT INTO `ls_blog_content_media` VALUES (',
+            'INSERT INTO `ls_blog_revision_media` VALUES (',
+            'INSERT INTO `ls_webadmin_media_assets` VALUES (',
+            'INSERT INTO `ls_webadmin_media_variants` VALUES (',
+            '\\"width\\":\\"40\\"',
+            '\\"align\\":\\"center\\"',
+            '\\"provider\\":\\"youtube\\"',
             'Novedades',
             'Berriak',
             'LiquidStack',
@@ -192,6 +202,59 @@ final class StarterContractTest extends TestCase
         ] as $required) {
             self::assertStringContainsString($required, $sql);
         }
+    }
+
+    public function testDemoBlogMediaInstallerMatchesVersionedAssets(): void
+    {
+        $root = dirname(__DIR__, 2);
+        $manifestPath = $root . '/tools/demo-blog-media-manifest.php';
+        $installerPath = $root . '/tools/install-demo-blog-media.php';
+
+        self::assertFileExists($manifestPath);
+        self::assertFileExists($installerPath);
+        $manifest = require $manifestPath;
+        self::assertSame([
+            'ba5e0000-0000-4000-8000-000000000081',
+            'ba5e0000-0000-4000-8000-000000000082',
+            'ba5e0000-0000-4000-8000-000000000083',
+            'ba5e0000-0000-4000-8000-000000000084',
+        ], array_keys($manifest));
+
+        foreach ($manifest as $asset) {
+            self::assertCount(4, $asset['variants']);
+            foreach ($asset['variants'] as $variant) {
+                $source = $root . '/public/assets/img/dummy/responsive/'
+                    . $variant['file'];
+                self::assertFileExists($source);
+                self::assertSame($variant['bytes'], filesize($source));
+                self::assertSame(
+                    $variant['sha256'],
+                    hash_file('sha256', $source)
+                );
+            }
+        }
+
+        $composer = json_decode(
+            (string) file_get_contents($root . '/composer.json'),
+            true,
+            512,
+            JSON_THROW_ON_ERROR
+        );
+        self::assertSame(
+            ['@php tools/install-demo-blog-media.php'],
+            $composer['scripts']['liquidstack:demo-blog-media:install'] ?? null
+        );
+        $installer = (string) file_get_contents($installerPath);
+        foreach ([
+            'PrivateMediaStorage::forProject',
+            'createStagingDirectory()',
+            'probeVerified(',
+            'promote(',
+        ] as $contract) {
+            self::assertStringContainsString($contract, $installer);
+        }
+        self::assertStringNotContainsString('->initialize(', $installer);
+        self::assertStringNotContainsString('PDO', $installer);
     }
 
     public function testEnvironmentProfilesSwitchOnlyRuntimeFacingValues(): void

@@ -41,6 +41,9 @@
         ],
         "liquidstack-core:sync-resources": [
             "App\\Core\\Composer\\Installer::syncResources"
+        ],
+        "liquidstack:demo-blog-media:install": [
+            "@php tools/install-demo-blog-media.php"
         ]
     },
     "config": {

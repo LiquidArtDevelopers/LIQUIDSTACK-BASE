@@ -457,7 +457,8 @@ El fichero raíz `example_liquidstack_dev.sql` contiene:
 - el esquema resultante del catálogo incluido en esta release de BASE;
 - roles, capacidades y semillas técnicas;
 - las dos cuentas iniciales en estado de invitación, sin contraseña;
-- categorías, etiquetas y artículos neutros de ejemplo en español y euskera.
+- categorías, etiquetas y cuatro artículos Matrix de ejemplo, cada uno en
+  español y euskera, con composición V2, imágenes y vídeo.
 
 No contiene **datos** de sesiones, tokens de invitación, outbox, rate limits,
 analítica, auditoría o credenciales. También excluye cestas, solicitudes,
@@ -551,6 +552,19 @@ Con el dry-run a cero, inicializa el storage privado de Media:
 ```powershell
 composer liquidstack:media:init --yes --format=json
 ```
+
+Solo si importaste `example_liquidstack_dev.sql`, instala a continuación los
+cuatro assets que referencia su Blog demo:
+
+```powershell
+composer liquidstack:demo-blog-media:install
+```
+
+El instalador es explícito e idempotente: valida los AVIF versionados, exige
+un storage Media ya inicializado y no conecta a la DB ni sobrescribe assets.
+No lo ejecutes sobre una DB vacía, que no contiene los posts demo. Si una misma
+DB remota se sirve desde desarrollo y producción, ejecuta el comando una vez en
+cada entorno: comparten filas, pero cada uno conserva su propio storage.
 
 Arranca el proyecto en una primera consola y conserva el proceso abierto:
 

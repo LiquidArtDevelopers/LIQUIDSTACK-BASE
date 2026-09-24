@@ -474,6 +474,8 @@ final class CreateProjectProbe
             'tools/ReleaseScript.php',
             'tools/release.php',
             'tools/test-create-project.php',
+            'tools/demo-blog-media-manifest.php',
+            'tools/install-demo-blog-media.php',
             'tests/Structure/StarterContractTest.php',
             'tests/Structure/StarterDistributionContractTest.php',
         ] as $requiredFile) {
@@ -601,6 +603,8 @@ final class CreateProjectProbe
             '.env.example',
             '.npmrc.example',
             'example_liquidstack_dev.sql',
+            'tools/demo-blog-media-manifest.php',
+            'tools/install-demo-blog-media.php',
         ], self::COMMERCE_PROJECT_TARGETS);
         $this->assert(
             count(self::COMMERCE_PROJECT_TARGETS) === 26,
@@ -678,6 +682,11 @@ final class CreateProjectProbe
                 "El proyecto cliente conserva el script BASE {$baseScript}."
             );
         }
+        $this->assert(
+            ($composer['scripts']['liquidstack:demo-blog-media:install'] ?? null)
+                === ['@php tools/install-demo-blog-media.php'],
+            'El proyecto cliente no conserva el instalador Media demo.'
+        );
         $this->assert(
             !isset($composer['autoload']['classmap'])
                 || !in_array(

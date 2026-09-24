@@ -5,6 +5,23 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.4.4] - 2026-09-23
+
+### Añadido
+
+- El snapshot de ejemplo incluye cuatro artículos sobre las películas de
+  Matrix, localizados en español y euskera, con contenido estructurado,
+  imágenes y vídeo.
+- El comando `composer liquidstack:demo-blog-media:install` instala de forma
+  explícita e idempotente los assets Media referenciados por esos artículos.
+
+### Cambiado
+
+- Los artículos demo presentan el contenido centrado al 40 % y amplían la
+  cobertura estructural del proyecto inicial.
+- La guía de instalación documenta la restauración del storage Media cuando
+  se importa `example_liquidstack_dev.sql`.
+
 ## [1.4.3] - 2026-09-23
 
 ### Changed
