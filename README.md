@@ -134,24 +134,18 @@ cuentas y no ejecuta onboarding. Después sigue este orden:
    única conexión `LIQUIDSTACK_DB_*` para WebAdmin/Blog/Commerce y configura
    SMTP antes del onboarding. Si vas a importar el snapshot, conserva sus dos emails
    bootstrap hasta reconciliar las cuentas por primera vez.
-5. Configura el acceso privado a GSAP sin versionar el token. Una opción local
-   en PowerShell es:
+5. Instala las dependencias frontend, incluido el paquete público de GSAP:
 
    ```powershell
-   $env:GSAP_TOKEN = '<token-privado>'
-   Copy-Item -LiteralPath '.npmrc.example' -Destination '.npmrc'
    npm ci
    ```
 
-   `.npmrc` permanece ignorado y `.npmrc.example` solo referencia
-   `${GSAP_TOKEN}`. También se puede configurar el registro en el perfil de npm
-   del operador, sin escribir credenciales en el proyecto. La dependencia
-   actual `npm:@gsap/shockingly` necesita acceso válido al registro privado.
+   GSAP no necesita token ni registro privado. `.npmrc` permanece ignorado como
+   protección genérica por si un proyecto usa otro registro del operador.
    `auth.json` también está ignorado y excluido del paquete: si Composer exige
-   autenticación, usa `COMPOSER_AUTH` o el almacén global del operador. Nunca
-   copies `.npmrc` o `auth.json` al repositorio ni al archive del cliente.
-   `GSAP_TOKEN` es una variable del proceso npm: escribirla en el `.env` PHP no
-   autentica el registro privado.
+   autenticación para otra dependencia, usa `COMPOSER_AUTH` o el almacén global
+   del operador. Nunca copies `.npmrc` o `auth.json` al repositorio ni al
+   archive del cliente.
 6. Decide el destino antes de operar: DB local o remota segura, y snapshot de
    demo o DB vacía. Sigue exactamente una de las dos rutas documentadas abajo.
 7. Ejecuta en orden `doctor`, plan y dry-run. Si hay migraciones pendientes,
@@ -395,6 +389,13 @@ particularidades de BASE, su snapshot y su primer arranque.
 
 ## Conexión de base de datos
 
+| Escenario | DB | Media |
+| --- | --- | --- |
+| Desarrollo local y promoción posterior | Trabaja en local y exporta la DB al destino. | Trabaja en local y copia el storage al destino junto con la DB. |
+| Desarrollo contra DB remota | El `.env` apunta a la DB remota. | Sigue siendo filesystem local: cópialo también al servidor. |
+| Producción | Usa la conexión visible desde el hosting. | Configura una ruta absoluta, privada y persistente fuera del release. |
+| DB heredada de otra instalación | Composer y las migraciones conservan sus datos demo anteriores. | El instalador demo solo copia ficheros; no crea assets ni referencias en la DB. |
+
 BASE configura WebAdmin, Blog y Commerce con el perfil `liquidstack` en sus
 ficheros `App/config/modules/*.php`. Los tres módulos comparten una sola
 conexión y leen exclusivamente:
@@ -474,6 +475,14 @@ forman parte del esquema. El SQL es una fotografía reproducible para BASE; las
 migraciones de CORE siguen siendo la fuente canónica. Impórtalo únicamente en
 una DB de desarrollo vacía: el dump reconstruye sus tablas y no debe
 ejecutarse sobre datos que se quieran conservar.
+
+Volver a ejecutar `create-project`, actualizar CORE, aplicar migraciones o
+instalar los AVIF demo no refresca una DB importada anteriormente. Si reutilizas
+una DB de una versión previa de BASE, conservará su snapshot antiguo. Para
+obtener los posts y referencias Media actuales, sustituye solo una DB vacía o
+desechable —después de respaldarla— importando el `example_liquidstack_dev.sql`
+de esta misma versión. El comando `liquidstack:demo-blog-media:install` copia
+ficheros, pero no crea assets ni referencias en la DB.
 
 Ejemplo de importación desde PowerShell, suponiendo que `mysql.exe` está en
 `PATH`:
@@ -838,7 +847,7 @@ composer test
 El build genera el sitemap multilingüe y los assets en `public/assets`; no crea
 una carpeta `dist` adicional. El starter se distribuye sin
 `public/.vite/manifest.json` ni bundles compilados para no fijar hashes
-obsoletos: después de configurar el registro npm, ejecuta `npm ci` y
+obsoletos: después de instalar las dependencias con `npm ci`, ejecuta
 `npm run build`. Hasta entonces `doctor` puede avisar de que falta el manifest;
 no es una razón para migrar la DB.
 

@@ -125,7 +125,6 @@ final class BaseReleaseGate
             $this->runComposer([
                 'install', '--no-interaction', '--no-progress', '--no-ansi',
             ], $validationProject);
-            $this->prepareNpmAuthentication($validationProject);
             $this->runNpm(['ci', '--ignore-scripts'], $validationProject);
             $this->runNpm(['audit'], $validationProject);
             $this->runNpm(['run', 'build'], $validationProject);
@@ -541,24 +540,6 @@ final class BaseReleaseGate
         } catch (Throwable $exception) {
             $this->removeValidationWorkspace($workspace);
             throw $exception;
-        }
-    }
-
-    private function prepareNpmAuthentication(string $project): void
-    {
-        $source = $this->root . '/.npmrc';
-        if (!file_exists($source)) {
-            return;
-        }
-        if (!is_file($source) || is_link($source)) {
-            throw new RuntimeException(
-                '.npmrc local debe ser un fichero regular para el build aislado.'
-            );
-        }
-        if (!copy($source, $project . '/.npmrc')) {
-            throw new RuntimeException(
-                'No se pudo preparar la autenticacion npm aislada.'
-            );
         }
     }
 

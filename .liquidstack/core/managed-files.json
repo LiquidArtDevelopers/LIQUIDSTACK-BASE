@@ -790,7 +790,7 @@
         "App/controllers/navMegamenu01.php": {
             "source": "stubs/App/controllers/navMegamenu01.php",
             "fingerprints": [
-                "sha256:4963d1ff0269b39197f3932c8488a372050d4aaad0052d588003012b26749a16"
+                "sha256:099779a55e5b68f5184b992fa678e16b1f3333b0ba3ac813d190b95845418f7c"
             ],
             "group": "resource:navMegamenu01"
         },
@@ -1956,7 +1956,7 @@
         "README.LIQUIDSTACK.md": {
             "source": "stubs/README.LIQUIDSTACK.md",
             "fingerprints": [
-                "sha256:1644692a82e12c328170a58c6a19272ed9854dce590c7f178f2f1361c35a16fd"
+                "sha256:2b7b6a0f355a768c29e0c4390199b9230646dcaa2b17cafd68f64b89b7e39f31"
             ],
             "group": null
         },
@@ -2387,11 +2387,32 @@
             ],
             "group": null
         },
+        "public/assets/img/system/fb.svg": {
+            "source": "resources/img/system/fb.svg",
+            "fingerprints": [
+                "sha256:816e1471b5138ab6fc2df4b91d22187e143148a0d4de62a03c33dbce009b05c8"
+            ],
+            "group": null
+        },
         "public/assets/img/system/hidePassword.svg": {
             "source": "resources/img/system/hidePassword.svg",
             "fingerprints": [
                 "sha256:32c452dbcadf59236d5945ae01cd69d257add4bcc17a8fc523dbf187d28f81fe",
                 "sha256:ed72d648c94a5b8feaa28dc0c31fbb8f8d7e34dfbd305e0b6fcaf459f0b3992a"
+            ],
+            "group": null
+        },
+        "public/assets/img/system/ig.svg": {
+            "source": "resources/img/system/ig.svg",
+            "fingerprints": [
+                "sha256:80de4f5b3bf026344395a9e0425a30f2c67059676383e4219463787470868b8d"
+            ],
+            "group": null
+        },
+        "public/assets/img/system/in.svg": {
+            "source": "resources/img/system/in.svg",
+            "fingerprints": [
+                "sha256:518a5a356998d45822c77740f9a0307bb7fa09554419cb3b6ec7dc9e9f3d7cdb"
             ],
             "group": null
         },
@@ -2513,17 +2534,24 @@
             ],
             "group": null
         },
+        "public/assets/img/system/yt.svg": {
+            "source": "resources/img/system/yt.svg",
+            "fingerprints": [
+                "sha256:23c1ea081d3f5e25513f3cc9666d3f4d934cf8408e51cae274b9c25104d9ec16"
+            ],
+            "group": null
+        },
         "public/assets/modules/blog/blog-admin-list.js": {
             "source": "modules/blog/published/assets/blog-admin-list.js",
             "fingerprints": [
-                "sha256:da98884b07d71f713ade1e7ca2dc1c5e0be1308b6d4621773d25fa350e11fdeb"
+                "sha256:6492b2ed08db378c1e8deefa930c24dfaf6a170716ca554d72179b1348cc65e4"
             ],
             "group": "module:blog:public/assets/modules/blog"
         },
         "public/assets/modules/blog/blog-admin.css": {
             "source": "modules/blog/published/assets/blog-admin.css",
             "fingerprints": [
-                "sha256:0c677efc6861985749dcd5423ded3847e9b44e8ec61f4e4c60e56f2342a6b8e9"
+                "sha256:403a6d106470d96d1710e5b143a91c8fafbcd5f0f87831a64c651ee96199f9cb"
             ],
             "group": "module:blog:public/assets/modules/blog"
         },
@@ -2537,14 +2565,14 @@
         "public/assets/modules/blog/blog-editor.js": {
             "source": "modules/blog/published/assets/blog-editor.js",
             "fingerprints": [
-                "sha256:135c9fbefa264570831f2002e5de0cf10c6a260b74988f66bc7f8bbfce2b25b1"
+                "sha256:60fbd4177bcead6e8c39e57bb8deda3a0bb3fa42445dd194c104a9fcc9b89240"
             ],
             "group": "module:blog:public/assets/modules/blog"
         },
         "public/assets/modules/blog/blog-public.css": {
             "source": "modules/blog/published/assets/blog-public.css",
             "fingerprints": [
-                "sha256:e1e7fcdf1bd76e7831a0afbcc7b78732d4bce0883ec57b6c43e03ed7ee57d90a"
+                "sha256:8007c59a0a99160e3fee6d395de49eca814d2e5097410cdaa97ad21701990ca9"
             ],
             "group": "module:blog:public/assets/modules/blog"
         },
@@ -3346,7 +3374,7 @@
         "src/scss/resources/_art15.scss": {
             "source": "resources/scss/_art15.scss",
             "fingerprints": [
-                "sha256:14c0d6d1bb51993691f6f1d5463252a68d0d9b161325f95a3c39c829ed2d6c36"
+                "sha256:ca9631b63612acdbb14ab968922eeb222127065315b03ad8c18104d8df6b50cc"
             ],
             "group": "resource:art15"
         },
@@ -3515,7 +3543,7 @@
         "src/scss/resources/_artBlogArticle01.scss": {
             "source": "modules/blog/resources/project/src/scss/resources/_artBlogArticle01.scss",
             "fingerprints": [
-                "sha256:71d8e2bcffe374b2ce1eef03378e38f99e6b5253197a505ed40f95ec3c6aa518"
+                "sha256:144d86244b69326c573901bed1bd1cee03f52911f046d3e39bfca68b9d83b1e6"
             ],
             "group": "module:blog:resource-artBlogArticle01"
         },
@@ -3826,7 +3854,7 @@
         "src/scss/resources/_moduleFormContact.scss": {
             "source": "resources/scss/_moduleFormContact.scss",
             "fingerprints": [
-                "sha256:9acb975f4de25356139b1a49c769da19e9b8e023d1097876f80b67b1c3894450"
+                "sha256:3206691efdc20ce661ee2cf40061b1fea3b575070e12e0036cfb94583ad0af53"
             ],
             "group": "resource:moduleFormContact"
         },
@@ -3962,7 +3990,7 @@
         "src/scss/resources/_navMegamenu01.scss": {
             "source": "resources/scss/_navMegamenu01.scss",
             "fingerprints": [
-                "sha256:e0cca77fca28bb5039005b5835c29460721e5a37b4082287779ddd10306059f4"
+                "sha256:7d898d35c934478ba5a68c6c83f9ef7b633a576f1b20739c209f2c6b32e111c7"
             ],
             "group": "resource:navMegamenu01"
         },

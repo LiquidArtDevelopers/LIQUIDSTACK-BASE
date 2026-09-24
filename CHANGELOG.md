@@ -5,6 +5,29 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.4.6] - 2026-09-24
+
+### Corregido
+
+- BASE alinea el controlador y los iconos sociales de `navMegamenu01` con
+  CORE para que los proyectos nuevos no nazcan con huellas legacy ni avisos
+  falsos de personalización.
+- GSAP deja de depender del alias privado `@gsap/shockingly`: el starter usa el
+  paquete público `gsap` y el release aislado ya no copia autenticación npm.
+
+### Eliminado
+
+- La plantilla `.npmrc.example` y el requisito `GSAP_TOKEN`, innecesarios con
+  la distribución pública actual de GSAP.
+
+### Documentación
+
+- La instalación distingue una DB demo antigua de los AVIF del storage:
+  reinstalar el código no renueva el snapshot, y una ruta Media explícita debe
+  ser absoluta.
+- El inicio de proyecto se reduce a `npm ci` y resume las cuatro casuísticas de
+  DB y Media: local, DB remota desde desarrollo, producción y DB heredada.
+
 ## [1.4.5] - 2026-09-24
 
 ### Cambiado

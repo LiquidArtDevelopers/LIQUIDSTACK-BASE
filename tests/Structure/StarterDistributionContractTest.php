@@ -143,11 +143,11 @@ final class StarterDistributionContractTest extends TestCase
         );
     }
 
-    public function testLockfilesAndPrivateRegistryTemplateAreReproducibleAndSafe(): void
+    public function testLockfilesAndPublicGsapDependencyAreReproducibleAndSafe(): void
     {
         self::assertFileExists($this->root . '/composer.lock');
         self::assertFileExists($this->root . '/package-lock.json');
-        self::assertFileExists($this->root . '/.npmrc.example');
+        self::assertFileDoesNotExist($this->root . '/.npmrc.example');
 
         $composerLock = $this->readJson('composer.lock');
         $packages = array_column($composerLock['packages'] ?? [], null, 'name');
@@ -173,11 +173,20 @@ final class StarterDistributionContractTest extends TestCase
             $package['dependencies']['gsap'] ?? null,
             $packageLock['packages']['']['dependencies']['gsap'] ?? null
         );
+        self::assertSame('^3.13.0', $package['dependencies']['gsap'] ?? null);
         $serializedNpmLock = json_encode(
             $packageLock,
             JSON_THROW_ON_ERROR | JSON_UNESCAPED_SLASHES
         );
         self::assertStringNotContainsString('_authToken', $serializedNpmLock);
+        self::assertStringNotContainsString(
+            'npm.greensock.com',
+            $serializedNpmLock
+        );
+        self::assertStringNotContainsString(
+            '@gsap/shockingly',
+            $serializedNpmLock
+        );
         self::assertStringNotContainsString('example_pass', $serializedNpmLock);
 
         $gitignore = (string) file_get_contents($this->root . '/.gitignore');
@@ -191,19 +200,6 @@ final class StarterDistributionContractTest extends TestCase
         self::assertMatchesRegularExpression(
             '#^/public/\.vite/\s*$#m',
             $gitignore
-        );
-
-        $npmTemplate = (string) file_get_contents(
-            $this->root . '/.npmrc.example'
-        );
-        self::assertStringContainsString('${GSAP_TOKEN}', $npmTemplate);
-        self::assertStringContainsString(
-            '@gsap:registry=https://npm.greensock.com',
-            $npmTemplate
-        );
-        self::assertDoesNotMatchRegularExpression(
-            '/_authToken=(?!\$\{GSAP_TOKEN\}\s*$).+/m',
-            $npmTemplate
         );
 
         $releaseGate = (string) file_get_contents(
@@ -271,7 +267,7 @@ final class StarterDistributionContractTest extends TestCase
             '0001_commerce_catalog',
             'liquidstack:commerce-mail-dispatch --limit=20',
             'public.enabled=true',
-            '.npmrc.example',
+            'GSAP no necesita token ni registro privado',
             'auth.json',
             'public/.vite/manifest.json',
             'Después de confirmar los cambios y dejar el árbol limpio',

@@ -13,7 +13,7 @@
         "lad": "node scripts/swap-env.mjs development && node App/tools/liquidstack-dev.mjs"
     },
     "dependencies": {
-        "gsap": "npm:@gsap/shockingly@3.12.5",
+        "gsap": "^3.13.0",
         "leaflet": "1.9.4",
         "three": "^0.170.0"
     },

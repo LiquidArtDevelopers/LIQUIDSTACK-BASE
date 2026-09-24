@@ -148,7 +148,22 @@ function controller_navMegamenu01(int $i = 0, array $params = []): string
     }
     $col1Html .= '</ul>';
 
-    $col2Simple = [];
+    $col2Simple = [
+        // [
+        //     'aDL'   => "{$pref}col02link_01",
+        //     'spanDL'=> "{$pref}col02span_01",
+        //     'href'  => $GLOBALS["{$pref}col02link_01_href"],
+        //     'title' => $GLOBALS["{$pref}col02link_01"]->title,
+        //     'text'  => $GLOBALS["{$pref}col02span_01"]->text,
+        // ],
+        // [
+        //     'aDL'   => "{$pref}col02link_02",
+        //     'spanDL'=> "{$pref}col02span_02",
+        //     'href'  => $GLOBALS["{$pref}col02link_02_href"],
+        //     'title' => $GLOBALS["{$pref}col02link_02"]->title,
+        //     'text'  => $GLOBALS["{$pref}col02span_02"]->text,
+        // ],
+    ];
     $col2Links = '<ul>';
     foreach ($col2Simple as $s) {
         $col2Links .= '<li><a data-lang="'.$s['aDL'].'" href="'.$s['href'].'" title="'.$s['title'].'" target="_blank">'.$iconForward.'<span data-lang="'.$s['spanDL'].'">'.$s['text'].'</span></a></li>';

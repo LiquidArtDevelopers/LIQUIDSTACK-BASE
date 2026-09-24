@@ -467,7 +467,6 @@ final class CreateProjectProbe
             'package.json',
             'package-lock.json',
             '.env.example',
-            '.npmrc.example',
             'CHANGELOG.md',
             'example_liquidstack_dev.sql',
             'tools/ProjectInitializer.php',
@@ -601,7 +600,6 @@ final class CreateProjectProbe
             'package.json',
             'package-lock.json',
             '.env.example',
-            '.npmrc.example',
             'example_liquidstack_dev.sql',
             'tools/demo-blog-media-manifest.php',
             'tools/install-demo-blog-media.php',
@@ -736,7 +734,6 @@ final class CreateProjectProbe
             'package.json',
             'package-lock.json',
             '.env.example',
-            '.npmrc.example',
             'example_liquidstack_dev.sql',
         ] as $relativePath) {
             $hash = hash_file('sha256', $projectDirectory . '/' . $relativePath);
