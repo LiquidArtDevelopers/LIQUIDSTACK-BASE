@@ -5,6 +5,12 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.4.7] - 2026-09-24
+
+### Corregido
+
+- Update core
+
 ## [1.4.6] - 2026-09-24
 
 ### Corregido

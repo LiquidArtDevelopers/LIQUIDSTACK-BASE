@@ -790,7 +790,7 @@
         "App/controllers/navMegamenu01.php": {
             "source": "stubs/App/controllers/navMegamenu01.php",
             "fingerprints": [
-                "sha256:099779a55e5b68f5184b992fa678e16b1f3333b0ba3ac813d190b95845418f7c"
+                "sha256:27a124d8c32a354a3d670ab58dc557a1f1b4ab3526d03ebdbf91eed0129b5d95"
             ],
             "group": "resource:navMegamenu01"
         },
@@ -3990,7 +3990,7 @@
         "src/scss/resources/_navMegamenu01.scss": {
             "source": "resources/scss/_navMegamenu01.scss",
             "fingerprints": [
-                "sha256:7d898d35c934478ba5a68c6c83f9ef7b633a576f1b20739c209f2c6b32e111c7"
+                "sha256:2cce1b55c9cf9c8cb635e31044d1bce3aec6ef39567b7dc93ee76dea9d153a30"
             ],
             "group": "resource:navMegamenu01"
         },
