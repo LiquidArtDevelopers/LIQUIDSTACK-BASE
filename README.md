@@ -387,6 +387,12 @@ mismo WebAdmin. Composer distribuye código, configuración inicial y recursos,
 pero nunca aplica migraciones, inicializa Media, crea usuarios ni habilita la
 tienda pública automáticamente.
 
+`README.LIQUIDSTACK.md`, gestionado y actualizado por CORE, es el manual
+operativo canónico del proyecto resultante. Separa los recorridos DB local a
+producción, desarrollo contra una DB productiva vacía y activación posterior
+de Blog o Commerce. Las secciones siguientes documentan además las
+particularidades de BASE, su snapshot y su primer arranque.
+
 ## Conexión de base de datos
 
 BASE configura WebAdmin, Blog y Commerce con el perfil `liquidstack` en sus

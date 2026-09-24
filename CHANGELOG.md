@@ -5,6 +5,13 @@ fichero. BASE tiene un ciclo SemVer independiente de CORE.
 
 ## [Unreleased]
 
+## [1.4.5] - 2026-09-24
+
+### Cambiado
+
+- El README diferencia sus instrucciones propias de plantilla del manual
+  operativo `README.LIQUIDSTACK.md` que CORE distribuye a cada consumidor.
+
 ## [1.4.4] - 2026-09-23
 
 ### Añadido
